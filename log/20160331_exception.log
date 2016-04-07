@@ -1,0 +1,269 @@
+*ERROR* 	2016/03/31 - 19:09:48: Lost connection to MySQL server during query<br /><br /><pre>SELECT p.*, product_shop.*, stock.out_of_stock, IFNULL(stock.quantity, 0) as quantity, MAX(product_attribute_shop.id_product_attribute) id_product_attribute, MAX(product_attribute_shop.minimal_quantity) AS product_attribute_minimal_quantity, pl.`description`, pl.`description_short`, pl.`available_now`,
+					pl.`available_later`, pl.`link_rewrite`, pl.`meta_description`, pl.`meta_keywords`, pl.`meta_title`, pl.`name`, MAX(image_shop.`id_image`) id_image,
+					MAX(il.`legend`) as legend, m.`name` AS manufacturer_name,
+					DATEDIFF(product_shop.`date_add`, DATE_SUB(NOW(),
+					INTERVAL 30
+						DAY)) > 0 AS new, product_shop.price AS orderprice
+				FROM `ps_category_product` cp
+				LEFT JOIN `ps_product` p
+					ON p.`id_product` = cp.`id_product`
+				 INNER JOIN ps_product_shop product_shop
+		ON (product_shop.id_product = p.id_product AND product_shop.id_shop = 1)LEFT JOIN `ps_product_attribute` pa
+				ON (p.`id_product` = pa.`id_product`)
+				 LEFT JOIN ps_product_attribute_shop product_attribute_shop
+		ON (product_attribute_shop.id_product_attribute = pa.id_product_attribute AND product_attribute_shop.id_shop = 1 AND product_attribute_shop.`default_on` = 1)
+				 LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = p.id_product AND stock.id_product_attribute = IFNULL(`product_attribute_shop`.id_product_attribute, 0) AND stock.id_shop_group = 1  AND stock.id_shop = 0  )
+				LEFT JOIN `ps_product_lang` pl
+					ON (p.`id_product` = pl.`id_product`
+					AND pl.`id_lang` = 1 AND pl.id_shop = 1 )
+				LEFT JOIN `ps_image` i
+					ON (i.`id_product` = p.`id_product`) LEFT JOIN ps_image_shop image_shop
+		ON (image_shop.id_image = i.id_image AND image_shop.id_shop = 1 AND image_shop.cover=1)
+				LEFT JOIN `ps_image_lang` il
+					ON (image_shop.`id_image` = il.`id_image`
+					AND il.`id_lang` = 1)
+				LEFT JOIN `ps_manufacturer` m
+					ON m.`id_manufacturer` = p.`id_manufacturer` WHERE 1
+						and p.reference in ("CL0406","LS0008","CL0423","LS0021","LS0070","CL0402","LS0014","CL0401","CL0431","LS0011","CL0410","LS0034","CL0407","CL0444","LS0001","CL0428","C008")
+						and product_shop.`id_shop` = 1 AND product_shop.`active` = 1 AND product_shop.`visibility` IN ("both", "catalog") GROUP BY product_shop.id_product
+					ORDER BY instr(",CL0406,LS0008,CL0423,LS0021,LS0070,CL0402,LS0014,CL0401,CL0431,LS0011,CL0410,LS0034,CL0407,CL0444,LS0001,CL0428,C008,", concat(",",p.reference,",")) LIMIT 0,100</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:48: Lost connection to MySQL server during query<br /><br /><pre>SELECT *
+				FROM `ps_contact` c
+				 LEFT JOIN ps_contact_shop contact_shop
+		ON (contact_shop.id_contact = c.id_contact AND contact_shop.id_shop = 1)
+				LEFT JOIN `ps_contact_lang` cl ON (c.`id_contact` = cl.`id_contact`)
+				WHERE cl.`id_lang` = 1
+				AND contact_shop.`id_shop` IN (1)
+				GROUP BY c.`id_contact`
+				ORDER BY `name` ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:48: Lost connection to MySQL server during query<br /><br /><pre>
+		SELECT `id_product_download`
+		FROM `ps_product_download`
+		WHERE `id_product` = 40075
+		 AND `active` = 1
+		ORDER BY `id_product_download` DESC LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:48: Lost connection to MySQL server during query<br /><br /><pre>
+		SELECT `id_product_download`
+		FROM `ps_product_download`
+		WHERE `id_product` = 40091
+		 AND `active` = 1
+		ORDER BY `id_product_download` DESC LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:48: Lost connection to MySQL server during query<br /><br /><pre>
+			SELECT *,
+					( IF (`id_group` = 1, 2, 0) +  IF (`id_country` = 21, 4, 0) +  IF (`id_currency` = 2, 8, 0) +  IF (`id_shop` = 1, 16, 0) +  IF (`id_customer` = 0, 32, 0)) AS `score`
+				FROM `ps_specific_price`
+				WHERE
+					`id_shop` IN (0, 1) AND
+					`id_currency` IN (0, 2) AND
+					`id_country` IN (0, 21) AND
+					`id_group` IN (0, 1) AND `id_product` IN (0, 40743) AND `id_customer` = 0  AND (`from` = '0000-00-00 00:00:00' OR '2016-03-31 00:00:00' >= `from`) AND (`to` = '0000-00-00 00:00:00' OR '2016-03-31 00:00:00' <= `to`)
+					ORDER BY `from_quantity` ASC, `id_specific_price_rule` ASC, `score` DESC, `to` DESC, `from` DESC
+		</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:48: Lost connection to MySQL server during query<br /><br /><pre>
+		SELECT `id_product_download`
+		FROM `ps_product_download`
+		WHERE `id_product` = 40357
+		 AND `active` = 1
+		ORDER BY `id_product_download` DESC LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:49: Lost connection to MySQL server during query<br /><br /><pre>SELECT p.*, product_shop.*, stock.out_of_stock, IFNULL(stock.quantity, 0) as quantity, pl.`description`, pl.`description_short`, pl.`link_rewrite`,
+					pl.`meta_description`, pl.`meta_keywords`, pl.`meta_title`, pl.`name`, pl.`available_now`, pl.`available_later`,
+					image_shop.`id_image` id_image, il.`legend`, m.`name` as manufacturer_name, cl.`name` AS category_default, IFNULL(product_attribute_shop.id_product_attribute, 0) id_product_attribute,
+					DATEDIFF(
+						p.`date_add`,
+						DATE_SUB(
+							"2016-03-31 00:00:00",
+							INTERVAL 30 DAY
+						)
+					) > 0 AS new
+				FROM `ps_accessory`
+				LEFT JOIN `ps_product` p ON p.`id_product` = `id_product_2`
+				 INNER JOIN ps_product_shop product_shop
+		ON (product_shop.id_product = p.id_product AND product_shop.id_shop = 1)
+				LEFT JOIN `ps_product_attribute_shop` product_attribute_shop
+					ON (p.`id_product` = product_attribute_shop.`id_product` AND product_attribute_shop.`default_on` = 1 AND product_attribute_shop.id_shop=1)
+				LEFT JOIN `ps_product_lang` pl ON (
+					p.`id_product` = pl.`id_product`
+					AND pl.`id_lang` = 1 AND pl.id_shop = 1 
+				)
+				LEFT JOIN `ps_category_lang` cl ON (
+					product_shop.`id_category_default` = cl.`id_category`
+					AND cl.`id_lang` = 1 AND cl.id_shop = 1 
+				)
+				LEFT JOIN `ps_image_shop` image_shop
+					ON (image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1)
+				LEFT JOIN `ps_image_lang` il ON (image_shop.`id_image` = il.`id_image` AND il.`id_lang` = 1)
+				LEFT JOIN `ps_manufacturer` m ON (p.`id_manufacturer`= m.`id_manufacturer`)
+				 LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = p.id_product AND stock.id_product_attribute = 0 AND stock.id_shop_group = 1  AND stock.id_shop = 0  )
+				WHERE `id_product_1` = 41092 AND product_shop.`active` = 1 AND product_shop.`visibility` != 'none'
+				GROUP BY product_shop.id_product</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:49: Lost connection to MySQL server during query<br /><br /><pre>INSERT INTO `ps_guest` (`id_operating_system`, `id_web_browser`, `id_customer`, `javascript`, `screen_resolution_x`, `screen_resolution_y`, `screen_color`, `sun_java`, `adobe_flash`, `adobe_director`, `apple_quicktime`, `real_player`, `windows_media`, `accept_language`, `mobile_theme`) VALUES ('6', '11', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0')</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:49: Lost connection to MySQL server during query<br /><br /><pre>INSERT INTO `ps_guest` (`id_operating_system`, `id_web_browser`, `id_customer`, `javascript`, `screen_resolution_x`, `screen_resolution_y`, `screen_color`, `sun_java`, `adobe_flash`, `adobe_director`, `apple_quicktime`, `real_player`, `windows_media`, `accept_language`, `mobile_theme`) VALUES ('6', '11', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0')</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:49: Lost connection to MySQL server during query<br /><br /><pre>INSERT INTO `ps_guest` (`id_operating_system`, `id_web_browser`, `id_customer`, `javascript`, `screen_resolution_x`, `screen_resolution_y`, `screen_color`, `sun_java`, `adobe_flash`, `adobe_director`, `apple_quicktime`, `real_player`, `windows_media`, `accept_language`, `mobile_theme`) VALUES ('6', '11', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0')</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:49: Lost connection to MySQL server during query<br /><br /><pre>
+		SELECT pa.`id_product_attribute`
+		FROM `ps_product_attribute` pa
+		 INNER JOIN ps_product_attribute_shop product_attribute_shop
+		ON (product_attribute_shop.id_product_attribute = pa.id_product_attribute AND product_attribute_shop.id_shop = 1)
+		WHERE pa.`id_product` = 40754
+		ORDER BY product_attribute_shop.`price` DESC LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:49: Lost connection to MySQL server during query<br /><br /><pre>
+		SELECT pa.`id_product_attribute`
+		FROM `ps_product_attribute` pa
+		 INNER JOIN ps_product_attribute_shop product_attribute_shop
+		ON (product_attribute_shop.id_product_attribute = pa.id_product_attribute AND product_attribute_shop.id_shop = 1)
+		WHERE pa.`id_product` = 40771
+		ORDER BY product_attribute_shop.`price` DESC LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:50: Lost connection to MySQL server during query<br /><br /><pre>SELECT UNIX_TIMESTAMP(last_update) as last_update, filepath FROM `ps_smarty_lazy_cache`
+							WHERE `template_hash`='925e52ccb68d64a845f6d5a9c0875816' AND cache_id="homeslider|2|1|1|2|21" AND compile_id="" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:50: Lost connection to MySQL server during query<br /><br /><pre>
+		select pad.association_id,pa.subject,GROUP_CONCAT(concat(pad.sku,':',pad.value)) as skus
+		from px_product_association_details pad
+			left join px_product_associations pa on pad.association_id=pa.id
+		where pa.deleted=0
+		and pad.association_id in (
+			SELECT DISTINCT association_id
+			FROM `px_product_association_details`
+			WHERE sku='E720001STW-G-1B'
+		)
+		group by pad.association_id
+		order by pa.add_time desc
+		</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:50: Lost connection to MySQL server during query<br /><br /><pre>SELECT *
+FROM `ps_product` a
+LEFT JOIN `ps_product_lang` `b` ON a.`id_product` = b.`id_product` AND b.`id_lang` = 1
+LEFT JOIN `ps_product_shop` `c` ON a.`id_product` = c.`id_product` AND c.`id_shop` = 1
+WHERE (a.`id_product` = 40113) AND (b.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:50: Lost connection to MySQL server during query<br /><br /><pre>
+				SELECT name, value, pf.id_feature  as num,fvl.id_feature_value as feid,fvlname.meta_title as mtitle
+				FROM ps_feature_product pf
+				LEFT JOIN ps_feature_lang fl ON (fl.id_feature = pf.id_feature AND fl.id_lang = 1)
+				LEFT JOIN ps_feature_value_lang fvl ON (fvl.id_feature_value = pf.id_feature_value AND fvl.id_lang = 1)
+				LEFT JOIN ps_layered_indexable_feature_value_lang_value fvlname ON (fvl.id_feature_value = fvlname.id_feature_value  )
+				LEFT JOIN ps_feature f ON (f.id_feature = pf.id_feature AND fl.id_lang = 1)
+				 INNER JOIN ps_feature_shop feature_shop
+		ON (feature_shop.id_feature = f.id_feature AND feature_shop.id_shop = 1)
+				WHERE pf.id_product = 40806
+				ORDER BY f.position ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:50: Lost connection to MySQL server during query<br /><br /><pre>SELECT *
+FROM `ps_product` a
+LEFT JOIN `ps_product_lang` `b` ON a.`id_product` = b.`id_product` AND b.`id_lang` = 1
+LEFT JOIN `ps_product_shop` `c` ON a.`id_product` = c.`id_product` AND c.`id_shop` = 1
+WHERE (a.`id_product` = 40803) AND (b.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:50: Lost connection to MySQL server during query<br /><br /><pre>
+			SELECT product_attribute_shop.`price`
+			FROM `ps_product_attribute` pa
+			 INNER JOIN ps_product_attribute_shop product_attribute_shop
+		ON (product_attribute_shop.id_product_attribute = pa.id_product_attribute AND product_attribute_shop.id_shop = 1)
+			WHERE pa.`id_product_attribute` = 3192 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:50: Lost connection to MySQL server during query<br /><br /><pre>
+				SELECT name, value, pf.id_feature  as num,fvl.id_feature_value as feid,fvlname.meta_title as mtitle
+				FROM ps_feature_product pf
+				LEFT JOIN ps_feature_lang fl ON (fl.id_feature = pf.id_feature AND fl.id_lang = 1)
+				LEFT JOIN ps_feature_value_lang fvl ON (fvl.id_feature_value = pf.id_feature_value AND fvl.id_lang = 1)
+				LEFT JOIN ps_layered_indexable_feature_value_lang_value fvlname ON (fvl.id_feature_value = fvlname.id_feature_value  )
+				LEFT JOIN ps_feature f ON (f.id_feature = pf.id_feature AND fl.id_lang = 1)
+				 INNER JOIN ps_feature_shop feature_shop
+		ON (feature_shop.id_feature = f.id_feature AND feature_shop.id_shop = 1)
+				WHERE pf.id_product = 40806
+				ORDER BY f.position ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:50: Lost connection to MySQL server during query<br /><br /><pre>SELECT *
+FROM `ps_product` a
+LEFT JOIN `ps_product_lang` `b` ON a.`id_product` = b.`id_product` AND b.`id_lang` = 1
+LEFT JOIN `ps_product_shop` `c` ON a.`id_product` = c.`id_product` AND c.`id_shop` = 1
+WHERE (a.`id_product` = 40010) AND (b.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>
+				SELECT name, value, pf.id_feature  as num,fvl.id_feature_value as feid,fvlname.meta_title as mtitle
+				FROM ps_feature_product pf
+				LEFT JOIN ps_feature_lang fl ON (fl.id_feature = pf.id_feature AND fl.id_lang = 1)
+				LEFT JOIN ps_feature_value_lang fvl ON (fvl.id_feature_value = pf.id_feature_value AND fvl.id_lang = 1)
+				LEFT JOIN ps_layered_indexable_feature_value_lang_value fvlname ON (fvl.id_feature_value = fvlname.id_feature_value  )
+				LEFT JOIN ps_feature f ON (f.id_feature = pf.id_feature AND fl.id_lang = 1)
+				 INNER JOIN ps_feature_shop feature_shop
+		ON (feature_shop.id_feature = f.id_feature AND feature_shop.id_shop = 1)
+				WHERE pf.id_product = 40806
+				ORDER BY f.position ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>
+				SELECT name, value, pf.id_feature  as num,fvl.id_feature_value as feid,fvlname.meta_title as mtitle
+				FROM ps_feature_product pf
+				LEFT JOIN ps_feature_lang fl ON (fl.id_feature = pf.id_feature AND fl.id_lang = 1)
+				LEFT JOIN ps_feature_value_lang fvl ON (fvl.id_feature_value = pf.id_feature_value AND fvl.id_lang = 1)
+				LEFT JOIN ps_layered_indexable_feature_value_lang_value fvlname ON (fvl.id_feature_value = fvlname.id_feature_value  )
+				LEFT JOIN ps_feature f ON (f.id_feature = pf.id_feature AND fl.id_lang = 1)
+				 INNER JOIN ps_feature_shop feature_shop
+		ON (feature_shop.id_feature = f.id_feature AND feature_shop.id_shop = 1)
+				WHERE pf.id_product = 40677
+				ORDER BY f.position ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>SELECT *
+FROM `ps_product` a
+LEFT JOIN `ps_product_lang` `b` ON a.`id_product` = b.`id_product` AND b.`id_lang` = 1
+LEFT JOIN `ps_product_shop` `c` ON a.`id_product` = c.`id_product` AND c.`id_shop` = 1
+WHERE (a.`id_product` = 40021) AND (b.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>
+				SELECT name, value, pf.id_feature  as num,fvl.id_feature_value as feid,fvlname.meta_title as mtitle
+				FROM ps_feature_product pf
+				LEFT JOIN ps_feature_lang fl ON (fl.id_feature = pf.id_feature AND fl.id_lang = 1)
+				LEFT JOIN ps_feature_value_lang fvl ON (fvl.id_feature_value = pf.id_feature_value AND fvl.id_lang = 1)
+				LEFT JOIN ps_layered_indexable_feature_value_lang_value fvlname ON (fvl.id_feature_value = fvlname.id_feature_value  )
+				LEFT JOIN ps_feature f ON (f.id_feature = pf.id_feature AND fl.id_lang = 1)
+				 INNER JOIN ps_feature_shop feature_shop
+		ON (feature_shop.id_feature = f.id_feature AND feature_shop.id_shop = 1)
+				WHERE pf.id_product = 40806
+				ORDER BY f.position ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>SELECT *
+FROM `ps_product` a
+LEFT JOIN `ps_product_lang` `b` ON a.`id_product` = b.`id_product` AND b.`id_lang` = 1
+LEFT JOIN `ps_product_shop` `c` ON a.`id_product` = c.`id_product` AND c.`id_shop` = 1
+WHERE (a.`id_product` = 40005) AND (b.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>
+				SELECT name, value, pf.id_feature  as num,fvl.id_feature_value as feid,fvlname.meta_title as mtitle
+				FROM ps_feature_product pf
+				LEFT JOIN ps_feature_lang fl ON (fl.id_feature = pf.id_feature AND fl.id_lang = 1)
+				LEFT JOIN ps_feature_value_lang fvl ON (fvl.id_feature_value = pf.id_feature_value AND fvl.id_lang = 1)
+				LEFT JOIN ps_layered_indexable_feature_value_lang_value fvlname ON (fvl.id_feature_value = fvlname.id_feature_value  )
+				LEFT JOIN ps_feature f ON (f.id_feature = pf.id_feature AND fl.id_lang = 1)
+				 INNER JOIN ps_feature_shop feature_shop
+		ON (feature_shop.id_feature = f.id_feature AND feature_shop.id_shop = 1)
+				WHERE pf.id_product = 40806
+				ORDER BY f.position ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>
+				SELECT name, value, pf.id_feature  as num,fvl.id_feature_value as feid,fvlname.meta_title as mtitle
+				FROM ps_feature_product pf
+				LEFT JOIN ps_feature_lang fl ON (fl.id_feature = pf.id_feature AND fl.id_lang = 1)
+				LEFT JOIN ps_feature_value_lang fvl ON (fvl.id_feature_value = pf.id_feature_value AND fvl.id_lang = 1)
+				LEFT JOIN ps_layered_indexable_feature_value_lang_value fvlname ON (fvl.id_feature_value = fvlname.id_feature_value  )
+				LEFT JOIN ps_feature f ON (f.id_feature = pf.id_feature AND fl.id_lang = 1)
+				 INNER JOIN ps_feature_shop feature_shop
+		ON (feature_shop.id_feature = f.id_feature AND feature_shop.id_shop = 1)
+				WHERE pf.id_product = 40677
+				ORDER BY f.position ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>
+							SELECT `id_tax_rules_group`
+							FROM `ps_product_shop`
+							WHERE `id_product` = 40806 AND id_shop=1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:51: Lost connection to MySQL server during query<br /><br /><pre>
+				SELECT name, value, pf.id_feature  as num,fvl.id_feature_value as feid,fvlname.meta_title as mtitle
+				FROM ps_feature_product pf
+				LEFT JOIN ps_feature_lang fl ON (fl.id_feature = pf.id_feature AND fl.id_lang = 1)
+				LEFT JOIN ps_feature_value_lang fvl ON (fvl.id_feature_value = pf.id_feature_value AND fvl.id_lang = 1)
+				LEFT JOIN ps_layered_indexable_feature_value_lang_value fvlname ON (fvl.id_feature_value = fvlname.id_feature_value  )
+				LEFT JOIN ps_feature f ON (f.id_feature = pf.id_feature AND fl.id_lang = 1)
+				 INNER JOIN ps_feature_shop feature_shop
+		ON (feature_shop.id_feature = f.id_feature AND feature_shop.id_shop = 1)
+				WHERE pf.id_product = 40500
+				ORDER BY f.position ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/31 - 19:09:55: Lost connection to MySQL server during query<br /><br /><pre>
+			SELECT DISTINCT la.`id_attribute`, la.`url_name` as `name`
+			FROM `ps_attribute` a
+			LEFT JOIN `ps_product_attribute_combination` pac
+				ON (a.`id_attribute` = pac.`id_attribute`)
+			LEFT JOIN `ps_product_attribute` pa
+				ON (pac.`id_product_attribute` = pa.`id_product_attribute`)
+			 INNER JOIN ps_product_attribute_shop product_attribute_shop
+		ON (product_attribute_shop.id_product_attribute = pa.id_product_attribute AND product_attribute_shop.id_shop = 1)
+			LEFT JOIN `ps_layered_indexable_attribute_lang_value` la
+				ON (la.`id_attribute` = a.`id_attribute` AND la.`id_lang` = 1)
+			WHERE la.`url_name` IS NOT NULL AND la.`url_name` != ''
+			AND pa.`id_product` = 40114
+			AND pac.`id_product_attribute` = 293176</pre> at line 791 in file classes/db/Db.php

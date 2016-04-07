@@ -1,0 +1,251 @@
+{literal}
+<style>
+#year2014 .layer_them{padding-bottom: 40px;}
+#year2014 .banner p{font-size:1.2em;padding: 20px 0;line-height:30px;}
+#year2014 .a_href{text-align: center;font-size: 16px;text-decoration: underline;}
+.year2014_product .title {padding:10px 0;border-bottom:2px solid #000;font-size: 1.6em;margin-bottom:10px;}
+.year2014_product .title h3{float:left}
+.year2014_product .title a{float:right;color:#ef3386;font-size:0.8em}
+.year2014_product li {padding: 10px;}
+.year2014_product li .product-container{float:left;padding:15px;background:#fff;border:1px solid #e1e1e1;position: relative;height:400px;}
+.year2014_product li .product-container img{width:100%}
+.year2014_product{margin-bottom:20px}
+.year2014_product p{padding:5px 0 0}
+.year2014_product p.now{font-size:16px;font-weight:bold;color:#ef3386}
+.year2014_product p.old{color:#666;text-decoration: line-through;}
+.year2014_product .btn{margin-top:10px}
+.year2014_product .btn a{width:100%}
+.year2014_product span.off{
+background: #EF3386;
+color: #FFF;
+padding: 5px 10px;
+position: absolute;
+display: block;
+width: 86px;
+font-size: 14px;
+font-family: verdana;
+left: 15px;
+top: 15px;
+}
+.year2014_product h5{height:40px;overflow:hidden;}
+#year2014 .tag_link {margin: 20px 0;padding: 20px 0;}
+#year2014 .tag_link a {display: inline-block;float: left;width: 300px;margin-right: 50px;}
+#year2014 .tag_link a.end{margin-right:0}
+.year2014_product h5{height:40px;overflow:hidden;}
+@media (min-width: 300px){
+	.year2014_product li .product-container{width:100%;margin-bottom: 20px;}
+	.year2014_product .title{overflow: hidden;}
+	.container{padding: 14px 15px;}
+	.year2014_product .title h3{padding:0}
+	#year2014 .banner p{line-height:1.4}
+}
+@media (min-width: 768px){
+	.year2014_product li{position: relative;float:left;width:33.333333%}
+}
+@media (min-width: 1024px){
+	.year2014_product li{position: relative;float:left;width:25%}
+	.container{padding: 0}
+}
+</style>
+{/literal}
+
+<div id="year2014" class="container">
+	<!-- banner -->
+	<div class="banner">
+		<img src="/themes/uniwigs2014/event/2014-synthetic-wigs-sale/image/banner.jpg" width="100%">
+		<p>Kanekalon® is natural feeling, lighter, softer hair with more natural body complement today's modern fashionable lifestyle. This worldly renowned synthetic fiber is what makes "Kanekalon®" the name as best quality synthetic hair in the past 50 years, widely used for wig and hair extension's leading brands around the globe.</p>
+	</div>
+
+	<div class="year2014_product">
+		<div class="title fix">
+			<h3>#1 Chic Bob we all love</h3><a href="/tag/bob-wigs">View More ></a>
+		</div>
+		<ul class="row">
+			{foreach from=$products.0 key=key item=product}
+			<li>
+				<div class="product-container">
+				<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					class="" itemprop="url"> <img
+					src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+					alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					itemprop="image"/>
+				</a>
+				<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+					{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+				<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+				{foreach from=$product.show_price_list key=spi item=show_price}
+				{if $spi>0}
+				<p class="old">
+				{$show_price.label}: {convertPrice price=$show_price.value}
+				</p>
+				{/if}
+				{/foreach}
+
+				<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+
+                {assign var="lastind" value=$product.show_price_list|@count}
+				{assign var="lastind" value=$lastind-1}
+				{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+				{if $lastprice > $product.show_price_list.0.value}
+				{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+				<span class="off">- {convertPrice price=$diffprice}</span>
+				{/if}
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+
+		{*<div class="tag_link fix">
+			<a href="/tag/capless-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/CAPLESS.jpg" alt="capless wigs"></a>
+			<a href="/tag/human-hair-synthetic-blend-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/mono.jpg" alt="human hair synthetic blend wigs"></a>
+			<a class="end" href="/tag/2014-5-new-hairstyles"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/new.jpg" alt="new hairstyles"></a>
+		</div>*}
+	</div>
+	<div class="year2014_product">
+		<div class="title fix">
+			<h3>#2 Cute Pixie you must have</h3><a href="/tag/pixie-wigs">View More ></a>
+		</div>
+		<ul class="row">
+			{foreach from=$products.1 key=key item=product}
+			<li>
+				<div class="product-container">
+				<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					class="" itemprop="url"> <img
+					src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+					alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					itemprop="image"/>
+				</a>
+				<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+					{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+				<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+				{foreach from=$product.show_price_list key=spi item=show_price}
+				{if $spi>0}
+				<p class="old">
+				{$show_price.label}: {convertPrice price=$show_price.value}
+				</p>
+				{/if}
+				{/foreach}
+
+				<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+
+                {assign var="lastind" value=$product.show_price_list|@count}
+				{assign var="lastind" value=$lastind-1}
+				{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+				{if $lastprice > $product.show_price_list.0.value}
+				{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+				<span class="off">- {convertPrice price=$diffprice}</span>
+				{/if}
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+
+		{*<div class="tag_link fix">
+			<a href="/tag/capless-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/CAPLESS.jpg" alt="capless wigs"></a>
+			<a href="/tag/human-hair-synthetic-blend-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/mono.jpg" alt="human hair synthetic blend wigs"></a>
+			<a class="end" href="/tag/2014-5-new-hairstyles"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/new.jpg" alt="new hairstyles"></a>
+		</div>*}
+	</div>
+	<div class="year2014_product">
+		<div class="title fix">
+			<h3>#3 Try out a wig with bangs</h3><a href="/tag/synthetic-wigs-with-bangs">View More ></a>
+		</div>
+		<ul class="row">
+			{foreach from=$products.2 key=key item=product}
+			<li>
+				<div class="product-container">
+				<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					class="" itemprop="url"> <img
+					src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+					alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					itemprop="image"/>
+				</a>
+				<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+					{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+				<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+				{foreach from=$product.show_price_list key=spi item=show_price}
+				{if $spi>0}
+				<p class="old">
+				{$show_price.label}: {convertPrice price=$show_price.value}
+				</p>
+				{/if}
+				{/foreach}
+
+				<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+
+                {assign var="lastind" value=$product.show_price_list|@count}
+				{assign var="lastind" value=$lastind-1}
+				{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+				{if $lastprice > $product.show_price_list.0.value}
+				{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+				<span class="off">- {convertPrice price=$diffprice}</span>
+				{/if}
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+
+		{*<div class="tag_link fix">
+			<a href="/tag/capless-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/CAPLESS.jpg" alt="capless wigs"></a>
+			<a href="/tag/human-hair-synthetic-blend-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/mono.jpg" alt="human hair synthetic blend wigs"></a>
+			<a class="end" href="/tag/2014-5-new-hairstyles"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/new.jpg" alt="new hairstyles"></a>
+		</div>*}
+	</div>
+	<div class="year2014_product">
+		<div class="title fix">
+			<h3>#4 Layered wigs- Cool & fashion</h3><a href="/tag/layered-wigs">View More ></a>
+		</div>
+		<ul class="row">
+			{foreach from=$products.3 key=key item=product}
+			<li>
+				<div class="product-container">
+				<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					class="" itemprop="url"> <img
+					src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+					alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					itemprop="image"/>
+				</a>
+				<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+					{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+				<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+				{foreach from=$product.show_price_list key=spi item=show_price}
+				{if $spi>0}
+				<p class="old">
+				{$show_price.label}: {convertPrice price=$show_price.value}
+				</p>
+				{/if}
+				{/foreach}
+
+				<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+
+                {assign var="lastind" value=$product.show_price_list|@count}
+				{assign var="lastind" value=$lastind-1}
+				{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+				{if $lastprice > $product.show_price_list.0.value}
+				{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+				<span class="off">- {convertPrice price=$diffprice}</span>
+				{/if}
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+
+		{*<div class="tag_link fix">
+			<a href="/tag/capless-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/CAPLESS.jpg" alt="capless wigs"></a>
+			<a href="/tag/human-hair-synthetic-blend-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/mono.jpg" alt="human hair synthetic blend wigs"></a>
+			<a class="end" href="/tag/2014-5-new-hairstyles"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/new.jpg" alt="new hairstyles"></a>
+		</div>*}
+	</div>
+</div>

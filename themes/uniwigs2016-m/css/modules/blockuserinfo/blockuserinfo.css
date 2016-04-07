@@ -1,0 +1,33 @@
+.header_user_info, .header_home, .header_add {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  width: 46px;
+  font-size: 2em;
+  right: 0;
+  top: 0; }
+  .header_user_info a, .header_home a, .header_add a {
+    color: #EF3386;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%; }
+    .header_user_info a:after, .header_home a:after, .header_add a:after {
+      display: block;
+      font-family: "iconfont";
+      content: "\e619";
+      position: absolute;
+      right: 10px;
+      top: 13px;
+      font-size: 26px; }
+    .header_user_info a:hover, .header_home a:hover, .header_add a:hover, .header_user_info a.active, .header_home a.active, .header_add a.active {
+      background: #f4f4f4;
+      color: #515151; }
+
+.header_home a:after {
+  content: "\e614"; }
+
+.header_add a:after {
+  content: "\e608"; }
+
+/*# sourceMappingURL=blockuserinfo.css.map */

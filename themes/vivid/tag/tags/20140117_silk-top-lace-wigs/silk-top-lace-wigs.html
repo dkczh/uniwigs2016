@@ -1,0 +1,123 @@
+{literal}
+<style>
+#f-wrapper {margin-top:0;}
+#year2014 img{width:100%}
+#year2014 .banner{background:url("/themes/uniwigs2014/activity/20140117_silk-top-lace-wigs/image/banner_bg.jpg") no-repeat center top; height:369px;}
+#year2014 .layout{width:1000px;margin:0 auto;position: relative;}
+#year2014 .info{margin:45px 0 10px 0;font-family:Georgia,arial;font-size:1.2em}
+#year2014 .info h3{font-size:1.7em;font-weight:bold;padding-bottom:20px;line-height: 30px;}
+#year2014 .info p{padding-bottom:25px;line-height: 24px;}
+#year2014 .right{width:440px;float:right;margin-left: 50px;}
+</style>
+{/literal}
+<div id="year2014">
+	<div class="banner">
+		<div class="layout">
+			<img src="/themes/uniwigs2014/activity/20140117_silk-top-lace-wigs/image/banner.jpg">
+		</div>
+	</div>
+
+	<div class="layout">
+		<div class="info">
+			<h3>Uniwigs Silk Top</h3>
+			<div class="fix">
+				<img src="/themes/uniwigs2014/activity/20140117_silk-top-lace-wigs/image/skilp.jpg" class="right">
+				<p>The silk top consists of a layer of lace, and silk fabric on the top front of the cap. 
+When the hair is knotted, the knots are below the silk concealed between the 
+layers, the hair is then injected through the silk material making the knots 100% 
+invisible giving the illusion that the hair is actually growing out of your scalp. 
+There is no other ventilation technique that creates a more flawless appearance 
+than hidden knots on a silk top, you don't need to bleach the knots, you don't 
+need to worry about any other techniques to make the knots invisible or less 
+visible.</p>
+				<p><b>What Are Knots?</b> Strands of hair are tied to the lace base using a knot. Knots 
+are usually dark large and visible giving an unnatural appearance. Uniwigs
+bleaches these knots around the perimeter to make the knots appear smaller, 
+lighter and less visible.</p>
+				<p>Silk Cap located at the crown of the head where parts are more likely to be made so when hair is parted, knots are invisible giving the<br>
+<b style="font-style: italic;">ULTIMATE APPEARANCE</b>  of hair growing from the scalp.</p>
+			</div>
+		</div>
+	</div>
+
+	<section class="container">
+	<section class="shoppics">
+		<div class="ishoppics1 fix">
+			<div class="content">
+				<ul class="fix">
+					{foreach from=$products key=key item=product}
+					<li>{if $product.active==0}
+						<div class="category_soldout">
+							<img src="{$img_dir}soldout-small.png" />
+						</div>
+						{elseif $product.preorder==1}
+						<div class="category_preorder">
+							<img src="{$img_dir}presale.png" />
+						</div>
+						{/if}
+						<div class="pr-qie" id="pr-qie">
+							<p class="pr-img">
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+									title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+									class=""> <img
+									src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+									alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+									title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"/>
+								</a>
+							</p>
+						</div>
+
+						<div class="pr-con">
+							<p class="pr-name">
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}">
+									{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a>
+							</p>
+							<p class="pr-price fix">
+								<strong class="fll">
+									{$product.show_price_list.0.label}:
+									<span class="red">
+										{convertPrice price=$product.show_price_list.0.value}
+									</span>
+								</strong>
+								<a href="{$product.link}" class="addtocart flr">
+								</a>
+							</p>
+							{foreach from=$product.show_price_list key=spi item=show_price}
+							{if $spi>0}
+							<p class="iprice">
+								{$show_price.label}:
+								<del>
+									{convertPrice price=$show_price.value}
+								</del>
+							</p>
+							{/if}
+							{/foreach}
+						</div>
+
+		                {if $product.is_limit_quantity_off || $tag_rewrite_link=='discount-wigs'}
+		                {assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						<div class="category_ico">
+							<span>{math equation="(x-y)/x*100" x=$lastprice y=$product.show_price_list.0.value format="%d"}</span><em>%</em><br>
+							<i>off</i>
+						</div>
+						{/if}
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+	</section>
+	</section>
+	{if isset($related_tags) && $related_tags}
+	<dl class="fix related_tag_links">
+		<dt><img src="/img/activities/wedding/haute_related_links.jpg"></dt>
+		<dd style="line-height: 34px;">
+			{foreach from=$related_tags key="rt_ind" item="related_tag"}
+			<a href="/tag/{$related_tag.link_rewrite}">{$related_tag.name}</a>{if ($rt_ind+1)<count($related_tags)}<span>|</span>{/if}
+			{/foreach}
+		</dd>
+	</dl>
+	{/if}
+</div>

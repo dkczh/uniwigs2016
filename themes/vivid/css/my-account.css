@@ -1,0 +1,41 @@
+#my-account .addresses-lists {
+  margin-bottom: 30px; }
+#my-account ul.myaccount-link-list li {
+  overflow: hidden;
+  width: 33.33333%;
+  float: left;
+  padding: 10px; }
+  @media (max-width: 480px) {
+    #my-account ul.myaccount-link-list li {
+      width: 100%; } }
+  #my-account ul.myaccount-link-list li a {
+    display: block;
+    overflow: hidden;
+    color: #555454;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid #ddd; }
+    #my-account ul.myaccount-link-list li a i {
+      font-size: 25px;
+      color: #333;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 52px;
+      height: 100%;
+      padding: 10px 0 0 0;
+      text-align: center; }
+    #my-account ul.myaccount-link-list li a span {
+      display: block;
+      padding: 13px 15px 15px 17px;
+      overflow: hidden;
+      margin-left: 35px; }
+    #my-account ul.myaccount-link-list li a:hover {
+      color: #d32676;
+      filter: none;
+      background: #fff;
+      border-color: #d32676; }
+      #my-account ul.myaccount-link-list li a:hover i {
+        color: #d32676; }
+
+/*# sourceMappingURL=my-account.css.map */

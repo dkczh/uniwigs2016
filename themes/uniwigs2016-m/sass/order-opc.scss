@@ -1,0 +1,137 @@
+@import "compass";
+@import "theme_variables";
+
+/********************************************************
+			One-Page Checkout Styles
+********************************************************/
+
+#order-opc {
+	line-height: 20px;
+	.box {
+		margin:0;
+		padding:0 10px 20px;
+	}
+	.cart_navigation {
+		margin-bottom: 53px;
+	}
+	.opc-main-block{
+		background: $light-background;
+	}
+	.page-heading.step-num {
+		position: relative;
+		padding: 10px;
+		overflow: visible;
+	}
+	.form-group {
+		margin-bottom: 2px;
+	}
+	.lost_password {
+		display: inline-block;
+		text-decoration: underline;
+		margin: 5px 0 14px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.title_block {
+		font-weight: bold;
+		color: $base-text-color;
+		padding: 3px 0 6px;
+	}
+	.opc-button {
+		padding: 11px 0 0 0;
+	}
+	ul.bullet {
+		line-height: 22px;
+		margin-bottom: 5px;
+	}
+	.date-select {
+		padding-bottom: 10px;
+	}
+	.opc-add-save {
+		border-top: 1px solid $base-border-color;
+		margin-top: 20px;
+		padding-top: 20px;
+	}
+	#message {
+		margin-bottom: 35px;
+	}
+	#opc_payment_methods {
+		margin-bottom: 30px;
+		p.warning{
+			color: #F13340;
+			font-weight: 700;
+		}
+	}
+	#opc_account {
+		margin-bottom: 30px;
+	}
+	.address_delivery.select {
+		margin-bottom: 15px;
+	}
+	#address_invoice_form.form-group {
+		margin-bottom: 30px;
+	}
+	#opc_new_account{
+	.register_login{
+		overflow: hidden;
+		padding: 10px 5px;
+		.uk-button{
+			width: 46%;
+			float: left;
+			margin: 0 5px;
+		}
+	}
+	}
+}
+
+#new_account_form .box {
+	line-height: 20px;
+	margin:0;
+
+	.date-select {
+		padding-bottom: 10px;
+	}
+	.top-indent {
+		padding-top: 10px;
+	}
+	.customerprivacy {
+		padding-top: 15px;
+	}
+}
+
+#opc_new_account{
+	.register_login{
+		overflow: hidden;
+		padding: 10px 5px;
+		.uk-button{
+			width: 46%;
+			float: left;
+			margin: 0 5px;
+		}
+		.uk-active{
+			.uk-button{
+				background-color: #fff;
+				color: #d32676;
+				border-color: #d32676;
+			}
+		}
+	}
+}
+
+
+#new_account_form .id_state,
+#new_account_form .dni,
+#new_account_form .postcode {
+	display: none;
+}
+
+.empty{
+	text-align: center;
+	margin-top: 10px;
+	.text {
+	    font-size: 20px;
+	    font-weight: bold;
+	    margin-top: 10px;
+	}
+}

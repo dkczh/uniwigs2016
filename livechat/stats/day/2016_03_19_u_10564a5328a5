@@ -1,0 +1,797 @@
+<br><br>
+<table cellpadding="0" cellspacing="0" align="center" width="900">
+	<tr>
+		<td>
+			<table cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td class="header_line"><!--lang_stats_visitors--></td>
+					<td class="header_line" align="right"><script>document.write(new Date(2016,2,19,0, 00, 00, 0).toLocaleDateString());</script></td>
+				</tr>
+				<tr>
+					<td class="header_nav_line">&nbsp;&nbsp;34 <!--lang_stats_visitors--></td>
+					<td class="header_nav_line" align="right">Status:&nbsp;&nbsp;<!--lang_stats_status_closed-->&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table class="bt_values" cellspacing="0" cellpadding="2" width="100%">
+				<tr>
+					<td class="bt_column_header" width="15">#</td>
+					<td class="bt_column_header" width="40" align="center"><!--lang_stats_pages--></td>
+					<td class="bt_column_header" width="60" align="center"><!--lang_stats_entrance--></td>
+					<td class="bt_column_header" width="60" align="center"><!--lang_stats_exit--></td>
+					<td class="bt_column_header" width="*"><!--lang_stats_country--></td>
+					<td class="bt_column_header" width="*"><!--lang_stats_city--></td>
+					<td class="bt_column_header" width="*"><!--lang_stats_browser--></td>
+					<td class="bt_column_header" width="*"><!--lang_stats_system--></td>
+					<td class="bt_column_header" width="25">&nbsp;</td>
+				</tr>
+				
+<tr>
+    <td>1</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_1');"><b>1</b></a></td>
+    <td align="center">00:20:51</td>
+    <td align="center">00:20:51</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 5</td>
+    <td NOWRAP>Linux</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','54.200.xxx.xxx','','e299aa6684',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_11">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">00:20:51</td>
+		<td align="center">00:22:21</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>2</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_2');"><b>1</b></a></td>
+    <td align="center">01:08:27</td>
+    <td align="center">01:36:31</td>
+    <td NOWRAP>Canada</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 34</td>
+    <td NOWRAP>Samsung / AndroidOS</td>
+    <td class="vs" align="right"><div class="ico_info" onclick="showInfoBox('','2','1','154.20.xxx.xxx','','bff9cfcddd',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_21">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">01:08:27</td>
+		<td align="center">01:38:01</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>3</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_3');"><b>1</b></a></td>
+    <td align="center">01:17:18</td>
+    <td align="center">01:17:18</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>MAC OS X 10.1 (Puma)</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','204.11.xxx.xxx','','83ac904201',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_31">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">01:17:18</td>
+		<td align="center">01:18:48</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>4</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_4');"><b>1</b></a></td>
+    <td align="center">01:45:16</td>
+    <td align="center">01:45:17</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 49</td>
+    <td NOWRAP>Windows 7</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','204.108.xxx.xxx','','cbc4b370ab',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_41">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">01:45:16</td>
+		<td align="center">01:46:47</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>5</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_5');"><b>1</b></a></td>
+    <td align="center">01:54:24</td>
+    <td align="center">01:55:36</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 49</td>
+    <td NOWRAP>NexusTablet / AndroidOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','70.117.xxx.xxx','','750e0d7122',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_51">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">01:54:24</td>
+		<td align="center">01:57:06</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>6</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_6');"><b>4</b></a></td>
+    <td align="center">01:58:10</td>
+    <td align="center">03:16:32</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','71.226.xxx.xxx','','8bd18a621e',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_61">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">01:58:10</td>
+		<td align="center">01:59:42</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_62">
+		<td>&nbsp;</td>
+		<td align="center">2</td>
+		<td align="center">02:04:45</td>
+		<td align="center">02:07:39</td>
+		<td colspan="5"><!--lang_stats_browser--> 2:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_63">
+		<td>&nbsp;</td>
+		<td align="center">3</td>
+		<td align="center">02:07:53</td>
+		<td align="center">02:09:23</td>
+		<td colspan="5"><!--lang_stats_browser--> 3:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_64">
+		<td>&nbsp;</td>
+		<td align="center">4</td>
+		<td align="center">03:09:40</td>
+		<td align="center">03:18:02</td>
+		<td colspan="5"><!--lang_stats_browser--> 4:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>7</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_7');"><b>1</b></a></td>
+    <td align="center">02:36:02</td>
+    <td align="center">02:36:03</td>
+    <td NOWRAP>Germany</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 38</td>
+    <td NOWRAP>Samsung / AndroidOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','188.105.xxx.xxx','','cadaf3fd8f',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_71">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">02:36:02</td>
+		<td align="center">02:37:33</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>8</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_8');"><b>1</b></a></td>
+    <td align="center">02:37:12</td>
+    <td align="center">02:38:33</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 48</td>
+    <td NOWRAP>Windows CE / Mobile</td>
+    <td class="vs" align="right"><div class="ico_info" onclick="showInfoBox('','2','1','72.189.xxx.xxx','','c0fff8c1e5',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_81">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">02:37:12</td>
+		<td align="center">02:40:03</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>9</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_9');"><b>1</b></a></td>
+    <td align="center">03:09:56</td>
+    <td align="center">03:09:56</td>
+    <td NOWRAP>UAE</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 34</td>
+    <td NOWRAP>Samsung / AndroidOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','37.231.xxx.xxx','','415ab8a223',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_91">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">03:09:56</td>
+		<td align="center">03:11:26</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>10</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_10');"><b>1</b></a></td>
+    <td align="center">03:10:09</td>
+    <td align="center">03:10:11</td>
+    <td NOWRAP>United Kingdom</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','85.255.xxx.xxx','','30cf2d3cc3',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_101">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">03:10:09</td>
+		<td align="center">03:11:41</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>11</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_11');"><b>1</b></a></td>
+    <td align="center">03:21:25</td>
+    <td align="center">03:21:25</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 49</td>
+    <td NOWRAP>Windows 7</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','186.4.xxx.xxx','','adec8994ad',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_111">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">03:21:25</td>
+		<td align="center">03:22:55</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>12</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_12');"><b>3</b></a></td>
+    <td align="center">04:05:41</td>
+    <td align="center">20:26:51</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','71.226.xxx.xxx','','fa97b0a679',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_121">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">04:05:41</td>
+		<td align="center">04:07:12</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_122">
+		<td>&nbsp;</td>
+		<td align="center">2</td>
+		<td align="center">04:37:07</td>
+		<td align="center">04:38:38</td>
+		<td colspan="5"><!--lang_stats_browser--> 2:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_123">
+		<td>&nbsp;</td>
+		<td align="center">3</td>
+		<td align="center">07:27:58</td>
+		<td align="center">10:59:14</td>
+		<td colspan="5"><!--lang_stats_browser--> 3:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>13</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_13');"><b>1</b></a></td>
+    <td align="center">04:40:41</td>
+    <td align="center">04:41:26</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPad / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','75.178.xxx.xxx','','2045fe5338',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_131">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">04:40:41</td>
+		<td align="center">04:42:56</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>14</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_14');"><b>1</b></a></td>
+    <td align="center">05:08:42</td>
+    <td align="center">05:08:43</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPad / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','50.5.xxx.xxx','','d30a8b0420',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_141">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">05:08:42</td>
+		<td align="center">05:10:13</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>15</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_15');"><b>1</b></a></td>
+    <td align="center">05:20:51</td>
+    <td align="center">05:20:51</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 49</td>
+    <td NOWRAP>AndroidOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','72.239.xxx.xxx','','f02a12431a',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_151">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">05:20:51</td>
+		<td align="center">05:22:21</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>16</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_16');"><b>1</b></a></td>
+    <td align="center">05:40:54</td>
+    <td align="center">05:40:54</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 49</td>
+    <td NOWRAP>Windows 7</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','104.33.xxx.xxx','','808f497e16',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_161">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">05:40:54</td>
+		<td align="center">05:42:24</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>17</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_17');"><b>1</b></a></td>
+    <td align="center">05:54:38</td>
+    <td align="center">05:54:41</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPad / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','75.156.xxx.xxx','','4c8bf187e4',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_171">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">05:54:38</td>
+		<td align="center">05:56:11</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>18</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_18');"><b>1</b></a></td>
+    <td align="center">06:53:55</td>
+    <td align="center">06:56:56</td>
+    <td NOWRAP>Canada</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPad / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','96.55.xxx.xxx','','c61528f632',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_181">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">06:53:55</td>
+		<td align="center">06:58:26</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>19</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_19');"><b>1</b></a></td>
+    <td align="center">08:39:44</td>
+    <td align="center">08:40:35</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 49</td>
+    <td NOWRAP>Windows 8.1</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','71.174.xxx.xxx','','b6243a9b86',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_191">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">08:39:44</td>
+		<td align="center">08:42:05</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>20</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_20');"><b>1</b></a></td>
+    <td align="center">09:26:41</td>
+    <td align="center">20:35:50</td>
+    <td NOWRAP>China</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','223.255.xxx.xxx','','01b1f677a0',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_201">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">09:26:41</td>
+		<td align="center">20:37:20</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>21</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_21');"><b>1</b></a></td>
+    <td align="center">09:53:31</td>
+    <td align="center">10:15:59</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 49</td>
+    <td NOWRAP>Windows 7</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','98.219.xxx.xxx','','0bc4f6181f',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_211">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">09:53:31</td>
+		<td align="center">10:17:29</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>22</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_22');"><b>1</b></a></td>
+    <td align="center">10:25:15</td>
+    <td align="center">10:25:16</td>
+    <td NOWRAP>Poland</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','94.254.xxx.xxx','','45667d533f',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_221">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">10:25:15</td>
+		<td align="center">10:26:46</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>23</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_23');"><b>1</b></a></td>
+    <td align="center">10:27:47</td>
+    <td align="center">10:27:47</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Chrome 28</td>
+    <td NOWRAP>Samsung / SamsungTablet / AndroidOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','173.174.xxx.xxx','','3faafdc450',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_231">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">10:27:47</td>
+		<td align="center">10:29:17</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>24</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_24');"><b>1</b></a></td>
+    <td align="center">10:29:11</td>
+    <td align="center">10:31:18</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','71.83.xxx.xxx','','fcd4621c4c',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_241">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">10:29:11</td>
+		<td align="center">10:32:48</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>25</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_25');"><b>1</b></a></td>
+    <td align="center">10:30:50</td>
+    <td align="center">10:47:55</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPad / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','68.5.xxx.xxx','','11c04024b0',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_251">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">10:30:50</td>
+		<td align="center">10:49:25</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>26</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_26');"><b>3</b></a></td>
+    <td align="center">11:50:14</td>
+    <td align="center">22:44:38</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','108.46.xxx.xxx','','4cf626399a',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_261">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">11:50:14</td>
+		<td align="center">11:51:45</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_262">
+		<td>&nbsp;</td>
+		<td align="center">2</td>
+		<td align="center">13:04:17</td>
+		<td align="center">13:05:47</td>
+		<td colspan="5"><!--lang_stats_browser--> 2:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_263">
+		<td>&nbsp;</td>
+		<td align="center">3</td>
+		<td align="center">22:44:38</td>
+		<td align="center">22:46:08</td>
+		<td colspan="5"><!--lang_stats_browser--> 3:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>27</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_27');"><b>1</b></a></td>
+    <td align="center">13:41:57</td>
+    <td align="center">13:41:57</td>
+    <td NOWRAP>United Kingdom</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','82.132.xxx.xxx','','85679d9897',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_271">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">13:41:57</td>
+		<td align="center">13:43:27</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>28</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_28');"><b>1</b></a></td>
+    <td align="center">14:20:08</td>
+    <td align="center">14:33:36</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','98.210.xxx.xxx','','d993ecf2a0',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_281">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">14:20:08</td>
+		<td align="center">14:35:06</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>29</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_29');"><b>1</b></a></td>
+    <td align="center">14:24:32</td>
+    <td align="center">14:32:37</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 5</td>
+    <td NOWRAP>MAC OS X 10.9 (Mavericks)</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','71.80.xxx.xxx','','f546e98437',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_291">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">14:24:32</td>
+		<td align="center">14:34:07</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>30</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_30');"><b>1</b></a></td>
+    <td align="center">16:07:41</td>
+    <td align="center">16:07:42</td>
+    <td NOWRAP>Germany</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','80.187.xxx.xxx','','8333355709',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_301">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">16:07:41</td>
+		<td align="center">16:09:12</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>31</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_31');"><b>1</b></a></td>
+    <td align="center">17:57:18</td>
+    <td align="center">17:58:15</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Internet Explorer 11</td>
+    <td NOWRAP>Windows 7</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','96.227.xxx.xxx','','8773fcfa26',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_311">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">17:57:18</td>
+		<td align="center">17:59:45</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://www.uniwigs.com/livechat/chat.php" target="_blank"><b>http://www.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>32</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_32');"><b>1</b></a></td>
+    <td align="center">20:23:50</td>
+    <td align="center">20:23:51</td>
+    <td NOWRAP>France</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPad / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','86.247.xxx.xxx','','a56fc2d554',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_321">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">20:23:50</td>
+		<td align="center">20:25:21</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>33</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_33');"><b>2</b></a></td>
+    <td align="center">20:40:39</td>
+    <td align="center">23:41:56</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','66.87.xxx.xxx','','eb2961ed7c',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_331">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">20:40:39</td>
+		<td align="center">20:42:12</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_332">
+		<td>&nbsp;</td>
+		<td align="center">2</td>
+		<td align="center">23:41:55</td>
+		<td align="center">23:43:26</td>
+		<td colspan="5"><!--lang_stats_browser--> 2:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+<tr>
+    <td>34</td>
+    <td align="center"><a href="javascript:switchRowVisibility('pl_34');"><b>1</b></a></td>
+    <td align="center">23:03:02</td>
+    <td align="center">23:03:03</td>
+    <td NOWRAP>United States</td>
+    <td NOWRAP><!--lang_stats_unknown--></td>
+    <td NOWRAP>Safari 6</td>
+    <td NOWRAP>iPhone / iOS</td>
+    <td class="vn" align="right"><div class="ico_info" onclick="showInfoBox('','1','1','208.54.xxx.xxx','','d23ed19aec',this); return true;"></div></td>
+</tr>
+
+	<tr style="display:none;" class="bt_values_url" id="pl_341">
+		<td>&nbsp;</td>
+		<td align="center">1</td>
+		<td align="center">23:03:02</td>
+		<td align="center">23:04:33</td>
+		<td colspan="5"><!--lang_stats_browser--> 1:&nbsp;&nbsp;<a href="http://dereferrer.livezilla.info/?url=http://m.uniwigs.com/livechat/chat.php" target="_blank"><b>http://m.uniwigs.com/livechat/chat.php</b></a></td>
+	</tr>
+
+			</table>
+			<br>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+function showInfoBox(_isp, _visits, _visits_day, _ip, _host, _id, _parent)
+{
+if(ibCurrent != _parent)
+{
+document.getElementById("info_box").innerHTML = "<strong>ID:</strong> " + _id + "<br><strong><!--lang_stats_isp-->:</strong> " + _isp + "<br><strong>IP:</strong> " +_ip + "<br><strong>Host:</strong> " +_host + "<br><strong><!--lang_stats_visits-->:</strong> " + _visits + "<br><strong><!--lang_stats_visits_today-->:</strong> " + _visits_day;
+assignPosition(document.getElementById("info_box"));
+document.getElementById("info_box").style.display = "block";
+ibCurrent = _parent;
+}
+else
+{
+document.getElementById("info_box").style.display = "none";
+ibCurrent = null;
+}
+}
+</script>

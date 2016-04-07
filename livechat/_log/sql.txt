@@ -1,0 +1,9 @@
+1408240602 - 2006: MySQL server has gone away
+
+SQL: UPDATE `visitors` SET `last_active`='1408240602' WHERE `id`='e9ff7f52bd' ORDER BY `entrance` DESC LIMIT 1;
+1408240602 - 2006: MySQL server has gone away
+
+SQL: UPDATE `visitor_chats` SET `typing`='0',`customs`='a:10:{i:0;s:0:\"\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";i:4;s:0:\"\";i:5;s:0:\"\";i:6;s:0:\"\";i:7;s:0:\"\";i:8;s:0:\"\";i:9;s:0:\"\";}',`request_operator`='',`request_group`='',`last_active`='1408240602' WHERE `browser_id`='f0f6b0a3c9' AND `visitor_id`='e9ff7f52bd' AND `chat_id`='0' LIMIT 1;
+1408240602 - 2006: MySQL server has gone away
+
+SQL: UPDATE `visitor_browsers` SET `last_active`=1408240602 WHERE `id`='f0f6b0a3c9' AND `visitor_id`='e9ff7f52bd' LIMIT 1;

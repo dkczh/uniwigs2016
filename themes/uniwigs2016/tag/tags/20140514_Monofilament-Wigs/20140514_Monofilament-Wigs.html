@@ -1,0 +1,110 @@
+{literal}
+<style>
+#year2014 .layer_them{padding-bottom: 40px;}
+#year2014 .title{margin-bottom: 15px;margin-top: 30px;padding: 30px 0;border-top: 4px solid #333;border-bottom: 4px solid #333;}
+#year2014 .title p{font-family: Georgia,arial;font-size:13px;padding-bottom: 20px;line-height:22px}
+#year2014 .title h3{font-size: 15px;font-weight: bold;text-transform: uppercase;margin-bottom: 20px;}
+#year2014 .a_href{text-align: center;font-size: 16px;text-decoration: underline;}
+.year2014_product h3{font-size: 18px;text-align: center;text-transform: uppercase;font-weight: bold;padding: 15px 0;}
+.year2014_product ul{margin-right:-15px;overflow:hidden;}
+.year2014_product li .product-container{margin:10px;float:left;padding:15px;background:#fff;border:1px solid #e1e1e1;height: 408px;}
+.year2014_product li .product-container img{width:100%}
+.year2014_product p{padding:5px 0 0}
+.year2014_product p.now{font-size:16px;font-weight:bold;color:#ef3386}
+.year2014_product p.old{color:#666;text-decoration: line-through;}
+.year2014_product .btn{margin-top:10px}
+.year2014_product .btn a{width:100%}
+.year2014_product span.off{
+background: #EF3386;
+color: #FFF;
+padding: 5px 10px;
+position: absolute;
+display: block;
+width: 93px;
+font-size: 14px;
+font-family: verdana;
+left: 15px;
+top: 15px;
+}
+.year2014_product h5{height:40px;overflow:hidden;}
+@media (min-width: 768px){
+	.year2014_product li{position: relative;float:left;width:33.333333%}
+}
+@media (min-width: 1024px){
+	.year2014_product li{position: relative;float:left;width:25%}
+}
+</style>
+{/literal}
+
+<div id="year2014" class="container">
+	<!-- banner -->
+	<div class="banner"><img src="/themes/uniwigs2014/activity/20140514_Monofilament-Wigs/image/banner.png" width="100%"></div>
+	<div class="a_href"><a href="http://www.uniwigs.com/tag/monofilament-wigs">SHOP ALL MONOFILAMENT WIGS >></a></div>
+	<div class="title">
+			<div class="fix">
+				<img src="/themes/uniwigs2014/activity/20140514_Monofilament-Wigs/image/1.jpg" class="fll" style="margin-right: 15px;">
+				<p>Monofilament material is a thin gauze-like, nearly transparent material which is much more comfortable to the touch, little harder than the lace material. Hair strands are attached by hand-knotting to this material, one strand at a time, hence the term "mono-filament". This allows the strands to swivel freely on base and so the monofilament wigs are more easily to be styled. </p><p>Among the many ready-to-wear wig options available on the market,&nbsp;monofilament wigs&nbsp;are distinct due to their unique traits and benefits. Mono-Part, Mono-Top and Mono-Crown all refer to types of monofilament wig cap constructions. Whether you've experienced complete or partial hair loss, these wigs are considered the best choice due to their light weight, comfort and styling options. This is extremely important if your hair loss is caused by medical illness and your scalp is more sensitive to weight and temperature. Women with these concerns find the monofilament construction and quality in these wigs the ideal solution.
+				</p>
+			</div>
+			<div class="fix">
+				<img src="/themes/uniwigs2014/activity/20140514_Monofilament-Wigs/image/2.jpg" class="flr" style="margin-left: 30px;">
+				<h3>Monofilament Wigs: The Illusion of Natural Hair Growth</h3>
+				<p>
+					These wigs give the illusion of natural hair growth since the sheerness of the fabric at the scalp blends in with the actual color of the skin. 
+For that reason, this construction makes the wig virtually undetectable. The monofilament construction ensures that even if the wig hair is 
+styled and parted in a different direction, the wig's construction will not be revealed. Combined, the thinness of the fabric and the sheer 
+color will make you forget you are wearing a wig at all!
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="year2014_product container" style="padding-bottom: 30px;">
+		<h3>Our favourite mono wigs</h3>
+		<ul class="row">
+			{*<li>
+				<span class="off">- $40.00</span>
+				<a href=""><img src="/40060-1055-category/deluxe-synthetic-capless-wig.jpg"></a>
+				<h5><a href="">Deluxe Synthetic Capless Wig</a></h5>
+				<p class="now">Promotion: $102.89</p>
+				<p class="old">Retail Price: $142.89</p>
+				<div class="btn"><a href="" class="f-btn btn-small btn-primary">buy now</a></div>
+			</li>*}
+			{foreach from=$products key=key item=product}
+			<li>
+			<div class="product-container">
+				<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					class="" itemprop="url"> <img
+					src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'vnormal')}"
+					alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					itemprop="image"/>
+				</a>
+				<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+					{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+				<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+				{foreach from=$product.show_price_list key=spi item=show_price}
+				{if $spi>0}
+				<p class="old">
+				{$show_price.label}: {convertPrice price=$show_price.value}
+				</p>
+				{/if}
+				{/foreach}
+
+				<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+
+                {assign var="lastind" value=$product.show_price_list|@count}
+				{assign var="lastind" value=$lastind-1}
+				{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+				{if $lastprice > $product.show_price_list.0.value}
+				{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+				<span class="off">- {convertPrice price=$diffprice}</span>
+				{/if}
+			</div>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+</div>

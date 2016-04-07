@@ -1,0 +1,11 @@
+*ERROR* 	2016/01/06 - 01:35:15: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group by id' at line 9<br /><br /><pre>
+		select sp.name,sp.content,sp.description
+		from px_product_specifications ps
+		left join ps_product p on ps.sku=p.reference
+		left join ps_product_lang pl on pl.id_product=p.id_product and id_lang=1
+		left join px_specifications sp on sp.id_specification=ps.id_specification
+		where sp.visible=1
+		and p.id_product=40924
+		order by sp.sortindex asc,sp.id_specification asc
+		group by id
+		</pre> at line 791 in file classes/db/Db.php

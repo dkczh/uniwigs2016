@@ -1,0 +1,99 @@
+{literal}
+<style>
+#year2014 img{max-width:100%;display:block}
+#year2014 .title{margin:25px 0}
+.ctags_bottom {
+padding: 15px;
+border: 1px solid #E0E0E0;
+margin-top: 15px;
+overflow: hidden;
+background: #FAFAFA;
+}
+.ctags_bottom li{width:25%;float:left;padding: 10px;}
+.ctags_bottom li a {
+line-height: 26px;
+display: block;
+padding: 6px 16px;
+background: #E46EAC;
+color: #FFF;
+text-align: center;
+font-size: 1.3em;
+}
+.ctags_bottom li a:hover{color:#fff;text-decoration: none;background:#EF3386;}
+@media (min-width: 768px){
+	.ctags_bottom li{width:33.333333%}
+}
+@media (min-width: 1024px){
+	.ctags_bottom li{width:25%}
+}
+</style>
+{/literal}
+
+<div id="year2014">
+	<!-- banner -->
+	<div class="banner">
+		<img src="/themes/uniwigs2014/event/2015-top-selling/image/banner.jpg">
+	</div>
+
+	<div class="year2014_product container">
+		<div class="title">
+			<img src="/themes/uniwigs2014/event/2015-top-selling/image/human_hair.jpg">
+		</div>
+		<section class="shoppics category-shoppic ">
+			<ul class="fix">
+				{include file=$tpl_dir2./product_boxes_in_category.html products=$products.0}
+			</ul>
+		</section>
+		<div class="title">
+			<img src="/themes/uniwigs2014/event/2015-top-selling/image/synthetic.jpg">
+		</div>
+		<section class="shoppics category-shoppic ">
+			<ul class="fix">
+				{include file=$tpl_dir2./product_boxes_in_category.html products=$products.1}
+			</ul>
+		</section>
+		<div class="title">
+			<img src="/themes/uniwigs2014/event/2015-top-selling/image/extensions.jpg">
+		</div>
+		<section class="shoppics category-shoppic ">
+			<ul class="fix">
+				{include file=$tpl_dir2./product_boxes_in_category.html products=$products.2}
+			</ul>
+		</section>
+		<div class="title">
+			<img src="/themes/uniwigs2014/event/2015-top-selling/image/closure.jpg">
+		</div>
+		<section class="shoppics category-shoppic ">
+			<ul class="fix">
+				{include file=$tpl_dir2./product_boxes_in_category.html products=$products.3}
+			</ul>
+		</section>
+		<div class="ctags_bottom">
+			<ul>
+				<li class="">
+				<a href="/celebrity-wigs">Celebrity Wigs</a>
+				</li>
+				<li>
+				<a href="/human-hair-wigs">Human Hair Wigs</a>
+				</li>
+				<li>
+				<a href="/synthetic-wigs">Synthetic Wigs</a>
+				</li>
+				<li>
+				<a href="/clip-in-hair-extensions">Clip in Hair Extensions</a>
+				</li>
+				<li class="">
+				<a href="/flip-in-hair-extensions">Flip in Hair Extensions</a>
+				</li>
+				<li>
+				<a href="/tag/lace-closure">Lace Closure</a>
+				</li>
+				<li>
+				<a href="/tag/mono-hair-pieces">Mono Hairpieces</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+{include file=$tpl_dir2./product_boxes_in_category_popup.html}

@@ -1,0 +1,118 @@
+{literal}
+<style>
+#f-wrapper {margin-top:0;}
+#year2014{background:#95ABF7}
+.layout{width:1000px;margin:0 auto;position: relative;padding:0;}
+#year2014 .banner{background:url("/themes/uniwigs2014/activity/20140524_spring-sale/image/bg01.jpg")no-repeat center top;height:410px;font-size: 0;text-indent: -9999px;}
+#year2014 .layer_them{padding-bottom: 40px;}
+#year2014 .title{color:#fff;padding: 50px 0 0;background:url("/themes/uniwigs2014/activity/20140524_spring-sale/image/bg02.jpg")no-repeat center top;height:453px}
+#year2014 .left_title{width:60%}
+#year2014 .title p{font-size:16px;padding: 20px 0;line-height:30px;border-top:1px solid #fff;border-bottom:1px solid #fff}
+#year2014 .title h4{text-align:center;font-size: 18px;font-weight: bold;text-transform: uppercase;margin-bottom:20px;font-family: Georgia,arial;}
+#year2014 .a_href{text-align: center;font-size: 16px;text-decoration: underline;}
+.year2014_product{padding-bottom: 30px;margin-top: -130px;}
+.year2014_product h3{font-size: 18px;text-align: center;text-transform: uppercase;font-weight: bold;padding: 15px 0;}
+.year2014_product ul{overflow:hidden;}
+.year2014_product li .product-container{margin:10px;float:left;padding:15px;background:#fff;border:1px solid #e1e1e1;position: relative;height:400px;}
+.year2014_product li .product-container img{width:100%}
+
+.year2014_product p{padding:5px 0 0}
+.year2014_product p.now{font-size:16px;font-weight:bold;color:#ef3386}
+.year2014_product p.old{color:#666;text-decoration: line-through;}
+.year2014_product .btn{margin-top:10px}
+.year2014_product .btn a{width:100%}
+.year2014_product span.off{
+background: #EF3386;
+color: #FFF;
+padding: 5px 10px;
+position: absolute;
+display: block;
+width: 86px;
+font-size: 14px;
+font-family: verdana;
+left: 15px;
+top: 15px;
+}
+.year2014_product h5{height:40px;overflow:hidden;}
+#year2014 .tag_link {margin: 20px 0;padding: 20px 0;}
+#year2014 .tag_link a {display: inline-block;float: left;width: 300px;margin-right: 50px;}
+#year2014 .tag_link a.end{margin-right:0}
+.year2014_product h5{height:40px;overflow:hidden;}
+@media (min-width: 768px){
+	.year2014_product li{position: relative;float:left;width:33.333333%}
+}
+@media (min-width: 1024px){
+	.year2014_product li{position: relative;float:left;width:25%}
+}
+</style>
+{/literal}
+
+<div id="year2014">
+	<!-- banner -->
+	<div class="banner">
+		<h2>End of Spring Clearance Sale</h2>
+		<h3>start from $25.89</h3>
+	</div>
+	<div class="title">
+		<div class="container">
+			<div class="left_title">
+				<h4>synthetic fibers for hair and beauty</h4>
+				<p>Kanekalon® is natural feeling, lighter, softer hair with more natural body complement today's modern fashionable lifestyle. This worldly renowned synthetic fiber is what makes "Kanekalon®" the name as best quality synthetic hair in the past 50 years, widely used for wig and hair extension's leading brands around the globe.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="year2014_product container">
+		<ul class="fix">
+			{*<li>
+				<span class="off">- $40.00</span>
+				<a href=""><img src="/40060-1055-category/deluxe-synthetic-capless-wig.jpg"></a>
+				<h5><a href="">Deluxe Synthetic Capless Wig</a></h5>
+				<p class="now">Promotion: $102.89</p>
+				<p class="old">Retail Price: $142.89</p>
+				<div class="btn"><a href="" class="f-btn btn-small btn-primary">buy now</a></div>
+			</li>*}
+			{foreach from=$products key=key item=product}
+			<li>
+				<div class="product-container">
+				<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					class="" itemprop="url"> <img
+					src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+					alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+					itemprop="image"/>
+				</a>
+				<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+					{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+				<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+				{foreach from=$product.show_price_list key=spi item=show_price}
+				{if $spi>0}
+				<p class="old">
+				{$show_price.label}: {convertPrice price=$show_price.value}
+				</p>
+				{/if}
+				{/foreach}
+
+				<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+
+                {assign var="lastind" value=$product.show_price_list|@count}
+				{assign var="lastind" value=$lastind-1}
+				{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+				{if $lastprice > $product.show_price_list.0.value}
+				{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+				<span class="off">- {convertPrice price=$diffprice}</span>
+				{/if}
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+		<div class="tag_link fix">
+			<a href="http://www.uniwigs.com/tag/capless-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/CAPLESS.jpg" alt="capless wigs"></a>
+			<a href="http://www.uniwigs.com/tag/human-hair-synthetic-blend-wigs"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/mono.jpg" alt="human hair synthetic blend wigs"></a>
+			<a class="end" href="http://www.uniwigs.com/tag/2014-5-new-hairstyles"><img src="/themes/uniwigs2014/activity/20140524_spring-sale/image/new.jpg" alt="new hairstyles"></a>
+		</div>
+	</div>
+</div>

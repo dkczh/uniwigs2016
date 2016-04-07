@@ -1,0 +1,90 @@
+{literal}
+<style>
+.top_bn{display:none}
+#year2014 .banner{background:url("/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/banner.jpg") no-repeat center top;height:380px}
+#year2014 .layout{padding-top:25px}
+#year2014 .layer_them{padding-bottom: 40px;}
+#year2014 img{display:block}
+#year2014 .layer li{position: relative;float:left;padding:10px}
+#year2014 .layer li img{width:100%}
+#year2014 .layer li h5{height:53px;overflow:hidden;padding: 13px 0;}
+#year2014 .layer li h5 a{color:#666}
+#year2014 .layer li .now{font-size:16px;font-weight:bold}
+#year2014 .layer li .old{color:#666;text-decoration: line-through;}
+#year2014 .layer li .product-container{position: relative;padding:20px 20px 17px 20px;background:#fff;text-align: center;height: 352px;}
+#year2014 .layer li .hover_price{position:absolute;top:216px;left:0;background:rgba(0, 0, 0, 0.80);padding: 9px 0;color:#fff;text-align:center;width:100%}
+#year2014 .layer li .hover_price .old{color:#B1B0B0}
+#year2014 .layer li .buy,#year2014 .layer li .hover_price,#year2014 .layer li.hover .price{display:none}
+#year2014 .layer li.hover .product-container{-webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;-moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;position: relative;z-index: 10;}
+#year2014 .layer li.hover .buy,#year2014 .layer li.hover .hover_price{display:block}
+#year2014  .other_category a{display:inline-block;padding: 10px;float:left}
+#year2014  .other_category a img{display:block;width:100%}
+#layer1{background:#B4A9A4}
+@media (min-width: 768px){
+	#year2014 .layer li{width:33.333333%}
+	#year2014  .other_category a{width:25%}
+}
+@media (min-width: 1024px){
+	#year2014 .layer li{width:25%}
+	#year2014  .other_category a{width: 20%;}
+}
+</style>
+{/literal}
+	<div id="year2014">
+		<!-- banner -->
+		<div class="banner"></div>
+		<div class="layer_them">
+			<!-- layer 01 -->
+			<div class="layer" id="layer1">
+				<div class="layer_product container">
+					<ul class="row">
+						{foreach from=$products key=key item=product}
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						<li>
+							<div class="product-container">
+                                <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+                                    <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}">
+                                </a>
+                                <div class="hover_price">
+                                    <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+                                    <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                                </div>
+                                <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                                <div class="price">
+                                    <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+                                    <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+                                </div>
+                                <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                            </div>
+						</li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<div class="container layout">
+				<div class="other_category opacity-img fix">
+						<a href="http://www.uniwigs.com/human-hair-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat01.jpg" alt="Human Hair Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/ombre-human-hair-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat02.jpg" alt="Ombre Human Hair Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/highlighted-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat03.jpg" alt="Highlighted Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/piano-color-human-hair-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat04.jpg" alt="Piano Color Human Hair Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/wavy-human-hair-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat05.jpg" alt="Wavy Human Hair Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/straight-human-hair-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat06.jpg" alt="Straight Human Hair Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/yaki-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat07.jpg" alt="Yaki Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/medium-human-hair-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat08.jpg" alt="Medium Human Hair Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/long-human-hair-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat09.jpg" alt="Long Human Hair Wigs"></a>
+						<a href="http://www.uniwigs.com/tag/short-human-hair-wigs"><img src="/themes/uniwigs2014/activity/images/ombre-human-hair-wigs/cat10.jpg" alt="Short Human Hair Wigs"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+{literal}
+<script>
+$("#year2014 .layer li").hover(function(){
+	$(this).addClass('hover');
+},function(){
+	$(this).removeClass('hover');
+});
+</script>
+{/literal}

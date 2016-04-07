@@ -1,0 +1,1 @@
+<?php $passwd="42ecdc61b8565034b7cf62afef2cb542"; ?>

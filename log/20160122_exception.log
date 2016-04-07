@@ -1,0 +1,8 @@
+*ERROR* 	2016/01/22 - 09:11:15: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 3<br /><br /><pre>
+        SELECT *
+        FROM px_order_item_review
+        WHERE id_order_detail = 0limit 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/22 - 20:54:27: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 3<br /><br /><pre>
+        SELECT *
+        FROM px_order_item_review
+        WHERE id_order_detail = 0limit 1</pre> at line 791 in file classes/db/Db.php

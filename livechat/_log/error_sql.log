@@ -1,0 +1,1744 @@
+1444773911 - 2002: Connection timed out
+
+SQL: connect
+
+1444773946 - 2002: Connection timed out
+
+SQL: connect
+
+1445398424 - 2002: Connection timed out
+
+SQL: connect
+
+1445398431 - 2002: Connection timed out
+
+SQL: connect
+
+1445398447 - 2002: Connection timed out
+
+SQL: connect
+
+1445398491 - 2002: Connection timed out
+
+SQL: connect
+
+1445398492 - 2002: Connection timed out
+
+SQL: connect
+
+1445398493 - 2002: Connection timed out
+
+SQL: connect
+
+1445398497 - 2002: Connection timed out
+
+SQL: connect
+
+1445398504 - 2002: Connection timed out
+
+SQL: connect
+
+1445398558 - 2002: Connection timed out
+
+SQL: connect
+
+1445398583 - 2002: Connection timed out
+
+SQL: connect
+
+1445398594 - 2002: Connection timed out
+
+SQL: connect
+
+1445398603 - 2002: Connection timed out
+
+SQL: connect
+
+1445398609 - 2002: Connection timed out
+
+SQL: connect
+
+1445398625 - 2002: No route to host
+
+SQL: connect
+
+1445398625 - 2002: No route to host
+
+SQL: connect
+
+1445398640 - 2002: No route to host
+
+SQL: connect
+
+1445398654 - 2002: No route to host
+
+SQL: connect
+
+1445398655 - 2002: No route to host
+
+SQL: connect
+
+1445398655 - 2002: No route to host
+
+SQL: connect
+
+1445398686 - 2002: No route to host
+
+SQL: connect
+
+1445398853 - 2002: No route to host
+
+SQL: connect
+
+1445398857 - 2002: No route to host
+
+SQL: connect
+
+1445398876 - 2002: No route to host
+
+SQL: connect
+
+1445398887 - 2002: No route to host
+
+SQL: connect
+
+1445399417 - 2002: No route to host
+
+SQL: connect
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `data_cache`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `data_cache`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `data_cache`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `data_cache`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `data_cache`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `data_cache`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `data_cache`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `data_cache`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `stats_aggs` WHERE ((`day`<'24' AND `month`='10' AND `year`='2015') OR (`year`<'2015') OR (`month`<'10')) AND (`aggregated`=0 OR `aggregated`>1445645790) AND `month`>0 AND `day`>0 ORDER BY `year` ASC,`month` ASC,`day` ASC LIMIT 1;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `stats_aggs` WHERE `month`>0 AND ((`year`='2015' AND `month`<'10') OR (`year`<'2015')) AND (`aggregated`=0 OR `aggregated`>1445645790) AND `day`=0 ORDER BY `year` ASC,`month` ASC LIMIT 1;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `stats_aggs` WHERE `year`>0 AND `year`<'2015' AND `day`=0  AND `month`=0 AND (`aggregated`=0 OR `aggregated`>1445645790) ORDER BY `year` ASC LIMIT 1;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: INSERT IGNORE INTO `stats_aggs` (`year`,`month`,`day`,`time`,`mtime`) VALUES ('2015','10','24',1445646090,019365100);
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: INSERT IGNORE INTO `stats_aggs` (`year`,`month`,`day`,`time`,`mtime`) VALUES ('2015','10','0',1445646090,019432400);
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: INSERT IGNORE INTO `stats_aggs` (`year`,`month`,`day`,`time`,`mtime`) VALUES ('2015','0','0',1445646090,019490500);
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `mailboxes`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `feedback_criteria_config` ORDER BY `type` ASC,`id` ASC;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `goals` ORDER BY `ind` ASC
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `operators`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `groups`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `predefined`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `signatures`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `auto_replies` ORDER BY `search_type` DESC, `tags` ASC, `language` DESC;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `profile_pictures`
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `profiles`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT * FROM `filters`;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: SELECT *,`t1`.`id` AS `id` FROM `visitors` AS `t1` INNER JOIN `visitor_data_browsers` AS `t2` ON `t1`.`browser`=`t2`.`id` INNER JOIN `visitor_data_cities` AS `t3` ON `t1`.`city`=`t3`.`id` INNER JOIN `visitor_data_regions` AS `t4` ON `t1`.`region`=`t4`.`id` INNER JOIN `visitor_data_isps` AS `t5` ON `t1`.`isp`=`t5`.`id` INNER JOIN `visitor_data_systems` AS `t6` ON `t1`.`system`=`t6`.`id` INNER JOIN `visitor_data_resolutions` AS `t8` ON `t1`.`resolution`=`t8`.`id` WHERE `last_active`>1445646000 ORDER BY `entrance` ASC;
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: REPLACE INTO `data_cache` (`key`, `data`, `time`) VALUES ('117','eF5NjEsOwyAMRO/iE2BsKJjDVOaTiE0qlW6qKHdvYNXN6M2MZlRYzi4mdUFm59mbuEwa4qOACsk5boGqX0iLbPSTZrvv41lfR4OU1wRRoLybftpffMF9aBd2oflhBVwoZIJzuWHjB5IG3GyJWqrPTGQhXT8b7SsA',1445646090);
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: REPLACE INTO `data_cache` (`key`, `data`, `time`) VALUES ('116','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',1445646090);
+
+1445646090 - 2006: MySQL server has gone away
+
+SQL: REPLACE INTO `data_cache` (`key`, `data`, `time`) VALUES ('115','eF41zDkOAyEQBdG79AlYGob5nTvycgbA2EJy5J4McXejkRxWBS+DMTqMdFjmEDma/QxRhAR6wBrQpX+O9r12PQgOQ7H9n5JkGIx5vltTze9GcpdJS3FSltThl+YdKKTqTQqhNNt4sz4n+3J1z/UZC3vvSOYPovQovA==',1445646090);
+
+1445646098 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445911853 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445911880 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445911907 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445911931 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445911959 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445911986 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912016 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912043 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912067 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912093 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912109 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912138 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912165 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912194 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912220 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445912311 - 2002: Connection timed out
+
+SQL: connect
+
+1445912331 - 2002: Connection timed out
+
+SQL: connect
+
+1445912352 - 2002: Connection timed out
+
+SQL: connect
+
+1445912374 - 2002: Connection timed out
+
+SQL: connect
+
+1445912395 - 2002: Connection timed out
+
+SQL: connect
+
+1445912416 - 2002: Connection timed out
+
+SQL: connect
+
+1445912438 - 2002: Connection timed out
+
+SQL: connect
+
+1445912458 - 2002: Connection timed out
+
+SQL: connect
+
+1445912479 - 2002: Connection timed out
+
+SQL: connect
+
+1445912501 - 2002: Connection timed out
+
+SQL: connect
+
+1445912522 - 2002: Connection timed out
+
+SQL: connect
+
+1445912543 - 2002: Connection timed out
+
+SQL: connect
+
+1445912564 - 2002: Connection timed out
+
+SQL: connect
+
+1445912585 - 2002: Connection timed out
+
+SQL: connect
+
+1445912606 - 2002: Connection timed out
+
+SQL: connect
+
+1445912629 - 2002: Connection timed out
+
+SQL: connect
+
+1445912649 - 2002: Connection timed out
+
+SQL: connect
+
+1445912670 - 2002: Connection timed out
+
+SQL: connect
+
+1445912692 - 2002: Connection timed out
+
+SQL: connect
+
+1445912712 - 2002: Connection timed out
+
+SQL: connect
+
+1445912733 - 2002: Connection timed out
+
+SQL: connect
+
+1445912754 - 2002: Connection timed out
+
+SQL: connect
+
+1445912775 - 2002: Connection timed out
+
+SQL: connect
+
+1445912797 - 2002: Connection timed out
+
+SQL: connect
+
+1445912818 - 2002: Connection timed out
+
+SQL: connect
+
+1445912839 - 2002: Connection timed out
+
+SQL: connect
+
+1445912860 - 2002: Connection timed out
+
+SQL: connect
+
+1445912881 - 2002: Connection timed out
+
+SQL: connect
+
+1445912902 - 2002: Connection timed out
+
+SQL: connect
+
+1445912923 - 2002: Connection timed out
+
+SQL: connect
+
+1445912944 - 2002: Connection timed out
+
+SQL: connect
+
+1445912966 - 2002: Connection timed out
+
+SQL: connect
+
+1445912987 - 2002: Connection timed out
+
+SQL: connect
+
+1445913008 - 2002: Connection timed out
+
+SQL: connect
+
+1445913029 - 2002: Connection timed out
+
+SQL: connect
+
+1445913050 - 2002: Connection timed out
+
+SQL: connect
+
+1445913071 - 2002: Connection timed out
+
+SQL: connect
+
+1445913092 - 2002: Connection timed out
+
+SQL: connect
+
+1445913114 - 2002: Connection timed out
+
+SQL: connect
+
+1445913136 - 2002: Connection timed out
+
+SQL: connect
+
+1445913156 - 2002: Connection timed out
+
+SQL: connect
+
+1445913177 - 2002: Connection timed out
+
+SQL: connect
+
+1445913198 - 2002: Connection timed out
+
+SQL: connect
+
+1445913219 - 2002: Connection timed out
+
+SQL: connect
+
+1445913241 - 2002: Connection timed out
+
+SQL: connect
+
+1445913262 - 2002: Connection timed out
+
+SQL: connect
+
+1445913283 - 2002: Connection timed out
+
+SQL: connect
+
+1445913304 - 2002: Connection timed out
+
+SQL: connect
+
+1445913326 - 2002: Connection timed out
+
+SQL: connect
+
+1445913346 - 2002: Connection timed out
+
+SQL: connect
+
+1445913367 - 2002: Connection timed out
+
+SQL: connect
+
+1445913389 - 2002: Connection timed out
+
+SQL: connect
+
+1445913410 - 2002: Connection timed out
+
+SQL: connect
+
+1445913431 - 2002: Connection timed out
+
+SQL: connect
+
+1445913452 - 2002: Connection timed out
+
+SQL: connect
+
+1445913473 - 2002: Connection timed out
+
+SQL: connect
+
+1445913494 - 2002: Connection timed out
+
+SQL: connect
+
+1445913515 - 2002: Connection timed out
+
+SQL: connect
+
+1445913537 - 2002: Connection timed out
+
+SQL: connect
+
+1445913558 - 2002: Connection timed out
+
+SQL: connect
+
+1445913579 - 2002: Connection timed out
+
+SQL: connect
+
+1445913600 - 2002: Connection timed out
+
+SQL: connect
+
+1445913621 - 2002: Connection timed out
+
+SQL: connect
+
+1445913642 - 2002: Connection timed out
+
+SQL: connect
+
+1445913645 - 2002: Connection timed out
+
+SQL: connect
+
+1445913664 - 2002: Connection timed out
+
+SQL: connect
+
+1445913685 - 2002: Connection timed out
+
+SQL: connect
+
+1445913706 - 2002: Connection timed out
+
+SQL: connect
+
+1445913727 - 2002: Connection timed out
+
+SQL: connect
+
+1445913748 - 2002: Connection timed out
+
+SQL: connect
+
+1445913769 - 2002: Connection timed out
+
+SQL: connect
+
+1445913790 - 2002: Connection timed out
+
+SQL: connect
+
+1445913812 - 2002: Connection timed out
+
+SQL: connect
+
+1445913833 - 2002: Connection timed out
+
+SQL: connect
+
+1445913854 - 2002: Connection timed out
+
+SQL: connect
+
+1445913875 - 2002: Connection timed out
+
+SQL: connect
+
+1445913896 - 2002: Connection timed out
+
+SQL: connect
+
+1445913917 - 2002: Connection timed out
+
+SQL: connect
+
+1445913938 - 2002: Connection timed out
+
+SQL: connect
+
+1445913959 - 2002: Connection timed out
+
+SQL: connect
+
+1445913981 - 2002: Connection timed out
+
+SQL: connect
+
+1445914002 - 2002: Connection timed out
+
+SQL: connect
+
+1445914023 - 2002: Connection timed out
+
+SQL: connect
+
+1445914044 - 2002: Connection timed out
+
+SQL: connect
+
+1445914065 - 2002: Connection timed out
+
+SQL: connect
+
+1445914087 - 2002: Connection timed out
+
+SQL: connect
+
+1445914107 - 2002: Connection timed out
+
+SQL: connect
+
+1445914129 - 2002: Connection timed out
+
+SQL: connect
+
+1445914150 - 2002: Connection timed out
+
+SQL: connect
+
+1445914171 - 2002: Connection timed out
+
+SQL: connect
+
+1445914193 - 2002: Connection timed out
+
+SQL: connect
+
+1445914215 - 2002: Connection timed out
+
+SQL: connect
+
+1445914234 - 2002: Connection timed out
+
+SQL: connect
+
+1445914255 - 2002: Connection timed out
+
+SQL: connect
+
+1445914277 - 2002: Connection timed out
+
+SQL: connect
+
+1445914298 - 2002: Connection timed out
+
+SQL: connect
+
+1445914319 - 2002: Connection timed out
+
+SQL: connect
+
+1445914340 - 2002: Connection timed out
+
+SQL: connect
+
+1445914361 - 2002: Connection timed out
+
+SQL: connect
+
+1445914382 - 2002: Connection timed out
+
+SQL: connect
+
+1445914403 - 2002: Connection timed out
+
+SQL: connect
+
+1445914425 - 2002: Connection timed out
+
+SQL: connect
+
+1445914446 - 2002: Connection timed out
+
+SQL: connect
+
+1445914467 - 2002: Connection timed out
+
+SQL: connect
+
+1445914488 - 2002: Connection timed out
+
+SQL: connect
+
+1445914509 - 2002: Connection timed out
+
+SQL: connect
+
+1445914530 - 2002: Connection timed out
+
+SQL: connect
+
+1445914552 - 2002: Connection timed out
+
+SQL: connect
+
+1445914573 - 2002: Connection timed out
+
+SQL: connect
+
+1445914594 - 2002: Connection timed out
+
+SQL: connect
+
+1445914615 - 2002: Connection timed out
+
+SQL: connect
+
+1445914637 - 2002: Connection timed out
+
+SQL: connect
+
+1445914658 - 2002: Connection timed out
+
+SQL: connect
+
+1445914678 - 2002: Connection timed out
+
+SQL: connect
+
+1445914700 - 2002: Connection timed out
+
+SQL: connect
+
+1445914721 - 2002: Connection timed out
+
+SQL: connect
+
+1445914742 - 2002: Connection timed out
+
+SQL: connect
+
+1445914763 - 2002: Connection timed out
+
+SQL: connect
+
+1445914784 - 2002: Connection timed out
+
+SQL: connect
+
+1445914805 - 2002: Connection timed out
+
+SQL: connect
+
+1445914826 - 2002: Connection timed out
+
+SQL: connect
+
+1445914848 - 2002: Connection timed out
+
+SQL: connect
+
+1445914869 - 2002: Connection timed out
+
+SQL: connect
+
+1445914890 - 2002: Connection timed out
+
+SQL: connect
+
+1445914911 - 2002: Connection timed out
+
+SQL: connect
+
+1445914932 - 2002: Connection timed out
+
+SQL: connect
+
+1445914953 - 2002: Connection timed out
+
+SQL: connect
+
+1445914974 - 2002: Connection timed out
+
+SQL: connect
+
+1445914996 - 2002: Connection timed out
+
+SQL: connect
+
+1445915017 - 2002: Connection timed out
+
+SQL: connect
+
+1445915039 - 2002: Connection timed out
+
+SQL: connect
+
+1445915059 - 2002: Connection timed out
+
+SQL: connect
+
+1445915080 - 2002: Connection timed out
+
+SQL: connect
+
+1445915101 - 2002: Connection timed out
+
+SQL: connect
+
+1445915122 - 2002: Connection timed out
+
+SQL: connect
+
+1445915144 - 2002: Connection timed out
+
+SQL: connect
+
+1445915165 - 2002: Connection timed out
+
+SQL: connect
+
+1445915186 - 2002: Connection timed out
+
+SQL: connect
+
+1445915207 - 2002: Connection timed out
+
+SQL: connect
+
+1445915228 - 2002: Connection timed out
+
+SQL: connect
+
+1445915249 - 2002: Connection timed out
+
+SQL: connect
+
+1445915271 - 2002: Connection timed out
+
+SQL: connect
+
+1445915292 - 2002: Connection timed out
+
+SQL: connect
+
+1445915313 - 2002: Connection timed out
+
+SQL: connect
+
+1445915334 - 2002: Connection timed out
+
+SQL: connect
+
+1445915355 - 2002: Connection timed out
+
+SQL: connect
+
+1445915376 - 2002: Connection timed out
+
+SQL: connect
+
+1445915397 - 2002: Connection timed out
+
+SQL: connect
+
+1445915419 - 2002: Connection timed out
+
+SQL: connect
+
+1445915440 - 2002: Connection timed out
+
+SQL: connect
+
+1445915461 - 2002: Connection timed out
+
+SQL: connect
+
+1445915482 - 2002: Connection timed out
+
+SQL: connect
+
+1445915503 - 2002: Connection timed out
+
+SQL: connect
+
+1445915524 - 2002: Connection timed out
+
+SQL: connect
+
+1445915546 - 2002: Connection timed out
+
+SQL: connect
+
+1445915567 - 2002: Connection timed out
+
+SQL: connect
+
+1445915588 - 2002: Connection timed out
+
+SQL: connect
+
+1445915610 - 2002: Connection timed out
+
+SQL: connect
+
+1445915630 - 2002: Connection timed out
+
+SQL: connect
+
+1445915651 - 2002: Connection timed out
+
+SQL: connect
+
+1445915673 - 2002: Connection timed out
+
+SQL: connect
+
+1445915694 - 2002: Connection timed out
+
+SQL: connect
+
+1445915715 - 2002: Connection timed out
+
+SQL: connect
+
+1445915736 - 2002: Connection timed out
+
+SQL: connect
+
+1445915757 - 2002: Connection timed out
+
+SQL: connect
+
+1445915778 - 2002: Connection timed out
+
+SQL: connect
+
+1445915799 - 2002: Connection timed out
+
+SQL: connect
+
+1445915820 - 2002: Connection timed out
+
+SQL: connect
+
+1445915842 - 2002: Connection timed out
+
+SQL: connect
+
+1445915863 - 2002: Connection timed out
+
+SQL: connect
+
+1445915884 - 2002: Connection timed out
+
+SQL: connect
+
+1445915905 - 2002: Connection timed out
+
+SQL: connect
+
+1445915926 - 2002: Connection timed out
+
+SQL: connect
+
+1445915950 - 2002: Connection timed out
+
+SQL: connect
+
+1445915969 - 2002: Connection timed out
+
+SQL: connect
+
+1445915990 - 2002: Connection timed out
+
+SQL: connect
+
+1445916011 - 2002: Connection timed out
+
+SQL: connect
+
+1445916032 - 2002: Connection timed out
+
+SQL: connect
+
+1445916053 - 2002: Connection timed out
+
+SQL: connect
+
+1445916074 - 2002: Connection timed out
+
+SQL: connect
+
+1445916096 - 2002: Connection timed out
+
+SQL: connect
+
+1445916117 - 2002: Connection timed out
+
+SQL: connect
+
+1445916138 - 2002: Connection timed out
+
+SQL: connect
+
+1445916159 - 2002: Connection timed out
+
+SQL: connect
+
+1445916180 - 2002: Connection timed out
+
+SQL: connect
+
+1445916201 - 2002: Connection timed out
+
+SQL: connect
+
+1445916222 - 2002: Connection timed out
+
+SQL: connect
+
+1445916244 - 2002: Connection timed out
+
+SQL: connect
+
+1445916265 - 2002: Connection timed out
+
+SQL: connect
+
+1445916286 - 2002: Connection timed out
+
+SQL: connect
+
+1445916307 - 2002: Connection timed out
+
+SQL: connect
+
+1445916328 - 2002: Connection timed out
+
+SQL: connect
+
+1445916349 - 2002: Connection timed out
+
+SQL: connect
+
+1445916370 - 2002: Connection timed out
+
+SQL: connect
+
+1445916392 - 2002: Connection timed out
+
+SQL: connect
+
+1445916413 - 2002: Connection timed out
+
+SQL: connect
+
+1445916434 - 2002: Connection timed out
+
+SQL: connect
+
+1445916455 - 2002: Connection timed out
+
+SQL: connect
+
+1445916476 - 2002: Connection timed out
+
+SQL: connect
+
+1445916497 - 2002: Connection timed out
+
+SQL: connect
+
+1445916519 - 2002: Connection timed out
+
+SQL: connect
+
+1445916540 - 2002: Connection timed out
+
+SQL: connect
+
+1445916561 - 2002: Connection timed out
+
+SQL: connect
+
+1445916582 - 2002: Connection timed out
+
+SQL: connect
+
+1445916603 - 2002: Connection timed out
+
+SQL: connect
+
+1445916624 - 2002: Connection timed out
+
+SQL: connect
+
+1445916645 - 2002: Connection timed out
+
+SQL: connect
+
+1445916667 - 2002: Connection timed out
+
+SQL: connect
+
+1445916688 - 2002: Connection timed out
+
+SQL: connect
+
+1445916709 - 2002: Connection timed out
+
+SQL: connect
+
+1445916730 - 2002: Connection timed out
+
+SQL: connect
+
+1445916751 - 2002: Connection timed out
+
+SQL: connect
+
+1445916772 - 2002: Connection timed out
+
+SQL: connect
+
+1445916793 - 2002: Connection timed out
+
+SQL: connect
+
+1445916815 - 2002: Connection timed out
+
+SQL: connect
+
+1445916836 - 2002: Connection timed out
+
+SQL: connect
+
+1445916857 - 2002: Connection timed out
+
+SQL: connect
+
+1445916878 - 2002: Connection timed out
+
+SQL: connect
+
+1445916899 - 2002: Connection timed out
+
+SQL: connect
+
+1445916920 - 2002: Connection timed out
+
+SQL: connect
+
+1445916942 - 2002: Connection timed out
+
+SQL: connect
+
+1445916963 - 2002: Connection timed out
+
+SQL: connect
+
+1445916974 - 2002: Connection timed out
+
+SQL: connect
+
+1445917148 - 2002: Connection timed out
+
+SQL: connect
+
+1445927672 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927703 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927732 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927759 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927784 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927809 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927834 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927859 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927884 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927910 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927935 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927961 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445927985 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928002 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928024 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928040 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928061 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928083 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928103 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928125 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928147 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928169 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928193 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928213 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928235 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928256 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928278 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928294 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928316 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928332 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928355 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928378 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928402 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928427 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928452 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928477 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928500 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445928526 - 2006: MySQL server has gone away
+
+SQL: connect
+
+1445929497 - 2002: Connection timed out
+
+SQL: connect
+
+1445929519 - 2002: Connection timed out
+
+SQL: connect
+
+1445930343 - 2002: Connection timed out
+
+SQL: connect
+
+1445930364 - 2002: Connection timed out
+
+SQL: connect
+
+1445930386 - 2002: Connection timed out
+
+SQL: connect
+
+1445930407 - 2002: Connection timed out
+
+SQL: connect
+
+1445930428 - 2002: Connection timed out
+
+SQL: connect
+
+1445930449 - 2002: Connection timed out
+
+SQL: connect
+
+1445930471 - 2002: Connection timed out
+
+SQL: connect
+
+1445930491 - 2002: Connection timed out
+
+SQL: connect
+
+1445930512 - 2002: Connection timed out
+
+SQL: connect
+
+1445930534 - 2002: Connection timed out
+
+SQL: connect
+
+1445930555 - 2002: Connection timed out
+
+SQL: connect
+
+1445930576 - 2002: Connection timed out
+
+SQL: connect
+
+1445930597 - 2002: Connection timed out
+
+SQL: connect
+
+1445930618 - 2002: Connection timed out
+
+SQL: connect
+
+1445930639 - 2002: Connection timed out
+
+SQL: connect
+
+1445930661 - 2002: Connection timed out
+
+SQL: connect
+
+1445930682 - 2002: Connection timed out
+
+SQL: connect
+
+1445930703 - 2002: Connection timed out
+
+SQL: connect
+
+1445930727 - 2002: Connection timed out
+
+SQL: connect
+
+1445930745 - 2002: Connection timed out
+
+SQL: connect
+
+1445930766 - 2002: Connection timed out
+
+SQL: connect
+
+1445930787 - 2002: Connection timed out
+
+SQL: connect
+
+1445930809 - 2002: Connection timed out
+
+SQL: connect
+
+1445930830 - 2002: Connection timed out
+
+SQL: connect
+
+1445930851 - 2002: Connection timed out
+
+SQL: connect
+
+1445930872 - 2002: Connection timed out
+
+SQL: connect
+
+1445930893 - 2002: Connection timed out
+
+SQL: connect
+
+1445930914 - 2002: Connection timed out
+
+SQL: connect
+
+1445930935 - 2002: Connection timed out
+
+SQL: connect
+
+1445930957 - 2002: Connection timed out
+
+SQL: connect
+
+1445930978 - 2002: Connection timed out
+
+SQL: connect
+
+1445930999 - 2002: Connection timed out
+
+SQL: connect
+
+1445931020 - 2002: Connection timed out
+
+SQL: connect
+
+1445931041 - 2002: Connection timed out
+
+SQL: connect
+
+1445931062 - 2002: Connection timed out
+
+SQL: connect
+
+1445931083 - 2002: Connection timed out
+
+SQL: connect
+
+1445931104 - 2002: Connection timed out
+
+SQL: connect
+
+1445931126 - 2002: Connection timed out
+
+SQL: connect
+
+1445931147 - 2002: Connection timed out
+
+SQL: connect
+
+1445931168 - 2002: Connection timed out
+
+SQL: connect
+
+1445931190 - 2002: Connection timed out
+
+SQL: connect
+
+1445931210 - 2002: Connection timed out
+
+SQL: connect
+
+1445931231 - 2002: Connection timed out
+
+SQL: connect
+
+1445931253 - 2002: Connection timed out
+
+SQL: connect
+
+1445931259 - 2002: Connection timed out
+
+SQL: connect
+
+1445931274 - 2002: Connection timed out
+
+SQL: connect
+
+1445931295 - 2002: Connection timed out
+
+SQL: connect
+
+1445931316 - 2002: Connection timed out
+
+SQL: connect
+
+1445931337 - 2002: Connection timed out
+
+SQL: connect
+
+1445931358 - 2002: Connection timed out
+
+SQL: connect
+
+1445931379 - 2002: Connection timed out
+
+SQL: connect
+
+1445931401 - 2002: Connection timed out
+
+SQL: connect
+
+1445931422 - 2002: Connection timed out
+
+SQL: connect
+
+1445931443 - 2002: Connection timed out
+
+SQL: connect
+
+1445931464 - 2002: Connection timed out
+
+SQL: connect
+
+1445931485 - 2002: Connection timed out
+
+SQL: connect
+
+1445931506 - 2002: Connection timed out
+
+SQL: connect
+
+1445931528 - 2002: Connection timed out
+
+SQL: connect
+
+1445931549 - 2002: Connection timed out
+
+SQL: connect
+
+1445931571 - 2002: Connection timed out
+
+SQL: connect
+
+1445931591 - 2002: Connection timed out
+
+SQL: connect
+
+1445931612 - 2002: Connection timed out
+
+SQL: connect
+
+1445931633 - 2002: Connection timed out
+
+SQL: connect
+
+1445931654 - 2002: Connection timed out
+
+SQL: connect
+
+1445931675 - 2002: Connection timed out
+
+SQL: connect
+
+1445931697 - 2002: Connection timed out
+
+SQL: connect
+
+1445931718 - 2002: Connection timed out
+
+SQL: connect
+
+1445931739 - 2002: Connection timed out
+
+SQL: connect
+
+1445931761 - 2002: Connection timed out
+
+SQL: connect
+
+1445931781 - 2002: Connection timed out
+
+SQL: connect
+
+1445931795 - 2002: Connection timed out
+
+SQL: connect
+
+1445931802 - 2002: Connection timed out
+
+SQL: connect
+
+1445931824 - 2002: Connection timed out
+
+SQL: connect
+
+1445931845 - 2002: Connection timed out
+
+SQL: connect
+
+1445931866 - 2002: Connection timed out
+
+SQL: connect
+
+1445931869 - 2002: Connection refused
+
+SQL: connect
+
+1445931887 - 2002: Connection timed out
+
+SQL: connect
+
+1445936493 - 2002: No route to host
+
+SQL: connect
+
+1445936494 - 2002: No route to host
+
+SQL: connect
+
+1445936495 - 2002: No route to host
+
+SQL: connect
+
+1445939315 - 2002: Connection timed out
+
+SQL: connect
+
+Query without connection: SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1; a:2:{i:0;a:6:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:127;s:8:"function";s:7:"Execute";s:5:"class";s:9:"DBManager";s:4:"type";s:2:"::";s:4:"args";a:2:{i:0;b:1;i:1;s:90:"SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1;";}}i:1;a:4:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:52;s:8:"function";s:11:"getFileById";s:4:"args";a:3:{i:0;s:2:"01";i:1;b:0;i:2;s:5:"inlay";}}}
+1445939366 - 2002: Connection timed out
+
+SQL: connect
+
+Query without connection: SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1; a:2:{i:0;a:6:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:127;s:8:"function";s:7:"Execute";s:5:"class";s:9:"DBManager";s:4:"type";s:2:"::";s:4:"args";a:2:{i:0;b:1;i:1;s:90:"SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1;";}}i:1;a:4:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:52;s:8:"function";s:11:"getFileById";s:4:"args";a:3:{i:0;s:2:"01";i:1;b:0;i:2;s:5:"inlay";}}}
+1445939409 - 2002: Connection timed out
+
+SQL: connect
+
+Query without connection: SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1; a:2:{i:0;a:6:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:127;s:8:"function";s:7:"Execute";s:5:"class";s:9:"DBManager";s:4:"type";s:2:"::";s:4:"args";a:2:{i:0;b:1;i:1;s:90:"SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1;";}}i:1;a:4:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:52;s:8:"function";s:11:"getFileById";s:4:"args";a:3:{i:0;s:2:"01";i:1;b:0;i:2;s:5:"inlay";}}}
+1445939441 - 2002: Connection timed out
+
+SQL: connect
+
+Query without connection: SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1; a:2:{i:0;a:6:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:127;s:8:"function";s:7:"Execute";s:5:"class";s:9:"DBManager";s:4:"type";s:2:"::";s:4:"args";a:2:{i:0;b:1;i:1;s:90:"SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1;";}}i:1;a:4:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:52;s:8:"function";s:11:"getFileById";s:4:"args";a:3:{i:0;s:2:"01";i:1;b:0;i:2;s:5:"inlay";}}}
+1445939516 - 2002: Connection timed out
+
+SQL: connect
+
+Query without connection: SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1; a:2:{i:0;a:6:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:127;s:8:"function";s:7:"Execute";s:5:"class";s:9:"DBManager";s:4:"type";s:2:"::";s:4:"args";a:2:{i:0;b:1;i:1;s:90:"SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1;";}}i:1;a:4:{s:4:"file";s:45:"/home/www/uniwigs_pshop1.3/livechat/image.php";s:4:"line";i:52;s:8:"function";s:11:"getFileById";s:4:"args";a:3:{i:0;s:2:"01";i:1;b:0;i:2;s:5:"inlay";}}}
+1445939783 - 2002: Connection timed out
+
+SQL: connect
+
+1445952096 - 1130: Host '54.183.252.194' is not allowed to connect to this MySQL server
+
+SQL: connect
+
+1445952097 - 1130: Host '54.183.252.194' is not allowed to connect to this MySQL server
+
+SQL: connect
+
+1445952370 - 1130: Host '54.183.252.194' is not allowed to connect to this MySQL server
+
+SQL: connect
+
+1445952371 - 1130: Host '54.183.252.194' is not allowed to connect to this MySQL server
+
+SQL: connect
+
+1445952411 - 1130: Host '54.183.252.194' is not allowed to connect to this MySQL server
+
+SQL: connect
+
+1445952412 - 1130: Host '54.183.252.194' is not allowed to connect to this MySQL server
+
+SQL: connect
+
+1446610847 - 1045: Access denied for user 'root'@'localhost' (using password: YES)
+
+SQL: connect
+
+1446610847 - 1045: Access denied for user 'root'@'localhost' (using password: YES)
+
+SQL: connect
+
+Query without connection: SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1; a:2:{i:0;a:6:{s:4:"file";s:55:"D:\Documents\GitHub\uniwigs_pshop1.3\livechat\image.php";s:4:"line";i:127;s:8:"function";s:7:"Execute";s:5:"class";s:9:"DBManager";s:4:"type";s:2:"::";s:4:"args";a:2:{i:0;b:1;i:1;s:90:"SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1;";}}i:1;a:4:{s:4:"file";s:55:"D:\Documents\GitHub\uniwigs_pshop1.3\livechat\image.php";s:4:"line";i:52;s:8:"function";s:11:"getFileById";s:4:"args";a:3:{i:0;s:2:"01";i:1;b:0;i:2;s:5:"inlay";}}}
+1446613946 - 1045: Access denied for user 'root'@'localhost' (using password: YES)
+
+SQL: connect
+
+Query without connection: SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1; a:2:{i:0;a:6:{s:4:"file";s:55:"D:\Documents\GitHub\uniwigs_pshop1.3\livechat\image.php";s:4:"line";i:127;s:8:"function";s:7:"Execute";s:5:"class";s:9:"DBManager";s:4:"type";s:2:"::";s:4:"args";a:2:{i:0;b:1;i:1;s:90:"SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1;";}}i:1;a:4:{s:4:"file";s:55:"D:\Documents\GitHub\uniwigs_pshop1.3\livechat\image.php";s:4:"line";i:52;s:8:"function";s:11:"getFileById";s:4:"args";a:3:{i:0;s:2:"01";i:1;b:0;i:2;s:5:"inlay";}}}
+1446613946 - 1045: Access denied for user 'root'@'localhost' (using password: YES)
+
+SQL: connect
+
+1446614004 - 1045: Access denied for user 'root'@'localhost' (using password: YES)
+
+SQL: connect
+
+Query without connection: SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1; a:2:{i:0;a:6:{s:4:"file";s:55:"D:\Documents\GitHub\uniwigs_pshop1.3\livechat\image.php";s:4:"line";i:127;s:8:"function";s:7:"Execute";s:5:"class";s:9:"DBManager";s:4:"type";s:2:"::";s:4:"args";a:2:{i:0;b:1;i:1;s:90:"SELECT * FROM `images` WHERE `id`='01' AND `button_type`='inlay' AND `online`='0' LIMIT 1;";}}i:1;a:4:{s:4:"file";s:55:"D:\Documents\GitHub\uniwigs_pshop1.3\livechat\image.php";s:4:"line";i:52;s:8:"function";s:11:"getFileById";s:4:"args";a:3:{i:0;s:2:"01";i:1;b:0;i:2;s:5:"inlay";}}}
+1446614004 - 1045: Access denied for user 'root'@'localhost' (using password: YES)
+
+SQL: connect
+

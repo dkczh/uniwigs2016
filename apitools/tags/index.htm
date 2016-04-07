@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" rel="stylesheet" href="./index.php_files/admin.css">
+<script type="text/javascript" src="./index.php_files/jquery-1.2.6.pack.js"></script>
+		
+		
+		
+		
+		
+		
+		
+				
+	</head>
+	<body>
+		<div id="container">
+			
+			
+			
+			
+			
+						
+			<div id="main">
+				
+				<div id="content">
+
+		  
+		<form id="formTag"  method="post" class="width5">
+		
+			<fieldset>
+				
+			
+		<hr style="width:100%;">
+				<h3>Products </h3>
+				<table>
+					<tbody><tr><td style="padding-left:6px;">
+			<input type="checkbox" id="check_all_l" onclick="$(&#39;#checkbox1 input&#39;).attr(&#39;checked&#39;,$(&#39;#check_all_l&#39;).attr(&#39;checked&#39;))" class="noborder" name="checkme"> 全选
+			<a href="javascript:onsaleDeal();" id="updateSale" style="text-align:center;border:1px solid #aaa;text-decoration:none;background-color:#fafafa;color:#123456;margin:2px;padding:2px;width:150px;">
+			选中产品批量打折 &gt;&gt;
+			</a></td>
+					<td style="padding-left:20px;">
+					起止产品ID: <input type="text" name="s_id" id="s_id" size="8"> - <input type="text" name="e_id" id="e_id" size="8"><br>
+					关键词: <input type="text" name="p_name" id="p_name" value="" size="30"> &nbsp;<input type="button" value="查询" onclick="search(1);"> &nbsp;  全选 <input type="checkbox" id="check_all" onclick="$(&#39;#checkbox2 input&#39;).attr(&#39;checked&#39;,$(&#39;#check_all&#39;).attr(&#39;checked&#39;))">
+					<script>
+					function search(p_id){
+						$("#checkbox2").html("Please waiting...");
+						var p_name=$("#p_name").val();
+						var s_id=$("#s_id").val();
+						var e_id=$("#e_id").val();
+
+						var pro_ids = '';
+						$('#checkbox1 input').each(function(i) {
+							pro_ids = pro_ids + $(this).val() + ',';
+						});
+						var id_tag=$('#checkbox1 input').val();
+						$.ajax({
+							type : "POST",
+							url : "ajax_tag_products.php",
+							data : {
+								"s_id":s_id,
+								"e_id":e_id,
+								"p_id":p_id,
+								"p_name":p_name,
+								"pro_ids":pro_ids,
+							},
+							dataType : "html",
+							success : function(msg) {
+								$("#checkbox2").html(msg);
+							}
+						});
+					}
+					</script>
+					</td>
+					</tr>
+					<tr>
+						<td>
+						<div style="width: 356px; height: 400px; overflow-y:scroll;" id="checkbox1">
+						<div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> LW005 $194.59</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> LW004 $249.58999999999997</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> LW003 $194.59</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> LW002 $189.89</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> LW001 $199.89000000000001</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> E36001 $47.88999999999999</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> E37001 $47.88999999999999</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> E35001 $47.88999999999999</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> E34001 $48.89</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> E33001 $59.88999999999999</div><div class="search_result_prd_item">
+				<img src="./index.php_files/--thumbnail.jpg">
+				<input type="checkbox" value="" name="products[]">
+            	<br> E32001 $48.89</div></div>
+
+			<script>
+			function onsaleDeal(){
+				var ids ="";
+				$('input[name="products[]"]:checked').each(function(){
+					var id=$(this).val();
+					ids=ids+id+",";
+				 });
+				$("#ids").attr("value",ids);
+				$("#onsaleDeal").submit();
+			}
+			</script>
+			<a href="http://www.uniwigs.com/admincp/index.php?tab=AdminTags&id_tag=205&updatetag&token=82c7095682f68f26e9342289b00c620f#" id="add" style="text-align:center;display:block;border:1px solid #aaa;text-decoration:none;background-color:#fafafa;color:#123456;margin:2px;padding:2px">
+				Remove &gt;&gt;
+			</a>
+		</td>
+		<td style="padding-left:20px;">
+<style type="text/css">
+.search_result_prd_item{width:84px;height:116px;float:left;overflow:hidden;padding:5px;border:1px dotted;margin:0 5px 5px 0;}
+.search_result_prd_item img{width:60px;}
+#seo table .col-left{vertical-align: top;}
+</style>
+		<div style="width: 526px; height: 400px; overflow-y: scroll;" id="checkbox2">
+		请使用查询功能……<br>为保证系统稳定，检索结果最多只显示100个，如需添加超过100个则先添加一部分后再次检索。<br>已经添加的产品将不在右侧显示（无需先保存）。</div>
+
+
+							<a href="http://www.uniwigs.com/admincp/index.php?tab=AdminTags&id_tag=205&updatetag&token=82c7095682f68f26e9342289b00c620f#" id="remove" style="text-align:center;display:block;border:1px solid #aaa;text-decoration:none;background-color:#fafafa;color:#123456;margin:2px;padding:2px">
+								&lt;&lt; Add
+							</a>
+						
+						</td>
+					</tr>
+				</tbody></table>
+				
+				
+				
+                </fieldset>
+		</form>
+        	<script type="text/javascript">
+			$().ready(function() {
+				$('#add').click(function() {
+					$('#checkbox1 input:checked').each(function(i) {
+						$(this).parent().appendTo('#checkbox2');
+						$(this).attr("checked", false);
+					});
+					return false;
+				});
+				$('#remove').click(function() {
+					$('#checkbox2 input:checked').each(function(i) {
+						$(this).parent().appendTo('#checkbox1');
+						$(this).attr("checked", false);
+					});
+					return false;
+				});
+			});
+			$('#formTag').submit(function() {
+				$('#checkbox1 input').each(function(i) {
+					$(this).attr("checked", true);
+				});
+				$('#checkbox2 input:checked').each(function(i) {
+					$(this).attr("checked", false);
+				});
+			});
+		</script><br>
+				</div>
+			</div>
+						
+		</div>
+	
+
+</body></html>

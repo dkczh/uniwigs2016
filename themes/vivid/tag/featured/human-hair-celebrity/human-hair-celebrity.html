@@ -1,0 +1,264 @@
+{literal}
+<style>
+#f-wrapper {margin-top:0;}
+#year2014 .layout{margin:0 auto;position: relative;padding-top: 25px;padding-bottom: 25px;}
+#year2014 .layout h4{color:#333;font-size:18px}
+#year2014 .layout h4 b{font-size:30px;color:#d44242}
+#year2014 img{display:block}
+#year2014 .layer li{position: relative;float:left;padding:10px}
+#year2014 .layer li img{width:100%}
+#year2014 .layer li h5{height:78px;overflow:hidden;padding: 13px 0;}
+#year2014 .layer li h5 a{color:#666}
+#year2014 .layer li .now{font-size:16px;font-weight:bold}
+#year2014 .layer li .old{color:#666;text-decoration: line-through;}
+#year2014 .layer li .product-container{position: relative;padding:20px 20px 17px 20px;background:#fff;text-align: center;height: 389px;}
+#year2014 .layer li .hover_price{position:absolute;top:216px;left:0;background:rgba(0, 0, 0, 0.80);padding: 9px 0;color:#fff;text-align:center;width:100%}
+#year2014 .layer li .hover_price .old{color:#B1B0B0}
+#year2014 .layer li .buy,#year2014 .layer li .hover_price,#year2014 .layer li.hover .price{display:none;height:40px}
+#year2014 .layer li.hover .product-container{-webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;-moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;position: relative;z-index: 10;}
+#year2014 .layer li.hover .buy,#year2014 .layer li.hover .hover_price{display:block}
+#layer1{background:#F7C2C2}
+#layer2{background:#c5b0d9}
+#layer3{background:#aba9d9}
+#layer4{background:#d9a9b8}
+#layer5{background:#c5b0d9}
+#layer6{background:#aba9d9}
+#year2014 .banner{background: url(/themes/uniwigs2014/featured/human-hair-celebrity/image/banner.jpg) no-repeat center top;height: 296px;}
+
+.ctags_bottom li a{line-height:26px;display: block;padding: 6px 16px;background: #E46EAC;color: #FFF;text-align: center;}
+.ctags_bottom li a:hover{color:#fff;text-decoration: none;background:#EF3386;}
+.ctags_bottom{padding:15px;border:1px solid #E0E0E0;margin-top:15px;overflow:hidden;background:#FAFAFA}
+.year2014_product h5{height:40px;overflow:hidden;}
+@media (min-width: 768px){
+	#year2014 .layer li{width:33.333333%}
+}
+@media (min-width: 1024px){
+	#year2014 .layer li{width:25%}
+}
+</style>
+{/literal}
+
+<div id="year2014">
+	<!-- banner -->
+	<div class="banner"></div>
+	<div class="layer_them">
+		<!-- layer 01 -->
+		<div class="layer" id="layer1">
+			<div class="layer_product layout container">
+				<h4>Wig Trend #1: <b>Rihanna</b> Inspired Hairstyles</h4>
+				<ul class="row">
+					{foreach from=$products.0 key=prdkey item=product}
+					{assign var="lastind" value=$product.show_price_list|@count}
+					{assign var="lastind" value=$lastind-1}
+					{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+					<li>
+						<div class="product-container">
+                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+                            </a>
+                            <div class="hover_price">
+                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                            </div>
+                            <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                            <div class="price">
+                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+                            </div>
+                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                        </div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+
+        <!-- layer 02 -->
+		<div class="layer" id="layer2">
+			<div class="layer_product layout container">
+				<h4>Wig Trend #2: <b>Katy Perry</b> Inspired Hairstyles</h4>
+				<ul class="row">
+					{foreach from=$products.1 key=prdkey item=product}
+					{assign var="lastind" value=$product.show_price_list|@count}
+					{assign var="lastind" value=$lastind-1}
+					{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+					<li>
+						<div class="product-container">
+                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+                            </a>
+                            <div class="hover_price">
+                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                            </div>
+                            <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                            <div class="price">
+                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+                            </div>
+                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                        </div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+
+		<!-- layer 03 -->
+		<div class="layer" id="layer3">
+			<div class="layer_product layout container">
+				<h4>Wig Trend #3: <b>Zoe Saldana</b> Inspired Hairstyles</h4>
+				<ul class="row">
+					{foreach from=$products.2 key=prdkey item=product}
+					{assign var="lastind" value=$product.show_price_list|@count}
+					{assign var="lastind" value=$lastind-1}
+					{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+					<li>
+						<div class="product-container">
+                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+                            </a>
+                            <div class="hover_price">
+                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                            </div>
+                            <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                            <div class="price">
+                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+                            </div>
+                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                        </div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+
+		<!-- layer 04 -->
+		<div class="layer" id="layer4">
+			<div class="layer_product layout container">
+				<h4>Wig Trend #4: <b>Jessica Alba</b> Inspired Hairstyles</h4>
+				<ul class="row">
+					{foreach from=$products.3 key=prdkey item=product}
+					{assign var="lastind" value=$product.show_price_list|@count}
+					{assign var="lastind" value=$lastind-1}
+					{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+					<li>
+						<div class="product-container">
+                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+                            </a>
+                            <div class="hover_price">
+                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                            </div>
+                            <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                            <div class="price">
+                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+                            </div>
+                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                        </div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+
+		<!-- layer 05 -->
+		<div class="layer" id="layer5">
+			<div class="layer_product layout container">
+				<h4>Wig Trend #5: <b>Mariah Carey</b> Inspired Hairstyles</h4>
+				<ul class="row">
+					{foreach from=$products.4 key=prdkey item=product}
+					{assign var="lastind" value=$product.show_price_list|@count}
+					{assign var="lastind" value=$lastind-1}
+					{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+					<li>
+						<div class="product-container">
+                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+                            </a>
+                            <div class="hover_price">
+                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                            </div>
+                            <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                            <div class="price">
+                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+                            </div>
+                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                        </div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		
+		<!-- layer 06 -->
+		<div class="layer" id="layer6">
+			<div class="layer_product layout container">
+				<h4>Wig Trend #6: <b>Ciara</b> Inspired Hairstyles</h4>
+				<ul class="row">
+					{foreach from=$products.5 key=prdkey item=product}
+					{assign var="lastind" value=$product.show_price_list|@count}
+					{assign var="lastind" value=$lastind-1}
+					{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+					<li>
+						<div class="product-container">
+                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+                            </a>
+                            <div class="hover_price">
+                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                            </div>
+                            <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                            <div class="price">
+                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+                            </div>
+                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                        </div>
+					</li>
+					{/foreach}
+				</ul>
+
+				<div class="ctags_bottom">
+					<ul>
+						<li>
+						<a href="/tag/celebrity-hairstyles">Celebrity Hairstyles</a>
+						</li>
+						<li>
+						<a href="/celebrity-wigs">Other Celebrity Wigs</a>
+						</li>
+						<li>
+						<a href="/human-hair-wigs">Human Hair Wigs</a>
+						</li>
+						<li>
+						<a href="/synthetic-wigs">Synthetic Wigs</a>
+						</li>
+						<li>
+						<a href="/tag/michelle-obama-hairstyles">Michelle Obama Hairstyles</a>
+						</li>
+						<li>
+						<a href="/tag/hillary-clinton-hairstyles">Hillary Clinton Hairstyles</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{literal}
+<script>
+$("#year2014 .layer li").hover(function(){
+   $(this).addClass('hover');
+},function(){
+    $(this).removeClass('hover');
+});
+</script>
+{/literal}

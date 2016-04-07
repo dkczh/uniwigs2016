@@ -1,0 +1,196 @@
+{literal}
+<style>
+#f-wrapper {margin-top:0;}
+#year2014 .banner{background:url("/themes/uniwigs2014/event/2014-for-summer/image/banner.jpg") no-repeat center top;height:548px;position: relative;z-index: 1;}
+#year2014 .mail-banner{position: relative;z-index: 2;margin:-300px auto 0;}
+#year2014 .mail-banner ul{width:107%}
+#year2014 .mail-banner li{display:inline-block;width: 33.33333%;float: left;padding: 0 10px;}
+#year2014 .mail-banner li img{width:100%}
+#year2014 .mail-banner p{padding:15px 0;}
+#year2014 .layer_them{padding-bottom: 40px;}
+#year2014 .layer-title{font-family: Georgia;font-size: 18px;font-style: italic;font-weight: bold;padding-bottom: 10px;border-bottom: 3px solid #333;}
+#year2014 .layer li{float:left;width:25%}
+#year2014 .layer li h5{height:53px;overflow:hidden;padding: 13px 0;}
+#year2014 .layer li h5 a{color:#666}
+#year2014 .layer li .now{font-size:16px;font-weight:bold}
+#year2014 .layer li .old{color:#666;text-decoration: line-through;}
+#year2014 .layer li .product-container{position: relative;padding:15px;width:100%;margin: 2px 0 10px 0;background:#fff;text-align: center;height: 385px;}
+#year2014 .layer li .product-container img{width:100%}
+#year2014 .layer li .hover_price{position:absolute;top:231px;left:0;background:rgba(0, 0, 0, 0.80);padding: 9px 0;color:#fff;text-align:center;width:100%}
+#year2014 .layer li .hover_price .old{color:#B1B0B0}
+#year2014 .layer li .buy,#year2014 .layer li .hover_price,#year2014 .layer li.hover .price{display:none}
+#year2014 .layer li.hover .product-container{-webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;-moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;box-shadow: rgba(0, 0, 0, 0.25) 0 0 13px;position: relative;z-index: 10;}
+#year2014 .layer li.hover .buy,#year2014 .layer li.hover .hover_price{display:block}
+#year2014 .related_links dl dt{float:left;width:150px;}
+#year2014 .related_links dl dd{float:left;text-transform: uppercase;font-weight:700}
+#year2014 .related_links dl dd span{color:#D54C66;padding-left:3px}
+</style>
+{/literal}
+
+	<div id="year2014">
+		<!-- banner -->
+		<div class="banner"></div>
+		<div class="mail-banner container">
+			<ul class="row">
+				<li><img src="/themes/uniwigs2014/event/2014-for-summer/image/banner01.jpg"></li>
+				<li><img src="/themes/uniwigs2014/event/2014-for-summer/image/banner02.jpg"></li>
+				<li><img src="/themes/uniwigs2014/event/2014-for-summer/image/banner03.jpg"></li>
+			</ul>
+			<p>Summer 2014 is just upon us! Whether are watching the FIFA World Cup or you are going on a vacation, an eye-catching and attractive hairstyle is always a must-have. 
+Going ombre or add some high-lights? There are always much you can find at uniwigs.com where newly arrived lots of hairstyles in multiple colors for you to try out in this 
+summer. Will you take them home?</p>
+		</div>
+
+		<div class="layer_them container">
+			<!-- layer 01 -->
+			<div class="layer">
+				<div class="layer-title">Summer Hair Trend #1 Try new Flip & Clip Ins ></div>
+				<div class="layer_product">
+					<ul class="fix">
+						{foreach from=$products.0 key=prdkey item=product}
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						<li>
+							<div class="product-container">
+	                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+	                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+	                            </a>
+                                <div class="hover_price">
+	                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+	                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                                </div>
+                                <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                                <div class="price">
+	                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+	                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+	                            </div>
+	                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                            </div>
+						</li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<!-- layer 02 -->
+			<div class="layer">
+				<div class="layer-title">Summer Hair Trend #2 Just Clip-ins: Rainbow Roll Call ></div>
+				<div class="layer_product">
+					<ul class="fix">
+						{foreach from=$products.1 key=prdkey item=product}
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						<li>
+							<div class="product-container">
+	                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+	                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+	                            </a>
+                                <div class="hover_price">
+	                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+	                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                                </div>
+                                <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                                <div class="price">
+	                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+	                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+	                            </div>
+	                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                            </div>
+						</li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<!-- layer 03 -->
+			<div class="layer">
+				<div class="layer-title">Summer Hair Trend #3  Peek-a-boo White Blonde ></div>
+				<div class="layer_product">
+					<ul class="fix">
+						{foreach from=$products.2 key=prdkey item=product}
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						<li>
+							<div class="product-container">
+	                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+	                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+	                            </a>
+                                <div class="hover_price">
+	                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+	                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                                </div>
+                                <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                                <div class="price">
+	                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+	                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+	                            </div>
+	                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                            </div>
+						</li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<!-- layer 04 -->
+			<div class="layer">
+				<div class="layer-title">Summer Hair Trend #4 Bombshell Ombre Wigs ></div>
+				<div class="layer_product">
+					<ul class="fix">
+						{foreach from=$products.3 key=prdkey item=product}
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						<li>
+							<div class="product-container">
+	                            <a href="{$product.link|escape:'htmlall':'UTF-8'}">
+	                                <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+	                            </a>
+                                <div class="hover_price">
+	                                <span class="now">{convertPrice price=$product.show_price_list.0.value}</span>
+	                                <span class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</span>
+                                </div>
+                                <h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name}</a></h5>
+                                <div class="price">
+	                                <p class="now">{convertPrice price=$product.show_price_list.0.value}</p>
+	                                <p class="old">{if $lastprice>$product.show_price_list.0.value}{convertPrice price=$lastprice}{else} {/if}</p>
+	                            </div>
+	                            <p class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small">Add to Cart</a></p>
+                            </div>
+						</li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="related_links container">
+			<dl class="fix">
+				<dt><img src="http://www.uniwigs.com/img/activities/wedding/haute_related_links.jpg"></dt>
+				<dd style="line-height: 34px;">
+					<a href="http://www.uniwigs.com/synthetic-wigs">shop all synthetic wigs</a><span>|</span>
+					<a href="http://www.uniwigs.com/clip-in-hair-extensions">shop all clip in hair extensions</a><span>|</span>
+					<a href="http://www.uniwigs.com/flip-in-hair-extensions">shop all flip in hair extensions</a><span>|</span>
+					<a href="http://www.uniwigs.com/tag/monofilament-wigs">monofilament wigs</a>
+				</dd>
+			</dl>
+			<dl class="fix">
+				<dt><img src="http://www.uniwigs.com/img/activities/wedding/haute_popular_links.jpg"></dt>
+				<dd style="line-height: 34px;">
+					<a href="http://www.uniwigs.com/tag/2013-new-arrival">new wigs for 2013</a><span>|</span>
+					<a href="http://www.uniwigs.com/celebrity-wigs">celebrity wigs</a><span>|</span>
+					<a href="http://www.uniwigs.com/featured/african-american-human-hair-wigs">wigs for black women</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+{literal}
+<script>
+$("#year2014 .layer li").hover(function(){
+	$(this).addClass('hover');
+},function(){
+	$(this).removeClass('hover');
+});
+</script>
+{/literal}

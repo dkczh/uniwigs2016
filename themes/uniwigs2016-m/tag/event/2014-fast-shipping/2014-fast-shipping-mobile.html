@@ -1,0 +1,356 @@
+{literal}
+<style>
+#f-wrapper{margin-top:0;}
+#year2014{background:url("/themes/uniwigs2014/event/2014-fast-shipping/image/banner_bg.jpg") no-repeat center top;}
+#year2014 img{display:block;}
+#year2014 .title{margin: 25px 0;}
+.layer_product li .product-container h5{height:40px;padding:5px 0;overflow:hidden}
+.layer_product li .product-container {
+float: left;
+padding: 15px;
+background: #FFF;
+position: relative;
+height: 400px;
+margin-bottom:20px
+}
+.layer_product li .product-container:hover{box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);}
+.shoppics{margin-top:0;}
+.layer_product p.now {
+font-size: 15px;
+font-weight: bold;
+color: #EF3386;
+}
+.layer_product p {
+padding: 5px 0 0;
+}
+.layer_product p.old {
+color: #666;
+text-decoration: line-through;
+}
+.layer_product .btn {
+margin-top: 10px;
+}
+.layer_product .btn a {
+width: 100%;
+}
+
+.layer_product span.off {
+background: #EF3386;
+color: #FFF;
+padding: 5px 10px;
+position: absolute;
+display: block;
+width: 86px;
+font-size: 14px;
+font-family: verdana;
+left: 15px;
+top: 15px;
+}
+
+#year2014 .right_side {
+background: url("/themes/uniwigs2014/event/2014-fast-shipping/image/body_right.jpg") no-repeat;
+position: fixed;
+left: 52%;
+margin-left: 475px;
+bottom: 35px;
+visibility: hidden;
+_bottom: 0px;
+_position: absolute;
+_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight-130);
+width: 166px;
+height: 514px;
+width: expression(document.body.clientWidth > 188?"188px": "auto" );
+height: expression(document.body.clientHeight > 408?"408px": "auto" );
+z-index: 97;
+}
+#year2014 .right_side ul {
+padding-top: 142px;
+}
+
+#year2014 .right_side ul li a {
+display: block;
+height:60px;
+background:#fff;
+opacity:0
+}
+#year2014 .right_side ul li a:hover{opacity:0.2}
+#year2014 .right_side .backtop {
+height: 76px;
+display: block;
+}
+.layer_product span.off{width: 94px;}
+
+@media (min-width: 1024px)
+.layer_product li {
+position: relative;
+float: left;
+width: 25%;
+}
+
+@media (min-width: 768px)
+.layer_product li {
+position: relative;
+float: left;
+width: 33.333333%;
+}
+</style>
+{/literal}
+
+<div id="year2014">
+	<!-- banner -->
+	<div class="container">
+		<div class="banner"><img src="/themes/uniwigs2014/event/2014-fast-shipping/image/banner.jpg" width="100%"></div>
+	</div>
+	<div class="layer_them layout">
+		<!-- layer 01 -->
+		<div id="layer1" class="layer">
+			<div class="layer_product container">
+						<div class="title"><img src="/themes/uniwigs2014/event/2014-fast-shipping/image/lay01.jpg" width="100%"></div>
+						<ul class="row">
+							{foreach from=$products.0 key=key item=product}
+							<li class="col-md-3 col-sm-4">
+								<div class="product-container">
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+									title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+									class="" itemprop="url"> <img
+									src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+									alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+									title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+									itemprop="image"/>
+								</a>
+								<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+									{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+								<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+								{*<p class="now">Now Price? Coming soon...</p>*}
+								{foreach from=$product.show_price_list key=spi item=show_price}
+								{if $spi>0}
+								<p class="old">
+								{$show_price.label}: {convertPrice price=$show_price.value}
+								</p>
+								{/if}
+								{/foreach}
+				
+								<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+				
+								{assign var="lastind" value=$product.show_price_list|@count}
+								{assign var="lastind" value=$lastind-1}
+								{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+								{if $lastprice > $product.show_price_list.0.value}
+								{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+								<span class="off">- {convertPrice price=$diffprice}</span>
+								{/if}
+								</div>
+							</li>
+							{/foreach}
+						</ul>
+			</div>
+		</div>
+		<!-- layer 02 -->
+		<div id="layer2" class="layer">
+			<div class="layer_product container">
+				<div class="title"><img src="/themes/uniwigs2014/event/2014-fast-shipping/image/lay02.jpg" width="100%"></div>
+				<ul class="row">
+					{foreach from=$products.1 key=key item=product}
+					<li class="col-md-3 col-sm-4">
+						<div class="product-container">
+						<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+							title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							class="" itemprop="url"> <img
+							src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+							alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							itemprop="image"/>
+						</a>
+						<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+							{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+						<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+						{*<p class="now">Now Price? Coming soon...</p>*}
+						{foreach from=$product.show_price_list key=spi item=show_price}
+						{if $spi>0}
+						<p class="old">
+						{$show_price.label}: {convertPrice price=$show_price.value}
+						</p>
+						{/if}
+						{/foreach}
+		
+						<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+		
+		                {assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						{if $lastprice > $product.show_price_list.0.value}
+						{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+						<span class="off">- {convertPrice price=$diffprice}</span>
+						{/if}
+						</div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<!-- layer 03 -->
+		<div id="layer3" class="layer">
+			<div class="layer_product container">
+				<div class="title"><img src="/themes/uniwigs2014/event/2014-fast-shipping/image/lay03.jpg" width="100%"></div>
+				<ul class="row">
+					{foreach from=$products.2 key=key item=product}
+					<li class="col-md-3 col-sm-4">
+						<div class="product-container">
+						<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+							title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							class="" itemprop="url"> <img
+							src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+							alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							itemprop="image"/>
+						</a>
+						<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+							{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+
+						<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+						{*<p class="now">Now Price? Coming soon...</p>*}
+						{foreach from=$product.show_price_list key=spi item=show_price}
+						{if $spi>0}
+						<p class="old">
+						{$show_price.label}: {convertPrice price=$show_price.value}
+						</p>
+						{/if}
+						{/foreach}
+		
+						<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+		
+		                {assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						{if $lastprice > $product.show_price_list.0.value}
+						{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+						<span class="off">- {convertPrice price=$diffprice}</span>
+						{/if}
+						</div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		<!-- layer 04 -->
+		<div id="layer4" class="layer">
+			<div class="layer_product container">
+				<div class="title"><img src="/themes/uniwigs2014/event/2014-fast-shipping/image/lay04.jpg" width="100%"></div>
+				<ul class="row">
+					{foreach from=$products.3 key=key item=product}
+					<li class="col-md-3 col-sm-4">
+						<div class="product-container">
+						<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+							title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							class="" itemprop="url"> <img
+							src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+							alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							itemprop="image"/>
+						</a>
+						<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+							{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+		
+						<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+						{*<p class="now">Now Price? Coming soon...</p>*}
+						{foreach from=$product.show_price_list key=spi item=show_price}
+						{if $spi>0}
+						<p class="old">
+						{$show_price.label}: {convertPrice price=$show_price.value}
+						</p>
+						{/if}
+						{/foreach}
+		
+						<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+		
+		                {assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						{if $lastprice > $product.show_price_list.0.value}
+						{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+						<span class="off">- {convertPrice price=$diffprice}</span>
+						{/if}
+						</div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+			
+		</div>
+		<!-- layer 05 -->
+		<div id="layer5" class="layer">
+			<div class="layer_product container">
+				<div class="title"><img src="/themes/uniwigs2014/event/2014-fast-shipping/image/lay05.jpg" width="100%"></div>
+				<ul class="row">
+					{foreach from=$products.4 key=key item=product}
+					<li class="col-md-3 col-sm-4">
+						<div class="product-container">
+						<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+							title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							class="" itemprop="url"> <img
+							src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+							alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+							itemprop="image"/>
+						</a>
+						<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}">
+							{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+		
+						<p class="now">{$product.show_price_list.0.label}: {convertPrice price=$product.show_price_list.0.value}</p>
+						{*<p class="now">Now Price? Coming soon...</p>*}
+						{foreach from=$product.show_price_list key=spi item=show_price}
+						{if $spi>0}
+						<p class="old">
+						{$show_price.label}: {convertPrice price=$show_price.value}
+						</p>
+						{/if}
+						{/foreach}
+		
+						<div class="btn"><a href="{$product.link|escape:'htmlall':'UTF-8'}" class="f-btn btn-small btn-primary">buy now</a></div>
+		
+		                {assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						{if $lastprice > $product.show_price_list.0.value}
+						{assign var="diffprice" value=$lastprice-$product.show_price_list.0.value}
+						<span class="off">- {convertPrice price=$diffprice}</span>
+						{/if}
+						</div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+			
+		</div>
+		<div class="right_side">
+			<ul>
+				<li><a href="#layer1"></a></li>
+				<li><a href="#layer2"></a></li>
+				<li><a href="#layer3"></a></li>
+				<li><a href="#layer4"></a></li>
+				<li><a href="#layer5"></a></li>
+			</ul>
+			<div>
+				<a href="#year2014" class="backtop"></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{literal}
+<script>
+$(document).ready(function () {
+	 $(window).bind("scroll resize", function () {
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+        if (winWidth > 1366 && $(window).scrollTop() > winHeight) {
+            $('.right_side').css('visibility', 'visible');
+        } else {
+            $('.right_side').css('visibility', 'hidden');
+        }
+    });
+})
+</script>
+{/literal}

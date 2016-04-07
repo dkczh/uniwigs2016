@@ -1,0 +1,236 @@
+{literal}
+<style>
+#nov-sale img{max-width: 100%;display: block}
+.nov-coupon{position: relative;}
+.nov-coupon a{position: absolute;display: block;width:50%;height:100%;}
+.nov-coupon a.nov-1{left:0;}
+.nov-coupon a.nov-2{right:0;}
+.uk-modal-dialog{width:100%;height:300px;}
+.uk-modal .coupon-code{border:2px dashed #111;font-size:60px;}
+.uk-modal p{font-size:18px;text-transform: uppercase;}
+.uk-modal p span{font-size:14px}
+.uk-close:after{
+	content: "\e601";
+	font-family: "iconfont";
+	display: block;
+	font-weight: 700;
+	font-size:2rem;
+}
+</style>
+{/literal}
+<div id="nov-sale">
+	<div class="nov-sale-banner"><img src="/themes/uniwigs2014/event/2015-big-sale/image/mobile-banner-2.png" alt=""></div>
+	<div class="nov-sale-coupon container uk-margin-bottom">
+		<div class="nov-coupon">
+			<a href="" class="nov-1" data-uk-modal="{literal}{target:'#nov1-1'}{/literal}"></a>
+			<a href="" class="nov-2" data-uk-modal="{literal}{target:'#nov1-2'}{/literal}"></a>
+			<img src="/themes/uniwigs2014/event/2015-big-sale/image/mobile-nov1-now.png" alt="">
+		</div>
+		<div class="nov-coupon">
+			<a href="" class="nov-1" data-uk-modal="{literal}{target:'#nov2-1'}{/literal}"></a>
+			<a href="" class="nov-2" data-uk-modal="{literal}{target:'#nov2-2'}{/literal}"></a>
+			<img src="/themes/uniwigs2014/event/2015-big-sale/image/mobile-nov2-1-now.png" alt="">
+		</div>
+		<div class="nov-coupon">
+			<a href="" class="nov-1" data-uk-modal="{literal}{target:'#nov3-1'}{/literal}"></a>
+			<a href="" class="nov-2" data-uk-modal="{literal}{target:'#nov3-2'}{/literal}"></a>
+			<img src="/themes/uniwigs2014/event/2015-big-sale/image/mobile-nov3-now.png" alt="">
+		</div>
+	</div>
+	<div class="nov-sale-product container">
+		<h3 class="center-text">Hot Products</h3>
+		<ul class="shoppic clearfix" id="plist">
+			{foreach from=$products.0 key=key item=product}
+			<li>
+				<div class="product-container">
+					<div class="pr-qie">
+						<a href='{$product.link|escape}' class="picture">
+							<img src="/themes/uniwigs2014_mobile/statics/images/milanoo_blank.gif" width='100%'
+								original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+						</a>
+					</div>
+					<div class="pr-con">
+						<p class="pr-name">
+							<a href='{$product.link|escape}' class="title">{$product.name}</a>
+						</p>
+						<p class="pr-price fix fll">
+							<strong class="fll">
+								<span>{convertPrice price=$product.show_price_list.0.value}</span>
+							</strong>
+							
+						</p>
+					</div>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+		<ul class="shoppic clearfix" id="plist">
+			{foreach from=$products.2 key=key item=product}
+			<li>
+				<div class="product-container">
+					<div class="pr-qie">
+						<a href='{$product.link|escape}' class="picture">
+							<img src="/themes/uniwigs2014_mobile/statics/images/milanoo_blank.gif" width='100%'
+								original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+						</a>
+					</div>
+					<div class="pr-con">
+						<p class="pr-name">
+							<a href='{$product.link|escape}' class="title">{$product.name}</a>
+						</p>
+						<p class="pr-price fix fll">
+							<strong class="fll">
+								<span>{convertPrice price=$product.show_price_list.0.value}</span>
+							</strong>
+							
+						</p>
+					</div>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+		<ul class="shoppic clearfix" id="plist">
+			{foreach from=$products.1 key=key item=product}
+			<li>
+				<div class="product-container">
+					<div class="pr-qie">
+						<a href='{$product.link|escape}' class="picture">
+							<img src="/themes/uniwigs2014_mobile/statics/images/milanoo_blank.gif" width='100%'
+								original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+						</a>
+					</div>
+					<div class="pr-con">
+						<p class="pr-name">
+							<a href='{$product.link|escape}' class="title">{$product.name}</a>
+						</p>
+						<p class="pr-price fix fll">
+							<strong class="fll">
+								<span>{convertPrice price=$product.show_price_list.0.value}</span>
+							</strong>
+							
+						</p>
+					</div>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+		<ul class="shoppic clearfix" id="plist">
+			{foreach from=$products.3 key=key item=product}
+			<li>
+				<div class="product-container">
+					<div class="pr-qie">
+						<a href='{$product.link|escape}' class="picture">
+							<img src="/themes/uniwigs2014_mobile/statics/images/milanoo_blank.gif" width='100%'
+								original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+						</a>
+					</div>
+					<div class="pr-con">
+						<p class="pr-name">
+							<a href='{$product.link|escape}' class="title">{$product.name}</a>
+						</p>
+						<p class="pr-price fix fll">
+							<strong class="fll">
+								<span>{convertPrice price=$product.show_price_list.0.value}</span>
+							</strong>
+							
+						</p>
+					</div>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+		<ul class="shoppic clearfix" id="plist">
+			{foreach from=$products.4 key=key item=product}
+			<li>
+				<div class="product-container">
+					<div class="pr-qie">
+						<a href='{$product.link|escape}' class="picture">
+							<img src="/themes/uniwigs2014_mobile/statics/images/milanoo_blank.gif" width='100%'
+								original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"/>
+						</a>
+					</div>
+					<div class="pr-con">
+						<p class="pr-name">
+							<a href='{$product.link|escape}' class="title">{$product.name}</a>
+						</p>
+						<p class="pr-price fix fll">
+							<strong class="fll">
+								<span>{convertPrice price=$product.show_price_list.0.value}</span>
+							</strong>
+							
+						</p>
+					</div>
+				</div>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+</div>
+</div>
+<div id="nov1-1" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <p class="center-text uk-margin-small-top">You have got receive free coupons</p>
+        <div class="coupon-code uk-margin-small-top center-text">
+        	TG15
+        </div>
+        <p class="uk-margin-small-top center-text">$15 OFF order over $89</p>
+        <p class="uk-margin-small-top center-text"><span>* Limited to the first 1000 purchasers</span></p>
+    </div>
+</div>
+<div id="nov1-2" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <p class="center-text uk-margin-small-top">You have got receive free coupons</p>
+        <div class="coupon-code uk-margin-small-top center-text">
+        	TG30
+        </div>
+        <p class="uk-margin-small-top center-text">$30 OFF order over $199</p>
+        <p class="uk-margin-small-top center-text"><span>* Limited to the first 1000 purchasers</span></p>
+    </div>
+</div>
+<div id="nov2-1" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <p class="center-text uk-margin-small-top">You have got receive free coupons</p>
+        <div class="coupon-code uk-margin-small-top center-text">
+        	TG25
+        </div>
+        <p class="uk-margin-small-top center-text">$25 OFF order over $129</p>
+        <p class="uk-margin-small-top center-text"><span>* Limited to the first 600 purchasers</span></p>
+    </div>
+</div>
+<div id="nov2-2" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <p class="center-text uk-margin-small-top">You have got receive free coupons</p>
+        <div class="coupon-code uk-margin-small-top center-text">
+        	TG50
+        </div>
+        <p class="uk-margin-small-top center-text">$50 OFF order over $299</p>
+        <p class="uk-margin-small-top center-text"><span>* Limited to the first 600 purchasers</span></p>
+    </div>
+</div>
+<div id="nov3-1" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <p class="center-text uk-margin-small-top">You have got receive free coupons</p>
+        <div class="coupon-code uk-margin-small-top center-text">
+        	TG35
+        </div>
+        <p class="uk-margin-small-top center-text">$35 OFF order over $169</p>
+        <p class="uk-margin-small-top center-text"><span>* Limited to the first 400 purchasers</span></p>
+    </div>
+</div>
+<div id="nov3-2" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <p class="center-text uk-margin-small-top">You have got receive free coupons</p>
+        <div class="coupon-code uk-margin-small-top center-text">
+        	TG80
+        </div>
+        <p class="uk-margin-small-top center-text">$80 OFF order over $399</p>
+        <p class="uk-margin-small-top center-text"><span>* Limited to the first 400 purchasers</span></p>
+    </div>
+</div>
+<SCRIPT type="text/javascript" src="/themes/uniwigs2014_mobile/statics/js/uikit.min.js"></SCRIPT>

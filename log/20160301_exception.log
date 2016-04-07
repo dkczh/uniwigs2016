@@ -1,0 +1,1 @@
+*ERROR* 	2016/03/01 - 20:26:32: Duplicate entry '0-1' for key 'PRIMARY'<br /><br /><pre>INSERT INTO `ps_employee_shop` (`id_employee`, `id_shop`) VALUES ('0', '1')</pre> at line 791 in file classes/db/Db.php

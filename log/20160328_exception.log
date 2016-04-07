@@ -1,0 +1,46 @@
+*ERROR* 	2016/03/28 - 03:36:25: Column 'date_add' in where clause is ambiguous<br /><br /><pre>SELECT
+								a.`id_customer`, `firstname`, `lastname`, `email`, a.`active` AS `active`, `newsletter`, `optin`
+			, 
+        a.date_add,CONCAT('<a href="','?controller=AdminOrders&id_order=',po.id_order ,'&vieworder&token=88034c5bb89a55781b2bfb93858cb328"',' class="btn btn-default btn-block">',po.id_order,'</a>' ) as orders,gl.name as title, (
+            SELECT SUM(total_paid_real / conversion_rate)
+            FROM ps_orders o
+            WHERE o.id_customer = a.id_customer
+             AND o.id_shop IN (6, 1, 2) 
+            AND o.valid = 1
+        ) as total_spent, (
+            SELECT c.date_add FROM ps_guest g
+            LEFT JOIN ps_connections c ON c.id_guest = g.id_guest
+            WHERE g.id_customer = a.id_customer
+            ORDER BY c.date_add DESC
+            LIMIT 1
+        ) as connect, shop.name as shop_name 
+			FROM `ps_customer` a 
+			
+			LEFT JOIN ps_gender_lang gl ON (a.id_gender = gl.id_gender AND gl.id_lang = 1)LEFT JOIN ps_orders po on po.id_customer=a.id_customer 
+			 LEFT JOIN ps_shop shop
+							ON a.id_shop = shop.id_shop WHERE 1  AND a.`deleted` = 0  AND `date_add` >= '2016-03-18 0:0:0' AND `date_add` <= '2016-03-18 23:59:59' AND `email` LIKE '%atruelove79@gmail.com%'  AND a.id_shop IN (6, 1, 2) 
+			
+			 ORDER BY `date_add` DESC  LIMIT 0, 50</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/28 - 03:41:20: Column 'date_add' in where clause is ambiguous<br /><br /><pre>SELECT
+								a.`id_customer`, `firstname`, `lastname`, `email`, a.`active` AS `active`, `newsletter`, `optin`
+			, 
+        a.date_add,CONCAT('<a href="','?controller=AdminOrders&id_order=',po.id_order ,'&vieworder&token=88034c5bb89a55781b2bfb93858cb328"',' class="btn btn-default btn-block">',po.id_order,'</a>' ) as orders,gl.name as title, (
+            SELECT SUM(total_paid_real / conversion_rate)
+            FROM ps_orders o
+            WHERE o.id_customer = a.id_customer
+             AND o.id_shop IN (6, 1, 2) 
+            AND o.valid = 1
+        ) as total_spent, (
+            SELECT c.date_add FROM ps_guest g
+            LEFT JOIN ps_connections c ON c.id_guest = g.id_guest
+            WHERE g.id_customer = a.id_customer
+            ORDER BY c.date_add DESC
+            LIMIT 1
+        ) as connect, shop.name as shop_name 
+			FROM `ps_customer` a 
+			
+			LEFT JOIN ps_gender_lang gl ON (a.id_gender = gl.id_gender AND gl.id_lang = 1)LEFT JOIN ps_orders po on po.id_customer=a.id_customer 
+			 LEFT JOIN ps_shop shop
+							ON a.id_shop = shop.id_shop WHERE 1  AND a.`deleted` = 0  AND `date_add` >= '2016-03-18 0:0:0' AND `date_add` <= '2016-03-18 23:59:59' AND `email` LIKE '%atruelove79@gmail.com%'  AND a.id_shop IN (6, 1, 2) 
+			
+			 ORDER BY `date_add` DESC  LIMIT 0, 50</pre> at line 791 in file classes/db/Db.php

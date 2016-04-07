@@ -1,0 +1,349 @@
+{literal}
+<style>
+#year2014 .layout{margin:0 auto 30px;position: relative;}
+#year2014 .banner{margin-bottom: 20px}
+#year2014 p.banner_text{padding:5px 0;font-size:14px;text-align: center;}
+#year2014 .video_text{color:#e80e6e;font-size:18px;line-height:28px;text-align:center;padding: 20px 0;}
+.layer-img,.other_link{margin: 25px 0}
+.other_link li{transition: all 300ms ease-in-out;
+-webkit-transition: all 300ms ease-in-out;
+-moz-transition: all 300ms ease-in-out;
+-o-transition: all 300ms ease-in-out;}
+.other_link li:hover{opacity: 0.5}
+.pro-sku{padding-left: 1px;overflow:hidden;margin-bottom: 10px;}
+.pro-sku li{float:left;width:33.333333%;padding:0;text-align:center;
+border:1px solid #e5e5e5;
+transition: all 300ms ease-in-out;
+-webkit-transition: all 300ms ease-in-out;
+-moz-transition: all 300ms ease-in-out;
+-o-transition: all 300ms ease-in-out;}
+.pro-sku li a{display:block;padding:8px 5px;text-decoration: none;font-size: 12px;}
+.pro-sku li:hover{border-color:#B51C62;box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);}
+</style>
+{/literal}
+
+<div id="year2014">
+	<div class="container layout">
+		<div class="banner">
+			<img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/banner.jpg" width="100%">
+		</div>
+		<p class="banner_text">Here are UniWigs most popular hair styles, featuring 16 human hair lace wigs and 4-textured lace closures. Get the movement, look, and feel of natural human hair that every woman secretly longs for. You’ll be sure to find that sexy, sassy, contemporary or classic style. </p>
+		<p class="banner_text">This collection was uniquely designed for free-spirited women who love dramatic real human hair hair. </p>
+		<div class="video_text">how customers feel about UniWigs human hair products</div>
+		<div class="video">
+			<a href="//www.youtube.com/embed/ifO_Gd_kPM0" class="highslide popupvideoa" target="_blank" data-uk-lightbox data-lightbox-type="image">
+				<img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/video.jpg" alt="" width="100%">
+			</a>
+		</div>
+
+		<!-- layer 01 -->
+		<div class="layer">
+			<div class="layer_product layout">
+				<div class="layer-img"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/td.jpg" alt="" width="100%"></div>
+				<section class="product-list uk-margin-top">
+					<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
+					<link rel="stylesheet" href="/themes/uniwigs2016/css/product_list.css" type="text/css" media="all">
+					{if isset($tag_banners) && $tag_banners}
+					{foreach from=$tag_banners key=ind item=tag_banner}
+					<div>
+						<img src="{$tag_banner}" width="100%" alt="{$tag->name|escape}"/>
+					</div>
+					{/foreach}
+					{/if}
+
+					{if isset($products) && $products}
+						{if $page_name !='index' && $page_name !='product'}
+							{assign var='nbItemsPerLine' value=4}
+							{assign var='nbItemsPerLineTablet' value=3}
+							{assign var='nbItemsPerLineMobile' value=3}
+						{else}
+							{assign var='nbItemsPerLine' value=3}
+							{assign var='nbItemsPerLineTablet' value=3}
+							{assign var='nbItemsPerLineMobile' value=2}
+						{/if}
+
+						{foreach from=$products key="ind" item="row"}
+						<!-- Products list -->
+						<ul{if isset($id) && $id} id="{$id}"{/if} class="product_list grid row{if isset($class) && $class} {$class}{/if}">
+						{foreach from=$row item=product name=products}
+							{math equation="(total%perLine)" total=$smarty.foreach.products.total perLine=$nbItemsPerLine assign=totModulo}
+							{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineTablet assign=totModuloTablet}
+							{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineMobile assign=totModuloMobile}
+							{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
+							{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
+							{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
+							<li class="ajax_block_product{if $page_name == 'index' || $page_name == 'product'} col-xs-12 col-sm-4 col-md-3{else} col-xs-12 col-sm-4 col-md-3{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLine == 0} last-in-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLine == 1} first-in-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModulo)} last-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 0} last-item-of-tablet-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 1} first-item-of-tablet-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 0} last-item-of-mobile-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 1} first-item-of-mobile-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModuloMobile)} last-mobile-line{/if}">
+								<div class="product-container" itemscope itemtype="http://schema.org/Product">
+									<div class="left-block">
+										<div class="product-image-container">
+
+											<a class="product_img_link"	href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
+												<img class="replace-2x img-responsive" src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
+											</a>
+											{if isset($quick_view) && $quick_view}
+												<div class="quick-view-wrapper-mobile">
+												<a class="quick-view-mobile" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}">
+													<i class="icon-eye-open"></i>
+												</a>
+											</div>
+											<a class="quick-view" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}">
+												<span>{l s='Quick view'}</span>
+											</a>
+											{/if}
+											{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
+														{if $page_name != 'index'}
+						                                    <div class="functional-buttons clearfix">
+						                                        {hook h='displayProductListFunctionalButtons' product=$product}
+						                                        <div class="view">
+                                									<a href="{$product.link|escape:'html':'UTF-8'}" title="{l s='View'}">
+                                										<span>{if (isset($product.customization_required) && $product.customization_required)}{l s='Customize'}{else}{l s='More'}{/if}</span>
+                                									</a>
+                                								</div>
+						                                    </div>
+						                                {/if}
+											{/if}
+										</div>
+										{hook h="displayProductDeliveryTime" product=$product}
+										{hook h="displayProductPriceBlock" product=$product type="weight"}
+									</div>
+									<div class="right-block">
+										<h5 itemprop="name">
+											{if isset($product.pack_quantity) && $product.pack_quantity}{$product.pack_quantity|intval|cat:' x '}{/if}
+											<a class="product-name" href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url" >
+												{$product.name|truncate:45:'...'|escape:'html':'UTF-8'}
+											</a>
+										</h5>
+										{hook h='displayProductListReviews' product=$product}
+										<p class="product-desc" itemprop="description">
+											{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}
+										</p>
+										{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
+										<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="content_price">
+											{if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
+												<span itemprop="price" class="price product-price">
+													{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
+												</span>
+												<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
+												{if isset($product.specific_prices) && $product.specific_prices && isset($product.specific_prices.reduction) && $product.specific_prices.reduction > 0}
+													{hook h="displayProductPriceBlock" product=$product type="old_price"}
+													<span class="old-price product-price">
+														{displayWtPrice p=$product.price_without_reduction}
+													</span>
+													{hook h="displayProductPriceBlock" id_product=$product.id_product type="old_price"}
+													{if $product.specific_prices.reduction_type == 'percentage'}
+														<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
+													{/if}
+												{/if}
+												{hook h="displayProductPriceBlock" product=$product type="price"}
+												{hook h="displayProductPriceBlock" product=$product type="unit_price"}
+											{/if}
+										</div>
+										{/if}
+
+										{if isset($product.color_list)}
+											<div class="color-list-container">{$product.color_list}</div>
+										{/if}
+										
+										<div class="product-flags">
+											{if isset($product.on_sale) && $product.on_sale && isset($product.show_price) && $product.show_price && !$PS_CATALOG_MODE}
+												{elseif isset($product.reduction) && $product.reduction && isset($product.show_price) && $product.show_price && !$PS_CATALOG_MODE}
+													<span class="discount">{l s='Reduced price!'}</span>
+												{/if}
+										</div>
+
+									</div>
+
+								</div><!-- .product-container> -->
+							</li>
+						{/foreach}
+						</ul>
+						{/foreach}
+					{addJsDefL name=min_item}{l s='Please select at least one product' js=1}{/addJsDefL}
+					{addJsDefL name=max_item}{l s='You cannot add more than %d product(s) to the product comparison' sprintf=$comparator_max_item js=1}{/addJsDefL}
+					{addJsDef comparator_max_item=$comparator_max_item}
+					{addJsDef comparedProductsIds=$compared_products}
+					{/if}
+				</section>
+			</div>
+		</div>
+
+		<!-- layer 02 -->
+		<div class="layer">
+			<div class="layer_product layout">
+				<div class="layer-img"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/td2.jpg" alt="" width="100%"></div>
+				<section class="product-list uk-margin-top">
+					<ul class="row" data-uk-grid-match>
+						<li class="col-md-3 col-sm-3">
+							<div class="pr-qie" id="pr-qie">
+								<div class="pr-img">
+									<img src="/40612-11491-category/8-24-natural-straight-brazilian-remy-human-hair-middle-part-lace-top-closure-piece-35x4.jpg" alt="8-20&quot; Natural Straight Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure" itemprop="image" class="img-responsive">
+								</div>
+							</div>
+							<div class="pr-con">
+								<p class="pr-name">
+									8-20" Natural Straight Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure
+								</p>
+								<ul class="pro-sku">
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40612-8-24-natural-straight-brazilian-remy-human-hair-middle-part-lace-top-closure-piece-35x4.html">3.5" x 4"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40611-8-24-natural-straight-brazilian-remy-human-hair-middle-part-lace-top-closure-piece-4x4.html">4" x 4"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40617-8-24-natural-straight-brazilian-remy-human-hair-middle-part-lace-frontal-4x5.html">4" x 5"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40619-8-24-natural-straight-brazilian-remy-human-hair-three-part-lace-frontal-5x5.html">5" x 5"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40615-8-24-natural-straight-brazilian-remy-human-hair-free-part-lace-frontal-13x4.html">13" x 4"</a>
+									</li>
+								</ul>
+								<p class="fix">
+									<span class="pr-price">
+										<strong>
+											From:<span class="red" itemprop="price">$69.89</span>
+										</strong>
+									</span>
+									<span class="iprice">
+										<del>$125.80</del>
+									</span>
+								</p>
+							</div>
+						</li>
+						<li class="col-md-3 col-sm-3">
+							<div class="pr-qie" id="pr-qie">
+								<div class="pr-img">
+									<img src="/40613-11452-category/8-24-body-wave-brazilian-remy-human-hair-middle-part-lace-top-closure-piece-35x4.jpg" alt="8-20&quot; Body Wave Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure" title="8-20&quot; Body Wave Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure" itemprop="image" class="img-responsive">
+								</div>
+							</div>
+							<div class="pr-con">
+								<p class="pr-name">
+									8-20" Body Wave Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure
+								</p>
+								<ul class="pro-sku">
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40613-8-24-body-wave-brazilian-remy-human-hair-middle-part-lace-top-closure-piece-35x4.html">3.5" x 4"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40610-8-24-body-wave-brazilian-remy-human-hair-free-part-lace-top-closure-piece-4x4.html">4" x 4"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40616-8-24-body-wave-brazilian-remy-human-hair-middle-part-lace-frontal-4x5.html">4" x 5"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40618-8-24-body-wave-brazilian-remy-human-hair-middle-part-lace-frontal-5x5.html">5" x 5"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40614-8-24-body-wave-brazilian-remy-human-hair-middle-part-lace-frontal-13x4.html">13" x 4"</a>
+									</li>
+								</ul>
+								<p class="fix">
+									<span class="pr-price">
+										<strong>
+											From:<span class="red" itemprop="price">$69.89</span>
+										</strong>
+									</span>
+									<span class="iprice">
+										<del>$125.80</del>
+									</span>
+								</p>
+							</div>
+						</li>
+						<li class="col-md-3 col-sm-3">
+							<div class="pr-qie" id="pr-qie">
+								<div class="pr-img">
+									<img src="/40908-11488-category/8-24-35x4-loose-wave-free-part-middle-part-brazilian-remy-human-hair-lace-closure.jpg" alt="88-20&quot; Loose Wave Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure" itemprop="image" class="img-responsive">
+								</div>
+							</div>
+							<div class="pr-con">
+								<p class="pr-name">
+									8-20" Loose Wave Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure
+								</p>
+								<ul class="pro-sku">
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40908-8-24-35x4-loose-wave-free-part-middle-part-brazilian-remy-human-hair-lace-closure.html">3.5" x 4"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40929-8-24-4x4-loose-wave-free-part-middle-part-brazilian-remy-human-hair-lace-closure.html">4" x 4"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/41028-4x5-loose-wave-8-20-free-part-middle-part-three-part-remy-human-hair-top-closure.html">4" x 5"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40935-8-24-5x5-loose-wave-free-part-middle-part-three-part-brazilian-remy-human-hair-lace-closure.html">5" x 5"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40941-8-24-13x4-loose-wave-free-part-middle-part-three-part-brazilian-remy-human-hair-lace-front.html">13" x 4"</a>
+									</li>
+								</ul>
+								<p class="fix">
+									<span class="pr-price">
+										<strong>
+											From:<span class="red" itemprop="price">$69.89</span>
+										</strong>
+									</span>
+									<span class="iprice">
+										<del>$125.80</del>
+									</span>
+								</p>
+							</div>
+						</li>
+						<li class="col-md-3 col-sm-3">
+							<div class="pr-qie" id="pr-qie">
+								<div class="pr-img">
+									<img src="/40907-11456-category/8-24-curly-35x4-brazilian-remy-human-hair-lace-closure.jpg" alt="8-20&quot; Curly Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure" itemprop="image" class="img-responsive">
+								</div>
+							</div>
+							<div class="pr-con">
+								<p class="pr-name">
+									8-20" Curly Free Part/Middle Part /Three Part Brazilian Remy Human Hair Lace Closure
+								</p>
+								<ul class="pro-sku">
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40907-8-24-curly-35x4-brazilian-remy-human-hair-lace-closure.html">3.5" x 4"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40928-8-24-4x4-curly-free-part-middle-part-brazilian-remy-human-hair-lace-closure.html">4" x 4"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/41030-4x5-curly-8-20-free-part-middle-part-three-part-remy-human-hair-top-closure.html">4" x 5"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40934-8-24-5x5-curly-free-part-middle-part-three-part-brazilian-remy-human-hair-lace-closure.html">5" x 5"</a>
+									</li>
+									<li>
+										<a href="http://www.uniwigs.com/top-hairpieces/40940-8-24-13x4-curly-free-part-middle-part-three-part-brazilian-remy-human-hair-lace-front.html">13" x 4"</a>
+									</li>
+								</ul>
+								<p class="fix">
+									<span class="pr-price">
+										<strong>
+											From:<span class="red" itemprop="price">$69.89</span>
+										</strong>
+									</span>
+									<span class="iprice">
+										<del>$125.80</del>
+									</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</secton>
+			</div>
+		</div>
+		<div class="layer-img"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/td3.png" alt="" width="100%"></div>
+		<div class="other_link">
+			<ul class="row">
+				<li class="col-sm-4"><a href="http://www.uniwigs.com/celebrity-wigs"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/link1.jpg" alt="" width="100%"></a></li>
+				<li class="col-sm-4"><a href="http://www.uniwigs.com/tag/hand-tied-wigs"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/link2.jpg" alt="" width="100%"></a></li>
+				<li class="col-sm-4"><a href="http://www.uniwigs.com/tag/lace-closure"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/link3.jpg" alt="" width="100%"></a></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript" src="/themes/uniwigs2014/js/lightbox.js"></script>
+
+

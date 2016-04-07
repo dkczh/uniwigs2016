@@ -1,0 +1,225 @@
+{literal}
+<style>
+#f-wrapper {margin-top:0;}
+#fastshipping{background:#fff url("/themes/uniwigs2014/activity/fast-shipping/image/bg.jpg") no-repeat center top;}
+#fastshipping .layout{width:1000px;margin:0 auto;position: relative;}
+#fastshipping .banner{height:714px;background:url("/themes/uniwigs2014/activity/fast-shipping/image/banner.jpg") no-repeat;position:relative}
+#fastshipping .banner .banner_box{position: absolute;}
+#fastshipping .banner .pian01{background:url("/themes/uniwigs2014/activity/fast-shipping/image/title.png") no-repeat;width:605px;height:100px;left:87px;top:73px;z-index:15}
+#fastshipping .banner .pian02{background:url("/themes/uniwigs2014/activity/fast-shipping/image/2-3.png") no-repeat;width:680px;height:176px;left:94px;top:190px;z-index:15}
+#fastshipping .banner .pian03{background:url("/themes/uniwigs2014/activity/fast-shipping/image/title2.png") no-repeat;width:489px;height:109px;left:150px;top:387px;z-index:15}
+#fastshipping .banner .pian04{background:url("/themes/uniwigs2014/activity/fast-shipping/image/tree.png") no-repeat;width:220px;height:217px;left:0;top:392px;z-index:15}
+
+#fastshipping .product{position:relative;z-index:10;margin-top: -128px;}
+#fastshipping .title{margin-bottom:20px}
+#fastshipping .product img{display:block}
+#fastshipping .layer_pro_bg{background:url("/themes/uniwigs2014/activity/fast-shipping/image/top.png") no-repeat;height:10px}
+#fastshipping .layer_product{background:url("/themes/uniwigs2014/activity/fast-shipping/image/pro_bg.png") repeat-y;}
+#fastshipping .layer_product ul{padding:10px 0 0 16px}
+#fastshipping .layer_product ul li{float:left;width:180px;height:295px;margin:0 16px 15px 0;background:#fff;position: relative;display:inline-block;zoom: 1;}
+#fastshipping .layer_product ul li img{width:180px}
+#fastshipping .layer_product ul li h5{text-align:left;padding:5px 10px;width: 148px;height: 33px;overflow: hidden;}
+#fastshipping .layer_product ul li h5 a{color:#666;}
+#fastshipping .layer_product ul li .price{position: relative;padding: 0 10px;}
+#fastshipping .layer_product ul li .price span{display:block}
+#fastshipping .layer_product ul li span.off{position: absolute;left:0;top:0;background:url("/themes/uniwigs2014/activity/fast-shipping/image/shipping.png") no-repeat;width:76px;height: 25px;}
+#fastshipping .layer_product ul li .price span.buy{position: absolute;width: 69px;height: 30px;right: 10px;bottom: 4px;}
+#fastshipping .layer_product ul li .price span.buy a{width: 69px;height: 30px;display: block;background:url("/themes/uniwigs2014/activity/fast-shipping/image/shop_now.png") no-repeat 0 0;}
+#fastshipping .layer_product ul li .price span.buy a:hover,#year2013 .layer_product ul li:hover span.buy a{background:url("/themes/uniwigs2014/activity/fast-shipping/image/shop_now.png") no-repeat 0 -30px;}
+#fastshipping .layer_product ul li .price span.now{color:#ae1b27;font-size:16px;text-transform: uppercase;font-weight:bold}
+#fastshipping .layer_product ul li .price span.old{color:#666;text-transform: uppercase; text-decoration:line-through}
+
+.snowEffect{
+/*
+width: 100%;
+position: absolute;
+left: -50%;
+*/
+top: 0;
+z-index: 1;
+
+position: fixed;
+left: 0;
+}
+#fastshipping .more{margin-top:20px;z-index:10}
+#fastshipping .more_link{float:left;margin-right: 20px;width:320px;}
+#fastshipping .more_link a:hover{text-decoration:none;}
+#fastshipping .more_link.end{margin-right: 0;}
+#fastshipping .layout_foot{background:url("/themes/uniwigs2014/activity/fast-shipping/image/ft_bg.jpg") no-repeat;height:410px;position: relative;z-index:5;margin-top: -250px;}
+
+/*============  768px-1000px   ================*/
+@media only screen and (max-width:1000px) {
+#fastshipping{width: 724px;margin: 0 auto;}
+#fastshipping .banner .pian02{left: 77px;}
+#fastshipping .banner .pian09{left: 166px;top: 17px;}
+#fastshipping .banner .pian06{left: 28px;top: 40px;}
+#fastshipping .banner .pian08{left: 171px;top: 375px;}
+#fastshipping .banner .pian07{left: 559px;top: 345px;}
+#fastshipping .layout {width:724px}
+#fastshipping .layer img,.sub_banner img{width:100%}
+#fastshipping .layer_product ul li{margin:0 30px 30px 0;width: 200px;height: 322px;}
+#fastshipping .layer_product ul li img {width: 200px;}
+}
+</style>
+{/literal}
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="/themes/uniwigs2014/activity/fast-shipping/js/ThreeCanvas.js"></script>
+<script type="text/javascript" src="/themes/uniwigs2014/activity/fast-shipping/js/Snow.js"></script>
+	<div id="fastshipping">
+		<!-- banner -->
+		<div class="banner layout">
+			<div class="banner_box pian01"></div>
+			<div class="banner_box pian02"></div>
+			<div class="banner_box pian03"></div>
+			<div class="banner_box pian04"></div>
+			<div class="snowEffect"><canvas width="1000" height="700"></canvas></div>
+		</div>
+		<!-- layer 01 -->
+		<div class="product layout">
+			<div class="layer layer1">
+				<div class="title"><img src="/themes/uniwigs2014/activity/fast-shipping/image/shop.png" alt="Shop fast 2-3 days shipping style"></div>
+				<div class="layer_pro_bg"></div>
+				<div class="layer_product fix">
+					<ul class="fix">
+						{foreach from=$products key=key item=product}
+						<li>
+							<span class="off"></span>
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}">
+								<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}">
+							</a>
+							<h5><a href="{$product.link|escape:'htmlall':'UTF-8'}" title="{$product.name|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a></h5>
+							<div class="price">
+								<span class="now">US {convertPrice price=$product.show_price_list.0.value}</span>
+								{foreach from=$product.show_price_list key=spi item=show_price}
+								{if $spi>0}
+								<span class="old">US {convertPrice price=$show_price.value}</span>
+								{/if}
+								{/foreach}
+								<span class="buy"><a href="{$product.link|escape:'htmlall':'UTF-8'}"></a></span>
+							</div>
+						</li>
+						{/foreach}
+					</ul>
+				</div>
+				<div class="layer_pro_bg"></div>
+			</div>
+		</div>
+		<div class="more layout fix">
+		    <div class="more_link">
+		        <a href="/tag/youtube-hot-sale-lace-front-wigs"><img src="/themes/uniwigs2014/activity/fast-shipping/image/more1.png" alt="human-hair-lace-front-wigs"></a>
+		    </div>
+		    <div class="more_link">
+		        <a href="/synthetic-wigs"><img src="/themes/uniwigs2014/activity/fast-shipping/image/more2.png" alt="synthetic-wigs"></a>
+		    </div>
+		    <div class="more_link end">
+		        <a href="/tag/fast-shipping"><img src="/themes/uniwigs2014/activity/fast-shipping/image/more3.png" alt="fast-shipping"></a>
+		    </div>
+		</div>
+		<div class="layout_foot"></div>
+	</div>
+</body>
+
+{literal}
+<script type="text/javascript">
+    /*Snow Effect - Start*/
+    /* Variables - Start */
+    var SCREEN_WIDTH = window.innerWidth;
+    var SCREEN_HEIGHT = window.innerHeight;
+    var container;
+    var particle;
+    var camera;
+    var scene;
+    var renderer;
+    var mouseX = 0;
+    var mouseY = 0;
+    var windowHalfX = window.innerWidth / 2;
+    var windowHalfY = window.innerHeight / 2;
+    var particles = [];
+    var particleImage = new Image();
+    particleImage.src = '/themes/uniwigs2014/activity/fast-shipping/image/snow.png';
+    /* Variables - End */
+
+    function snowEffectBind() {
+        container = $('.snowEffect');
+
+        camera = new THREE.PerspectiveCamera(75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000);
+        camera.position.z = 1000;
+
+        scene = new THREE.Scene();
+        scene.add(camera);
+
+        renderer = new THREE.CanvasRenderer();
+        renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+        var material = new THREE.ParticleBasicMaterial({ map: new THREE.Texture(particleImage) });
+
+        for (var i = 0; i < 500; i++) {
+            particle = new Particle3D(material);
+            particle.position.x = Math.random() * 2000 - 1000;
+            particle.position.y = Math.random() * 2000 - 1000;
+            particle.position.z = Math.random() * 2000 - 1000;
+            particle.scale.x = particle.scale.y = 1;
+            scene.add(particle);
+
+            particles.push(particle);
+        }
+
+        container.html(renderer.domElement);
+
+        document.addEventListener('mousemove', onDocumentMouseMove, false);
+        document.addEventListener('touchstart', onDocumentTouchStart, false);
+        document.addEventListener('touchmove', onDocumentTouchMove, false);
+
+        setInterval(loop, 1000 / 60);
+    }
+
+    function onDocumentMouseMove(event) {
+        mouseX = event.clientX - windowHalfX;
+        mouseY = event.clientY - windowHalfY;
+    }
+
+    function onDocumentTouchStart(event) {
+        if (event.touches.length == 1) {
+            event.preventDefault();
+
+            mouseX = event.touches[0].pageX - windowHalfX;
+            mouseY = event.touches[0].pageY - windowHalfY;
+        }
+    }
+
+    function onDocumentTouchMove(event) {
+        if (event.touches.length == 1) {
+            event.preventDefault();
+
+            mouseX = event.touches[0].pageX - windowHalfX;
+            mouseY = event.touches[0].pageY - windowHalfY;
+        }
+    }
+
+    function loop() {
+        for (var i = 0; i < particles.length; i++) {
+            var particle = particles[i];
+            particle.updatePhysics();
+
+            with (particle.position) {
+                if (y < -1000) y += 2000;
+                if (x > 1000) x -= 2000;
+                else if (x < -1000) x += 2000;
+                if (z > 1000) z -= 2000;
+                else if (z < -1000) z += 2000;
+            }
+        }
+
+        camera.position.x += (mouseX - camera.position.x) * 0.05;
+        camera.position.y += (-mouseY - camera.position.y) * 0.05;
+        camera.lookAt(scene.position);
+
+        renderer.render(scene, camera);
+    }
+    /*Snow Effect - End*/
+    $(document).ready(function () {
+        if ($(window).width() > 480 && !(navigator.userAgent.toLowerCase().indexOf('safari') > -1 && navigator.userAgent.toLowerCase().indexOf('chrome') == -1))
+            snowEffectBind();
+    });
+</script>
+{/literal}

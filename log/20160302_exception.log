@@ -1,0 +1,39 @@
+*ERROR* 	2016/03/02 - 02:45:51: Column 'id_feature' in where clause is ambiguous<br /><br /><pre>SELECT SQL_CALC_FOUND_ROWS
+								b.*, a.*
+			
+			FROM `ps_feature` a 
+			LEFT JOIN `ps_feature_lang` b ON (b.`id_feature` = a.`id_feature` AND b.`id_lang` = 1)
+			
+			 WHERE 1   AND EXISTS (
+						SELECT 1
+						FROM `ps_feature_shop` sa
+						WHERE a.id_feature = sa.id_feature AND sa.id_shop IN (6, 1, 2)
+					)  AND `id_feature` LIKE '%4%' 
+			
+			 ORDER BY a.`position` ASC  LIMIT 0, 50</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/02 - 02:45:56: Column 'id_feature' in where clause is ambiguous<br /><br /><pre>SELECT SQL_CALC_FOUND_ROWS
+								b.*, a.*
+			
+			FROM `ps_feature` a 
+			LEFT JOIN `ps_feature_lang` b ON (b.`id_feature` = a.`id_feature` AND b.`id_lang` = 1)
+			
+			 WHERE 1   AND EXISTS (
+						SELECT 1
+						FROM `ps_feature_shop` sa
+						WHERE a.id_feature = sa.id_feature AND sa.id_shop IN (6, 1, 2)
+					)  AND `id_feature` LIKE '%4%' 
+			
+			 ORDER BY a.`position` ASC  LIMIT 0, 50</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/02 - 02:46:02: Column 'id_feature' in where clause is ambiguous<br /><br /><pre>SELECT SQL_CALC_FOUND_ROWS
+								b.*, a.*
+			
+			FROM `ps_feature` a 
+			LEFT JOIN `ps_feature_lang` b ON (b.`id_feature` = a.`id_feature` AND b.`id_lang` = 1)
+			
+			 WHERE 1   AND EXISTS (
+						SELECT 1
+						FROM `ps_feature_shop` sa
+						WHERE a.id_feature = sa.id_feature AND sa.id_shop IN (6, 1, 2)
+					)  AND `id_feature` LIKE '%4%' 
+			
+			 ORDER BY a.`position` ASC  LIMIT 0, 50</pre> at line 791 in file classes/db/Db.php

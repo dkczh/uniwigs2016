@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* CSS Document */
+html {color:#000; background:#fff;}
+body,div,dl,dt,dd,ul,ol,li,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0; padding:0;}
+table{border-collapse:collapse; border-spacing:0;margin:0 auto;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal; font-weight:normal;}
+li{list-style:none;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{*font-size:100%;}
+legend{color:#000;}
+del,ins{text-decoration:none;}
+a {
+color: #000000;
+text-decoration: none;
+}
+
+body {
+color: #000;
+font-family: arial,"helvetica neue",sans-serif;
+font-size: 12px;
+}
+
+.wrapper{
+height: auto !important;
+margin: 0 auto;
+min-height: 100%;
+}
+
+.W_main {
+margin: 0 auto;
+width: 100%;
+}
+
+#page, #header, #content, #footer {
+margin-left:auto;
+margin-right:auto;
+}
+
+.ignous {
+width: 100%;
+font: 12px/1.5;
+background: url(../images/bg.jpg) no-repeat center 0;
+overflow: hidden;
+width:100%;
+}
+
+.ign_head {
+width: 990px;
+height: 970px;
+margin: 0 auto;
+position: relative;
+background: url(../images/bg1.gif) no-repeat center 0;
+}
+
+.coupon_num_box {
+font-size: 14px;
+position: absolute;
+left: 3px;
+top: 192px;
+width: 130px;
+text-align: center;
+}
+
+.coupon_num {
+font: 34px/34px Impact;
+color: #2A9924;
+margin-right: 3px;
+}
+
+.coupon_winner {
+width: 136px;
+position: absolute;
+left: 0;
+top: 243px;
+}
+
+.coupon_winner_bolder {
+border: 2px solid #2A9924;
+margin-bottom: 3px;
+overflow: hidden;
+width: 150px;
+border-image: initial;
+}
+
+.ignous a {
+text-decoration: none;
+cursor: pointer;
+}
+
+.myCoupon {
+width: 140px;
+height: 26px;
+display: block;
+background: url("../images/credit.jpg") repeat scroll 0 0 transparent;
+margin-left:6px;
+}
+
+.Coupon {
+width: 140px;
+height: 26px;
+display: block;
+margin-top:5px;
+background: url("../images/referees.jpg") repeat scroll 0 0 transparent;
+}
+
+.coupon_winner-title {
+font-size: 14px;
+color: #2A9924;
+text-align: center;
+font-weight: bold;
+}
+
+body .coupon_winner_bolder_max {
+height: 189px;
+}
+summer2012-yr.php:220
+.coupon_winner_box {
+overflow: hidden;
+max-height: 189px;
+min-height: 84px;
+}
+
+.coupon_winner li {
+height: 21px;
+line-height: 21px;
+text-align: left;
+color: #F58E00;
+white-space: nowrap;
+margin-left:4px;
+}
+
+.sm {
+background: url("../images/right.jpg") no-repeat scroll 0 0 transparent;
+width: 131px;
+height: 163px;
+position: absolute;
+left: 880px;
+top: 184px;
+}
+
+.rule {
+width: 112px;
+height: 33px;
+display: block;
+position: absolute;
+left: 700px;
+top: 336px;
+background: url("../images/details.png") no-repeat scroll 0 0 transparent;
+}
+
+.give {
+background: url("../images/give.png") no-repeat scroll 0 0 transparent;
+display: block;
+height: 19px;
+left: 255px;
+position: absolute;
+top: 600px;
+width: 405px;
+}
+
+award_btn3 {
+background-position: -224px 0;
+}
+
+.award_btn {
+width: 112px;
+height: 83px;
+position: absolute;
+left: 700px;
+top: 250px;
+background: url("../images/beat.png") no-repeat scroll 0 0 transparent;
+cursor: pointer;
+}
+
+.moster{
+position: absolute;
+left: 730px;
+top: 200px;
+background: url("../images/arrow.png") no-repeat scroll 0 0  transparent;
+width:53px;
+height:42px;
+}
+
+.congratulations {
+width:139px;
+height:38px;
+margin:20px 0 0 150px;
+}
+.won {
+width:14px;
+height:14px;
+padding:15px 0 0 430px;
+}
+
+
+.credit {
+width:460px;
+height:285px;
+background: url("../images/congratulations.png") no-repeat scroll 0 0  transparent;
+}
+
+.Orange {
+color:#f56424;
+height:30px;
+margin:75px 0 0 200px;
+font-size:14px;
+font-weight:bold;
+}
+
+.nothing {
+width:460px;
+height:285px;
+background: url("../images/sorry.png") no-repeat scroll 0 0  transparent;
+}
+.have {
+width:460px;
+height:285px;
+background: url("../images/have.png") no-repeat scroll 0 0  transparent;
+}
+.total {
+width:460px;
+height:285px;
+background: url("../images/total.png") no-repeat scroll 0 0  transparent;
+}
+
+.copy {
+width:460px;
+height:285px;
+background: url("../images/copy.png") no-repeat scroll 0 0  transparent;
+}
+
+.Orange1 {
+color:#f56424;
+height:30px;
+margin:75px 0 0 255px;
+font-size:14px;
+font-weight:bold;
+}
+.Orange2 {
+color:#f56424;
+height:30px;
+margin:85px 0 0 210px;
+font-size:14px;
+font-weight:bold;
+}
+
+.Orange3 {
+color:#f56424;
+height:30px;
+margin:95px 0 0 350px;
+font-size:14px;
+font-weight:bold;
+}
+
+.Orange4 {
+color:#f56424;
+height:30px;
+width:310px;
+margin:70px 0 0 80px;
+font-size:14px;
+color:#2a9924;
+}
+
+.rule-hd {
+background: url("../images/DT98.gif") no-repeat scroll center top transparent;
+height: 402px;
+margin-bottom: 10px;
+}
+
+.rule-hd .rule-mid {
+height: 402px;
+margin: 0 auto;
+position: relative;
+width: 990px;
+}
+
+.rule-contern {
+margin: 0 auto;
+width: 992px;
+}
+
+.rule-box-t {
+background: url("../images/TD78.jpg") no-repeat scroll 0 0 transparent;
+font-size: 0;
+height: 14px;
+overflow: hidden;
+}
+
+.rule-box-b {
+background: url("../images/DT19.jpg") no-repeat scroll 0 0 transparent;
+height: 19px;
+}
+
+.rule-box {
+background: none repeat scroll 0 0 #FBF6E4;
+border-left: 9px solid #C76222;
+border-right: 7px solid #C76222;
+color: #B9774D;
+padding: 10px 25px;
+width: 926px;
+height:450px;
+}
+
+.rule-box .title {
+    margin: 0 auto 10px;
+    width: 419px;
+}
+
+.rule-box .message {
+    line-height: 24px;
+}
+.rule-box .message {
+padding:0 45px;
+}
+
+.rule-box .message ol {
+    list-style: decimal outside none;
+}
+
+.logo {
+    background: url("../images/logo.png") no-repeat scroll center 0 transparent;
+    height: 58px;
+    left: 3px;
+    position: absolute;
+    top: 15px;
+    width: 159px;
+}

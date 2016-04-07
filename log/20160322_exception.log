@@ -1,0 +1,94 @@
+*ERROR* 	2016/03/22 - 04:22:51: Unknown column 'position' in 'order clause'<br /><br /><pre>SELECT DISTINCT p.id_product, pl.name pname, cl.name cname,
+						cl.link_rewrite crewrite, pl.link_rewrite prewrite 
+					FROM ps_product p
+					INNER JOIN `ps_product_lang` pl ON (
+						p.`id_product` = pl.`id_product`
+						AND pl.`id_lang` = 1 AND pl.id_shop = 2 
+					)
+					 INNER JOIN ps_product_shop product_shop
+		ON (product_shop.id_product = p.id_product AND product_shop.id_shop = 2)
+					INNER JOIN `ps_category_lang` cl ON (
+						product_shop.`id_category_default` = cl.`id_category`
+						AND cl.`id_lang` = 1 AND cl.id_shop = 2 
+					)
+					WHERE p.`id_product`  IN (40091,40000,40002,40003,40004,40005,40006,40008,40009,40010,40011,40012,40013,40014,40015,40016,40017,40018,40019,40020,40021,40022,40023,40024,40025,40026,40028,40029,40030,40031,40060,40061,40063,40064,40066,40068,40070,40071,40072,40074,40075,40076,40077,40078,40079,40081,40082,40083,40085,40087,40092,40093,40094,40098,40099,40100,40101,40102,40104,40105,40106,40107,40111,40112,40113,40181,40188,40802,40803,40804,40806,40966,40967,40968,40969,40970,41089,41100,41102,41236,40036,40640,41215,41216,41220) 
+					ORDER BY position DESC LIMIT 10</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/22 - 04:22:53: Unknown column 'position' in 'order clause'<br /><br /><pre>SELECT DISTINCT p.id_product, pl.name pname, cl.name cname,
+						cl.link_rewrite crewrite, pl.link_rewrite prewrite 
+					FROM ps_product p
+					INNER JOIN `ps_product_lang` pl ON (
+						p.`id_product` = pl.`id_product`
+						AND pl.`id_lang` = 1 AND pl.id_shop = 2 
+					)
+					 INNER JOIN ps_product_shop product_shop
+		ON (product_shop.id_product = p.id_product AND product_shop.id_shop = 2)
+					INNER JOIN `ps_category_lang` cl ON (
+						product_shop.`id_category_default` = cl.`id_category`
+						AND cl.`id_lang` = 1 AND cl.id_shop = 2 
+					)
+					WHERE p.`id_product`  IN (40188,41089,40640) 
+					ORDER BY position DESC LIMIT 10</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/22 - 04:22:55: Unknown column 'position' in 'order clause'<br /><br /><pre>SELECT p.*, product_shop.*, stock.out_of_stock, IFNULL(stock.quantity, 0) as quantity,
+				pl.`description_short`, pl.`available_now`, pl.`available_later`, pl.`link_rewrite`, pl.`name`,
+			 image_shop.`id_image` id_image, il.`legend`, m.`name` manufacturer_name ,
+				DATEDIFF(
+					p.`date_add`,
+					DATE_SUB(
+						"2016-03-22 00:00:00",
+						INTERVAL 20 DAY
+					)
+				) > 0 new, product_attribute_shop.minimal_quantity AS product_attribute_minimal_quantity, IFNULL(product_attribute_shop.`id_product_attribute`,0) id_product_attribute
+				FROM ps_product p
+				 INNER JOIN ps_product_shop product_shop
+		ON (product_shop.id_product = p.id_product AND product_shop.id_shop = 2)
+				INNER JOIN `ps_product_lang` pl ON (
+					p.`id_product` = pl.`id_product`
+					AND pl.`id_lang` = 1 AND pl.id_shop = 2 
+				)
+				LEFT JOIN `ps_product_attribute_shop` product_attribute_shop
+				ON (p.`id_product` = product_attribute_shop.`id_product` AND product_attribute_shop.`default_on` = 1 AND product_attribute_shop.id_shop=2)
+				 LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = p.id_product AND stock.id_product_attribute = 0 AND stock.id_shop_group = 1  AND stock.id_shop = 0  )
+				LEFT JOIN `ps_manufacturer` m ON m.`id_manufacturer` = p.`id_manufacturer`
+				LEFT JOIN `ps_image_shop` image_shop
+					ON (image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=2)
+				LEFT JOIN `ps_image_lang` il ON (image_shop.`id_image` = il.`id_image` AND il.`id_lang` = 1)
+				WHERE p.`id_product`  IN (40188,41089,40640) 
+				GROUP BY product_shop.id_product
+				ORDER BY  position desc
+				LIMIT 0,50</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/22 - 04:38:09: Property StockAvailable->id_product_attribute is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/22 - 05:19:36: Unknown column 'position' in 'order clause'<br /><br /><pre>SELECT p.*, product_shop.*, stock.out_of_stock, IFNULL(stock.quantity, 0) as quantity,
+				pl.`description_short`, pl.`available_now`, pl.`available_later`, pl.`link_rewrite`, pl.`name`,
+			 image_shop.`id_image` id_image, il.`legend`, m.`name` manufacturer_name ,
+				DATEDIFF(
+					p.`date_add`,
+					DATE_SUB(
+						"2016-03-22 00:00:00",
+						INTERVAL 20 DAY
+					)
+				) > 0 new, product_attribute_shop.minimal_quantity AS product_attribute_minimal_quantity, IFNULL(product_attribute_shop.`id_product_attribute`,0) id_product_attribute
+				FROM ps_product p
+				 INNER JOIN ps_product_shop product_shop
+		ON (product_shop.id_product = p.id_product AND product_shop.id_shop = 2)
+				INNER JOIN `ps_product_lang` pl ON (
+					p.`id_product` = pl.`id_product`
+					AND pl.`id_lang` = 1 AND pl.id_shop = 2 
+				)
+				LEFT JOIN `ps_product_attribute_shop` product_attribute_shop
+				ON (p.`id_product` = product_attribute_shop.`id_product` AND product_attribute_shop.`default_on` = 1 AND product_attribute_shop.id_shop=2)
+				 LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = p.id_product AND stock.id_product_attribute = 0 AND stock.id_shop_group = 1  AND stock.id_shop = 0  )
+				LEFT JOIN `ps_manufacturer` m ON m.`id_manufacturer` = p.`id_manufacturer`
+				LEFT JOIN `ps_image_shop` image_shop
+					ON (image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=2)
+				LEFT JOIN `ps_image_lang` il ON (image_shop.`id_image` = il.`id_image` AND il.`id_lang` = 1)
+				WHERE p.`id_product`  IN (40188,41089,40640) 
+				GROUP BY product_shop.id_product
+				ORDER BY  position desc
+				LIMIT 0,50</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/22 - 05:24:43: Property StockAvailable->id_product_attribute is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/22 - 05:59:14: Property StockAvailable->id_product_attribute is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/22 - 06:10:07: Property StockAvailable->id_product_attribute is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/22 - 06:12:08: Property StockAvailable->id_product_attribute is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/22 - 22:21:34: Property Order->total_discounts is not valid at line 909 in file classes/ObjectModel.php

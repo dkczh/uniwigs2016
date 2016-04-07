@@ -1,0 +1,305 @@
+*ERROR* 	2016/01/05 - 04:09:18: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1<br /><br /><pre>select catagory from px_tag_extra where id_tag= LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/05 - 21:02:50: Table 'prestashop-run.ps_product_shop' doesn't exist<br /><br /><pre>SELECT cp.`id_product_attribute`, cp.`id_product`, cp.`quantity` AS cart_quantity, cp.id_shop, pl.`name`, p.`is_virtual`,
+						pl.`description_short`, pl.`available_now`, pl.`available_later`, product_shop.`id_category_default`, p.`id_supplier`,
+						p.`id_manufacturer`, product_shop.`on_sale`, product_shop.`ecotax`, product_shop.`additional_shipping_cost`,
+						product_shop.`available_for_order`, product_shop.`price`, product_shop.`active`, product_shop.`unity`, product_shop.`unit_price_ratio`,
+						stock.`quantity` AS quantity_available, p.`width`, p.`height`, p.`depth`, stock.`out_of_stock`, p.`weight`,
+						p.`date_add`, p.`date_upd`, IFNULL(stock.quantity, 0) as quantity, pl.`link_rewrite`, cl.`link_rewrite` AS category,
+						CONCAT(LPAD(cp.`id_product`, 10, 0), LPAD(IFNULL(cp.`id_product_attribute`, 0), 10, 0), IFNULL(cp.`id_address_delivery`, 0)) AS unique_id, cp.id_address_delivery,
+						product_shop.advanced_stock_management, ps.product_supplier_reference supplier_reference,
+NULL AS customization_quantity, NULL AS id_customization,
+
+				product_attribute_shop.`price` AS price_attribute, product_attribute_shop.`ecotax` AS ecotax_attr,
+				IF (IFNULL(pa.`reference`, '') = '', p.`reference`, pa.`reference`) AS reference,
+				(p.`weight`+ pa.`weight`) weight_attribute,
+				IF (IFNULL(pa.`ean13`, '') = '', p.`ean13`, pa.`ean13`) AS ean13,
+				IF (IFNULL(pa.`upc`, '') = '', p.`upc`, pa.`upc`) AS upc,
+				IFNULL(product_attribute_shop.`minimal_quantity`, product_shop.`minimal_quantity`) as minimal_quantity,
+				IF(product_attribute_shop.wholesale_price > 0,  product_attribute_shop.wholesale_price, product_shop.`wholesale_price`) wholesale_price
+			,
+image_shop.`id_image` id_image, il.`legend`
+FROM `ps_cart_product` cp
+LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+INNER JOIN `ps_product_shop` product_shop ON (product_shop.`id_shop` = cp.`id_shop` AND product_shop.`id_product` = p.`id_product`)
+LEFT JOIN `ps_product_lang` `pl` ON 
+			p.`id_product` = pl.`id_product`
+			AND pl.`id_lang` = 1 AND pl.id_shop = cp.id_shop 
+LEFT JOIN `ps_category_lang` `cl` ON 
+			product_shop.`id_category_default` = cl.`id_category`
+			AND cl.`id_lang` = 1 AND cl.id_shop = cp.id_shop 
+LEFT JOIN `ps_product_supplier` `ps` ON ps.`id_product` = cp.`id_product` AND ps.`id_product_attribute` = cp.`id_product_attribute` AND ps.`id_supplier` = p.`id_supplier`
+ LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = cp.id_product AND stock.id_product_attribute = IFNULL(`cp`.id_product_attribute, 0) AND stock.id_shop = 1  AND stock.id_shop_group = 0  )
+LEFT JOIN `ps_product_attribute` `pa` ON pa.`id_product_attribute` = cp.`id_product_attribute`
+LEFT JOIN `ps_product_attribute_shop` `product_attribute_shop` ON (product_attribute_shop.`id_shop` = cp.`id_shop` AND product_attribute_shop.`id_product_attribute` = pa.`id_product_attribute`)
+LEFT JOIN `ps_image_shop` `image_shop` ON image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1
+LEFT JOIN `ps_image_lang` `il` ON il.`id_image` = image_shop.`id_image` AND il.`id_lang` = 1
+WHERE (cp.`id_cart` = 26) AND (p.`id_product` IS NOT NULL)
+ORDER BY cp.`date_add`, cp.`id_product`, cp.`id_product_attribute` ASC
+</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/05 - 21:02:53: Table 'prestashop-run.ps_product_shop' doesn't exist<br /><br /><pre>SELECT cp.`id_product_attribute`, cp.`id_product`, cp.`quantity` AS cart_quantity, cp.id_shop, pl.`name`, p.`is_virtual`,
+						pl.`description_short`, pl.`available_now`, pl.`available_later`, product_shop.`id_category_default`, p.`id_supplier`,
+						p.`id_manufacturer`, product_shop.`on_sale`, product_shop.`ecotax`, product_shop.`additional_shipping_cost`,
+						product_shop.`available_for_order`, product_shop.`price`, product_shop.`active`, product_shop.`unity`, product_shop.`unit_price_ratio`,
+						stock.`quantity` AS quantity_available, p.`width`, p.`height`, p.`depth`, stock.`out_of_stock`, p.`weight`,
+						p.`date_add`, p.`date_upd`, IFNULL(stock.quantity, 0) as quantity, pl.`link_rewrite`, cl.`link_rewrite` AS category,
+						CONCAT(LPAD(cp.`id_product`, 10, 0), LPAD(IFNULL(cp.`id_product_attribute`, 0), 10, 0), IFNULL(cp.`id_address_delivery`, 0)) AS unique_id, cp.id_address_delivery,
+						product_shop.advanced_stock_management, ps.product_supplier_reference supplier_reference,
+NULL AS customization_quantity, NULL AS id_customization,
+
+				product_attribute_shop.`price` AS price_attribute, product_attribute_shop.`ecotax` AS ecotax_attr,
+				IF (IFNULL(pa.`reference`, '') = '', p.`reference`, pa.`reference`) AS reference,
+				(p.`weight`+ pa.`weight`) weight_attribute,
+				IF (IFNULL(pa.`ean13`, '') = '', p.`ean13`, pa.`ean13`) AS ean13,
+				IF (IFNULL(pa.`upc`, '') = '', p.`upc`, pa.`upc`) AS upc,
+				IFNULL(product_attribute_shop.`minimal_quantity`, product_shop.`minimal_quantity`) as minimal_quantity,
+				IF(product_attribute_shop.wholesale_price > 0,  product_attribute_shop.wholesale_price, product_shop.`wholesale_price`) wholesale_price
+			,
+image_shop.`id_image` id_image, il.`legend`
+FROM `ps_cart_product` cp
+LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+INNER JOIN `ps_product_shop` product_shop ON (product_shop.`id_shop` = cp.`id_shop` AND product_shop.`id_product` = p.`id_product`)
+LEFT JOIN `ps_product_lang` `pl` ON 
+			p.`id_product` = pl.`id_product`
+			AND pl.`id_lang` = 1 AND pl.id_shop = cp.id_shop 
+LEFT JOIN `ps_category_lang` `cl` ON 
+			product_shop.`id_category_default` = cl.`id_category`
+			AND cl.`id_lang` = 1 AND cl.id_shop = cp.id_shop 
+LEFT JOIN `ps_product_supplier` `ps` ON ps.`id_product` = cp.`id_product` AND ps.`id_product_attribute` = cp.`id_product_attribute` AND ps.`id_supplier` = p.`id_supplier`
+ LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = cp.id_product AND stock.id_product_attribute = IFNULL(`cp`.id_product_attribute, 0) AND stock.id_shop = 1  AND stock.id_shop_group = 0  )
+LEFT JOIN `ps_product_attribute` `pa` ON pa.`id_product_attribute` = cp.`id_product_attribute`
+LEFT JOIN `ps_product_attribute_shop` `product_attribute_shop` ON (product_attribute_shop.`id_shop` = cp.`id_shop` AND product_attribute_shop.`id_product_attribute` = pa.`id_product_attribute`)
+LEFT JOIN `ps_image_shop` `image_shop` ON image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1
+LEFT JOIN `ps_image_lang` `il` ON il.`id_image` = image_shop.`id_image` AND il.`id_lang` = 1
+WHERE (cp.`id_cart` = 26) AND (p.`id_product` IS NOT NULL)
+ORDER BY cp.`date_add`, cp.`id_product`, cp.`id_product_attribute` ASC
+</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/05 - 21:02:57: Table 'prestashop-run.ps_product_shop' doesn't exist<br /><br /><pre>SELECT cp.`id_product_attribute`, cp.`id_product`, cp.`quantity` AS cart_quantity, cp.id_shop, pl.`name`, p.`is_virtual`,
+						pl.`description_short`, pl.`available_now`, pl.`available_later`, product_shop.`id_category_default`, p.`id_supplier`,
+						p.`id_manufacturer`, product_shop.`on_sale`, product_shop.`ecotax`, product_shop.`additional_shipping_cost`,
+						product_shop.`available_for_order`, product_shop.`price`, product_shop.`active`, product_shop.`unity`, product_shop.`unit_price_ratio`,
+						stock.`quantity` AS quantity_available, p.`width`, p.`height`, p.`depth`, stock.`out_of_stock`, p.`weight`,
+						p.`date_add`, p.`date_upd`, IFNULL(stock.quantity, 0) as quantity, pl.`link_rewrite`, cl.`link_rewrite` AS category,
+						CONCAT(LPAD(cp.`id_product`, 10, 0), LPAD(IFNULL(cp.`id_product_attribute`, 0), 10, 0), IFNULL(cp.`id_address_delivery`, 0)) AS unique_id, cp.id_address_delivery,
+						product_shop.advanced_stock_management, ps.product_supplier_reference supplier_reference,
+NULL AS customization_quantity, NULL AS id_customization,
+
+				product_attribute_shop.`price` AS price_attribute, product_attribute_shop.`ecotax` AS ecotax_attr,
+				IF (IFNULL(pa.`reference`, '') = '', p.`reference`, pa.`reference`) AS reference,
+				(p.`weight`+ pa.`weight`) weight_attribute,
+				IF (IFNULL(pa.`ean13`, '') = '', p.`ean13`, pa.`ean13`) AS ean13,
+				IF (IFNULL(pa.`upc`, '') = '', p.`upc`, pa.`upc`) AS upc,
+				IFNULL(product_attribute_shop.`minimal_quantity`, product_shop.`minimal_quantity`) as minimal_quantity,
+				IF(product_attribute_shop.wholesale_price > 0,  product_attribute_shop.wholesale_price, product_shop.`wholesale_price`) wholesale_price
+			,
+image_shop.`id_image` id_image, il.`legend`
+FROM `ps_cart_product` cp
+LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+INNER JOIN `ps_product_shop` product_shop ON (product_shop.`id_shop` = cp.`id_shop` AND product_shop.`id_product` = p.`id_product`)
+LEFT JOIN `ps_product_lang` `pl` ON 
+			p.`id_product` = pl.`id_product`
+			AND pl.`id_lang` = 1 AND pl.id_shop = cp.id_shop 
+LEFT JOIN `ps_category_lang` `cl` ON 
+			product_shop.`id_category_default` = cl.`id_category`
+			AND cl.`id_lang` = 1 AND cl.id_shop = cp.id_shop 
+LEFT JOIN `ps_product_supplier` `ps` ON ps.`id_product` = cp.`id_product` AND ps.`id_product_attribute` = cp.`id_product_attribute` AND ps.`id_supplier` = p.`id_supplier`
+ LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = cp.id_product AND stock.id_product_attribute = IFNULL(`cp`.id_product_attribute, 0) AND stock.id_shop = 1  AND stock.id_shop_group = 0  )
+LEFT JOIN `ps_product_attribute` `pa` ON pa.`id_product_attribute` = cp.`id_product_attribute`
+LEFT JOIN `ps_product_attribute_shop` `product_attribute_shop` ON (product_attribute_shop.`id_shop` = cp.`id_shop` AND product_attribute_shop.`id_product_attribute` = pa.`id_product_attribute`)
+LEFT JOIN `ps_image_shop` `image_shop` ON image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1
+LEFT JOIN `ps_image_lang` `il` ON il.`id_image` = image_shop.`id_image` AND il.`id_lang` = 1
+WHERE (cp.`id_cart` = 26) AND (p.`id_product` IS NOT NULL)
+ORDER BY cp.`date_add`, cp.`id_product`, cp.`id_product_attribute` ASC
+</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/05 - 21:02:59: Table 'prestashop-run.ps_product_shop' doesn't exist<br /><br /><pre>SELECT cp.`id_product_attribute`, cp.`id_product`, cp.`quantity` AS cart_quantity, cp.id_shop, pl.`name`, p.`is_virtual`,
+						pl.`description_short`, pl.`available_now`, pl.`available_later`, product_shop.`id_category_default`, p.`id_supplier`,
+						p.`id_manufacturer`, product_shop.`on_sale`, product_shop.`ecotax`, product_shop.`additional_shipping_cost`,
+						product_shop.`available_for_order`, product_shop.`price`, product_shop.`active`, product_shop.`unity`, product_shop.`unit_price_ratio`,
+						stock.`quantity` AS quantity_available, p.`width`, p.`height`, p.`depth`, stock.`out_of_stock`, p.`weight`,
+						p.`date_add`, p.`date_upd`, IFNULL(stock.quantity, 0) as quantity, pl.`link_rewrite`, cl.`link_rewrite` AS category,
+						CONCAT(LPAD(cp.`id_product`, 10, 0), LPAD(IFNULL(cp.`id_product_attribute`, 0), 10, 0), IFNULL(cp.`id_address_delivery`, 0)) AS unique_id, cp.id_address_delivery,
+						product_shop.advanced_stock_management, ps.product_supplier_reference supplier_reference,
+NULL AS customization_quantity, NULL AS id_customization,
+
+				product_attribute_shop.`price` AS price_attribute, product_attribute_shop.`ecotax` AS ecotax_attr,
+				IF (IFNULL(pa.`reference`, '') = '', p.`reference`, pa.`reference`) AS reference,
+				(p.`weight`+ pa.`weight`) weight_attribute,
+				IF (IFNULL(pa.`ean13`, '') = '', p.`ean13`, pa.`ean13`) AS ean13,
+				IF (IFNULL(pa.`upc`, '') = '', p.`upc`, pa.`upc`) AS upc,
+				IFNULL(product_attribute_shop.`minimal_quantity`, product_shop.`minimal_quantity`) as minimal_quantity,
+				IF(product_attribute_shop.wholesale_price > 0,  product_attribute_shop.wholesale_price, product_shop.`wholesale_price`) wholesale_price
+			,
+image_shop.`id_image` id_image, il.`legend`
+FROM `ps_cart_product` cp
+LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+INNER JOIN `ps_product_shop` product_shop ON (product_shop.`id_shop` = cp.`id_shop` AND product_shop.`id_product` = p.`id_product`)
+LEFT JOIN `ps_product_lang` `pl` ON 
+			p.`id_product` = pl.`id_product`
+			AND pl.`id_lang` = 1 AND pl.id_shop = cp.id_shop 
+LEFT JOIN `ps_category_lang` `cl` ON 
+			product_shop.`id_category_default` = cl.`id_category`
+			AND cl.`id_lang` = 1 AND cl.id_shop = cp.id_shop 
+LEFT JOIN `ps_product_supplier` `ps` ON ps.`id_product` = cp.`id_product` AND ps.`id_product_attribute` = cp.`id_product_attribute` AND ps.`id_supplier` = p.`id_supplier`
+ LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = cp.id_product AND stock.id_product_attribute = IFNULL(`cp`.id_product_attribute, 0) AND stock.id_shop = 1  AND stock.id_shop_group = 0  )
+LEFT JOIN `ps_product_attribute` `pa` ON pa.`id_product_attribute` = cp.`id_product_attribute`
+LEFT JOIN `ps_product_attribute_shop` `product_attribute_shop` ON (product_attribute_shop.`id_shop` = cp.`id_shop` AND product_attribute_shop.`id_product_attribute` = pa.`id_product_attribute`)
+LEFT JOIN `ps_image_shop` `image_shop` ON image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1
+LEFT JOIN `ps_image_lang` `il` ON il.`id_image` = image_shop.`id_image` AND il.`id_lang` = 1
+WHERE (cp.`id_cart` = 26) AND (p.`id_product` IS NOT NULL)
+ORDER BY cp.`date_add`, cp.`id_product`, cp.`id_product_attribute` ASC
+</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/05 - 21:03:01: Table 'prestashop-run.ps_product_shop' doesn't exist<br /><br /><pre>SELECT cp.`id_product_attribute`, cp.`id_product`, cp.`quantity` AS cart_quantity, cp.id_shop, pl.`name`, p.`is_virtual`,
+						pl.`description_short`, pl.`available_now`, pl.`available_later`, product_shop.`id_category_default`, p.`id_supplier`,
+						p.`id_manufacturer`, product_shop.`on_sale`, product_shop.`ecotax`, product_shop.`additional_shipping_cost`,
+						product_shop.`available_for_order`, product_shop.`price`, product_shop.`active`, product_shop.`unity`, product_shop.`unit_price_ratio`,
+						stock.`quantity` AS quantity_available, p.`width`, p.`height`, p.`depth`, stock.`out_of_stock`, p.`weight`,
+						p.`date_add`, p.`date_upd`, IFNULL(stock.quantity, 0) as quantity, pl.`link_rewrite`, cl.`link_rewrite` AS category,
+						CONCAT(LPAD(cp.`id_product`, 10, 0), LPAD(IFNULL(cp.`id_product_attribute`, 0), 10, 0), IFNULL(cp.`id_address_delivery`, 0)) AS unique_id, cp.id_address_delivery,
+						product_shop.advanced_stock_management, ps.product_supplier_reference supplier_reference,
+NULL AS customization_quantity, NULL AS id_customization,
+
+				product_attribute_shop.`price` AS price_attribute, product_attribute_shop.`ecotax` AS ecotax_attr,
+				IF (IFNULL(pa.`reference`, '') = '', p.`reference`, pa.`reference`) AS reference,
+				(p.`weight`+ pa.`weight`) weight_attribute,
+				IF (IFNULL(pa.`ean13`, '') = '', p.`ean13`, pa.`ean13`) AS ean13,
+				IF (IFNULL(pa.`upc`, '') = '', p.`upc`, pa.`upc`) AS upc,
+				IFNULL(product_attribute_shop.`minimal_quantity`, product_shop.`minimal_quantity`) as minimal_quantity,
+				IF(product_attribute_shop.wholesale_price > 0,  product_attribute_shop.wholesale_price, product_shop.`wholesale_price`) wholesale_price
+			,
+image_shop.`id_image` id_image, il.`legend`
+FROM `ps_cart_product` cp
+LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+INNER JOIN `ps_product_shop` product_shop ON (product_shop.`id_shop` = cp.`id_shop` AND product_shop.`id_product` = p.`id_product`)
+LEFT JOIN `ps_product_lang` `pl` ON 
+			p.`id_product` = pl.`id_product`
+			AND pl.`id_lang` = 1 AND pl.id_shop = cp.id_shop 
+LEFT JOIN `ps_category_lang` `cl` ON 
+			product_shop.`id_category_default` = cl.`id_category`
+			AND cl.`id_lang` = 1 AND cl.id_shop = cp.id_shop 
+LEFT JOIN `ps_product_supplier` `ps` ON ps.`id_product` = cp.`id_product` AND ps.`id_product_attribute` = cp.`id_product_attribute` AND ps.`id_supplier` = p.`id_supplier`
+ LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = cp.id_product AND stock.id_product_attribute = IFNULL(`cp`.id_product_attribute, 0) AND stock.id_shop = 1  AND stock.id_shop_group = 0  )
+LEFT JOIN `ps_product_attribute` `pa` ON pa.`id_product_attribute` = cp.`id_product_attribute`
+LEFT JOIN `ps_product_attribute_shop` `product_attribute_shop` ON (product_attribute_shop.`id_shop` = cp.`id_shop` AND product_attribute_shop.`id_product_attribute` = pa.`id_product_attribute`)
+LEFT JOIN `ps_image_shop` `image_shop` ON image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1
+LEFT JOIN `ps_image_lang` `il` ON il.`id_image` = image_shop.`id_image` AND il.`id_lang` = 1
+WHERE (cp.`id_cart` = 26) AND (p.`id_product` IS NOT NULL)
+ORDER BY cp.`date_add`, cp.`id_product`, cp.`id_product_attribute` ASC
+</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/05 - 21:03:02: Table 'prestashop-run.ps_product_shop' doesn't exist<br /><br /><pre>SELECT cp.`id_product_attribute`, cp.`id_product`, cp.`quantity` AS cart_quantity, cp.id_shop, pl.`name`, p.`is_virtual`,
+						pl.`description_short`, pl.`available_now`, pl.`available_later`, product_shop.`id_category_default`, p.`id_supplier`,
+						p.`id_manufacturer`, product_shop.`on_sale`, product_shop.`ecotax`, product_shop.`additional_shipping_cost`,
+						product_shop.`available_for_order`, product_shop.`price`, product_shop.`active`, product_shop.`unity`, product_shop.`unit_price_ratio`,
+						stock.`quantity` AS quantity_available, p.`width`, p.`height`, p.`depth`, stock.`out_of_stock`, p.`weight`,
+						p.`date_add`, p.`date_upd`, IFNULL(stock.quantity, 0) as quantity, pl.`link_rewrite`, cl.`link_rewrite` AS category,
+						CONCAT(LPAD(cp.`id_product`, 10, 0), LPAD(IFNULL(cp.`id_product_attribute`, 0), 10, 0), IFNULL(cp.`id_address_delivery`, 0)) AS unique_id, cp.id_address_delivery,
+						product_shop.advanced_stock_management, ps.product_supplier_reference supplier_reference,
+NULL AS customization_quantity, NULL AS id_customization,
+
+				product_attribute_shop.`price` AS price_attribute, product_attribute_shop.`ecotax` AS ecotax_attr,
+				IF (IFNULL(pa.`reference`, '') = '', p.`reference`, pa.`reference`) AS reference,
+				(p.`weight`+ pa.`weight`) weight_attribute,
+				IF (IFNULL(pa.`ean13`, '') = '', p.`ean13`, pa.`ean13`) AS ean13,
+				IF (IFNULL(pa.`upc`, '') = '', p.`upc`, pa.`upc`) AS upc,
+				IFNULL(product_attribute_shop.`minimal_quantity`, product_shop.`minimal_quantity`) as minimal_quantity,
+				IF(product_attribute_shop.wholesale_price > 0,  product_attribute_shop.wholesale_price, product_shop.`wholesale_price`) wholesale_price
+			,
+image_shop.`id_image` id_image, il.`legend`
+FROM `ps_cart_product` cp
+LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+INNER JOIN `ps_product_shop` product_shop ON (product_shop.`id_shop` = cp.`id_shop` AND product_shop.`id_product` = p.`id_product`)
+LEFT JOIN `ps_product_lang` `pl` ON 
+			p.`id_product` = pl.`id_product`
+			AND pl.`id_lang` = 1 AND pl.id_shop = cp.id_shop 
+LEFT JOIN `ps_category_lang` `cl` ON 
+			product_shop.`id_category_default` = cl.`id_category`
+			AND cl.`id_lang` = 1 AND cl.id_shop = cp.id_shop 
+LEFT JOIN `ps_product_supplier` `ps` ON ps.`id_product` = cp.`id_product` AND ps.`id_product_attribute` = cp.`id_product_attribute` AND ps.`id_supplier` = p.`id_supplier`
+ LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = cp.id_product AND stock.id_product_attribute = IFNULL(`cp`.id_product_attribute, 0) AND stock.id_shop = 1  AND stock.id_shop_group = 0  )
+LEFT JOIN `ps_product_attribute` `pa` ON pa.`id_product_attribute` = cp.`id_product_attribute`
+LEFT JOIN `ps_product_attribute_shop` `product_attribute_shop` ON (product_attribute_shop.`id_shop` = cp.`id_shop` AND product_attribute_shop.`id_product_attribute` = pa.`id_product_attribute`)
+LEFT JOIN `ps_image_shop` `image_shop` ON image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1
+LEFT JOIN `ps_image_lang` `il` ON il.`id_image` = image_shop.`id_image` AND il.`id_lang` = 1
+WHERE (cp.`id_cart` = 26) AND (p.`id_product` IS NOT NULL)
+ORDER BY cp.`date_add`, cp.`id_product`, cp.`id_product_attribute` ASC
+</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/05 - 21:03:03: Table 'prestashop-run.ps_product_shop' doesn't exist<br /><br /><pre>SELECT cp.`id_product_attribute`, cp.`id_product`, cp.`quantity` AS cart_quantity, cp.id_shop, pl.`name`, p.`is_virtual`,
+						pl.`description_short`, pl.`available_now`, pl.`available_later`, product_shop.`id_category_default`, p.`id_supplier`,
+						p.`id_manufacturer`, product_shop.`on_sale`, product_shop.`ecotax`, product_shop.`additional_shipping_cost`,
+						product_shop.`available_for_order`, product_shop.`price`, product_shop.`active`, product_shop.`unity`, product_shop.`unit_price_ratio`,
+						stock.`quantity` AS quantity_available, p.`width`, p.`height`, p.`depth`, stock.`out_of_stock`, p.`weight`,
+						p.`date_add`, p.`date_upd`, IFNULL(stock.quantity, 0) as quantity, pl.`link_rewrite`, cl.`link_rewrite` AS category,
+						CONCAT(LPAD(cp.`id_product`, 10, 0), LPAD(IFNULL(cp.`id_product_attribute`, 0), 10, 0), IFNULL(cp.`id_address_delivery`, 0)) AS unique_id, cp.id_address_delivery,
+						product_shop.advanced_stock_management, ps.product_supplier_reference supplier_reference,
+NULL AS customization_quantity, NULL AS id_customization,
+
+				product_attribute_shop.`price` AS price_attribute, product_attribute_shop.`ecotax` AS ecotax_attr,
+				IF (IFNULL(pa.`reference`, '') = '', p.`reference`, pa.`reference`) AS reference,
+				(p.`weight`+ pa.`weight`) weight_attribute,
+				IF (IFNULL(pa.`ean13`, '') = '', p.`ean13`, pa.`ean13`) AS ean13,
+				IF (IFNULL(pa.`upc`, '') = '', p.`upc`, pa.`upc`) AS upc,
+				IFNULL(product_attribute_shop.`minimal_quantity`, product_shop.`minimal_quantity`) as minimal_quantity,
+				IF(product_attribute_shop.wholesale_price > 0,  product_attribute_shop.wholesale_price, product_shop.`wholesale_price`) wholesale_price
+			,
+image_shop.`id_image` id_image, il.`legend`
+FROM `ps_cart_product` cp
+LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+INNER JOIN `ps_product_shop` product_shop ON (product_shop.`id_shop` = cp.`id_shop` AND product_shop.`id_product` = p.`id_product`)
+LEFT JOIN `ps_product_lang` `pl` ON 
+			p.`id_product` = pl.`id_product`
+			AND pl.`id_lang` = 1 AND pl.id_shop = cp.id_shop 
+LEFT JOIN `ps_category_lang` `cl` ON 
+			product_shop.`id_category_default` = cl.`id_category`
+			AND cl.`id_lang` = 1 AND cl.id_shop = cp.id_shop 
+LEFT JOIN `ps_product_supplier` `ps` ON ps.`id_product` = cp.`id_product` AND ps.`id_product_attribute` = cp.`id_product_attribute` AND ps.`id_supplier` = p.`id_supplier`
+ LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = cp.id_product AND stock.id_product_attribute = IFNULL(`cp`.id_product_attribute, 0) AND stock.id_shop = 1  AND stock.id_shop_group = 0  )
+LEFT JOIN `ps_product_attribute` `pa` ON pa.`id_product_attribute` = cp.`id_product_attribute`
+LEFT JOIN `ps_product_attribute_shop` `product_attribute_shop` ON (product_attribute_shop.`id_shop` = cp.`id_shop` AND product_attribute_shop.`id_product_attribute` = pa.`id_product_attribute`)
+LEFT JOIN `ps_image_shop` `image_shop` ON image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1
+LEFT JOIN `ps_image_lang` `il` ON il.`id_image` = image_shop.`id_image` AND il.`id_lang` = 1
+WHERE (cp.`id_cart` = 26) AND (p.`id_product` IS NOT NULL)
+ORDER BY cp.`date_add`, cp.`id_product`, cp.`id_product_attribute` ASC
+</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/05 - 21:03:05: Table 'prestashop-run.ps_product_shop' doesn't exist<br /><br /><pre>SELECT cp.`id_product_attribute`, cp.`id_product`, cp.`quantity` AS cart_quantity, cp.id_shop, pl.`name`, p.`is_virtual`,
+						pl.`description_short`, pl.`available_now`, pl.`available_later`, product_shop.`id_category_default`, p.`id_supplier`,
+						p.`id_manufacturer`, product_shop.`on_sale`, product_shop.`ecotax`, product_shop.`additional_shipping_cost`,
+						product_shop.`available_for_order`, product_shop.`price`, product_shop.`active`, product_shop.`unity`, product_shop.`unit_price_ratio`,
+						stock.`quantity` AS quantity_available, p.`width`, p.`height`, p.`depth`, stock.`out_of_stock`, p.`weight`,
+						p.`date_add`, p.`date_upd`, IFNULL(stock.quantity, 0) as quantity, pl.`link_rewrite`, cl.`link_rewrite` AS category,
+						CONCAT(LPAD(cp.`id_product`, 10, 0), LPAD(IFNULL(cp.`id_product_attribute`, 0), 10, 0), IFNULL(cp.`id_address_delivery`, 0)) AS unique_id, cp.id_address_delivery,
+						product_shop.advanced_stock_management, ps.product_supplier_reference supplier_reference,
+NULL AS customization_quantity, NULL AS id_customization,
+
+				product_attribute_shop.`price` AS price_attribute, product_attribute_shop.`ecotax` AS ecotax_attr,
+				IF (IFNULL(pa.`reference`, '') = '', p.`reference`, pa.`reference`) AS reference,
+				(p.`weight`+ pa.`weight`) weight_attribute,
+				IF (IFNULL(pa.`ean13`, '') = '', p.`ean13`, pa.`ean13`) AS ean13,
+				IF (IFNULL(pa.`upc`, '') = '', p.`upc`, pa.`upc`) AS upc,
+				IFNULL(product_attribute_shop.`minimal_quantity`, product_shop.`minimal_quantity`) as minimal_quantity,
+				IF(product_attribute_shop.wholesale_price > 0,  product_attribute_shop.wholesale_price, product_shop.`wholesale_price`) wholesale_price
+			,
+image_shop.`id_image` id_image, il.`legend`
+FROM `ps_cart_product` cp
+LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+INNER JOIN `ps_product_shop` product_shop ON (product_shop.`id_shop` = cp.`id_shop` AND product_shop.`id_product` = p.`id_product`)
+LEFT JOIN `ps_product_lang` `pl` ON 
+			p.`id_product` = pl.`id_product`
+			AND pl.`id_lang` = 1 AND pl.id_shop = cp.id_shop 
+LEFT JOIN `ps_category_lang` `cl` ON 
+			product_shop.`id_category_default` = cl.`id_category`
+			AND cl.`id_lang` = 1 AND cl.id_shop = cp.id_shop 
+LEFT JOIN `ps_product_supplier` `ps` ON ps.`id_product` = cp.`id_product` AND ps.`id_product_attribute` = cp.`id_product_attribute` AND ps.`id_supplier` = p.`id_supplier`
+ LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = cp.id_product AND stock.id_product_attribute = IFNULL(`cp`.id_product_attribute, 0) AND stock.id_shop = 1  AND stock.id_shop_group = 0  )
+LEFT JOIN `ps_product_attribute` `pa` ON pa.`id_product_attribute` = cp.`id_product_attribute`
+LEFT JOIN `ps_product_attribute_shop` `product_attribute_shop` ON (product_attribute_shop.`id_shop` = cp.`id_shop` AND product_attribute_shop.`id_product_attribute` = pa.`id_product_attribute`)
+LEFT JOIN `ps_image_shop` `image_shop` ON image_shop.`id_product` = p.`id_product` AND image_shop.cover=1 AND image_shop.id_shop=1
+LEFT JOIN `ps_image_lang` `il` ON il.`id_image` = image_shop.`id_image` AND il.`id_lang` = 1
+WHERE (cp.`id_cart` = 26) AND (p.`id_product` IS NOT NULL)
+ORDER BY cp.`date_add`, cp.`id_product`, cp.`id_product_attribute` ASC
+</pre> at line 791 in file classes/db/Db.php

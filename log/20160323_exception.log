@@ -1,0 +1,8 @@
+*ERROR* 	2016/03/23 - 01:26:30: Db->executeS() must be used only with select, show, explain or describe queries at line 638 in file classes/db/Db.php
+*ERROR* 	2016/03/23 - 01:26:50: Db->executeS() must be used only with select, show, explain or describe queries at line 638 in file classes/db/Db.php
+*ERROR* 	2016/03/23 - 01:27:18: Db->executeS() must be used only with select, show, explain or describe queries at line 638 in file classes/db/Db.php
+*ERROR* 	2016/03/23 - 01:28:20: Db->executeS() must be used only with select, show, explain or describe queries at line 638 in file classes/db/Db.php
+*ERROR* 	2016/03/23 - 01:29:10: Db->executeS() must be used only with select, show, explain or describe queries at line 638 in file classes/db/Db.php
+*ERROR* 	2016/03/23 - 01:32:08: Db->executeS() must be used only with select, show, explain or describe queries at line 638 in file classes/db/Db.php
+*ERROR* 	2016/03/23 - 01:55:17: Db->executeS() must be used only with select, show, explain or describe queries at line 638 in file classes/db/Db.php
+*ERROR* 	2016/03/23 - 02:37:00: Db->executeS() must be used only with select, show, explain or describe queries at line 638 in file classes/db/Db.php

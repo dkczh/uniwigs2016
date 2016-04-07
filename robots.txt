@@ -1,0 +1,211 @@
+User-agent: *
+
+# 130905 add
+Disallow: /new-arrivals
+Disallow: /tags-index
+
+
+# Directories
+Disallow: /config/
+
+
+Disallow: /catalog/
+Disallow: /light-weight-collection.html
+Disallow: /beyonce-wig.html
+Disallow: /jaylin-deep-wave-12-indian-remy-human-hair-full-lace-wig-1.html
+Disallow: /candy-wig.html
+Disallow: /jennifer-wig.html
+Disallow: /maggie-wig.html
+Disallow: /brandi-wig.html
+Disallow: /beloved-wig.html
+Disallow: /lana-wig.html
+Disallow: /glaze-wig.html
+Disallow: /dolly-wig.html
+Disallow: /kate-wig.html
+Disallow: /brittany-wig.html
+Disallow: /beverly-wig.html
+Disallow: /shannon-wig.html
+Disallow: /rina-wig-1.html
+Disallow: /brenda-wig.html
+Disallow: /celebrity-wigs.html
+Disallow: /silk-top-lace-wigs.html
+Disallow: /18-clip-in-extensions-piano-colors-1.html
+Disallow: /blair-wig.html
+Disallow: /16-tape-in-extensions-pinao-colors.html
+Disallow: /wigs/departments/african-american-wigs.html
+Disallow: /14-clip-in-extensions.html
+Disallow: /customer/
+Disallow: /clip-in-color-strip-snow-white.html
+Disallow: /abriella-kinky-yaki-straight-full-lace-wig.html
+Disallow: /16-tape-hair-extensions.html
+Disallow: /custom_wigs.html/
+Disallow: /aimee-wig.html
+Disallow: /jenna-wig.html
+Disallow: /lace-wigs/shopby/
+Disallow: /2013-new-arrival/shopby/
+Disallow: /hair-pieces/departments/shopby/
+Disallow: /monofilament-wigs/shopby/
+Disallow: /glueless-lace-wigs/shopby/
+Disallow: /african-american-wigs/shopby/
+Disallow: /synthetic-mono-wigs.html
+Disallow: /wigs/departments.html
+Disallow: /medical-wigs/shopby/
+Disallow: /stock-clearance-sale/shopby/
+Disallow: /2013-new-lace-wigs.html?dir=asc&order=name
+Disallow: /synthetic-lace-front-wigs.html
+Disallow: /lace-front-wigs/shopby/
+Disallow: /synthetic-wigs/color/red.html?dir=asc&limit=28&order=price
+Disallow: /2013-new-arrival/emerald-synthetic-capless-wig.html
+Disallow: /julia-wig.html
+Disallow: /synthetic-mono-wigs.html?dir=asc&haircolor=21&limit=21&order=haircolor
+Disallow: /hair-extensions/hair-texture.html
+Disallow: /best-lace-wigs.html
+Disallow: /light-weight-collection/shopby/
+Disallow: /hair-pieces/departments/front-hairpieces/shopby/
+Disallow: /hair-pieces/shopby/
+Disallow: /hair-extensions/departments/clip-in-hair-extensions.html
+Disallow: /hair-extensions/departments/tape-hair-extensions.html
+Disallow: /synthetic-wigs/heat-friendly-synthetic-wigs/shopby/
+Disallow: /hair-pieces/hair-texture/shopby/
+Disallow: /synthetic-wigs/costume-synthetic-wigs/shopby/
+Disallow: /hair-extensions/shopby/
+Disallow: /synthetic-wigs/shopby/
+Disallow: /hair-extensions/clip-in-hair-extensions/shopby/
+Disallow: /human-hair-wigs/african-american-human-hair-wigs/shopby/
+Disallow: /human-hair-wigs/medical-human-hair-wigs/shopby/
+Disallow: /care-products/shopby/
+Disallow: /human-hair-wigs/shopby/
+Disallow: /synthetic-wigs/medical-synthetic-wigs/shopby/
+Disallow: /hair-extensions/hair-texture/straight/shopby/
+Disallow: /trend-spotter-sale.html
+Disallow: /care-products/hair-tools/shopby/
+Disallow: /hair-pieces/departments/front-hairpieces.html?length=15
+Disallow: /synthetic-wigs/african-american-synthetic-wigs/shopby/
+Disallow: /customer/account/forgotpassword/
+Disallow: /hair-extensions/human-hair-extensions/shopby/
+
+
+
+# 130828 add
+Disallow: /milan-wig.html
+Disallow: /lace-front-wigs.html
+Disallow: /miracle-wig.html
+Disallow: /meg-wig.html
+Disallow: /nicolette-wig.html
+Disallow: /presley-wig.html
+Disallow: /clip-in-color-strip-blond-1.html
+Disallow: /wigs.html
+Disallow: /2012-new-arrival/shopby/
+Disallow: /black-women-wigs.html
+Disallow: /sales/guest/form/
+Disallow: /hair-pieces/hair-texture/straight/shopby/
+Disallow: /hair-pieces/departments/bangs/shopby/
+Disallow: /hair-pieces/hair-texture.html
+Disallow: /synthetic-wigs/color/blonde/shopby/
+Disallow: /hair-pieces/departments/ponytails.html
+Disallow: /hair-pieces/departments.html
+Disallow: /hair-pieces/departments/front-hairpieces.html
+Disallow: /care-products.html
+Disallow: /hair-pieces/departments/bangs.html
+Disallow: /trend-spotter-sale.html
+Disallow: /404$
+Disallow: /404.php
+
+
+# 130902 add
+Disallow: /best_selling.html
+Disallow: /medical-wigs/
+Disallow: /review/product/
+Disallow: /synthetic-wigs/cap-construction/capless/shopby/
+Disallow: /synthetic-wigs/length/shopby/
+Disallow: /synthetic-wigs/length/short/shopby/
+
+
+
+
+# 130910 add
+
+Disallow: /kelly-rowland-medium-curly-black-indian-remy-human-hair-lace-front-wig-lcl004.html
+Disallow: /wigs/cap-construction/full-lace.html
+Disallow: /griffin-wig.html
+Disallow: /eva-wig.html
+Disallow: /jade-wig.html
+Disallow: /nova-wig.html
+Disallow: /sarah-wig.html
+Disallow: /suzi-wig.html
+Disallow: /kimber-loose-curl-full-lace-wig.html
+Disallow: /rina-wig.html
+Disallow: /ella-wig.html
+Disallow: /mariah-wig.html
+Disallow: /dance-wig.html
+Disallow: /nicole-wig.html
+Disallow: /full-lace-wigs.html
+Disallow: /wigs/departments/jewish-wigs.html
+Disallow: /synthetic-lace-wigs.html
+Disallow: /jazz-wet-wavy-full-lace-wig.html
+Disallow: /karis-silky-straight-full-lace-wig.html
+Disallow: /deneisha-afro-curl-full-lace-wig.html
+Disallow: /zola-body-wave-full-lace-wig.html
+Disallow: /wigs/cap-construction/full-lace.html
+
+
+# 130912 add
+
+Disallow: /18-single-clip-in-extensions-fancy-colors.html
+Disallow: /synthetic-wigs/length/mid-length/shopby
+Disallow: /synthetic-wigs/style/wavy/shopby
+Disallow: /human-hair-wigs/cap-construction/skin-top/shopby
+Disallow: /synthetic-wigs/cap-construction/shopby
+Disallow: /synthetic-wigs/color/shopby
+Disallow: /human-hair-wigs/cap-construction/monofilament/shopby
+Disallow: /synthetic-wigs/color/brunette/shopby
+Disallow: /human-hair-wigs/cap-construction/lace-front/shopby
+Disallow: /human-hair-wigs/cap-construction/lace-front/shopby
+Disallow: /synthetic-wigs/length/long/shopby
+Disallow: /2013-new-lace-wigs.html
+Disallow: /20-clip-in-extensions-piano-colors.html
+Disallow: /synthetic-wigs/color/red/shopby
+Disallow: /synthetic-wigs/cap-construction/monofilament/shopby
+Disallow: /2012-new-arrival.html
+Disallow: /2012-new-arrival.html
+Disallow: /hair-extensions/hair-texture/straight.html
+Disallow: /hair-extensions/clip-in-hair-extensions
+
+
+
+
+# Files
+Disallow: /addresses.php
+Disallow: /address.php
+Disallow: /authentication.php
+Disallow: /signin.php
+Disallow: /signup.php
+Disallow: /cart.php
+Disallow: /discount.php
+Disallow: /footer.php
+Disallow: /get-file.php
+Disallow: /header.php
+Disallow: /history.php
+Disallow: /identity.php
+Disallow: /images.inc.php
+Disallow: /init.php
+Disallow: /my-account.php
+Disallow: /order.php
+Disallow: /order-slip.php
+Disallow: /order-detail.php
+Disallow: /order-follow.php
+Disallow: /order-return.php
+Disallow: /order-confirmation.php
+Disallow: /pagination.php
+Disallow: /password.php
+Disallow: /pdf-invoice.php
+Disallow: /pdf-order-return.php
+Disallow: /pdf-order-slip.php
+Disallow: /product-sort.php
+Disallow: /search.php
+Disallow: /statistics.php
+Disallow: /products_unzip.php
+Disallow: /products_upload_batch.php
+
+
+# Sitemap

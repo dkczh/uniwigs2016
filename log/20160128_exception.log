@@ -1,0 +1,129 @@
+*ERROR* 	2016/01/28 - 02:08:11: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:08:12: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:31:06: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:33:12: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:34:12: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:34:13: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:34:13: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:34:13: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:37:01: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/01/28 - 02:51:46: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT DISTINCT c.id_country, cl.`name`
+			FROM `ps_orders` o
+			
+			INNER JOIN `ps_address` a ON a.id_address = o.id_address_delivery
+			INNER JOIN `ps_country` c ON a.id_country = c.id_country
+			INNER JOIN `ps_country_lang` cl ON (c.`id_country` = cl.`id_country` AND cl.`id_lang` = 1)
+			ORDER BY cl.name ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:51:47: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT `id_country`, `id_state`, `vat_number`, `postcode` FROM `ps_address`
+			WHERE `id_address` = 29621 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:51:49: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT DISTINCT c.id_country, cl.`name`
+			FROM `ps_orders` o
+			
+			INNER JOIN `ps_address` a ON a.id_address = o.id_address_delivery
+			INNER JOIN `ps_country` c ON a.id_country = c.id_country
+			INNER JOIN `ps_country_lang` cl ON (c.`id_country` = cl.`id_country` AND cl.`id_lang` = 1)
+			ORDER BY cl.name ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:51:50: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT `id_country`, `id_state`, `vat_number`, `postcode` FROM `ps_address`
+			WHERE `id_address` = 29621 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:52:05: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT DISTINCT c.id_country, cl.`name`
+			FROM `ps_orders` o
+			
+			INNER JOIN `ps_address` a ON a.id_address = o.id_address_delivery
+			INNER JOIN `ps_country` c ON a.id_country = c.id_country
+			INNER JOIN `ps_country_lang` cl ON (c.`id_country` = cl.`id_country` AND cl.`id_lang` = 1)
+			ORDER BY cl.name ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:52:05: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT `id_country`, `id_state`, `vat_number`, `postcode` FROM `ps_address`
+			WHERE `id_address` = 29621 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:52:38: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT DISTINCT c.id_country, cl.`name`
+			FROM `ps_orders` o
+			
+			INNER JOIN `ps_address` a ON a.id_address = o.id_address_delivery
+			INNER JOIN `ps_country` c ON a.id_country = c.id_country
+			INNER JOIN `ps_country_lang` cl ON (c.`id_country` = cl.`id_country` AND cl.`id_lang` = 1)
+			ORDER BY cl.name ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:52:39: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT `id_country`, `id_state`, `vat_number`, `postcode` FROM `ps_address`
+			WHERE `id_address` = 29621 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:53:09: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 119827 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:53:10: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 119827 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:53:30: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 119827 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:53:31: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 119827 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:55:03: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT DISTINCT c.id_country, cl.`name`
+			FROM `ps_orders` o
+			
+			INNER JOIN `ps_address` a ON a.id_address = o.id_address_delivery
+			INNER JOIN `ps_country` c ON a.id_country = c.id_country
+			INNER JOIN `ps_country_lang` cl ON (c.`id_country` = cl.`id_country` AND cl.`id_lang` = 1)
+			ORDER BY cl.name ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:55:04: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+			SELECT `id_country`, `id_state`, `vat_number`, `postcode` FROM `ps_address`
+			WHERE `id_address` = 29621 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:57:47: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 128168 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:57:47: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 128168 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:57:52: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 128168 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:57:52: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 128168 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:57:53: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 128168 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:57:54: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 128168 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:58:51: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 102318 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 02:58:52: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 102318 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 03:00:04: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 119827 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 03:00:04: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 119827 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 03:00:30: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 119827 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 03:00:30: Table 'uniwigs2016.ps_address' doesn't exist<br /><br /><pre>
+				SELECT `id_address`
+				FROM `ps_address`
+				WHERE `id_customer` = 119827 AND `deleted` = 0 AND `active` = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/01/28 - 03:15:11: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php

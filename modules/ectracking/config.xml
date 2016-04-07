@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>ectracking</name>
+	<displayName><![CDATA[EC Tracking]]></displayName>
+	<version><![CDATA[1.0]]></version>
+	<description><![CDATA[variety of e-commerce tracking]]></description>
+	<author><![CDATA[Bruno电商技术&trade;]]></author>
+	<tab><![CDATA[ectracking]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to uninstall? You will lose all the data related to this module.]]></confirmUninstall>
+	<is_configurable>0</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,338 @@
+{literal}
+<style>
+.nov-sale-banner{
+	width:100%;
+	height:792px;
+	background: url("/themes/uniwigs2014/event/2015-christmas/image/banner1216.png") no-repeat center top;
+}
+
+.nov-sale-product-tab{z-index: 10;}
+.nov-sale-product-tab ul{overflow:hidden;padding-bottom: 10px;margin:0 auto;background-color: #fff;}
+.nov-sale-product-tab .hr{border-bottom: 1px solid #9d0508;margin-top:-60px;}
+@media (min-width: 768px) {
+	.nov-sale-product-tab ul{width:100%;}
+	.nov-sale-banner{
+		background-size: 100% 380px;
+		height:380px;
+	}
+}
+@media (min-width: 1200px) {
+	.nov-sale-product-tab ul{width:1140px;}
+	.nov-sale-banner{
+		background-size: 1600px 792px;
+		height:792px;
+	}
+}
+.nov-sale-product-tab li{float:left;width:25%;text-align: center}
+.nov-sale-product-tab li a{
+	display: inline-block;
+    text-align: center;
+    width:182px;
+    height:70px;
+    position: relative;}
+.nov-sale-product-tab li a:before{
+	border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    background-color: #999;
+    content: "";
+    position: absolute;
+    left: 40%;
+}
+.nov-sale-product-tab li a:hover:before,
+.nov-sale-product-tab li.uk-active a:before{
+	background-color: #9d0508;
+	color:#fff;
+}
+.nov-sale-product-tab.uk-active ul{width:100%;box-shadow: 0 0 6px rgba(0, 0, 0, 0.19);}
+.nov-sale-product-tab li.uk-active a:after,
+.nov-sale-product-tab li a:hover:after{
+    position: absolute;
+    content: '';
+    background: url("/themes/uniwigs2014/event/2015-christmas/image/snowflake.png") no-repeat;
+    width:27px;
+    height:27px;
+    top: 5px;
+    left: 43%;
+}
+.nov-sale-product-tab li a span{
+	margin-top: 47px;
+	display: inline-block;
+	color:#999;
+	font-size:1.4em;
+	font-weight: bold;
+}
+
+.nov-sale-product-tab li a:hover span,
+.nov-sale-product-tab li.uk-active a span{
+	color:#9d0508;
+}
+.uk-modal-dialog{width:540px;height:325px;padding: 50px;}
+.uk-modal .coupon-code{border:2px dashed #111;padding:20px 120px;font-size:60px;}
+.uk-modal p{font-size:18px;text-transform: uppercase;}
+.uk-modal p span{font-size:14px}
+
+</style>
+{/literal}
+
+<div id="nov-sale">
+	<div class="nov-sale-banner"></div>
+	<div class="nov-sale-product-tab uk-margin-bottom" data-uk-sticky>
+		<ul data-uk-scrollspy-nav="{literal}{closest:'li', smoothscroll:true}{/literal}">
+			<li>
+				<a href="#human-hair" data-uk-smooth-scroll><span>HUMAN HAIR WIGS</span></a>
+				
+			</li>
+			<li>
+				<a href="#synthetic" data-uk-smooth-scroll><span>SYNTHETIC WIGS</span></a>
+			</li>
+			<li>
+				<a href="#hair-extensions" data-uk-smooth-scroll><span>HAIR EXTENSIONS</span></a>
+			</li>
+			<li>
+				<a href="#hair-pieces" data-uk-smooth-scroll><span>HAIR PIECES</span></a>
+			</li>
+		</ul>
+		<div class="hr"></div>
+	</div>
+	<div class="nov-sale-product container">
+		<section id="human-hair" class="product-list uk-margin-top">
+			<div class="lay-banner">
+				<img src="/themes/uniwigs2014/event/2015-christmas/image/lay1.jpg" alt="" class="img-responsive">
+			</div>
+			<ul class="row" data-uk-grid-match>
+				{foreach from=$products.0 key=key item=product}
+				<li class="col-md-3 col-sm-4">
+					<div class="pr-qie" id="pr-qie">
+						<div class="pr-img">
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+								title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								class="" itemprop="url"> <img
+								src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'vnormal')}"
+								alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								itemprop="image" class="img-responsive"/>
+							</a>
+						</div>
+					</div>
+					<div class="pr-con text-center">
+						<p class="pr-name uk-margin-small-top">
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}" itemprop="name">
+							{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+						</p>
+						<div class="reviews-like">
+							<p class="{if $product.review_summary.count<=0}hide{/if}">
+								<a href="javascript:void(0);" class="product-rating-link" title="{if $product.review_summary.rating>0}{$product.review_summary.rating}/5{/if}">
+										<span class="star" style="width:{$product.review_summary.rating/5*100}%"></span>
+								</a>
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}#product_reviews" rel="nofollow" class="product-rating-count">
+									({$product.review_summary.count}) 
+								</a>
+							</p>
+							<p>
+								<span class="like link_like_product" id="category_dolike_{$product.id_product}"
+									onclick="javascript:like('','{$product.id_product}','category')"
+									product_sku="{$product.reference}">
+									<span class="like-number-container{if $product.like_count<=0} hide{/if}">
+										<span class="like-number text-muted" id="category_likecount_{$product.id_product}">{$product.like_count}</span>
+									</span>
+								</span>
+							</p>
+						</div>
+						<p class="product-list-price">
+							<span class="now-price" itemprop="price">
+								{convertPrice price=$product.show_price_list.0.value}
+							</span>
+							
+						</p>
+				
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						
+					</div>
+				</li>
+				{/foreach}
+			</ul>
+		</section>
+		<section id="synthetic" class="product-list uk-margin-top">
+			<div class="lay-banner">
+				<img src="/themes/uniwigs2014/event/2015-christmas/image/lay2.jpg" alt="" class="img-responsive">
+			</div>
+			<ul class="row" data-uk-grid-match>
+				{foreach from=$products.1 key=key item=product}
+				<li class="col-md-3 col-sm-4">
+					<div class="pr-qie" id="pr-qie">
+						<div class="pr-img">
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+								title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								class="" itemprop="url"> <img
+								src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'vnormal')}"
+								alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								itemprop="image" class="img-responsive"/>
+							</a>
+						</div>
+					</div>
+					<div class="pr-con text-center">
+						<p class="pr-name uk-margin-small-top">
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}" itemprop="name">
+							{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+						</p>
+						<div class="reviews-like">
+							<p class="{if $product.review_summary.count<=0}hide{/if}">
+								<a href="javascript:void(0);" class="product-rating-link" title="{if $product.review_summary.rating>0}{$product.review_summary.rating}/5{/if}">
+										<span class="star" style="width:{$product.review_summary.rating/5*100}%"></span>
+								</a>
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}#product_reviews" rel="nofollow" class="product-rating-count">
+									({$product.review_summary.count}) 
+								</a>
+							</p>
+							<p>
+								<span class="like link_like_product" id="category_dolike_{$product.id_product}"
+									onclick="javascript:like('','{$product.id_product}','category')"
+									product_sku="{$product.reference}">
+									<span class="like-number-container{if $product.like_count<=0} hide{/if}">
+										<span class="like-number text-muted" id="category_likecount_{$product.id_product}">{$product.like_count}</span>
+									</span>
+								</span>
+							</p>
+						</div>
+						<p class="product-list-price">
+							<span class="now-price" itemprop="price">
+								{convertPrice price=$product.show_price_list.0.value}
+							</span>
+							
+						</p>
+				
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						
+					</div>
+				</li>
+				{/foreach}
+			</ul>
+		</section>
+		<section id="hair-extensions" class="product-list uk-margin-top">
+			<div class="lay-banner">
+				<img src="/themes/uniwigs2014/event/2015-christmas/image/lay3.jpg" alt="" class="img-responsive">
+			</div>
+			<ul class="row" data-uk-grid-match>
+				{foreach from=$products.2 key=key item=product}
+				<li class="col-md-3 col-sm-4">
+					<div class="pr-qie" id="pr-qie">
+						<div class="pr-img">
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+								title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								class="" itemprop="url"> <img
+								src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'vnormal')}"
+								alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								itemprop="image" class="img-responsive"/>
+							</a>
+						</div>
+					</div>
+					<div class="pr-con text-center">
+						<p class="pr-name uk-margin-small-top">
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}" itemprop="name">
+							{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+						</p>
+						<div class="reviews-like">
+							<p class="{if $product.review_summary.count<=0}hide{/if}">
+								<a href="javascript:void(0);" class="product-rating-link" title="{if $product.review_summary.rating>0}{$product.review_summary.rating}/5{/if}">
+										<span class="star" style="width:{$product.review_summary.rating/5*100}%"></span>
+								</a>
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}#product_reviews" rel="nofollow" class="product-rating-count">
+									({$product.review_summary.count}) 
+								</a>
+							</p>
+							<p>
+								<span class="like link_like_product" id="category_dolike_{$product.id_product}"
+									onclick="javascript:like('','{$product.id_product}','category')"
+									product_sku="{$product.reference}">
+									<span class="like-number-container{if $product.like_count<=0} hide{/if}">
+										<span class="like-number text-muted" id="category_likecount_{$product.id_product}">{$product.like_count}</span>
+									</span>
+								</span>
+							</p>
+						</div>
+						<p class="product-list-price">
+							<span class="now-price" itemprop="price">
+								{convertPrice price=$product.show_price_list.0.value}
+							</span>
+							
+						</p>
+				
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						
+					</div>
+				</li>
+				{/foreach}
+			</ul>
+		</section>
+		<section id="hair-pieces" class="product-list uk-margin-top">
+			<div class="lay-banner">
+				<img src="/themes/uniwigs2014/event/2015-christmas/image/lay4.jpg" alt="" class="img-responsive">
+			</div>
+			<ul class="row" data-uk-grid-match>
+				{foreach from=$products.3 key=key item=product}
+				<li class="col-md-3 col-sm-4">
+					<div class="pr-qie" id="pr-qie">
+						<div class="pr-img">
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+								title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								class="" itemprop="url"> <img
+								src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'vnormal')}"
+								alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+								itemprop="image" class="img-responsive"/>
+							</a>
+						</div>
+					</div>
+					<div class="pr-con text-center">
+						<p class="pr-name uk-margin-small-top">
+							<a href="{$product.link|escape:'htmlall':'UTF-8'}" itemprop="name">
+							{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a></h5>
+						</p>
+						<div class="reviews-like">
+							<p class="{if $product.review_summary.count<=0}hide{/if}">
+								<a href="javascript:void(0);" class="product-rating-link" title="{if $product.review_summary.rating>0}{$product.review_summary.rating}/5{/if}">
+										<span class="star" style="width:{$product.review_summary.rating/5*100}%"></span>
+								</a>
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}#product_reviews" rel="nofollow" class="product-rating-count">
+									({$product.review_summary.count}) 
+								</a>
+							</p>
+							<p>
+								<span class="like link_like_product" id="category_dolike_{$product.id_product}"
+									onclick="javascript:like('','{$product.id_product}','category')"
+									product_sku="{$product.reference}">
+									<span class="like-number-container{if $product.like_count<=0} hide{/if}">
+										<span class="like-number text-muted" id="category_likecount_{$product.id_product}">{$product.like_count}</span>
+									</span>
+								</span>
+							</p>
+						</div>
+						<p class="product-list-price">
+							<span class="now-price" itemprop="price">
+								{convertPrice price=$product.show_price_list.0.value}
+							</span>
+							
+						</p>
+				
+						{assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						
+					</div>
+				</li>
+				{/foreach}
+			</ul>
+		</section>
+		
+	</div>
+</div>
+<script type="text/javascript" src="/themes/uniwigs2014/js/sticky.min.js"></script>

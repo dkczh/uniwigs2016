@@ -1,0 +1,78 @@
+@import "compass";
+@import "theme_variables";
+/************************************************************
+				History Page Styles
+************************************************************/
+#block-order-detail{
+	background: #fff;
+}
+#order-detail-content table {
+	.return_quantity_buttons {
+		margin-top: 3px;
+		a {
+			display: none;
+			float: left;
+			&+a {
+				margin-left: 3px;
+			}
+		}
+	}
+	.order_qte_input {
+		display: none;
+		width: 57px;
+		height: 27px;
+		line-height: 27px;
+		padding: 0;
+		text-align: center;
+	}
+	label {
+		font-weight: 400;
+	}
+	.write_comment a{
+		line-height: 1.4;
+	    letter-spacing: 0;
+	    text-transform: none;
+	    padding:6px 5px;
+	    width:100%;
+	}
+}
+
+.table {
+	td.history_detail {
+		a + a {
+			margin-left: 14px;
+		}
+	}
+	td.step-by-step-date {
+		width: 105px;
+	}
+	tfoot {
+
+		strong {
+			color: $base-text-color;
+		}
+	}
+}
+
+.info-order {
+	i {
+		font-size: 20px;
+		&.icon-gift {
+			color: #f13340;
+		}
+		&.icon-repeat {
+			color: #55c65e;
+		}
+	}
+}
+
+#sendOrderMessage {
+	margin-bottom: 30px;
+	select.form-control {
+		width: 263px;
+	}
+}
+#submitFrame{
+	width:100%;
+	height:400px;
+}

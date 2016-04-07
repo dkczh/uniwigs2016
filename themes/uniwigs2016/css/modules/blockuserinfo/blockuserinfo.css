@@ -1,0 +1,38 @@
+.header_user_info {
+  float: right; }
+  .header_user_info a.login_a {
+    display: block;
+    padding: 8px 9px 11px 8px;
+    cursor: pointer;
+    line-height: 18px; }
+    @media (max-width: 479px) {
+      .header_user_info a.login_a {
+        font-size: 11px; } }
+  .header_user_info .uk-dropdown li.top_sign {
+    border-bottom: 1px solid #CCC;
+    margin-bottom: .23076923em;
+    padding: 8px 0;
+    text-align: center; }
+  .header_user_info .uk-dropdown .sub-nav a {
+    display: block;
+    width: 100%;
+    padding: 2px 10px; }
+
+.top_help {
+  float: right; }
+  .top_help a#top_help {
+    display: block;
+    padding: 8px 9px 11px 8px;
+    cursor: pointer;
+    line-height: 18px; }
+    .top_help a#top_help:hover, .top_help a#top_help.active {
+      color: #d32676; }
+  .top_help .uk-dropdown {
+    right: 0;
+    left: auto;
+    min-width: 460px; }
+    .top_help .uk-dropdown ul {
+      float: left;
+      width: 50%; }
+
+/*# sourceMappingURL=blockuserinfo.css.map */

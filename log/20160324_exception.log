@@ -1,0 +1,3 @@
+*ERROR* 	2016/03/24 - 01:43:34: Property StockAvailable->id_product_attribute is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/24 - 01:44:04: Property StockAvailable->id_product_attribute is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/24 - 10:56:36: Property Order->total_discounts is not valid at line 909 in file classes/ObjectModel.php

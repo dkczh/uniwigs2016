@@ -1,0 +1,1400 @@
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:17: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:12:17: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:08: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:09: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:10: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:10: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:10: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:10: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:10: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:10: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:11: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:11: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:11: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:11: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:11: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:14: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:14: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:15: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:17: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:17: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:17: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:13:18: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:06: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:06: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:06: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:06: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:06: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:06: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:06: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:07: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:14:07: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:01: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:00: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:01: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:01: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:01: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:01: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:01: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:02: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:02: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:02: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:02: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:03: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:03: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:03: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:03: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:04: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:04: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:04: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:15:05: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:16: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:17: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:17: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:18: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:18: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:19: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:19: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:20: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:20: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:21: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE s.id_shop, CONCAT(su.physical_uri, su.virtual_uri) AS uri, su.domain, su.main
+					FROM ps_shop_url su
+					LEFT JOIN ps_shop s ON (s.id_shop = su.id_shop)
+					WHERE (su.domain = 'test.wigsdeal.com' OR su.domain_ssl = 'test.wigsdeal.com')
+						AND s.active = 1
+						AND s.deleted = 0
+					ORDER BY LENGTH(CONCAT(su.physical_uri, su.virtual_uri)) DESC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:21: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:22: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:22: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:22: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE c.`name`, cl.`id_lang`, IF(cl.`id_lang` IS NULL, c.`value`, cl.`value`) AS value, c.id_shop_group, c.id_shop
+                FROM `ps_configuration` c
+                LEFT JOIN `ps_configuration_lang` cl ON (c.`id_configuration` = cl.`id_configuration`)</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:22: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE COUNT(*) FROM ps_shop LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_theme` a
+WHERE (a.`id_theme` = 2) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:42: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE *
+FROM `ps_shop` a
+WHERE (a.`id_shop` = 1) LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:45: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE value FROM `ps_configuration` WHERE `name` = "PS_MULTISHOP_FEATURE_ACTIVE" LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:46: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:18:48: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE su.physical_uri, su.virtual_uri, su.domain, su.domain_ssl, t.id_theme, t.name, t.directory
+			FROM ps_shop s
+			LEFT JOIN ps_shop_url su ON (s.id_shop = su.id_shop)
+			LEFT JOIN ps_theme t ON (t.id_theme = s.id_theme)
+			WHERE s.id_shop = 1
+			AND s.active = 1 AND s.deleted = 0 AND su.main = 1 LIMIT 1</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 10:22:12: Lost connection to MySQL server during query<br /><br /><pre>SELECT SQL_NO_CACHE gs.*, s.*, gs.name AS group_name, s.name AS shop_name, s.active, su.domain, su.domain_ssl, su.physical_uri, su.virtual_uri
+				FROM ps_shop_group gs
+				LEFT JOIN ps_shop s
+					ON s.id_shop_group = gs.id_shop_group
+				LEFT JOIN ps_shop_url su
+					ON s.id_shop = su.id_shop AND su.main = 1
+				
+				WHERE s.deleted = 0
+					AND gs.deleted = 0
+					
+				ORDER BY gs.name, s.name</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/16 - 03:51:46: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 03:51:56: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 03:53:18: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 03:53:55: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 10:57:49: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 21:14:27: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 21:14:44: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 21:15:54: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 21:22:38: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 21:36:04: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 21:48:38: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 21:56:51: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 21:58:40: Property Address->firstname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/16 - 22:46:00: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php

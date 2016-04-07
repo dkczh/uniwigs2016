@@ -1,0 +1,51 @@
+<section id="m-wrapper"><section class="container">
+	<div class="crumb">
+		<a href="{$base_dir}" title="Home">
+			<span aria-hidden="true" class="icon-home-2"></span> Home
+		</a>
+		&gt; {$cms->meta_title}
+	</div>
+
+	<section class="fix">
+		<article class="doc">
+			<h2>
+				{$cms->meta_title}
+			</h2>
+			<dl class="doc-con">
+				{$cms->content}
+			</dl>
+		</article>
+	</section>
+</section>
+
+{literal}
+<script>
+jQuery(document).ready(function($) {
+	function lazyload(){
+		$(".doc-con img").each(function(){
+			_self = $(this);
+			if (_self.attr("lazyloadpass")===undefined
+					&& _self.attr("file")
+					&& (!_self.attr("src")
+							|| (_self.attr("src") && _self.attr("file")!=_self.attr("src"))
+						)
+				) {
+				if((_self.offset().top) < ($(window).height()+$(document).scrollTop()+200)
+						&& (_self.offset().left) < ($(window).width()+$(document).scrollLeft()+200)
+					) {
+					_self.attr("src",_self.attr("file"));
+					_self.attr("lazyloadpass", "1");
+					_self.animate({opacity:1}, 400);
+				}
+			}
+		});
+	}
+	lazyload();
+
+	var itv;
+	$(window).scroll(function(){clearTimeout(itv);itv=setTimeout(lazyload,400);});
+	$(window).resize(function(){clearTimeout(itv);itv=setTimeout(lazyload,400);});
+});
+</script>
+{/literal}
+</section>

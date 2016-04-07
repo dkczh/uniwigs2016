@@ -1,0 +1,133 @@
+{literal}
+<style>
+#f-wrapper {margin-top:0;}
+#year2014 .layout{width:1000px;margin:0 auto 30px;position: relative;background: url("/themes/uniwigs2014/activity/20140327_jewish-wigs/image/bg.jpg") no-repeat right 20px;height:780px}
+#year2014 .layout .title{background: url("/themes/uniwigs2014/activity/20140327_jewish-wigs/image/banner.jpg") no-repeat left 20px;height: 252px;}
+#year2014 .info{margin: 20px 0 10px 0;font-size: 14px;width: 65%;}
+#year2014 .info h4{font-size:20px;color:#ef3386;font-weight:bold;line-height: 28px;}
+#year2014 .info p{line-height: 20px;padding:10px 0}
+#year2014 .info li{padding:10px 0;list-style-type: disc;}
+#year2014 .right{width:200px;float:right;margin-left: 10px;}
+#year2014 .left{float:left;width:229px;margin-right:15px}
+#year2014 .tag_link{margin:20px 0 0;padding:20px 0;border-top:1px solid #D0D0D0;}
+#year2014 .tag_link a img{display:block;width:100%}
+#year2014 .tag_link a{display:inline-block;float:left;width:321px;margin-right:18px;margin-bottom: 18px;border:1px solid #d1d1d1}
+#year2014 .tag_link a:hover{box-shadow:2px 2px 3px rgba(0, 0, 0, 0.2);border:1px solid #666}
+#year2014 .tag_link a.end{margin:0}
+</style>
+{/literal}
+<div class="crumb">
+	<a href="{$base_dir}" title="Home" rel="nofollow">
+		<span aria-hidden="true" class="icon-home-2"></span> Home
+	</a>
+	> <a href="{$base_dir}tag/uniwigs-featured">Featured</a>
+	> <span class="bc_nav_left_now">Jewish Wigs</span>
+</div>
+<div id="year2014">
+	<div class="layout">
+		<div class="title">
+			<h2 class="hide">Jewish wigs/kosher sheitel</h2>
+			<p class="hide">The most preferred hair fiber brand for wigs, extensions, braids and weaves.</p>
+		</div>
+		<div class="info">
+			<h4>Skin /silk top construction</h4>
+			<p>100% hand-tied cap made with soft material is extremely comfortable against your scalp and contours to the 
+head for unparalleled comfort.</p>
+			<ul>
+				<li>Consists of three layers of silk with extra comfort. Can be parted in any direction and creates the illusion of 
+natural hair growth.</li>
+				<li>Clips prevent slippage and add a secure fit</li>
+				<li>Stretches in any direction for added comfort and a more secure, costom-like fit.</li>
+				<li>Adjustable strap allows you to loosen or tighten the cap up to a half inch.</li>
+			</ul>
+			<p><b>Warning: Don't buy any wig that doesn't have kosher certification.</b></p>
+		<div class="info_img"><img src="/themes/uniwigs2014/activity/20140327_jewish-wigs/image/img01.jpg"></div>
+		</div>
+	</div>
+
+	<section class="container">
+	<section class="shoppics">
+		<div class="ishoppics1 fix">
+			<div class="content">
+				<ul class="fix">
+					{foreach from=$products key=key item=product}
+					<li>{if $product.active==0}
+						<div class="category_soldout">
+							<img src="{$img_dir}soldout-small.png" />
+						</div>
+						{elseif $product.preorder==1}
+						<div class="category_preorder">
+							<img src="{$img_dir}presale.png" />
+						</div>
+						{/if}
+						<div class="pr-qie" id="pr-qie">
+							<p class="pr-img">
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}"
+									title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+									class=""> <img
+									src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}"
+									alt="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}"
+									title="{if $product.key_alt}{$product.key_alt|escape},{/if} {if isset($smarty.get.tag_query) && $smarty.get.tag_query}{$tag_name|escape},{/if} {$product.name|escape}{if isset($return_category_name)} - {$return_category_name|escape}{/if}" />
+								</a>
+							</p>
+						</div>
+
+						<div class="pr-con">
+							<p class="pr-name">
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}">
+									{$product.name|truncate:60:'...'|escape:'htmlall':'UTF-8'} </a>
+							</p>
+							<p class="pr-price fix">
+								<strong class="fll">
+									{$product.show_price_list.0.label}:
+									<span class="red">
+										{convertPrice price=$product.show_price_list.0.value}
+									</span>
+								</strong>
+								<a href="{$product.link}" class="addtocart flr">
+								</a>
+							</p>
+							{foreach from=$product.show_price_list key=spi item=show_price}
+							{if $spi>0}
+							<p class="iprice">
+								{$show_price.label}:
+								<del>
+									{convertPrice price=$show_price.value}
+								</del>
+							</p>
+							{/if}
+							{/foreach}
+						</div>
+
+		                {if $product.is_limit_quantity_off || $tag_rewrite_link=='discount-wigs'}
+		                {assign var="lastind" value=$product.show_price_list|@count}
+						{assign var="lastind" value=$lastind-1}
+						{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+						<div class="category_ico">
+							<span>{math equation="(x-y)/x*100" x=$lastprice y=$product.show_price_list.0.value format="%d"}</span><em>%</em><br>
+							<i>off</i>
+						</div>
+						{/if}
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+	</section>
+	<div class="tag_link fix">
+		<a href="http://www.uniwigs.com/tag/silk-top-lace-wigs"><img src="/themes/uniwigs2014/activity/20140327_jewish-wigs/image/01.jpg" alt="silk top lace wigs"></a>
+		<a href="http://www.uniwigs.com/celebrity-wigs"><img src="/themes/uniwigs2014/activity/20140327_jewish-wigs/image/02.jpg" alt="celebrity wigs"></a>
+		<a class="end" href="http://www.uniwigs.com/salon/semi-finished"><img src="/themes/uniwigs2014/activity/20140327_jewish-wigs/image/03.jpg" alt="Semi finished wigs"></a>
+	</div>
+	</section>
+	{if isset($related_tags) && $related_tags}
+	<dl class="fix related_tag_links">
+		<dt><img src="/img/activities/wedding/haute_related_links.jpg"></dt>
+		<dd style="line-height: 34px;">
+			{foreach from=$related_tags key="rt_ind" item="related_tag"}
+			<a href="/tag/{$related_tag.link_rewrite}">{$related_tag.name}</a>{if ($rt_ind+1)<count($related_tags)}<span>|</span>{/if}
+			{/foreach}
+		</dd>
+	</dl>
+	{/if}
+</div>

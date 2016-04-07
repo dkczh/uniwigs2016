@@ -1,0 +1,53 @@
+*ERROR* 	2016/03/17 - 01:39:01: Error writing file '/tmp/MYZiiP87' (Errcode: 28)<br /><br /><pre>SELECT ag.`id_attribute_group`, ag.`is_color_group`, agl.`name` AS group_name, agl.`public_name` AS public_group_name,
+					a.`id_attribute`, al.`name` AS attribute_name, a.`color` AS attribute_color, product_attribute_shop.`id_product_attribute`,
+					IFNULL(stock.quantity, 0) as quantity, product_attribute_shop.`price`, product_attribute_shop.`ecotax`, product_attribute_shop.`weight`,
+					product_attribute_shop.`default_on`, pa.`reference`, product_attribute_shop.`unit_price_impact`,
+					product_attribute_shop.`minimal_quantity`, product_attribute_shop.`available_date`, ag.`group_type`
+				FROM `ps_product_attribute` pa
+				 INNER JOIN ps_product_attribute_shop product_attribute_shop
+		ON (product_attribute_shop.id_product_attribute = pa.id_product_attribute AND product_attribute_shop.id_shop IN (6, 1, 2))
+				 LEFT JOIN ps_stock_available stock
+			ON (stock.id_product = pa.id_product AND stock.id_product_attribute = IFNULL(`pa`.id_product_attribute, 0) AND stock.id_shop_group = 1  AND stock.id_shop = 0  )
+				LEFT JOIN `ps_product_attribute_combination` pac ON (pac.`id_product_attribute` = pa.`id_product_attribute`)
+				LEFT JOIN `ps_attribute` a ON (a.`id_attribute` = pac.`id_attribute`)
+				LEFT JOIN `ps_attribute_group` ag ON (ag.`id_attribute_group` = a.`id_attribute_group`)
+				LEFT JOIN `ps_attribute_lang` al ON (a.`id_attribute` = al.`id_attribute`)
+				LEFT JOIN `ps_attribute_group_lang` agl ON (ag.`id_attribute_group` = agl.`id_attribute_group`)
+				 INNER JOIN ps_attribute_shop attribute_shop
+		ON (attribute_shop.id_attribute = a.id_attribute AND attribute_shop.id_shop IN (6, 1, 2))
+				WHERE pa.`id_product` = 40682
+					AND al.`id_lang` = 1
+					AND agl.`id_lang` = 1
+				GROUP BY id_attribute_group, id_product_attribute
+				ORDER BY ag.`position` ASC, a.`position` ASC, agl.`name` ASC</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/17 - 01:41:20: Error writing file '/tmp/#sql5800_1f89_0.frm' (Errcode: 28)<br /><br /><pre>CREATE TEMPORARY TABLE ps_cat_restriction ENGINE=MEMORY
+													SELECT DISTINCT cp.id_product, p.id_manufacturer, product_shop.condition, p.weight FROM ps_category_product cp
+													INNER JOIN ps_category c ON (c.id_category = cp.id_category AND
+													c.nleft >= 20
+													AND c.nright <= 21
+													AND c.active = 1)
+													INNER JOIN ps_product_shop product_shop ON (product_shop.id_product = cp.id_product
+													AND product_shop.id_shop = 1)
+													INNER JOIN ps_product p ON (p.id_product=cp.id_product)
+													WHERE product_shop.`active` = 1 AND product_shop.`visibility` IN ("both", "catalog")</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/17 - 01:48:17: Error writing file '/tmp/#sql5800_1fb9_0.frm' (Errcode: 28)<br /><br /><pre>CREATE TEMPORARY TABLE ps_cat_restriction ENGINE=MEMORY
+													SELECT DISTINCT cp.id_product, p.id_manufacturer, product_shop.condition, p.weight FROM ps_category_product cp
+													INNER JOIN ps_category c ON (c.id_category = cp.id_category AND
+													c.nleft >= 80
+													AND c.nright <= 81
+													AND c.active = 1)
+													INNER JOIN ps_product_shop product_shop ON (product_shop.id_product = cp.id_product
+													AND product_shop.id_shop = 1)
+													INNER JOIN ps_product p ON (p.id_product=cp.id_product)
+													WHERE product_shop.`active` = 1 AND product_shop.`visibility` IN ("both", "catalog")</pre> at line 791 in file classes/db/Db.php
+*ERROR* 	2016/03/17 - 06:20:45: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:20:57: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:21:43: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:21:44: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:21:45: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:21:45: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:21:47: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:22:14: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:24:59: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:27:05: Property Customer->lastname is empty at line 909 in file classes/ObjectModel.php
+*ERROR* 	2016/03/17 - 06:29:39: Property Customer->firstname is empty at line 909 in file classes/ObjectModel.php

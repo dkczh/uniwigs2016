@@ -1,0 +1,235 @@
+{literal}
+<style type="text/css">
+.fll{float:left}
+.border-box {border: 1px solid #E1E1E1;}
+.box_shadow {box-shadow: 0 0 8px #EEE;}
+#weekly h1{margin-bottom:25px;font-size: 18px;}
+#weekly .weekly_product{height:auto;padding:20px;margin:20px 0}
+#weekly .weekly_buy_infor{width:28%;background: #F7F7F7;height: 398px;border: 1px solid #DEDEDE;padding: 20px 30px;box-shadow: 2px 1px 8px #CCC;z-index: 2;position: relative;}
+#weekly .weekly-original{font-size:14px;}
+#weekly .weekly-original del{margin:0 17px 0 3px;font-weight: bold;}
+#weekly .weekly-original span{margin:0 0 0 3px;background: #FB368D;color: #FFF;padding: 2px 5px;border-radius: 5px;font-weight: bold;font-size:16px}
+#weekly .weekly-price{text-align: center;height: 70px;font-size: 40px;color: #FB368D;line-height: 70px;}
+#weekly .weekly-buy-btn{padding-bottom: 20px;border-bottom: 1px solid #DEDEDE;}
+#weekly .weekly-buy-btn a{display: block;width:315px;height: 91px;background:url("http://www.uniwigs.com/themes/uniwigs2014/images/weekly/weekly-buy-now.png") no-repeat;margin-left:-48px;z-index: 10;position: relative;text-indent: -99999px;}
+#weekly .number{border-top:1px solid #fff;padding-top:20px;text-align: center;color:#555}
+#weekly .number span{font-size:16px;color:#fb368d;font-weight:bold}
+#weekly .buy_statistics{padding-top:15px;text-align: center;color:#555;padding-bottom: 20px;border-bottom: 1px solid #DEDEDE;}
+.buy_statistics span.deal-img{background:url("http://www.uniwigs.com/themes/uniwigs2014/images/weekly/time1.png") no-repeat 52px -1px;display:block}
+#weekly .weekly-time{padding-top:6px;color:#555}
+#weekly .weekly-time span{font-size:20px;color:#fff;padding:0 5px;font-weight:bold;background:#333;}
+#weekly .weekly-friends{text-align: center;margin-top: 20px;}
+#weekly .weekly-friends p{padding-bottom:10px}
+#weekly .weekly-friends a{display:inline-block;margin-right:5px}
+#weekly .weekly_product_infor{width: 61%;padding: 43px 20px;height: 352px;border: 1px dashed #CCC;background:#fafafa;z-index: 1;position: relative;}
+#weekly .weekly_product_infor img{float:left;margin-right:20px}
+#weekly .weekly_infor{padding:20px;height:auto;margin-top: 20px;}
+
+#weekly .next_weekly_box{width:448px;padding:20px;float:left;margin-left:20px}
+#weekly .next_weekly_details h2{font-size:16px}
+#weekly .next_weekly_box img{float:left;margin-right:15px}
+#weekly .next_weekly_details h2,#weekly .next_weekly_details .price{margin-bottom:10px}
+#weekly .next_weekly_details .now {font-size: 16px;color: #333;}
+#weekly .next_weekly_details .now span {color: #FB368D;font-size: 24px}
+#weekly .next_weekly_details p{font-size:15px;color:#666}
+#weekly .next_weekly_details .price p{font-weight:bold;padding:3px 0}
+#weekly .next_weekly_details .save span{color:#FB368D}
+#weekly .coming-soon {display: inline-block;width: 200px;height: 44px;background: #666;color: #FFF;line-height: 44px;text-align: center;font-size: 20px;font-weight: bold;border-radius: 8px;}
+#weekly .next_weekly{margin-left: -20px;}
+@media only screen and (max-width: 532px){
+	#weekly .weekly_buy_infor {width: 75%;height: auto;}
+	#weekly .weekly_product_infor{width:83%;height:auto}
+	#weekly .weekly_product_infor img{width:100%}
+	#weekly .weekly-buy-btn a {width: 280px;}
+	#weekly .weekly_product {height: auto;}
+	#weekly .buy_statistics span.deal-img {background: url("http://www.uniwigs.com/themes/uniwigs2014/images/weekly/time1.png") no-repeat 16px -1px;}
+	#weekly .weekly-time{font-size:0.7em}
+	#weekly .weekly-time span {font-size: 17px;}
+	#weekly .next_weekly_details{float:left}
+	#weekly .next_weekly_box {width:86%}
+}
+@media only screen and (max-width: 767px) and (min-width: 533px){
+	#weekly .weekly_product_infor {width: 90%;}
+	#weekly .weekly_buy_infor {width: 62%;}
+}
+@media only screen and (max-width:1000px) and (min-width: 768px){
+	#weekly .weekly_product_infor {width: 43%;}
+	#weekly .weekly_buy_infor {width: 40%;}
+	#weekly .weekly_product_infor img {width: 55%;}
+	#weekly .next_weekly_box {width: 94%;margin-left: 0;margin-bottom: 15px;}
+	#weekly .next_weekly {margin-left: 0;}
+}
+
+</style>
+<script>
+var alltimes={};
+var timebeat_deamon=null;
+function timebeat() {
+	if (Object.keys(alltimes).length > 0) {
+		for(var ind in alltimes) {
+			if (alltimes[ind]['remaining']>=0) {
+				cal_remaining_times(alltimes[ind]['remaining'], alltimes[ind]['jobj']);
+				alltimes[ind]['remaining'] = alltimes[ind]['remaining']-1;
+			} else {
+				delete alltimes[ind];
+			}
+		}
+	} else {
+		clearInterval(timebeat_deamon);
+	}
+}
+function cal_remaining_times(remaining,jobj) {
+	var days = Math.floor(remaining/(24*60*60));
+	var hours = Math.floor((remaining%(24*60*60))/(60*60));
+	var minutes = Math.floor(((remaining%(24*60*60))%(60*60))/60);
+	var seconds = ((remaining%(24*60*60))%(60*60))%60;
+
+	days = days<10?("0"+days):days;
+	hours = hours<10?("0"+hours):hours;
+	minutes = minutes<10?("0"+minutes):minutes;
+	seconds = seconds<10?("0"+seconds):seconds;
+
+	jobj.find('.days').html(days);
+	jobj.find('.hours').html(hours);
+	jobj.find('.minutes').html(minutes);
+	jobj.find('.seconds').html(seconds);
+}
+$(function() {
+	var remaining = 0;
+	$('.weekly-time').each(function(ind){
+		remaining = parseInt($(this).find('input').val());
+		if (remaining>0) {
+			alltimes[ind] = {
+				remaining:remaining,
+				jobj:$(this)
+			}
+		}
+	});
+	if (Object.keys(alltimes).length > 0) {
+		timebeat_deamon = setInterval(timebeat, 1000);
+	}
+});
+</script>
+{/literal}
+
+<section class="container">
+<div class="crumb">
+	<a href="{$base_dir}" title="Home" rel="nofollow">
+		<em class="homes"></em> Home
+	</a>{if $tag_name} > {$tag_name}{/if}
+</div>
+
+<div id="weekly">
+	<div><img src="{$img_dir}weekly/weekly_banner.jpg" width="100%"></div>
+
+	{foreach from=$products key=key item=product}
+	{if $product.weekly_deal && isset($product.time_remaining)}
+	<div class="weekly_product border-box box_shadow">
+		<h1><a href="{$product.link}">{$product.name}</a></h1>
+		<div class="weekly_buy_main fix">
+			<div class="weekly_buy_infor fll">
+                {assign var="lastind" value=$product.show_price_list|@count}
+				{assign var="lastind" value=$lastind-1}
+				{assign var="lastprice" value=$product.show_price_list.$lastind.value}
+				<p class="weekly-original">
+					Retail Price: <del>{convertPrice price=$lastprice}</del>
+					Discount: <span>{math equation="(x-y)/x*100" x=$lastprice y=$product.show_price_list.0.value format="%d"}%</span>
+				</p>
+				<p class="weekly-price">{convertPrice price=$product.show_price_list.0.value}</p>
+				<p class="weekly-buy-btn">
+					<a href="{$product.link}">BUY NOW</a>
+				</p>
+				<p class="number">Number of Deals left&nbsp;&nbsp;<span>{$product.quantity}</span></p>
+				<div class="buy_statistics">
+					<p><span class="deal-img">This Deal will end in</span></p>
+					<div class="weekly-time">
+						<input type="hidden" name="time_remaining" value="{$product.time_remaining}"/>
+						<span class='days'>00</span> DAY
+						<span class='hours'>00</span> HR
+						<span class='minutes'>00</span> MIN
+						<span class='seconds'>00</span> SEC
+					</div>
+				</div>
+				<div class="weekly-friends">
+					<p>Recommend to friends!</p>
+					<p>
+						{*<a href="" target="_blank" class="f"><img src="http://www.uniwigs.com/themes/uniwigs2014/images/weekly/b.png"></a>
+						<a href="" target="_blank" class="t"><img src="http://www.uniwigs.com/themes/uniwigs2014/images/weekly/f.png"></a>
+						<a href="" target="_blank" class="y"><img src="http://www.uniwigs.com/themes/uniwigs2014/images/weekly/p.png"></a>
+						<a href="" target="_blank" class="p"><img src="http://www.uniwigs.com/themes/uniwigs2014/images/weekly/t.png"></a>
+						<a href="" target="_blank" class="b"><img src="http://www.uniwigs.com/themes/uniwigs2014/images/weekly/y.png"></a>
+						*}
+						<div class="shares">
+							<!-- AddThis Button BEGIN -->
+							<div class="addthis_toolbox addthis_default_style ">
+							<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+							<a class="addthis_button_pinterest_pinit"></a>
+							<!-- tumblr -->
+							<script src="http://platform.tumblr.com/v1/share.js"></script>
+							<a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a>
+							<!-- tumblr end -->
+							{*<a class="addthis_button_tweet"></a>*}
+							</div>
+
+							<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-521c717a587dc001"></script>
+							<!-- AddThis Button END -->
+						</div>
+					</p>
+				</div>
+			</div>
+			<div class="weekly_product_infor fll">
+				<a href="{$product.link}">
+					<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'vnormal')}"/>
+				</a>
+				<div class="weekly_details">
+					{*<p>Top quality Indian remy human hair (Tangle Free + Long Lasting), lace front construction with wefted back gives you a natural front hairline, extremly comfortable on the scalp, a long straight hair style.</p>
+					<p>&nbsp;</p>
+					<p><strong>Hair Type: </strong>100% Indian remy human hair</p>
+					<p><strong>Hair Length: </strong>24"</p>
+					<p><strong>Color Shown: </strong>1B-Off-Black</p>
+					<p><strong>Hair Texture:&nbsp;</strong>Straight</p>
+					<p><strong>Cap Size:&nbsp;</strong>Medium</p>
+					<p><strong>Cap Construction:&nbsp;</strong>Lace front with wefted back</p>
+					*}
+					{$product.description_short}
+				</div>
+			</div>
+		</div>
+	</div>
+	{/if}
+	{/foreach}
+
+	<div style="margin-bottom: 20px;background: #E5A;padding: 16px 0;color: #FFF;font-size: 22px;text-align: center;font-weight: bold;">Take a quick view of our next  Monday - Sunday Weekly Deal!</div>
+
+	<div class="next_weekly fix">
+		{foreach from=$products key=key item=product}
+		{if !$product.weekly_deal}
+		<div class="next_weekly_box border-box box_shadow">
+			<a href="{$product.link}">
+				<img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'category')}" width="210" height="245"/>
+			</a>
+			<div class="next_weekly_details">
+				<h2><a href="{$product.link}">{$product.name}</a></h2>
+				<div class="price">
+					 {*<p><del>Price: $52.99</del></p>
+					 <p><del>Special Price: 354.89</del></p>
+					 <p class="now">Promation Price: <span>$299.9</span></p>
+					 <p class="save">Save: 253.38 <br><span>46% OFF</span></p>
+					 *}
+					 {if $product.was}
+					 <p><del>Retail Price: {convertPrice price=$product.was}</del></p>
+					 {/if}
+					 {if $product.orderprice}
+					 <p><del>Our Price: {convertPrice price=$product.orderprice}</del></p>
+					 {/if}
+					 <p class="now">Promation Price: <span>?</span></p>
+				</div>
+				<div class="coming-soon">Coming Soon</div>
+			</div>
+		</div>
+		{/if}
+		{/foreach}
+		<br class="fix"/>
+	</div>
+</div>
+</section>

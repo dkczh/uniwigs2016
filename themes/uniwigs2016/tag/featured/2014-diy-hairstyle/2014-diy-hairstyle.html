@@ -1,0 +1,160 @@
+{literal}
+<style>
+#columns.container{max-width: 100%}
+.breadcrumb{display: none}
+.mt30{margin-top:30px;}
+#diy-hairstyle img{display:block}
+.bgvideo{position: relative;width: 100%;overflow: hidden;z-index: 0;}
+.inner {position: relative;min-height: 100%;max-width: 1423px;margin: 0 auto;padding-top: 80px;padding-bottom: 58px;overflow: hidden;z-index: 1;
+-webkit-transition: all .3s ease-out;
+-moz-transition: all .3s ease-out;
+-ms-transition: all .3s ease-out;
+transition: all .3s ease-out;
+}
+.diy-products img{display:block;width:100%}
+.play-video {
+position: relative;
+display: inline-block;
+width: 70px;
+height: 70px;
+border: 8px solid rgba(255, 255, 255, 0.5);
+border-radius: 50%;
+text-indent: -999em;
+cursor: pointer;
+-webkit-transition: all .3s ease-out;
+-moz-transition: all .3s ease-out;
+-ms-transition: all .3s ease-out;
+transition: all .3s ease-out;
+-webkit-animation: animeBorderGreen .8s infinite;
+-moz-animation: animeBorderGreen .8s infinite;
+-ms-animation: animeBorderGreen .8s infinite;
+animation: animeBorderGreen .8s infinite;
+border-color: rgba(255, 255, 255, 0.5);
+}
+.play-video:after {
+content: '';
+position: absolute;
+left: 50%;
+top: 50%;
+height: 0;
+width: 0;
+margin: -12px 0 0 -6px;
+border: solid rgba(0, 0, 0, 0);
+border-left-color: rgba(255, 255, 255, 0.5);
+border-width: 12px 20px;
+pointer-featureds: none;
+-webkit-transition: all .3s ease-out;
+-moz-transition: all .3s ease-out;
+-ms-transition: all .3s ease-out;
+transition: all .3s ease-out;
+}
+.bgvideo video {
+position: absolute;
+left: 0;
+top: -200px;
+bottom:0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: 0;
+}
+
+.box-titles img{margin:0 auto}
+.box-titles {position: absolute;top: 21%;left:27%;width: 720px;text-align:center;color:#fff}
+.box-titles h3{font-size:2.2em;font-weight:700;}
+.box-titles p{font-size:1.4em;padding:20px}
+
+.div-pro-box{position:relative;}
+
+@-webkit-keyframes animeBorderGreen{0%{border-color:rgba(255,255,255,0.5)}50%{border-color:rgba(255,255,255,1)}100%{border-color:rgba(255,255,255,0.5)}}
+@-moz-keyframes animeBorderGreen{0%{border-color:rgba(255,255,255,0.5)}50%{border-color:rgba(255,255,255,1)}100%{border-color:rgba(255,255,255,0.5)}}
+@-ms-keyframes animeBorderGreen{0%{border-color:rgba(255,255,255,0.5)}50%{border-color:rgba(255,255,255,1)}100%{border-color:rgba(255,255,255,0.5)}}
+@keyframes animeBorderGreen{0%{border-color:rgba(255,255,255,0.5)}50%{border-color:rgba(255,255,255,1)}100%{border-color:rgba(255,255,255,0.5)}}
+
+@media (min-width: 768px){
+	.box-titles{top: 0;left: 9%;width: 632px;}
+	.bgvideo{height:511px}
+	.diy-pro-1 {width: 70%;float: left;}
+	.diy-pro-2 {width: 28%;float: right;}
+	.diy-pro-3 {width: 70%;float: left;margin-top: 30px;}
+	.diy-pro-4 {width: 51%;float: right;margin-top: -295px;z-index: 2;}
+	.diy-pro-5 {width: 100%;float: left;margin-top: -54px;}
+	.div-pro-5-left {width: 50%;float: left;}
+	.div-pro-5-right {width: 44.5%;float: left;}
+
+}
+@media (min-width: 1024px){
+	.box-titles{top: 0;left: 19%;}
+	.bgvideo video{top: -70px;}
+	.bgvideo{height:550px}
+	.diy-pro-1{width:656px;float:left;}
+	.diy-pro-2{width:314px;float:right;}
+	.diy-pro-3{width:656px;float:left;margin-top:30px}
+	.diy-pro-4{width:527px;float:right;margin-top: -295px;z-index:2}
+	.diy-pro-5{width:1000px;float:left;margin-top: -200px;}
+	.div-pro-5-left{width:529px;float:left}
+	.div-pro-5-right{width:471px;float:left}
+
+}
+@media (min-width: 1366px){
+	.box-titles{top: 10%;left:27%;}
+	.bgvideo{height:688px}
+
+}
+@media (min-width: 1600px){
+	
+	
+}
+</style>
+{/literal}
+
+<div id="diy-hairstyle">
+	<!-- banner -->
+	<section class="bgvideo">
+		<div class="inner">
+			<div class="box-titles">
+				<h2><img src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/image/title.png"></h2>
+				<h3>Best Material For DIY Your Unique Hairstyle!</h3>
+				<p>You can dye, perm and restyle it just like natural hair. <br>
+No damage to your own hair and you can still be a charming variety queen. </p>
+				<p><a href="//www.youtube.com/embed/LZxBe_EezUc" class="popupvideoa play-video" target="_blank" data-uk-lightbox data-lightbox-type="image">PLAY</a></p>
+			</div>
+		</div>
+		<video autoplay="" loop="">
+			<source src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/uniwigs-diy-min.webm" type="video/webm">
+			<source src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/uniwigs-diy-min.mp4" type="video/mp4">
+		</video>
+	</section>
+	<div class="diy-products container opacity-img mt30">
+		<div class="diy-pro-1 div-pro-box">
+			<a href="{$base_dir}human-hair-wigs/40049-dolly-remy-human-hair-lace-frontmono-glueless-wig.html">
+				<img src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/image/pro-1.jpg">
+			</a>
+		</div>
+		<div class="diy-pro-2 div-pro-box">
+			<a href="{$base_dir}human-hair-wigs/40811-wavy-100-indian-remy-human-hair-full-lace-wig.html">
+				<img src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/image/pro-2.jpg">
+				<img src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/image/pro-22.jpg">
+			</a>
+		</div>
+		<div class="diy-pro-3 div-pro-box">
+			<a href="{$base_dir}clip-in-hair-extensions/40562-22-8-piece-straight-clip-in-remy-human-hair-extension-e82204.html">
+				<img src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/image/pro-3.jpg">
+			</a>
+		</div>
+		<div class="diy-pro-4 div-pro-box">
+			<a href="{$base_dir}clip-in-hair-extensions/40748-24-jet-black-7-pieces-straight-clip-in-indian-remy-human-hair-extension-e724001stw-g-1.html">
+				<img src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/image/pro-4.jpg">
+			</a>
+		</div>
+		<div class="diy-pro-5 div-pro-box">
+			<a href="{$base_dir}clip-in-hair-extensions/40745-18-white-blonde-7-pieces-french-wave-clip-in-indian-remy-human-hair-extension-e718001fw-g-613.html">
+				<div class="div-pro-5-left"><img src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/image/pro-5.jpg"></div>
+				<div class="div-pro-5-right"><img src="/themes/uniwigs2016/tag/featured/2014-diy-hairstyle/image/pro-55.jpg" class="div-pro-5-right"></div>
+			</a>
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
