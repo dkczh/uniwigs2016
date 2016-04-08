@@ -48,7 +48,7 @@
 		</ol>
 	</div>
 	{/if}-->
-	<ul class="uk-tab" data-uk-tab="{literal}{connect:'#tab-content'}{/literal}" data-uk-switcher="{literal}{connect:'#tab-content', animation: 'fade'}{/literal}">
+	<ul class="uk-tab" data-uk-switcher="{literal}{connect:'#tab-content', animation: 'slide-horizontal'}{/literal}">
 		<li><a href="#">Registered</a></li>
 		<li><a href="#">Login</a></li>
 	</ul>
