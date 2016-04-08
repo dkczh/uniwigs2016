@@ -94,7 +94,8 @@ class CustomerShowController extends FrontController
 	public function init()
     {
     	parent::init();
-
+		$cshow = 'customershow';
+		$this->context->smarty->assign("cshow", $cshow);
     	$ca = '';
 		if (!empty($_GET['ca'])) {
 			$ca = trim($_GET['ca']);

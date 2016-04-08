@@ -19,14 +19,16 @@ $product = $tagarr[3];
 $catagory = $tagarr[4];
 $keyword =  $tagarr[5];
 $description=$tagarr[6];
+$title=$tagarr[7];
+
 //$product = '100312';
 
-addTag($name,$skus,$template,$catagory,$keyword,$description);
+addTag($name,$skus,$template,$catagory,$keyword,$description,$title);
 
 
 
 
-function  addTag($name,$skus,$template,$catagory,$keyword,$description)
+function  addTag($name,$skus,$template,$catagory,$keyword,$description,$title)
 {
 
 	$db = Tool::pdo_conn(DB_PDO,DB_USER,DB_PASSWD);  
@@ -40,7 +42,7 @@ function  addTag($name,$skus,$template,$catagory,$keyword,$description)
 	$db->exec($sql)or die('表ps_tag插入失败');
   
   $num = getlastid($db);
-	$pxsql = " insert px_tag_extra (id_tag,template,skus,catagory,keyword,description) values( $num,'$template','$skus','$catagory','$keyword','$description');";
+	$pxsql = " insert px_tag_extra (id_tag,template,skus,catagory,keyword,description,title) values( $num,'$template','$skus','$catagory','$keyword','$description','$title');";
 	$db->exec($pxsql)or die('表px_tag_extra 插入失败'); 
 
 	echo  "ps_tag, px_tag_extra 更新成功";

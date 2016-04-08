@@ -10,7 +10,7 @@ require_once(PS_API_TAG.'/../smarty.config.php');
 
 $id=$_GET['id'];
 $db = Tool::pdo_conn(DB_PDO,DB_USER,DB_PASSWD);  
-$sql = "  SELECT SQL_CALC_FOUND_ROWS a.* ,l.name as lang ,count(pt.id_product) as products  ,c.catagory,c.template ,c.skus,c.keyword,c.description from ps_tag a  LEFT JOIN ps_product_tag  pt on pt.id_tag = a.id_tag LEFT JOIN ps_lang l on l.id_lang =a.id_lang LEFT JOIN px_tag_extra c on c.id_tag =a.id_tag   WHERE a.id_tag =$id ";
+$sql = "  SELECT SQL_CALC_FOUND_ROWS a.* ,l.name as lang ,count(pt.id_product) as products  ,c.catagory,c.template ,c.skus,c.keyword,c.description,c.title from ps_tag a  LEFT JOIN ps_product_tag  pt on pt.id_tag = a.id_tag LEFT JOIN ps_lang l on l.id_lang =a.id_lang LEFT JOIN px_tag_extra c on c.id_tag =a.id_tag   WHERE a.id_tag =$id ";
 
 $products = " select a.id_product,a.id_tag, b.name ,b.id_lang as lang
 from ps_product_tag a, ps_product_lang b

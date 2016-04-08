@@ -29,18 +29,40 @@
 <!--[if gt IE 8]> <html class="no-js ie9"{if isset($language_code) && $language_code} lang="{$language_code|escape:'html':'UTF-8'}"{/if}><![endif]-->
 <html{if isset($language_code) && $language_code} lang="{$language_code|escape:'html':'UTF-8'}"{/if}>
 	<head>
-		<meta charset="utf-8" />
-		<title>{if $page_name == 'tag'}Shop {$tagname} at uniwigs.com{else}{$meta_title|escape:'html':'UTF-8'}{/if}</title>
-		{if $page_name == 'tag'}
-			<meta name="description" content="Find the most suitable {$tagname} with Uniwigs.com, shop for most natural and light weight  {$tagname} at uniwigs online store." />
-			<meta name="keywords" content="{$tagname}" />
+	<meta charset="utf-8" />
+		<title>
+		{*tag 关键词*}
+		{if $page_name == 'tag'}{$res.title}
 		{else}
-			{if isset($meta_description) AND $meta_description}
-				<meta name="description" content="{$meta_description|escape:'html':'UTF-8'}" />
+			{*customer show  关键词*}
+			{if isset($cshow)}
+				Customer Show | UniWigs.com -UniWigs ® Official Site
+			{else}
+				{$meta_title|escape:'html':'UTF-8'}
 			{/if}
-			{if isset($meta_keywords) AND $meta_keywords}
-				<meta name="keywords" content="{$meta_keywords|escape:'html':'UTF-8'}" />
+		
+		{/if}
+		</title>
+		{if $page_name == 'tag'}
+			<meta name="description" content="{$res.description}" />
+			<meta name="keywords" content="{$res.keyword}" />
+		{else}
+			
+			{if isset($cshow)}
+			<meta name="description" content="Here your can find all the customer show of Uniwigs.com. You can see how others looks like with the hair extension before and after. Also you can find the real evaluation of UNIWIGS by the customers. 
+" />
+			<meta name="keywords" content="hair extensions before and after,customer show,uniwigs customer show" />
+			{else}
+				{if isset($meta_description) AND $meta_description}
+					<meta name="description" content="{$meta_description|escape:'html':'UTF-8'}" />
+				{/if}
+				{if isset($meta_keywords) AND $meta_keywords}
+					<meta name="keywords" content="{$meta_keywords|escape:'html':'UTF-8'}" />
+				{/if}
+			
 			{/if}
+			
+			
 		{/if}
 		<meta name="generator" content="PrestaShop" />
 		<meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
