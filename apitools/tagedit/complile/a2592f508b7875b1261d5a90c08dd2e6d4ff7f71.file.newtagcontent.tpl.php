@@ -1,4 +1,25 @@
-﻿<html><head>
+<?php /* Smarty version Smarty-3.1.19, created on 2016-04-08 09:49:20
+         compiled from "templates\newtagcontent.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:406457070d901e7481-89344022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a2592f508b7875b1261d5a90c08dd2e6d4ff7f71' => 
+    array (
+      0 => 'templates\\newtagcontent.tpl',
+      1 => 1460080134,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '406457070d901e7481-89344022',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_57070d90212419_50002043',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_57070d90212419_50002043')) {function content_57070d90212419_50002043($_smarty_tpl) {?>﻿<html><head>
     <title>新建tag页面</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="Stylesheet" type="text/css" href="templates/tagcontent.css">
@@ -151,4 +172,4 @@
 
 	
 
-</body></html>
+</body></html><?php }} ?>
