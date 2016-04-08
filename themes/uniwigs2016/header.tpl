@@ -36,7 +36,7 @@
 		{else}
 			{*customer show  关键词*}
 			{if $cshow}
-				Customer Show | UniWigs.com
+				Customer Show | UniWigs.com -UniWigs ® Official Site
 			{else}
 				{$meta_title|escape:'html':'UTF-8'}
 			{/if}
