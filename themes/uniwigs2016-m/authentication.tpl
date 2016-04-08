@@ -48,6 +48,9 @@
 		</ol>
 	</div>
 	{/if}-->
+	<style>
+		.uk-offcanvas{z-index: -1}
+	</style>
 	<ul class="uk-tab" data-uk-tab="{literal}{connect:'#tab-content'}{/literal}" data-uk-switcher="{literal}{connect:'#tab-content'}{/literal}">
 		<li><a href="#">Registered</a></li>
 		<li><a href="#">Login</a></li>
