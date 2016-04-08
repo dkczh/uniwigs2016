@@ -35,6 +35,7 @@
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(true, $smarty.const.NULL)}
 	{/if}
 <script type="text/javascript" src="/themes/uniwigs2016-m/js/lightbox.js"></script>
+<script type="text/javascript" src="/themes/uniwigs2016-m/js/touchCarousel.js"></script>
 <div itemscope itemtype="https://schema.org/Product">
 	<meta itemprop="url" content="{$link->getProductLink($product)}">
 	<div class="primary_block row">
@@ -61,7 +62,7 @@
 		<!-- left infos-->
 		<div class="pb-left-column">
 			<!-- product img-->
-			<div id="image-block" class="clearfix">
+			{*<div id="image-block" class="clearfix">
 				{if $product->new}
 					<span class="new-box">
 						<span class="new-label">{l s='New'}</span>
@@ -95,8 +96,37 @@
 						{/if}
 					</span>
 				{/if}
-			</div> <!-- end image-block -->
-			{if isset($images) && count($images) > 0}
+			</div>*} <!-- end image-block -->
+			<div class="goods_img" data-snap-ignore="true">
+				<div id="carousel" class="carousel touchcarousel">
+					<ul class="touchcarousel-container">
+						{if isset($images)}
+							{foreach from=$images key=key item=image name=thumbnails}
+								{assign var=imageIds value="`$product->id`-`$image.id_image`"}
+								{if !empty($image.legend)}
+									{assign var=imageTitle value=$image.legend|escape:'html':'UTF-8'}
+								{else}
+									{assign var=imageTitle value=$product->name|escape:'html':'UTF-8'}
+								{/if}
+								<li class="touchcarousel-item">
+									{if $key==0}
+									<img class="img-responsive" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if} itemprop="image" />
+									{else}
+									<img class="img-responsive" src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if} itemprop="image" />
+									{/if}
+									
+								</li>
+							{/foreach}
+						{/if}
+					</ul>
+				</div>
+				{*<div class="goods_num">
+					<span class="current_index">1</span>/{$images|@count}
+				</div>*}
+			</div>
+
+			
+			{*if isset($images) && count($images) > 0}
 				<!-- thumbnails -->
 				<div id="views_block" class="clearfix {if isset($images) && count($images) < 2}hidden{/if}">
 					{if isset($images) && count($images) > 2}
@@ -116,9 +146,9 @@
 								{else}
 									{assign var=imageTitle value=$product->name|escape:'html':'UTF-8'}
 								{/if}
-								<li id="thumbnail_{$image.id_image}"{if $smarty.foreach.thumbnails.last} class="last"{/if}>
-									<a{if $jqZoomEnabled && $have_image && !$content_only} href="javascript:void(0);" rel="{literal}{{/literal}gallery: 'gal1', smallimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}',largeimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}'{literal}}{/literal}"{else} href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}"	data-fancybox-group="other-views" class="fancybox{if $image.id_image == $cover.id_image} shown{/if}"{/if} title="{$imageTitle}">
-										<img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'cart_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if} itemprop="image" />
+								<li id="thumbnail_{$image.id_image}" class="last">
+									<a href="javascript:void(0);" class="" title="{$imageTitle}">
+										<img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}"{if isset($cartSize)} height="{$cartSize.height}" width="{$cartSize.width}"{/if} itemprop="image" />
 									</a>
 								</li>
 							{/foreach}
@@ -132,7 +162,7 @@
 					{/if}
 				</div> <!-- end views-block -->
 				<!-- end thumbnails -->
-			{/if}
+			{/if*}
 			{if isset($images) && count($images) > 1}
 				<p class="resetimg clear no-print">
 					<span id="wrapResetImages" style="display: none;">

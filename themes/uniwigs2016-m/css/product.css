@@ -36,51 +36,99 @@ a.fancybox-nav {
   background-color: #fff; }
 
 /* .pb-left-column ***************************************************************************** */
-.pb-left-column #image-block {
+.pb-left-column .touchcarousel {
   position: relative;
-  display: block;
-  cursor: pointer; }
-  .pb-left-column #image-block img {
-    background: #fbfbfb;
-    width: 100%; }
-  .pb-left-column #image-block #view_full_size .span_link {
-    display: none;
+  overflow: hidden; }
+  .pb-left-column .touchcarousel .touchcarousel-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    left: 0; }
+    .pb-left-column .touchcarousel .touchcarousel-container img {
+      display: block;
+      margin: 0 auto;
+      width: 100%; }
+  .pb-left-column .touchcarousel .touchcarousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; }
+  .pb-left-column .touchcarousel .touchcarousel-item {
+    margin: 0 0 0 0;
+    padding: 0;
+    float: left; }
+    .pb-left-column .touchcarousel .touchcarousel-item.last {
+      margin-right: 0 !important; }
+  .pb-left-column .touchcarousel .arrow-holder {
+    height: 100%;
+    width: 45px;
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    margin-left: -68px;
+    top: 0;
     display: block;
-    padding: 10px 0;
+    cursor: pointer;
+    z-index: 25;
+    display: none; }
+    .pb-left-column .touchcarousel .arrow-holder.left {
+      left: 0; }
+    .pb-left-column .touchcarousel .arrow-holder.right {
+      right: 0; }
+  .pb-left-column .touchcarousel .arrow-icon {
+    width: 45px;
+    height: 90px;
+    top: 50%;
+    margin-top: -45px;
+    position: absolute;
+    cursor: pointer; }
+  .pb-left-column .touchcarousel .arrow-holder.disabled {
+    cursor: default; }
+    .pb-left-column .touchcarousel .arrow-holder.disabled .arrow-icon {
+      cursor: default; }
+  .pb-left-column .touchcarousel .tc-paging-container {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    margin-top: -20px;
+    z-index: 2; }
+  .pb-left-column .touchcarousel .tc-paging-centerer {
+    float: left;
+    position: relative;
+    left: 50%; }
+  .pb-left-column .touchcarousel .tc-paging-centerer-inside {
+    float: left;
+    position: relative;
+    left: -50%; }
+  .pb-left-column .touchcarousel .tc-paging-item {
+    float: left;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    text-indent: -9999px; }
+.pb-left-column #carousel .tc-paging-container {
+  margin-top: -17px; }
+.pb-left-column #carousel .tc-paging-item {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: #704d43;
+  margin-right: 5px; }
+.pb-left-column #carousel .tc-paging-item.current {
+  background-color: #ed6d00; }
+.pb-left-column .goods_img {
+  position: relative; }
+  .pb-left-column .goods_img .touchcarousel .touchcarousel-item {
+    margin-left: 0; }
+    .pb-left-column .goods_img .touchcarousel .touchcarousel-item img {
+      width: 100%; }
+  .pb-left-column .goods_img .goods_num {
     text-align: center;
-    line-height: 22px;
-    color: #777676;
-    width: 136px;
-    text-align: center;
-    font-weight: 700;
-    background: rgba(255, 255, 255, 0.5);
-    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
-    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16); }
-    .pb-left-column #image-block #view_full_size .span_link:after {
-      font-family: "iconfont";
-      color: #c0c0c0;
-      font-size: 20px;
-      line-height: 22px;
-      content: "\f00e";
-      font-weight: normal;
-      margin: 0 0 0 4px; }
-    .pb-left-column #image-block #view_full_size .span_link:hover:after {
-      color: #333; }
-  .pb-left-column #image-block a.jqzoom div div img {
-    width: auto;
-    max-width: 10000px; }
-  .pb-left-column #image-block a.jqzoom div div .zoomWrapper {
-    border: none; }
-  .pb-left-column #image-block .zoomPad {
-    z-index: auto !important; }
-  .pb-left-column #image-block .new-box,
-  .pb-left-column #image-block .sale-box {
-    z-index: 5002; }
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #fff; }
 
 /* miniatures */
 .pb-left-column #views_block {
