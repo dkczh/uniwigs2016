@@ -13,3 +13,4 @@ xhprof_lib/*
 upload/*
 log/*
 apitools/tagedit/complile/*
+apitools/config.php
