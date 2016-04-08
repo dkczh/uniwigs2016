@@ -35,7 +35,7 @@
 		{if $page_name == 'tag'}Shop {$res.title} at uniwigs.com
 		{else}
 			{*customer show  关键词*}
-			{if $cshow}
+			{if isset($cshow)}
 				Customer Show | UniWigs.com -UniWigs ® Official Site
 			{else}
 				{$meta_title|escape:'html':'UTF-8'}
@@ -48,7 +48,7 @@
 			<meta name="keywords" content="{$res.keyword}" />
 		{else}
 			
-			{if $cshow}
+			{if isset($cshow)}
 			<meta name="description" content="Here your can find all the customer show of Uniwigs.com. You can see how others looks like with the hair extension before and after. Also you can find the real evaluation of UNIWIGS by the customers. 
 " />
 			<meta name="keywords" content="hair extensions before and after,customer show,uniwigs customer show" />
