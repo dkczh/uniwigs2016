@@ -125,7 +125,7 @@ var  template = document.getElementById('template').value;
 var  skus = document.getElementById('skus').value;
 var  keyword = document.getElementById('keyword').value;
 var  description = document.getElementById('description').value;
-
+var  title = document.getElementById('title').value;
 var catagory = document.getElementById('id_catagory').value; //定位id
 
 
@@ -138,7 +138,7 @@ tag[3] = skus;
 tag[5] = catagory ;
 tag[6] = keyword;
 tag[7] = description ;
-
+tag[8] = title ;
 
 tag[4] = getAllItemValuesByString(); //获取当前 所有 tags 产品组合
 

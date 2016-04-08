@@ -41,6 +41,12 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label class="control-label col-lg-3 required">Title</label>
+				<div class="col-lg-9 ">
+				<input type="text" name="title" id="title" value="{$r.title}" class="" required="required">
+				</div>
+			</div>
+			<div class="form-group">
 				<label class="control-label col-lg-3 required">Keyword</label>
 				<div class="col-lg-9 ">
 				<input type="text" name="keyword" id="keyword" value="{$r.keyword}" class="" required="required">

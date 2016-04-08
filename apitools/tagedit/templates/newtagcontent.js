@@ -60,6 +60,7 @@ if(name==''){
 var  template = document.getElementById('template').value;
 var  keyword = document.getElementById('keyword').value;
 var  description = document.getElementById('description').value;
+var  title = document.getElementById('title').value;
 var  skus = document.getElementById('skus').value;
 var  catagory = document.getElementById('id_catagory').value; //定位id
 
@@ -71,6 +72,7 @@ tag[1] = template;
 tag[2] = skus;
 tag[5] = keyword;
 tag[6] = description;
+tag[7] = title;
 tag[4] = catagory;
 
 tag[3] = getAllItemValuesByString(); //获取当前 所有 tags 产品组合
