@@ -79,18 +79,18 @@ class TagControllerCore extends FrontController
 		$tagname = $this->tag->name ;
 
 		if($tagid!=''){
-			$res= Db::getInstance()->getRow('select catagory from px_tag_extra where id_tag='.$tagid);
+			$res= Db::getInstance()->getRow('select * from px_tag_extra where id_tag='.$tagid);
 
 			if($res){
-			foreach($res as $a ){
-				$catagory =  $a;
-				
-			}} else{
+		
+				$catagory =  $a['catagory'];
+			} else{
 				$catagory = '';
 			}
 			
 			$this->context->smarty->assign('tagid',$tagid);
 			$this->context->smarty->assign('tagname',$tagname);
+			$this->context->smarty->assign('res',$res);
 			$this->context->smarty->assign('catagory',$catagory);
 		}
 		
