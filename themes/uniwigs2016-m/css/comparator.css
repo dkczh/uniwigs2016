@@ -7,7 +7,7 @@ table#product_comparison tbody tr td.product-block {
   text-align: center; }
 table#product_comparison tbody tr td.td_empty,
 table#product_comparison tbody tr td.feature-name, table#product_comparison tbody tr.comparison_header {
-  background: #fbfbfb;
+  background: #fff;
   color: #333; }
 table#product_comparison tbody tr td.comparison_infos {
   text-align: center; }

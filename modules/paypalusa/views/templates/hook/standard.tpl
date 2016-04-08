@@ -14,8 +14,38 @@
 ** This step is also called IPN ("Instant Payment Notification")
 ** Step 4: The customer is redirected to his/her "Order history" page ("My account" section)
 *}
+<p><a href="#howtopaypal" data-uk-modal>How to Pay with PayPal?</a></p>
+<div id="howtopaypal" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <h2>How to Pay with PayPal?</h2>
+        <div class="std">
+	        <p> </p>
+	        <p>Uniwigs.com makes it simple and convenient to place an order on our site by providing several different payment options including credit or debit cards and paypal.</p>
+	        <p> </p>
+	        <p>Here is the corresponding guide for each method below for you to choose the best option for you.</p>
+	        <p></p>
+	        <p><strong>PayPal</strong></p>
+	        <p><img src="../img/cms/cms/1a.jpg" alt="" width="100%"/></p>
+	        <p><img src="../img/cms/cms/1b.jpg" alt="" width="100%"/></p>
+	        <p><img src="../img/cms/cms/1c.jpg" alt="" width="100%"/></p>
+	        <br />
+	        <p><strong>Credit or Debit Card</strong></p>
+	        <p>Paying by credit or debit card is simple and safe. All your credit or debit card details are securely stored by GlobalCollect and uniwigs.com. Therefore, should any issues arise regarding your credit or debit card transaction, please contact GlobalCollect or your credit or debit card company for assistance. Uniwigs.com refuse to accept any responsibility for any credit or debit card payment issues.</p>
+	        <br />
+	        <p>We currently accept Visa, Mastercard and American Express credit card payments from most locations worldwide.</p>
+	        <br />
+	        <p>Using Your Credit Card or Debit Card</p>
+	        <p>1. On your Shopping Cart page, click <img title="Uniwigs.com checkout" src="../img/cms/cms/credit-card-authorized.jpg" alt="Uniwigs.com checkout" /> after reviewing your items.</p>
+	        <p>2. On the Order Information page, under Payment Methods, select Credit Card/Debit Card.</p>
+	        <p>3. Fill in the required information carefully.</p>
+	        <p>4. After checking your payment details, click <img title="Uniwigs.com checkout" src="../img/cms/cms/credit-card-authorized.jpg" alt="Uniwigs.com checkout" /></p>
+	        <p> </p>
+        </div>
+    </div>
+</div>
 <form action="{$paypal_usa_action|escape:'htmlall':'UTF-8'}" method="post">
-	<p class="payment_module">
+	<p class="payment_module select_payment">
 		<input type="hidden" name="cmd" value="_cart" />
 		<input type="hidden" name="upload" value="1" />
 		<input type="hidden" name="charset" value="utf8" />
@@ -63,6 +93,6 @@
 		<input type="hidden" name="cancel_return" value="{$paypal_usa_cancel_url|escape:'htmlall':'UTF-8'}" />
 		<input type="hidden" name="no_shipping" value="1" />
 		<input type="hidden" name="bn" value="PrestashopUS_Cart" />
-		<input id="paypal-standard-btn" type="image" name="submit" src="/img/horizontal.jpg" alt="" style="vertical-align: middle; margin-right: 10px;" /> {l s='Pay with PayPal.' mod='paypalusa'} <a href="/content/1-payment">How to Pay with PayPal?</a>
+		<input id="paypal-standard-btn" type="image" name="submit" src="/img/horizontal.jpg" alt="" style="vertical-align: middle;"/> {l s='Pay with PayPal.' mod='paypalusa'}
 	</p>
 </form>

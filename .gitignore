@@ -7,3 +7,9 @@ classes/log/*
 themes/uniwigs2016/.sass-cache/*
 themes/uniwigs2016-m/.sass-cache/*
 themes/vivid/.sass-cache/*
+config/*
+xhprof_html/*
+xhprof_lib/*
+upload/*
+log/*
+apitools/tagedit/complile/*

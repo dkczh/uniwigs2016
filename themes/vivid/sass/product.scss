@@ -744,10 +744,12 @@ span.view_scroll_spacer {
 		        padding-right: 5px;
 		    }
 		}
-		&:nth-child(3){
+		&:nth-child(4){
+			padding-right: 0;
+			margin-right: 0;
 	    	&:before {
 		        font-family: $font-icon;
-		        content: "\f072";
+		        content: "\f059";
 		        padding-right: 5px;
 		    }
 		}
@@ -1042,7 +1044,7 @@ table.table-product-discounts{
 		font-size: 26px;
 		line-height: 28px;
 	}
-	.price {
+	.now_sprice {
 		font-weight: 600;
 		font-size: 20px;
 		line-height: 32px;

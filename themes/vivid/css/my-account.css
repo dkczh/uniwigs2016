@@ -5,9 +5,6 @@
   width: 33.33333%;
   float: left;
   padding: 10px; }
-  @media (max-width: 480px) {
-    #my-account ul.myaccount-link-list li {
-      width: 100%; } }
   #my-account ul.myaccount-link-list li a {
     display: block;
     overflow: hidden;

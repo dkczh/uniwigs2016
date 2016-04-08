@@ -226,7 +226,7 @@
 		<p>Talk with Uniwigs:</p>
 		<a href="/livechat/chat.php" rel="nofollow" target="_blank" class="chat-now">Chat Now</a>
 		<h5>General inquiries:</h5>
-		<p>Email: <a href="mailto:support@uniwigs.com">Support@upriseart.com</a></p>
+		<p>Email: <a href="mailto:support@uniwigs.com">Support@uniwigs.com</a></p>
 		</div>
 	</div>
 </div>

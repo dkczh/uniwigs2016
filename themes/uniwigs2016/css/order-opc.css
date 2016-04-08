@@ -60,6 +60,28 @@
     margin-bottom: 30px; }
   #order-opc .order-price-box .price {
     text-align: right; }
+  #order-opc #click_authorizeaim {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 60px; }
+  #order-opc .select_payment {
+    cursor: pointer; }
+    #order-opc .select_payment:before {
+      font-family: "FontAwesome";
+      content: "\f00c";
+      font-size: 1.8em;
+      padding-right: 15px;
+      color: #CCC;
+      float: left;
+      margin-top: 23px; }
+    #order-opc .select_payment.selected_click {
+      border-color: #A3A3A3;
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+      cursor: default; }
+      #order-opc .select_payment.selected_click:before {
+        color: #57AE39; }
 
 #new_account_form .id_state,
 #new_account_form .dni,

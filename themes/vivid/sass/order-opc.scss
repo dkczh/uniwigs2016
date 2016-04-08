@@ -7,31 +7,17 @@
 
 #order-opc {
 	line-height: 20px;
+	.breadcrumb{display: none;}
 	.box {
 		padding-bottom: 20px;
 	}
 	.cart_navigation {
 		margin-bottom: 53px;
 	}
-	.page-heading.step-num {
-		position: relative;
-		padding-left: 35px;
-		overflow: visible;
-		span {
-			font-weight: bold;
-			font-size: 34px;
-			line-height: 51px;
-			font-style: italic;
-			color: $base-text-color;
-			position: absolute;
-			left: 0;
-			top: -14px;
-		}
-	}
 	.form-group {
 		margin-bottom: 2px;
 			.form-control {
-				max-width: 271px;
+				max-width: 350px;
 				margin-right: 5px;
 			}
 			span{
@@ -45,6 +31,14 @@
 		margin: 5px 0 14px;
 		&:hover {
 			text-decoration: none;
+		}
+	}
+	.delivery_options_address td:nth-child(2){width:150px}
+	.order-advisory {
+		font-size: 14px;
+		a{
+			border-bottom: 1px solid #24325e;
+			color: #24325e;
 		}
 	}
 	.title_block {
@@ -72,7 +66,6 @@
 	}
 	#opc_payment_methods {
 		margin-bottom: 30px;
-		float:right;
 		p.warning{
 			color: #E0287D;
 			font-weight: 700;
@@ -86,6 +79,36 @@
 	}
 	#address_invoice_form.form-group {
 		margin-bottom: 30px;
+	}
+	.order-price-box .price{
+		text-align: right;
+	}
+	#click_authorizeaim{
+		display: block;
+		text-decoration: none;
+		font-weight: bold;
+		margin-bottom:30px;
+		line-height: 60px;
+	}
+	.select_payment{
+		cursor: pointer;
+		&:before {
+		    font-family: $font-icon;
+		    content: "\f00c";
+		    font-size: 1.8em;
+		    padding-right: 15px;
+		    color: #CCC;
+		    float: left;
+		    margin-top: 23px;
+		}
+		&.selected_click {
+		    border-color: #A3A3A3;
+		    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+		    cursor: default;
+		    &:before {
+		        color: #57AE39;
+		    }
+		}
 	}
 }
 

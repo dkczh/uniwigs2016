@@ -40,15 +40,15 @@
 // Variables
 // ========================================================================
 
-$button-height:                                  30px !default;
+$button-height:                                  40px !default;
 $button-mini-height:                             25px !default;
 $button-small-height:                            32px !default;
-$button-large-height:                            40px !default;
+$button-large-height:                            48px !default;
 
-$button-line-height:                             30px !default;
+$button-line-height:                             40px !default;
 $button-mini-line-height:                        25px !default;
 $button-small-line-height:                       32px !default;
-$button-large-line-height:                       40px !default;
+$button-large-line-height:                       48px !default;
 
 $button-mini-font-size:                          11px !default;
 $button-small-font-size:                         12px !default;
@@ -137,6 +137,7 @@ $button-link-disabled-color:                     #999 !default;
     overflow: visible;
     /* 5 */
     font: inherit;
+    font-size:$button-large-font-size;
     color: $button-color;
     /* 6 */
     text-transform: none;
