@@ -32,7 +32,7 @@
 	<meta charset="utf-8" />
 		<title>
 		{*tag 关键词*}
-		{if $page_name == 'tag'}Shop {$res.title} at uniwigs.com
+		{if $page_name == 'tag'}{$res.title}
 		{else}
 			{*customer show  关键词*}
 			{if isset($cshow)}
@@ -44,7 +44,7 @@
 		{/if}
 		</title>
 		{if $page_name == 'tag'}
-			<meta name="description" content="Find the most suitable {$res.description} with Uniwigs.com, shop for most natural and light weight  {$tagname} at uniwigs online store." />
+			<meta name="description" content="{$res.description}" />
 			<meta name="keywords" content="{$res.keyword}" />
 		{else}
 			
