@@ -83,7 +83,7 @@ class TagControllerCore extends FrontController
 
 			if($res){
 		
-				$catagory =  $a['catagory'];
+				$catagory =  $res['catagory'];
 			} else{
 				$catagory = '';
 			}
