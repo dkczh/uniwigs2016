@@ -9,10 +9,10 @@
 */
 
 //define('DB_PDO', 'mysql:host=localhost;dbname=prestashop-run');
-define('DB_PDO', 'mysql:host=localhost;dbname=uniwigs2016test');
+define('DB_PDO', 'mysql:host=localhost;dbname=uniwigs2016');
 
 define('DB_USER', 'root');
-define('DB_PASSWD', 'root');
+define('DB_PASSWD', 'rootadmin123');
 define('COOKIE_KEY', 'mNvwaihaYOXxqi071OeZ57X8bF1Hmjrt4tNRc6eSI7rHqnZSKX9h012p');
 define('TAG_CURL', '/apitools/tagedit');
 
