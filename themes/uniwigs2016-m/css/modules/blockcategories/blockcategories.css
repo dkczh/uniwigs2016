@@ -61,7 +61,7 @@
     right: 0;
     top: 0;
     cursor: pointer;
-    font-family: "FontAwesome";
+    font-family: "iconfont";
     font-size: 14px; }
     #categories_block_left li span.grower.OPEN:before, #categories_block_left li span.grower.CLOSE:before {
       content: "\f068";
@@ -84,7 +84,7 @@
     color: #777777; }
     #categories_block_left li li a:before {
       content: "\f105";
-      font-family: "FontAwesome";
+      font-family: "iconfont";
       line-height: 29px;
       padding-right: 8px; }
 

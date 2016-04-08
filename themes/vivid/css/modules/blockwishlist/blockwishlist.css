@@ -3,9 +3,6 @@
   margin: 0 0 0 15px;
   outline: 0;
   cursor: pointer; }
-  @media (max-width: 479px) {
-    #wishlist_button, #wishlist_button_nopop {
-      margin: 0; } }
   #wishlist_button:before, #wishlist_button_nopop:before {
     content: "\f08a";
     font: 400 15px/31px "FontAwesome";

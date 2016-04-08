@@ -50,6 +50,28 @@
     margin-bottom: 15px; }
   #order-opc #address_invoice_form.form-group {
     margin-bottom: 30px; }
+  #order-opc #click_authorizeaim {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 60px; }
+  #order-opc .select_payment {
+    cursor: pointer; }
+    #order-opc .select_payment:before {
+      font-family: "iconfont";
+      content: "\e62a";
+      font-size: 1.8em;
+      padding-right: 15px;
+      color: #CCC;
+      float: left;
+      margin-top: 23px;
+      font-weight: bold; }
+    #order-opc .select_payment.selected_click {
+      border: 1px solid #a3a3a3;
+      cursor: default; }
+      #order-opc .select_payment.selected_click:before {
+        color: #57AE39; }
   #order-opc #opc_new_account .register_login {
     overflow: hidden;
     padding: 10px 5px; }

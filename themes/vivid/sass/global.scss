@@ -1908,7 +1908,12 @@ div.star a:hover {
     padding: 10px 0 0;
     margin-top: -40px;
     background: url(../img/public/foot_card.jpg) center left no-repeat;
+    // max 480px
+	@media (max-width: $screen-xs) {
+		margin-top: 0;
+	}
 }
+
 .chat-now:before {
     font-family: 'FontAwesome';
     content: "\f086";
@@ -2277,9 +2282,7 @@ a.price_discount_delete {
 		margin-bottom: 6px;
 	}
 	fieldset {
-		margin-bottom: 10px;
 		#discount_name {
-			float: left;
 			width: 219px;
 			margin-right: 11px;
 		}

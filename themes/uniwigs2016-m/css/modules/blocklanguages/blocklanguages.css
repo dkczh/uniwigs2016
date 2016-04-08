@@ -23,7 +23,7 @@
       color: #777777; }
     #languages-block-top div.current:after {
       content: "\f0d7";
-      font-family: "FontAwesome";
+      font-family: "iconfont";
       font-size: 18px;
       line-height: 18px;
       color: #686666;

@@ -72,6 +72,33 @@
 	#address_invoice_form.form-group {
 		margin-bottom: 30px;
 	}
+	#click_authorizeaim{
+		display: block;
+		text-decoration: none;
+		font-weight: bold;
+		margin-bottom:30px;
+		line-height: 60px;
+	}
+	.select_payment{
+		cursor: pointer;
+		&:before {
+		    font-family: $font-icon;
+		    content: "\e62a";
+		    font-size: 1.8em;
+		    padding-right: 15px;
+		    color: #CCC;
+		    float: left;
+		    margin-top: 23px;
+		    font-weight: bold;
+		}
+		&.selected_click {
+		   	border: 1px solid #a3a3a3;
+		    cursor: default;
+		    &:before {
+		        color: #57AE39;
+		    }
+		}
+	}
 	#opc_new_account{
 	.register_login{
 		overflow: hidden;

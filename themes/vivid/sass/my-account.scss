@@ -10,6 +10,9 @@
 			width: 33.33333%;
 		    float: left;
 		    padding: 10px;
+		    @media (max-width: $screen-xs) {  // max 480px
+		    	width:100%;
+		    }
 			a {
 				display: block;
 				overflow: hidden;

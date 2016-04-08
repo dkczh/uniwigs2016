@@ -222,6 +222,9 @@ div.radio {
       background-position: 0 -243px; }
 
 /* Uploader */
+#contact div.uploader {
+  top: 0; }
+
 div.uploader {
   background: none;
   height: 27px;

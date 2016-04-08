@@ -131,7 +131,7 @@ $upload-filename-margin-bottom: 0px !default;
 $upload-filename-margin-left: 0px !default;
 $upload-filename-width: 172px !default;
 $upload-filename-padding: 0 10px !default;
-$upload-height: 44px !default;
+$upload-height: 27px !default;
 $upload-width: 100% !default;
 
 
@@ -540,7 +540,6 @@ div#{$class-wrapper}#{$class-upload} {
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	margin-top:-$upload-height;
 
 	span#{$class-action} {
 		background-position: 0 -378px;

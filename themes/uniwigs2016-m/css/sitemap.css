@@ -9,7 +9,7 @@
   #sitemap .sitemap_block li a:before {
     content: "\f105";
     display: inline-block;
-    font-family: "FontAwesome";
+    font-family: "iconfont";
     padding-right: 10px; }
   #sitemap .sitemap_block li a:hover {
     font-weight: bold; }
@@ -19,7 +19,7 @@
   #listpage_content div.tree_top a:before {
     content: "\f015";
     display: inline-block;
-    font-family: "FontAwesome";
+    font-family: "iconfont";
     font-size: 20px;
     color: #333; }
   #listpage_content div.tree_top a:hover:before {
