@@ -228,55 +228,7 @@ $str.="</url>";
 
 
 
-$str.="
-<url>
-<loc>http://lavivid.uniwigs.com/</loc>
-<lastmod>".date("y-m-d",time())."</lastmod> 
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
--<url>
-<loc>http://lavivid.uniwigs.com/lavivid/41220-lisa-syntheic-wig.html</loc>
-<lastmod>".date("y-m-d",time())."</lastmod> 
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
--<url>
-<loc>http://lavivid.uniwigs.com/lavivid/41211-jenny-synthetic-wig.html</loc>
-<lastmod>".date("y-m-d",time())."</lastmod> 
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
--<url>
-<loc>http://lavivid.uniwigs.com/lavivid/41216-patsy-synthetic-wig.html</loc>
-<lastmod>".date("y-m-d",time())."</lastmod> 
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
--<url>
-<loc>http://lavivid.uniwigs.com/lavivid/41212-carri-synthetic-wig.html</loc>
-<lastmod>".date("y-m-d",time())."</lastmod> 
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
--<url>
-<loc>http://lavivid.uniwigs.com/lavivid/41213-kate-synthetic-wig.html</loc>
-<lastmod>".date("y-m-d",time())."</lastmod> 
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
--<url>
-<loc>http://lavivid.uniwigs.com/lavivid/41215-halle-synthetic-wig.html</loc>
-<lastmod>".date("y-m-d",time())."</lastmod> 
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
--<url>
-<loc>http://lavivid.uniwigs.com/lavivid/41214-liz-synthetic-wig-.html</loc>
-<lastmod>".date("y-m-d",time())."</lastmod> 
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url></urlset>";
+$str.="</urlset>";
 echo $str;
 
 ?>
