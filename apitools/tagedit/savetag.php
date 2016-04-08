@@ -20,6 +20,8 @@ $skus = $tagarr[3];
 
 $catagory = $tagarr[5];
 
+$keyword = $tagarr[6];
+$description = $tagarr[7];
 
 
 
@@ -29,21 +31,22 @@ if($skus==null){
 
 	if($template==null){
 	saveTag($id,$name);
+	savePxTag($id,$template,$skus,$catagory,$keyword,$description);
 		//$sql = " UPDATE ps_tag SET `name`='$tagarr[1]' where id_tag =$tagarr[0] ";
    echo  '恭喜你修改成功id_tag为：'.$tagarr[0].'的name名字为'.$tagarr[1];
 		
 	}
 	else{
 		saveTag($id,$name);
-	    savePxTag($id,$template,$skus,$catagory);
+	    savePxTag($id,$template,$skus,$catagory,$keyword,$description);
 		echo  '恭喜你 修改成功'.$id.'名字'.$name.'template是'.$template;
 	}
 	
 }
 else{
 		saveTag($id,$name);
-		savePxTag($id,$template,$skus,$catagory);
-	echo  '恭喜你修改成功id_tag为：'.$id.'的name名字为：'.$name.'template为：'.$template.'skus为：'.$skus;
+		savePxTag($id,$template,$skus,$catagory,$keyword,$description);
+	echo  '恭喜你修改成功id_tag为：'.$id.'的name名字为：'.$name.'template为：'.$template.'skus为：'.$skus.'keyword为：'.$keyword.'description为：'.$description;
 }
 
 
@@ -54,10 +57,10 @@ function  saveTag($id,$name)
 	$db->query($sql)or die('表ps_tag跟新失败');
 }
 
-function savePxTag($id,$template,$skus,$catagory)
+function savePxTag($id,$template,$skus,$catagory,$keyword,$description)
 {
 	$db = Tool::pdo_conn(DB_PDO,DB_USER,DB_PASSWD); 
-	$sql = " UPDATE px_tag_extra SET `template`='$template' , `skus`='$skus' ,`catagory`='$catagory' where id_tag =$id ";
+	$sql = " UPDATE px_tag_extra SET `template`='$template' , `skus`='$skus' ,`catagory`='$catagory' ,`keyword`='$keyword' ,`description`='$description' where id_tag =$id ";
 	$db->query($sql)or die('表px_tag_extra 更新失败');
 }
 
