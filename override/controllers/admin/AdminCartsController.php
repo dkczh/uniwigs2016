@@ -220,12 +220,12 @@ class AdminCartsController extends AdminCartsControllerCore
 	require_once($mypath.'/apitools/outexcel/Classes/PHPExcel.php');
 	//include 'Classes/PHPExcel.php';
 	require_once($mypath.'/apitools/outexcel/Classes/PHPExcel/Writer/Excel5.php');
-	
-	$this->cartexcel($this->getrenderList(),'export_cart_items_'.time());
-			echo "<pre>";
+		echo "<pre>";
 			var_dump($this->renderListxx());
 			echo "</pre>";
 			exit;
+	$this->cartexcel($this->getrenderList(),'export_cart_items_'.time());
+		
 	/* echo self::$currentIndex; */
 	
 	Tools::redirectAdmin(self::$currentIndex.'&conf=4&token='.$this->token);
