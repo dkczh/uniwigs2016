@@ -37,6 +37,7 @@
 		<th>{$table_list['skus']}</th>
 		
 		<th>action</th>
+		<th>view</th>
     </tr>
     </thead>
     <tbody id= 'tablelist'>
@@ -47,13 +48,14 @@
       <td  id='tag{$r.id_tag}' onclick="document.location = '{$curl}/tagcontent.php?id={$r.id_tag}'">{$r.id_tag}</td>
 	  <td style="width: 200px;" onclick="document.location = '{$curl}/tagcontent.php?id={$r.id_tag}'">{$r.lang}</td>
       <td  onclick="document.location = '{$curl}/tagcontent.php?id={$r.id_tag}'">{$r.name}</td>
+	 
       <td  onclick="document.location = '{$curl}/tagcontent.php?id={$r.id_tag}'">{$r.template|truncate:10:""}</td>
 	  <td  onclick="document.location = '{$curl}/tagcontent.php?id={$r.id_tag}'" >{$r.skus|truncate:30:""}</td>
 	  <td style="width: 100px;">
 	  <button type="button"  onclick="document.location = '{$curl}/tagcontent.php?id={$r.id_tag}'">编辑</button>
 	  <button   type="button" onclick="del('{$r.id_tag}')">删除</button>
 	  </td>
-		
+	<td  onclick="document.location = 'http://www.uniwigs.com/{$r.name|replace:' ':'-'}'">查看</td>
     </tr>  
 	{/foreach}	
 </tbody>
