@@ -1130,3 +1130,32 @@ function checkUrl()
 	}
 	return false;
 }
+
+$(function() {
+	$("#carousel").touchCarousel({
+		itemsPerMove : 1,
+		pagingNav : 1,
+		scrollbar : 0,
+		directionNav : 0,
+		directionNav : false,
+		itemLikeWindowWidth : 1,
+		directionNavAutoHide : false,
+		autoplay : false,
+		directionNav : true,
+		pagingNavControls : true,
+		onAnimComplete : function() {
+			$(".current_index").html(this.getCurrentId() + 1);
+			if ((this.getCurrentId() + 1) == 8) {
+				$(".arrow-holder.right").addClass("disabled");
+			} else {
+				$(".arrow-holder.right").removeClass("disabled");
+			}
+		},
+		onAnimStart : function() {
+			if (this.numItems <= 1) {
+				$(".arrow-holder").css("display", "none");
+				return;
+			}
+		}
+	});
+});
