@@ -108,7 +108,7 @@ class AdminCartsController extends AdminCartsControllerCore
             )
         );
 
-        parent::__construct();
+      //  parent::__construct();
     }
 	
 	
