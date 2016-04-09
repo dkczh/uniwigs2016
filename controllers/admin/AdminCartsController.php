@@ -42,14 +42,32 @@ class AdminCartsControllerCore extends AdminController
         $this->allow_export = true;
         $this->_orderWay = 'DESC';
 
-        $this->_select = 'CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) `customer`, a.id_cart total, ca.name carrier,
+        	/* $this->_where.=' and pl.`id_shop`=1'; */
+		$this->_group='	group by  a.`id_cart`';
+        $this->_select = 'CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) `customer`,
+		c.email,
+		c.`firstname`,
+		c.`lastname`,
+		cpt.`points` creditBalance,
+		crl.`name` coupon ,
+		o.`id_order`,
+		pp.`reference`,
+		pod.`product_name` as name ,
+		cp.`quantity`,
+		a.id_cart total, ca.name carrier,
 		IF (IFNULL(o.id_order, \''.$this->l('Non ordered').'\') = \''.$this->l('Non ordered').'\', IF(TIME_TO_SEC(TIMEDIFF(\''.pSQL(date('Y-m-d H:i:00', time())).'\', a.`date_add`)) > 86400, \''.$this->l('Abandoned cart').'\', \''.$this->l('Non ordered').'\'), o.id_order) AS status, IF(o.id_order, 1, 0) badge_success, IF(o.id_order, 0, 1) badge_danger, IF(co.id_guest, 1, 0) id_guest';
         $this->_join = 'LEFT JOIN '._DB_PREFIX_.'customer c ON (c.id_customer = a.id_customer)
 		LEFT JOIN '._DB_PREFIX_.'currency cu ON (cu.id_currency = a.id_currency)
 		LEFT JOIN '._DB_PREFIX_.'carrier ca ON (ca.id_carrier = a.id_carrier)
 		LEFT JOIN '._DB_PREFIX_.'orders o ON (o.id_cart = a.id_cart)
+		LEFT JOIN '._DB_PREFIX_.'cart_product cp ON (cp.id_cart = a.id_cart)
+		LEFT JOIN '._DB_PREFIX_.'product_lang pl ON (pl.id_product = cp.id_product)
+		LEFT JOIN ps_product pp ON (pp.id_product = cp.id_product)
+		LEFT JOIN ps_order_detail pod on (pod.product_id=cp.id_product)
+		LEFT JOIN ps_order_cart_rule ocl on (ocl.id_order=o.id_order)
+		LEFT JOIN ps_cart_rule_lang  crl on (crl.id_cart_rule=ocl.id_cart_rule)
+		LEFT JOIN px_customer_point cpt on (c.id_customer=cpt.id_customer)
 		LEFT JOIN `'._DB_PREFIX_.'connections` co ON (a.id_guest = co.id_guest AND TIME_TO_SEC(TIMEDIFF(\''.pSQL(date('Y-m-d H:i:00', time())).'\', co.`date_add`)) < 1800)';
-
         if (Tools::getValue('action') && Tools::getValue('action') == 'filterOnlyAbandonedCarts') {
             $this->_having = 'status = \''.$this->l('Abandoned cart').'\'';
         } else {
@@ -117,9 +135,9 @@ class AdminCartsControllerCore extends AdminController
 
     public function initPageHeaderToolbar()
     {
-        if (empty($this->display)) {
+         if (empty($this->display)) {
             $this->page_header_toolbar_btn['export_cart'] = array(
-                'href' => self::$currentIndex.'&exportcart&token='.$this->token,
+                'href' => self::$currentIndex.'&test=export&token='.$this->token,
                 'desc' => $this->l('Export carts', null, null, false),
                 'icon' => 'process-icon-export'
             );
