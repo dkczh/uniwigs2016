@@ -55,7 +55,7 @@
 	  <button type="button"  onclick="document.location = '{$curl}/tagcontent.php?id={$r.id_tag}'">编辑</button>
 	  <button   type="button" onclick="del('{$r.id_tag}')">删除</button>
 	  </td>
-	<td  onclick="document.location = 'http://www.uniwigs.com/{$r.name|replace:' ':'-'}'">查看</td>
+	<td  onclick="document.location = 'http://www.uniwigs.com/tag/{$r.name|replace:' ':'-'}'">查看</td>
     </tr>  
 	{/foreach}	
 </tbody>
