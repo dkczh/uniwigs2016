@@ -127,6 +127,7 @@
 			{if isset($toolbar_btn) && count($toolbar_btn) >0}
 				<span class="badge">{$list_total}</span>
 				<span class="panel-heading-action">
+				{* 列表页面 导出*}
 				{foreach from=$toolbar_btn item=btn key=k}
 					{if $k != 'modules-list' && $k != 'back'}
 						<a id="desc-{$table}-{if isset($btn.imgclass)}{$btn.imgclass}{else}{$k}{/if}" class="list-toolbar-btn{if isset($btn.target) && $btn.target} _blank{/if}"{if isset($btn.href)} href="{$btn.href|escape:'html':'UTF-8'}"{/if}{if isset($btn.js) && $btn.js} onclick="{$btn.js}"{/if}>
