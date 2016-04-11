@@ -297,7 +297,172 @@ class ProductControllerCore extends FrontController
         }
         $this->setTemplate(_PS_THEME_DIR_.'product.tpl');
     }
+	
+	/**
+     * Assign google js to the template
+     */
+	protected function assignGoogle(){
+		
+		$google= "<script type=\"text/javascript\">
+		//产品页面 的谷歌事件添加
 
+//添加到 心愿单 <p class=\"buttons_bottom_block no-print\"> 增加 id=\"add_to_wishlist\"
+$('#add_to_wishlist').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'add_to_wishlist',sku, {
+	   
+	  });
+	});
+
+});
+
+//添加到购物车
+$('#add_to_cart').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'add_to_cart',sku, {
+	   
+	  });
+	});
+
+});
+
+//review product  暂无
+
+//<span class=\"span_link no-print\">View larger</span>  为此增加 id=\"view_product_larger\"
+$('#view_product_larger').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'view_product_larger',sku, {
+	   
+	  });
+	});
+
+});
+
+// 查看特殊产品  
+
+
+$('#Product_Specifications_product').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'Product_Specifications_product',sku, {
+	   
+	  });
+	});
+
+});
+
+//查看 Wear_Care_product    增加id
+$('#Wear_Care_product').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'Wear_Care_product',sku, {
+	   
+	  });
+	});
+
+});
+
+
+//Shipping_Return_product  
+$('#Shipping_Return_product').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'Shipping_Return_product',sku, {
+	   
+	  });
+	});
+
+});
+//FAQ_product
+$('#FAQ_product').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'FAQ_product',sku, {
+	   
+	  });
+	}); 
+
+});
+//Feature_product  
+$('#Feature_product').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'Feature_product',sku, {
+	   
+	  });
+	}); 
+
+});
+
+//Description_product  
+$('#Description_product').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'Description_product',sku, {
+	   
+	  });
+	}); 
+
+});
+
+//you_may_also_like_product 
+$('#you_may_also_like_product').click(function(){ 
+	sku = $('#product_reference span').html();
+	ga(function(tracker) {
+	//cartaction 事件分类 比如购物车
+	//click 事件行为  增加产品  或者 delete 去除产品
+	//eventLabel	字符串	否	用于对事件进行分类（例如 'Fall Campaign'）
+	//eventValue	数字	否	与事件相关的数值（例如 42）
+	  tracker.send('event', 'product_detail', 'you_may_also_like_product',sku, {
+	   
+	  });
+	}); 
+
+});</script>";
+	
+	return 
+	}
+	
+	
     /**
      * Assign price and tax to the template
      */
