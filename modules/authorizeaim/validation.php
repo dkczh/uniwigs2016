@@ -63,27 +63,55 @@ if (!Validate::isLoadedObject($customer) || !Validate::isLoadedObject($invoiceAd
 	die('An unrecoverable error occured while retrieving you data');
 }
 
+$deliveryAddress = new Address((int)$cart->id_address_delivery);
+if (!Validate::isLoadedObject($deliveryAddress))
+{
+	Logger::addLog('Issue loading delivery address');
+	die('An unrecoverable error occured while retrieving you data');
+}
+
 $params = array(
 	'x_test_request' => (bool)Configuration::get('AUTHORIZE_AIM_TEST_MODE'),
 	'x_invoice_num' => (int)$_POST['x_invoice_num'],
 	'x_amount' => number_format((float)$cart->getOrderTotal(true, 3), 2, '.', ''),
-	'x_exp_date' => Tools::safeOutput($_POST['x_exp_date_m'].$_POST['x_exp_date_y']),
+	'x_first_name' => Tools::safeOutput($customer->firstname), //Required only when using a European Payment Processor.  Format: Up to 50 characters (no symbols)
+	'x_last_name' => Tools::safeOutput($customer->lastname), //Required only when using a European Payment Processor.  Format: Up to 50 characters (no symbols)
+	//'x_company' => '', //Optional  Format: Up to 50 characters (no symbols)
 	'x_address' => Tools::safeOutput($invoiceAddress->address1.' '.$invoiceAddress->address2),
-	'x_zip' => Tools::safeOutput($invoiceAddress->postcode),
-	'x_first_name' => Tools::safeOutput($customer->firstname),
-	'x_last_name' => Tools::safeOutput($customer->lastname),
+	'x_city' => Tools::safeOutput($invoiceAddress->city), //Required only when using a European Payment Processor.  Format: Up to 40 characters (no symbols)
+	//'x_state' => Tools::safeOutput($invoiceAddress->state), //Required only when using a European Payment Processor.  Format: Up to 40 characters (no symbols) or a valid two-character state code
+	'x_zip' => Tools::safeOutput($invoiceAddress->postcode), //Required only when using a European Payment Processor.  Format: Up to 20 characters (no symbols) Required if the merchant would like to use the Address Verification Service security feature.
+	'x_country' => Tools::safeOutput($invoiceAddress->country), //Required only when using a European Payment Processor.  Format: Up to 60 characters (no symbols)
+	//'x_phone' => '', //Optional  Format: Up to 25 digits (no letters). For example, (123)123-1234
+	//'x_fax' => '', //Optional  Format: Up to 25 digits (no letters). For example, (123)123-1234
+	//'x_email' => '', //Required only when using a European Payment Processor.  Format: Up to 255 characters. For example, janedoe@customer.com
+	//'x_cust_id' => '', //Optional  Format: Up to 20 characters (no symbols)
+	//'x_customer_ip' => '', //Optional  Format: Up to 15 characters (no letters). For example, 255.255.255.255
+	'x_ship_to_first_name' => Tools::safeOutput($deliveryAddress->firstname),
+	'x_ship_to_last_name' => Tools::safeOutput($deliveryAddress->lastname),
+	//'x_ship_to_company' => '',
+	'x_ship_to_address' => Tools::safeOutput($deliveryAddress->address1.($deliveryAddress->address2?(' '.$deliveryAddress->address2):'')),
+	'x_ship_to_city' => Tools::safeOutput($deliveryAddress->city),
+	//'x_ship_to_state' => Tools::safeOutput($deliveryAddress->state),
+	'x_ship_to_zip' => Tools::safeOutput($deliveryAddress->postcode),
+	'x_ship_to_country' => Tools::safeOutput($deliveryAddress->country),
+
 	'x_version' => '3.1',
 	'x_delim_data' => true,
 	'x_delim_char' => '|',
 	'x_relay_response' => false,
-	'x_type' => 'AUTH_CAPTURE',
 	'x_currency_code' => $currency->iso_code,
 	'x_method' => 'CC',
 	'x_solution_id' => 'A1000006',
 	'x_login' => Tools::safeOutput(Configuration::get('AUTHORIZE_AIM_LOGIN_ID_'.$currency->iso_code)),
 	'x_tran_key' => Tools::safeOutput(Configuration::get('AUTHORIZE_AIM_KEY_'.$currency->iso_code)),
+
+	//'x_type' => 'AUTH_ONLY',
+	'x_type' => 'AUTH_CAPTURE',
+
 	'x_card_num' => Tools::safeOutput($_POST['x_card_num']),
 	'x_card_code' => Tools::safeOutput($_POST['x_card_code']),
+	'x_exp_date' => Tools::safeOutput($_POST['x_exp_date_m'].$_POST['x_exp_date_y']),
 );
 
 $postString = '';
@@ -113,30 +141,7 @@ if (!isset($response[7]) || !isset($response[3]) || !isset($response[9]))
 }
 
 $message = $response[3];
-// $payment_method = 'Authorize.net AIM (Advanced Integration Method)';
-$payment_method = $authorizeaim->displayName;
-
-if ($response[0]==1 || $response[0]==4) {
-	if (isset($response[6])) {
-		$message .= 'Transaction ID: '.$response[6].'
-		';
-	}
-	if (isset($response[50]) && isset($response[51]) && isset($response[68])) {
-		$message .= 'Card number: '.$response[50].'
-		Card Mark: '.$response[51].'
-		Owner name: '.$response[68].'
-		';
-	}
-}
-
-$extra_vars = null;
-if ($response[0]==1 || $response[0]==4) {
-	if (isset($response[6])) {
-		$extra_vars = array(
-			'transaction_id' => $response[6],
-		);
-	}
-}
+$payment_method = 'Authorize.net AIM (Advanced Integration Method)';
 
 switch ($response[0]) // Response code
 {
@@ -144,16 +149,13 @@ switch ($response[0]) // Response code
 		$authorizeaim->setTransactionDetail($response);
 		$authorizeaim->validateOrder((int)$cart->id,
 			Configuration::get('PS_OS_PAYMENT'), (float)$response[9],
-			$payment_method, $message, $extra_vars, NULL, false, $customer->secure_key);
+			$payment_method, $message, NULL, NULL, false, $customer->secure_key);
 		break ;
 
 	case 4: // Hold for review
-		// $authorizeaim->validateOrder((int)$cart->id,
-		// 	Configuration::get('AUTHORIZE_AIM_HOLD_REVIEW_OS'), (float)$response[9],
-		// 	$authorizeaim->displayName, $response[3], NULL, NULL, false, $customer->secure_key);
 		$authorizeaim->validateOrder((int)$cart->id,
 			Configuration::get('AUTHORIZE_AIM_HOLD_REVIEW_OS'), (float)$response[9],
-			$payment_method, $message, $extra_vars, NULL, false, $customer->secure_key);
+			$authorizeaim->displayName, $response[3], NULL, NULL, false, $customer->secure_key);
 		break ;
 
 	default:
@@ -181,4 +183,3 @@ if (_PS_VERSION_ < '1.5')
 	
 $auth_order = new Order($authorizeaim->currentOrder);
 Tools::redirect($url.'id_module='.(int)$authorizeaim->id.'&id_cart='.(int)$cart->id.'&key='.$auth_order->secure_key);
-
