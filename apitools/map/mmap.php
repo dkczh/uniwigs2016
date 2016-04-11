@@ -34,157 +34,157 @@ $str = '<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 $str.= "<url>
 <loc>http://m.uniwigs.com/</loc>
-<lastmod>".date("d-m-y",time())."</lastmod>
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
 <url>
 <loc>http://m.uniwigs.com/102-human-hair-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40452-human-hair-lace-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40453-celebrity-hairstyles</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40446-full-lace-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40447-lace-front-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40448-glueless-full-lace-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40449-monofilament-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40450-silk-top-lace-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40451-jewish-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/101-synthetic-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40455-classic-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40459-trendy-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40456-clearance-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/103-hair-extensions</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/108-clip-in-hair-extensions</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40439-flip-in-hair-extensions</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40457-ombre-hair-extensions</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/104-hair-pieces</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/40458-mono-hair-pieces</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/112-ponytails</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/110-bangs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/111-half-wigs</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/116-top-hairpieces</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/105-care-products</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 -<url>
 <loc>http://m.uniwigs.com/customer-show</loc>
-<lastmod>".date("d-m-y",time())."</lastmod> 
+<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod> 
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url> ";
@@ -193,7 +193,7 @@ $str.= "<url>
 /* foreach ($catares as $a){
 $str.="<url>";
 $str.="<loc>".$a['link']."</loc>";
-$str.="<lastmod>".date("d-m-y",time())."</lastmod>";
+$str.="<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod>";
 $str.="<changefreq>daily</changefreq>";
 $str.="<priority>0.9</priority>";
 $str.="</url>";
@@ -202,7 +202,7 @@ $str.="</url>";
 foreach($tagres as $a ){
 $str.="<url>";
 $str.="<loc>http://m.uniwigs.com/tag/".str_replace(" ", "-",$a['name'])."</loc>";
-$str.="<lastmod>".date("d-m-y",time())."</lastmod>";
+$str.="<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod>";
 $str.="<changefreq>daily</changefreq>";
 $str.="<priority>0.9</priority>";
 $str.="</url>";	
@@ -212,7 +212,7 @@ $str.="</url>";
 foreach ($res as $a){
 $str.="<url>";
 $str.="<loc>".$a['link']."</loc>";
-$str.="<lastmod>".date("d-m-y",time())."</lastmod>";
+$str.="<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod>";
 $str.="<changefreq>daily</changefreq>";
 $str.="<priority>0.8</priority>";
 $str.="</url>";
