@@ -3202,6 +3202,13 @@ class AdminControllerCore extends Controller
                 $this->_list_error = Db::getInstance()->getMsgError();
                 break;
             }
+            
+            //自定义购物车 数据统计条目
+    		if($sql_table=='cart'){
+			$list_count=str_replace("COUNT(*)", "COUNT(DISTINCT a.id_cart )",$list_count);
+			$list_count=str_replace("group by  a.`id_cart`", " ",$list_count);
+			
+			}
 
             $this->_listTotal = Db::getInstance()->getValue($list_count, false);
 

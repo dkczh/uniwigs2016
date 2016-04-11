@@ -44,7 +44,7 @@ $sql = " SELECT SQL_CALC_FOUND_ROWS a.* ,l.name as lang ,count(pt.id_product) as
 	 $products =$a['products'];
 	 
 	 $skus =substr($a['skus'],0,27);
-	 
+	 $myname = str_replace(' ','-',$name);
 	 $template =substr($a['template'],0,12);
 
 $str.=<<<EOT
@@ -59,6 +59,7 @@ $str.=<<<EOT
 	  <button type="button"  onclick="document.location = '$curl/tagcontent.php?id=$id_tag'">编辑</button>
 	  <button   type="button" onclick="del('$id_tag')">删除</button>
 	  </td>
+	  	<td  onclick="document.location = 'http://www.uniwigs.com/tag/$myname'">查看</td>
 		
     </tr> 
 EOT;
