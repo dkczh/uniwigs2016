@@ -144,7 +144,7 @@
 				<h4>{l s='SERVICE' mod='blockcms'}</h4>
 				<ul class="toggle-footer">
 					<li class="item">
-						<a href="{$base_dir}">Coupons</a>
+						<a href="{$base_dir}content/38-uniwigs-coupon-codes">Coupons</a>
 					</li>
 					<li class="item">
 						<a href="{$base_dir}content/17-determine-your-wig-size">Wigs Size</a>
