@@ -238,7 +238,8 @@ class ProductControllerCore extends FrontController
 
             // Assign attributes combinations to the template
             $this->assignAttributesCombinations();
-
+			
+			$this->assignGoogleJs();
             // Pack management
             $pack_items = Pack::isPack($this->product->id) ? Pack::getItemTable($this->product->id, $this->context->language->id, true) : array();
             $this->context->smarty->assign('packItems', $pack_items);
@@ -301,7 +302,7 @@ class ProductControllerCore extends FrontController
 	/**
      * Assign google js to the template
      */
-	protected function assignGoogle(){
+	protected function assignGoogleJs(){
 		
 		$google= "<script type=\"text/javascript\">
 		//产品页面 的谷歌事件添加
@@ -459,7 +460,7 @@ $('#you_may_also_like_product').click(function(){
 
 });</script>";
 	
-	return 
+	 $this->context->smarty->assign('googleJs', $google);
 	}
 	
 	
