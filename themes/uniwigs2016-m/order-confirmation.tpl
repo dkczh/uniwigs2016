@@ -44,3 +44,13 @@
 	<a class="button-exclusive btn btn-default" href="{$link->getPageLink('history', true)|escape:'html':'UTF-8'}" title="{l s='Go to your order history page'}"><i class="icon-chevron-left"></i>{l s='View your order history'}</a>
 </p>
 {/if}
+{literal}
+<script>
+	ga(function(tracker) {
+	
+	  tracker.send('event', 'page_payment_return', 'view','success', {
+	   
+	  });
+	});
+</script>
+{/literal}

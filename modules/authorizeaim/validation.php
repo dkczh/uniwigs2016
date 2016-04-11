@@ -63,13 +63,6 @@ if (!Validate::isLoadedObject($customer) || !Validate::isLoadedObject($invoiceAd
 	die('An unrecoverable error occured while retrieving you data');
 }
 
-$deliveryAddress = new Address((int)$cart->id_address_delivery);
-if (!Validate::isLoadedObject($deliveryAddress))
-{
-	Logger::addLog('Issue loading delivery address');
-	die('An unrecoverable error occured while retrieving you data');
-}
-
 $params = array(
 	'x_test_request' => (bool)Configuration::get('AUTHORIZE_AIM_TEST_MODE'),
 	'x_invoice_num' => (int)$_POST['x_invoice_num'],
@@ -141,7 +134,30 @@ if (!isset($response[7]) || !isset($response[3]) || !isset($response[9]))
 }
 
 $message = $response[3];
-$payment_method = 'Authorize.net AIM (Advanced Integration Method)';
+// $payment_method = 'Authorize.net AIM (Advanced Integration Method)';
+$payment_method = $authorizeaim->displayName;
+
+if ($response[0]==1 || $response[0]==4) {
+	if (isset($response[6])) {
+		$message .= 'Transaction ID: '.$response[6].'
+		';
+	}
+	if (isset($response[50]) && isset($response[51]) && isset($response[68])) {
+		$message .= 'Card number: '.$response[50].'
+		Card Mark: '.$response[51].'
+		Owner name: '.$response[68].'
+		';
+	}
+}
+
+$extra_vars = null;
+if ($response[0]==1 || $response[0]==4) {
+	if (isset($response[6])) {
+		$extra_vars = array(
+			'transaction_id' => $response[6],
+		);
+	}
+}
 
 switch ($response[0]) // Response code
 {
@@ -149,13 +165,16 @@ switch ($response[0]) // Response code
 		$authorizeaim->setTransactionDetail($response);
 		$authorizeaim->validateOrder((int)$cart->id,
 			Configuration::get('PS_OS_PAYMENT'), (float)$response[9],
-			$payment_method, $message, NULL, NULL, false, $customer->secure_key);
+			$payment_method, $message, $extra_vars, NULL, false, $customer->secure_key);
 		break ;
 
 	case 4: // Hold for review
+		// $authorizeaim->validateOrder((int)$cart->id,
+		// 	Configuration::get('AUTHORIZE_AIM_HOLD_REVIEW_OS'), (float)$response[9],
+		// 	$authorizeaim->displayName, $response[3], NULL, NULL, false, $customer->secure_key);
 		$authorizeaim->validateOrder((int)$cart->id,
 			Configuration::get('AUTHORIZE_AIM_HOLD_REVIEW_OS'), (float)$response[9],
-			$authorizeaim->displayName, $response[3], NULL, NULL, false, $customer->secure_key);
+			$payment_method, $message, $extra_vars, NULL, false, $customer->secure_key);
 		break ;
 
 	default:

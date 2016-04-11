@@ -87,7 +87,7 @@
 			</ul>
 		</div>
 	</div> <!-- end row -->
-	<p class="address_add box submit">
+	<p id="shopping_address_add" class="address_add box submit">
 		<a href="{$link->getPageLink('address', true, NULL, "back={$back_order_page}?step=1{if $back}&mod={$back}{/if}")|escape:'html':'UTF-8'}" title="{l s='Add'}" class="uk-button">
 			<span>{l s='Add a new address'}<i class="icon-chevron-right right"></i></span>
 		</a>

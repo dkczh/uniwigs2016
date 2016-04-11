@@ -45,7 +45,7 @@
     </div>
 </div>
 <form action="{$paypal_usa_action|escape:'htmlall':'UTF-8'}" method="post">
-	<p class="payment_module select_payment">
+	<p id="paypal" class="payment_module select_payment">
 		<input type="hidden" name="cmd" value="_cart" />
 		<input type="hidden" name="upload" value="1" />
 		<input type="hidden" name="charset" value="utf8" />

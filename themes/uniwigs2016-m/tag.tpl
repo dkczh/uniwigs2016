@@ -121,3 +121,13 @@
 {addJsDef comparator_max_item=$comparator_max_item}
 {addJsDef comparedProductsIds=$compared_products}
 {/if}
+{literal}
+<script>
+ga(function(tracker) {
+	  url =window.location.href;
+	  tracker.send('event', 'page_tag', 'view',url, {
+	   
+	  });
+	});
+</script>
+{/literal}
