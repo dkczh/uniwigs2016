@@ -123,13 +123,18 @@ class ProductAssociations extends Module
 				//获取数组
 				$assoc['items'][] = explode(':', $item);
 				
-				
-				foreach($assoc['items'][0] as $a){
-					if($this->getlink($a)){
-					$a=$this->getlink($a);
+				$i=0;
+				foreach($assoc['items'] as $a){
+					
+					if($this->getlink($a[0])){
+					 $assoc['items'][$i][0]=$this->getlink($a[0]);
 					}
+				
+				 $i++;
 					
 				}
+				
+		
 				
 				
 			}
