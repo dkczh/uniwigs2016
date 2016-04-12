@@ -120,7 +120,18 @@ class ProductAssociations extends Module
 			$assoc['items'] = array();
 			$arr = explode(',', $assoc['skus']);
 			foreach ($arr as $item) {
+				//获取数组
 				$assoc['items'][] = explode(':', $item);
+				
+				
+				foreach($assoc['items'] as $a){
+					if($this->getlink($a)){
+					$a=$this->getlink($a);
+					}
+					
+				}
+				
+				
 			}
 		}
 
@@ -132,6 +143,23 @@ class ProductAssociations extends Module
 			return $this->display(__FILE__, 'associations.tpl');
 
 		return '';
+	}
+	
+	public function getlink($a){
+		
+	$res = Db::getInstance()->getRow("select CONCAT('/',cl.link_rewrite,'/',pl.id_product,'-',pl.link_rewrite) as link from  ps_product_lang  pl
+						LEFT JOIN ps_product p on pl.id_product=p.id_product
+						left JOIN ps_category_lang cl on cl.id_category=p.id_category_default
+						where p.reference = '$a'
+						GROUP BY pl.id_product");
+	if($res){
+			return $res['link'];
+		}
+		else{
+			return  false;
+		}
+	
+
 	}
 
 }
