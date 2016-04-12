@@ -127,7 +127,9 @@ class ProductAssociations extends Module
 				foreach($assoc['items'] as $a){
 					
 					if($this->getlink($a[0])){
-					 $assoc['items'][$i][0]=$this->getlink($a[0]);
+				
+					  $assoc['items'][$i][2]=$this->getlink($a[0]);
+					 
 					}
 				
 				 $i++;
