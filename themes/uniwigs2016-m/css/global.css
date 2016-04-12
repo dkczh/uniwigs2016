@@ -7404,11 +7404,11 @@ a.price_discount_delete {
       position: absolute;
       top: 0;
       right: 0;
-      background: none;
       border: none;
-      color: #d32676;
+      color: #fff;
       height: 45px;
-      width: 45px; }
+      width: 45px;
+      background: #d32676; }
       .cart_voucher fieldset button.button.button-small:after {
         content: "\e610";
         font-family: "iconfont";
