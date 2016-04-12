@@ -87,7 +87,7 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 	  //导出付款用户 订单
 	 function out_customer_order($db,$o_end,$o_begin){
 		 
-		$sql = "SELECT c.`id_customer`,c.`email`,concat(a.address1,a.address2) as address,concat(a.firstname,a.lastname) as recipient,col.`name` AS country,st.`name` AS state,a.`city`,a.`postcode`,a.`phone`,a.`phone_mobile`
+		$sql = "SELECT c.`id_customer`,c.`email`,c.firstname,c.lastname,concat(a.address1,a.address2) as address,concat(a.firstname,a.lastname) as recipient,col.`name` AS country,st.`name` AS state,a.`city`,a.`postcode`,a.`phone`,a.`phone_mobile`
 		,o.date_add as date
 				FROM ps_orders o
 				LEFT JOIN ps_customer c ON o.id_customer=c.`id_customer`
@@ -106,7 +106,7 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 		$res = getall($db,$sql);
 		$name = 'customer_order';
 		// 执行productexcel 函数 前面 不允许有任何 echo 输出
-		$excefiled = array('date','id_customer','email','address','recipient','country','state','city','postcode','phone','phone_mobile');
+		$excefiled = array('date','id_customer','firstname','lastname','email','address','recipient','country','state','city','postcode','phone','phone_mobile');
 
 	//cutomer_orderexcel($res,$name);
 		out_excel($res,$name,$excefiled);
@@ -160,10 +160,12 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 	  {
 
 		$sql = "SELECT o.id_order,o.date_add AS order_time,'' AS coupon,o.total_products,o.total_shipping,o.total_discounts,o.total_paid_real,o.payment,
-				o.shipping_number,oss.state_name AS order_state,c.id_customer,c.email,c.firstname,c.lastname,gl. NAME AS customer_group
+				o.shipping_number,oss.state_name AS order_state,c.id_customer,c.email,concat(a.address1,a.address2) as address,a.`phone`,a.`phone_mobile`,c.firstname,c.lastname,gl. NAME AS customer_group
 				FROM ps_orders o
 				LEFT JOIN ps_customer c ON c.id_customer = o.id_customer
+				LEFT JOIN ps_address a ON o.`id_address_delivery`=a.`id_address`
 				LEFT JOIN ps_group_lang gl ON gl.id_group = c.id_default_group
+				
 				AND gl.id_lang = 1
 				LEFT JOIN (SELECT os.* FROM(SELECT a.id_order,b.`name` AS state_name FROM	`ps_order_history` a
 							LEFT JOIN `ps_order_state_lang` b ON a.`id_order_state` = b.`id_order_state` AND b.`id_lang` = 1
@@ -181,7 +183,7 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 		// 执行productexcel 函数 前面 不允许有任何 echo 输出
 		//finance_orderexcel($res,$name);
 		$excefiled = array('id_order','order_time','coupon','total_products','total_shipping','total_discounts','total_paid_real',
-		'payment','shipping_number','order_state','id_customer','email','firstname','lastname','customer_group');
+		'payment','shipping_number','order_state','id_customer','address','phone','phone_mobile','email','firstname','lastname','customer_group');
 		out_excel($res,$name,$excefiled);
 	  }
 	
