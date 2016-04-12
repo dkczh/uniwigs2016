@@ -84,7 +84,7 @@ od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 		$res = getall($db,$sql);
 		$name = 'item_order';
 		// 执行productexcel 函数 前面 不允许有任何 echo 输出
-		$excefiled = array('date','id_order','product_reference','danwei','order_currency','product_quantity','product_price','item_total');
+		$excefiled = array('date','id_order','id_customer','email','firstname','address','phone','phone_mobile','lastname','product_reference','danwei','order_currency','product_quantity','product_price','item_total');
 		out_excel($res,$name,$excefiled);
 
 	  }
