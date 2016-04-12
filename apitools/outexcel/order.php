@@ -79,6 +79,7 @@ od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 				SELECT distinct id_order FROM `ps_order_history` WHERE id_order_state=2 AND `date_add`<
 				'$o_end' AND `date_add`>='$o_begin'
 				)
+				GROUP BY o.id_order
 				order by o.id_order" ;
 		
 		$res = getall($db,$sql);
