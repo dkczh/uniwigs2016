@@ -35,7 +35,7 @@
 {$HOOK_ORDER_CONFIRMATION}
 {$HOOK_PAYMENT_RETURN}
 {if $is_guest}
-	<p>{l s='Your order ID is:'} xxxxxxxxxx<span class="bold">{$id_order_formatted}</span> . {l s='Your order ID has been sent via email.'}</p>
+	<p>{l s='Your order ID is:'} <span class="bold">{$id_order_formatted}</span> . {l s='Your order ID has been sent via email.'}</p>
     <p class="cart_navigation exclusive">
 	<a class="button-exclusive btn btn-default" href="{$link->getPageLink('guest-tracking', true, NULL, "id_order={$reference_order|urlencode}&email={$email|urlencode}")|escape:'html':'UTF-8'}" title="{l s='Follow my order'}"><i class="icon-chevron-left"></i>{l s='Follow my order'}</a>
     </p>
@@ -44,3 +44,13 @@
 	<a class="button-exclusive btn btn-default" href="{$link->getPageLink('history', true)|escape:'html':'UTF-8'}" title="{l s='Go to your order history page'}"><i class="icon-chevron-left"></i>{l s='View your order history'}</a>
 </p>
 {/if}
+{literal}
+<script>
+	ga(function(tracker) {
+	
+	  tracker.send('event', 'page_payment_return', 'view','success', {
+	   
+	  });
+	});
+</script>
+{/literal}

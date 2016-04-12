@@ -216,13 +216,15 @@ $str.="</url>";
 };
 
 foreach ($res as $a){
+	
+if($a['link']!=''){
 $str.="<url>";
 $str.="<loc>".$a['link']."</loc>";
 $str.="<lastmod>".date("Y-m-d",strtotime("-1 day"))."</lastmod>";
 $str.="<changefreq>daily</changefreq>";
 $str.="<priority>0.8</priority>";
 $str.="</url>";
-	
+}	
 }
 
 

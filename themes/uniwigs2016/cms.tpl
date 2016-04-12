@@ -88,3 +88,13 @@
 {addJsDefL name=adtoken}{$smarty.get.adtoken|escape:'html':'UTF-8'}{/addJsDefL}
 {/if}
 {/strip}
+{literal}
+<script>
+ga(function(tracker) {
+	  url =window.location.href;
+	  tracker.send('event', 'page_cms', 'view',url, {
+	   
+	  });
+	});
+</script>
+{/literal}
