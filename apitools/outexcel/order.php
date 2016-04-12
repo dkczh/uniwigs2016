@@ -106,7 +106,7 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 		$res = getall($db,$sql);
 		$name = 'customer_order';
 		// 执行productexcel 函数 前面 不允许有任何 echo 输出
-		$excefiled = array('date','id_customer','c.firstname','c.lastname','email','address','recipient','country','state','city','postcode','phone','phone_mobile');
+		$excefiled = array('date','id_customer','firstname','lastname','email','address','recipient','country','state','city','postcode','phone','phone_mobile');
 
 	//cutomer_orderexcel($res,$name);
 		out_excel($res,$name,$excefiled);
