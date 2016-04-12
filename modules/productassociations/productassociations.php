@@ -124,7 +124,7 @@ class ProductAssociations extends Module
 				$assoc['items'][] = explode(':', $item);
 				
 				
-				foreach($assoc['items'] as $a){
+				foreach($assoc['items'][0] as $a){
 					if($this->getlink($a)){
 					$a=$this->getlink($a);
 					}
