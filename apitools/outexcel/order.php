@@ -62,12 +62,17 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 	function out_item_order($db,$o_end,$o_begin)
 	  {
 
-		$sql = "SELECT od.id_order,od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
+		$sql = "SELECT od.id_order,c.`id_customer`,c.`email`,c.firstname,c.lastname,
+concat(pd.address1,pd.address2) as address,
+pd.`phone`,pd.`phone_mobile`,
+od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 				,od.`product_quantity`,od.`product_price`,((od.product_price-od.reduction_amount)*od.`product_quantity`) AS item_total,
 				o.date_add as date
 				FROM `ps_order_detail` od
 				LEFT JOIN ps_orders o ON od.`id_order`=o.id_order
 				LEFT JOIN `ps_currency` cu ON o.id_currency=cu.id_currency
+				LEFT JOIN ps_customer  c on o.id_customer=c.id_customer
+				LEFT JOIN  ps_address pd  on pd.id_address=o.id_address_delivery
 				WHERE o.total_paid_real>=0
 				AND o.date_add<'$o_end'
 				AND o.id_order IN (
