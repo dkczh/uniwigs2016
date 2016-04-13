@@ -176,7 +176,6 @@
 		        	       			<li class="uk-nav-header">Category</li>
 	        	       				<li><a href="{$base_dir}40458-mono-hair-pieces">Monofilament</a></li>
 	        	       				<li><a href="{$base_dir}tag/lace-closure">Lace Closure</a></li>
-	        	       				<li><a href="{$base_dir}tag/fashion-pieces">Fashion Pieces</a></li>
 		        	       		</ul>
 		        	       </div>
 		        	       <div class="col-sm-3">

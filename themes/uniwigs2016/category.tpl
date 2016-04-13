@@ -482,7 +482,7 @@
             <section class="category-home">
                 <ul class="row uk-margin-bottom">
                     <li class="col-md-6 col-sm-6">
-                        <a href="{$base_dir}tag/soild">
+                        <a href="{$base_dir}tag/solid">
                             <img src="{$img_dir}category/extensions/soild-color.jpg" alt="" class="img-responsive">
                         </a>
                     </li>
