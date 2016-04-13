@@ -24,8 +24,9 @@
 				<li class="uk-parent">
 					<a href="#">Hair Extensions</a>
 					<ul class="uk-nav-sub">
-						<li><a href="{$base_dir}40439-flip-in-hair-extensions">Flip In</a></li>
-						<li><a href="{$base_dir}108-clip-in-hair-extensions">Clip In</a></li>
+						<li><a href="{$base_dir}tag/solid">Solid</a></li>
+						<li><a href="{$base_dir}tag/ombre">Ombre</a></li>
+						<li><a href="{$base_dir}tag/colorful">Colorful</a></li>
 						<li><a href="{$base_dir}tag/diy-dyed-extensions">Diy Dyed</a></li>
 						<li><a href="{$base_dir}103-hair-extensions">All Products</a></li>
 					</ul>
