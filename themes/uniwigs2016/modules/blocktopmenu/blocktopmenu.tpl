@@ -54,7 +54,7 @@
 	               	       <div class="col-sm-3">
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
-	               	           			<a href="{$base_dir}tag/Human-Hair-Wigs-Hot-Sales">
+	               	           			<a href="{$base_dir}tag/Human-Hair-Wigs-Hot-Sale">
 	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/human-hair/menu-hot.jpg" alt="">
 	       	        	           			<p>Best Sell</p>
 	       	        	           		</a>
@@ -106,7 +106,7 @@
 	               	       <div class="col-sm-3">
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
-	               	           			<a href="{$base_dir}tag/Synthetic-Wigs-Hot-Sales">
+	               	           			<a href="{$base_dir}tag/Synthetic-Wigs-Hot-Sale">
 	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/synthetic-wigs/menu-hot.jpg" alt="">
 	       	        	           			<p>Best Sell</p>
 	       	        	           		</a>
@@ -155,7 +155,7 @@
 	               	       <div class="col-sm-3">
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
-	               	           			<a href="{$base_dir}tag/Hair-Extensions-Hot-Sales">
+	               	           			<a href="{$base_dir}tag/Hair-Extensions-Hot-Sale">
 	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/extensions/menu-hot.jpg" alt="">
 	       	        	           			<p>Best Sell</p>
 	       	        	           		</a>
@@ -208,7 +208,7 @@
 	               	       <div class="col-sm-3">
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
-	               	           			<a href="{$base_dir}tag/hair-pieces-Hot-Sales">
+	               	           			<a href="{$base_dir}tag/hair-pieces-Hot-Sale">
 	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/hiar-pieces/menu-hot.jpg" alt="">
 	       	        	           			<p>Best Sell</p>
 	       	        	           		</a>
