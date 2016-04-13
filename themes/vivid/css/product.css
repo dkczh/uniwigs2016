@@ -598,10 +598,13 @@ span.view_scroll_spacer {
     font-family: "FontAwesome";
     content: "\f072";
     padding-right: 5px; }
-  .arrow-bullet-links li:nth-child(3):before {
-    font-family: "FontAwesome";
-    content: "\f072";
-    padding-right: 5px; }
+  .arrow-bullet-links li:nth-child(4) {
+    padding-right: 0;
+    margin-right: 0; }
+    .arrow-bullet-links li:nth-child(4):before {
+      font-family: "FontAwesome";
+      content: "\f059";
+      padding-right: 5px; }
   .arrow-bullet-links li:after {
     font-family: "FontAwesome";
     content: "\f105";
@@ -867,14 +870,14 @@ table.table-product-discounts {
     .our_price_display {
       font-size: 26px;
       line-height: 28px; } }
-  .our_price_display .price {
+  .our_price_display .now_sprice {
     font-weight: 600;
     font-size: 20px;
     line-height: 32px;
     padding: 0 5px;
     color: #333; }
     @media (max-width: 991px) {
-      .our_price_display .price {
+      .our_price_display .now_sprice {
         font-size: 24px;
         line-height: 28px; } }
 
