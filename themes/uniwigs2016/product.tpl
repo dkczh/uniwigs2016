@@ -1257,6 +1257,8 @@
 			</section>
 		{/if}
 
+		{$PRODUCT_REVIEWS}
+
 		<!-- product comments -->
 		<script type="text/javascript">
 			$(function() {
