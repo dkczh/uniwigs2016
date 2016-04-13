@@ -46,6 +46,7 @@
 				{$HOOK_BEFORECARRIER}
 			{/if}
 		</div>
+		<p class="text-primary">The shipping method you are going to choose below is  only for shipping time .The custom time and the processing time are not included.</p>
 		{if isset($isVirtualCart) && $isVirtualCart}
 			<p class="alert alert-warning">{l s='No carrier is needed for this order.'}</p>
 		{else}
@@ -89,7 +90,7 @@
 												</td>
 												<td>
 													{if isset($carrier.instance->delay[$cookie->id_lang])}
-														{l s='Delivery time:'}&nbsp;{$carrier.instance->delay[$cookie->id_lang]|escape:'htmlall':'UTF-8'}
+														{$carrier.instance->delay[$cookie->id_lang]|escape:'htmlall':'UTF-8'}
 													{/if}
 													{*if count($option_list) > 1}
 														{if $option.is_best_grade}

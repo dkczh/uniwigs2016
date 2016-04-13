@@ -2068,7 +2068,7 @@ td.visible-print {
   text-decoration: none; }
 
 .uk-nav > li > a {
-  padding: 5px 15px; }
+  padding: 3px 15px; }
 
 /*
  * Nested items
@@ -2089,10 +2089,10 @@ td.visible-print {
 /* Sub-object: `uk-nav-header`
  ========================================================================== */
 .uk-nav-header {
-  padding: 5px 15px;
+  padding: 3px 15px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 13px;
   color: #999; }
 
 .uk-nav-header:not(:first-child) {
@@ -2234,7 +2234,8 @@ ul.uk-nav-sub {
  * Sub-object: `uk-nav-header`
  */
 .uk-nav-navbar .uk-nav-header {
-  color: #999; }
+  color: #999;
+  padding: 3px 15px; }
 
 /*
  * Sub-object: `uk-nav-divider`
@@ -2346,9 +2347,9 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   box-sizing: border-box;
   text-decoration: none;
   /* 1 */
-  height: 40px;
-  padding: 0 26px;
-  line-height: 40px;
+  height: 50px;
+  padding: 0 20px;
+  line-height: 45px;
   /* 2 */
   color: #444;
   font-size: 15px;
@@ -2384,10 +2385,10 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Sub-objects: `uk-navbar-nav-subtitle`
  ========================================================================== */
 .uk-navbar-nav .uk-navbar-nav-subtitle {
-  line-height: 28px; }
+  line-height: 33px; }
 
 .uk-navbar-nav-subtitle > div {
-  margin-top: -5.5px;
+  margin-top: -8px;
   font-size: 10px;
   line-height: 12px; }
 
@@ -2401,8 +2402,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-navbar-toggle {
   box-sizing: border-box;
   display: block;
-  height: 40px;
-  padding: 0 26px;
+  height: 50px;
+  padding: 0 20px;
   float: left; }
 
 /*
@@ -7264,7 +7265,7 @@ a.uk-thumbnail:focus {
   top: 100%;
   left: 0;
   z-index: 1020;
-  padding: 15px;
+  padding: 15px 20px;
   background: #fff;
   color: #444;
   /* 1 */
@@ -10774,8 +10775,8 @@ header {
   header .row > .container {
     position: relative; }
   header .row #header_logo {
-    padding-right: 30px;
-    margin-top: -10px;
+    padding-right: 60px;
+    margin-top: -9px;
     float: left; }
     header .row #header_logo span {
       display: inline-block;
@@ -12733,9 +12734,9 @@ a.iframe {
     text-decoration: none; }
 
 p.payment_module {
-  border: 1px solid #595A5E;
+  border: 1px solid #ddd;
   display: block;
-  padding: 0.6em;
+  padding: 1.5em;
   text-decoration: none; }
 
 .payment_module.box {

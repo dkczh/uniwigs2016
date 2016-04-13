@@ -29,7 +29,7 @@
 	<li>
 	<label>{$assoc.subject}:</label>
 	{foreach from=$assoc.items item=item}
-	<a href="/index.php?controller=product&sku={$item.0}" {if $product->reference==$item.0}class="current"{/if}>{$item.1}</a>
+	<a href="{$item.2}" {if $product->reference==$item.0}class="current"{/if}>{$item.1}</a>
 	{/foreach}
 	</li>
 {/foreach}

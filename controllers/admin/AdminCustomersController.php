@@ -160,7 +160,8 @@ class AdminCustomersControllerCore extends AdminController
         parent::__construct();
 		$addtoken= Tools::getAdminTokenLite('AdminOrders');//获取指定页面token
 		$addsql = "CONCAT('<a href=\"','?controller=AdminOrders&id_order=',po.id_order ,'&vieworder&token=$addtoken\"',' class=\"btn btn-default btn-block\">',po.id_order,'</a>' ) as orders,";
-        $this->_select = '
+		//原有查询语句
+	 /*   $this->_select = '
         a.date_add,'.$addsql.'gl.name as title, (
             SELECT SUM(total_paid_real / conversion_rate)
             FROM '._DB_PREFIX_.'orders o
@@ -173,8 +174,20 @@ class AdminCustomersControllerCore extends AdminController
             WHERE g.id_customer = a.id_customer
             ORDER BY c.date_add DESC
             LIMIT 1
+        ) as connect'; */
+		
+		    $this->_select = '
+        a.date_add,'.$addsql.'gl.name as title,po.total_paid as total_spent, (
+            SELECT c.date_add FROM '._DB_PREFIX_.'guest g
+            LEFT JOIN '._DB_PREFIX_.'connections c ON c.id_guest = g.id_guest
+            WHERE g.id_customer = a.id_customer
+            ORDER BY c.date_add DESC
+            LIMIT 1
         ) as connect';
+		
+		
 		$this->_join .= 'LEFT JOIN '._DB_PREFIX_.'orders po on po.id_customer=a.id_customer';
+		
         // Check if we can add a customer
         if (Shop::isFeatureActive() && (Shop::getContext() == Shop::CONTEXT_ALL || Shop::getContext() == Shop::CONTEXT_GROUP)) {
             $this->can_add_customer = false;

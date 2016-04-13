@@ -34,7 +34,7 @@
         <section class="containerIndex">
             <section class="category-home">
                 <div>
-                    <a href="{$base_dir}tag/human-hair-lace-front-wigs"><img src="{$img_dir}christmas/new-banner.jpg" alt="" class="img-responsive"></a>
+                    <a href="{$base_dir}40447-lace-front-wigs"><img src="{$img_dir}christmas/new-banner.jpg" alt="" class="img-responsive"></a>
                 </div>
                 <div class="uk-margin-top">
                     <a href="{$base_dir}tag/real-human-hair"><img src="{$img_dir}category/human-hair/real-human-hair.jpg" alt="real human hair" class="img-responsive"></a>
@@ -473,39 +473,50 @@
             {/literal}
         *}
     {elseif $category->id == '103'}
+        {literal}
+        <style>
+            .breadcrumb{display: none}
+        </style>
+        {/literal}
         <section class="containerIndex" itemscope itemtype="http://schema.org/SearchResultsPage">
             <section class="category-home">
-                <div class="cargory_banner">
-                    <a href="{$base_dir}tag/2016-hec"><img src="{$img_dir}category/extensions/banner-new.jpg" alt="Diy Dyed"  class="img-responsive"></a>
-                </div>
-                <ul class="row uk-margin-top">
-                    <li class="col-md-4 col-sm-4">
-                        <a href="{$base_dir}108-clip-in-hair-extensions">
-                            <img src="{$img_dir}category/extensions/1-CLIP-IN.jpg" alt="" class="img-responsive">
+                <ul class="row uk-margin-bottom">
+                    <li class="col-md-6 col-sm-6">
+                        <a href="{$base_dir}tag/solid">
+                            <img src="{$img_dir}category/extensions/soild-color.jpg" alt="" class="img-responsive">
                         </a>
-                        <h3 class="text-center">CLIP IN hair extensions</h3>
-                        <h5 class="text-center uk-margin-small-top"><a href="{$base_dir}108-clip-in-hair-extensions">shop now ></a></h5>
                     </li>
-                    <li class="col-md-4 col-sm-4">
-                        <a href="{$base_dir}tag/diy-dyed-extensions">
-                            <img src="{$img_dir}category/extensions/2-DIY-DYED.jpg" alt="" class="img-responsive">
+                    <li class="col-md-6 col-sm-6">
+                        <a href="{$base_dir}tag/ombre">
+                            <img src="{$img_dir}category/extensions/ombre-color.jpg" alt="" class="img-responsive">
                         </a>
-                        <h3 class="text-center">DIY DYED</h3>
-                        <h5 class="text-center uk-margin-small-top"><a href="{$base_dir}tag/diy-dyed-extensions">shop now ></a></h5>
-                    </li>
-                    <li class="col-md-4 col-sm-4">
-                        <a href="{$base_dir}40439-flip-in-hair-extensions">
-                            <img src="{$img_dir}category/extensions/3-UNI-EXTENSIONS.jpg" alt="" class="img-responsive">
-                        </a>
-                        <h3 class="text-center">Uni extensions</h3>
-                        <h5 class="text-center uk-margin-small-top"><a href="{$base_dir}40439-flip-in-hair-extensionss">shop now ></a></h5>
                     </li>
                 </ul>
 
-                <div class="uk-margin-top">
-                    <a href="{$base_dir}40457-ombre-hair-extensions"><img src="{$img_dir}category/extensions/colorful-hair.jpg" alt="Colorful Hair" class="img-responsive"></a>
+                <div class="uk-margin-bottom">
+                    <a href="{$base_dir}tag/colorful"><img src="{$img_dir}category/extensions/colorful-hair.jpg" alt="Colorful Hair" class="img-responsive"></a>
                 </div>
-                
+                <ul class="row uk-margin-bottom">
+                    <li class="col-md-6 col-sm-6">
+                        <a href="{$base_dir}tag/diy-dyed-extensions">
+                            <img src="{$img_dir}category/extensions/diy-dyed.jpg" alt="" class="img-responsive">
+                        </a>
+                        <h3 class="text-center">DIY-DYED</h3>
+                        <p class="text-center h4">Just create your own color!</p>
+                        <h5 class="text-center uk-margin-small-top h4 uk-text-bold"><a href="{$base_dir}tag/diy-dyed-extensions">shop now &gt;</a></h5>
+                    </li>
+                    <li class="col-md-6 col-sm-6">
+                        <a href="{$base_dir}tag/invisible-uni-extensions">
+                            <img src="{$img_dir}category/extensions/uni-extension.jpg" alt="" class="img-responsive">
+                        </a>
+                        <h3 class="text-center">UNI-EXTENSIONs</h3>
+                        <p class="text-center h4">Change your hairstyle in 1 second!</p>
+                        <h5 class="text-center uk-margin-small-top h4 uk-text-bold"><a href="{$base_dir}tag/invisible-uni-extensions">shop now &gt;</a></h5>
+                    </li>
+                </ul>
+                <div class="uk-margin-bottom">
+                    <a href="{$base_dir}tag/promotion-area"><img src="{$img_dir}category/extensions/promotion.png" alt="Colorful Hair" class="img-responsive"></a>
+                </div>
                 {if isset($HairExtensionsHotList)}
                     <div class="cagegory_topsale title-hr">
                         <h3>Hot List</h3>
@@ -618,6 +629,11 @@
         </section>
         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
     {elseif $category->id == '104'}
+        {literal}
+        <style>
+            .breadcrumb{display: none}
+        </style>
+        {/literal}
         <section class="container containerIndex" itemscope itemtype="http://schema.org/SearchResultsPage">
             <section class="category-home">
                 <div class="cargory_banner">

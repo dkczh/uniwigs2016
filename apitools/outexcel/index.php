@@ -124,6 +124,12 @@ margin-top: 10px;
 			})
 		}
 	});
+	
+	
+	$('#sqlname').click(function(){
+		
+		
+	});
 </script>
 <script>
 	var myDate = new Date();

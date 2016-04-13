@@ -73,7 +73,7 @@
     .comments_advices a:hover {
       color: #d32676; }
     .comments_advices a.reviews {
-      border-right: 1px solid #eee;
+      border-right: 1px solid #d4d4d4;
       padding-right: 30px;
       margin-right: 9px; }
       @media (min-width: 768px) and (max-width: 991px) {
@@ -117,7 +117,7 @@
   #new_comment_form .product {
     padding: 15px; }
     #new_comment_form .product img {
-      border: 1px solid #eee; }
+      border: 1px solid #d4d4d4; }
     #new_comment_form .product .product_desc {
       line-height: 18px;
       color: #666; }
@@ -176,7 +176,7 @@
   #product_comments_block_tab div.comment {
     margin: 0 0 14px;
     padding-top: 14px;
-    border-top: 1px solid #eee; }
+    border-top: 1px solid #d4d4d4; }
     #product_comments_block_tab div.comment:first-child {
       padding: 0;
       border: none; }
@@ -192,7 +192,7 @@
         margin: 0 0 0 5px; }
     #product_comments_block_tab div.comment .comment_details {
       overflow: hidden;
-      border-left: 1px solid #eee; }
+      border-left: 1px solid #d4d4d4; }
       @media (max-width: 991px) {
         #product_comments_block_tab div.comment .comment_details {
           border-left: none; }

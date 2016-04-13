@@ -775,6 +775,7 @@ class Blocktopmenu extends Module
 			
 			$catagory =  '';
 			}
+            $catagory='Default';
 			
 			$this->smarty->assign('catagory', $catagory);
 			}	

@@ -23,14 +23,14 @@
     font-size: 20px;
     color: #333; }
   #listpage_content div.tree_top a:hover:before {
-    color: #515151; }
+    color: #d32676; }
 
 ul.tree {
   padding-left: 24px; }
   ul.tree li {
     margin: 0 0 0 21px;
     padding: 5px 0 0 33px;
-    border-left: 1px solid #d6d4d4;
+    border-left: 1px solid #d4d4d4;
     background: url(../img/sitemap-horizontal.png) no-repeat left 15px transparent; }
     ul.tree li a:hover {
       font-weight: bold; }
