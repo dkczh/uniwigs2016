@@ -28,13 +28,13 @@ table#product_comparison .remove {
     line-height: 23px;
     color: #c0c0c0; }
     table#product_comparison .remove a:hover {
-      color: #515151; }
+      color: #d32676; }
 table#product_comparison .product-image-block {
   display: inline-block;
   position: relative; }
   table#product_comparison .product-image-block .product_image {
     padding: 9px;
-    border: 1px solid #d6d4d4;
+    border: 1px solid #d4d4d4;
     display: inline-block;
     margin: 0 0 8px 0; }
     table#product_comparison .product-image-block .product_image img {

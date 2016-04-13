@@ -111,8 +111,8 @@ header {
 			position: relative;
 		}
 		#header_logo {
-			padding-right:30px;
-			margin-top: -10px;
+			padding-right:60px;
+			margin-top: -9px;
 			float:left;
 			span{
 			    display: inline-block;
@@ -2528,7 +2528,7 @@ a.iframe {
 
 //step 5 - paiement
 p.payment_module {
-	border: 1px solid #595A5E;display: block;padding: 0.6em;text-decoration: none;
+	border: 1px solid #ddd;display: block;padding: 1.5em;text-decoration: none;
 }
 
 .payment_module.box {
