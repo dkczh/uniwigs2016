@@ -1,5 +1,6 @@
 #productscategory_list .product-name {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  text-transform: none; }
 #productscategory_list .exclusive span {
   font-size: 13px;
   line-height: 18px;
