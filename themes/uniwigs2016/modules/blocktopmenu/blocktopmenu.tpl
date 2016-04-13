@@ -125,7 +125,7 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">Color</li>
-	        	       				<li><a href="{$base_dir}tag/soild">Solid</a></li>
+	        	       				<li><a href="{$base_dir}tag/solid">Solid</a></li>
 	        	       				<li><a href="{$base_dir}tag/ombre">Ombre</a></li>
 	        	       				<li><a href="{$base_dir}tag/colorful">Colorful</a></li>
 		        	       		</ul>
