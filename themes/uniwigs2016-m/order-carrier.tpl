@@ -68,7 +68,7 @@
 												<td class="delivery_option_radio">
 													<input id="delivery_option_{$id_address|intval}_{$option@index}" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address|intval}]" data-key="{$key}" data-id_address="{$id_address|intval}" value="{$key}"{if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key} checked="checked"{/if} />
 												</td>
-												<td class="delivery_option_logo">
+												{*<td class="delivery_option_logo">
 													{foreach $option.carrier_list as $carrier}
 														{if $carrier.logo}
 															<img class="order_carrier_logo" src="{$carrier.logo|escape:'htmlall':'UTF-8'}" alt="{$carrier.instance->name|escape:'htmlall':'UTF-8'}"/>
@@ -77,28 +77,20 @@
 															{if !$carrier@last} - {/if}
 														{/if}
 													{/foreach}
-												</td>
+												</td>*}
 												<td>
 													{if $option.unique_carrier}
 														{foreach $option.carrier_list as $carrier}
 															<strong>{$carrier.instance->name|escape:'htmlall':'UTF-8'}</strong>
 														{/foreach}
-														{if isset($carrier.instance->delay[$cookie->id_lang])}
-															<br />{l s='Delivery time:'}&nbsp;{$carrier.instance->delay[$cookie->id_lang]|escape:'htmlall':'UTF-8'}
-														{/if}
+														
 													{/if}
-													{if count($option_list) > 1}
-													<br />
-														{if $option.is_best_grade}
-															{if $option.is_best_price}
-																<span class="best_grade best_grade_price best_grade_speed">{l s='The best price and speed'}</span>
-															{else}
-																<span class="best_grade best_grade_speed">{l s='The fastest'}</span>
-															{/if}
-														{elseif $option.is_best_price}
-															<span class="best_grade best_grade_price">{l s='The best price'}</span>
+													
+												</td>
+												<td>
+													{if isset($carrier.instance->delay[$cookie->id_lang])}
+															{$carrier.instance->delay[$cookie->id_lang]|escape:'htmlall':'UTF-8'}
 														{/if}
-													{/if}
 												</td>
 												<td class="delivery_option_price">
 													<div class="delivery_option_price">
