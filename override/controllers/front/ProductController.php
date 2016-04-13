@@ -136,7 +136,7 @@ class ProductController extends ProductControllerCore
 				</div>
 				';
 			}
-            $this->context->smarty->assign('PRODUCT_REVIEWS', $latest_reviews);
+            $this->context->smarty->assign('PRODUCT_REVIEWS', $latest_reviews_html);
         }
     }
 
