@@ -187,7 +187,7 @@ class AdminCustomersControllerCore extends AdminController
 		
 		
 		$this->_join .= 'LEFT JOIN '._DB_PREFIX_.'orders po on po.id_customer=a.id_customer';
-		$this->_where.='	and  po.date_add=(select  max(pod.date_add) from ps_orders pod where pod.id_customer=a.id_customer )';
+		$this->_where.='	and  po.date_add=(select  max(pod.date_add) from ps_orders pod where pod.id_customer=a.id_customer )   or  po.id_order is  null ';
         // Check if we can add a customer
         if (Shop::isFeatureActive() && (Shop::getContext() == Shop::CONTEXT_ALL || Shop::getContext() == Shop::CONTEXT_GROUP)) {
             $this->can_add_customer = false;
