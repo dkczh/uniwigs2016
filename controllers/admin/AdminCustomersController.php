@@ -161,7 +161,7 @@ class AdminCustomersControllerCore extends AdminController
 		$addtoken= Tools::getAdminTokenLite('AdminOrders');//获取指定页面token
 		$addsql = "CONCAT('<a href=\"','?controller=AdminOrders&id_order=',po.id_order ,'&vieworder&token=$addtoken\"',' class=\"btn btn-default btn-block\">',po.id_order,'</a>' ) as orders,";
 		//原有查询语句
-	 /*   $this->_select = '
+	   $this->_select = '
         a.date_add,'.$addsql.'gl.name as title, (
             SELECT SUM(total_paid_real / conversion_rate)
             FROM '._DB_PREFIX_.'orders o
@@ -174,9 +174,9 @@ class AdminCustomersControllerCore extends AdminController
             WHERE g.id_customer = a.id_customer
             ORDER BY c.date_add DESC
             LIMIT 1
-        ) as connect'; */
+        ) as connect';
 		
-		    $this->_select = '
+		/*     $this->_select = '
         a.date_add,'.$addsql.'gl.name as title,po.total_paid as total_spent, (
             SELECT c.date_add FROM '._DB_PREFIX_.'guest g
             LEFT JOIN '._DB_PREFIX_.'connections c ON c.id_guest = g.id_guest
@@ -184,7 +184,7 @@ class AdminCustomersControllerCore extends AdminController
             ORDER BY c.date_add DESC
             LIMIT 1
         ) as connect';
-		
+		 */
 		
 		$this->_join .= 'LEFT JOIN '._DB_PREFIX_.'orders po on po.id_customer=a.id_customer';
 		$this->_where.='	and  po.date_add=(select  max(pod.date_add) from ps_orders pod where pod.id_customer=a.id_customer )   or  po.id_order is  null ';
