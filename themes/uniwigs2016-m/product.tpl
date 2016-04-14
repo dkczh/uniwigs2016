@@ -468,7 +468,7 @@
 		<li><a href="#">Details</a></li>
 		{if isset($packItems) && $packItems|@count > 0}<li><a href="#">Package Items</a></li>{/if}
 		<li><a href="#">Reviews</a></li>
-		<li><a href="#">Recommended</a></li>
+		<li><a href="#" id="you_may_also_like_product">Recommended</a></li>
 		
 	</ul>
 	<ul id="tab-content" class="uk-switcher">

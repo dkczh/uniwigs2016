@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {if count($categoryProducts) > 0 && $categoryProducts !== false}
-<section class="page-product-box blockproductscategory title-hr uk-margin-top">
+<section id="you_may_also_like_product" class="page-product-box blockproductscategory title-hr uk-margin-top">
 	<h3 class="productscategory_h3">YOU MAY ALSO LIKE</h3>
 	<p class="hr"></p>
 	<div id="productscategory_list" class="uk-margin-top clearfix">
