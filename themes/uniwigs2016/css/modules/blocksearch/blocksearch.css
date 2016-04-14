@@ -1,6 +1,7 @@
 #search_block_top {
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  margin-top: 15px; }
   #search_block_top #searchbox {
     float: left;
     width: 100%; }
