@@ -191,7 +191,7 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">feature</li>
-		        	       			<li><a href="{$base_dir}tag/top-per">Top Per</a></li>
+		        	       			<li><a href="{$base_dir}tag/toppers">Toppers</a></li>
 	        	       				<li><a href="{$base_dir}tag/hair-loss">Hair Loss</a></li>
 		        	       		</ul>
 		        	       </div>

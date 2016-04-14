@@ -34,7 +34,7 @@
 				<li class="uk-parent">
 					<a href="#">Hair pieces</a>
 					<ul class="uk-nav-sub">
-						<li><a href="{$base_dir}tag/top-per">Top Per</a></li>
+						<li><a href="{$base_dir}tag/toppers">Toppers</a></li>
 						<li><a href="{$base_dir}40458-mono-hair-pieces">Monofilament</a></li>
 						<li><a href="{$base_dir}tag/lace-closure">Lace Closure</a></li>
 						<li><a href="{$base_dir}tag/fashion-piece">Fashion Piece</a></li>

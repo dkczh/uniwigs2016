@@ -637,7 +637,7 @@
         <section class="container containerIndex" itemscope itemtype="http://schema.org/SearchResultsPage">
             <section class="category-home">
                 <div class="cargory_banner">
-                    <a href="{$base_dir}tag/top-pre"><img src="{$img_dir}category/hiar-pieces/pieces-banner.jpg" alt="Hair Loss" class="img-responsive"></a>
+                    <a href="{$base_dir}tag/toppers"><img src="{$img_dir}category/hiar-pieces/pieces-banner.jpg" alt="Hair Loss" class="img-responsive"></a>
                 </div>
                 <ul class="row uk-margin-top">
                     <li class="col-md-6 col-sm-6">
