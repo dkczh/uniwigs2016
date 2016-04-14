@@ -24,15 +24,18 @@
 *}
 
 <link rel="shortcut icon" type="image/x-icon" href="{$module_dir}img/secure.png" />
-{if $isFailed == 1}		
-<p style="color: red;">			
+{if $isFailed == 1}	
+<div class="uk-alert uk-alert-danger" style="position: absolute;top:-90px;width: 1140px;" data-uk-alert>
+	<a href="" class="uk-alert-close uk-close"></a>
+	<p>
 	{if !empty($smarty.get.message)}
 		{l s='Error detail from AuthorizeAIM : ' mod='authorizeaim'}
 		{$smarty.get.message|htmlentities}
 	{else}	
 		{l s='Error, please verify the card information' mod='authorizeaim'}
 	{/if}
-</p>
+	</p>		
+</div>
 {/if}
 {literal}
 <style>
