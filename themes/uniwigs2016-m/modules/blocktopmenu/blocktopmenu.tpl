@@ -24,16 +24,17 @@
 				<li class="uk-parent">
 					<a href="#">Hair Extensions</a>
 					<ul class="uk-nav-sub">
-						<li><a href="{$base_dir}tag/solid">Solid</a></li>
-						<li><a href="{$base_dir}tag/ombre">Ombre</a></li>
-						<li><a href="{$base_dir}tag/colorful">Colorful</a></li>
-						<li><a href="{$base_dir}tag/diy-dyed-extensions">Diy Dyed</a></li>
+						<li><a href="{$base_dir}tag/solid-hair-extension">Solid Extension</a></li>
+						<li><a href="{$base_dir}tag/ombre-hair-extension">Ombre Extension</a></li>
+						<li><a href="{$base_dir}tag/colorful-hair-extension">Colorful Extension</a></li>
+						<li><a href="{$base_dir}tag/diy-dyed-extensions">DIY-Dye Extension</a></li>
 						<li><a href="{$base_dir}103-hair-extensions">All Products</a></li>
 					</ul>
 				</li>
 				<li class="uk-parent">
 					<a href="#">Hair pieces</a>
 					<ul class="uk-nav-sub">
+						<li><a href="{$base_dir}tag/top-per">Top Per</a></li>
 						<li><a href="{$base_dir}40458-mono-hair-pieces">Monofilament</a></li>
 						<li><a href="{$base_dir}tag/lace-closure">Lace Closure</a></li>
 						<li><a href="{$base_dir}tag/fashion-piece">Fashion Piece</a></li>

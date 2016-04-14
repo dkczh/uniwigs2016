@@ -125,15 +125,15 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">Color</li>
-	        	       				<li><a href="{$base_dir}tag/solid">Solid</a></li>
-	        	       				<li><a href="{$base_dir}tag/ombre">Ombre</a></li>
-	        	       				<li><a href="{$base_dir}tag/colorful">Colorful</a></li>
+	        	       				<li><a href="{$base_dir}tag/Solid-hair-extension">Solid Extension</a></li>
+	        	       				<li><a href="{$base_dir}tag/Ombre-hair-extension">Ombre Extension</a></li>
+	        	       				<li><a href="{$base_dir}tag/colorful-hair-extension">Colorful Extension</a></li>
 		        	       		</ul>
 		        	       </div>
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">feature</li>
-	        	       				<li><a href="{$base_dir}tag/diy-dyed-extensions">DIY-Dye</a></li>
+	        	       				<li><a href="{$base_dir}tag/diy-dyed-extensions">DIY-Dye Extension</a></li>
 	        	       				<li><a href="{$base_dir}tag/invisible-uni-extensions">Uni-extension</a></li>
 		        	       		</ul>
 		        	       </div>
@@ -191,6 +191,7 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">feature</li>
+		        	       			<li><a href="{$base_dir}tag/top-per">Top Per</a></li>
 	        	       				<li><a href="{$base_dir}tag/hair-loss">Hair Loss</a></li>
 		        	       		</ul>
 		        	       </div>

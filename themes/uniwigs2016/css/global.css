@@ -2354,6 +2354,9 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #444;
   font-size: 15px;
   text-transform: uppercase; }
+  @media (max-width: 991px) {
+    .uk-navbar-nav > li > a {
+      padding: 0 9px; } }
 
 /* Appear not as link */
 .uk-navbar-nav > li > a[href='#'] {

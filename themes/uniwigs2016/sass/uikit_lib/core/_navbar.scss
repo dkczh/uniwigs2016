@@ -131,6 +131,9 @@ $navbar-toggle-icon-alt:                         "\f002" !default;
     font-size: $navbar-nav-font-size;
     text-transform: uppercase;
     @include hook-navbar-nav();
+    @media (max-width: $screen-sm-max) {// max 991px
+        padding:0 9px;
+    }
 }
 
 /* Appear not as link */
