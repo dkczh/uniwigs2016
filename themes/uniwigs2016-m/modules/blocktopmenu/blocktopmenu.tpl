@@ -28,6 +28,7 @@
 						<li><a href="{$base_dir}tag/ombre-hair-extension">Ombre Extension</a></li>
 						<li><a href="{$base_dir}tag/colorful-hair-extension">Colorful Extension</a></li>
 						<li><a href="{$base_dir}tag/diy-dyed-extensions">DIY-Dye Extension</a></li>
+						<li><a href="{$base_dir}tag/promotion-area">Promotion Area</a></li>
 						<li><a href="{$base_dir}103-hair-extensions">All Products</a></li>
 					</ul>
 				</li>
