@@ -330,6 +330,15 @@
 													    </div>
 													</div>
 													{/if}
+													{if $group.name|lower == 'clip in'}
+													<a href="#attributes_clipin" data-uk-modal class="highslide">Clip In</a>
+													<div id="attributes_clipin" class="uk-modal">
+														 <div class="uk-modal-dialog">
+													        <a class="uk-modal-close uk-close"></a>
+													        <img src="{$base_dir}themes/uniwigs2016/img/products/clip-in.jpg" alt="">
+													    </div>
+													</div>
+													{/if}
 													{if $group.name|lower == 'length'}
 													<a href="#attributes_length" data-uk-modal class="highslide">Length & Fit</a>
 													<div id="attributes_length" class="uk-modal">
