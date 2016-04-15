@@ -26,17 +26,11 @@
 	border-top: 1px solid #F5F5F5;
 	padding: 0;
 }
- #pubu .pic p.view_btn a{
-	padding: 10px;
-}
+ #pubu .pic p.view_btn a{padding: 10px;}
 #pubu .pic p.view_btn a:hover{color:#EF3386;}
-.columns-container{
-	background-color:#eee;}
-.breadcrumb,#f-wrapper,.ff-wrapper{
-	display: none}
-#pubu{
-	width:100%;
-	position: relative;}
+.columns-container{background-color:#eee;}
+.breadcrumb,#f-wrapper,.ff-wrapper{display: none}
+#pubu{width:100%;position: relative;}
 #pubu .box{
 	width: 100%;
 	margin: 20px 0 0;
@@ -104,13 +98,13 @@
 	overflow: hidden;
 }
 .hover-op {
-		position: absolute;
-		top: 1px;
-		left: 1px;
-		bottom: 1px;
-		right: 1px;
-		z-index: -1;
-		box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	bottom: 1px;
+	right: 1px;
+	z-index: -1;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 .customer-nav{
 	background-color: #fff;
@@ -121,33 +115,62 @@
 	z-index: 99997;
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
 }
-@media (max-width: 479px) {
-	.customer-nav{display: none}
-}
-.customer-nav li{width: 20%;}
-.customer-nav a{
-	color:#666;
-	font-size:1.1em;
-	display: block;
+.customer-nav{
+	background-color: #fff;
+	line-height: 40px;
+	opacity: 0.95;
 	width: 100%;
-	text-align: center;
+	z-index: 99997;
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
 	position: relative;
 }
+.customer-nav li {
+  width: 100%;
+  float:left;
+}
+.customer-nav a {
+  color: #333;
+  font-size: 1.1em;
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+  padding:0 14px;
+}
+.customer-nav a.hover-down{
+	font-size: 1.2em;
+	color:#fff;
+	border-top: 1px solid #EEE;
+	background-color: #ef3386;
+}
+.customer-nav a:hover{
+	opacity: .8;
+}
+.uk-dropdown a:hover{
+	background-color: #eee
+}
+.uk-dropdown{
+	padding: 0 15px
+}
 
-.customer-nav a:hover,.customer-nav li.active a{
-	color:#ef3386;
-}
-.customer-nav a .over{
-	display: none;
-	height:3px;
-	background:#ef3386;
+.customer-nav .hover-down:after{
+	content: "\e612";
+	display: inline-block;
+	font-family: "iconfont";
 	position: absolute;
-	bottom: 0;
-	left:0;
+    right: 14px;
+    transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
 }
-.customer-nav a:hover .over,.customer-nav li.active .over{
-	display: block;
-	width: 100%;
+.customer-nav.uk-open .hover-down:after
+{
+	content: "\e611";
+	-moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 #m-wrapper {
@@ -614,10 +637,10 @@ window.request_psku = '{$psku|escape}';
 					var html = '';
 				    for(i in data){
 						if (data[i].isvideo) {
-							html += '<div class="box"><div class="hover-block"><div class="hover-bor"></div><div class="hover-op"></div></div><div class="pic"><a href="/index.php?controller=product&sku=?sku='+encodeURIComponent(data[i].sku)+'" class="highslide"><img src="'+data[i].src+'"></a><em>VIDEO</em><p class="description">'+data[i].title+'</p><p class="name"><span class="name_icon"><i class="icon-user"></i></span><span>'+data[i].author_name+'</span></p></div></div>';
+							html += '<div class="box"><div class="hover-block"><div class="hover-bor"></div><div class="hover-op"></div></div><div class="pic"><a href="/index.php?controller=product&sku=?sku='+encodeURIComponent(data[i].sku)+'" class="highslide"><img src="'+data[i].src+'"></a><em>VIDEO</em><p class="description">'+data[i].title+'</p><p class="name"><span class="name_icon"><i class="icon-login"></i></span><span>'+data[i].author_name+'</span></p></div></div>';
 						} else {
 							//html += "<div class='box'><div class='pic'><a href='"+data[i].src+"' onclick='return hs.expand(this)' class='highslide'><img src='"+data[i].src+"'></a><p class='description'>"+data[i].title+"</p><p><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' class='view'>VIEW PRODUCT</a></p></div></div>";
-							html += "<div class='box'><div class='hover-block'><div class='hover-bor'></div><div class='hover-op'></div></div><div class='pic'><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' class='highslide'><img src='http://rvm.uniwigs.com/timthumb.php?src="+encodeURIComponent(data[i].src)+"&w=210&h=280'></a><p class='description'>"+data[i].title+"</p><p class='name'><span class='name_icon'><i class='icon-user'></i></span><span>"+data[i].author_name+"</span></p></div></div>";
+							html += "<div class='box'><div class='hover-block'><div class='hover-bor'></div><div class='hover-op'></div></div><div class='pic'><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' class='highslide'><img src='http://rvm.uniwigs.com/timthumb.php?src="+encodeURIComponent(data[i].src)+"&w=210&h=280'></a><p class='description'>"+data[i].title+"</p><p class='name'><span class='name_icon'><i class='icon-login'></i></span><span>"+data[i].author_name+"</span></p></div></div>";
 						}
 				    }
 				    render($(html));
