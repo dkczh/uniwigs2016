@@ -451,7 +451,7 @@ class AdminCartRulesControllerCore extends AdminController
             case 'products':
                 $products = array('selected' => array(), 'unselected' => array());
                 $results = Db::getInstance()->executeS('
-				SELECT DISTINCT name, p.id_product as id
+				SELECT DISTINCT name, p.id_product as id,p.reference
 				FROM '._DB_PREFIX_.'product p
 				LEFT JOIN `'._DB_PREFIX_.'product_lang` pl
 					ON (p.`id_product` = pl.`id_product`
