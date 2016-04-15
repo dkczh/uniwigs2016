@@ -3207,7 +3207,10 @@ class AdminControllerCore extends Controller
 			
 			
 			}
-			
+				echo '<pre>';
+		 	echo  $this->_listsql;
+			echo '</pre>';
+			exit;
 			
 			
 			
