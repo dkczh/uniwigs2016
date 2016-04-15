@@ -3196,11 +3196,19 @@ class AdminControllerCore extends Controller
                 $list_count = 'SELECT COUNT(*) AS `'._DB_PREFIX_.$this->table.'` '.$sql_from.$sql_join.' WHERE 1 '.$sql_where;
             }
 			
-			//后台列表页 查询语句
+		/* 	//后台列表页 查询语句
 			echo '<pre>';
 		 	echo  $this->_listsql;
 			echo '</pre>';
-			exit;   
+			exit;    */
+			  //自定义购物车 数据统计条目
+    		if($sql_table=='cart'){
+			$this->_listsql=str_replace("`date_add`", "a.`date_add`",$list_count);
+			
+			
+			}
+			
+			
 			
 			
             $this->_list = Db::getInstance()->executeS($this->_listsql, true, false);
