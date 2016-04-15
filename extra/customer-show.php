@@ -119,7 +119,7 @@ class CustomerShowController extends FrontController
 $controller = new CustomerShowController();
 $controller->page_name = 'extra/customer-show';
 $controller->display_column_left = false;
-file_exists(_PS_THEME_MOBILE_DIR_.'layout.tpl'))
+file_exists(_PS_THEME_MOBILE_DIR_.'layout.tpl');
 if (file_exists(_PS_ROOT_DIR_.'/extra/tpls/'._THEME_NAME_.'/customer-show.tpl')) {
 	$controller->setTemplate(_PS_ROOT_DIR_.'/extra/tpls/'._THEME_NAME_.'/customer-show.tpl');
 } else {
