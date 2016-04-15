@@ -3203,8 +3203,8 @@ class AdminControllerCore extends Controller
 			exit;    */
 			  //自定义购物车 数据统计条目
     		if($sql_table=='cart'){
-			$this->_listsql=str_replace("`date_add`", "a.`date_add`",$this->_listsql);
-			
+		//	$this->_listsql=str_replace("`date_add`", "a.`date_add`",$this->_listsql);
+			echo  'xxxxxxxxxxxxxx';
 			
 			}
 				echo '<pre>';
