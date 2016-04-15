@@ -41,9 +41,9 @@ $navbar-color:                                   #444 !default;
 $navbar-link-color:                              #07D !default;
 $navbar-link-hover-color:                        #059 !default;
 
-$navbar-nav-height:                              40px !default;
-$navbar-nav-line-height:                         $navbar-nav-height !default;
-$navbar-nav-padding-horizontal:                  12px !default;
+$navbar-nav-height:                              50px !default;
+$navbar-nav-line-height:                         45px !default;
+$navbar-nav-padding-horizontal:                  20px !default;//15px
 $navbar-nav-color:                               #444 !default;
 $navbar-nav-font-size:                           15px !default;
 $navbar-nav-font-weight:                         normal !default;
@@ -131,6 +131,9 @@ $navbar-toggle-icon-alt:                         "\f002" !default;
     font-size: $navbar-nav-font-size;
     text-transform: uppercase;
     @include hook-navbar-nav();
+    @media (max-width: $screen-sm-max) {// max 991px
+        padding:0 9px;
+    }
 }
 
 /* Appear not as link */

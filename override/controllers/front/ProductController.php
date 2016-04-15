@@ -113,6 +113,30 @@ class ProductController extends ProductControllerCore
 
             // $this->context->smarty->assign('HOOK_PRODUCT_FEATURES',
             //     Hook::exec('displayProductFeatures', array('product' => $this->product)));
+
+			$rvm_db_name = '`uniwigs_rvm`';
+			$latest_reviews = Db::getInstance()->query("
+			select * from $rvm_db_name.reviews
+			where id_review in (
+				select id_review from $rvm_db_name.review_products where sku='{$this->product->reference}'
+			)
+			and review_type='normal'
+			and deleted=0
+			and visible=1
+			order by publish_at desc
+			limit 0,20
+			");
+			$latest_reviews_html = '';
+			foreach ($latest_reviews as $review) {
+				$latest_reviews_html .= '
+				<div class="latest_reviews" itemscope itemtype="http://data-vocabulary.org/Review">
+					<span itemprop="reviewer">'.$review['author_name'].'</span>
+					<span itemprop="dtreviewed" datatime="'.date('c',$review['publish_at']).'">'.date('Y-m-d H:i:s',$review['publish_at']).'</span>
+					<span itemprop="description">'.$review['review_content'].'</span>
+				</div>
+				';
+			}
+            $this->context->smarty->assign('PRODUCT_REVIEWS', $latest_reviews_html);
         }
     }
 

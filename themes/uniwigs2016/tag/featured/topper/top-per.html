@@ -1,0 +1,473 @@
+{literal}
+<style>
+#columns.container{max-width: 100%;}
+.breadcrumb{display: none;}
+#top-per .banner{max-width: 1400px;margin:0 auto;}
+#top-per h3{font-size:30px;color:#847471;text-align: center;position: relative;}
+#top-per h3 span{display: inline-block;position: relative;}
+#top-per h3 span.text-title{margin: 0 30px;text-transform: none}
+#top-per h3 span.text-icon-left:before{
+	content: "";
+    border-bottom: 1px solid #b5acaa;
+    width: 100px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: -115px;
+    top: 9px;}
+#top-per h3 span.text-icon-left:after{
+	content: "";
+    border: 1px solid #847471;
+    transform: rotate(50deg);
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-right: 15px;}
+#top-per h3 span.text-icon-right:before{
+	content: "";
+    border-bottom: 1px solid #b5acaa;
+    width: 100px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    right: -115px;
+    top: 9px;}
+#top-per h3 span.text-icon-right:after{
+	content: "";
+    border: 1px solid #847471;
+    transform: rotate(50deg);
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-left: 15px;}
+.layer-video{position: relative;background-color: #847471;height:204px;margin-top: -250px; margin-bottom: 140px;}
+.layer-video-list{width:500px;margin:0 auto;}
+.layer-video-list li a{display: block;position: relative;}
+.layer-video .img-left{position: absolute;left:18%;top:8%;}
+.layer-video .img-right{position: absolute;right:18%;top:8%;}
+@media (max-width: 1600px) {
+.layer-video .img-left{position: absolute;left:10%;top:8%;}
+.layer-video .img-right{position: absolute;right:10%;top:8%;}
+}
+@media (max-width: 1440px) {
+.layer-video .img-left{position: absolute;left:5%;top:8%;}
+.layer-video .img-right{position: absolute;right:5%;top:8%;}
+}
+
+#top-per .bx-wrapper{z-index: 1}
+.layer-video-list li a:hover .play-video{
+	border: 8px solid rgba(222, 48, 126, 0.7);
+}
+.layer-video-list li a:hover .play-video:after{
+	border-left-color:rgba(222, 48, 126, 0.7);
+}
+.play-video{
+position: absolute;
+display: inline-block;
+width: 70px;
+height: 70px;
+border: 8px solid rgba(255, 255, 255, 0.5);
+border-radius: 50%;
+text-indent: -999em;
+cursor: pointer;
+left: 44%;
+top: 37%;
+}
+.play-video:after {
+content: '';
+position: absolute;
+left: 50%;
+top: 50%;
+height: 0;
+width: 0;
+margin: -12px 0 0 -6px;
+border: solid rgba(0, 0, 0, 0);
+border-left-color: rgba(255, 255, 255, 0.5);
+border-width: 12px 20px;
+pointer-featureds: none;
+-webkit-transition: all .3s ease-out;
+-moz-transition: all .3s ease-out;
+-ms-transition: all .3s ease-out;
+transition: all .3s ease-out;
+}
+</style>
+{/literal}
+<link rel="stylesheet" href="/themes/uniwigs2016/css/product_list.css" type="text/css" media="all">
+<div id="top-per">
+	<div class="banner"><img src="/themes/uniwigs2016/tag/featured/topper/image/banner.jpg" alt="" class="img-responsive"></div>
+	<div class="layer1 uk-margin-large-top uk-margin-large-bottom container">
+		<h3 class="uk-margin-large-bottom"><span class="text-icon-left"></span><span class="text-title">Lace Closure</span><span class="text-icon-right"></span></h3>
+		{if isset($products) && $products}
+			{if $page_name !='tag'}
+				{assign var='nbItemsPerLine' value=4}
+				{assign var='nbItemsPerLineTablet' value=4}
+				{assign var='nbItemsPerLineMobile' value=4}
+			{else}
+				{assign var='nbItemsPerLine' value=4}
+				{assign var='nbItemsPerLineTablet' value=4}
+				{assign var='nbItemsPerLineMobile' value=4}
+			{/if}
+
+
+			<!-- Products list -->
+			<ul{if isset($id) && $id} id="{$id}"{/if} class="product_list grid row{if isset($class) && $class} {$class}{/if}" data-uk-grid-match>
+			{foreach from=$products.0 item=product name=products}
+				{math equation="(total%perLine)" total=$smarty.foreach.products.total perLine=$nbItemsPerLine assign=totModulo}
+				{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineTablet assign=totModuloTablet}
+				{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineMobile assign=totModuloMobile}
+				{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
+				{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
+				{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
+				{if $product.name=='1.1" Hair Clips- Beige'}
+				{else}
+				<li class="ajax_block_product{if $page_name == 'tag'} col-xs-12 col-sm-3 col-md-3{else} col-xs-12 col-sm-3 col-md-3{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLine == 0} last-in-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLine == 1} first-in-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModulo)} last-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 0} last-item-of-tablet-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 1} first-item-of-tablet-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 0} last-item-of-mobile-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 1} first-item-of-mobile-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModuloMobile)} last-mobile-line{/if}">
+					<div class="product-container" itemscope itemtype="http://schema.org/Product">
+						<div class="left-block">
+							<div class="product-image-container">
+								<a class="product_img_link"	href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
+									<img class="replace-2x img-responsive" src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
+								</a>
+								{if isset($quick_view) && $quick_view}
+									<div class="quick-view-wrapper-mobile">
+									<a class="quick-view-mobile" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}">
+										<i class="icon-eye-open"></i>
+									</a>
+								</div>
+								<a class="quick-view" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}">
+									<span>{l s='Quick view'}</span>
+								</a>
+								{/if}
+								{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
+									{if $page_name != 'index'}
+	                                    <div class="functional-buttons clearfix">
+	                                        {hook h='displayProductListFunctionalButtons' product=$product}
+	                                        <div class="view">
+												<a href="{$product.link|escape:'html':'UTF-8'}" title="{l s='View'}">
+													<span>{if (isset($product.customization_required) && $product.customization_required)}{l s='Customize'}{else}{l s='More'}{/if}</span>
+												</a>
+											</div>
+	                                    </div>
+	                                {/if}
+								{/if}
+							</div>
+							{hook h="displayProductDeliveryTime" product=$product}
+							{hook h="displayProductPriceBlock" product=$product type="weight"}
+						</div>
+						<div class="right-block">
+							
+							{if isset($product.color_list)}
+								<div class="color-list-container">{$product.color_list}</div>
+							{/if}
+							<h5 itemprop="name">
+								{if isset($product.pack_quantity) && $product.pack_quantity}{$product.pack_quantity|intval|cat:' x '}{/if}
+								<a class="product-name" href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url" >
+									{$product.name}
+								</a>
+							</h5>
+							
+							<p class="{if $product.review_summary.count<=0}hide{/if}">
+								<a href="javascript:void(0);" class="product-rating-link" title="{if $product.review_summary.rating>0}{$product.review_summary.rating}/5{/if}">
+										<span class="star" style="width:{$product.review_summary.rating/5*100}%"></span>
+								</a>
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}#product_reviews" rel="nofollow" class="product-rating-count">
+									({$product.review_summary.count}) 
+								</a>
+							</p>
+							<p>
+								<span class="like link_like_product" id="category_dolike_{$product.id_product}"
+									onclick="javascript:like('','{$product.id_product}','category')"
+									product_sku="{$product.reference}">
+									<span class="like-number-container{if $product.like_count<=0} hide{/if}">
+										<span class="like-number text-muted" id="category_likecount_{$product.id_product}">{$product.like_count}</span>
+									</span>
+								</span>
+							</p>
+							
+							{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
+							<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="content_price">
+								{if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
+									<span itemprop="price" class="price product-price">
+										{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
+									</span>
+									<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
+									{if isset($product.specific_prices) && $product.specific_prices && isset($product.specific_prices.reduction) && $product.specific_prices.reduction > 0}
+										{hook h="displayProductPriceBlock" product=$product type="old_price"}
+										<span class="old-price product-price">
+											{displayWtPrice p=$product.price_without_reduction}
+										</span>
+										{hook h="displayProductPriceBlock" id_product=$product.id_product type="old_price"}
+										{if $product.specific_prices.reduction_type == 'percentage'}
+											<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
+										{/if}
+									{/if}
+									{hook h="displayProductPriceBlock" product=$product type="price"}
+									{hook h="displayProductPriceBlock" product=$product type="unit_price"}
+								{/if}
+							</div>
+							{/if}
+							
+							{*<div class="product-flags">
+								{if isset($product.on_sale) && $product.on_sale && isset($product.show_price) && $product.show_price && !$PS_CATALOG_MODE}
+									{elseif isset($product.reduction) && $product.reduction && isset($product.show_price) && $product.show_price && !$PS_CATALOG_MODE}
+										<span class="discount">{l s='Reduced price!'}</span>
+									{/if}
+							</div>*}
+
+						</div>
+
+					</div><!-- .product-container> -->
+				</li>
+				{/if}
+			{/foreach}
+			</ul>
+
+		{addJsDefL name=min_item}{l s='Please select at least one product' js=1}{/addJsDefL}
+		{addJsDefL name=max_item}{l s='You cannot add more than %d product(s) to the product comparison' sprintf=$comparator_max_item js=1}{/addJsDefL}
+		{addJsDef comparator_max_item=$comparator_max_item}
+		{addJsDef comparedProductsIds=$compared_products}
+		{/if}
+	</div>
+	<ul id="layer1-video" class="layer-video-list">
+		<li>
+			<a href="https://www.youtube.com/watch?v=HCAKEwNWaJo" data-uk-lightbox="{literal}{group:'layer1-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-1.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=S57e7aAduUQ" data-uk-lightbox="{literal}{group:'layer1-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-2.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=1MzbX3wJCZk" data-uk-lightbox="{literal}{group:'layer1-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-3.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=ucJ7F-mG3yc" data-uk-lightbox="{literal}{group:'layer1-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-4.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=xnlOsrn_b2U" data-uk-lightbox="{literal}{group:'layer1-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-5.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=cp6HtLSNyec" data-uk-lightbox="{literal}{group:'layer1-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-6.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=0RLUtnvDh10" data-uk-lightbox="{literal}{group:'layer1-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-7.jpg" alt="">
+			</a>
+		</li>
+	</ul>
+	<div class="layer-video">
+		<div class="img-left"><img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-bg-1.jpg" alt=""></div>
+		<div class="img-right"><img src="/themes/uniwigs2016/tag/featured/topper/image/layer1-bg-2.jpg" alt=""></div>
+	</div>
+	<div class="layer1 uk-margin-large-top uk-margin-large-bottom container">
+		<h3 class="uk-margin-large-bottom"><span class="text-icon-left"></span><span class="text-title">Monofilament</span><span class="text-icon-right"></span></h3>
+		{if isset($products) && $products}
+			{if $page_name !='tag'}
+				{assign var='nbItemsPerLine' value=4}
+				{assign var='nbItemsPerLineTablet' value=4}
+				{assign var='nbItemsPerLineMobile' value=4}
+			{else}
+				{assign var='nbItemsPerLine' value=4}
+				{assign var='nbItemsPerLineTablet' value=4}
+				{assign var='nbItemsPerLineMobile' value=4}
+			{/if}
+
+
+			<!-- Products list -->
+			<ul{if isset($id) && $id} id="{$id}"{/if} class="product_list grid row{if isset($class) && $class} {$class}{/if}" data-uk-grid-match>
+			{foreach from=$products.1 item=product name=products}
+				{math equation="(total%perLine)" total=$smarty.foreach.products.total perLine=$nbItemsPerLine assign=totModulo}
+				{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineTablet assign=totModuloTablet}
+				{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineMobile assign=totModuloMobile}
+				{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
+				{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
+				{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
+				{if $product.name=='1.1" Hair Clips- Beige'}
+				{else}
+				<li class="ajax_block_product{if $page_name == 'tag'} col-xs-12 col-sm-3 col-md-3{else} col-xs-12 col-sm-3 col-md-3{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLine == 0} last-in-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLine == 1} first-in-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModulo)} last-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 0} last-item-of-tablet-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 1} first-item-of-tablet-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 0} last-item-of-mobile-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 1} first-item-of-mobile-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModuloMobile)} last-mobile-line{/if}">
+					<div class="product-container" itemscope itemtype="http://schema.org/Product">
+						<div class="left-block">
+							<div class="product-image-container">
+								<a class="product_img_link"	href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
+									<img class="replace-2x img-responsive" src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
+								</a>
+								{if isset($quick_view) && $quick_view}
+									<div class="quick-view-wrapper-mobile">
+									<a class="quick-view-mobile" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}">
+										<i class="icon-eye-open"></i>
+									</a>
+								</div>
+								<a class="quick-view" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}">
+									<span>{l s='Quick view'}</span>
+								</a>
+								{/if}
+								{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
+									{if $page_name != 'index'}
+	                                    <div class="functional-buttons clearfix">
+	                                        {hook h='displayProductListFunctionalButtons' product=$product}
+	                                        <div class="view">
+												<a href="{$product.link|escape:'html':'UTF-8'}" title="{l s='View'}">
+													<span>{if (isset($product.customization_required) && $product.customization_required)}{l s='Customize'}{else}{l s='More'}{/if}</span>
+												</a>
+											</div>
+	                                    </div>
+	                                {/if}
+								{/if}
+							</div>
+							{hook h="displayProductDeliveryTime" product=$product}
+							{hook h="displayProductPriceBlock" product=$product type="weight"}
+						</div>
+						<div class="right-block">
+							
+							{if isset($product.color_list)}
+								<div class="color-list-container">{$product.color_list}</div>
+							{/if}
+							<h5 itemprop="name">
+								{if isset($product.pack_quantity) && $product.pack_quantity}{$product.pack_quantity|intval|cat:' x '}{/if}
+								<a class="product-name" href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url" >
+									{$product.name}
+								</a>
+							</h5>
+							
+							<p class="{if $product.review_summary.count<=0}hide{/if}">
+								<a href="javascript:void(0);" class="product-rating-link" title="{if $product.review_summary.rating>0}{$product.review_summary.rating}/5{/if}">
+										<span class="star" style="width:{$product.review_summary.rating/5*100}%"></span>
+								</a>
+								<a href="{$product.link|escape:'htmlall':'UTF-8'}#product_reviews" rel="nofollow" class="product-rating-count">
+									({$product.review_summary.count}) 
+								</a>
+							</p>
+							<p>
+								<span class="like link_like_product" id="category_dolike_{$product.id_product}"
+									onclick="javascript:like('','{$product.id_product}','category')"
+									product_sku="{$product.reference}">
+									<span class="like-number-container{if $product.like_count<=0} hide{/if}">
+										<span class="like-number text-muted" id="category_likecount_{$product.id_product}">{$product.like_count}</span>
+									</span>
+								</span>
+							</p>
+							
+							{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
+							<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="content_price">
+								{if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
+									<span itemprop="price" class="price product-price">
+										{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
+									</span>
+									<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
+									{if isset($product.specific_prices) && $product.specific_prices && isset($product.specific_prices.reduction) && $product.specific_prices.reduction > 0}
+										{hook h="displayProductPriceBlock" product=$product type="old_price"}
+										<span class="old-price product-price">
+											{displayWtPrice p=$product.price_without_reduction}
+										</span>
+										{hook h="displayProductPriceBlock" id_product=$product.id_product type="old_price"}
+										{if $product.specific_prices.reduction_type == 'percentage'}
+											<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
+										{/if}
+									{/if}
+									{hook h="displayProductPriceBlock" product=$product type="price"}
+									{hook h="displayProductPriceBlock" product=$product type="unit_price"}
+								{/if}
+							</div>
+							{/if}
+							
+							{*<div class="product-flags">
+								{if isset($product.on_sale) && $product.on_sale && isset($product.show_price) && $product.show_price && !$PS_CATALOG_MODE}
+									{elseif isset($product.reduction) && $product.reduction && isset($product.show_price) && $product.show_price && !$PS_CATALOG_MODE}
+										<span class="discount">{l s='Reduced price!'}</span>
+									{/if}
+							</div>*}
+
+						</div>
+
+					</div><!-- .product-container> -->
+				</li>
+				{/if}
+			{/foreach}
+			</ul>
+
+		{addJsDefL name=min_item}{l s='Please select at least one product' js=1}{/addJsDefL}
+		{addJsDefL name=max_item}{l s='You cannot add more than %d product(s) to the product comparison' sprintf=$comparator_max_item js=1}{/addJsDefL}
+		{addJsDef comparator_max_item=$comparator_max_item}
+		{addJsDef comparedProductsIds=$compared_products}
+		{/if}
+	</div>
+	<ul id="layer2-video" class="layer-video-list">
+		<li>
+			<a href="https://www.youtube.com/watch?v=yjxG9o37qqg" data-uk-lightbox="{literal}{group:'layer2-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer2-1.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=SJMbgCk7rIY" data-uk-lightbox="{literal}{group:'layer2-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer2-2.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=7hyrwJYExo0" data-uk-lightbox="{literal}{group:'layer2-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer2-3.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=ryUgxcWlTw4" data-uk-lightbox="{literal}{group:'layer2-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer2-4.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=5l1cpJhqnBo" data-uk-lightbox="{literal}{group:'layer2-video'}{/literal}" data-lightbox-type="image">
+				<span class="play-video"></span>
+				<img src="/themes/uniwigs2016/tag/featured/topper/image/layer2-5.jpg" alt="">
+			</a>
+		</li>
+	</ul>
+	<div class="layer-video">
+		<div class="img-left"><img src="/themes/uniwigs2016/tag/featured/topper/image/layer2-bg-1.jpg" alt=""></div>
+		<div class="img-right"><img src="/themes/uniwigs2016/tag/featured/topper/image/layer2-bg-2.jpg" alt=""></div>
+	</div>
+</div>
+<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
+<script>
+ $('#layer1-video').bxSlider({
+	minSlides: 1,
+	maxSlides: 1,
+	slideWidth: 500,
+	slideMargin: 0,
+	pager: false,
+	nextText: '',
+	prevText: '',
+	moveSlides:1,
+	infiniteLoop:false,
+	hideControlOnEnd: true
+});
+ $('#layer2-video').bxSlider({
+	minSlides: 1,
+	maxSlides: 1,
+	slideWidth: 500,
+	slideMargin: 0,
+	pager: false,
+	nextText: '',
+	prevText: '',
+	moveSlides:1,
+	infiniteLoop:false,
+	hideControlOnEnd: true
+});
+</script>

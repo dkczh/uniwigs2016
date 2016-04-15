@@ -1,217 +1,345 @@
 {literal}
 <style>
-#f-wrapper {
-	margin-top:0;}
-#year2015 img{max-width: 100%;display:block;}
-#year2015 .banner{
-	background: url("/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/banner_bg.jpg") no-repeat center top;
-}
-#year2015 .banner_bef{
-  text-align: center;
-  margin-top: -325px;
-  padding-bottom: 120px;
-}
-.banner_a img{
-	margin: 0 auto;
-  padding-right: 1px;
-}
-.banner_bef span{display:inline-block;padding:0 20px}
-@media (min-width: 1024px){
-	.jian img{margin-left: 187px;}
-	#year2015 .banner_bef{ margin-top: -325px; padding-bottom: 120px}
-	.play-video{left: 48.3%}
-}
-
-@media (min-width: 768px){
-	#year2015 .banner_bef{ margin-top: -256px;  padding-bottom: 54px;}
-	.play-video{left: 46.3%;}
-}
-
-.custom-video{position: relative;}
-.custom-video-img{
-	background: #aa31a3;
-	border-radius: 50%;
-	width:324px;
-	height:324px;
-	 margin: 0 auto;
-  padding-top: 9px;
-}
-.custom-video-img:hover .play-video{
-	background: #AA31A3;
-}
-.custom-video-img a{
-	display: block;
-	width:304px;
-	height:304px;
-	border-radius: 50%;
-	border: 5px solid #333;
-	  background: #FFF;
-  margin: 0 auto;
-  padding: 88px 0 0 22px;
-}
-
-.play-video {
-  position: absolute;
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  background:rgba(170, 49, 163, 0.7);
-  text-indent: -999em;
-  cursor: pointer;
-  left: 48.3%;
-  top: 39%;
-  border-radius: 50%;
-    transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-}
-.highslide {
-  outline: none;
-  text-decoration: none;
-}
-.play-video:after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 0;
-  width: 0;
-  margin: -12px 0 0 -6px;
-  border: solid rgba(0, 0, 0, 0);
-  border-left-color: rgba(255, 255, 255, 0.9);
-  border-width: 12px 20px;
-  pointer-featureds: none;
-}
-.custom-video-arcl span{
-	display: inline-block;
-	border-radius: 50%;
-	background: #AA31A3;
-	position: absolute;
-	top:40%;
-}
-.custom-video-arcl span.large-arcl{
-	width:60px;
-	height:60px;
-}
-.custom-video-arcl span.medium-arcl{
-	width:30px;
-	height:30px;
-  	top: 45%;
-}
-.custom-video-arcl span.small-arcl{
-	width:18px;
-	height:18px;
-  	top: 47%;
-}
-.custom-video-arcl.arcl-left span.large-arcl{left:35%;}
-.custom-video-arcl.arcl-left span.medium-arcl{left:31%;}
-.custom-video-arcl.arcl-left span.small-arcl{left:28%;}
-.custom-video-arcl.arcl-right span.large-arcl{right:35%;}
-.custom-video-arcl.arcl-right span.medium-arcl{right:31%;}
-.custom-video-arcl.arcl-right span.small-arcl{right:28%;}
-.invisible-uni-extensions{margin-top:55px;}
-.invisible-uni-extensions li{
-	float:left;
-	width:20%;
-	padding:10px;
-	text-align: center;
-	position: relative;
-}
-.invisible-uni-extensions p{text-align: center;padding:15px 0;}
-.invisible-uni-extensions li a{text-decoration: none}
-.invisible-uni-extensions li p{text-transform: uppercase;}
+#columns.container{max-width: 100%;}
+.breadcrumb{display: none;}
+#invisible-uni-extensions .banner{max-width: 1600px;margin: 0 auto;}
+#invisible-uni-extensions .banner p{max-width: 950px;margin:0 auto;text-align: center;padding:10px 0;}
+#invisible-uni-extensions .step-1-center{max-width: 729px;margin:0 auto;position: relative;z-index: 1}
+#invisible-uni-extensions .step-1{position: relative;}
+#invisible-uni-extensions .step-1:after{position: absolute;height:375px;background-color: #f6f6f6;width:100%;top:35%;content: "";}
+#invisible-uni-extensions .step-number{width:60px;height:60px;margin:0 auto;border:3px solid #f3637d;color:#f3637d;line-height:50px;text-align:center}
+#invisible-uni-extensions .step-number span{font-size:50px}
+#invisible-uni-extensions h2{text-align: center;color:#f3637d;margin:25px 0;}
+.video-box{width:560px;margin:0 auto;}
 </style>
 {/literal}
-
-<div id="year2015">
-	<!-- banner -->
+<link rel="stylesheet" href="/themes/uniwigs2016/css/product_list.css" type="text/css" media="all">
+<div id="invisible-uni-extensions">
 	<div class="banner">
-		<div class="container">
-			<a href="{$base_dir}flip-in-hair-extensions" class="banner_a">
-				<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/banner.jpg" alt="">
-			</a>
-			<div class="jian"><img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/jian.png" alt=""></div>
-			<div class="banner_bef">
-				<span><img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/bef-1.jpg" alt=""></span>
-				<span><img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/bef-2.jpg" alt=""></span>
+		<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/banner.jpg" alt="" class="img-responsive">
+		<p>Unlike the traditional hair extensions, which are attached to your own strands of hair, the new flip in hair comfortably attaches itself around your head by a transparent miracle wire which is undetectably hidden under your own hair.</p>
+		<p>Try this fun and amazing flip in and transform your look in an instant!</p>
+	</div>
+	<div class="step-1 uk-margin-large-top">
+		<div class="step-1-center">
+			<div class="step-number"><span>1</span></div>
+			<h2>HOW TO APPLY UNI-EXTENSIONS</h2>
+			<div>
+				<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/step1-1.jpg" alt="">
+				<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/step1-2.jpg" alt="">
 			</div>
 		</div>
 	</div>
-	<div class="custom-video">
-		<div class="container">
-			<div class="custom-video-arcl arcl-left">
-				<span class="small-arcl"></span>
-				<span class="medium-arcl"></span>
-				<span class="large-arcl"></span>
-			</div>
-			<div class="custom-video-img">
-				
-				<a href="https://www.youtube.com/embed/2Bq0I488nGU" class="highslide popupvideoa">
-					<span class="play-video"></span>
-					<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/video.png" alt="">
-				</a>
-			</div>
-			<div class="custom-video-arcl arcl-right">
-				<span class="large-arcl"></span>
-				<span class="medium-arcl"></span>
-				<span class="small-arcl"></span>
-			</div>
-		</div>
-	</div>
-	<div class="invisible-uni-extensions">
-		<div class="container">
-			<div class="extensions-banner"><img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/color.jpg" alt=""></div>
-			<p>Note: UniWigs Flip In Hair Extensions has renamed as invisible-uni-extensions.</p>
-			<ul class="row opacity-img">
-				<li>
-					<a href="/flip-in-hair-extensions+++Color=Blonde">
-						<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/blonde.jpg" alt="">
-						<p>blonde</p>
-					</a>
+	<div class="step-2 uk-margin-large-top">
+		<div class="step-2-center container">
+			<div class="step-number"><span>2</span></div>
+			<h2>product</h2>
+			<ul class="product_list grid row">
+				<li class="ajax_block_product col-xs-12 col-sm-4 col-md-4">
+					<div class="product-container" itemscope="" itemtype="https://schema.org/Product">
+						<div class="left-block">
+							<div class="product-image-container">
+								<a class="product_img_link" href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html?search_query=E62016&amp;results=1" title="16&quot; Body Wave Human Hair Flip In Hair Extension E62016-H" itemprop="url">
+									<img class="replace-2x img-responsive" src="http://www.uniwigs.com/3787-home_default/16-body-wave-human-hair-flip-in-hair-extension-e62016-h.jpg" alt="16&quot; Body Wave Human Hair Flip In Hair Extension E62016-H" title="16&quot; Body Wave Human Hair Flip In Hair Extension E62016-H" width="255" height="298" itemprop="image">
+								</a>
+															<div class="quick-view-wrapper-mobile">
+									<a class="quick-view-mobile" href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html?search_query=E62016&amp;results=1" rel="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html?search_query=E62016&amp;results=1">
+										<i class="icon-eye-open"></i>
+									</a>
+								</div>
+								<a class="quick-view" href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html?search_query=E62016&amp;results=1" rel="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html?search_query=E62016&amp;results=1" title="Quick view">
+									<span>Quick view</span>
+								</a>
+								<div class="functional-buttons clearfix">
+									<div class="wishlist">
+										<a class="addToWishlist wishlistProd_40676" href="#" rel="40676" onclick="WishlistCart('wishlist_block_list', 'add', '40676', false, 1); return false;" title="Add to My Wishlist">
+											<span>Add to Wishlist</span>
+										</a>
+									</div>
+									<div class="view">
+										<a href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html?search_query=E62016&amp;results=1" title="View">
+											<span>More</span>
+										</a>
+									</div>
+								</div>
+							</div>					
+						</div>
+						<div class="right-block">
+							<div class="color-list-container">
+								<ul class="color_to_pick_list clearfix">
+									<li>
+											<a href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html#/10856-color-g_1b" id="color_428505" class="color_pick">
+													<img src="/img/co/10856.jpg" alt="G-1B" title="G-1B" width="20" height="20">
+											</a>
+									</li>
+									<li>
+											<a href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html#/10857-color-g_2" id="color_428506" class="color_pick">
+													<img src="/img/co/10857.jpg" alt="G-2" title="G-2" width="20" height="20">
+											</a>
+									</li>
+									<li>
+											<a href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html#/10858-color-g_4" id="color_428507" class="color_pick">
+													<img src="/img/co/10858.jpg" alt="G-4" title="G-4" width="20" height="20">
+											</a>
+									</li>
+									<li>
+											<a href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html#/10867-color-g_24" id="color_428508" class="color_pick">
+													<img src="/img/co/10867.jpg" alt="G-24" title="G-24" width="20" height="20">
+											</a>
+									</li>
+									<li>
+											<a href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html#/10878-color-g_613" id="color_428509" class="color_pick">
+													<img src="/img/co/10878.jpg" alt="G-613" title="G-613" width="20" height="20">
+											</a>
+									</li>
+								</ul>
+							</div>
+							<h5 itemprop="name">
+								<a class="product-name" href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html?search_query=E62016&amp;results=1" title="16&quot; Body Wave Human Hair Flip In Hair Extension E62016-H" itemprop="url">
+									16" Body Wave Human Hair Flip In Hair Extension E62016-H
+								</a>
+							</h5>
+							<p class="hide">
+								<a href="javascript:void(0);" class="product-rating-link" title="">
+										<span class="star" style="width:0%"></span>
+								</a>
+								<a href="http://www.uniwigs.com/flip-in-hair-extensions/40676-16-body-wave-human-hair-flip-in-hair-extension-e62016-h.html?search_query=E62016&amp;results=1#product_reviews" rel="nofollow" class="product-rating-count">
+									() 
+								</a>
+							</p>
+							<p>
+								<span class="like link_like_product" id="category_dolike_40676" onclick="javascript:like('','40676','category')" product_sku="E62016-H">
+									<span class="like-number-container hide">
+										<span class="like-number text-muted" id="category_likecount_40676"></span>
+									</span>
+								</span>
+							</p>
+							<div class="content_price">						
+								<span class="price product-price">$72.89</span>								
+								<span class="old-price product-price">$168.80</span>
+							</div>
+						</div>
+					</div><!-- .product-container> -->
 				</li>
-				<li>
-					<a href="/flip-in-hair-extensions+++Color=Brown">
-						<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/Brown.jpg" alt="">
-						<p>Brown</p>
-					</a>
+				<li class="ajax_block_product col-xs-12 col-sm-4 col-md-4">
+				  <div class="product-container" itemscope="" itemtype="https://schema.org/Product">
+				    <div class="left-block">
+				      <div class="product-image-container">
+				        <a class="product_img_link" href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html?search_query=E61020&amp;results=1" title="20&quot; Straight Indian Remy Human Hair Flip In Hair Extension"
+				        itemprop="url">
+				          <img class="replace-2x img-responsive" src="http://www.uniwigs.com/4037-home_default/16-straight-indian-remy-human-hair-flip-in-hair-extension.jpg" alt="20&quot; Straight Indian Remy Human Hair Flip In Hair Extension" title="20&quot; Straight Indian Remy Human Hair Flip In Hair Extension"
+				          width="255" height="298" itemprop="image">
+				        </a>
+				        <div class="quick-view-wrapper-mobile">
+				          <a class="quick-view-mobile" href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html?search_query=E61020&amp;results=1" rel="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html?search_query=E61020&amp;results=1">
+				            <i class="icon-eye-open"></i>
+				          </a>
+				        </div>
+				        <a class="quick-view" href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html?search_query=E61020&amp;results=1" rel="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html?search_query=E61020&amp;results=1"
+				        title="Quick view">
+				          <span>Quick view</span>
+				        </a>
+				        <div class="functional-buttons clearfix">
+
+				          <div class="wishlist">
+				            <a class="addToWishlist wishlistProd_40733" href="#" rel="40733" onclick="WishlistCart('wishlist_block_list', 'add', '40733', false, 1); return false;" title="Add to My Wishlist">
+				              <span>Add to Wishlist</span>
+				            </a>
+				          </div>
+
+				          <div class="view">
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html?search_query=E61020&amp;results=1" title="View">
+				              <span>More</span>
+				            </a>
+				          </div>
+				        </div>
+				      </div>
+
+				    </div>
+				    <div class="right-block">
+				      <div class="color-list-container">
+				        <ul class="color_to_pick_list clearfix">
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html#/10856-color-g_1b" id="color_428470" class="color_pick">
+				              <img src="/img/co/10856.jpg" alt="G-1B" title="G-1B" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html#/10857-color-g_2" id="color_428471" class="color_pick">
+				              <img src="/img/co/10857.jpg" alt="G-2" title="G-2" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html#/10858-color-g_4" id="color_428472" class="color_pick">
+				              <img src="/img/co/10858.jpg" alt="G-4" title="G-4" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html#/10867-color-g_24" id="color_428473" class="color_pick">
+				              <img src="/img/co/10867.jpg" alt="G-24" title="G-24" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html#/10878-color-g_613" id="color_428474" class="color_pick">
+				              <img src="/img/co/10878.jpg" alt="G-613" title="G-613" width="20" height="20">
+				            </a>
+				          </li>
+				        </ul>
+				      </div>
+				      <h5 itemprop="name">
+							<a class="product-name" href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html?search_query=E61020&amp;results=1" title="20&quot; Straight Indian Remy Human Hair Flip In Hair Extension" itemprop="url">20" Straight Indian Remy Human Hair Flip In Hair Extension</a>
+					  </h5>
+				      <p class="hide">
+				        <a href="javascript:void(0);" class="product-rating-link" title="">
+				          <span class="star" style="width:0%"></span>
+				        </a>
+				        <a href="http://www.uniwigs.com/flip-in-hair-extensions/40733-16-straight-indian-remy-human-hair-flip-in-hair-extension.html?search_query=E61020&amp;results=1#product_reviews" rel="nofollow" class="product-rating-count">()</a>
+				      </p>
+				      <div class="content_price">
+
+				        <span class="price product-price">$92.89</span>
+
+				        <span class="old-price product-price">$189.90</span>
+				      </div>
+				      <div class="product-flags">
+				        <span class="discount">Reduced price!</span>
+				      </div>
+				    </div>
+				  </div>
+				  <!-- .product-container> -->
 				</li>
-				<li>
-					<a href="/flip-in-hair-extensions+++Color=Black">
-						<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/Black.jpg" alt="">
-						<p>Black</p>
-					</a>
-				</li>
-				<li>
-					<a href="/flip-in-hair-extensions+++Color=Ombre">
-						<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/omber.jpg" alt="">
-						<p>omber</p>
-					</a>
-				</li>
-				<li>
-					<a href="/flip-in-hair-extensions+++Color=Colorful">
-						<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/colorful.jpg" alt="">
-						<p>colorful</p>
-					</a>
+				<li class="ajax_block_product col-xs-12 col-sm-4 col-md-4">
+				  <div class="product-container" itemscope="" itemtype="https://schema.org/Product">
+				    <div class="left-block">
+				      <div class="product-image-container">
+				        <a class="product_img_link" href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html?search_query=E61022&amp;results=1" title="22&quot; Straight Remy Human Hair Flip In Hair Extension" itemprop="url">
+				          <img class="replace-2x img-responsive" src="http://www.uniwigs.com/11037-home_default/22-straight-remy-human-hair-flip-in-hair-extension.jpg" alt="22&quot; Straight Remy Human Hair Flip In Hair Extension" title="22&quot; Straight Remy Human Hair Flip In Hair Extension"
+				          width="255" height="298" itemprop="image">
+				        </a>
+				        <div class="quick-view-wrapper-mobile">
+				          <a class="quick-view-mobile" href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html?search_query=E61022&amp;results=1" rel="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html?search_query=E61022&amp;results=1">
+				            <i class="icon-eye-open"></i>
+				          </a>
+				        </div>
+				        <a class="quick-view" href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html?search_query=E61022&amp;results=1" rel="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html?search_query=E61022&amp;results=1"
+				        title="Quick view">
+				          <span>Quick view</span>
+				        </a>
+				        <div class="functional-buttons clearfix">
+
+				          <div class="wishlist">
+				            <a class="addToWishlist wishlistProd_40955" href="#" rel="40955" onclick="WishlistCart('wishlist_block_list', 'add', '40955', false, 1); return false;" title="Add to My Wishlist">
+				              <span>Add to Wishlist</span>
+				            </a>
+				          </div>
+
+				          <div class="view">
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html?search_query=E61022&amp;results=1" title="View">
+				              <span>More</span>
+				            </a>
+				          </div>
+				        </div>
+				      </div>
+
+				    </div>
+				    <div class="right-block">
+				      <div class="color-list-container">
+				        <ul class="color_to_pick_list clearfix">
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html#/10856-color-g_1b" id="color_428499" class="color_pick">
+				              <img src="/img/co/10856.jpg" alt="G-1B" title="G-1B" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html#/10857-color-g_2" id="color_428500" class="color_pick">
+				              <img src="/img/co/10857.jpg" alt="G-2" title="G-2" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html#/10858-color-g_4" id="color_428501" class="color_pick">
+				              <img src="/img/co/10858.jpg" alt="G-4" title="G-4" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html#/10867-color-g_24" id="color_428502" class="color_pick">
+				              <img src="/img/co/10867.jpg" alt="G-24" title="G-24" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html#/10878-color-g_613" id="color_428503" class="color_pick">
+				              <img src="/img/co/10878.jpg" alt="G-613" title="G-613" width="20" height="20">
+				            </a>
+				          </li>
+				          <li>
+				            <a href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html#/10880-color-g_bur" id="color_428504" class="color_pick">
+				              <img src="/img/co/10880.jpg" alt="G-bur" title="G-bur" width="20" height="20">
+				            </a>
+				          </li>
+				        </ul>
+				      </div>
+				      <h5 itemprop="name">
+							<a class="product-name" href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html?search_query=E61022&amp;results=1" title="22&quot; Straight Remy Human Hair Flip In Hair Extension" itemprop="url">22" Straight Remy Human Hair Flip In Hair Extension</a>
+						</h5>
+				      <p class="hide">
+				        <a href="javascript:void(0);" class="product-rating-link" title="">
+				          <span class="star" style="width:0%"></span>
+				        </a>
+				        <a href="http://www.uniwigs.com/flip-in-hair-extensions/40955-22-straight-remy-human-hair-flip-in-hair-extension.html?search_query=E61022&amp;results=1#product_reviews" rel="nofollow" class="product-rating-count">() </a>
+				      </p>
+				      <div class="content_price">
+
+				        <span class="price product-price">$102.49</span>
+
+				        <span class="old-price product-price">$200.00</span>
+				      </div>
+				      <div class="product-flags">
+				        <span class="discount">Reduced price!</span>
+				      </div>
+				    </div>
+				  </div>
+				  <!-- .product-container> -->
 				</li>
 			</ul>
 		</div>
 	</div>
+	<div class="step-3 uk-margin-large-top">
+		<div class="step-3-center">
+			<div class="step-number"><span>3</span></div>
+			<h2>videos</h2>
+			<div class="video-box">
+				<ul id="uni-exten-video">
+					<li>
+						<a href="http://www.youtube.com/embed/fGFO8UlSOOY" data-uk-lightbox="{literal}{group:'customer-video'}{/literal}" data-lightbox-type="image">
+							<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/video-1.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="http://www.youtube.com/embed/z4jt-BcA_HU" data-uk-lightbox="{literal}{group:'customer-video'}{/literal}" data-lightbox-type="image">
+							<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/video-2.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="http://www.youtube.com/embed/9crka1TBqQw" data-uk-lightbox="{literal}{group:'customer-video'}{/literal}" data-lightbox-type="image">
+							<img src="/themes/uniwigs2016/tag/featured/invisible-uni-extensions/image/video-3.jpg" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
-<link rel="stylesheet" type="text/css" href="/themes/uniwigs2014/cus-show/highslide/highslide.css">
-<script type="text/javascript" src="/themes/uniwigs2014/cus-show/highslide.js"></script>
-{literal}
-<script type="text/javascript">
-	hs.graphicsDir = '/themes/uniwigs2014/cus-show/highslide/graphics/';
-	hs.align = 'center';
-	hs.transitions = ['expand', 'crossfade'];
-	hs.wrapperClassName = 'dark borderless floating-caption';
-	hs.fadeInOut = true;
-	hs.dimmingOpacity = .75;
-	jQuery(function($){
-	$('.popupvideoa').click(function(){
-		return hs.htmlExpand(this, { outlineType: "rounded-white", wrapperClassName: "draggable-header", objectType: "iframe",width:650,height:500});
-	});
+<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
+<script>
+ $('#uni-exten-video').bxSlider({
+	minSlides: 1,
+	maxSlides: 1,
+	slideWidth: 560,
+	slideMargin: 0,
+	pager: false,
+	nextText: '',
+	prevText: '',
+	moveSlides:1,
+	infiniteLoop:false,
+	hideControlOnEnd: true
 });
 </script>
-{/literal}

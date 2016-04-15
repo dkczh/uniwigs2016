@@ -31,6 +31,7 @@
 a.fancybox-nav {
 	outline:0
 }
+.latest_reviews{display: none;}
 /* .pb-left-column ***************************************************************************** */
 .pb-left-column {
 	width:47%;
@@ -622,6 +623,13 @@ span.view_scroll_spacer {
 	    color: #d32676;
 	}
 }
+.pro_promotions:before {
+    font-family: $font-icon;
+    font-size: 18px;
+    content: "\f06b";
+    font-weight: 400;
+    padding-right: 5px;
+}
 .porduct_desc{
 	.uk-tab{
 		>li{
@@ -744,10 +752,12 @@ span.view_scroll_spacer {
 		        padding-right: 5px;
 		    }
 		}
-		&:nth-child(3){
+		&:nth-child(4){
+			padding-right: 0;
+			margin-right: 0;
 	    	&:before {
 		        font-family: $font-icon;
-		        content: "\f072";
+		        content: "\f059";
 		        padding-right: 5px;
 		    }
 		}

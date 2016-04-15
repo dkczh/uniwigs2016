@@ -37,12 +37,12 @@
 // Variables
 // ========================================================================
 
-$nav-padding-vertical:                           5px !default;
+$nav-padding-vertical:                           3px !default;
 $nav-padding-horizontal:                         15px !default;
 
 $nav-header-padding-vertical:                    $nav-padding-vertical !default;
 $nav-header-padding-horizontal:                  $nav-padding-horizontal !default;
-$nav-header-font-size:                           12px !default;
+$nav-header-font-size:                           13px !default;
 $nav-header-font-weight:                         bold !default;
 $nav-header-text-transform:                      uppercase !default;
 $nav-header-margin-top:                          15px !default;
@@ -346,6 +346,7 @@ ul.uk-nav-sub {
 
 .uk-nav-navbar .uk-nav-header {
     color: $nav-navbar-header-color;
+    padding:$nav-padding-vertical $nav-padding-horizontal;
     @include hook-nav-navbar-header();
 }
 

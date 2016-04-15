@@ -81,7 +81,7 @@
 						{else}
 							<img id="bigpic" itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" width="500" height="583"/>
 							{if !$content_only}
-								<span class="span_link no-print">{l s='View larger'}</span>
+								<span id="view_product_larger" class="span_link no-print">{l s='View larger'}</span>
 							{/if}
 						{/if}
 					</span>
@@ -852,10 +852,10 @@
 				<div class="prod-help">
 					<h4>More Information</h4>
 					<ul class="arrow-bullet-links clearfix">
-						<li><a href="#specification_infos" data-uk-modal>Product Specifications</a></li>
-						<li><a href="#wear_care" data-uk-modal>Wear & Care</a></li>
-						<li><a href="#shipping_return" data-uk-modal>Shipping & Return</a></li>
-						<li><a href="#product_faq" data-uk-modal>FAQ</a></li>
+						<li><a href="#specification_infos" data-uk-modal id="Product_Specifications_product">Product Specifications</a></li>
+						<li><a href="#wear_care" data-uk-modal id="Wear_Care_product">Wear & Care</a></li>
+						<li><a href="#shipping_return" data-uk-modal id="Shipping_Return_product">Shipping & Return</a></li>
+						<li><a href="#product_faq" data-uk-modal id="FAQ_product">FAQ</a></li>
 					</ul>
 				</div>
 				
@@ -1123,11 +1123,11 @@
 				<div class="porduct_desc uk-margin-small-top">
 					<ul class="uk-tab" data-uk-tab="{literal}{connect:'#tab-content'}{/literal}" data-uk-switcher="{literal}{connect:'#tab-content', animation: 'fade'}{/literal}">
 						{if $category->id == '40441'}
-						<li><a href="#">Description</a></li>
-						<li><a href="#">Features</a></li>
+						<li><a href="#" id="Description_product">Description</a></li>
+						<li><a href="#" id="Feature_product">Features</a></li>
 						{else}
-						<li><a href="#">Features</a></li>
-						<li><a href="#">Description</a></li>
+						<li><a href="#" id="Feature_product">Features</a></li>
+						<li><a href="#" id="Description_product">Description</a></li>
 						{/if}
 					</ul>
 					<ul id="tab-content" class="uk-switcher uk-margin-small-top">
@@ -1256,6 +1256,8 @@
 				</div>
 			</section>
 		{/if}
+
+		{$PRODUCT_REVIEWS}
 
 		<!-- product comments -->
 		<script type="text/javascript">

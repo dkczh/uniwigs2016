@@ -93,10 +93,14 @@
 					{hook h="displayProductPriceBlock" product=$product type="weight"}
 				</div>
 				<div class="right-block">
+					
+					{if isset($product.color_list)}
+						<div class="color-list-container">{$product.color_list}</div>
+					{/if}
 					<h5 itemprop="name">
 						{if isset($product.pack_quantity) && $product.pack_quantity}{$product.pack_quantity|intval|cat:' x '}{/if}
 						<a class="product-name" href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url" >
-							{$product.name|truncate:45:'...'|escape:'html':'UTF-8'}
+							{$product.name}
 						</a>
 					</h5>
 					
@@ -139,10 +143,6 @@
 							{hook h="displayProductPriceBlock" product=$product type="unit_price"}
 						{/if}
 					</div>
-					{/if}
-
-					{if isset($product.color_list)}
-						<div class="color-list-container">{$product.color_list}</div>
 					{/if}
 					
 					{*<div class="product-flags">

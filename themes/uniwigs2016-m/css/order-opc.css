@@ -16,6 +16,8 @@
     overflow: visible; }
   #order-opc .form-group {
     margin-bottom: 2px; }
+  #order-opc .delivery_options_address td:nth-child(2) {
+    width: 100px; }
   #order-opc .lost_password {
     display: inline-block;
     text-decoration: underline;

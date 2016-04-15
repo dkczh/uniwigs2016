@@ -1,6 +1,9 @@
 @import "compass";
 @import "theme_variables";
 #block_top_menu {
-	padding-top: 20px;
+	padding-top: 17px;
 	float:left;
+	.uk-dropdown{
+		border-top: 1px solid #eee;
+	}
 }

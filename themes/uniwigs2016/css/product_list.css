@@ -16,7 +16,7 @@ ul.product_list .color-list-container {
   margin-bottom: 12px; }
   ul.product_list .color-list-container ul li {
     display: inline-block;
-    border: 1px solid #eee;
+    border: 1px solid #d4d4d4;
     width: 26px;
     height: 26px; }
     ul.product_list .color-list-container ul li a {
@@ -92,7 +92,7 @@ ul.product_list .product-image-container {
     text-align: center;
     font-size: 0;
     text-transform: capitalize;
-    border: 1px solid #eee;
+    border: 1px solid #d4d4d4;
     border-radius: 50%;
     -moz-transform: scale(0.2, 0.2);
     -ms-transform: scale(0.2, 0.2);
@@ -189,7 +189,7 @@ ul.product_list.grid > li {
     ul.product_list.grid > li .product-container .product-flags {
       display: none; }
     ul.product_list.grid > li .product-container .old-price {
-      margin-left: 5px; }
+      margin-right: 5px; }
     ul.product_list.grid > li .product-container .button-container {
       margin-bottom: 14px; }
       @media (min-width: 1200px) {
@@ -295,11 +295,11 @@ Product list(List) Styles
   ul.product_list.list > li .left-block {
     width: 100%; } }
 ul.product_list.list > li .product-container {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #d4d4d4;
   padding: 30px 0 30px; }
 ul.product_list.list > li .product-image-container {
   position: relative;
-  border: 1px solid #eee;
+  border: 1px solid #d4d4d4;
   padding: 9px; }
   @media (max-width: 479px) {
     ul.product_list.list > li .product-image-container {
@@ -324,7 +324,7 @@ ul.product_list.list > li .center-block .comments_note {
 @media (min-width: 992px) {
   ul.product_list.list > li .right-block .right-block-content {
     margin: 0;
-    border-left: 1px solid #eee;
+    border-left: 1px solid #d4d4d4;
     padding-left: 15px;
     padding-bottom: 16px; } }
 @media (max-width: 991px) {
@@ -525,6 +525,6 @@ Product list(Index page) Styles
 /***** IE code *****/
 .ie8 .quick-view {
   background: #fff;
-  border: 1px solid #eee; }
+  border: 1px solid #d4d4d4; }
 
 /*# sourceMappingURL=product_list.css.map */

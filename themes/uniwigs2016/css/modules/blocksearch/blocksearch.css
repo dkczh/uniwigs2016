@@ -1,7 +1,7 @@
 #search_block_top {
-  margin-top: 25px;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  margin-top: 15px; }
   #search_block_top #searchbox {
     float: left;
     width: 100%; }
@@ -40,7 +40,7 @@
 
 .ac_results {
   background: #fff;
-  border: 1px solid #eee;
+  border: 1px solid #d4d4d4;
   width: 271px;
   margin-top: -1px; }
   .ac_results li {
