@@ -91,7 +91,7 @@ $dropdown-scrollable-height:                     200px !default;
     color: $dropdown-color;
     /* 1 */
     vertical-align: top;
-    width:200px;
+    width:$dropdown-width;
     box-shadow: 0 6px 10px rgba(0,0,0,.1);
     @include hook-dropdown();
     li{

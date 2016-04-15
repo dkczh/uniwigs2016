@@ -3762,7 +3762,7 @@ a.uk-thumbnail:focus {
   color: #444;
   /* 1 */
   vertical-align: top;
-  width: 200px;
+  width: 100%;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); }
   .uk-dropdown li {
     padding: 2px 0; }
