@@ -108,22 +108,12 @@
 }
 .customer-nav{
 	background-color: #fff;
-	height:46px;
 	line-height: 46px;
 	opacity: 0.95;
 	width: 100%;
-	z-index: 99997;
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
 }
-.customer-nav{
-	background-color: #fff;
-	line-height: 40px;
-	opacity: 0.95;
-	width: 100%;
-	z-index: 99997;
-	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
-	position: relative;
-}
+.customer-nav .row{margin-bottom:0;}
 .customer-nav li {
   width: 100%;
   float:left;
@@ -676,29 +666,6 @@ $(function(){
             .animate({ opacity : '0'}, 300)
             .removeClass('op')
     });
-});
-</script>
-<script>
-$(function(){
-	var ua = navigator.userAgent;
-	function toFixed() {
-		if( $( "body" ).scrollTop()>=265){
-			$( ".customer-nav" ).css({"top":"0","left":"0","position": "fixed"});
-		}else{
-			$( ".customer-nav" ).css({"position": "static"});
-		}
-	}
-	if ( ua ) {
-		$( window ).scroll(function(){
-			toFixed();
-		});
-		document.addEventListener('touchmove',function(){
-			toFixed();
-		});
-		document.addEventListener('touchend',function(){
-			toFixed();
-		});
-	}
 });
 </script>
 {/literal}

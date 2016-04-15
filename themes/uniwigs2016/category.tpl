@@ -482,19 +482,19 @@
             <section class="category-home">
                 <ul class="row uk-margin-bottom">
                     <li class="col-md-6 col-sm-6">
-                        <a href="{$base_dir}tag/solid">
+                        <a href="{$base_dir}tag/Solid-hair-extension">
                             <img src="{$img_dir}category/extensions/soild-color.jpg" alt="" class="img-responsive">
                         </a>
                     </li>
                     <li class="col-md-6 col-sm-6">
-                        <a href="{$base_dir}tag/ombre">
+                        <a href="{$base_dir}tag/ombre-hair-extension">
                             <img src="{$img_dir}category/extensions/ombre-color.jpg" alt="" class="img-responsive">
                         </a>
                     </li>
                 </ul>
 
                 <div class="uk-margin-bottom">
-                    <a href="{$base_dir}tag/colorful"><img src="{$img_dir}category/extensions/colorful-hair.jpg" alt="Colorful Hair" class="img-responsive"></a>
+                    <a href="{$base_dir}tag/colorful-hair-extension"><img src="{$img_dir}category/extensions/colorful-hair.jpg" alt="Colorful Hair" class="img-responsive"></a>
                 </div>
                 <ul class="row uk-margin-bottom">
                     <li class="col-md-6 col-sm-6">
