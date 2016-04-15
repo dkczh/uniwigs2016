@@ -458,7 +458,7 @@ class AdminCartRulesControllerCore extends AdminController
 					AND pl.`id_lang` = '.(int)Context::getContext()->language->id.Shop::addSqlRestrictionOnLang('pl').')
 				'.Shop::addSqlAssociation('product', 'p').'
 				WHERE id_lang = '.(int)Context::getContext()->language->id.'
-				ORDER BY name');
+				ORDER BY p.reference');
                 foreach ($results as $row) {
                     $products[in_array($row['id'], $selected) ? 'selected' : 'unselected'][] = $row;
                 }
