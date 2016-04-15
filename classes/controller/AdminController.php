@@ -3201,15 +3201,15 @@ class AdminControllerCore extends Controller
 		 	echo  $this->_listsql;
 			echo '</pre>';
 			exit;    */
-			  //自定义购物车 数据统计条目
+			  //针对客户 最新更改数据 时间字段重复问题 修改 
     		if($sql_table=='customer'){
 				$this->_listsql=str_replace("`date_add`", "a.`date_add`",$this->_listsql);
 			}
-				echo '<pre>';
+		/* 		echo '<pre>';
 		 	echo  $this->_listsql;
 			echo '</pre>';
 			exit;
-			
+			 */
 			
 			
             $this->_list = Db::getInstance()->executeS($this->_listsql, true, false);
