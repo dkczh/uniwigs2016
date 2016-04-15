@@ -134,11 +134,8 @@
 	border-top: 1px solid #EEE;
 	background-color: #ef3386;
 }
-.customer-nav a:hover{
-	opacity: .8;
-}
-.uk-dropdown a:hover{
-	background-color: #eee
+.uk-dropdown a:hover,.customer-nav li.active{
+	background-color: #ef3386
 }
 .uk-dropdown{
 	padding: 0 15px
