@@ -3195,7 +3195,14 @@ class AdminControllerCore extends Controller
                                 $sql_order_by.$sql_limit;
                 $list_count = 'SELECT COUNT(*) AS `'._DB_PREFIX_.$this->table.'` '.$sql_from.$sql_join.' WHERE 1 '.$sql_where;
             }
-
+			
+			//后台列表页 查询语句
+			echo '<pre>';
+		 	echo  $this->_listsql;
+			echo '</pre>';
+			exit;   
+			
+			
             $this->_list = Db::getInstance()->executeS($this->_listsql, true, false);
 
             if ($this->_list === false) {
@@ -3207,10 +3214,10 @@ class AdminControllerCore extends Controller
     		if($sql_table=='cart'){
 			$list_count=str_replace("COUNT(*)", "COUNT(DISTINCT a.id_cart )",$list_count);
 			$list_count=str_replace("group by  a.`id_cart`", " ",$list_count);
-			$list_count=str_replace("`date_add`", "a.`date_add`",$list_count);
+		
 			
 			}
-
+				
             $this->_listTotal = Db::getInstance()->getValue($list_count, false);
 
             if ($use_limit === true) {
