@@ -3207,6 +3207,7 @@ class AdminControllerCore extends Controller
     		if($sql_table=='cart'){
 			$list_count=str_replace("COUNT(*)", "COUNT(DISTINCT a.id_cart )",$list_count);
 			$list_count=str_replace("group by  a.`id_cart`", " ",$list_count);
+			$list_count=str_replace("`date_add`", "a.`date_add`",$list_count);
 			
 			}
 
