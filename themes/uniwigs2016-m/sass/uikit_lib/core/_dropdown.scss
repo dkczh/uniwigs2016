@@ -35,7 +35,7 @@
 // ========================================================================
 
 $dropdown-z-index:                               970 !default;
-$dropdown-width:                                 200px !default;
+$dropdown-width:                                 100% !default;
 $dropdown-margin-top:                            5px !default;
 $dropdown-padding:                               15px !default;
 $dropdown-background:                            #fff !default;
@@ -96,11 +96,6 @@ $dropdown-scrollable-height:                     200px !default;
     @include hook-dropdown();
     li{
         padding: 2px 0;
-        >a{
-            &:hover{
-                color:$link-hover-color;
-            }    
-        }
     }
 }
 
