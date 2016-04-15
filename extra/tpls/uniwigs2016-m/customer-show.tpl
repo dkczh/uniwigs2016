@@ -135,7 +135,8 @@
 	background-color: #ef3386;
 }
 .uk-dropdown a:hover,.customer-nav li.active{
-	background-color: #ef3386
+	background-color: #ef3386;
+	color:#fff;
 }
 .uk-dropdown{
 	padding: 0 15px
