@@ -134,7 +134,7 @@
 	border-top: 1px solid #EEE;
 	background-color: #ef3386;
 }
-.uk-dropdown a:hover,.customer-nav li.active{
+.uk-dropdown a:hover,.customer-nav li.active a{
 	background-color: #ef3386;
 	color:#fff;
 }
@@ -208,42 +208,30 @@ font-size: 11px;}
 
 <section class="containerIndex">
 	<a href="/content/34-share-your-photos" target="_blank" class="img-responsive share-your-photos"></a>
-<div class="customer-nav">
-	<div class="container">
-		<ul class="row">
-			{if $cat_use_name}
-				<li class="col-sm-3{if isset($smarty.get.ca)}{else} active{/if}">
-					<a href="/customer-show">All<span class="over"></span></a>
-				</li>
-				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Human Hair Wigs'} active{/if}">
-					<a href="/customer-show?ca=Human+Hair+Wigs">Human Hair Wigs<span class="over"></span></a>
-				</li>
-				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Synthetic Wigs'} active{/if}">
-					<a href="/customer-show?ca=Synthetic+Wigs">Synthetic Wigs<span class="over"></span></a>
-				</li>
-				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Hair Extensions'} active{/if}">
-					<a href="/customer-show?ca=Hair+Extensions">Hair Extensions<span class="over"></span></a>
-				</li>
-				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Hairpieces'} active{/if}">
-					<a href="/customer-show?ca=Hairpieces">Hairpieces<span class="over"></span></a>
-				</li>
-			{else}
-				<li class="col-sm-3{if isset($smarty.get.caid)}{else} active{/if}">
-					<a href="/customer-show">All<span class="over"></span></a>
-				</li>
-				<li class="col-sm-3{if isset($smarty.get.caid) && $smarty.get.caid==4} active{/if}">
-					<a href="/customer-show?caid=4">Human Hair Wigs<span class="over"></span></a>
-				</li>
-				<li class="col-sm-3{if isset($smarty.get.caid) && $smarty.get.caid==14} active{/if}">
-					<a href="/customer-show?caid=14">Synthetic Wigs<span class="over"></span></a>
-				</li>
-				<li class="col-sm-3{if isset($smarty.get.caid) && $smarty.get.caid==15} active{/if}">
-					<a href="/customer-show?caid=15">Hair Extensions<span class="over"></span></a>
-				</li>
-				<li class="col-sm-3{if isset($smarty.get.caid) && $smarty.get.caid==19} active{/if}">
-					<a href="/customer-show?caid=19">Hairpieces<span class="over"></span></a>
-				</li>
-			{/if}
+<div class="customer-nav" data-uk-dropdown="{literal}{mode:'click'}{/literal}">
+	{if isset($smarty.get.ca)}
+	{else}
+	<a href="#" class="hover-down">All</a>
+	{/if}
+	{if isset($smarty.get.ca) && $smarty.get.ca=='Human Hair Wigs'}
+	<a href="#" class="hover-down">Human Hair Wigs</a>
+	{/if}
+	{if isset($smarty.get.caid) && $smarty.get.caid=='Synthetic Wigs'}
+	<a href="#" class="hover-down">Synthetic Wigs</a>
+	{/if}
+	{if isset($smarty.get.caid) && $smarty.get.caid=='Hair Extensions'}
+	<a href="#" class="hover-down">Hair Extensions</a>
+	{/if}
+	{if isset($smarty.get.caid) && $smarty.get.caid=='Hairpieces'}
+	<a href="#" class="hover-down">Hair Pieces</a>
+	{/if}
+	<div class="uk-dropdown">
+		<ul class="uk-nav uk-nav-dropdown">
+			<li class="col-sm-3"><a href="/customer-show">All</a></li>
+			<li class="col-sm-3"><a href="/customer-show?ca=Human+Hair+Wigs">Human Hair Wigs</a></li>
+			<li class="col-sm-3"><a href="/customer-show?ca=Synthetic+Wigs">Synthetic Wigs</a></li>
+			<li class="col-sm-3"><a href="/customer-show?ca=Hair+Extensions">Hair Extensions</a></a></li>
+			<li class="col-sm-3"><a href="/customer-show?ca=Hairpieces">Hair Pieces</a></a></li>
 		</ul>
 	</div>
 </div>
