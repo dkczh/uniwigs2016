@@ -112,6 +112,8 @@
 	opacity: 0.95;
 	width: 100%;
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
+	position: relative;
+    z-index: 9999;
 }
 .customer-nav .row{margin-bottom:0;}
 .customer-nav li {
