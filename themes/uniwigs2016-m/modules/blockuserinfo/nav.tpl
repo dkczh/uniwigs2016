@@ -1,5 +1,5 @@
 <!-- Block user information module NAV  -->
-{if $page_name == 'my-account' or $page_name == 'category' or $page_name == 'product' or $page_name == 'search' or $page_name == 'tag' or $page_name == 'cms' or $page_name == 'authentication' or $page_name == 'contact'}
+{if $page_name == 'my-account' or $page_name == 'category' or $page_name == 'product' or $page_name == 'search' or $page_name == 'tag' or $page_name == 'cms' or $page_name == 'authentication' or $page_name == 'contact' or $page_name == 'extra/customer-show'}
 <div class="header_home">
 	<a class="back_home" href="{$link->getPageLink('index', true)|escape:'html':'UTF-8'}" rel="nofollow"></a>
 </div>
