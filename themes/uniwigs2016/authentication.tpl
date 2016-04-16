@@ -184,7 +184,19 @@
 							</div>
 						</div>
 					</div>
+					{* 修改注册选项*}
+						<div class="checkbox">
+							<label for="newsletter">
+							<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked"/>
+							{l s='Sign up for our newsletter!'}</label>
+						</div>
+					{* 修改注册选项2*}
 					
+						<div class="checkbox">
+							<label for="optin">
+							<input type="checkbox" name="optin" id="optin" value="1" checked="checked"/>
+							{l s='Receive special offers from our partners!'}</label>
+						</div>
 				
 					<h3 class="page-heading bottom-indent top-indent">{l s='Delivery address'}</h3>
 					{foreach from=$dlv_all_fields item=field_name}
@@ -574,21 +586,19 @@
 				</div>
 			</div>
 			{* 修改注册选项*}
-						<div class="checkbox">
-							<label for="newsletter">
-							<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked"/>
-							{l s='Sign up for our newsletter!'}</label>
-						</div>
-					{* 修改注册选项2*}
-					
-						<div class="checkbox">
-							<label for="optin">
-							<input type="checkbox" name="optin" id="optin" value="1" checked="checked"/>
-							{l s='Receive special offers from our partners!'}</label>
-						</div>
+				<div class="checkbox">
+					<label for="newsletter">
+					<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked"/>
+					{l s='Sign up for our newsletter!'}</label>
+				</div>
+			{* 修改注册选项2*}
+			
+				<div class="checkbox">
+					<label for="optin">
+					<input type="checkbox" name="optin" id="optin" value="1" checked="checked"/>
+					{l s='Receive special offers from our partners!'}</label>
+				</div>
 		</div>
-		
-		
 		{if $b2b_enable}
 			<div class="account_creation">
 				<h3 class="page-subheading">{l s='Your company information'}</h3>
