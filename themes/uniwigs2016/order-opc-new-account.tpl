@@ -154,6 +154,20 @@
 							</div>
 						</div>
 					</div>
+					{if isset($newsletter) && $newsletter}
+						<div class="checkbox uk-hidden">
+							<label for="newsletter">
+							<input type="checkbox" name="newsletter" id="newsletter" value="1" {if isset($smarty.post.newsletter) && $smarty.post.newsletter == '1'}checked="checked"{/if} />
+							{l s='Sign up for our newsletter!'}</label>
+						</div>
+					{/if}
+					{if isset($optin) && $optin}
+						<div class="checkbox uk-hidden">
+							<label for="optin">
+							<input type="checkbox" name="optin" id="optin" value="1" {if isset($smarty.post.optin) && $smarty.post.optin == '1'}checked="checked"{/if} />
+							{l s='Receive special offers from our partners!'}</label>
+						</div>
+					{/if}
 					<h3 class="page-subheading top-indent">{l s='Delivery address'}</h3>
 					{$stateExist = false}
 					{$postCodeExist = false}

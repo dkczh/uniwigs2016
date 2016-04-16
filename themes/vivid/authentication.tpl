@@ -185,14 +185,14 @@
 						</div>
 					</div>
 					{if isset($newsletter) && $newsletter}
-						<div class="checkbox">
+						<div class="checkbox uk-hidden">
 							<label for="newsletter">
 							<input type="checkbox" name="newsletter" id="newsletter" value="1" {if isset($smarty.post.newsletter) && $smarty.post.newsletter == '1'}checked="checked"{/if} />
 							{l s='Sign up for our newsletter!'}</label>
 						</div>
 					{/if}
 					{if isset($optin) && $optin}
-						<div class="checkbox">
+						<div class="checkbox uk-hidden">
 							<label for="optin">
 							<input type="checkbox" name="optin" id="optin" value="1" {if isset($smarty.post.optin) && $smarty.post.optin == '1'}checked="checked"{/if} />
 							{l s='Receive special offers from our partners!'}</label>
@@ -583,7 +583,7 @@
 				</div>
 			</div>
 			{if isset($newsletter) && $newsletter}
-				<div class="checkbox">
+				<div class="checkbox uk-hidden">
 					<input type="checkbox" name="newsletter" id="newsletter" value="1" {if isset($smarty.post.newsletter) AND $smarty.post.newsletter == 1} checked="checked"{/if} />
 					<label for="newsletter">{l s='Sign up for our newsletter!'}</label>
 					{if array_key_exists('newsletter', $field_required)}
@@ -592,7 +592,7 @@
 				</div>
 			{/if}
 			{if isset($optin) && $optin}
-				<div class="checkbox">
+				<div class="checkbox uk-hidden">
 					<input type="checkbox" name="optin" id="optin" value="1" {if isset($smarty.post.optin) AND $smarty.post.optin == 1} checked="checked"{/if} />
 					<label for="optin">{l s='Receive special offers from our partners!'}</label>
 					{if array_key_exists('optin', $field_required)}

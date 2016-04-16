@@ -185,14 +185,14 @@
 						</div>
 					</div>
 					{* 修改注册选项*}
-						<div class="checkbox">
+						<div class="checkbox uk-hidden">
 							<label for="newsletter">
 							<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked"/>
 							{l s='Sign up for our newsletter!'}</label>
 						</div>
 					{* 修改注册选项2*}
 					
-						<div class="checkbox">
+						<div class="checkbox uk-hidden">
 							<label for="optin">
 							<input type="checkbox" name="optin" id="optin" value="1" checked="checked"/>
 							{l s='Receive special offers from our partners!'}</label>
@@ -586,14 +586,14 @@
 				</div>
 			</div>
 			{* 修改注册选项*}
-				<div class="checkbox">
+				<div class="checkbox uk-hidden">
 					<label for="newsletter">
 					<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked"/>
 					{l s='Sign up for our newsletter!'}</label>
 				</div>
 			{* 修改注册选项2*}
 			
-				<div class="checkbox">
+				<div class="checkbox uk-hidden">
 					<label for="optin">
 					<input type="checkbox" name="optin" id="optin" value="1" checked="checked"/>
 					{l s='Receive special offers from our partners!'}</label>
