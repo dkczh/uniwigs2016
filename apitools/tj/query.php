@@ -158,10 +158,11 @@ FROM
 	ps_order_detail od
 LEFT JOIN ps_orders o ON od.id_order = o.id_order
 LEFT JOIN ps_product pp on pp.id_product=od.product_id 
+LEFT JOIN ps_category_product cp on cp.id_product =pp.id_product 
 WHERE
 	o.date_add BETWEEN '$begin'
 AND '$end'
-and pp.id_category_default =$childcategory
+and pp.id_category_default =$cate   and  cp.id_category = $childcategory
 GROUP BY od.product_id
 ORDER BY num desc 
 limit 50
