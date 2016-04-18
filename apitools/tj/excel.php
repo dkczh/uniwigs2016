@@ -63,7 +63,6 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 			id_customer
 		ORDER BY
 			num desc 
-		limit 200
 
 		";
 		
