@@ -97,7 +97,13 @@ tr{text-align: center;}
 margin-top: 10px;
 }" />
 		 <li>
-		 
+		 		<li id="customerexcel" style="
+    text-align: right;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+"></li>
 <table class="bordered" id='list_content'>
 
 

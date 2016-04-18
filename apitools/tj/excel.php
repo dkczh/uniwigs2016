@@ -20,30 +20,65 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 
 	header('Content-Type: text/html; charset=utf-8'); //网页编码
 
-
-	if(isset($_GET['id'])&&isset($_GET['begin'])&&isset($_GET['end'])&&isset($_GET['sqlname'])){
+		$dsn = 'mysql:host=localhost;dbname=uniwigs2016'; 
 	
-		if($_GET['sqlname']=='1'){
-		
-		$dsn = 'mysql:host=localhost;dbname=gb'; 
-	}else{
-		
-		$dsn = 'mysql:host=localhost;dbname=gb2'; 
-	}
     $user = 'root';  
-    $pwd = 'root';
+    $pwd = 'rootadmin123';
  
 
     $db = pdo_conn($dsn,$user,$pwd);  
-	   
+	//导出购买产品最多用户
+	if(isset($_GET['begin'])&&isset($_GET['end'])){
+	
+	out_customer_buy($db,$_GET['begin'],$_GET['end']);
+
+	}
+    
+
+	if(isset($_GET['id'])&&isset($_GET['begin'])&&isset($_GET['end'])&&isset($_GET['sqlname'])){
+	
 		out_products_attribute($db,$_GET['id'],$_GET['begin'],$_GET['end']);
 
-   }else{
-
-   
-   	echo '无任何信息可以导出';
-	exit;
    }
+   
+   
+  
+   
+    //导出所有的 订单条目
+	function out_customer_buy($db,$begin,$end)
+	  {
+			$sql = "SELECT
+			c.id_customer,
+			c.email,
+			CONCAT(c.firstname,' ',c.lastname) as name ,
+			sum(od.product_quantity) AS num,
+			sum((od.product_price-od.reduction_amount-o.total_discounts+o.total_shipping)*od.product_quantity) AS total
+		FROM
+			ps_customer c
+		LEFT JOIN ps_orders o ON o.id_customer = c.id_customer
+		LEFT JOIN ps_order_detail od ON od.id_order = o.id_order
+		where  o.date_add  between '$begin'  and '$end' 
+		and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
+		GROUP BY
+			id_customer
+		ORDER BY
+			num desc 
+		limit 200
+
+		";
+		
+		$res = getall($db,$sql);
+		$name = 'customer_buy';
+		// 执行productexcel 函数 前面 不允许有任何 echo 输出
+		$excefiled = array(
+						'id_customer',
+						'name',
+						'email',
+						'num',
+						'total');
+		out_excel($res,$name,$excefiled);
+
+	  }
   
 
     //导出所有的 订单条目
@@ -72,6 +107,10 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 		out_excel($res,$name,$excefiled);
 
 	  }
+	  
+	  
+	  
+	  
 	  
 
 	 
