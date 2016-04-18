@@ -574,10 +574,9 @@
 		{/if}
 		<!-- Package Items END -->
 
-		{$PRODUCT_REVIEWS}
-
 		<!-- shows and reviews -->
 		<li>
+			{$PRODUCT_REVIEWS}
 			<div class="shows">
 				<article class="border-bottom">
 					<h2>Customer Shows</h2>
