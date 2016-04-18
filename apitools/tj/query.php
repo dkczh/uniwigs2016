@@ -431,7 +431,7 @@ limit 200
 
 	$str.='</tbody>';
 	$str.="	<script>
-	$('#customerexcel').html(\"	<a  target='_blank' href='excel.php?begin=$begin&end=$end'>导出用户数据</a>\");
+	$('#customerexcel').html(\"	<a  target='_blank' href='excel.php?begin=$begin&end=$end&cate=$cate&childcategory=$childcategory'>导出用户数据</a>\");
 
 	</script>";
 	echo $str;
