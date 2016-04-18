@@ -149,6 +149,18 @@
 	    							</div>
 	    						</div>
 	    					</div>
+	    					<div class="checkbox uk-hidden">
+								<label for="newsletter">
+								<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked" />
+								{l s='Sign up for our newsletter!'}</label>
+							</div>
+					
+					
+							<div class="checkbox uk-hidden">
+								<label for="optin">
+								<input type="checkbox" name="optin" id="optin" value="1" checked="checked" />
+								{l s='Receive special offers from our partners!'}</label>
+							</div>
 	    					<h3 class="page-subheading top-indent">{l s='Delivery address'}</h3>
 	    					{$stateExist = false}
 	    					{$postCodeExist = false}
