@@ -149,14 +149,14 @@
 	    							</div>
 	    						</div>
 	    					</div>
-	    					<div class="checkbox uk-hidden">
+	    					<div class="checkbox">
 								<label for="newsletter">
 								<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked" />
 								{l s='Sign up for our newsletter!'}</label>
 							</div>
 					
 					
-							<div class="checkbox uk-hidden">
+							<div class="checkbox">
 								<label for="optin">
 								<input type="checkbox" name="optin" id="optin" value="1" checked="checked" />
 								{l s='Receive special offers from our partners!'}</label>
@@ -456,13 +456,13 @@
 	    						<div class="form-group is_customer_param uk-form-row">
 	    							<label for="phone_invoice" class="uk-form-label">{l s='Home phone'}</label>
 	    							<div class="uk-form-controls">
-	    								<input type="text" class="form-control validate" name="phone_invoice" id="phone_invoice" data-validate="isPhoneNumber" value="{if isset($guestInformations) && isset($guestInformations.phone_invoice) && $guestInformations.phone_invoice}{$guestInformations.phone_invoice}{/if}" />
+	    								<input type="number" class="form-control validate" name="phone_invoice" id="phone_invoice" data-validate="isPhoneNumber" value="{if isset($guestInformations) && isset($guestInformations.phone_invoice) && $guestInformations.phone_invoice}{$guestInformations.phone_invoice}{/if}" />
 	    							</div>
 	    						</div>
 	    						<div class="{if isset($one_phone_at_least) && $one_phone_at_least}required {/if}form-group uk-form-row">
 	    							<label for="phone_mobile_invoice" class="uk-form-label">{l s='Mobile phone'}{if isset($one_phone_at_least) && $one_phone_at_least} <sup>*</sup>{/if}</label>
 	    							<div class="uk-form-controls">
-	    								<input type="text" class="form-control validate" name="phone_mobile_invoice" id="phone_mobile_invoice" data-validate="isPhoneNumber" value="{if isset($guestInformations) && isset($guestInformations.phone_mobile_invoice) && $guestInformations.phone_mobile_invoice}{$guestInformations.phone_mobile_invoice}{/if}" />
+	    								<input type="number" class="form-control validate" name="phone_mobile_invoice" id="phone_mobile_invoice" data-validate="isPhoneNumber" value="{if isset($guestInformations) && isset($guestInformations.phone_mobile_invoice) && $guestInformations.phone_mobile_invoice}{$guestInformations.phone_mobile_invoice}{/if}" />
 	    							</div>
 	    						</div>
 	    						<input type="hidden" name="alias_invoice" id="alias_invoice" value="{l s='My Invoice address'}" />
