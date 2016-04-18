@@ -28,25 +28,50 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 
     $db = pdo_conn($dsn,$user,$pwd);  
 	//导出购买产品最多用户
-	if(isset($_GET['begin'])&&isset($_GET['end'])){
+	if(isset($_GET['begin'])&&isset($_GET['end'])&&isset($_GET['cate'])&&isset($_GET['childcategory'])){
 	
-	out_customer_buy($db,$_GET['begin'],$_GET['end']);
+	out_customer_buy($db,$_GET['begin'],$_GET['end'],$_GET['cate'],$_GET['childcategory']);
 
 	}
     
 
-	if(isset($_GET['id'])&&isset($_GET['begin'])&&isset($_GET['end'])&&isset($_GET['sqlname'])){
+	/* if(isset($_GET['id'])&&isset($_GET['begin'])&&isset($_GET['end'])&&isset($_GET['sqlname'])){
 	
 		out_products_attribute($db,$_GET['id'],$_GET['begin'],$_GET['end']);
 
-   }
+   } */
    
    
   
    
     //导出所有的 订单条目
-	function out_customer_buy($db,$begin,$end)
+	function out_customer_buy($db,$begin,$end,$cate,$childcategory)
 	  {
+		if($cate == '-1')
+	{
+		$sql = "SELECT
+	c.id_customer,
+	c.email,
+	CONCAT(c.firstname,' ',c.lastname) as name ,
+	sum(od.product_quantity) AS num,
+	sum((od.product_price-od.reduction_amount-o.total_discounts+o.total_shipping)*od.product_quantity) AS total
+FROM
+	ps_customer c
+LEFT JOIN ps_orders o ON o.id_customer = c.id_customer
+LEFT JOIN ps_order_detail od ON od.id_order = o.id_order
+where  o.date_add  between '$begin'  and '$end' 
+and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
+and c.id_customer !=136854
+GROUP BY
+	id_customer
+ORDER BY
+	num desc 
+";
+		
+		
+	}else{
+		
+		if($childcategory=='-1'){
 			$sql = "SELECT
 			c.id_customer,
 			c.email,
@@ -57,14 +82,50 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 			ps_customer c
 		LEFT JOIN ps_orders o ON o.id_customer = c.id_customer
 		LEFT JOIN ps_order_detail od ON od.id_order = o.id_order
+		LEFT JOIN  ps_product  pp on  pp.id_product = od.product_id 
+		LEFT JOIN ps_category_product  pcp on pcp.id_product=pp.id_product
 		where  o.date_add  between '$begin'  and '$end' 
 		and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
+		and  pp.id_category_default = $cate
+		and c.id_customer !=136854
 		GROUP BY
 			id_customer
 		ORDER BY
 			num desc 
-
-		";
+		";	
+		}
+		else{
+		$sql = "SELECT
+			c.id_customer,
+			c.email,
+			CONCAT(c.firstname,' ',c.lastname) as name ,
+			sum(od.product_quantity) AS num,
+			sum((od.product_price-od.reduction_amount-o.total_discounts+o.total_shipping)*od.product_quantity) AS total
+		FROM
+			ps_customer c
+		LEFT JOIN ps_orders o ON o.id_customer = c.id_customer
+		LEFT JOIN ps_order_detail od ON od.id_order = o.id_order
+		LEFT JOIN  ps_product  pp on  pp.id_product = od.product_id 
+		LEFT JOIN ps_category_product  pcp on pcp.id_product=pp.id_product
+		where  o.date_add  between '$begin'  and '2016-04-01' 
+		and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
+		and  pp.id_category_default = $cate and  pcp.id_category= $childcategory
+		and c.id_customer !=136854
+		GROUP BY
+			id_customer
+		ORDER BY
+			num desc 
+		";	
+		
+		
+	
+			
+		}
+		
+		
+		
+	}
+	
 		
 		$res = getall($db,$sql);
 		$name = 'customer_buy';
