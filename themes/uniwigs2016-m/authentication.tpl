@@ -498,24 +498,21 @@
 					</div>
 				</div>
 			</div>
-			{if isset($newsletter) && $newsletter}
-				<div class="checkbox">
+				<div class="checkbox uk-hidden">
 					<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked" />
 					<label for="newsletter">{l s='Sign up for our newsletter!'}</label>
 					{if array_key_exists('newsletter', $field_required)}
 						<sup> *</sup>
 					{/if}
 				</div>
-			{/if}
-			{if isset($optin) && $optin}
-				<div class="checkbox">
+			
+				<div class="checkbox uk-hidden">
 					<input type="checkbox" name="optin" id="optin" value="1" checked="checked"/>
 					<label for="optin">{l s='Receive special offers from our partners!'}</label>
 					{if array_key_exists('optin', $field_required)}
 						<sup> *</sup>
 					{/if}
 				</div>
-			{/if}
 		</div>
 		{if $b2b_enable}
 			<div class="account_creation">
