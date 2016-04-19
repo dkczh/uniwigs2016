@@ -95,6 +95,14 @@ class AdminOrdersControllerCore extends AdminController
                 'align' => 'text-center',
                 'class' => 'fixed-width-xs'
             ),
+			'new' => array(
+                'title' => $this->l('New client'),
+                'align' => 'text-center',
+                'type' => 'bool',
+                'tmpTableFilter' => true,
+                'orderby' => false,
+                'callback' => 'printNewCustomer'
+            ),
             'reference' => array(
                 'title' => $this->l('Reference')
             ),
