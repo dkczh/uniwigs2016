@@ -170,20 +170,19 @@
 							</div>
 						</div>
 					</div>
-					{if isset($newsletter) && $newsletter}
-						<div class="checkbox">
+			
+						<div class="checkbox uk-hidden">
 							<label for="newsletter">
 							<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked"/>
 							{l s='Sign up for our newsletter!'}</label>
 						</div>
-					{/if}
-					{if isset($optin) && $optin}
-						<div class="checkbox">
+				
+						<div class="checkbox uk-hidden">
 							<label for="optin">
 							<input type="checkbox" name="optin" id="optin" value="1" checked="checked" />
 							{l s='Receive special offers from our partners!'}</label>
 						</div>
-					{/if}
+				
 					<h3 class="page-heading bottom-indent top-indent">{l s='Delivery address'}</h3>
 					{foreach from=$dlv_all_fields item=field_name}
 						{if $field_name eq "company"}
@@ -652,7 +651,7 @@
 			</div>
 		{/if}
 		{$HOOK_CREATE_ACCOUNT_FORM}
-		<div class="submit clearfix">
+		<div class="submit uk-margin-top clearfix">
 			<input type="hidden" name="email_create" value="1" />
 			<input type="hidden" name="is_new_customer" value="1" />
 			{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}
