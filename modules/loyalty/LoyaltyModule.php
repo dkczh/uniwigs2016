@@ -307,6 +307,7 @@ class LoyaltyModule extends ObjectModel
 				left join ps_product pp on pp.id_product=od.product_id
 				where o.date_add between date_sub(now(), interval 1 week)  and  now()
 				and  pp.id_category_default =40462
+				and o.total_paid !=0
 				GROUP BY o.id_order
 				");
 
