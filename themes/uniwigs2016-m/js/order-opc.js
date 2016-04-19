@@ -291,6 +291,11 @@ $(document).ready(function(){
 		}
 	});
 
+	$(".order-total").click(function() {
+		$(".order-price-list").toggle();
+		$(this).toggleClass('order-total-hover');
+	});
+	
 	// If the multishipping mode is off assure us the checkbox "I want to specify a delivery address for each products I order." is unchecked.
 	$('#multishipping_mode_checkbox').attr('checked', false);
 	// If the multishipping mode is on, check the box "I want to specify a delivery address for each products I order.".

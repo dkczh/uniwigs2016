@@ -25,6 +25,15 @@
 	.form-group {
 		margin-bottom: 2px;
 	}
+	.delivery_options{
+		label{
+			display: block;
+			margin-bottom: 0;
+			.table{
+				margin-bottom: 0;
+			}
+		}
+	}
 	.delivery_options_address td:nth-child(2){width:100px}
 	.lost_password {
 		display: inline-block;
@@ -101,16 +110,58 @@
 		}
 	}
 	#opc_new_account{
-	.register_login{
-		overflow: hidden;
-		padding: 10px 5px;
-		.uk-button{
-			width: 46%;
-			float: left;
-			margin: 0 5px;
+		.register_login{
+			overflow: hidden;
+			padding: 10px 5px;
+			.uk-button{
+				width: 46%;
+				float: left;
+				margin: 0 5px;
+			}
 		}
 	}
+	.order-price-box{
+		background: #fff;
+		position: fixed;
+		bottom:0;
+		margin: 0;
+		z-index: 1000;
+    	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    	.order-total{
+    		padding:15px;
+    		cursor: pointer;
+    		dd:after{
+    			content: "\e611";
+    			font-family: $font-icon;
+    			color:#d32676;
+    			position: absolute;
+    			padding-left:15px;
+    			font-weight: bold;
+    		}
+    		&.order-total-hover{
+    			dd:after{
+	    			content: "\e612";
+	    		}
+    		}
+    	}
+    	.order-price-list{
+    		dl{
+    			padding:15px 15px 0;
+    			position: relative;
+    		}
+    	}
+    	dl{
+    		overflow: hidden;
+    		margin: 0;
+    		dt{float: left}
+	    	dd{
+	    		float: right;
+	    		text-align: right;
+    			padding-right: 30px;
+	    	}
+    	}
 	}
+
 }
 
 #new_account_form .box {
@@ -147,7 +198,7 @@
 	}
 }
 
-
+#backup_a{display: none}
 #new_account_form .id_state,
 #new_account_form .dni,
 #new_account_form .postcode {
