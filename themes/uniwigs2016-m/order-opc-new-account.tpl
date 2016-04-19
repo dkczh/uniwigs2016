@@ -207,8 +207,8 @@
 	    					<div class="required text form-group uk-form-row">
 	    						<label for="address1" class="uk-form-label">{l s='Address'} <sup>*</sup></label>
 	    						<div class="uk-form-controls">
-	    							<input type="text" class="text form-control validate" name="address1" id="address1" data-validate="isAddress" value="{if isset($guestInformations) && isset($guestInformations.address1) && isset($guestInformations) && isset($guestInformations.address1) && $guestInformations.address1}{$guestInformations.address1}{/if}" placeholder="PO BOX cannot be delivered"/>
-	    							<p class="text-info">Street address,company name,c/o</p>
+	    							<input type="text" class="text form-control validate" name="address1" id="address1" data-validate="isAddress" value="{if isset($guestInformations) && isset($guestInformations.address1) && isset($guestInformations) && isset($guestInformations.address1) && $guestInformations.address1}{$guestInformations.address1}{/if}"/>
+	    							<p class="text-info">(PO BOX cannot be delivered)<br>Street address,company name,c/o</p>
 	    						</div>
 	    					</div>
 	    					{elseif $field_name eq "address2"}

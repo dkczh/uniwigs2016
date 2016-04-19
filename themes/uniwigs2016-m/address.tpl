@@ -80,8 +80,8 @@
 			{if $field_name eq 'address1'}
 				<div class="required form-group">
 					<label for="address1">{l s='Address'} <sup>*</sup></label>
-					<input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" id="address1" name="address1" value="{if isset($smarty.post.address1)}{$smarty.post.address1}{else}{if isset($address->address1)}{$address->address1|escape:'html':'UTF-8'}{/if}{/if}" placeholder="PO BOX cannot be delivered"/>
-					<p class="text-info">Street address,company name,c/o</p>
+					<input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" id="address1" name="address1" value="{if isset($smarty.post.address1)}{$smarty.post.address1}{else}{if isset($address->address1)}{$address->address1|escape:'html':'UTF-8'}{/if}{/if}"/>
+					<p class="text-info">(PO BOX cannot be delivered)<br>Street address,company name,c/o</p>
 				</div>
 			{/if}
 			{if $field_name eq 'address2'}
