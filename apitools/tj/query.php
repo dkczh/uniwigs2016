@@ -38,7 +38,7 @@ if(isset($_POST['id'])&&isset($_POST['begin'])&&isset($_POST['end'])&&isset($_PO
 			break;
 		case '3':
 			//查询某个时间段 购买产品最多的用户
-			q_customer($db,$_POST['begin'],$_POST['end'],$_POST['sqlname']);
+			q_customer($db,$_POST['begin'],$_POST['end'],$_POST['sqlname'],$_POST['childcategory']);
 			break;
 		case '4':
 			//国家销售的统计
@@ -76,6 +76,7 @@ LEFT JOIN ps_product pp on pp.id_product=od.product_id
 WHERE
 	o.date_add BETWEEN '$begin'
 AND '$end'
+and o.total_paid !=0
 GROUP BY od.product_id
 ORDER BY num desc 
 limit 50
@@ -141,6 +142,7 @@ LEFT JOIN ps_product pp on pp.id_product=od.product_id
 WHERE
 	o.date_add BETWEEN '$begin'
 AND '$end'
+and o.total_paid !=0
 and pp.id_category_default =$cate
 GROUP BY od.product_id
 ORDER BY num desc 
@@ -162,6 +164,7 @@ LEFT JOIN ps_category_product cp on cp.id_product =pp.id_product
 WHERE
 	o.date_add BETWEEN '$begin'
 AND '$end'
+and o.total_paid !=0
 and pp.id_category_default =$cate   and  cp.id_category = $childcategory
 GROUP BY od.product_id
 ORDER BY num desc 
@@ -296,8 +299,11 @@ order by num desc
 	echo $str;
 }
 
-function q_customer($db,$begin,$end,$sqlname){
-	$sql = "SELECT
+function q_customer($db,$begin,$end,$cate,$childcategory){
+	
+	if($cate == '-1')
+	{
+		$sql = "SELECT
 	c.id_customer,
 	c.email,
 	CONCAT(c.firstname,' ',c.lastname) as name ,
@@ -309,13 +315,77 @@ LEFT JOIN ps_orders o ON o.id_customer = c.id_customer
 LEFT JOIN ps_order_detail od ON od.id_order = o.id_order
 where  o.date_add  between '$begin'  and '$end' 
 and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
+and o.total_paid !=0
+and c.id_customer !=136854
 GROUP BY
 	id_customer
 ORDER BY
 	num desc 
 limit 200
-
 ";
+		
+		
+	}else{
+		
+		if($childcategory=='-1'){
+			$sql = "SELECT
+			c.id_customer,
+			c.email,
+			CONCAT(c.firstname,' ',c.lastname) as name ,
+			sum(od.product_quantity) AS num,
+			sum((od.product_price-od.reduction_amount-o.total_discounts+o.total_shipping)*od.product_quantity) AS total
+		FROM
+			ps_customer c
+		LEFT JOIN ps_orders o ON o.id_customer = c.id_customer
+		LEFT JOIN ps_order_detail od ON od.id_order = o.id_order
+		LEFT JOIN  ps_product  pp on  pp.id_product = od.product_id 
+		LEFT JOIN ps_category_product  pcp on pcp.id_product=pp.id_product
+		where  o.date_add  between '$begin'  and '$end' 
+		and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
+		and o.total_paid !=0
+		and  pp.id_category_default = $cate
+		and c.id_customer !=136854
+		GROUP BY
+			id_customer
+		ORDER BY
+			num desc 
+			limit 200
+		";	
+		}
+		else{
+		$sql = "SELECT
+			c.id_customer,
+			c.email,
+			CONCAT(c.firstname,' ',c.lastname) as name ,
+			sum(od.product_quantity) AS num,
+			sum((od.product_price-od.reduction_amount-o.total_discounts+o.total_shipping)*od.product_quantity) AS total
+		FROM
+			ps_customer c
+		LEFT JOIN ps_orders o ON o.id_customer = c.id_customer
+		LEFT JOIN ps_order_detail od ON od.id_order = o.id_order
+		LEFT JOIN  ps_product  pp on  pp.id_product = od.product_id 
+		LEFT JOIN ps_category_product  pcp on pcp.id_product=pp.id_product
+		where  o.date_add  between '$begin'  and '2016-04-01' 
+		and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
+		and o.total_paid !=0
+		and  pp.id_category_default = $cate and  pcp.id_category= $childcategory
+		and c.id_customer !=136854
+		GROUP BY
+			id_customer
+		ORDER BY
+			num desc 
+			limit 200
+		";	
+		
+		
+	
+			
+		}
+		
+		
+		
+	}
+	
 	
 	$res = getall($db,$sql);
 
@@ -367,7 +437,7 @@ limit 200
 
 	$str.='</tbody>';
 	$str.="	<script>
-	$('#customerexcel').html(\"	<a  target='_blank' href='excel.php?begin=$begin&end=$end'>导出用户数据</a>\");
+	$('#customerexcel').html(\"	<a  target='_blank' href='excel.php?begin=$begin&end=$end&cate=$cate&childcategory=$childcategory'>导出用户数据</a>\");
 
 	</script>";
 	echo $str;
