@@ -409,7 +409,7 @@
 		</form>
 	{/if}
 {else}
-	<!--{if isset($account_error)}
+	{if isset($account_error)}
 	<div class="error">
 		{if {$account_error|@count} == 1}
 			<p>{l s='There\'s at least one error'} :</p>
@@ -422,7 +422,7 @@
 			{/foreach}
 		</ol>
 	</div>
-	{/if}-->
+	{/if}
 	<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="account-creation_form" class="std box">
 		{$HOOK_CREATE_ACCOUNT_TOP}
 		<div class="account_creation">
