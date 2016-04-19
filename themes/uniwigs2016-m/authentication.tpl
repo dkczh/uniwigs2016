@@ -171,14 +171,14 @@
 						</div>
 					</div>
 					{if isset($newsletter) && $newsletter}
-						<div class="checkbox uk-hidden">
+						<div class="checkbox">
 							<label for="newsletter">
 							<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked"/>
 							{l s='Sign up for our newsletter!'}</label>
 						</div>
 					{/if}
 					{if isset($optin) && $optin}
-						<div class="checkbox uk-hidden">
+						<div class="checkbox">
 							<label for="optin">
 							<input type="checkbox" name="optin" id="optin" value="1" checked="checked" />
 							{l s='Receive special offers from our partners!'}</label>
@@ -409,7 +409,7 @@
 		</form>
 	{/if}
 {else}
-	<!--{if isset($account_error)}
+	{if isset($account_error)}
 	<div class="error">
 		{if {$account_error|@count} == 1}
 			<p>{l s='There\'s at least one error'} :</p>
@@ -422,7 +422,7 @@
 			{/foreach}
 		</ol>
 	</div>
-	{/if}-->
+	{/if}
 	<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="account-creation_form" class="std box">
 		{$HOOK_CREATE_ACCOUNT_TOP}
 		<div class="account_creation">
@@ -499,7 +499,7 @@
 				</div>
 			</div>
 			{if isset($newsletter) && $newsletter}
-				<div class="checkbox uk-hidden">
+				<div class="checkbox">
 					<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked" />
 					<label for="newsletter">{l s='Sign up for our newsletter!'}</label>
 					{if array_key_exists('newsletter', $field_required)}
@@ -508,7 +508,7 @@
 				</div>
 			{/if}
 			{if isset($optin) && $optin}
-				<div class="checkbox uk-hidden">
+				<div class="checkbox">
 					<input type="checkbox" name="optin" id="optin" value="1" checked="checked"/>
 					<label for="optin">{l s='Receive special offers from our partners!'}</label>
 					{if array_key_exists('optin', $field_required)}
