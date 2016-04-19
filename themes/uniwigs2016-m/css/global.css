@@ -7411,6 +7411,9 @@ div.star a:hover {
     #authentication .uk-tab > li.uk-active, #authentication .uk-tab > li:hover {
       background-color: #fafafa; }
 
+#password #center_column {
+  -webkit-overflow-scrolling: auto; }
+
 .cart_navigation {
   margin: 0 0 20px; }
   .cart_navigation .button-medium {
