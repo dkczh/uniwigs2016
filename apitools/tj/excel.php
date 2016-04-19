@@ -62,6 +62,7 @@ LEFT JOIN ps_order_detail od ON od.id_order = o.id_order
 where  o.date_add  between '$begin'  and '$end' 
 and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
 and c.id_customer !=136854
+and o.total_paid !=0
 GROUP BY
 	id_customer
 ORDER BY
@@ -88,6 +89,7 @@ ORDER BY
 		and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
 		and  pp.id_category_default = $cate
 		and c.id_customer !=136854
+		and o.total_paid !=0
 		GROUP BY
 			id_customer
 		ORDER BY
@@ -111,6 +113,7 @@ ORDER BY
 		and od.product_name !='extra_cost' and od.product_name !='uniwigs order balance' 
 		and  pp.id_category_default = $cate and  pcp.id_category= $childcategory
 		and c.id_customer !=136854
+		and o.total_paid !=0
 		GROUP BY
 			id_customer
 		ORDER BY
