@@ -473,7 +473,7 @@
 	    						<button type="submit" name="submitAccount" id="submitAccount" class="uk-button uk-button-primary"><span>{l s='Save'}<i class="icon-chevron-right right"></i></span></button>
 
 	    					</div>
-	    					<div style="display: none;" id="opc_account_saved" class="alert alert-success">
+	    					<div style="display: none;" id="opc_account_saved" class="uk-alert uk-alert-success">
 	    						{l s='Account information saved successfully'}
 	    					</div>
 	    				<!-- END Account -->

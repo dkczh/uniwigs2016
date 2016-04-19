@@ -34,7 +34,7 @@
 {assign var="postCodeExist" value=false}
 {assign var="dniExist" value=false}
 {if !isset($email_create)}
-	{if isset($authentification_error)}
+	{*if isset($authentification_error)}
 	<div class="alert alert-danger">
 		{if {$authentification_error|@count} == 1}
 			<p>{l s='There\'s at least one error'} :</p>
@@ -47,7 +47,7 @@
 			{/foreach}
 		</ol>
 	</div>
-	{/if}
+	{/if*}
 	<ul class="uk-tab" data-uk-switcher="{literal}{connect:'#tab-content', animation: 'slide-horizontal'}{/literal}">
 		<li><a href="#">Registered</a></li>
 		<li><a href="#">Login</a></li>

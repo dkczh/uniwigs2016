@@ -9,7 +9,7 @@
 					{*<p><a href="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" id="openLoginFormBlock" class="uk-button uk-button-small">&raquo; {l s='Click here'}</a></p>*}
 					<div id="login_form_content">
 						<!-- Error return block -->
-						<div id="opc_login_errors" class="alert alert-danger" style="display:none;"></div>
+						<div id="opc_login_errors" class="uk-alert uk-alert-danger" style="display:none;"></div>
 						<!-- END Error return block -->
 						<div class="form-group uk-form-row">
 							<label for="login_email" class="uk-form-label">{l s='Email address'}</label>
@@ -483,7 +483,7 @@
 						<a href="#opc_new_account" class="uk-button uk-margin-left" id="submitcancel" data-uk-smooth-scroll><span>{l s='Cancel'}</span></a>
 
 					</div>
-					<div style="display: none;" id="opc_account_saved" class="alert alert-success">
+					<div style="display: none;" id="opc_account_saved" class="uk-alert uk-alert-success">
 						{l s='Account information saved successfully'}
 					</div>
 				<!-- END Account -->
