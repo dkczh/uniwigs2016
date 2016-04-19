@@ -22,11 +22,6 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-{literal}
-<style>
-	#authentication #center_column{-webkit-overflow-scrolling:auto;}
-</style>
-{/literal}
 {capture name=path}
 	{if !isset($email_create)}{l s='Authentication'}{else}
 		<a href="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Authentication'}">{l s='Authentication'}</a>
@@ -62,7 +57,7 @@
 		<li>
 			<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="create-account_form" class="box">
 				<div class="form_content clearfix">
-					<div class="alert alert-danger" id="create_account_error" style="display:none"></div>
+					<div class="uk-alert uk-alert-danger" id="create_account_error" style="display:none"></div>
 					<div class="form-group">
 						<input type="email" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" placeholder="E-mail Address"/>
 					</div>

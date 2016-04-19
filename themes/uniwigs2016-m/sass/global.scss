@@ -2093,6 +2093,9 @@ div.star a:hover {
 
 // PAIMENT - PAGE ORDER
 #authentication {
+	#center_column{
+		-webkit-overflow-scrolling:auto;
+	}
 	fieldset.account_creation {
 		margin-bottom: 20px;
 	}

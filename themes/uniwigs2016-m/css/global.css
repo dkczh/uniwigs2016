@@ -343,7 +343,7 @@ cite {
   color: #fff; }
 
 .text-info {
-  color: #fff; }
+  color: #666; }
 
 .text-left {
   text-align: left; }
@@ -7400,6 +7400,8 @@ div.star a:hover {
 .block_hidden_only_for_screen {
   display: none; }
 
+#authentication #center_column {
+  -webkit-overflow-scrolling: auto; }
 #authentication fieldset.account_creation {
   margin-bottom: 20px; }
 #authentication .uk-tab {
