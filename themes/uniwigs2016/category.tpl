@@ -35,7 +35,7 @@
         <section class="containerIndex">
             <section class="category-home">
                 <div>
-                    <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox data-lightbox-type="image">
+                    <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
                         <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="" class="img-responsive">
                     </a>
                 </div>
