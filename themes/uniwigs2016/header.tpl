@@ -111,6 +111,7 @@
 				<header id="header">
 					{capture name='displayBanner'}{hook h='displayBanner'}{/capture}
 					{if $smarty.capture.displayBanner}
+						{if $page_name !='index'}
 						<div class="banner">
 							<div class="container">
 								<div class="row">
@@ -118,6 +119,7 @@
 								</div>
 							</div>
 						</div>
+						{/if}
 					{/if}
 					{capture name='displayNav'}{hook h='displayNav'}{/capture}
 					{if $smarty.capture.displayNav}
