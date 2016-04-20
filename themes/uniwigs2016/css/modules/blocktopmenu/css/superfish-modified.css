@@ -3,6 +3,9 @@
   float: left;
   font-size: 14px;
   margin-left: 30px; }
+  @media (max-width: 768px) {
+    #block_top_menu {
+      margin-left: 0; } }
   #block_top_menu .uk-dropdown {
     border-top: 1px solid #eee; }
     #block_top_menu .uk-dropdown .col-sm-3 {

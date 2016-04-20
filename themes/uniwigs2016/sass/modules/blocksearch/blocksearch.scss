@@ -3,6 +3,12 @@
 #search_block_top {
 	float: left;
 	margin-left:20px;
+	@media (max-width: $screen-sm) {// max 768px
+		margin-left:0;
+		border-bottom: 1px solid #eee;
+    	margin-bottom: 20px;
+    	width:100%;
+	}
 	.button-search {
 		display: block;
 		position: absolute;

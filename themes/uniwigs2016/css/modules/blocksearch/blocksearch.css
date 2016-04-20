@@ -1,6 +1,12 @@
 #search_block_top {
   float: left;
   margin-left: 20px; }
+  @media (max-width: 768px) {
+    #search_block_top {
+      margin-left: 0;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 20px;
+      width: 100%; } }
   #search_block_top .button-search {
     display: block;
     position: absolute;

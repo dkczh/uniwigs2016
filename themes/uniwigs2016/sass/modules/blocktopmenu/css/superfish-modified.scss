@@ -5,6 +5,9 @@
 	float:left;
 	font-size: 14px;
 	margin-left:30px;
+	@media (max-width: $screen-sm) {// max 768px
+		margin-left:0;
+	}
 	.uk-dropdown{
 		border-top: 1px solid #eee;
 		.col-sm-3{
