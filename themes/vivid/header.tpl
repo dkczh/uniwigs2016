@@ -80,7 +80,7 @@
 		{/if}
 		<div id="page">
 			<div class="header-container">
-				<header id="header" class="uk-margin-bottom">
+				<header id="header" class="uk-margin-small-bottom">
 					{*
 					{capture name='displayBanner'}{hook h='displayBanner'}{/capture}
 					{if $smarty.capture.displayBanner}

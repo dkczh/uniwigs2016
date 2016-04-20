@@ -1,8 +1,8 @@
 /*** ESSENTIAL STYLES ***/
 #block_top_menu {
-  padding-top: 17px;
   float: left;
-  font-size: 14px; }
+  font-size: 14px;
+  margin-left: 30px; }
   #block_top_menu .uk-dropdown {
     border-top: 1px solid #eee; }
     #block_top_menu .uk-dropdown .col-sm-3 {

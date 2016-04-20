@@ -1,13 +1,20 @@
 .header_user_info {
   float: right; }
   .header_user_info a.login_a {
+    color: #fff;
     display: block;
-    padding: 8px 9px 11px 8px;
+    padding: 0 9px 0 8px;
     cursor: pointer;
-    line-height: 18px; }
+    line-height: 46px; }
     @media (max-width: 479px) {
       .header_user_info a.login_a {
         font-size: 11px; } }
+    .header_user_info a.login_a:hover, .header_user_info a.login_a.active {
+      color: #d32676;
+      background: #fff; }
+  .header_user_info.uk-open a.login_a {
+    color: #d32676;
+    background: #fff; }
   .header_user_info .uk-dropdown li.top_sign {
     border-bottom: 1px solid #CCC;
     margin-bottom: .23076923em;
@@ -16,17 +23,22 @@
   .header_user_info .uk-dropdown .sub-nav a {
     display: block;
     width: 100%;
-    padding: 2px 10px; }
+    padding: 2px 0; }
 
 .top_help {
   float: right; }
   .top_help a#top_help {
     display: block;
-    padding: 8px 9px 11px 8px;
+    padding: 0 9px 0 8px;
     cursor: pointer;
-    line-height: 18px; }
+    line-height: 46px;
+    color: #fff; }
     .top_help a#top_help:hover, .top_help a#top_help.active {
-      color: #d32676; }
+      color: #d32676;
+      background: #fff; }
+  .top_help.uk-open a#top_help {
+    color: #d32676;
+    background: #fff; }
   .top_help .uk-dropdown {
     right: 0;
     left: auto;
@@ -34,5 +46,7 @@
     .top_help .uk-dropdown ul {
       float: left;
       width: 50%; }
+      .top_help .uk-dropdown ul li {
+        padding: 5px 0; }
 
 /*# sourceMappingURL=blockuserinfo.css.map */
