@@ -122,11 +122,11 @@ if (is_array($unpaidCustomers) and $unpaidCustomers) {
 			
 		
 			if(mail($customer->email, $subject, $send_message, $header)){
-				file_put_contents('emaillog.txt','发送邮件'.$customer->email."成功\n",FILE_APPEND);
+				file_put_contents('emaillog.txt','发送邮件'.$customer->email."--".date("Y-m-d : h-i-s".time())."成功\n",FILE_APPEND);
 				//echo '发送邮件'.$customer->email.'成功'.'</br>';
 			}else{
 				
-				file_put_contents('emaillog.txt','发送邮件'.$customer->email."失败\n",FILE_APPEND);
+				file_put_contents('emaillog.txt','发送邮件'.$customer->email."--".date("Y-m-d : h-i-s".time())."失败\n",FILE_APPEND);
 				//echo '发送邮件'.$customer->email.'失败'.'</br>';
 			}
 
@@ -248,11 +248,11 @@ if (is_array($unpaidCustomers) and $unpaidCustomers) {
 			
 		
 			if(mail($customer->email, $subject, $send_message, $header)){
-				file_put_contents('emaillog.txt','发送邮件'.$customer->email."成功\n",FILE_APPEND);
+				file_put_contents('cartemaillog.txt','发送邮件'.$customer->email."--".date("Y-m-d : h-i-s".time())."成功\n",FILE_APPEND);
 				//echo '发送邮件'.$customer->email.'成功'.'</br>';
 			}else{
 				
-				file_put_contents('emaillog.txt','发送邮件'.$customer->email."失败\n",FILE_APPEND);
+				file_put_contents('cartemaillog.txt','发送邮件'.$customer->email."--".date("Y-m-d : h-i-s".time())."失败\n",FILE_APPEND);
 				//echo '发送邮件'.$customer->email.'失败'.'</br>';
 			}
 
