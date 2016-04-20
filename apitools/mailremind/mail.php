@@ -9,7 +9,7 @@ $test_dev = true; //测试环境 开启  所有邮件 发送到指定邮箱 5543
 // 24小时未发货 
 
 
-$unpaids = Db::getInstance()->ExecuteS("
+$sql = "
 select id_customer,id_cart
 from ps_cart
 where left(date_add,10)='".date("Y-m-d",strtotime("-1 days"))."'
@@ -19,8 +19,14 @@ and id_cart not in(
 	on o.id_order=oh.id_order
 	where oh.id_order_state>1 )
 and  id_customer >0 
-limit 2  
-");
+ 
+";
+
+if($test_dev)
+	$sql.='limit 2 ';
+
+
+$unpaids = Db::getInstance()->ExecuteS($sql);
 
 
 
@@ -134,7 +140,7 @@ if (is_array($unpaidCustomers) and $unpaidCustomers) {
 	
 	
 // 72小时未发货 
-$unpaids = Db::getInstance()->ExecuteS("
+$sql ="
 select id_customer,id_cart
 from ps_cart
 where left(date_add,10)='".date("Y-m-d",strtotime("-3 days"))."'
@@ -144,8 +150,18 @@ and id_cart not in(
 	on o.id_order=oh.id_order
 	where oh.id_order_state>1 )
 and  id_customer >0 
-limit 2   
-");
+ ";
+ 
+ if($test_dev)
+	$sql.='limit 2 ';
+ 
+ 
+$unpaids = Db::getInstance()->ExecuteS();
+
+
+
+
+
 $unpaidCustomers = array();
 foreach ($unpaids as $unpaid) {
     $cart = new Cart($unpaid['id_cart']);
