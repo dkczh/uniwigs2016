@@ -31,10 +31,13 @@
             .category-home h5 a{background:#DC0031;padding:6px 15px;font-weight:bold;color:#fff;letter-spacing: 2px;}
         </style>
         {/literal}
+        <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
         <section class="containerIndex">
             <section class="category-home">
                 <div>
-                    <a href="{$base_dir}40447-lace-front-wigs"><img src="{$img_dir}christmas/new-banner.jpg" alt="" class="img-responsive"></a>
+                    <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox data-lightbox-type="image">
+                        <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="" class="img-responsive">
+                    </a>
                 </div>
                 <div class="uk-margin-top">
                     <a href="{$base_dir}tag/real-human-hair"><img src="{$img_dir}category/human-hair/real-human-hair.jpg" alt="real human hair" class="img-responsive"></a>
