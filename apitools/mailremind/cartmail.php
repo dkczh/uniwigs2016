@@ -156,7 +156,7 @@ and  id_customer >0
 	$sql.='limit 2 ';
  
  
-$unpaids = Db::getInstance()->ExecuteS();
+$unpaids = Db::getInstance()->ExecuteS($sql);
 
 
 
