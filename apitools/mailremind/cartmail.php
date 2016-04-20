@@ -4,7 +4,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/config/config.inc.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/init.php'); 
 
 set_time_limit(0);
-$test_dev = true; //测试环境 开启  所有邮件 发送到指定邮箱 554301430@qq.com
+$test_dev = false; //测试环境 开启  所有邮件 发送到指定邮箱 554301430@qq.com
 			
 // 24小时未发货 
 

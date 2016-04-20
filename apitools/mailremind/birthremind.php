@@ -4,7 +4,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/config/config.inc.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/init.php'); 
 
 set_time_limit(0);
-$test_env = true; //测试环境 开启  所有邮件 发送到指定邮箱 554301430@qq.com
+$test_env = false; //测试环境 开启  所有邮件 发送到指定邮箱 554301430@qq.com
 			
 // 生日提醒
 
@@ -68,6 +68,7 @@ where id_order_state in (3,4,5)
 		}
 	}
 }
+	
 	
 /* send emails */
 if ($need_send_customers) {
