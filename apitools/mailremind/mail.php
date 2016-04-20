@@ -19,7 +19,7 @@ and id_cart not in(
 	on o.id_order=oh.id_order
 	where oh.id_order_state>1 )
 and  id_customer >0 
-limt 2  
+limit 2  
 ");
 
 
@@ -144,7 +144,7 @@ and id_cart not in(
 	on o.id_order=oh.id_order
 	where oh.id_order_state>1 )
 and  id_customer >0 
-limt 2  
+limit 2   
 ");
 $unpaidCustomers = array();
 foreach ($unpaids as $unpaid) {
