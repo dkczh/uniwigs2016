@@ -948,6 +948,17 @@ class AdminControllerCore extends Controller
         if (!count($this->_list)) {
             return;
         }
+		
+		//自定义order excel表格导出
+		if(Tools::getValue('outexcel')=='order'){
+		/* echo '<pre>';
+		var_dump($this->_list);
+		echo '</pre>';
+		exit;	 */
+		$this->orderexport($this->_list);
+		
+		exit;
+		}
 
         header('Content-type: text/csv');
         header('Content-Type: application/force-download; charset=UTF-8');
@@ -998,6 +1009,79 @@ class AdminControllerCore extends Controller
 
         $this->layout = 'layout-export.tpl';
     }
+	
+	
+	//自定义 excel 导出
+	public function orderexport($list)
+    {
+	$mypath=$_SERVER['DOCUMENT_ROOT'];
+	require_once($mypath.'/apitools/outexcel/Classes/PHPExcel.php');
+	require_once($mypath.'/apitools/outexcel/Classes/PHPExcel/Writer/Excel5.php');
+
+		
+	$this->orderexcel($list,'export_order_customer_'.time());
+		
+    }
+	
+	
+	//订单导出格式
+	function   orderexcel($res,$name)
+	{
+		$objPHPExcel = new PHPExcel();
+		//设置当前的sheet
+		$objPHPExcel->setActiveSheetIndex(0);
+		//设置sheet的name
+		$objPHPExcel->getActiveSheet()->setTitle('订单用户导出');
+		//设置单元格的值
+
+		$objPHPExcel->getActiveSheet()->setCellValue('A1', 'Order Time');//xx 默认字段 Website
+		$objPHPExcel->getActiveSheet()->setCellValue('B1', 'Order Number');
+		$objPHPExcel->getActiveSheet()->setCellValue('C1', 'Status');
+		$objPHPExcel->getActiveSheet()->setCellValue('D1', 'Tracking number');//xx 默认字段 3
+		$objPHPExcel->getActiveSheet()->setCellValue('E1', 'Product SKU');//xx 默认字段 3
+		$objPHPExcel->getActiveSheet()->setCellValue('F1', 'Product Name'); //xx 默认字段 空
+		$objPHPExcel->getActiveSheet()->setCellValue('G1', 'Shipping Address');
+		$objPHPExcel->getActiveSheet()->setCellValue('H1', 'Email Address');//xx 默认字段 空
+		$objPHPExcel->getActiveSheet()->setCellValue('I1', 'New Customer');	
+	
+		$i = 2 ;
+		foreach ($res as $a) {
+			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i, $a['id_order']);
+			$objPHPExcel->getActiveSheet()->setCellValue('B'.$i, $a['date_add']);
+			$objPHPExcel->getActiveSheet()->setCellValue('C'.$i, $a['osname']);
+			$objPHPExcel->getActiveSheet()->setCellValue('D'.$i, $a['shipping_number']);
+			$objPHPExcel->getActiveSheet()->setCellValue('E'.$i, $a['psku']);
+			$objPHPExcel->getActiveSheet()->setCellValue('F'.$i, $a['pname']);
+			$objPHPExcel->getActiveSheet()->setCellValue('G'.$i, $a['paddress']);
+			$objPHPExcel->getActiveSheet()->setCellValue('H'.$i, $a['email']);
+			if($a['new']==1){
+				
+					$objPHPExcel->getActiveSheet()->setCellValue('I'.$i,'yes');
+			}else{
+				
+				$objPHPExcel->getActiveSheet()->setCellValue('I'.$i,'no');
+			}
+		
+			
+			$i++;
+		} 
+		
+		
+		$objWriter = new PHPExcel_Writer_Excel5($objPHPExcel);
+		header("Pragma: public");
+		header("Expires: 0");
+		header("Cache-Control:must-revalidate, post-check=0, pre-check=0");
+		header("Content-Type:application/force-download");
+		header("Content-Type:application/vnd.ms-execl");
+		header("Content-Type:application/octet-stream");
+		header("Content-Type:application/download");;
+		header("Content-Disposition:attachment;filename='".$name.".xls");
+		header("Content-Transfer-Encoding:binary");
+		$objWriter->save('php://output');
+	
+	}
+	
+	
 
     /**
      * Object Delete
