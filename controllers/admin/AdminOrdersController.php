@@ -52,7 +52,7 @@ class AdminOrdersControllerCore extends AdminController
         $this->lang = false;
         $this->addRowAction('view');
         $this->explicitSelect = true;
-        $this->allow_export = true;
+        $this->allow_export = false;//修改为自定义 导出
         $this->deleted = false;
         $this->context = Context::getContext();
 
@@ -339,6 +339,12 @@ class AdminOrdersControllerCore extends AdminController
             }
         }
         $res = parent::initToolbar();
+		//修改 导出为 自定义导出
+		$this->toolbar_btn['export'] = array(
+                        // 'href' => self::$currentIndex.'&outexcel=text&token='.$this->token,
+						'href' => self::$currentIndex.'&export'.$this->table.'&outexcel=order&token='.$this->token,
+                        'desc' => $this->l('Export')
+                    );
         if (Context::getContext()->shop->getContext() != Shop::CONTEXT_SHOP && isset($this->toolbar_btn['new']) && Shop::isFeatureActive()) {
             unset($this->toolbar_btn['new']);
         }
