@@ -81,6 +81,7 @@ class AdminOrdersControllerCore extends AdminController
 		INNER JOIN `'._DB_PREFIX_.'address` address ON address.id_address = a.id_address_delivery
 		INNER JOIN `'._DB_PREFIX_.'country` country ON address.id_country = country.id_country
 		INNER JOIN `'._DB_PREFIX_.'country_lang` country_lang ON (country.`id_country` = country_lang.`id_country` AND country_lang.`id_lang` = '.(int)$this->context->language->id.')
+		INNER JOIN `'._DB_PREFIX_.'state` state ON state.id_state = address.id_state
 		LEFT JOIN `'._DB_PREFIX_.'order_state` os ON (os.`id_order_state` = a.`current_state`)
 		LEFT JOIN `'._DB_PREFIX_.'order_state_lang` osl 
 		ON (os.`id_order_state` = osl.`id_order_state` AND osl.`id_lang` = '.(int)$this->context->language->id.')';
