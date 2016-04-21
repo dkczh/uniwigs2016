@@ -52,7 +52,7 @@ class AdminOrdersControllerCore extends AdminController
         $this->lang = false;
         $this->addRowAction('view');
         $this->explicitSelect = true;
-        $this->allow_export = true;
+        $this->allow_export = false;//修改为自定义 导出
         $this->deleted = false;
         $this->context = Context::getContext();
 
@@ -61,9 +61,14 @@ class AdminOrdersControllerCore extends AdminController
     width: 48px;
     height: 55px;
 ">\' SEPARATOR \' \')  AS `image` ,
+		GROUP_CONCAT(po.product_reference SEPARATOR\'</br>\' ) as psku,
+		GROUP_CONCAT(po.product_name SEPARATOR\'</br>\' ) as pname,
 		a.id_currency,
 		a.id_order AS id_pdf,
 		CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) AS `customer`,
+		CONCAT(country_lang.`name`,\'-\',state.`name`,\'-\',address.`address1`) AS paddress,
+		c.email,
+		a.shipping_number,
 		osl.`name` AS `osname`,
 		os.`color`,
 		IF((SELECT so.id_order FROM `'._DB_PREFIX_.'orders` so WHERE so.id_customer = a.id_customer AND so.id_order < a.id_order LIMIT 1) > 0, 0, 1) as new,
@@ -76,6 +81,7 @@ class AdminOrdersControllerCore extends AdminController
 		INNER JOIN `'._DB_PREFIX_.'address` address ON address.id_address = a.id_address_delivery
 		INNER JOIN `'._DB_PREFIX_.'country` country ON address.id_country = country.id_country
 		INNER JOIN `'._DB_PREFIX_.'country_lang` country_lang ON (country.`id_country` = country_lang.`id_country` AND country_lang.`id_lang` = '.(int)$this->context->language->id.')
+		LEFT JOIN `'._DB_PREFIX_.'state` state ON state.id_state = address.id_state
 		LEFT JOIN `'._DB_PREFIX_.'order_state` os ON (os.`id_order_state` = a.`current_state`)
 		LEFT JOIN `'._DB_PREFIX_.'order_state_lang` osl 
 		ON (os.`id_order_state` = osl.`id_order_state` AND osl.`id_lang` = '.(int)$this->context->language->id.')';
@@ -339,6 +345,12 @@ class AdminOrdersControllerCore extends AdminController
             }
         }
         $res = parent::initToolbar();
+		//修改 导出为 自定义导出
+		$this->toolbar_btn['export'] = array(
+                        // 'href' => self::$currentIndex.'&outexcel=text&token='.$this->token,
+						'href' => self::$currentIndex.'&export'.$this->table.'&outexcel=order&token='.$this->token,
+                        'desc' => $this->l('Export')
+                    );
         if (Context::getContext()->shop->getContext() != Shop::CONTEXT_SHOP && isset($this->toolbar_btn['new']) && Shop::isFeatureActive()) {
             unset($this->toolbar_btn['new']);
         }
