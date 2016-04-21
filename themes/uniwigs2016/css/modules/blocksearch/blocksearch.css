@@ -1,10 +1,12 @@
 #search_block_top {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  margin-top: 15px; }
-  #search_block_top #searchbox {
-    float: left;
-    width: 100%; }
+  float: left;
+  margin-left: 20px; }
+  @media (max-width: 768px) {
+    #search_block_top {
+      margin-left: 0;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 20px;
+      width: 100%; } }
   #search_block_top .button-search {
     display: block;
     position: absolute;
@@ -29,11 +31,12 @@
       background: none; }
   #search_block_top #search_query_top {
     display: inline;
-    padding: 13px 60px 13px 13px;
+    padding: 0 50px 0 13px;
     height: 40px;
     border: 0 none;
-    margin-right: 1px;
-    text-align: center; }
+    font-size: 15px;
+    width: 260px;
+    background: #f4f4f4; }
     #search_block_top #search_query_top:focus {
       border-color: none;
       box-shadow: none; }

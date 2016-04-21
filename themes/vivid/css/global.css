@@ -10766,7 +10766,8 @@ header {
   header .row > .container {
     position: relative; }
   header .row #header_logo {
-    float: left; }
+    float: left;
+    margin-top: -18px; }
     @media (max-width: 480px) {
       header .row #header_logo {
         text-align: center;

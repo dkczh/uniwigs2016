@@ -71,39 +71,42 @@ header {
 		    }
 		}
 	}
-	.logtab {
-	    background: #222;
-	    ul{
-	    	overflow: hidden;
-	    	margin:0;
-	    	li{
-	    		float:left;
-	    		a {
-				    padding: 5px 15px;
-				    color: #fff;
-				    display: block;
-				    font-size: 1.2em;
-				}
-				&.on a {
-				    background-color: #fff;
-				    color: #222;
-				}
-	    	}
-	    }
-	}
+	
 	.banner {
-		background: black;
-		max-height: 100%;
+		background: #fff;
 		.row {
 			margin: 0px;
 		}
 	}
 	.nav {
+		background: black;
+		height:46px;
 		.row {
 			margin: 0px;
 		}
-		nav {
-			width: 100%;
+		.logtab {
+			float: left;
+		    ul{
+		    	overflow: hidden;
+		    	margin:0;
+		    	li{
+		    		float:left;
+		    		a {
+					    padding: 0 15px;
+					    color: #fff;
+					    display: block;
+					    font-size: 1.2em;
+					    line-height: 46px;
+					    &:hover{
+					    	background: #333;
+					    }
+					}
+					&.on a {
+					    background-color: #fff;
+					    color: #222;
+					}
+		    	}
+		    }
 		}
 	}
 	.row {
@@ -111,9 +114,9 @@ header {
 			position: relative;
 		}
 		#header_logo {
-			padding-right:60px;
-			margin-top: -9px;
-			float:left;
+			width:100%;
+			text-align: center;
+			margin:20px 0;
 			span{
 			    display: inline-block;
 			    width: 100px;

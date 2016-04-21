@@ -2349,7 +2349,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 1 */
   height: 50px;
   padding: 0 20px;
-  line-height: 45px;
+  line-height: 43px;
   /* 2 */
   color: #444;
   font-size: 15px;
@@ -2388,10 +2388,10 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Sub-objects: `uk-navbar-nav-subtitle`
  ========================================================================== */
 .uk-navbar-nav .uk-navbar-nav-subtitle {
-  line-height: 33px; }
+  line-height: 31px; }
 
 .uk-navbar-nav-subtitle > div {
-  margin-top: -8px;
+  margin-top: -7px;
   font-size: 10px;
   line-height: 12px; }
 
@@ -3420,6 +3420,9 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form input:not([type="radio"]):not([type="checkbox"]),
 .uk-form select {
   vertical-align: middle; }
+
+.uk-form sup {
+  color: #d32676; }
 
 /* Style
  ========================================================================== */
@@ -10751,36 +10754,39 @@ header {
       vertical-align: top; }
       header .category_top a.on {
         color: #B92168; }
-  header .logtab {
-    background: #222; }
-    header .logtab ul {
-      overflow: hidden;
-      margin: 0; }
-      header .logtab ul li {
-        float: left; }
-        header .logtab ul li a {
-          padding: 5px 15px;
-          color: #fff;
-          display: block;
-          font-size: 1.2em; }
-        header .logtab ul li.on a {
-          background-color: #fff;
-          color: #222; }
   header .banner {
-    background: black;
-    max-height: 100%; }
+    background: #fff; }
     header .banner .row {
       margin: 0px; }
-  header .nav .row {
-    margin: 0px; }
-  header .nav nav {
-    width: 100%; }
+  header .nav {
+    background: black;
+    height: 46px; }
+    header .nav .row {
+      margin: 0px; }
+    header .nav .logtab {
+      float: left; }
+      header .nav .logtab ul {
+        overflow: hidden;
+        margin: 0; }
+        header .nav .logtab ul li {
+          float: left; }
+          header .nav .logtab ul li a {
+            padding: 0 15px;
+            color: #fff;
+            display: block;
+            font-size: 1.2em;
+            line-height: 46px; }
+            header .nav .logtab ul li a:hover {
+              background: #333; }
+          header .nav .logtab ul li.on a {
+            background-color: #fff;
+            color: #222; }
   header .row > .container {
     position: relative; }
   header .row #header_logo {
-    padding-right: 60px;
-    margin-top: -9px;
-    float: left; }
+    width: 100%;
+    text-align: center;
+    margin: 20px 0; }
     header .row #header_logo span {
       display: inline-block;
       width: 100px;

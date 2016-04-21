@@ -330,10 +330,6 @@
 	</div> <!-- #layer_cart -->
 	<div class="layer_cart_overlay"></div>
 	<!-- /MODULE Block cart -->
-</div>
-<!-- #row -->
-</div>
-</div>
 {/if}
 {strip}
 {addJsDef CUSTOMIZE_TEXTFIELD=$CUSTOMIZE_TEXTFIELD}

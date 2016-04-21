@@ -111,6 +111,7 @@
 				<header id="header">
 					{capture name='displayBanner'}{hook h='displayBanner'}{/capture}
 					{if $smarty.capture.displayBanner}
+						{if $page_name !='index'}
 						<div class="banner">
 							<div class="container">
 								<div class="row">
@@ -118,24 +119,23 @@
 								</div>
 							</div>
 						</div>
+						{/if}
 					{/if}
-					<section class="logtab">
-						<div class="container">
-							<ul>
-								<li class="on">
-									<a href="http://www.uniwigs.com">Uniwigs</a>
-								</li>
-								<li>
-									<a href="http://lavivid.uniwigs.com">LaVivid</a>
-								</li>
-							</ul>
-						</div>
-					</section>
 					{capture name='displayNav'}{hook h='displayNav'}{/capture}
 					{if $smarty.capture.displayNav}
 						<div class="nav">
 							<div class="container">
 								<div class="row">
+									<div class="logtab">
+										<ul>
+											<li class="on">
+												<a href="http://www.uniwigs.com">Uniwigs</a>
+											</li>
+											<li>
+												<a href="http://lavivid.uniwigs.com">LaVivid</a>
+											</li>
+										</ul>
+									</div>
 									<nav>{$smarty.capture.displayNav}</nav>
 								</div>
 							</div>
@@ -145,6 +145,9 @@
 						<div class="row">
 							<div class="col-xs-12">
 							{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+							</div>
+						</div>
+					</div>
 				</header>
 			</div>
 			<div class="columns-container">

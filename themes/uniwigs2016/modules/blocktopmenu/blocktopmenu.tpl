@@ -45,7 +45,7 @@
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
 	               	           			<a href="{$base_dir}tag/Human-Hair-Wigs-New-Arrivals">
-	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/human-hair/menu-new.jpg" alt="">
+	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/human-hair/menu-new.jpg" alt="" class="img-responsive">
 	       	        	           			<p>New Arrivals</p>
 	       	        	           		</a>
 	               	           		</li>
@@ -55,7 +55,7 @@
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
 	               	           			<a href="{$base_dir}tag/Human-Hair-Wigs-Hot-Sale">
-	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/human-hair/menu-hot.jpg" alt="">
+	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/human-hair/menu-hot.jpg" alt="" class="img-responsive">
 	       	        	           			<p>Best Sell</p>
 	       	        	           		</a>
 	               	           		</li>
@@ -97,7 +97,7 @@
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
 	               	           			<a href="{$base_dir}tag/Synthetic-Wigs-New-Arrivals">
-	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/synthetic-wigs/menu-new.jpg" alt="">
+	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/synthetic-wigs/menu-new.jpg" alt="" class="img-responsive">
 	       	        	           			<p>New Arrivals</p>
 	       	        	           		</a>
 	               	           		</li>
@@ -107,7 +107,7 @@
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
 	               	           			<a href="{$base_dir}tag/Synthetic-Wigs-Hot-Sale">
-	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/synthetic-wigs/menu-hot.jpg" alt="">
+	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/synthetic-wigs/menu-hot.jpg" alt="" class="img-responsive">
 	       	        	           			<p>Best Sell</p>
 	       	        	           		</a>
 	               	           		</li>
@@ -146,7 +146,7 @@
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
 	               	           			<a href="{$base_dir}tag/Hair-Extensions-New-Arrivals">
-	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/extensions/menu-new.jpg" alt="">
+	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/extensions/menu-new.jpg" alt="" class="img-responsive">
 	       	        	           			<p>New Arrivals</p>
 	       	        	           		</a>
 	               	           		</li>
@@ -156,7 +156,7 @@
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
 	               	           			<a href="{$base_dir}tag/Hair-Extensions-Hot-Sale">
-	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/extensions/menu-hot.jpg" alt="">
+	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/extensions/menu-hot.jpg" alt="" class="img-responsive">
 	       	        	           			<p>Best Sell</p>
 	       	        	           		</a>
 	               	           		</li>
@@ -199,7 +199,7 @@
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
 	               	           			<a href="{$base_dir}tag/hair-pieces-New-Arrivals">
-	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/hiar-pieces/menu-new.jpg" alt="">
+	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/hiar-pieces/menu-new.jpg" alt="" class="img-responsive">
 	       	        	           			<p>New Arrivals</p>
 	       	        	           		</a>
 	               	           		</li>
@@ -209,7 +209,7 @@
 	               	           <ul class="uk-nav uk-nav-navbar">
 	               	           		<li class="text-center">
 	               	           			<a href="{$base_dir}tag/hair-pieces-Hot-Sale">
-	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/hiar-pieces/menu-hot.jpg" alt="">
+	               	           				<img src="{$base_dir}themes/uniwigs2016/img/category/hiar-pieces/menu-hot.jpg" alt="" class="img-responsive">
 	       	        	           			<p>Best Sell</p>
 	       	        	           		</a>
 	               	           		</li>

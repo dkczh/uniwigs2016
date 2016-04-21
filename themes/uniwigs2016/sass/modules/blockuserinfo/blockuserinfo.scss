@@ -3,12 +3,23 @@
 .header_user_info{
 	float: right;
 	a.login_a{
+		color:#fff;
 		display: block;
-		padding: 8px 9px 11px 8px;
+		padding: 0 9px 0 8px;
 		cursor: pointer;
-		line-height:18px;
+		line-height:46px;
 		@media (max-width: $screen-xs - 1) {
 			font-size: 11px;
+		}
+		&:hover, &.active {
+			color:$link-hover-color;
+			background: #fff;
+		}
+	}
+	&.uk-open{
+		a.login_a{
+			color:$link-hover-color;
+			background: #fff;
 		}
 	}
 	.uk-dropdown{
@@ -30,11 +41,19 @@
 	float: right;
 	a#top_help{
 		display: block;
-		padding: 8px 9px 11px 8px;
+		padding: 0 9px 0 8px;
 		cursor: pointer;
-		line-height:18px;
+		line-height:46px;
+		color:#fff;
 		&:hover, &.active {
 			color:$link-hover-color;
+			background: #fff;
+		}
+	}
+	&.uk-open{
+		a#top_help{
+			color:$link-hover-color;
+			background: #fff;
 		}
 	}
 	.uk-dropdown{
@@ -44,6 +63,9 @@
 		ul{
 			float:left;
 			width:50%;
+			li{
+				padding:5px 0;
+			}
 		}
 	}
 }

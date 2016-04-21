@@ -100,6 +100,14 @@
         {/if}
 		{/if}
     *}
+        {if $category->id == '102'}
+            <script type="text/javascript" src="/themes/uniwigs2016-m/js/lightbox.js"></script>
+            <div>
+                <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
+                    <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="" class="img-responsive">
+                </a>
+            </div>
+        {/if}
 		{if $products}
 			<div class="content_sortPagiBar clearfix">
             	<div class="sortPagiBar clearfix">

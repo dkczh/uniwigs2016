@@ -2,12 +2,10 @@
 					Cart Block Styles
 ********************************************************************/
 #header .checkout-bar {
-  position: absolute;
-  right: 15px; }
+  float: right; }
 
 #header .shopping_cart {
-  position: relative;
-  padding-top: 20px; }
+  position: relative; }
 
 #cartQuantity {
   display: inline-block !important;
@@ -49,9 +47,6 @@
   transition: all .25s ease;
   z-index: -1; }
 
-@media (max-width: 480px) {
-  .shopping_cart {
-    padding-top: 20px; } }
 @media (max-width: 1200px) {
   .shopping_cart {
     margin: 0 auto;
@@ -60,7 +55,11 @@
 .shopping_cart > a:first-child {
   display: block;
   overflow: hidden;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-top: 6px;
+  padding-left: 10px;
+  height: 46px;
+  color: #fff; }
   @media (min-width: 768px) and (max-width: 991px) {
     .shopping_cart > a:first-child span.ajax_cart_product_txt, .shopping_cart > a:first-child span.ajax_cart_product_txt_s {
       display: none !important; } }
