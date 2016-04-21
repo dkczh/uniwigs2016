@@ -61,9 +61,14 @@ class AdminOrdersControllerCore extends AdminController
     width: 48px;
     height: 55px;
 ">\' SEPARATOR \' \')  AS `image` ,
+		GROUP_CONCAT(po.product_reference SEPARATOR\'</br>\' ) as psku,
+		GROUP_CONCAT(po.product_name SEPARATOR\'</br>\' ) as pname,
 		a.id_currency,
 		a.id_order AS id_pdf,
 		CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) AS `customer`,
+		CONCAT(country_lang.`name`,\'-\',state.`name`,\'-\',address.`address1`) AS paddress,
+		c.email,
+		a.shipping_number,
 		osl.`name` AS `osname`,
 		os.`color`,
 		IF((SELECT so.id_order FROM `'._DB_PREFIX_.'orders` so WHERE so.id_customer = a.id_customer AND so.id_order < a.id_order LIMIT 1) > 0, 0, 1) as new,
