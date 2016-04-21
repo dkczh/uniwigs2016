@@ -225,8 +225,8 @@
 			<p class="inline-infos required">{l s='You must register at least one phone number.'}</p>
 		{/if}
 		<div class="required form-group uk-form-row" id="adress_alias">
-			<label for="alias" style="display:block">{l s='Please assign an address title for future reference.'} <sup>*</sup></label>
-			<input type="text" id="alias" class="is_required validate form-control" data-validate="{$address_validation.alias.validate}" name="alias" value="{if isset($smarty.post.alias)}{$smarty.post.alias}{elseif isset($address->alias)}{$address->alias|escape:'html':'UTF-8'}{elseif !$select_address}{l s='My address'}{/if}" />
+			<label for="alias" class="uk-form-label">{l s='Please assign an address title for future reference.'} <sup>*</sup></label>
+			<input type="text" id="alias" class="is_required validate form-control" data-validate="{$address_validation.alias.validate}" name="alias" value="{if isset($smarty.post.alias)}{$smarty.post.alias}{elseif isset($address->alias)}{$address->alias|escape:'html':'UTF-8'}{elseif !$select_address}{l s='default address'}{/if}" />
 		</div>
 		<p class="submit2 uk-form-row">
 			{if isset($id_address)}<input type="hidden" name="id_address" value="{$id_address|intval}" />{/if}
