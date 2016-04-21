@@ -10781,8 +10781,6 @@ header {
           header .nav .logtab ul li.on a {
             background-color: #fff;
             color: #222; }
-    header .nav nav {
-      float: right; }
   header .row > .container {
     position: relative; }
   header .row #header_logo {
