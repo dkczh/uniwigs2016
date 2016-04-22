@@ -66,7 +66,7 @@ class AdminOrdersControllerCore extends AdminController
 		a.id_currency,
 		a.id_order AS id_pdf,
 		CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) AS `customer`,
-		CONCAT(country_lang.`name`,\'-\',state.`name`,\'-\',address.`address1`) AS paddress,
+		CONCAT( LEFT(c.`firstname`, 1), \'. \', c.`lastname`,\'--\', country_lang.`name`,\'--\',state.`name`,\'--\',address.`address1`,\'--\',address.`phone`) AS paddress,
 		c.email,
 		a.shipping_number,
 		osl.`name` AS `osname`,
