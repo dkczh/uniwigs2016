@@ -278,6 +278,14 @@
 							</div>
 						{/if}
 					{/foreach}
+					{if $postCodeExist eq false}
+						<div class="required postcode unvisible form-group uk-form-row">
+							<label for="postcode" class="uk-form-label">{l s='Zip/Postal Code'} <sup>*</sup></label>
+							<div class="uk-form-controls">
+								<input type="text" class="validate form-control" name="postcode" id="postcode" data-validate="isPostCode" value="{if isset($smarty.post.postcode)}{$smarty.post.postcode}{/if}"/>
+							</div>
+						</div>
+					{/if}
 					{if $stateExist eq false}
 						<div class="required id_state select unvisible form-group uk-form-row">
 							<label for="id_state" class="uk-form-label">{l s='State'} <sup>*</sup></label>
@@ -285,14 +293,6 @@
 								<select name="id_state" id="id_state" class="form-control">
 									<option value="">-</option>
 								</select>
-							</div>
-						</div>
-					{/if}
-					{if $postCodeExist eq false}
-						<div class="required postcode unvisible form-group uk-form-row">
-							<label for="postcode" class="uk-form-label">{l s='Zip/Postal Code'} <sup>*</sup></label>
-							<div class="uk-form-controls">
-								<input type="text" class="validate form-control" name="postcode" id="postcode" data-validate="isPostCode" value="{if isset($smarty.post.postcode)}{$smarty.post.postcode}{/if}"/>
 							</div>
 						</div>
 					{/if}

@@ -38,7 +38,7 @@
 	        	       				<li><a href="{$base_dir}tag/real-human-hair">Remy Human Hair</a></li>
 	        	       				<li><a href="{$base_dir}tag/medical-wigs">Medical Wigs for Hair Loss</a></li>
 	        	       				<li><a href="{$base_dir}tag/hand-tied-wigs">Hand-tied Human Hair Wigs</a></li>
-	        	       				<li><a href="{$base_dir}tag/african-american-human-hair-wigs">African American Wigs</a></li>
+	        	       				{*<li><a href="{$base_dir}tag/african-american-human-hair-wigs">African American Wigs</a></li>*}
 		        	       		</ul>
 		        	       </div>
 	               	       <div class="col-sm-3">
@@ -89,7 +89,6 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">feature</li>
-	        	       				<li><a href="{$base_dir}tag/michelle-obama-hairstyles">Michelle Obama Hairstyles</a></li>
 	        	       				<li><a href="{$base_dir}tag/kanekalon-synthetic-wigs">Kanekalon Synthetic Wigs</a></li>
 		        	       		</ul>
 		        	       </div>
