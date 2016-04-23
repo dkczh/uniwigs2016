@@ -336,6 +336,12 @@ class LoyaltyModule extends ObjectModel
 	
 			
 	$now_points =	(int)$cur_points+(int)($this->points);	
+	
+	if($now_points<0){
+		$now_points=0;
+		
+	};
+	
 		Db::getInstance()->execute('
 		INSERT INTO `'._DB_PREFIX_.'loyalty_history` (`id_loyalty`, `id_loyalty_state`, `points`, `date_add`)
 		VALUES ('.(int)($this->id).', '.(int)($this->id_loyalty_state).', '.(int)($this->points).', NOW())');
