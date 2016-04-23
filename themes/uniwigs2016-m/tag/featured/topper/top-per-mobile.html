@@ -93,7 +93,7 @@ transition: all .3s ease-out;
 						<div class="left-block">
 							<div class="product-image-container">
 								<a class="product_img_link"	href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
-									<img class="replace-2x img-responsive" src="/themes/uniwigs2016-m-m/img/milanoo_blank.gif" original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
+									<img class="replace-2x img-responsive" src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
 								</a>
 							</div>
 							{hook h="displayProductDeliveryTime" product=$product}
@@ -110,24 +110,6 @@ transition: all .3s ease-out;
 									{$product.name}
 								</a>
 							</h5>
-							
-							<p class="{if $product.review_summary.count<=0}hide{/if}">
-								<a href="javascript:void(0);" class="product-rating-link" title="{if $product.review_summary.rating>0}{$product.review_summary.rating}/5{/if}">
-										<span class="star" style="width:{$product.review_summary.rating/5*100}%"></span>
-								</a>
-								<a href="{$product.link|escape:'htmlall':'UTF-8'}#product_reviews" rel="nofollow" class="product-rating-count">
-									({$product.review_summary.count}) 
-								</a>
-							</p>
-							<p>
-								<span class="like link_like_product" id="category_dolike_{$product.id_product}"
-									onclick="javascript:like('','{$product.id_product}','category')"
-									product_sku="{$product.reference}">
-									<span class="like-number-container{if $product.like_count<=0} hide{/if}">
-										<span class="like-number text-muted" id="category_likecount_{$product.id_product}">{$product.like_count}</span>
-									</span>
-								</span>
-							</p>
 							
 							{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 							<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="content_price">
@@ -247,7 +229,7 @@ transition: all .3s ease-out;
 						<div class="left-block">
 							<div class="product-image-container">
 								<a class="product_img_link"	href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
-									<img class="replace-2x img-responsive" src="/themes/uniwigs2016-m-m/img/milanoo_blank.gif" original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
+									<img class="replace-2x img-responsive" src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
 								</a>
 
 							</div>
@@ -266,23 +248,6 @@ transition: all .3s ease-out;
 								</a>
 							</h5>
 							
-							<p class="{if $product.review_summary.count<=0}hide{/if}">
-								<a href="javascript:void(0);" class="product-rating-link" title="{if $product.review_summary.rating>0}{$product.review_summary.rating}/5{/if}">
-										<span class="star" style="width:{$product.review_summary.rating/5*100}%"></span>
-								</a>
-								<a href="{$product.link|escape:'htmlall':'UTF-8'}#product_reviews" rel="nofollow" class="product-rating-count">
-									({$product.review_summary.count}) 
-								</a>
-							</p>
-							<p>
-								<span class="like link_like_product" id="category_dolike_{$product.id_product}"
-									onclick="javascript:like('','{$product.id_product}','category')"
-									product_sku="{$product.reference}">
-									<span class="like-number-container{if $product.like_count<=0} hide{/if}">
-										<span class="like-number text-muted" id="category_likecount_{$product.id_product}">{$product.like_count}</span>
-									</span>
-								</span>
-							</p>
 							
 							{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 							<div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="content_price">
@@ -362,6 +327,8 @@ transition: all .3s ease-out;
 	</ul>
 </div>
 <script type="text/javascript" src="/themes/uniwigs2016-m/js/lightbox.js"></script>
+<script type="text/javascript" src="/js/jquery/plugins/bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/js/jquery/plugins/bxslider/jquery.bxslider.css"></script>
 <script>
  $('#layer1-video').bxSlider({
 	minSlides: 1,
