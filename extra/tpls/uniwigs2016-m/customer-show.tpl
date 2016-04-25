@@ -381,7 +381,7 @@ font-size: 11px;}
 </div>
 </section>
 <div id="page_loading"><img src="/img/loadingAnimation.gif"></div>
-
+<script type="text/javascript" src="/themes/uniwigs2016-m/js/lightbox.js"></script>
 <script>
 window.request_ca = '{$ca|escape}';
 window.request_caid = '{$caid|escape}';

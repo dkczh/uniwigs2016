@@ -215,8 +215,8 @@ font-size: 11px;}
 				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Hair Extensions'} active{/if}">
 					<a href="/customer-show?ca=Hair+Extensions">Hair Extensions<span class="over"></span></a>
 				</li>
-				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Hairpieces'} active{/if}">
-					<a href="/customer-show?ca=Hairpieces">Hairpieces<span class="over"></span></a>
+				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Hair pieces'} active{/if}">
+					<a href="/customer-show?ca=Hair+pieces">Hairpieces<span class="over"></span></a>
 				</li>
 			{else}
 				<li class="col-sm-3{if isset($smarty.get.caid)}{else} active{/if}">
@@ -382,7 +382,7 @@ font-size: 11px;}
 </div>
 </section>
 <div id="page_loading"><img src="/img/loadingAnimation.gif"></div>
-
+<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
 <script>
 window.request_ca = '{$ca|escape}';
 window.request_caid = '{$caid|escape}';
