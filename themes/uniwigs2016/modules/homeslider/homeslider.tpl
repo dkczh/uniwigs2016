@@ -54,7 +54,7 @@
 				</map>
 			</li>
 			<li class="homeslider-container">
-				<a href="http://lavivid.uniwigs.com">
+				<a href="http://lavivid.uniwigs.com/tag/mother-day-lavivid">
 					<img src="{$base_dir}themes/uniwigs2016/img/index/banner0422-2.jpg" alt="" width="1400" height="600"/>
 				</a>
 			</li>
