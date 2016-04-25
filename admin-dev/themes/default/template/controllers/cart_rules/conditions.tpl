@@ -303,5 +303,59 @@
 				</table>
 			</div>
 		{/if}
+		
+			{*  -----tag限制条件------  *}
+		<div>
+					<hr>
+					<p>{l s='Tag redirection'} 已选 {if $selected_tag!=''} ({$selected_tag|@count}){else}(0) {/if} </p>
+					<div class="col-lg-12 bootstrap">
+				<div class="col-lg-6">
+					{l s='Unselected'}
+					<select multiple size="10" id="select1"  name="tag_unselect[]">
+					{foreach from=$unselected_tag item='tag'}
+												
+					<option value="{$tag.id_tag|intval}" title="{$tag.name}">&nbsp;{$tag.name|escape}</option>
+					{/foreach}
+					
+					</select>
+					<div class="clearfix">&nbsp;</div>
+					<a id="tag_add" class="btn btn-default btn-block" >
+						{l s='Add'}
+						<i class="icon-arrow-right"></i>
+					</a>
+				</div>
+				<div class="col-lg-6">
+					{l s='Selected'}
+					<select multiple size="10" id="select2" name="tag_select[]" class="tag_rule_toselect" >
+					
+					{if $selected_tag!=''}
+					{foreach from=$selected_tag item='tag'}						
+					<option value="{$tag.id_tag|intval}" title="{$tag.name}">&nbsp;{$tag.name|escape}</option>
+					{/foreach}
+					{/if}
+					</select>
+					<div class="clearfix">&nbsp;</div>
+					<a id="tag_remove" class="btn btn-default btn-block" >
+						<i class="icon-arrow-left"></i>
+						{l s='Remove'}
+					</a>
+				</div>
+			</div>
+						
+			<script type="text/javascript">
+				$('#tag_remove').click(function() { 
+					$("#select2 option:selected").appendTo("#select1");
+					
+				});
+				$('#tag_add').click(function() {
+				
+				$("#select1 option:selected").appendTo("#select2");
+				});
+
+			</script>
+
+	
+		</div>
+		{* / -----tag限制条件------  *}
 	</div>
 </div>

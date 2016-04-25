@@ -283,6 +283,13 @@ $('#cart_rule_form').submit(function() {
 	$('.product_rule_toselect option').each(function(i) {
 		$(this).prop('selected', true);
 	});
+	
+	//推送需要提交的 tag 选项
+	$('.tag_rule_toselect option').each(function(i) {
+		$(this).prop('selected', true);
+	
+	});
+	
 });
 
 $('#reductionProductFilter')
