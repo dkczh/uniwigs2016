@@ -83,7 +83,7 @@
       #homepage-slider .bx-wrapper .bx-pager.bx-default-pager a.active {
         background: #d32676; }
     #homepage-slider .bx-wrapper .bx-pager {
-      bottom: 0; }
+      bottom: 5px; }
     #homepage-slider .bx-wrapper .bx-controls-direction a {
       top: auto;
       margin-top: 0px;

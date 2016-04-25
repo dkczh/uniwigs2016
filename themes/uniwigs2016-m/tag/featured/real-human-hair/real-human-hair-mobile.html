@@ -17,7 +17,7 @@ transition: all 300ms ease-in-out;
 -webkit-transition: all 300ms ease-in-out;
 -moz-transition: all 300ms ease-in-out;
 -o-transition: all 300ms ease-in-out;}
-.pro-sku li a{display:block;padding:8px 5px;text-decoration: none;font-size: 12px;}
+.pro-sku li a{display:block;padding:8px 5px;text-decoration: none;font-size: 12px;background: #fff;}
 .pro-sku li:hover{border-color:#B51C62;box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);}
 </style>
 {/literal}
@@ -72,6 +72,8 @@ transition: all 300ms ease-in-out;
 							{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
 							{if $totModuloTablet == 0}{assign var='totModuloTablet' value=$nbItemsPerLineTablet}{/if}
 							{if $totModuloMobile == 0}{assign var='totModuloMobile' value=$nbItemsPerLineMobile}{/if}
+							{if $product.name=='1.1" Hair Clips- Beige'}
+							{else}
 							<li class="ajax_block_product{if $page_name == 'index' || $page_name == 'product'} col-xs-12 col-sm-4 col-md-3{else} col-xs-12 col-sm-4 col-md-3{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLine == 0} last-in-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLine == 1} first-in-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModulo)} last-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 0} last-item-of-tablet-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineTablet == 1} first-item-of-tablet-line{/if}{if $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 0} last-item-of-mobile-line{elseif $smarty.foreach.products.iteration%$nbItemsPerLineMobile == 1} first-item-of-mobile-line{/if}{if $smarty.foreach.products.iteration > ($smarty.foreach.products.total - $totModuloMobile)} last-mobile-line{/if}">
 								<div class="product-container" itemscope itemtype="http://schema.org/Product">
 									<div class="left-block">
@@ -80,28 +82,6 @@ transition: all 300ms ease-in-out;
 											<a class="product_img_link"	href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
 												<img class="replace-2x img-responsive" src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
 											</a>
-											{if isset($quick_view) && $quick_view}
-												<div class="quick-view-wrapper-mobile">
-												<a class="quick-view-mobile" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}">
-													<i class="icon-eye-open"></i>
-												</a>
-											</div>
-											<a class="quick-view" href="{$product.link|escape:'html':'UTF-8'}" rel="{$product.link|escape:'html':'UTF-8'}">
-												<span>{l s='Quick view'}</span>
-											</a>
-											{/if}
-											{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
-														{if $page_name != 'index'}
-						                                    <div class="functional-buttons clearfix">
-						                                        {hook h='displayProductListFunctionalButtons' product=$product}
-						                                        <div class="view">
-                                									<a href="{$product.link|escape:'html':'UTF-8'}" title="{l s='View'}">
-                                										<span>{if (isset($product.customization_required) && $product.customization_required)}{l s='Customize'}{else}{l s='More'}{/if}</span>
-                                									</a>
-                                								</div>
-						                                    </div>
-						                                {/if}
-											{/if}
 										</div>
 										{hook h="displayProductDeliveryTime" product=$product}
 										{hook h="displayProductPriceBlock" product=$product type="weight"}
@@ -155,6 +135,7 @@ transition: all 300ms ease-in-out;
 
 								</div><!-- .product-container> -->
 							</li>
+							{/if}
 						{/foreach}
 						</ul>
 						{/foreach}
@@ -332,14 +313,6 @@ transition: all 300ms ease-in-out;
 					</ul>
 				</secton>
 			</div>
-		</div>
-		<div class="layer-img"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/td3.png" alt="" width="100%"></div>
-		<div class="other_link">
-			<ul class="row">
-				<li class="col-sm-4"><a href="http://www.uniwigs.com/celebrity-wigs"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/link1.jpg" alt="" width="100%"></a></li>
-				<li class="col-sm-4"><a href="http://www.uniwigs.com/tag/hand-tied-wigs"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/link2.jpg" alt="" width="100%"></a></li>
-				<li class="col-sm-4"><a href="http://www.uniwigs.com/tag/lace-closure"><img src="/themes/uniwigs2016/tag/featured/real-human-hair/image/link3.jpg" alt="" width="100%"></a></li>
-			</ul>
 		</div>
 
 	</div>
