@@ -327,7 +327,7 @@ class AdminCartRulesControllerCore extends AdminController
             Db::getInstance()->execute('INSERT INTO `'._DB_PREFIX_.'cart_rule_combination` (`id_cart_rule_1`, `id_cart_rule_2`) VALUES '.implode(',', $values));
         }
 		
-		//增加tag 限制
+		//新建折扣券 增加tag 限制
 			$tag = Tools::getValue('tag_select');
 				
 			if($tag){
