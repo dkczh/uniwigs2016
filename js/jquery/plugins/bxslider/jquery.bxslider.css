@@ -47,14 +47,14 @@
 .bx-wrapper .bx-pager.bx-default-pager a {
   text-indent: -9999px;
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   margin: 0 5px;
   background: #000;
   outline: 0;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px; }
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border-radius: 14px; }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {

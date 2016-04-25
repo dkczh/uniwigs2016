@@ -210,23 +210,9 @@ font-size: 11px;}
 
 <section class="containerIndex">
 	<a href="/content/34-share-your-photos" target="_blank" class="img-responsive share-your-photos"></a>
+{if isset($smarty.get.ca)}
+{else}
 <div class="customer-nav" data-uk-dropdown="{literal}{mode:'click'}{/literal}">
-	{if isset($smarty.get.ca)}
-	{else}
-	<a href="#" class="hover-down">All</a>
-	{/if}
-	{if isset($smarty.get.ca) && $smarty.get.ca=='Human Hair Wigs'}
-	<a href="#" class="hover-down">Human Hair Wigs</a>
-	{/if}
-	{if isset($smarty.get.caid) && $smarty.get.caid=='Synthetic Wigs'}
-	<a href="#" class="hover-down">Synthetic Wigs</a>
-	{/if}
-	{if isset($smarty.get.caid) && $smarty.get.caid=='Hair Extensions'}
-	<a href="#" class="hover-down">Hair Extensions</a>
-	{/if}
-	{if isset($smarty.get.caid) && $smarty.get.caid=='Hairpieces'}
-	<a href="#" class="hover-down">Hair Pieces</a>
-	{/if}
 	<div class="uk-dropdown">
 		<ul class="uk-nav uk-nav-dropdown">
 			<li class="col-sm-3"><a href="/customer-show">All</a></li>
@@ -237,6 +223,7 @@ font-size: 11px;}
 		</ul>
 	</div>
 </div>
+{/if}
 <div id="pubu">
 	{*<div class="box">
 		<div class="hover-block">
