@@ -145,7 +145,11 @@ class AdminCartRulesControllerCore extends AdminController
     public function postProcess()
     {
         if (Tools::isSubmit('submitAddcart_rule') || Tools::isSubmit('submitAddcart_ruleAndStay')) {
-            // If the reduction is associated to a specific product, then it must be part of the product restrictions
+            
+		
+			
+			
+			// If the reduction is associated to a specific product, then it must be part of the product restrictions
             if ((int)Tools::getValue('reduction_product') && Tools::getValue('apply_discount_to') == 'specific' && Tools::getValue('apply_discount') != 'off') {
                 $reduction_product = (int)Tools::getValue('reduction_product');
 
@@ -227,6 +231,27 @@ class AdminCartRulesControllerCore extends AdminController
             if (Tools::getValue('apply_discount') == 'off' && !Tools::getValue('free_shipping') && !Tools::getValue('free_gift')) {
                 $this->errors[] = Tools::displayError('An action is required for this cart rule.');
             }
+			
+			
+			
+			
+			//获取form.js post 过来的 tag选中值
+			//var_dump(Tools::getValue('product_rule_select_1_1'));
+				
+			$tag = Tools::getValue('tag_select');
+				
+			if($tag){
+				$tagstr =implode(',',$tag);
+			//echo $tagstr;
+			Db::getInstance()->execute("update ps_cart_rule set tag='".$tagstr."' where id_cart_rule=".(int)Tools::getValue('id_cart_rule'));
+			/* 	echo 'tag 更新成功';
+				exit; */		
+			}else{
+				//存入数据库 
+				
+			Db::getInstance()->execute("update ps_cart_rule set tag='' where id_cart_rule=".(int)Tools::getValue('id_cart_rule'));
+			//echo 'tag 更新成功';	
+			}
         }
         return parent::postProcess();
     }
@@ -301,6 +326,22 @@ class AdminCartRulesControllerCore extends AdminController
             }
             Db::getInstance()->execute('INSERT INTO `'._DB_PREFIX_.'cart_rule_combination` (`id_cart_rule_1`, `id_cart_rule_2`) VALUES '.implode(',', $values));
         }
+		
+		//增加tag 限制
+			$tag = Tools::getValue('tag_select');
+				
+			if($tag){
+			$tagstr =implode(',',$tag);
+		
+			Db::getInstance()->execute("update ps_cart_rule set tag='".$tagstr."' where id_cart_rule=".(int)$currentObject->id);
+					
+			}else{
+				//存入数据库 
+				
+			Db::getInstance()->execute("update ps_cart_rule set tag='' where id_cart_rule=".(int)$currentObject->id);
+			//echo 'tag 更新成功';	
+			}
+		
         // Add product rule restrictions
         if (Tools::getValue('product_restriction') && is_array($ruleGroupArray = Tools::getValue('product_rule_group')) && count($ruleGroupArray)) {
             foreach ($ruleGroupArray as $ruleGroupId) {
@@ -671,6 +712,51 @@ class AdminCartRulesControllerCore extends AdminController
         }
 
         $product = new Product($current_object->gift_product);
+		
+		
+		//获取当前 折扣券的 tag 限制规则
+		
+		//判断此 折扣券 是否增加 tag限制 
+		$exists_tag = Db::getInstance()->getValue('
+				SELECT tag  
+				FROM '._DB_PREFIX_.'cart_rule
+				where  id_cart_rule = '.(int)Tools::getValue('id_cart_rule'));
+				
+		
+		if($exists_tag==''){
+			
+			echo  '此折扣券 不存在tag 限制 所以要推送所有到 tag 到选项中';
+			$unselected_tag = Db::getInstance()->executeS('
+				SELECT id_tag ,name   
+				FROM '._DB_PREFIX_.'tag
+				order by  name ');
+				
+		/* 	echo '<pre>';
+		var_dump($unselected_tag);
+		echo '</pre>'; */
+			 $this->context->smarty->assign('unselected_tag' ,$unselected_tag);
+			  $this->context->smarty->assign('selected_tag' ,'');
+
+			
+		}else{
+			$unselected_tag = Db::getInstance()->executeS('
+				SELECT id_tag ,name   
+				FROM '._DB_PREFIX_.'tag
+				where id_tag not in ('.$exists_tag.')
+				order by  name ');
+				
+			$selected_tag = Db::getInstance()->executeS('
+				SELECT id_tag ,name   
+				FROM '._DB_PREFIX_.'tag
+				where id_tag in ('.$exists_tag.')
+				order by  name ');
+				
+			$this->context->smarty->assign('unselected_tag' ,$unselected_tag);
+			$this->context->smarty->assign('selected_tag' ,$selected_tag);
+			
+		}
+		
+		
         $this->context->smarty->assign(
             array(
                 'show_toolbar' => true,
