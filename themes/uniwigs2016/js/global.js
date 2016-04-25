@@ -106,7 +106,7 @@ $(document).ready(function(){
 		});
 
 	// Close Alert messages
-	$(".alert.alert-danger").on('click', this, function(e){
+	$(".uk-alert.uk-alert-danger").on('click', this, function(e){
 		
 			$(this).fadeOut();
 	});

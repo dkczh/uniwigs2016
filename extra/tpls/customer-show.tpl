@@ -215,8 +215,8 @@ font-size: 11px;}
 				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Hair Extensions'} active{/if}">
 					<a href="/customer-show?ca=Hair+Extensions">Hair Extensions<span class="over"></span></a>
 				</li>
-				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Hairpieces'} active{/if}">
-					<a href="/customer-show?ca=Hairpieces">Hairpieces<span class="over"></span></a>
+				<li class="col-sm-3{if isset($smarty.get.ca) && $smarty.get.ca=='Hair pieces'} active{/if}">
+					<a href="/customer-show?ca=Hair+pieces">Hairpieces<span class="over"></span></a>
 				</li>
 			{else}
 				<li class="col-sm-3{if isset($smarty.get.caid)}{else} active{/if}">
@@ -382,7 +382,7 @@ font-size: 11px;}
 </div>
 </section>
 <div id="page_loading"><img src="/img/loadingAnimation.gif"></div>
-
+<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
 <script>
 window.request_ca = '{$ca|escape}';
 window.request_caid = '{$caid|escape}';
@@ -616,7 +616,7 @@ window.request_psku = '{$psku|escape}';
 					var html = '';
 				    for(i in data){
 						if (data[i].isvideo) {
-							html += '<div class="box"><div class="hover-block"><div class="hover-bor"></div><div class="hover-op"></div></div><div class="pic"><a href="/index.php?controller=product&sku=?sku='+encodeURIComponent(data[i].sku)+'" class="highslide"><img src="'+data[i].src+'"></a><em>VIDEO</em><p class="description">'+data[i].title+'</p><p class="name"><span class="name_icon"><i class="icon-user"></i></span><span>'+data[i].author_name+'</span></p></div></div>';
+							html += '<div class="box"><div class="hover-block"><div class="hover-bor"></div><div class="hover-op"></div></div><div class="pic"><a href="'+data[i].videosrc+'" data-uk-lightbox class="highslide"><img src="'+data[i].src+'"></a><em>VIDEO</em><p class="description">'+data[i].title+'</p><p class="name"><span class="name_icon"><i class="icon-login"></i></span><span>'+data[i].author_name+'</span><a href="/index.php?controller=product&sku='+encodeURIComponent(data[i].sku)+'" class="view btn">VIEW PRODUCT ></a></p></div></div>';
 						} else {
 							//html += "<div class='box'><div class='pic'><a href='"+data[i].src+"' onclick='return hs.expand(this)' class='highslide'><img src='"+data[i].src+"'></a><p class='description'>"+data[i].title+"</p><p><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' class='view'>VIEW PRODUCT</a></p></div></div>";
 							html += "<div class='box'><div class='hover-block'><div class='hover-bor'></div><div class='hover-op'></div></div><div class='pic'><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' class='highslide'><img src='http://rvm.uniwigs.com/timthumb.php?src="+encodeURIComponent(data[i].src)+"&w=210&h=280'></a><p class='description'>"+data[i].title+"</p><p class='name'><span class='name_icon'><i class='icon-user'></i></span><span>"+data[i].author_name+"</span></p></div></div>";
