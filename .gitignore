@@ -1,5 +1,6 @@
 img/p/*
 img/co/*
+img/tmp/*
 cache/
 log/
 *.db
@@ -12,3 +13,5 @@ upload/*
 apitools/tagedit/complile/*
 apitools/config.php
 modules/homeslider/images/*
+robots.txt
+*.xml
