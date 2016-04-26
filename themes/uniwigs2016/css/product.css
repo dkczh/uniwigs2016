@@ -321,6 +321,8 @@ span.view_scroll_spacer {
     font-family: "FontAwesome";
     content: "\f004";
     padding-right: 5px; }
+  .pb-center-column .jump_options ul {
+    margin-bottom: 0; }
   .pb-center-column .jump_options a {
     display: inline-block;
     position: relative;
@@ -329,7 +331,8 @@ span.view_scroll_spacer {
     text-align: center;
     line-height: 28px;
     padding: 0 10px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 10px; }
     .pb-center-column .jump_options a:hover, .pb-center-column .jump_options a.current {
       border-color: #d32676;
       color: #d32676; }

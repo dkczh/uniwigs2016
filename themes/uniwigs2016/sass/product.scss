@@ -381,6 +381,9 @@ span.view_scroll_spacer {
 		}
 	}
 	.jump_options{
+		ul{
+			margin-bottom:0
+		}
 		a{
 			display: inline-block;
 			position: relative;
@@ -390,6 +393,7 @@ span.view_scroll_spacer {
 			line-height: 28px;
 			padding: 0 10px;
 			margin-right: 10px;
+			margin-bottom:10px;
 			&:hover,
 			&.current{
 				border-color: #d32676;
