@@ -22,7 +22,7 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<link rel="stylesheet" href="/themes/uniwigs2016/css/product_list.css" type="text/css" media="all">
+<link rel="stylesheet" href="/themes/vivid/css/product_list.css" type="text/css" media="all">
 
 {if isset($tagimg) && $tagimg}
 <div class="uk-margin-bottom">

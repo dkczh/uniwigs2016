@@ -86,10 +86,14 @@
 			direction: ltr!important;
 		}
 		.bx-pager.bx-default-pager a {
-			background: #666;
+			background: #fff;
+			border:1px solid #d32676;
+			&.active{
+				background: #d32676;
+			}
 		}
-		.bx-controls{
-			display: none
+		.bx-pager{
+			bottom:5px;
 		}
 		.bx-controls-direction a {
 			top: auto;
