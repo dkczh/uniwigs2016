@@ -210,23 +210,9 @@ font-size: 11px;}
 
 <section class="containerIndex">
 	<a href="/content/34-share-your-photos" target="_blank" class="img-responsive share-your-photos"></a>
+{if isset($smarty.get.ca)}
+{else}
 <div class="customer-nav" data-uk-dropdown="{literal}{mode:'click'}{/literal}">
-	{if isset($smarty.get.ca)}
-	{else}
-	<a href="#" class="hover-down">All</a>
-	{/if}
-	{if isset($smarty.get.ca) && $smarty.get.ca=='Human Hair Wigs'}
-	<a href="#" class="hover-down">Human Hair Wigs</a>
-	{/if}
-	{if isset($smarty.get.caid) && $smarty.get.caid=='Synthetic Wigs'}
-	<a href="#" class="hover-down">Synthetic Wigs</a>
-	{/if}
-	{if isset($smarty.get.caid) && $smarty.get.caid=='Hair Extensions'}
-	<a href="#" class="hover-down">Hair Extensions</a>
-	{/if}
-	{if isset($smarty.get.caid) && $smarty.get.caid=='Hairpieces'}
-	<a href="#" class="hover-down">Hair Pieces</a>
-	{/if}
 	<div class="uk-dropdown">
 		<ul class="uk-nav uk-nav-dropdown">
 			<li class="col-sm-3"><a href="/customer-show">All</a></li>
@@ -237,6 +223,7 @@ font-size: 11px;}
 		</ul>
 	</div>
 </div>
+{/if}
 <div id="pubu">
 	{*<div class="box">
 		<div class="hover-block">
@@ -615,10 +602,10 @@ window.request_psku = '{$psku|escape}';
 					var html = '';
 				    for(i in data){
 						if (data[i].isvideo) {
-							html += '<div class="box"><div class="hover-block"><div class="hover-bor"></div><div class="hover-op"></div></div><div class="pic"><a href="'+data[i].videosrc+'" data-uk-lightbox class="highslide"><img src="'+data[i].src+'"></a><em>VIDEO</em><p class="description">'+data[i].title+'</p><p class="name"><span class="name_icon"><i class="icon-login"></i></span><span>'+data[i].author_name+'</span><a href="/index.php?controller=product&sku='+encodeURIComponent(data[i].sku)+'" class="view btn">VIEW PRODUCT ></a></p></div></div>';
+							html += '<div class="box"><div class="hover-block"><div class="hover-bor"></div><div class="hover-op"></div></div><div class="pic"><a href="'+data[i].videosrc+'" data-uk-lightbox class="highslide"><img src="'+data[i].src+'"></a><em>VIDEO</em><p class="description">'+data[i].title+'</p><p class="name"><span class="name_icon"><i class="icon-login"></i></span><span>'+data[i].author_name+'</span></p><p class="view_btn"><a href="/index.php?controller=product&sku='+encodeURIComponent(data[i].sku)+'" >VIEW PRODUCT ></a></p></div></div>';
 						} else {
 							//html += "<div class='box'><div class='pic'><a href='"+data[i].src+"' onclick='return hs.expand(this)' class='highslide'><img src='"+data[i].src+"'></a><p class='description'>"+data[i].title+"</p><p><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' class='view'>VIEW PRODUCT</a></p></div></div>";
-							html += "<div class='box'><div class='hover-block'><div class='hover-bor'></div><div class='hover-op'></div></div><div class='pic'><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' class='highslide'><img src='http://rvm.uniwigs.com/timthumb.php?src="+encodeURIComponent(data[i].src)+"&w=210&h=280'></a><p class='description'>"+data[i].title+"</p><p class='name'><span class='name_icon'><i class='icon-login'></i></span><span>"+data[i].author_name+"</span></p></div></div>";
+							html += "<div class='box'><div class='hover-block'><div class='hover-bor'></div><div class='hover-op'></div></div><div class='pic'><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' class='highslide'><img src='http://rvm.uniwigs.com/timthumb.php?src="+encodeURIComponent(data[i].src)+"&w=210&h=280'></a><p class='description'>"+data[i].title+"</p><p class='name'><span class='name_icon'><i class='icon-login'></i></span><span>"+data[i].author_name+"</span></p><p class='view_btn'><a href='/index.php?controller=product&sku="+encodeURIComponent(data[i].sku)+"' >VIEW PRODUCT ></a></p></div></div>";
 						}
 				    }
 				    render($(html));
