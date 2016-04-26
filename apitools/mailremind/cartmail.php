@@ -10,18 +10,25 @@ $test_dev = false; //测试环境 开启  所有邮件 发送到指定邮箱 554
 
 
 $sql = "
-select id_customer,id_cart
-from ps_cart
-where left(date_add,10)='".date("Y-m-d",strtotime("-1 days"))."'
-and id_cart not in(
+SELECT
+	c.id_customer,
+	c.id_cart
+FROM
+	ps_cart c
+LEFT JOIN 
+ps_cart_product cp on cp.id_cart=c.id_cart	
+where left(c.date_add,10)='".date("Y-m-d",strtotime("-1 days"))."'
+and c.id_cart not in(
 	select o.id_cart from
 	ps_orders as o left join ps_order_history as oh
 	on o.id_order=oh.id_order
 	where oh.id_order_state>1 )
-and  id_customer >0 
+and  c.id_customer >0 
+and cp.id_product is not null 
  
 ";
-
+echo $sql;
+exit;
 if($test_dev)
 	$sql.='limit 2 ';
 
