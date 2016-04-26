@@ -26,19 +26,27 @@
 <!-- MODULE ectracking-footer -->
 
 <script type="text/javascript">
+var google_tag_params = {
+ecomm_prodid: 'REPLACE_WITH_VALUE',
+ecomm_pagetype: 'REPLACE_WITH_VALUE',
+ecomm_totalvalue: 'REPLACE_WITH_VALUE',
+};
+</script>
+<script type="text/javascript">
 /* <![CDATA[ */
 var google_conversion_id = 923345832;
 var google_custom_params = window.google_tag_params;
 var google_remarketing_only = true;
 /* ]]> */
 </script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js" async></script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
 <noscript>
 <div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt=""
-	src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/923345832/?value=0&amp;guid=ON&amp;script=0"/>
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/923345832/?value=0&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
+
 <script type="text/javascript" src="{$js_dir}transit.js" async></script>
 {literal}
 <script type="text/javascript">
@@ -47,6 +55,18 @@ var b=document.getElementsByTagName("script")[0];
 a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0034/3136.js?"+Math.floor(new Date().getTime()/3600000);
 a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
-{/literal}
 
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '939483269478039');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=939483269478039&amp;ev=PageView&noscript=1"
+/></noscript>
+{/literal}
 <!-- /MODULE ectracking-footer -->
