@@ -27,8 +27,7 @@ and  c.id_customer >0
 and cp.id_product is not null 
  
 ";
-echo $sql;
-exit;
+
 if($test_dev)
 	$sql.='limit 2 ';
 
