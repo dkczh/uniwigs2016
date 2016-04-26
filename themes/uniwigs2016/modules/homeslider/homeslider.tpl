@@ -25,7 +25,7 @@
 *}
 {if $page_name =='index'}
 <!-- Module HomeSlider -->
-    {if isset($homeslider_slides)}
+    {*if isset($homeslider_slides)}
 		<div id="homepage-slider">
 			{if isset($homeslider_slides.0) && isset($homeslider_slides.0.sizes.1)}{capture name='height'}{$homeslider_slides.0.sizes.1}{/capture}{/if}
 			<ul id="homeslider"{if isset($smarty.capture.height) && $smarty.capture.height} style="max-height:{$smarty.capture.height}px;"{/if}>
@@ -43,6 +43,22 @@
 				{/foreach}
 			</ul>
 		</div>
-	{/if}
+	{/if*}
+	<div id="homepage-slider">
+		<ul id="homeslider">
+			<li class="homeslider-container index-banner">
+				<img src="{$base_dir}themes/uniwigs2016/img/index/banner0422.jpg" alt="" usemap="#map" width="1400" height="600"/>
+				<map name="map">
+				    <area shape="rect" coords="502, 495, 722, 546" href="{$base_dir}104-hair-pieces"/>
+				    <area shape="rect" coords="263, 495, 481, 545" href="{$base_dir}102-human-hair-wigs"/>
+				</map>
+			</li>
+			<li class="homeslider-container">
+				<a href="http://lavivid.uniwigs.com/tag/mother-day-lavivid">
+					<img src="{$base_dir}themes/uniwigs2016/img/index/banner0422-2.jpg" alt="" width="1400" height="600"/>
+				</a>
+			</li>
+		</ul>
+	</div>
 <!-- /Module HomeSlider -->
 {/if}

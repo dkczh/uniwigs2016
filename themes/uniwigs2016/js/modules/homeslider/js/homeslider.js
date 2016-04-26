@@ -54,9 +54,9 @@ $(document).ready(function(){
 			hideControlOnEnd: true,
 			pager: true,
 			autoHover: true,
-			auto: false,
+			auto: true,
 			speed: parseInt(homeslider_speed),
 			pause: homeslider_pause,
-			controls: true
+			controls: false
 		});
 });

@@ -35,6 +35,9 @@
         <section class="containerIndex">
             <section class="category-home">
                 <div>
+                    <img src="{$img_dir}public/product-banner.png" alt="" class="img-responsive">
+                </div>
+                <div class="uk-margin-top">
                     <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
                         <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="" class="img-responsive">
                     </a>
@@ -639,7 +642,10 @@
         {/literal}
         <section class="container containerIndex" itemscope itemtype="http://schema.org/SearchResultsPage">
             <section class="category-home">
-                <div class="cargory_banner">
+                <div>
+                    <img src="{$img_dir}public/product-banner.png" alt="" class="img-responsive">
+                </div>
+                <div class="cargory_banner uk-margin-top">
                     <a href="{$base_dir}tag/toppers"><img src="{$img_dir}category/hiar-pieces/pieces-banner.jpg" alt="Hair Loss" class="img-responsive"></a>
                 </div>
                 <ul class="row uk-margin-top">

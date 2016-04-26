@@ -110,7 +110,7 @@
 							</select>
 							</div>
 							<div class="col-sm-6 col-xs-6">
-							<select name="x_exp_date_y" class="form-control not_uniform uk-form-large">{section name=date_y start=14 loop=32}
+							<select name="x_exp_date_y" class="form-control not_uniform uk-form-large">{section name=date_y start=16 loop=32}
 								<option value="{$smarty.section.date_y.index}">20{$smarty.section.date_y.index}</option>{/section}
 							</select>
 							</div>
