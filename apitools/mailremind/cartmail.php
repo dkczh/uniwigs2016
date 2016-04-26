@@ -16,7 +16,7 @@ SELECT
 FROM
 	ps_cart c
 LEFT JOIN 
-ps_cart_product cp on cp.id_cart=c.id_cart	
+ (select * from ps_cart_product  order by  id_cart  desc) as cp on cp.id_cart=c.id_cart	
 where left(c.date_add,10)='".date("Y-m-d",strtotime("-1 days"))."'
 and c.id_cart not in(
 	select o.id_cart from
@@ -25,7 +25,7 @@ and c.id_cart not in(
 	where oh.id_order_state>1 )
 and  c.id_customer >0 
 and cp.id_product is not null 
- 
+GROUP BY id_customer
 ";
 
 if($test_dev)
