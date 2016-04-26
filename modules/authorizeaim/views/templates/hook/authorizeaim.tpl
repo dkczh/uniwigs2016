@@ -94,7 +94,7 @@
 					<div class="uk-form-controls">
 						<div class="row">
 							<div class="col-sm-6">
-							<select id="x_exp_date_m" name="x_exp_date_m" class="form-control not_uniform uk-form-large">{section name=date_m start=06 loop=13}
+							<select id="x_exp_date_m" name="x_exp_date_m" class="form-control not_uniform uk-form-large">{section name=date_m start=01 loop=13}
 								<option value="{$smarty.section.date_m.index}">{$smarty.section.date_m.index}</option>{/section}
 							</select>
 							</div>

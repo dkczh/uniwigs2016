@@ -685,6 +685,42 @@ class CartRuleCore extends ObjectModel
     protected function checkProductRestrictions(Context $context, $return_products = false, $display_error = true, $already_in_cart = false)
     {
         $selected_products = array();
+		
+		
+		// 检测  tag 产品限制					
+		$tag = Db::getInstance()->getvalue("
+							SELECT SQL_NO_CACHE `tag` FROM `ps_cart_rule` cp
+							WHERE `code` = '".$this->code."'");
+						
+		if($tag!=''){
+			
+		$tagcart_products = Db::getInstance()->executeS('
+							SELECT SQL_NO_CACHE  p.`reference` as skus  FROM `ps_cart_product` cp
+							LEFT JOIN `ps_product` `p` ON p.`id_product` = cp.`id_product`
+							WHERE (cp.`id_cart` = '.(int)$context->cart->id.') AND (p.`id_product` IS NOT NULL)');
+		
+		$tagproduct = Db::getInstance()->getvalue("SELECT SQL_NO_CACHE   
+		GROUP_CONCAT(skus) from  px_tag_extra  where  id_tag in (".$tag.")");					
+							
+		//判断 当前购物车产品 是否可以使用 tag折扣券	
+		$exist_tag = false ;
+		 foreach($tagcart_products as $a ){
+			
+				if(strpos($tagproduct, $a['skus']) === false) {  
+			
+				}else {  
+				
+				  $exist_tag = true ;
+				} 
+		
+			}
+		
+			 if(!$exist_tag){
+			
+			 return (!$display_error) ? false : Tools::displayError('You cannot use this tag voucher with these products');
+
+			 }
+		}
 
         // Check if the products chosen by the customer are usable with the cart rule
         if ($this->product_restriction) {

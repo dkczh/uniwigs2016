@@ -15,3 +15,5 @@ apitools/config.php
 modules/homeslider/images/*
 robots.txt
 *.xml
+.htaccess
+themes/uniwigs2016/cache/*
