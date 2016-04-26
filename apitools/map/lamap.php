@@ -25,6 +25,7 @@ $productsql ="select  pp.id_product, CONCAT('http://m.uniwigs.com/',pc.link_rewr
 LEFT JOIN  ps_product_lang pl on pl.id_product=pp.id_product 
 LEFT JOIN  ps_category_lang  pc on  pc.id_category=pp.id_category_default
 where pp.id_category_default not in (40441,40440,40445,40441,40462) 
+and pp.active = 1
 GROUP BY pp.id_product";
 $res = Tool::getall($db,$productsql);
 
