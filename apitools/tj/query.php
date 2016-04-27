@@ -128,7 +128,31 @@ limit 50
 function q_product_child($db,$begin,$end,$cate,$childcategory){
 	
 	if($childcategory=='-1'){
-	$sql = "SELECT
+    if($cate=='101'){
+				$sql = "SELECT
+	od.product_id,
+	od.product_name as name ,
+	pp.reference as skus,
+	COUNT(od.product_id) AS num,
+	'$begin' AS begintime,
+	'$end' AS endtime
+FROM
+	ps_order_detail od
+LEFT JOIN ps_orders o ON od.id_order = o.id_order
+LEFT JOIN ps_product pp on pp.id_product=od.product_id 
+WHERE
+	o.date_add BETWEEN '$begin'
+AND '$end'
+and o.total_paid !=0
+and od.product_id not in (SELECT pxp.id_product  from ps_category_product pxp where pxp.id_category =40459 )
+and pp.id_category_default in (101,40455,40456)
+GROUP BY od.product_id
+ORDER BY num desc 
+limit 50
+";
+
+}else{
+$sql = "SELECT
 	od.product_id,
 	od.product_name as name ,
 	pp.reference as skus,
@@ -148,6 +172,9 @@ GROUP BY od.product_id
 ORDER BY num desc 
 limit 50
 ";
+	
+}
+
 }else{
 	$sql = "SELECT
 	od.product_id,
