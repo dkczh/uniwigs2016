@@ -146,12 +146,6 @@ class ProductAssociations extends Module
 			}
 		}
 		
-		
-		
-			echo '<pre>';
-			var_dump($assoc);
-			echo '</pre>';
-			exit;
 		$this->context->smarty->assign(array(
 			'associations' => $associations
 		));
