@@ -167,7 +167,7 @@ class ProductAssociations extends Module
 			return $res['link'];
 		}
 		else{
-			return  'no exists product';
+			return  " no exists product - $a";
 		}
 	
 
