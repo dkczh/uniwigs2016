@@ -116,32 +116,36 @@ class ProductAssociations extends Module
 		if (empty($associations)) {
 			$associations = array();
 		}
+		
+		
+		
 		foreach ($associations as &$assoc) {
 			$assoc['items'] = array();
 			$arr = explode(',', $assoc['skus']);
+			
 			foreach ($arr as $item) {
 				//获取数组
 				$assoc['items'][] = explode(':', $item);
-				
 				$i=0;
 				foreach($assoc['items'] as $a){
 					
-					if($this->getlink($a[0])){
+				 	if($this->getlink($a[0])){
 				
 					  $assoc['items'][$i][2]=$this->getlink($a[0]);
 					 
-					}
-				
+					} 
+			
 				 $i++;
 					
 				}
 				
 		
+			
 				
 				
 			}
 		}
-
+		
 		$this->context->smarty->assign(array(
 			'associations' => $associations
 		));
@@ -163,7 +167,7 @@ class ProductAssociations extends Module
 			return $res['link'];
 		}
 		else{
-			return  false;
+			return  " no exists product - $a";
 		}
 	
 

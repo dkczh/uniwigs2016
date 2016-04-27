@@ -1659,4 +1659,6 @@
 {addJsDefL name='product_fileButtonHtml'}{l s='Choose File' js=1}{/addJsDefL}
 {/strip}
 {/if}
+{if isset($googleJs)}
 {$googleJs}
+{/if}
