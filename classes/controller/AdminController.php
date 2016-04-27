@@ -3287,7 +3287,7 @@ class AdminControllerCore extends Controller
 			exit;    */
 			  //针对客户 最新更改数据 时间字段重复问题 修改 
     		if($sql_table=='customer'){
-				$this->_listsql=str_replace("`date_add`", "a.`date_add`",$this->_listsql);
+				$this->_listsql=str_replace("a.`date_add`", "a.`date_add`",$this->_listsql);
 			}
 		/* 		echo '<pre>';
 		 	echo  $this->_listsql;
