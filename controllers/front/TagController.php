@@ -124,10 +124,11 @@ class TagControllerCore extends FrontController
 
 		   if($weburl=="m.uniwigs.com"){
 		   $template=str_replace('.html','-mobile.html',$template);
-		  // echo $template;
 		   }
-
-
+		   if($weburl=="lavivid.uniwigs.com"){
+		   $template=str_replace('.html','-lavivid.html',$template);
+		   }
+		   
 			if(!file_exists(_PS_THEME_DIR_.$template))
 			{
 			$template="404.tpl";
