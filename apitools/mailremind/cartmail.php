@@ -147,15 +147,22 @@ if (is_array($unpaidCustomers) and $unpaidCustomers) {
 	
 // 72小时未发货 
 $sql ="
-select id_customer,id_cart
-from ps_cart
-where left(date_add,10)='".date("Y-m-d",strtotime("-3 days"))."'
-and id_cart not in(
+SELECT
+    c.id_customer,
+	c.id_cart
+FROM
+	ps_cart c
+LEFT JOIN 
+ (select * from ps_cart_product  order by  id_cart  desc) as cp on cp.id_cart=c.id_cart	
+where left(c.date_add,10)='".date("Y-m-d",strtotime("-3 days"))."'
+and c.id_cart not in(
 	select o.id_cart from
 	ps_orders as o left join ps_order_history as oh
 	on o.id_order=oh.id_order
 	where oh.id_order_state>1 )
-and  id_customer >0 
+and  c.id_customer >0 
+and cp.id_product is not null 
+GROUP BY id_customer
  ";
  
  if($test_dev)
@@ -267,10 +274,3 @@ if (is_array($unpaidCustomers) and $unpaidCustomers) {
 	  }
 	
 }
-	
-		
-
-
-
-
-
