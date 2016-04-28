@@ -1040,9 +1040,15 @@ class AdminControllerCore extends Controller
 		$objPHPExcel->getActiveSheet()->setCellValue('D1', 'Tracking number');//xx 默认字段 3
 		$objPHPExcel->getActiveSheet()->setCellValue('E1', 'Product SKU');//xx 默认字段 3
 		$objPHPExcel->getActiveSheet()->setCellValue('F1', 'Product Name'); //xx 默认字段 空
-		$objPHPExcel->getActiveSheet()->setCellValue('G1', 'Shipping Address');
-		$objPHPExcel->getActiveSheet()->setCellValue('H1', 'Email Address');//xx 默认字段 空
-		$objPHPExcel->getActiveSheet()->setCellValue('I1', 'New Customer');	
+		$objPHPExcel->getActiveSheet()->setCellValue('G1', 'Customer Name');
+		$objPHPExcel->getActiveSheet()->setCellValue('H1', 'Country');
+		$objPHPExcel->getActiveSheet()->setCellValue('I1', 'State');
+		$objPHPExcel->getActiveSheet()->setCellValue('J1', 'City');
+		$objPHPExcel->getActiveSheet()->setCellValue('K1', 'Street');
+		$objPHPExcel->getActiveSheet()->setCellValue('L1', 'Phone');
+		$objPHPExcel->getActiveSheet()->setCellValue('M1', 'Num');
+		$objPHPExcel->getActiveSheet()->setCellValue('N1', 'Email Address');//xx 默认字段 空
+		$objPHPExcel->getActiveSheet()->setCellValue('O1', 'New Customer');	
 	
 		$i = 2 ;
 		foreach ($res as $a) {
@@ -1052,14 +1058,20 @@ class AdminControllerCore extends Controller
 			$objPHPExcel->getActiveSheet()->setCellValue('D'.$i, $a['shipping_number']);
 			$objPHPExcel->getActiveSheet()->setCellValue('E'.$i, $a['psku']);
 			$objPHPExcel->getActiveSheet()->setCellValue('F'.$i, $a['pname']);
-			$objPHPExcel->getActiveSheet()->setCellValue('G'.$i, $a['paddress']);
-			$objPHPExcel->getActiveSheet()->setCellValue('H'.$i, $a['email']);
+			$objPHPExcel->getActiveSheet()->setCellValue('G'.$i, $a['customername']);
+			$objPHPExcel->getActiveSheet()->setCellValue('H'.$i, $a['pcountry']);
+			$objPHPExcel->getActiveSheet()->setCellValue('I'.$i, $a['pstate']);
+			$objPHPExcel->getActiveSheet()->setCellValue('J'.$i, $a['pcity']);
+			$objPHPExcel->getActiveSheet()->setCellValue('K'.$i, $a['pstreet']);
+			$objPHPExcel->getActiveSheet()->setCellValue('L'.$i, $a['pphone']);
+			$objPHPExcel->getActiveSheet()->setCellValue('M'.$i, $a['num']);
+			$objPHPExcel->getActiveSheet()->setCellValue('N'.$i, $a['email']);
 			if($a['new']==1){
 				
-					$objPHPExcel->getActiveSheet()->setCellValue('I'.$i,'yes');
+					$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,'yes');
 			}else{
 				
-				$objPHPExcel->getActiveSheet()->setCellValue('I'.$i,'no');
+				$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,'no');
 			}
 		
 			
