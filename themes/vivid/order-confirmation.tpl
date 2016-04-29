@@ -97,11 +97,8 @@ var google_remarketing_only = false;
 {/literal}
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
-
 <noscript>
 <div style="display:inline;">
-
 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/923345832/?value=1.00&amp;currency_code=USD&amp;label=S8U_CJCfxQ4QqMekuAM&amp;guid=ON&amp;script=0"/>
 </div>
-
 </noscript>
