@@ -36,5 +36,6 @@
 		</button>
 	</form>
 </div>
+{else}
 {/if}
 <!-- /Block search module TOP -->
