@@ -554,17 +554,23 @@ class PayPalUSA extends PaymentModule
 	{
 		/* Check if the order was paid with this Addon and display the Transaction details */
 		if (Db::getInstance()->getValue('SELECT module FROM '._DB_PREFIX_.'orders WHERE id_order = '.(int)$_GET['id_order']) == $this->name)
-		{
+		{	
+	
+			
 			/* Do not display the refund block unless the API crendetials are set */
 			if (Configuration::get('PAYPAL_USA_API_USERNAME') == '' || Configuration::get('PAYPAL_USA_API_PASSWORD') == '' || Configuration::get('PAYPAL_USA_API_SIGNATURE') == '')
 				return;
 
-			/* Retrieve the transaction details */
+			/* Retrieve the transaction details   当前三个店铺 订单数据互通 所以不需要店铺筛选了*/
+		/* 	$paypal_usa_transaction_details = Db::getInstance()->getRow('
+			SELECT *
+			FROM '._DB_PREFIX_.'paypal_usa_transaction
+			WHERE id_order = '.(int)$_GET['id_order'].' AND type = \'payment\' AND id_shop = '.(int)$this->context->shop->id); */
+		
 			$paypal_usa_transaction_details = Db::getInstance()->getRow('
 			SELECT *
 			FROM '._DB_PREFIX_.'paypal_usa_transaction
-			WHERE id_order = '.(int)$_GET['id_order'].' AND type = \'payment\' AND id_shop = '.(int)$this->context->shop->id);
-
+			WHERE id_order = '.(int)$_GET['id_order'].' AND type = \'payment\'');
 			/* Get all the refunds previously made (to build a list and determine if another refund is still possible) */
 			$paypal_usa_refund_details = Db::getInstance()->ExecuteS('
 			SELECT amount, date_add, currency
@@ -578,7 +584,13 @@ class PayPalUSA extends PaymentModule
 				'paypal_usa_more60d' => ((time() - strtotime($paypal_usa_transaction_details['date_add'])) > (60 * 86400)), /* Do not allow refund if the order has been placed more than 60 days ago */
 				'paypal_usa_transaction_details' => $paypal_usa_transaction_details,
 				'paypal_usa_refund_details' => $paypal_usa_refund_details));
-
+			/* echo '<pre>';
+			var_dump($paypal_usa_transaction_details);
+			echo '</pre>';
+			echo '<pre>';
+			var_dump($paypal_usa_refund_details);
+			echo '</pre>';
+						exit; */
 			return $this->display(__FILE__, 'views/templates/admin/admin-order.tpl');
 		}
 	}
