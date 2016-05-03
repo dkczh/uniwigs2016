@@ -490,7 +490,63 @@ class AdminOrdersControllerCore extends AdminController
             }
             ShopUrl::cacheMainDomainForShop((int)$order->id_shop);
         }
-
+		
+		if (Tools::isSubmit('submitOrderRemind') && isset($order)) {
+			//获取 当前登录人员的姓名 
+			$employee_name = $this->context->employee->firstname.'.'.$this->context->employee->lastname;
+			
+			
+			
+			if(Tools::getValue('id_remind')){
+		
+			//更新已经存在的 id_remind 
+			Db::getInstance()->execute("UPDATE px_order_remind SET date = '".Tools::getValue('remind_date')."', actor ='$employee_name',date_upd =now()
+WHERE id_remind=".Tools::getValue('id_remind'));
+			
+			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
+			Db::getInstance()->execute("insert into px_order_remind_history 
+			(id_remind,action,date_add,actor)VALUES (".Tools::getValue('id_remind').",'$action',now(),'$employee_name')");
+				 Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
+			
+			}else{
+			 $nowdate=date("y-m-d");
+			 $adddate=Tools::getValue('remind_date');
+			
+			if($adddate==''){
+			 $this->errors[] = Tools::displayError('请选择备货截止时间');	 
+			
+			}
+			 if(strtotime($adddate)<strtotime($nowdate)){
+			 $this->errors[] = Tools::displayError('备货截止日期必须大于当前日期');	 
+			
+			}
+			
+			$remind_exits= Db::getInstance()->getValue("select id_remind from px_order_remind where id_order ='".Tools::getValue('id_order')."' and product_name ='".Tools::getValue('product_name')."'"."
+			");	
+			if(!$remind_exits){
+			Db::getInstance()->execute("insert into px_order_remind 
+			(id_order,skus,product_name,date,date_upd,actor)
+			VALUES 
+			(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."',now(),'$employee_name')  
+			");
+			
+			//产品名称 存在特殊字符 
+			 $product_name=	str_replace('"','\"',Tools::getValue('product_name'));
+			 $sqlre="select id_remind from px_order_remind where id_order ='".(int)$order->id."'and product_name ='$product_name'";
+			$id_reming= Db::getInstance()->getValue($sqlre);
+		
+			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
+			Db::getInstance()->execute("insert into px_order_remind_history 
+			(id_remind,action,date_add,actor)VALUES ($id_reming,'$action',now(),'$employee_name')");
+			
+			}
+				 Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
+			}
+		
+		
+		}
+		
+		
         /* Update shipping number */
         if (Tools::isSubmit('submitShippingNumber') && isset($order)) {
             if ($this->tabAccess['edit'] === '1') {
@@ -1780,7 +1836,12 @@ class AdminOrdersControllerCore extends AdminController
 		
 			//获取客户历史订单信息
 		$corder = $this->getCustomerOrders($order->id_customer);
+		  //获取当前订单 定制信息  
 		
+		$orderremind = $this->getOrderRemind($order->id); 
+		
+		
+		$orderremindhistory = $this->getOrderRemindHistroy($order->id); 
 		
 		
         // Smarty assign
@@ -1789,6 +1850,8 @@ class AdminOrdersControllerCore extends AdminController
 			'customer_order'=>$corder,
             'cart' => new Cart($order->id_cart),
             'customer' => $customer,
+			'orderremind' => $orderremind,
+			'orderremindhistory' =>$orderremindhistory,
             'gender' => $gender,
             'customer_addresses' => $customer->getAddresses($this->context->language->id),
             'addresses' => array(
@@ -2870,6 +2933,74 @@ WHERE
 		return $result;
 		
 	}
+	
+	
+	//获取订单定制产品 
+	
+	
+	public function  getOrderRemind($id_order){
+		
+		$result = Db::getInstance()->executeS("SELECT
+	ore.id_remind,od.product_id,od.id_order,od.product_name,od.product_reference as skus,ore.actor,ore.date,
+ore.date_upd	
+	FROM	ps_order_detail od
+	LEFT JOIN px_order_remind  ore  on  ore.id_order=od.id_order
+	WHERE	od.id_order = $id_order");
+	
+		return $result;
+		
+	}
+	
+	//获取备货时间操作记录
+	
+	
+	public function  getOrderRemindHistroy($id_order){
+		
+		$result = Db::getInstance()->executeS("SELECT
+por.id_remind,action,date_add
+FROM
+	px_order_remind por
+LEFT JOIN px_order_remind_history orh on orh.id_remind=por.id_remind 
+where por.id_order= $id_order order by date_add desc");
+	
+		return $result;
+		
+	}
+	
+	
+	//获取订单定制产品 
+	
+	
+	public function  AddOrderRemind($id_order,$name,$skus,$date,$actor){
+		
+		/* Db::getInstance()->executeS("insert into px_order_remind (id_order,skus,product_name,date,actor)VALUES 
+		($id_order,$skus,$name,'$date',$actor)");
+		 */
+		Db::getInstance()->executeS("insert into px_order_remind (id_order,skus,product_name,date,actor)VALUES (1,1,1,'2016-04-05',1)");
+		
+	}
+	public function UpdateOrderRemind($id_remind){
+		
+		$result = Db::getInstance()->executeS("SELECT
+													ore.id_remind,	
+													od.product_id,
+													od.id_order,
+													od.product_name,
+													od.product_reference as skus,
+													'' as actor,
+													now() as date
+													FROM
+														ps_order_detail od
+												
+			LEFT JOIN px_order_remind  ore  on  ore.id_order=od.id_order
+
+	WHERE
+													od.id_order = $id_order");
+	
+		return $result;
+		
+	}
+	
 	
 	
     public function ajaxProcessChangePaymentMethod()
