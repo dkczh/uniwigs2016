@@ -387,7 +387,57 @@
 		<p class="form-group">
 			<button type="submit" name="submitReturnMerchandise" class="uk-button uk-button-small"><span>{l s='Make an RMA slip'}<i class="icon-chevron-right right"></i></span></button>
 			<input type="hidden" class="hidden" value="{$order->id|intval}" name="id_order" />
+			<a href="#Return-Policy" data-uk-modal class=""> <i class="icon-question-circle"></i> Return Policy</a>
 		</p>
+	</div>
+	<div id="Return-Policy" class="uk-modal">
+		<div class="uk-modal-dialog">
+			<a class="uk-modal-close uk-close"></a>
+			<h2>EXCHANGE & RETURN POLICY</h2>
+			<p>We always want our customers to be happy and satisfied. If for any reason you are not happy with the item(s) you’ve got, we are here to exchange it/them for you.</p>
+			<p> </p>
+			<p><strong>Exchange Policy</strong></p>
+			<p>Only <a style="text-decoration: underline;" href="#eligible">eligible product</a> can be exchanged(see below).</p>
+			<p> </p>
+			<ul class="uk-list uk-list-space">
+			<li>The order can be changed for FREE within 24 hours of placing your order, However, there will be a handling charge of 15% of your order total for any change over 24 hours but within one week after you placed the order and a handling charge of 30% after 1 week when the unit is still under processing.</li>
+			<li><strong style="color: #ef3386;">Only one time exchange is allowed.</strong></li>
+			<li>NO RESTOCKING FEES! Shipping charges will apply.</li>
+			<li>Your exchange item(s) will be shipped by free ground shipping method if no extra shipping fee is paid on your side.</li>
+			<li>You need to pay the extra if the exchange is higher in price, and any balance remaining after your exchange will be refunded to the payment method submitted with your original order.</li>
+			</ul>
+			<p> </p>
+			<p><strong>Return Policy</strong></p>
+			<p>We gladly accept returns on all <a style="text-decoration: underline;" href="#eligible">eligible products</a> (see below). As we only sell new, quality products at UniWigs instead of refurbished or used products, all eligible returned items will be deducted a <strong style="color: #ef3386;">15% restocking fee so</strong> we can return it to the manufacturer.</p>
+			<p> </p>
+			<p>Once the restocking fee is applied, remaining balance will be refunded to the payment method submitted with your original order.</p>
+			<p> </p>
+			<p><strong>Cancellation Policy</strong></p>
+			<p>The order can be canceled for free within 24 hours of placing your order.</p>
+			<p>15% handling fee will be deducted off the total for the cancellation within 1 week after the unit is in processing.</p>
+			<p>30% handling fee will be deducted off the total for the cancellation after 1 week when the unit is in processing.</p>
+			<p>Please note that once the order has been shipped out, it can no longer be canceled.</p>
+			<p> </p>
+			<p id="eligible"><strong>Eligible Products</strong></p>
+			<ul class="uk-list uk-list-space">
+			<li>In original condition with tags attached (items have NOT been cut, worn, altered or damaged) and in original packaging.</li>
+			<li>Odor-Free (Any odors on the product will render the product ineligible for exchange)</li>
+			<li>Item(s) must be returned within 10 days of receiving your original order. No returns/exchanges will be processed after 10 days of receipt. A wig hygiene guard is provided with every wig for use when trying the wig on. This helps to maintain the product’s eligibility for exchange/return.</li>
+			</ul>
+			<p> </p>
+			<p><strong>Custom order (including custom color, length, cap size, style ) and Celebrity style are ineligible for exchange or return.</strong></p>
+			<p>Clearance items and wholesale orders also can not be returned or exchanged.</p>
+			<p> </p>
+			<p><strong>How To Exchange or Return</strong></p>
+			<p>Please send an email to <strong style="color: #ef3386;">support@uniwigs.com</strong> containing your order No., reasons for exchange/return and new item(s) to exchange.</p>
+			<p> </p>
+			<p><strong>NOTE:</strong></p>
+			<p>If your product is ineligible for exchange or return after confirmation, we will return the item(s) to you at your cost. Please repackage your item(s) and mail it to the address below within <strong style="color: #ef3386;">10 days</strong> of receiving your order. A tracking number will be needed in order to process the exchange/return as soon as possible.</p>
+			<p> </p>
+			<p> </p>
+			<p><strong>Return Address:<strong></strong></strong></p>
+			<p><strong>GEORGE HANN, 18305 E Valley Blvd., Ste C, La Puente, CA 91744<strong></strong></strong></p>
+		</div>
 	</div>
 {/if}
 {if !$is_guest}</form>{/if}
