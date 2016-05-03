@@ -64,7 +64,11 @@
 				<td style="padding: 5px;">未指定</td>
 				<td style="padding: 5px;">未指定</td>
 				<td style="padding: 5px;">未指定</td>
-				<td>
+				{if  $order->current_state==3}
+				<td >
+					{else}
+				<td style=" display: none;">
+				{/if}
 				<form method="post" action="index.php?controller=AdminOrders&amp;token={$smarty.get.token|escape:'html':'UTF-8'}&amp;vieworder&amp;id_order=100023267">
 							<span class="shipping_number_edit" style="display:none;">
 								<input type="hidden" name="id_order" value="{$remind['id_order']}">
