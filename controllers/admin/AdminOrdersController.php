@@ -505,7 +505,7 @@ WHERE id_remind=".Tools::getValue('id_remind'));
 			
 			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
 			Db::getInstance()->execute("insert into px_order_remind_history 
-			(id_remind,action,date_add,actor)VALUES (".Tools::getValue('id_remind').",'$action',now(),'$employee_name')");
+			(id_remind,action,date_add,actor)VALUES (".Tools::getValue('id_remind').",'$action',date_sub(now(), interval 1 day),'$employee_name')");
 				 Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
 			
 			}else{
@@ -527,7 +527,7 @@ WHERE id_remind=".Tools::getValue('id_remind'));
 			Db::getInstance()->execute("insert into px_order_remind 
 			(id_order,skus,product_name,date,date_upd,actor)
 			VALUES 
-			(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."',now(),'$employee_name')  
+			(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."',date_sub(now(), interval 1 day),'$employee_name')  
 			");
 			
 			//产品名称 存在特殊字符 
@@ -537,7 +537,7 @@ WHERE id_remind=".Tools::getValue('id_remind'));
 		
 			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
 			Db::getInstance()->execute("insert into px_order_remind_history 
-			(id_remind,action,date_add,actor)VALUES ($id_reming,'$action',now(),'$employee_name')");
+			(id_remind,action,date_add,actor)VALUES ($id_reming,'$action',date_sub(now(), interval 1 day),'$employee_name')");
 			
 			}
 				 Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
@@ -1839,7 +1839,10 @@ WHERE id_remind=".Tools::getValue('id_remind'));
 		  //获取当前订单 定制信息  
 		
 		$orderremind = $this->getOrderRemind($order->id); 
+	/* 	echo '<pre>';
+		var_dump($order);
 		
+		echo '</pre>'; */
 		
 		$orderremindhistory = $this->getOrderRemindHistroy($order->id); 
 		
