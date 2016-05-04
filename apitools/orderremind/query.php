@@ -8,18 +8,12 @@
 header("Content-type: text/html; charset=utf-8"); 
 
 require_once(dirname(__FILE__).'/../../config/config.inc.php');
+	
 
 if(isset($_POST['id'])){
 
-/* 	$employee = new Employee(1);
-	
-	$id = Tab::getIdFromClassName($this->controller_name);
-	$token = Tools::getAdminToken($this->controller_name.(int)$this->id.(int)$this->context->employee->id);
-
-	echo '</pre>';
-	exit; */
-	 $user = 'root';  
-	/* $dsn = 'mysql:host=localhost;dbname=uni'; 
+	$user = 'root';  
+/* 	$dsn = 'mysql:host=localhost;dbname=uni'; 
 	$pwd = 'root'; */
 	$dsn = 'mysql:host=localhost;dbname=uniwigs2016'; 
 	$pwd = 'rootadmin123';
@@ -65,6 +59,12 @@ if(isset($_POST['id'])){
 
 //查询正常订单
 function q_order_normal($db){
+	$id_employee = Context::getContext()->cookie->id_employee;
+	// /admin-dev/index.php?controller=AdminOrders&id_order=100023378&vieworder&token=f525d2442348aea2ac09a547ed7bca6e
+	$id = Tab::getIdFromClassName('AdminOrders');
+	$token = Tools::getAdminToken('AdminOrders'.(int)$id.(int)$id_employee);
+	$uri_f = "/admin-dev/index.php?controller=AdminOrders&id_order=";
+	$uri_l ="&vieworder&token=".$token;
 	$sql = "select id_order,id_customer,   date_format(date_add,'%Y-%m-%d') as date_add ,date_format(date_sub(now(), interval 1 day),'%Y-%m-%d') as nowdate from  ps_orders 
 
 where current_state = 3 and  date_add <date_sub(now(), interval 3 day)
@@ -94,8 +94,10 @@ and id_order  not in (select id_order  from  px_order_remind)
 		$id_customer = $a['id_customer'];
 		$date_add = $a['date_add'];
 		$nowdate = $a['nowdate'];
+		$uri = $uri_f.$id_order.$uri_l;
 		$str.="<tr >
-		<td id='tag312' >".$id_order."</td>
+		
+		<td id='tag312' ><a href=\"$uri\" target=\"_blank\">$id_order</a></td>
 		<td style='width: 200px;'>".$id_customer."</td>
 		<td >".$date_add."</td>
 		<td style='width: 100px;color: red;'>".$nowdate."</td>
@@ -113,7 +115,6 @@ and id_order  not in (select id_order  from  px_order_remind)
 
 //查询定制单订单
 function q_order_remind($db,$id){
-	
 	if($id=='10'){
 	$sql = "SELECT
 	id_order,
@@ -200,7 +201,12 @@ if($id=='99'){
 }
 
     $i= 1;
-
+	$id_employee = Context::getContext()->cookie->id_employee;
+	// /admin-dev/index.php?controller=AdminOrders&id_order=100023378&vieworder&token=f525d2442348aea2ac09a547ed7bca6e
+	$id_tab = Tab::getIdFromClassName('AdminOrders');
+	$token = Tools::getAdminToken('AdminOrders'.(int)$id_tab.(int)$id_employee);
+	$uri_f = "/admin-dev/index.php?controller=AdminOrders&id_order=";
+	$uri_l ="&vieworder&token=".$token;
 	foreach ($res as $a) {
 		
 		$id_order= $a['id_order'];
@@ -208,8 +214,9 @@ if($id=='99'){
 		$date = $a['date'];
 		$nowdate = $a['nowdate'];
 		$rdate = $a['rdate'];
+		$uri = $uri_f.$id_order.$uri_l;
 		$str.="<tr >
-		<td id='tag312' >".$id_order."</td>
+		<td id='tag312' ><a href=\"$uri\" target=\"_blank\">$id_order</a></td>
 		<td style='width: 200px;'>".$skus."</td>
 		<td style='width: 100px;color: red;'>".$date."</td>
 		<td >".$nowdate."</td>
