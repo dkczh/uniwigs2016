@@ -12,9 +12,14 @@ if(isset($_POST['id'])){
 
 
 	
-	$dsn = 'mysql:host=localhost;dbname=uni'; 
+	//$dsn = 'mysql:host=localhost;dbname=uni'; 
+	// $pwd = 'root';
+	$dsn = 'mysql:host=localhost;dbname=uniwigs2016'; 
+	$pwd = 'rootadmin123';
+	
     $user = 'root';  
-    $pwd = 'root';
+  
+
 	$db =pdo_conn($dsn,$user,$pwd)or die();
 	
 	switch ($_POST['id']) {
