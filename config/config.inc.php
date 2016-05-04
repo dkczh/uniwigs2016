@@ -159,7 +159,9 @@ if ($cookie_lifetime > 0) {
     $cookie_lifetime = time() + (max($cookie_lifetime, 1) * 3600);
 }
 
-if (defined('_PS_ADMIN_DIR_')) {
+
+
+if (defined('_PS_ADMIN_DIR_')or$_SERVER['REQUEST_URI']=='/apitools/orderremind/query.php') {
     $cookie = new Cookie('psAdmin', '', $cookie_lifetime);
 } else {
     $force_ssl = Configuration::get('PS_SSL_ENABLED') && Configuration::get('PS_SSL_ENABLED_EVERYWHERE');
