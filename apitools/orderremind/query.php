@@ -67,7 +67,7 @@ if(isset($_POST['id'])){
 function q_order_normal($db){
 	$sql = "select id_order,id_customer,   date_format(date_add,'%Y-%m-%d') as date_add ,date_format(date_sub(now(), interval 1 day),'%Y-%m-%d') as nowdate from  ps_orders 
 
-where current_state = 3 and  date_add <date_sub(now(), interval 2 day)
+where current_state = 3 and  date_add <date_sub(now(), interval 3 day)
 and id_order  not in (select id_order  from  px_order_remind)
 ";
 
