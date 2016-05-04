@@ -138,7 +138,7 @@
 		        	       </div>
 		        	        <div class="col-sm-3">
 		        	        	<ul class="uk-nav uk-nav-navbar">
-			        	        	<li><a href="{$base_dir}tag/promotion-area"><img src="/themes/uniwigs2016/img/category/extensions/extension-sale.png" alt=""></a></li>
+			        	        	<li><a href="{$base_dir}tag/promotion-area"><img src="/themes/uniwigs2016/img/category/extensions/extension-sale.png" alt="" class="img-responsive"></a></li>
 			        	        </ul>
 		        	        </div>
 		        	        <div class="col-sm-3">
