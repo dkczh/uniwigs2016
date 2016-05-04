@@ -500,7 +500,7 @@ class AdminOrdersControllerCore extends AdminController
 			if(Tools::getValue('id_remind')){
 		
 			//更新已经存在的 id_remind 
-			Db::getInstance()->execute("UPDATE px_order_remind SET date = '".Tools::getValue('remind_date')."', actor ='$employee_name',date_upd =now()
+			Db::getInstance()->execute("UPDATE px_order_remind SET date = '".Tools::getValue('remind_date')."', actor ='$employee_name',date_upd =date_sub(now(), interval 1 day)
 WHERE id_remind=".Tools::getValue('id_remind'));
 			
 			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
