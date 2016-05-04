@@ -43,6 +43,9 @@
 		font-size: 15px;
     	width: 260px;
     	background: #f4f4f4;
+    	 @media (max-width: $screen-sm-max) {// max 991px
+			width: 100%;
+    	 }
 		&:focus{
 			border-color:none;
 			box-shadow:none
