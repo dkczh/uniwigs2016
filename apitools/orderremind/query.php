@@ -18,13 +18,13 @@ if(isset($_POST['id'])){
 
 	echo '</pre>';
 	exit; */
-	
+	 $user = 'root';  
 	/* $dsn = 'mysql:host=localhost;dbname=uni'; 
 	$pwd = 'root'; */
 	$dsn = 'mysql:host=localhost;dbname=uniwigs2016'; 
 	$pwd = 'rootadmin123';
 	
-    $user = 'root';  
+   
   
 
 	$db =pdo_conn($dsn,$user,$pwd)or die();
