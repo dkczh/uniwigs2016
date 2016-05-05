@@ -20,8 +20,10 @@
 				{*<td style="padding: 10px;">产品</td>*}
 				<td style="padding: 10px;">skus</td>
 				<td style=" width:180px;padding: 10px;">备货截止日期</td>
-				<td style=" width:180px; padding: 10px;"> 操作人</td>
-				<td style=" width:180px; padding: 10px;"> 最后更新</td>
+				<td style="width:50px;padding: 10px;">p_num</td>
+				<td style="width:80px;padding: 10px;">状态</td>
+				<td style=" width:80px; padding: 10px;"> 操作人</td>
+				<td style=" width:150px; padding: 10px;"> 最后更新</td>
 				</tr>
 				</thead>
 				<tbody>
@@ -33,6 +35,8 @@
 				{*<td style="padding: 5px;">{$remind['product_name']}</td>*}
 				<td style="padding: 5px;">{$remind['skus']}</td>
 				<td style="padding: 5px;">{$remind['date']}</td>
+				<td style="padding: 5px;">{$remind['manufacture']}</td>
+				<td style="padding: 5px;">{$remind['status']}</td>
 				<td style="padding: 5px;">{$remind['actor']}</td>
 				<td style="padding: 5px;">{$remind['date_upd']}</td>
 				<td>
@@ -42,6 +46,12 @@
 								<input type="hidden" name="id_remind" value="{$remind['id_remind']}">
 								<input type="hidden" name="skus" value="{$remind['skus']}">
 								<input type="hidden" name="product_name" value="{htmlspecialchars($remind['product_name'])}">
+								<select name="remind_status">
+								<option value="生产" checked="checked">生产</option>
+								<option value="到货">到货</option>
+								<option value="返修">返修</option>
+								</select>
+								<input type="text" name="remind_manufacture"  value="">
 								<input type="date" name="remind_date"  value="{$smarty.now|date_format:'%Y/%m/%d'}"/>
 								<button type="submit" class="btn btn-default" name="submitOrderRemind">
 									<i class="icon-ok"></i>
@@ -61,10 +71,12 @@
 				<td style="padding: 10px;">{$remind['id_order']}</td>
 				{*<td style="padding: 5px;">xxx</td>*}
 				<td style="padding: 5px;">{$remind['skus']}</td>
-				<td style="padding: 5px;">未指定</td>
-				<td style="padding: 5px;">未指定</td>
-				<td style="padding: 5px;">未指定</td>
-				{if  $order->current_state==3}
+				<td style="padding: 5px;">xxx</td>
+				<td style="padding: 5px;">xxx</td>
+				<td style="padding: 5px;">xxx</td>
+				<td style="padding: 5px;">xxx</td>
+				<td style="padding: 5px;">xxx</td>
+				{if  $order->current_state!=3}
 				<td >
 					{else}
 				<td style=" display: none;">
@@ -74,6 +86,12 @@
 								<input type="hidden" name="id_order" value="{$remind['id_order']}">
 								<input type="hidden" name="skus" value="{$remind['skus']}">
 								<input type="hidden" name="product_name" value="{htmlspecialchars($remind['product_name'])}">
+								<select name="remind_status">
+								<option value="生产" checked="checked">生产</option>
+								<option value="到货">到货</option>
+								<option value="返修">返修</option>
+								</select>
+								<input type="text" name="remind_manufacture"  value="">
 								<input type="date" name="remind_date" />
 								<button type="submit" class="btn btn-default" name="submitOrderRemind">
 									<i class="icon-ok"></i>
