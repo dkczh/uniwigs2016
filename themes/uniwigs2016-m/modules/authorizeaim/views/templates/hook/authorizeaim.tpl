@@ -25,7 +25,7 @@
 
 <link rel="shortcut icon" type="image/x-icon" href="{$module_dir}img/secure.png" />
 {if $isFailed == 1}	
-<div class="uk-alert uk-alert-danger" style="position: absolute;top:-15px;left:0;width: 100%;" data-uk-alert>
+<div class="uk-alert uk-alert-danger" style="position: absolute;top:30px;left:0;width: 100%;" data-uk-alert>
 	<a href="" class="uk-alert-close uk-close"></a>
 	<p>
 	{if !empty($smarty.get.message)}

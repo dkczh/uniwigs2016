@@ -26,3 +26,13 @@
 {/if}
 </div>
 {/if}
+{literal}
+<script>
+	ga(function(tracker) {
+	
+	  tracker.send('event', 'page_payment_return', 'view','success', {
+	   
+	  });
+	});
+</script>
+{/literal}
