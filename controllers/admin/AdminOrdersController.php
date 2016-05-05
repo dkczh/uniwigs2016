@@ -491,19 +491,69 @@ class AdminOrdersControllerCore extends AdminController
             ShopUrl::cacheMainDomainForShop((int)$order->id_shop);
         }
 		
+		//退换货 操作
+		if (Tools::isSubmit('submitmyReturn') && isset($order)) {
+			
+			$employee_name = $this->context->employee->firstname.'.'.$this->context->employee->lastname;
+			
+			$id_return_order = (int)$order->id;
+            $employee = $this->context->employee->id;
+            $comreturn_reason = intval(Tools::getValue("comreturn_reason"));
+            $comreturn_comment = Tools::getValue('comreturn_comment','');
+            $comreturn_refund = Tools::getValue('comreturn_refund');
+            $comreturn_sum = Tools::getValue('comreturn_sum');
+            $comreturn_return = Tools::getValue('comreturn_return');
+            $comreturnresult=Db::getInstance()->getRow("select comreturn_reason,comreturn_comment,comreturn_refund,comreturn_sum,comreturn_return from px_order_comreturn where id_order='".$id_return_order."' ");
+			
+			
+			  if($comreturnresult){
+                    if ($comreturn_reason!=$comreturnresult['comreturn_reason']
+                    		OR $comreturn_comment!=$comreturnresult['comreturn_comment']
+                    		OR $employee!=$comreturnresult['id_employee']
+                    		OR $comreturn_sum!=$comreturnresult['comreturn_sum']
+                    		OR $comreturn_refund!=$comreturnresult['comreturn_refund']
+                    		OR $comreturn_return!=$comreturnresult['comreturn_return']) {
+                    	Db::getInstance()->Execute("
+                    		update px_order_comreturn set
+                    			comreturn_reason='".$comreturn_reason."'
+                    			,comreturn_comment='".$comreturn_comment."'
+                    			,comreturn_refund='".$comreturn_refund."'
+                    			,comreturn_sum='".$comreturn_sum."'
+                    			,comreturn_return='".$comreturn_return."'
+                    			,id_employee='".$id_employee."'
+                    			,operate_time='".date('Y-m-d H:m:s')."'
+                    		where id_order='".$id_return_order."'"
+                    	);
+                    }
+                }else{
+                    Db::getInstance()->Execute("insert into px_order_comreturn
+                    	(id_order,id_employee,comreturn_reason,comreturn_comment,comreturn_refund,comreturn_sum,comreturn_return,operate_time)
+                    	values('".$id_return_order."','".$employee."','".$comreturn_reason."','".$comreturn_comment."','".$comreturn_refund."','".$comreturn_sum."','".$comreturn_return."','".date('Y-m-d H:m:s')."') "
+                    );
+                }
+			Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
+			//exit;
+		}
+		
+		
 		if (Tools::isSubmit('submitOrderRemind') && isset($order)) {
 			//获取 当前登录人员的姓名 
 			$employee_name = $this->context->employee->firstname.'.'.$this->context->employee->lastname;
 			
-			
-			
 			if(Tools::getValue('id_remind')){
 		
 			//更新已经存在的 id_remind 
-			Db::getInstance()->execute("UPDATE px_order_remind SET date = '".Tools::getValue('remind_date')."', actor ='$employee_name',date_upd =date_sub(now(), interval 1 day)
-WHERE id_remind=".Tools::getValue('id_remind'));
+			Db::getInstance()->execute("UPDATE 
+			px_order_remind SET date = '".Tools::getValue('remind_date')."', 
+			actor ='$employee_name',date_upd =date_sub(now(), interval 1 day),
+			manufacture='".Tools::getValue('remind_manufacture')."',status='".Tools::getValue('remind_status')."'
+			WHERE id_remind=".Tools::getValue('id_remind'));
 			
 			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
+			//增加生产编号  和 生产状态  两个字段
+			$action.="生产单号为(".'<span style="color:red">'.Tools::getValue('remind_manufacture')."</span>)";
+			$action.="生产状态为(".'<span style="color:red">'.Tools::getValue('remind_status')."</span>)";
+			
 			Db::getInstance()->execute("insert into px_order_remind_history 
 			(id_remind,action,date_add,actor)VALUES (".Tools::getValue('id_remind').",'$action',date_sub(now(), interval 1 day),'$employee_name')");
 				 Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
@@ -525,17 +575,23 @@ WHERE id_remind=".Tools::getValue('id_remind'));
 			");	
 			if(!$remind_exits){
 			Db::getInstance()->execute("insert into px_order_remind 
-			(id_order,skus,product_name,date,date_upd,actor)
+			(id_order,skus,product_name,date,status,manufacture,date_upd,actor)
 			VALUES 
-			(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."',date_sub(now(), interval 1 day),'$employee_name')  
+			(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."','".Tools::getValue('remind_status')."',".Tools::getValue('remind_manufacture').",date_sub(now(), interval 1 day),'$employee_name')  
 			");
 			
 			//产品名称 存在特殊字符 
-			 $product_name=	str_replace('"','\"',Tools::getValue('product_name'));
-			 $sqlre="select id_remind from px_order_remind where id_order ='".(int)$order->id."'and product_name ='$product_name'";
+			$product_name=	str_replace('"','\"',Tools::getValue('product_name'));
+			$sqlre="select id_remind from px_order_remind where id_order ='".(int)$order->id."'and product_name ='$product_name'";
 			$id_reming= Db::getInstance()->getValue($sqlre);
 		
 			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
+			if(Tools::getValue('remind_manufacture')!=''){
+			$action.="生产单号为(".'<span style="color:red">'.Tools::getValue('remind_manufacture')."</span>)";
+			}
+			if(Tools::getValue('remind_status')!=''){
+			$action.="生产状态为(".'<span style="color:red">'.Tools::getValue('remind_status')."</span>)";
+			}
 			Db::getInstance()->execute("insert into px_order_remind_history 
 			(id_remind,action,date_add,actor)VALUES ($id_reming,'$action',date_sub(now(), interval 1 day),'$employee_name')");
 			
@@ -1834,15 +1890,20 @@ WHERE id_remind=".Tools::getValue('id_remind'));
             $order_state['text-color'] = Tools::getBrightness($order_state['color']) < 128 ? 'white' : 'black';
         }
 		
-			//获取客户历史订单信息
-		$corder = $this->getCustomerOrders($order->id_customer);
-		  //获取当前订单 定制信息  
+		//获取订单退货历史信息
+		$comreturnhistory=Db::getInstance()->getRow("select comreturn_reason,comreturn_comment,comreturn_refund,comreturn_return,comreturn_sum from px_order_comreturn where id_order='".$order->id."' ");
 		
-		$orderremind = $this->getOrderRemind($order->id); 
 	/* 	echo '<pre>';
-		var_dump($order);
+		var_dump($comreturnhistory);
+		echo '</pre>';
+		exit; */
+		//获取客户历史订单信息
+		$corder = $this->getCustomerOrders($order->id_customer);
 		
-		echo '</pre>'; */
+		
+		//获取当前订单 定制信息  
+		$orderremind = $this->getOrderRemind($order->id); 
+
 		
 		$orderremindhistory = $this->getOrderRemindHistroy($order->id); 
 		
@@ -1851,6 +1912,7 @@ WHERE id_remind=".Tools::getValue('id_remind'));
         $this->tpl_view_vars = array(
             'order' => $order,
 			'customer_order'=>$corder,
+			'comreturnhistory'=>$comreturnhistory,
             'cart' => new Cart($order->id_cart),
             'customer' => $customer,
 			'orderremind' => $orderremind,
@@ -2944,8 +3006,7 @@ WHERE
 	public function  getOrderRemind($id_order){
 		
 		$result = Db::getInstance()->executeS("SELECT
-	ore.id_remind,od.product_id,od.id_order,od.product_name,od.product_reference as skus,ore.actor,ore.date,
-ore.date_upd	
+	ore.*,od.product_id,od.id_order,od.product_name,od.product_reference as skus	
 	FROM	ps_order_detail od
 	LEFT JOIN px_order_remind  ore  on  ore.id_order=od.id_order
 	WHERE	od.id_order = $id_order");
