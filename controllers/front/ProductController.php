@@ -324,6 +324,7 @@ $('#add_to_wishlist').click(function(){
 
 //添加到购物车
 $('#add_to_cart').click(function(){ 
+	fbq('track', 'AddToCart');	
 	sku = $('#product_reference span').html();
 	ga(function(tracker) {
 	//cartaction 事件分类 比如购物车
