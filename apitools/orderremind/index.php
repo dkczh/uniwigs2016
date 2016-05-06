@@ -85,6 +85,8 @@ margin-top: 10px;
         <th>订单id</th>
 		<th>产品skus</th>	
 		<th>备货截止日期</th>
+		<th>生成单号</th>
+		<th>状态</th>
         <th>当前日期</th>
 		<th>超期时间</th>
     </tr>
@@ -97,6 +99,8 @@ margin-top: 10px;
 	<tr >
 	<td id="tag312" >xxxxxxxxxxxx</td>
 	<td style="width: 200px;" >xxx</td>
+	<td>xxxx</td>
+	<td>xxxx</td>
 	<td>xxxx-xx-xx</td>
 	<td>xxxx-xx-xx</td>
 	<td style="width: 100px;">
@@ -152,6 +156,8 @@ margin-top: 10px;
         <th>订单id</th>
 		<th>产品skus</th>	
 		<th>备货截止日期</th>
+		<th>生成单号</th>
+		<th>状态</th>
         <th>当前日期</th>
 		<th>备用1</th>
     </tr>
@@ -164,6 +170,8 @@ margin-top: 10px;
 	<tr >
 	<td id="tag312" >xxxxxxxxxxxx</td>
 	<td style="width: 200px;" >xxx</td>
+	<td>xxxx</td>
+	<td>xxxx</td>
 	<td>xxxx-xx-xx</td>
 	<td>xxxx-xx-xx</td>
 	<td style="width: 100px;">
@@ -219,6 +227,8 @@ margin-top: 10px;
          <th>订单id</th>
 		<th>产品skus</th>	
 		<th>备货截止日期</th>
+		<th>生成单号</th>
+		<th>状态</th>
         <th>当前日期</th>
 		<th>备用1</th>
     </tr>
@@ -231,6 +241,8 @@ margin-top: 10px;
 	<tr >
 	<td id="tag312" >xxxxxxxxxxxx</td>
 	<td style="width: 200px;" >xxx</td>
+	<td>xxxx</td>
+	<td>xxxx</td>
 	<td>xxxx-xx-xx</td>
 	<td>xxxx-xx-xx</td>
 	<td style="width: 100px;">
@@ -285,6 +297,8 @@ margin-top: 10px;
          <th>订单id</th>
 		<th>产品skus</th>	
 		<th>备货截止日期</th>
+		<th>生成单号</th>
+		<th>状态</th>
         <th>当前日期</th>
 		<th>备用1</th>
     </tr>
@@ -297,6 +311,8 @@ margin-top: 10px;
 	<tr >
 	<td id="tag312" >xxxxxxxxxxxx</td>
 	<td style="width: 200px;" >xxx</td>
+	<td>xxxx</td>
+	<td>xxxx</td>
 	<td>xxxx-xx-xx</td>
 	<td>xxxx-xx-xx</td>
 	<td style="width: 100px;">

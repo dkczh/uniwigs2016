@@ -22,7 +22,7 @@ if(isset($_POST['id'])){
   
 
 	$db =pdo_conn($dsn,$user,$pwd)or die();
-	
+	 
 	switch ($_POST['id']) {
 		case '1':
 			//正常订单 提醒
@@ -117,9 +117,7 @@ and id_order  not in (select id_order  from  px_order_remind)
 function q_order_remind($db,$id){
 	if($id=='10'){
 	$sql = "SELECT
-	id_order,
-	date,
-	skus,
+	*,
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
 	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
 FROM
@@ -130,9 +128,7 @@ AND DATE_SUB(date, INTERVAL 8 DAY)
 ";}
 if($id=='7'){
 	$sql = "SELECT
-	id_order,
-	date,
-	skus,
+	*,
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
 	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
 FROM
@@ -143,9 +139,7 @@ AND DATE_SUB(date, INTERVAL 4 DAY)
 ";}
 if($id=='3'){
 	$sql = "SELECT
-	id_order,
-	date,
-	skus,
+	*,
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
 	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
 FROM
@@ -156,9 +150,7 @@ AND DATE_SUB(date, INTERVAL 0 DAY)
 ";}
 if($id=='99'){
 	$sql = "SELECT
-	id_order,
-	date,
-	skus,
+	*,
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
 	TIMESTAMPDIFF(DAY,date,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'))  as rdate
 FROM
@@ -178,6 +170,8 @@ if($id=='99'){
         <th>订单id</th>
 		<th>产品skus</th>	
 		<th>备货截止日期</th>
+		<th>生成单号</th>
+		<th>状态</th>
         <th>当前日期</th>
 		<th>超期天数</th>
     </tr>
@@ -193,6 +187,8 @@ if($id=='99'){
         <th>订单id</th>
 		<th>产品skus</th>	
 		<th>备货截止日期</th>
+		<th>生成单号</th>
+		<th>状态</th>
         <th>当前日期</th>
 		<th>剩余天数</th>
     </tr>
@@ -213,12 +209,16 @@ if($id=='99'){
 		$skus = $a['skus'];
 		$date = $a['date'];
 		$nowdate = $a['nowdate'];
+		$num = $a['manufacture'];
+		$status = $a['status'];
 		$rdate = $a['rdate'];
 		$uri = $uri_f.$id_order.$uri_l;
 		$str.="<tr >
 		<td id='tag312' ><a href=\"$uri\" target=\"_blank\">$id_order</a></td>
 		<td style='width: 200px;'>".$skus."</td>
 		<td style='width: 100px;color: red;'>".$date."</td>
+		<td >".$num."</td>
+		<td >".$status."</td>
 		<td >".$nowdate."</td>
 		<td style='width: 100px;color: red;'>
 	".$rdate."
@@ -252,7 +252,8 @@ function pdo_conn($dsn,$user,$pwd)
 	        echo 'Fail to connect to database!\n';  
 	        echo $e->getMessage();  
 	    }
-		
+		//解决pdo 中文读取乱码问题
+		$db->query('set names utf8;');
 		return $db;
 }
 	
