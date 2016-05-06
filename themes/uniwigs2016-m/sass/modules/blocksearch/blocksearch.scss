@@ -1,24 +1,22 @@
 @import "compass";
 @import "theme_variables";
 #search_block_top {
-	padding: 14px;
-	background: #F5F5F5;
-	width: 100%;
-	overflow: hidden;
-	-webkit-transform: translateZ(0);
 	#searchbox {
-		width: 100%;
-		border: 1px solid #d6d4d4;
-		background-color: #fff;
+		width:90vw;
+		min-width: 294px;
+		margin: 0 auto;
+    	padding-top: 60px;
 	}
 	.btn.button-search {
-		width: 18%;
-		height: 34px;
+		width: 16%;
+		height: 50px;
 		line-height: 1.4;
 		border: none;
 		background: none;
 		border-radius: 0;
 		display: inline-block;
+		position: absolute;
+		bottom: 0;
 		span {
 			display: none;
 		}
@@ -26,38 +24,72 @@
 			content: "\e621";
 			display: block;
 			font-family: $font-icon;
-			font-size: 17px;
+			font-size: 26px;
 			width: 100%;
-			text-align: center;
+			color:#222;
+			text-align: left;
 		}
 		&:hover {
 			color: #6f6f6f
 		}
 	}
-	#search_query_top {
-		width:80%;
-		display: inline-block;
-		background: $base-box-bg;
-		margin: 0;
-		border: none;
+	.form-control:focus{
+		box-shadow:none;
+		border-color:#fff;
+		color:#222;
 	}
+	#search_query_top {
+		width:100%;
+		display: inline-block;
+		margin: 0;
+		border-bottom: 2px solid #222;
+		border-top:0 none;
+		border-left:0 none;
+		border-right:0 none;
+		padding-left: 50px;
+	}
+}
+.search-top{
+	display: inline-block;
+    height: 100%;
+    position: absolute;
+    width: 46px;
+    font-size: 2em;
+    right: 46px;
+    top: 0;
+    a{
+    	color: #EF3386;
+	    display: block;
+	    cursor: pointer;
+	    width: 100%;
+	    height: 100%;
+    	&:before{
+    		content: "\e621";
+			display: block;
+			font-family: $font-icon;
+			position: absolute;
+			top: 13px;
+			font-size: 26px;
+			width: 100%;
+    	}
+    }
 }
 .ac_results {
 	background: $light-background;
-	border: 1px solid $base-border-color;
-	width: 271px;
-	margin-top: -1px;
-	li {
-		padding: 0 10px;
-		font-weight: normal;
-		color: #686666;
-		font-size: 13px;
-		line-height: 22px;
-		&.ac_odd {
-			background: $light-background;
-		}
-		&:hover, &.ac_over {
-			background: $base-box-bg;
+	width: 100%;
+	ul{
+		li {
+			padding: 7px 0;
+			font-weight: normal;
+			color: #686666;
+			font-size: 13px;
+			line-height: 20px;
+			&.ac_odd {
+				background: $light-background;
+			}
+			&:hover, &.ac_over {
+				background: $base-box-bg;
+			}
 		}
 	}
 }

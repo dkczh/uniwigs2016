@@ -47,7 +47,7 @@ $(document).ready(function(){
 
 	if (!!$.prototype.bxSlider)
 		$('#homeslider').bxSlider({
-			useCSS: false,
+			useCSS: true,
 			maxSlides: 1,
 			slideWidth: homeslider_width,
 			infiniteLoop: homeslider_loop,

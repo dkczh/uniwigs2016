@@ -22,3 +22,33 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 */
+$(document).ready(function(){
+  $('#home_trendy').bxSlider({
+  		mode:'fade',
+		useCSS: true,
+		maxSlides: 1,
+		slideWidth: 640,
+		infiniteLoop: true,
+		hideControlOnEnd: true,
+		pager: false,
+		autoHover: false,
+		auto: true,
+		speed: parseInt(500),
+		pause: 2000,
+		controls: false,
+	});
+  	$('#home_uniextension').bxSlider({
+  		mode:'fade',
+		useCSS: true,
+		maxSlides: 1,
+		slideWidth: 640,
+		infiniteLoop: true,
+		hideControlOnEnd: true,
+		pager: false,
+		autoHover: false,
+		auto: true,
+		speed: parseInt(1),
+		pause: 2000,
+		controls: false,
+	});
+})

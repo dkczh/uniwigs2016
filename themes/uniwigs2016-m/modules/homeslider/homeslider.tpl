@@ -44,11 +44,6 @@
 			</ul>
 		</div>
 	{/if}
-	<div class="promotion-block uk-margin-small-bottom">
-		<a href="{$base_dir}hair-pieces/40914-54-natural-black-remy-human-hair-lace-closure2-pcs-hair-weft-lw005.html"><img src="/themes/uniwigs2016-m/img/home/banner-closure_01.jpg" alt="remy human hair lace closure" width="100%"></a>
-	</div>
-	<div class="promotion-block">
-		<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" width="100%"></a>
-	</div>
+
 <!-- /Module HomeSlider -->
 {/if}

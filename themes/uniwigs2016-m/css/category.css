@@ -35,6 +35,15 @@
         .content_scene_cat .content_scene .cat_desc a:hover {
           color: #515151; }
 
+.category_banner {
+  margin: 0; }
+  .category_banner li {
+    width: 50%;
+    float: left;
+    padding: 0; }
+    .category_banner li.maxwidth {
+      width: 100%; }
+
 /* ************************************************************************************************
 									Sub Categories Styles
 ************************************************************************************************ */

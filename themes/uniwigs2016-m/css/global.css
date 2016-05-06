@@ -2580,12 +2580,11 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 /* Modifier
  ========================================================================== */
 .uk-close-alt {
-  padding: 6px;
+  padding: 10px;
   border-radius: 50%;
-  background: #eee;
+  background: #fff;
   opacity: 1;
-  font-size: 1.2em;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.3); }
+  font-size: 1.5em; }
 
 /* Hover */
 .uk-close-alt:hover,
@@ -2594,7 +2593,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 
 /* Icon */
 .uk-close-alt:after {
-  opacity: 0.5; }
+  opacity: 0.8; }
 
 .uk-close-alt:hover:after,
 .uk-close-alt:focus:after {
@@ -4064,8 +4063,8 @@ a.uk-thumbnail:focus {
 */
 .uk-modal-dialog-blank > .uk-close:first-child {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 5px;
+  right: 5px;
   z-index: 1;
   margin: 0;
   float: none; }
@@ -7188,7 +7187,7 @@ div.star a:hover {
       padding: 13px 15px 7px 15px; }
       .footer-container #footer .livechat a {
         display: block;
-        padding: 12px 0;
+        padding: 16px 0;
         color: #fff;
         font-size: 1.2em;
         text-transform: uppercase;
