@@ -27,7 +27,7 @@
 .promotion-block{margin:14px 0;}
 .home-category li{float:left;width:50%;padding:10px;}
 .home-category li a{display: block;padding:15px 0;border:1px solid #222;font-size:14px;text-align: center;color:#000;background: #fff;text-transform: uppercase;}
-.home-category li a:hover,.promotion-block img:hover{opacity: 0.7;}
+.home-category li a:hover{opacity: 0.7;}
 .home-category li:nth-child(2n+1){padding-right:5px;}
 .home-category li:nth-child(2n){padding-left:5px;}
 </style>
@@ -55,24 +55,24 @@
 </div>
 <div class="home-box">
 	<ul id="home_trendy">
-		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-3.jpg" alt=""></a></li>
-		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-2.jpg" alt=""></a></li>
-		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-1.jpg" alt=""></a></li>
+		<li><a href="{$base_dir}40459-trendy-wigs"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$img_dir}home/trendy-3.jpg" alt=""></a></li>
+		<li><a href="{$base_dir}40459-trendy-wigs"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$img_dir}home/trendy-2.jpg" alt=""></a></li>
+		<li><a href="{$base_dir}40459-trendy-wigs"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$img_dir}home/trendy-1.jpg" alt=""></a></li>
 	</ul>
 </div>
 <div class="promotion-block">
-	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" width="100%"></a>
+	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" width="100%"></a>
 </div>
 <div class="promotion-block">
-	<a href="http://lavivid.uniwigs.com"><img src="/themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" width="100%"></a>
+	<a href="http://lavivid.uniwigs.com"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="/themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" width="100%"></a>
 </div>
 <div class="home-box">
 	<ul id="home_uniextension">
-		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="{$img_dir}home/uni-extension-1.jpg" alt=""></a></li>
-		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="{$img_dir}home/uni-extension-2.jpg" alt=""></a></li>
+		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$img_dir}home/uni-extension-1.jpg" alt=""></a></li>
+		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$img_dir}home/uni-extension-2.jpg" alt=""></a></li>
 	</ul>
 </div>
 <div class="promotion-block">
-	<a href="{$base_dir}customer-show"><img src="/themes/uniwigs2016-m/img/home/customer-show.jpg" alt="#uniwigs" width="100%"></a>
+	<a href="{$base_dir}customer-show"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="/themes/uniwigs2016-m/img/home/customer-show.jpg" alt="#uniwigs" width="100%"></a>
 </div>
 <!-- /Module Editorial -->
