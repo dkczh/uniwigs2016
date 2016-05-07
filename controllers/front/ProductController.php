@@ -84,7 +84,7 @@ class ProductControllerCore extends FrontController
         if ($id_product = (int)Tools::getValue('id_product')) {
             $this->product = new Product($id_product, true, $this->context->language->id, $this->context->shop->id);
         }
-
+		
         if (!Validate::isLoadedObject($this->product)) {
             header('HTTP/1.1 404 Not Found');
             header('Status: 404 Not Found');
@@ -324,7 +324,14 @@ $('#add_to_wishlist').click(function(){
 
 //添加到购物车
 $('#add_to_cart').click(function(){ 
-	fbq('track', 'AddToCart');	
+	var price = $('#our_price_display').text().replace('$','');
+	fbq('track', 'AddToCart',{
+		value: , price
+		currency: 'USD'
+	});	
+	
+	
+	
 	sku = $('#product_reference span').html();
 	ga(function(tracker) {
 	//cartaction 事件分类 比如购物车
