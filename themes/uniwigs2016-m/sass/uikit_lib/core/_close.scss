@@ -18,8 +18,8 @@
 
 $close-size:                                     20px !default;
 
-$close-alt-padding:                              6px !default;
-$close-alt-background:                           #eee !default;
+$close-alt-padding:                              10px !default;
+$close-alt-background:                           #fff !default;
 
 
 /* ========================================================================
@@ -107,8 +107,7 @@ $close-alt-background:                           #eee !default;
     border-radius: 50%;
     background: $close-alt-background;
     opacity: 1;
-    font-size: 1.2em;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.3);
+    font-size: 1.8em;
     @include hook-close-alt();
 }
 
@@ -117,7 +116,7 @@ $close-alt-background:                           #eee !default;
 .uk-close-alt:focus { opacity: 1; }
 
 /* Icon */
-.uk-close-alt:after { opacity: 0.5; }
+.uk-close-alt:after { opacity: 0.8; }
 
 .uk-close-alt:hover:after,
 .uk-close-alt:focus:after { opacity: 0.8; }

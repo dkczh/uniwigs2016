@@ -43,11 +43,8 @@
 						<li><a href="{$base_dir}104-hair-pieces">All Products</a></li>
 					</ul>
 				</li>
-				<li class="uk-parent">
-					<a href="#">La Vivid</a>
-					<ul class="uk-nav-sub">
-						<li><a href="http://lavivid.uniwigs.com">All Products</a></li>
-					</ul>
+				<li class="uk-parent other-li">
+					<a href="http://lavivid.uniwigs.com">La Vivid</a>
 				</li>
 			</ul>
 		</div>

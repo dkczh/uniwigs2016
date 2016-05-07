@@ -105,16 +105,88 @@
             <div>
                 <img src="{$img_dir}public/m-product-banner.png" alt="" class="img-responsive">
             </div>
-            <div class="uk-margin-top">
+            <div>
                 <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
                     <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="" class="img-responsive">
                 </a>
             </div>
+            <ul class="category_banner row">
+                <li>
+                    <a href="{$base_dir}40452-human-hair-lace-wigs">
+                        <img src="{$img_dir}category/human-hair/lace-wigs.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+                <li>
+                    <a href="{$base_dir}custom-order">
+                        <img src="{$img_dir}category/human-hair/custom-wigs.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+            </ul>
+            <div>
+                <a href="{$base_dir}40453-celebrity-hairstyles">
+                    <img src="{$img_dir}category/human-hair/celebrity.jpg" alt="" class="img-responsive">
+                </a>
+            </div>
+        {/if}
+        {if $category->id == '101'}
+            <ul class="category_banner row">
+                <li class="maxwidth">
+                    <a href="{$base_dir}40459-trendy-wigs">
+                        <img src="{$img_dir}category/synthetic/trendy.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+                <li>
+                    <a href="{$base_dir}40455-classic-wigs">
+                        <img src="{$img_dir}category/synthetic/classic.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+                <li>
+                    <a href="{$base_dir}40456-clearance-wigs">
+                        <img src="{$img_dir}category/synthetic/clearance.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+            </ul>
+        {/if}
+        {if $category->id == '103'}
+            <ul class="category_banner row">
+                <li class="maxwidth">
+                    <a href="{$base_dir}tag/solid-hair-extension">
+                        <img src="{$img_dir}category/extensions/soild-color.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+                <li class="maxwidth">
+                    <a href="{$base_dir}tag/ombre-hair-extension">
+                        <img src="{$img_dir}category/extensions/ombre.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+                <li class="maxwidth">
+                    <a href="{$base_dir}tag/diy-dyed-extensions">
+                        <img src="{$img_dir}category/extensions/diy.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+            </ul>
         {/if}
         {if $category->id == '104'}
             <div>
                 <img src="{$img_dir}public/m-product-banner.png" alt="" class="img-responsive">
             </div>
+            <ul class="category_banner row">
+                <li class="maxwidth">
+                    <a href="{$base_dir}tag/fashion-piece">
+                        <img src="{$img_dir}category/hair-pieces/fashion-piece.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+                <li>
+                    <a href="{$base_dir}tag/lace-closure">
+                        <img src="{$img_dir}category/hair-pieces/lace-closure.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+                <li>
+                    <a href="{$base_dir}40458-mono-hair-pieces">
+                        <img src="{$img_dir}category/hair-pieces/monofilament.jpg" alt="" class="img-responsive">
+                    </a>
+                </li>
+            </ul>
         {/if}
 		{if $products}
 			<div class="content_sortPagiBar clearfix">

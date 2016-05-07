@@ -150,8 +150,17 @@
 			border: 1px solid $input-border;
 		}
 	}
-}
+	li.other-li{
+		background: #222;
+		a{
+			color:#fff;
+		}
+	}
 
+}
+.uk-nav-parent-icon > .uk-parent.other-li > a:after{
+	content: "\e610";
+}
 #block_top_menu {
 	.category-thumbnail {
 		clear: both;

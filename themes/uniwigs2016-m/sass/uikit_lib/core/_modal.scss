@@ -240,9 +240,9 @@ $modal-caption-color:                            #fff !default;
 
 .uk-modal-dialog-blank > .uk-close:first-child {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1;
+    top: 10px;
+    right: 5px;
+    z-index: 1000;
     margin: 0;
     float: none;
 }
