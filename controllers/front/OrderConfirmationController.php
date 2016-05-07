@@ -89,10 +89,24 @@ class OrderConfirmationControllerCore extends FrontController
         ));
 		
 		$price =  $order->getOrdersTotalPaid();
+		$facebook = "<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '939483269478039');
+fbq('track', \"PageView\");
+
+fbq('track', 'Purchase', {value: '".$price."', currency: 'USD'});
+
+</script>";
         if ($this->context->customer->is_guest) {
             $this->context->smarty->assign(array(
                 'id_order' => $this->id_order,
-				'price' =>$price,
+				'facebook' =>$facebook ,
                 'reference_order' => $this->reference,
                 'id_order_formatted' => sprintf('#%06d', $this->id_order),
                 'email' => $this->context->customer->email
