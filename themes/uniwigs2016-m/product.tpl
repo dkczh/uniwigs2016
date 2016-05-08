@@ -163,7 +163,7 @@
 				</div> <!-- end views-block -->
 				<!-- end thumbnails -->
 			{/if*}
-			{if isset($images) && count($images) > 1}
+			{*if isset($images) && count($images) > 1}
 				<p class="resetimg clear no-print">
 					<span id="wrapResetImages" style="display: none;">
 						<a href="{$link->getProductLink($product)|escape:'html':'UTF-8'}" data-id="resetImages">
@@ -172,7 +172,7 @@
 						</a>
 					</span>
 				</p>
-			{/if}
+			{/if*}
 		</div> <!-- end pb-left-column -->
 		<!-- end left infos-->
 		<!-- center infos -->
