@@ -45,9 +45,7 @@
 </p>
 {/if}
 
-{if  isset($facebook)}
-$facebook
-{/if}
+
 {literal}
 <script>
 	ga(function(tracker) {
