@@ -76,7 +76,7 @@
 				<td style="padding: 5px;">xxx</td>
 				<td style="padding: 5px;">xxx</td>
 				<td style="padding: 5px;">xxx</td>
-				{if  $order->current_state!=3}
+				{if  $order->current_state ==3}
 				<td >
 					{else}
 				<td style=" display: none;">
