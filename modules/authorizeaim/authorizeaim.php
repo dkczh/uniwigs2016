@@ -119,6 +119,8 @@ class AuthorizeAIM extends PaymentModule
 		if ($params['objOrder']->getCurrentState() != Configuration::get('PS_OS_ERROR'))
 		{
 			Configuration::updateValue('AUTHORIZEAIM_CONFIGURATION_OK', true);
+			//创建较易购买记录
+					file_put_contents('author.txt', $params['objOrder']->id."\r\n", FILE_APPEND);
 			$this->context->smarty->assign(array('status' => 'ok', 'id_order' => intval($params['objOrder']->id)));
 		}
 		else
