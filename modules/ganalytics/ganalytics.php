@@ -329,6 +329,8 @@ class Ganalytics extends Module
 					$this->js_state = 1;
 					//创建较易购买记录
 					file_put_contents('test.txt',$order->id."\r\n", FILE_APPEND);
+					//创建执行 js脚本 记录 
+					file_put_contents('test2.txt',$this->_runJs($ga_scripts)."\r\n", FILE_APPEND);
 					return $this->_runJs($ga_scripts);
 				}
 			}
