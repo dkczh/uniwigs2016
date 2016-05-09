@@ -103,9 +103,6 @@
         {if $category->id == '102'}
             <script type="text/javascript" src="/themes/uniwigs2016-m/js/lightbox.js"></script>
             <div>
-                <img src="{$img_dir}public/m-product-banner.png" alt="" class="img-responsive">
-            </div>
-            <div>
                 <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
                     <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="" class="img-responsive">
                 </a>
@@ -167,9 +164,6 @@
             </ul>
         {/if}
         {if $category->id == '104'}
-            <div>
-                <img src="{$img_dir}public/m-product-banner.png" alt="" class="img-responsive">
-            </div>
             <ul class="category_banner row">
                 <li class="maxwidth">
                     <a href="{$base_dir}tag/fashion-piece">
