@@ -326,7 +326,7 @@ $('#add_to_wishlist').click(function(){
 $('#add_to_cart').click(function(){ 
 	var price = $('#our_price_display').text().replace('$','');
 	fbq('track', 'AddToCart',{
-		value: , price
+		value: price,
 		currency: 'USD'
 	});	
 	
