@@ -577,7 +577,7 @@ class AdminOrdersControllerCore extends AdminController
 			Db::getInstance()->execute("insert into px_order_remind 
 			(id_order,skus,product_name,date,status,manufacture,date_upd,actor)
 			VALUES 
-			(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."','".Tools::getValue('remind_status')."',".Tools::getValue('remind_manufacture').",date_sub(now(), interval 1 day),'$employee_name')  
+			(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."','".Tools::getValue('remind_status')."','".Tools::getValue('remind_manufacture')."',date_sub(now(), interval 1 day),'$employee_name')  
 			");
 			
 			//产品名称 存在特殊字符 
