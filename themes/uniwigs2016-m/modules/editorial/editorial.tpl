@@ -61,7 +61,7 @@
 	</ul>
 </div>
 <div class="promotion-block">
-	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" width="100%"></a>
+	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" width="100%"></a>
 </div>
 <div class="promotion-block">
 	<a href="http://lavivid.uniwigs.com"><img src="/themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" width="100%"></a>
