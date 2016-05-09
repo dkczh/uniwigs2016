@@ -610,6 +610,8 @@ class PayPalUSA extends PaymentModule
 				version_compare(_PS_VERSION_, '1.5', '>=') && isset($params['objOrder']->reference))
 		{
 			$this->smarty->assign('paypal_usa_order', array('id' => $params['objOrder']->id, 'reference' => $params['objOrder']->reference, 'valid' => $params['objOrder']->valid));
+			//创建较易购买记录
+					file_put_contents('paypal.txt', $params['objOrder']->id."\r\n", FILE_APPEND);
 			return $this->display(__FILE__, 'views/templates/hook/order-confirmation.tpl');
 		}
 
@@ -620,7 +622,8 @@ class PayPalUSA extends PaymentModule
 				version_compare(_PS_VERSION_, '1.5', '<'))
 		{
 			$this->smarty->assign('paypal_usa_order', array('id' => $params['objOrder']->id,  'valid' => $params['objOrder']->valid));
-
+			//创建较易购买记录
+					file_put_contents('paypal.txt', $params['objOrder']->id."\r\n", FILE_APPEND);
 			return $this->display(__FILE__, 'views/templates/hook/order-confirmation.tpl');
 		}
 	}
