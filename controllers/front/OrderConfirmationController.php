@@ -88,7 +88,7 @@ class OrderConfirmationControllerCore extends FrontController
             'HOOK_PAYMENT_RETURN' => $this->displayPaymentReturn()
         ));
 		
-		$price =  $order->getOrdersTotalPaid();
+/* 		$price =  $order->getOrdersTotalPaid();
 		$facebook = "<!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -102,11 +102,10 @@ fbq('track', \"PageView\");
 
 fbq('track', 'Purchase', {value: '".$price."', currency: 'USD'});
 
-</script>";
+</script>"; */
         if ($this->context->customer->is_guest) {
             $this->context->smarty->assign(array(
                 'id_order' => $this->id_order,
-				'facebook' =>$facebook ,
                 'reference_order' => $this->reference,
                 'id_order_formatted' => sprintf('#%06d', $this->id_order),
                 'email' => $this->context->customer->email
