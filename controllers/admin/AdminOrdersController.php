@@ -1297,7 +1297,8 @@ class AdminOrdersControllerCore extends AdminController
             }
         } elseif (Tools::isSubmit('submitAddOrder') && ($id_cart = Tools::getValue('id_cart')) &&
             ($module_name = Tools::getValue('payment_module_name')) &&
-            ($id_order_state = Tools::getValue('id_order_state')) && Validate::isModuleName($module_name)) {
+            ($id_order_state = Tools::getValue('id_order_state')) && Validate::isModuleName($module_name)) 
+			{
             if ($this->tabAccess['edit'] === '1') {
                 if (!Configuration::get('PS_CATALOG_MODE')) {
                     $payment_module = Module::getInstanceByName($module_name);
@@ -3008,7 +3009,7 @@ WHERE
 		$result = Db::getInstance()->executeS("SELECT
 	ore.*,od.product_id,od.id_order,od.product_name,od.product_reference as skus	
 	FROM	ps_order_detail od
-	LEFT JOIN px_order_remind  ore  on  ore.id_order=od.id_order
+	LEFT JOIN px_order_remind  ore  on   od.product_name=ore.product_name
 	WHERE	od.id_order = $id_order");
 	
 		return $result;
