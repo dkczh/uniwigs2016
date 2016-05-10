@@ -330,7 +330,7 @@ class Ganalytics extends Module
 					//创建较易购买记录
 					file_put_contents('test.txt',$order->id."\r\n", FILE_APPEND);
 					//创建执行 js脚本 记录 
-					file_put_contents('test2.txt',$this->_runJs($ga_scripts)."\r\n", FILE_APPEND);
+					file_put_contents('test2.txt',$ga_scripts."\r\n", FILE_APPEND);
 					return $this->_runJs($ga_scripts);
 				}
 			}
@@ -501,7 +501,10 @@ class Ganalytics extends Module
 		{
 			if ($product instanceof Product)
 				$product = (array)$product;
-
+			
+			if(!isset($product['id_product']))
+				$product['id_product']='';
+			
 			if (!isset($product['price']))
 				$product['price'] = (float)Tools::displayPrice(Product::getPriceStatic((int)$product['id_product'], $usetax), $currency);
 			$result_products[] = $this->wrapProduct($product, $extras, $index, $full);
@@ -545,7 +548,13 @@ class Ganalytics extends Module
 			$product_type = 'virtual';
 
 		if ($full)
-		{
+		{	//针对无效的产品名称
+			if(!isset($product['name'])){
+				$product['name']='no name';
+			}
+			if(!isset($product['category'])){
+				$product['category']='no category';
+			}
 			$ga_product = array(
 				'id' => $product_id,
 				'name' => Tools::jsonEncode($product['name']),
