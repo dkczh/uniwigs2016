@@ -67,7 +67,7 @@
 						{l s='Card number' mod='authorizeaim'}
 					</label>
 					<div class="uk-form-controls">
-						<input type="text" name="x_card_num" id="cardnum" class="form-control uk-form-large" size="30" maxlength="24" autocomplete="Off" placeholder="**** **** **** ****"/>
+						<input type="number" name="x_card_num" id="cardnum" class="form-control uk-form-large" size="30" maxlength="24" autocomplete="Off" placeholder="**** **** **** ****"/>
 						<img src="{$module_dir}secure.png" alt="" />
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 				<div class="uk-form-row">
 					<label class="uk-form-label">{l s='CVV' mod='authorizeaim'}</label>
 					<div class="uk-form-controls">
-						<input type="text" name="x_card_code" id="x_card_code" class="form-control uk-form-large" placeholder="****"/>
+						<input type="number" name="x_card_code" id="x_card_code" class="form-control uk-form-large" placeholder="****"/>
 						<img src="{$module_dir}secure.png" alt=""/>
 						<div class="text-info">{l s='the 3 last digits on the back of your credit card' mod='authorizeaim'}</div>
 						<img src="{$module_dir}cvv.png" id="cvv_help_img" alt="" style="display: none;margin-left: 211px;" />
