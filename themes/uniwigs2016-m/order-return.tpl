@@ -28,7 +28,8 @@
 		<h2 class="page-subheading">{l s='RE#'}{$orderRet->id|string_format:"%06d"} {l s='on'} {dateFormat date=$order->date_add full=0}</h2>
 		<p class="bold">{l s='We have logged your return request.'}</p>
 		<p>{l s='Your package must be returned to us within'} {$nbdaysreturn} {l s='days of receiving your order.'}</p>
-		<p>{l s='The current status of your merchandise return is:'} <span class="bold">{$state_name|escape:'html':'UTF-8'}</span></p>
+		<p>{l s='Return Address: GEORGE HANN, 18305 E Valley Blvd., Ste C, La Puente, CA 91744'}</p>
+		<p>{l s='The current status of your merchandise return is:'} <span class="uk-text-bold text-primary">{$state_name|escape:'html':'UTF-8'}</span></p>
 		<p>{l s='List of items to be returned:'}</p>
 	</div>
 	<div id="order-detail-content" class="table_block">
