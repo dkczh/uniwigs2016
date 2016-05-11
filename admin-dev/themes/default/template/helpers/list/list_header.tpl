@@ -26,11 +26,10 @@
 {if  $smarty.get.controller=='AdminOrders'}
 
 {*返修单提醒*}
-<div class="panel kpi-container">
-	<div class="panel-heading" style="color: #CC2B1B; font-size: 20px; height: 40px;">
-			返修单提醒	
-	</div>
+<div class="panel kpi-container" style=" margin-bottom: 0px;">
+
 	<div class="row">
+		<span  style="color: #CC2B1B;">返修单提醒</span>		
 		{foreach from=$orderremind item=row key=key}
 			<a  style="color: red;" href="index.php?controller=AdminOrders&amp;id_order={$row['id_order']}&amp;vieworder&amp;token={$smarty.get.token}" class="btn btn-default" title="View">
 				<i class="icon-search-plus"></i> {$row['id_order']}
@@ -39,11 +38,9 @@
 	</div>
 </div>
 {*超期订单提醒*}
-<div class="panel kpi-container">
-	<div class="panel-heading" style="color: #CC2B1B; font-size: 20px; height: 40px;">
-		 超期订单提醒	
-	</div>
+<div class="panel kpi-container" >
 	<div class="row">
+	<span  style="color: #CC2B1B;">超期订单提醒</span>	
 		{foreach from=$orderremindout item=row key=key}
 			<a  style="color: red;" href="index.php?controller=AdminOrders&amp;id_order={$row['id_order']}&amp;vieworder&amp;token={$smarty.get.token}" class="btn btn-default" title="View">
 				<i class="icon-search-plus"></i> {$row['id_order']}
@@ -53,10 +50,10 @@
 </div>
 {*备货时间统计*}
 <div class="panel kpi-container">
-	<div class="panel-heading" style="color: #CC2B1B; font-size: 20px; height: 40px;">
+	<div class="panel-heading" style="color: #CC2B1B; font-size: 15px; height: 40px;">
 		 备货时间统计	
 	</div>
-	<div class="row" style="font-size: 16px;">
+	<div class="row" style="font-size: 12px;">
 	<span>定制单距离发货剩余10天：</span><span style="color: red;">({$orderremindnormal['day10']})</span>
 	<span>定制单距离发货剩余7天：</span><span style="color: red;">({$orderremindnormal['day7']})</span>
 	<span>定制单距离发货剩余3天：</span><span style="color: red;">({$orderremindnormal['day3']})</span>
