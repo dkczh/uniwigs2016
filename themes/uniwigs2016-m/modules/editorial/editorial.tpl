@@ -55,9 +55,9 @@
 </div>
 <div class="home-box">
 	<ul id="home_trendy">
-		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-3.jpg" alt=""></a></li>
-		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-2.jpg" alt=""></a></li>
-		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-1.jpg" alt=""></a></li>
+		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-3.jpg" alt="trendy wigs"></a></li>
+		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-2.jpg" alt="trendy wigs"></a></li>
+		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-1.jpg" alt="trendy wigs"></a></li>
 	</ul>
 </div>
 <div class="promotion-block">
@@ -68,8 +68,8 @@
 </div>
 <div class="home-box">
 	<ul id="home_uniextension">
-		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="{$img_dir}home/uni-extension-1.jpg" alt=""></a></li>
-		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="{$img_dir}home/uni-extension-2.jpg" alt=""></a></li>
+		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="{$img_dir}home/uni-extension-1.jpg" alt="uni extension"></a></li>
+		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="{$img_dir}home/uni-extension-2.jpg" alt="uni extension"></a></li>
 	</ul>
 </div>
 <div class="promotion-block">

@@ -104,24 +104,24 @@
             <script type="text/javascript" src="/themes/uniwigs2016-m/js/lightbox.js"></script>
             <div>
                 <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
-                    <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="" class="img-responsive">
+                    <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="make obvious part" class="img-responsive">
                 </a>
             </div>
             <ul class="category_banner row">
                 <li>
                     <a href="{$base_dir}40452-human-hair-lace-wigs">
-                        <img src="{$img_dir}category/human-hair/lace-wigs.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/human-hair/lace-wigs.jpg" alt="human hair lace wigs" class="img-responsive">
                     </a>
                 </li>
                 <li>
                     <a href="{$base_dir}custom-order">
-                        <img src="{$img_dir}category/human-hair/custom-wigs.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/human-hair/custom-wigs.jpg" alt="human hair wigs customization" class="img-responsive">
                     </a>
                 </li>
             </ul>
             <div>
                 <a href="{$base_dir}40453-celebrity-hairstyles">
-                    <img src="{$img_dir}category/human-hair/celebrity.jpg" alt="" class="img-responsive">
+                    <img src="{$img_dir}category/human-hair/celebrity.jpg" alt="human hair celebrity hairstyles" class="img-responsive">
                 </a>
             </div>
         {/if}
@@ -129,17 +129,17 @@
             <ul class="category_banner row">
                 <li class="maxwidth">
                     <a href="{$base_dir}40459-trendy-wigs">
-                        <img src="{$img_dir}category/synthetic/trendy.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/synthetic/trendy.jpg" alt="trendy wigs" class="img-responsive">
                     </a>
                 </li>
                 <li>
                     <a href="{$base_dir}40455-classic-wigs">
-                        <img src="{$img_dir}category/synthetic/classic.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/synthetic/classic.jpg" alt="classic wigs" class="img-responsive">
                     </a>
                 </li>
                 <li>
                     <a href="{$base_dir}40456-clearance-wigs">
-                        <img src="{$img_dir}category/synthetic/clearance.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/synthetic/clearance.jpg" alt="clearance" class="img-responsive">
                     </a>
                 </li>
             </ul>
@@ -148,17 +148,17 @@
             <ul class="category_banner row">
                 <li class="maxwidth">
                     <a href="{$base_dir}tag/solid-hair-extension">
-                        <img src="{$img_dir}category/extensions/soild-color.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/extensions/soild-color.jpg" alt="soild color hair extension" class="img-responsive">
                     </a>
                 </li>
                 <li class="maxwidth">
                     <a href="{$base_dir}tag/ombre-hair-extension">
-                        <img src="{$img_dir}category/extensions/ombre.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/extensions/ombre.jpg" alt="ombre color hair extension" class="img-responsive">
                     </a>
                 </li>
                 <li class="maxwidth">
                     <a href="{$base_dir}tag/diy-dyed-extensions">
-                        <img src="{$img_dir}category/extensions/diy.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/extensions/diy.jpg" alt="diy dyed extension" class="img-responsive">
                     </a>
                 </li>
             </ul>
@@ -167,17 +167,17 @@
             <ul class="category_banner row">
                 <li class="maxwidth">
                     <a href="{$base_dir}tag/fashion-piece">
-                        <img src="{$img_dir}category/hair-pieces/fashion-piece.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/hair-pieces/fashion-piece.jpg" alt="fashion piece" class="img-responsive">
                     </a>
                 </li>
                 <li>
                     <a href="{$base_dir}tag/lace-closure">
-                        <img src="{$img_dir}category/hair-pieces/lace-closure.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/hair-pieces/lace-closure.jpg" alt="lace closure" class="img-responsive">
                     </a>
                 </li>
                 <li>
                     <a href="{$base_dir}40458-mono-hair-pieces">
-                        <img src="{$img_dir}category/hair-pieces/monofilament.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/hair-pieces/monofilament.jpg" alt="monofilament" class="img-responsive">
                     </a>
                 </li>
             </ul>
