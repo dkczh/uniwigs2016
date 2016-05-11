@@ -150,15 +150,16 @@ class HelperListCore extends Helper
 
         $this->orderBy = preg_replace('/^([a-z _]*!)/Ui', '', $this->orderBy);
         $this->orderWay = preg_replace('/^([a-z _]*!)/Ui', '', $this->orderWay);
-
+		
         $this->tpl->assign(array(
             'header' => $this->displayListHeader(), // Display list header (filtering, pagination and column names)
             'content' => $this->displayListContent(), // Show the content of the table
             'footer' => $this->displayListFooter() // Close list table and submit button
+			
         ));
         return parent::generate();
     }
-
+	
     /**
      * Fetch the template for action enable
      *
@@ -661,6 +662,9 @@ class HelperListCore extends Helper
         }
 
         Context::getContext()->smarty->assign(array(
+			'orderremind'=>$this->getMyOrderRemind('1'),
+			'orderremindout'=>$this->getMyOrderRemind('2'),
+			'orderremindnormal'=>$this->getMyOrderRemind('3'),
             'page' => $page,
             'simple_header' => $this->simple_header,
             'total_pages' => $total_pages,
@@ -703,6 +707,73 @@ class HelperListCore extends Helper
 
         return $this->header_tpl->fetch();
     }
+	
+	
+	 /**
+     * 订单提醒信息 发送
+     *
+     */ 
+	 public  function  getMyOrderRemind($id){
+		 //返修单提醒
+		 if($id=='1'){
+		 $result = Db::getInstance()->executeS("SELECT DISTINCT
+													id_order
+												FROM
+													px_order_remind
+												WHERE
+													`status` = '返修'");
+		}
+		//超期单提醒
+		 if($id=='2'){
+		 $result = Db::getInstance()->executeS("SELECT
+	*,
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
+	TIMESTAMPDIFF(DAY,date,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'))  as rdate
+FROM
+	px_order_remind
+WHERE
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d')>date");
+		}
+		//备货时间统计
+		 if($id=='3'){
+		 $res10 = Db::getInstance()->executeS("SELECT
+	*,
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
+	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
+FROM
+	px_order_remind
+WHERE
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(date, INTERVAL 10 DAY)
+AND DATE_SUB(date, INTERVAL 8 DAY)");
+		 $res7 = Db::getInstance()->executeS("SELECT
+	*,
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
+	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
+FROM
+	px_order_remind
+WHERE
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(date, INTERVAL 7 DAY)
+AND DATE_SUB(date, INTERVAL 4 DAY)");
+		 $res3 = Db::getInstance()->executeS("SELECT
+	*,
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
+	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
+FROM
+	px_order_remind
+WHERE
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(date, INTERVAL 3 DAY)
+AND DATE_SUB(date, INTERVAL 0 DAY)");
+		 $res99 = Db::getInstance()->executeS("select id_order,id_customer,   date_format(date_add,'%Y-%m-%d') as date_add ,date_format(date_sub(now(), interval 1 day),'%Y-%m-%d') as nowdate from  ps_orders 
+
+where current_state = 3 and  date_add <date_sub(now(), interval 3 day)
+and id_order  not in (select id_order  from  px_order_remind)");
+		$result=array('day10'=>count($res10),'day3'=>count($res3),'day7'=>count($res7),'normalday'=>count($res99));
+	
+		}
+
+		return $result;
+		 
+	 }
 
     public function hasBulkActions($has_value = false)
     {
