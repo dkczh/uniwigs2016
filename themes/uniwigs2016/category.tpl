@@ -36,7 +36,7 @@
             <section class="category-home">
                 <div class="uk-margin-top">
                     <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
-                        <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="" class="img-responsive">
+                        <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="make obvious part" class="img-responsive">
                     </a>
                 </div>
                 <div class="uk-margin-top">
@@ -45,7 +45,7 @@
                 <ul class="row uk-margin-top">
                     <li class="col-md-6 col-sm-6">
                         <a href="{$base_dir}tag/luxury-human-hair">
-                            <img src="{$img_dir}category/human-hair/Luxury.jpg" alt="" class="img-responsive">
+                            <img src="{$img_dir}category/human-hair/Luxury.jpg" alt="luxury human hair" class="img-responsive">
                         </a>
                         <h3 class="text-center">Luxury Collection Wig</h3>
                         <h5 class="text-center">The supreme quality human hair wig</h5>
@@ -53,7 +53,7 @@
                     </li>
                     <li class="col-md-6 col-sm-6">
                         <a href="{$base_dir}tag/human-hair-wigs-customization">
-                            <img src="{$img_dir}category/human-hair/custom.jpg" alt="" class="img-responsive">
+                            <img src="{$img_dir}category/human-hair/custom.jpg" alt="human hair wigs customization" class="img-responsive">
                         </a>
                         <h3 class="text-center">custom wigs</h3>
                         <h5 class="text-center">Create your personal wig</h5>
@@ -226,19 +226,19 @@
                             <h3><a href="{$base_dir}40455-classic-wigs">classic</a></h3>
                             <h5>The classic will last forever!</h5>
                         </div>
-                        <a class="pull-left img-responsive" href="{$base_dir}40455-classic-wigs"><img src="{$img_dir}category/synthetic-wigs/classic_wigs.jpg" alt=""></a>
+                        <a class="pull-left img-responsive" href="{$base_dir}40455-classic-wigs"><img src="{$img_dir}category/synthetic-wigs/classic_wigs.jpg" alt="synthetic classic wigs"></a>
                     </div>
                     <div class="uk-margin-large-top col-md-4 col-sm-8 col-sm-offset-4 col-md-offset-2">
                         <div class="text-detail text-detail-top pull-left">
                             <h3><a href="{$base_dir}40459-trendy-wigs">trendy</a></h3>
                             <h5>Wanna become trendy? Let's start with the hair!</h5>
                         </div>
-                        <a class="pull-left img-responsive" href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}category/synthetic-wigs/trendy_wigs.jpg" alt=""></a>
+                        <a class="pull-left img-responsive" href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}category/synthetic-wigs/trendy_wigs.jpg" alt="synthetic trendy wigs"></a>
                     </div>
                 </div>
                 <div class="category-banner clearfix">
                     <div class="col-md-7 uk-margin-large-top">
-                        <a href="{$base_dir}tag/silver-galaxy-trend-wig" class="img-responsive"><img src="{$img_dir}category/synthetic-wigs/silver_galaxy.jpg" alt=""></a>
+                        <a href="{$base_dir}tag/silver-galaxy-trend-wig" class="img-responsive"><img src="{$img_dir}category/synthetic-wigs/silver_galaxy.jpg" alt="silver galaxy"></a>
                     </div>
                     <div class="col-md-4 uk-margin-large-top">
                         <a href="{$base_dir}40456-clearance-wigs" class="synthetic_clearnce text-center">
@@ -486,12 +486,12 @@
                 <ul class="row uk-margin-bottom">
                     <li class="col-md-6 col-sm-6">
                         <a href="{$base_dir}tag/Solid-hair-extension">
-                            <img src="{$img_dir}category/extensions/soild-color.jpg" alt="" class="img-responsive">
+                            <img src="{$img_dir}category/extensions/soild-color.jpg" alt="soild color hair extension" class="img-responsive">
                         </a>
                     </li>
                     <li class="col-md-6 col-sm-6">
                         <a href="{$base_dir}tag/ombre-hair-extension">
-                            <img src="{$img_dir}category/extensions/ombre-color.jpg" alt="" class="img-responsive">
+                            <img src="{$img_dir}category/extensions/ombre-color.jpg" alt="ombre color hair extension" class="img-responsive">
                         </a>
                     </li>
                 </ul>
@@ -502,7 +502,7 @@
                 <ul class="row uk-margin-bottom">
                     <li class="col-md-6 col-sm-6">
                         <a href="{$base_dir}tag/diy-dyed-extensions">
-                            <img src="{$img_dir}category/extensions/diy-dyed.jpg" alt="" class="img-responsive">
+                            <img src="{$img_dir}category/extensions/diy-dyed.jpg" alt="diy dyed extension" class="img-responsive">
                         </a>
                         <h3 class="text-center">DIY-DYED</h3>
                         <p class="text-center h4">Just create your own color!</p>
@@ -510,7 +510,7 @@
                     </li>
                     <li class="col-md-6 col-sm-6">
                         <a href="{$base_dir}tag/invisible-uni-extensions">
-                            <img src="{$img_dir}category/extensions/uni-extension.jpg" alt="" class="img-responsive">
+                            <img src="{$img_dir}category/extensions/uni-extension.jpg" alt="uni extension" class="img-responsive">
                         </a>
                         <h3 class="text-center">UNI-EXTENSIONs</h3>
                         <p class="text-center h4">Change your hairstyle in 1 second!</p>
@@ -648,12 +648,12 @@
                         <p class="text-center">The ideal solution for Fine/Thinner hair</p>
                         <h5 class="text-center uk-margin-small-top"><a href="{$base_dir}40458-mono-hair-pieces">shop now ></a></h5>
                         <a href="{$base_dir}40458-mono-hair-pieces">
-                            <img src="{$img_dir}category/hiar-pieces/Monofilament.jpg" alt="" class="img-responsive">
+                            <img src="{$img_dir}category/hiar-pieces/Monofilament.jpg" alt="Monofilament" class="img-responsive">
                         </a>
                     </li>
                     <li class="col-md-6 col-sm-6">
                         <a href="{$base_dir}tag/lace-closure">
-                            <img src="{$img_dir}category/hiar-pieces/lace-closure.jpg" alt="" class="img-responsive">
+                            <img src="{$img_dir}category/hiar-pieces/lace-closure.jpg" alt="lace closure" class="img-responsive">
                         </a>
                         <h3 class="text-center">lace closure</h3>
                         <p class="text-center">A great alternative to a wig</p>
@@ -661,7 +661,7 @@
                     </li>
                 </ul>
                 <div class="cargory_banner uk-margin-top">
-                    <img src="{$img_dir}category/hiar-pieces/pieces-new.jpg" alt="" usemap="#map" class="img-responsive"/>
+                    <img src="{$img_dir}category/hiar-pieces/pieces-new.jpg" alt="pieces new product" usemap="#map" class="img-responsive"/>
                     <map name="map">
                         <area shape="poly" coords="987, 2, 999, 308, 1168, 308, 1167, 2" href="{$base_dir}hair-pieces/41122-poppy-remy-human-hair-top-piece.html" onfocus="blur(this);"/>
                         <area shape="poly" coords="792, 2, 799, 307, 992, 308, 979, 1" href="{$base_dir}hair-pieces/41124-paris-remy-human-hair-top-piece.html" onfocus="blur(this);"/>

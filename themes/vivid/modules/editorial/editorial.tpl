@@ -176,10 +176,10 @@ i.arrow:hover {
 
 <div class="nov-banner uk-margin-large-bottom">
 	<div class="lavivid_logo">
-		<img src="{$img_dir}category/vivid/logo.png" alt="" class="img-responsive">
+		<img src="{$img_dir}category/vivid/logo.png" alt="lavivid logo" class="img-responsive">
 	</div>
 	<div class="lavivid_text">
-		<img src="{$img_dir}category/vivid/text.png" alt="" class="img-responsive">
+		<img src="{$img_dir}category/vivid/text.png" alt="lavivid text" class="img-responsive">
 	</div>
 	<a class="arrow" href="#home-product" data-uk-smooth-scroll><i class="icon-chevron-down"></i></a>
 </div>
@@ -196,16 +196,16 @@ i.arrow:hover {
 				<div class="home-product-color">
 					<span class="pull-left">Color</span>
 					<ul class="row pull-left">
-						<li><img src="{$base_dir}img/color/AL01001-01R(Almond-Frost).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01001-10R(Creamy-Ice).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01001-11R(Hazel-Glaze).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01001-12R(Maple-Swirl).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01001-13R(Sparking-Amber).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01001-17(Salted-Tiramisu).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01001-19(Java-Shimmered).jpg" alt="" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01001-01R(Almond-Frost).jpg" alt="AL01001-01R(Almond-Frost)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01001-10R(Creamy-Ice).jpg" alt="AL01001-10R(Creamy-Ice)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01001-11R(Hazel-Glaze).jpg" alt="AL01001-11R(Hazel-Glaze)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01001-12R(Maple-Swirl).jpg" alt="AL01001-12R(Maple-Swirl)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01001-13R(Sparking-Amber).jpg" alt="AL01001-13R(Sparking-Amber)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01001-17(Salted-Tiramisu).jpg" alt="AL01001-17(Salted-Tiramisu)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01001-19(Java-Shimmered).jpg" alt="AL01001-19(Java-Shimmered)" class="img-responsive"></li>
 					</ul>
 				</div>
-				<img src="{$img_dir}category/vivid/Lisa.jpg" alt="" class="img-responsive center-block">
+				<img src="{$img_dir}category/vivid/Lisa.jpg" alt="lavivid lisa" class="img-responsive center-block">
 			</a>
 			<h3 class="text-center">Lisa</h3>
 			<p class="text-center">Delightful sihouette with endless versatility.</p>
@@ -215,14 +215,14 @@ i.arrow:hover {
 				<div class="home-product-color">
 					<span class="pull-left">Color</span>
 					<ul class="row pull-left">
-						<li><img src="{$base_dir}img/color/AL01002-01R-(Almond-Frost).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01002-07(Shadow-Chestnut).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01002-10R(Creamy-Ice).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01002-11(Hazel-Glaze).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01002-18R(Double-Frost-Java).jpg" alt="" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01002-01R-(Almond-Frost).jpg" alt="AL01002-01R-(Almond-Frost)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01002-07(Shadow-Chestnut).jpg" alt="AL01002-07(Shadow-Chestnut)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01002-10R(Creamy-Ice).jpg" alt="AL01002-10R(Creamy-Ice)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01002-11(Hazel-Glaze).jpg" alt="AL01002-11(Hazel-Glaze)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01002-18R(Double-Frost-Java).jpg" alt="AL01002-18R(Double-Frost-Java)" class="img-responsive"></li>
 					</ul>
 				</div>
-				<img src="{$img_dir}category/vivid/Jenny.jpg" alt="" class="img-responsive">
+				<img src="{$img_dir}category/vivid/Jenny.jpg" alt="lavivid jenny" class="img-responsive">
 			</a>
 			<h3 class="text-center">Jenny</h3>
 		</div>
@@ -231,15 +231,15 @@ i.arrow:hover {
 				<div class="home-product-color">
 					<span class="pull-left">Color</span>
 					<ul class="row pull-left">
-						<li><img src="{$base_dir}img/color/AL01008-01R(Almond-Frost).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01008-09R(Macadamia).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01008-13(Sparking-Amber).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01008-16(Chocolate-Caramel).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01008-18R(Double-Frost-Java).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01008-19(Java-Shimmered).jpg" alt="" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01008-01R(Almond-Frost).jpg" alt="AL01008-01R(Almond-Frost)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01008-09R(Macadamia).jpg" alt="AL01008-09R(Macadamia)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01008-13(Sparking-Amber).jpg" alt="AL01008-13(Sparking-Amber)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01008-16(Chocolate-Caramel).jpg" alt="AL01008-16(Chocolate-Caramel)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01008-18R(Double-Frost-Java).jpg" alt="L01008-18R(Double-Frost-Java)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01008-19(Java-Shimmered).jpg" alt="AL01008-19(Java-Shimmered)" class="img-responsive"></li>
 					</ul>
 				</div>
-				<img class="img-responsive" src="{$img_dir}category/vivid/Patsy.jpg">
+				<img class="img-responsive" src="{$img_dir}category/vivid/Patsy.jpg" alt="lavivid patsy">
 			</a>
 			<h3 class="text-center">Patsy</h3>
 			<p class="text-center">A trendy look featuring a wispy cut with progressive mixed layers and heavily texturized mixed ends.</p>
@@ -251,11 +251,11 @@ i.arrow:hover {
 				<div class="home-product-color">
 					<span class="pull-left">Color</span>
 					<ul class="row pull-left">
-						<li><img src="{$base_dir}img/color/AL01003-01R(Almond-Frost).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01003-06(Light-Brown).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01003-07R(Shadow-Chestnut).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01003-09R(Macadamia).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01003-16(Chocolate-Caramel).jpg" alt="" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01003-01R(Almond-Frost).jpg" alt="AL01003-01R(Almond-Frost)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01003-06(Light-Brown).jpg" alt="AL01003-06(Light-Brown)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01003-07R(Shadow-Chestnut).jpg" alt="AL01003-07R(Shadow-Chestnut)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01003-09R(Macadamia).jpg" alt="AL01003-09R(Macadamia)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01003-16(Chocolate-Caramel).jpg" alt="AL01003-16(Chocolate-Caramel)" class="img-responsive"></li>
 					</ul>
 				</div>
 			</a>
@@ -269,14 +269,14 @@ i.arrow:hover {
 				<div class="home-product-color">
 					<span class="pull-left">Color</span>
 					<ul class="row pull-left">
-						<li><img src="{$base_dir}img/color/AL01005-09R(Macadamia).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01005-12(Maple-Swirl).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01005-13R(Sparking-Amber).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01005-14(Honey-Glaze).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01005-15R(Frappuccino).jpg" alt="" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01005-09R(Macadamia).jpg" alt="AL01005-09R(Macadamia)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01005-12(Maple-Swirl).jpg" alt="AL01005-12(Maple-Swirl)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01005-13R(Sparking-Amber).jpg" alt="AL01005-13R(Sparking-Amber)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01005-14(Honey-Glaze).jpg" alt="AL01005-14(Honey-Glaze)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01005-15R(Frappuccino).jpg" alt="AL01005-15R(Frappuccino)" class="img-responsive"></li>
 					</ul>
 				</div>
-				<img src="{$img_dir}category/vivid/Kate.jpg" alt="" class="img-responsive">
+				<img src="{$img_dir}category/vivid/Kate.jpg" alt="lavivid kate" class="img-responsive">
 			</a>
 			<h3 class="text-center">KATE</h3>
 			<p class="text-center">Casually tousled style with customized razored layers for natural fullness in the crown.</p>
@@ -286,14 +286,14 @@ i.arrow:hover {
 				<div class="home-product-color">
 					<span class="pull-left">Color</span>
 					<ul class="row pull-left">
-						<li><img src="{$base_dir}img/color/AL01007-01(Almond-Frost).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01007-07R(Shadow-Chestnut).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01007-09R(Macadamia).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01007-10R(Creamy-Ice).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01007-11(Hazel-Glaze).jpg" alt="" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01007-01(Almond-Frost).jpg" alt="AL01007-01(Almond-Frost)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01007-07R(Shadow-Chestnut).jpg" alt="AL01007-07R(Shadow-Chestnut)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01007-09R(Macadamia).jpg" alt="AL01007-09R(Macadamia)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01007-10R(Creamy-Ice).jpg" alt="AL01007-10R(Creamy-Ice)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01007-11(Hazel-Glaze).jpg" alt="AL01007-11(Hazel-Glaze)" class="img-responsive"></li>
 					</ul>
 				</div>
-				<img class="img-responsive" src="{$img_dir}category/vivid/Halle.jpg">
+				<img class="img-responsive" src="{$img_dir}category/vivid/Halle.jpg" alt="lavivid halle">
 			</a>
 			<h3 class="text-center">Halle</h3>
 			<p class="text-center">Short and “edgy” style,with point-cut layered and deathered fringe that can be tamed or tousled.</p>
@@ -303,14 +303,14 @@ i.arrow:hover {
 				<div class="home-product-color">
 					<span class="pull-left">Color</span>
 					<ul class="row pull-left">
-						<li><img src="{$base_dir}img/color/AL01006-01R(Almond-Frost).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01006-06(Light-Brown).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01006-07R(Shadow-Chestnut).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01006-11R(Hazel-Glaze).jpg" alt="" class="img-responsive"></li>
-						<li><img src="{$base_dir}img/color/AL01006-19(Java-Shimmered).jpg" alt="" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01006-01R(Almond-Frost).jpg" alt="AL01006-01R(Almond-Frost)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01006-06(Light-Brown).jpg" alt="AL01006-06(Light-Brown)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01006-07R(Shadow-Chestnut).jpg" alt="AL01006-07R(Shadow-Chestnut)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01006-11R(Hazel-Glaze).jpg" alt="AL01006-11R(Hazel-Glaze)" class="img-responsive"></li>
+						<li><img src="{$base_dir}img/color/AL01006-19(Java-Shimmered).jpg" alt="AL01006-19(Java-Shimmered)" class="img-responsive"></li>
 					</ul>
 				</div>
-				<img src="{$img_dir}category/vivid/Liz.jpg" alt="" class="img-responsive">
+				<img src="{$img_dir}category/vivid/Liz.jpg" alt="lavivid liz" class="img-responsive">
 			</a>
 			<h3 class="text-center">Liz</h3>
 			<p class="text-center">Unique,yet retro,chin length bob featuring a  side swept fringe horizon.</p>
@@ -329,7 +329,7 @@ i.arrow:hover {
 	<div class="designer-abl container">
 		<div class="row">
 			<div class="designer-abl-img col-md-4">
-				<img src="{$img_dir}category/vivid/Albeir.jpg" alt="" class="img-responsive">
+				<img src="{$img_dir}category/vivid/Albeir.jpg" alt="lavivid albeir" class="img-responsive">
 			</div>
 			<div class="designer-abl-desc col-md-8">
 				<h3>Albeir Awad</h3>
@@ -350,16 +350,16 @@ i.arrow:hover {
 	</div>
 	<div class="gallery-box uk-margin-top">
 		<ul>
-			<li><a href="{$img_dir}category/vivid/gallery-1-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-1.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-2-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-2.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-3-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-3.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-4-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-4.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-5-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-5.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-6-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-6.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-7-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-7.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-8-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-8.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-9-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-9.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$img_dir}category/vivid/gallery-10-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-10.jpg" alt="" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-1-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-1.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-2-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-2.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-3-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-3.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-4-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-4.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-5-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-5.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-6-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-6.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-7-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-7.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-8-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-8.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-9-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-9.jpg" alt="lavivid" class="img-responsive"></a></li>
+			<li><a href="{$img_dir}category/vivid/gallery-10-large.jpg" data-uk-lightbox="{literal}{group:'gallery'}{/literal}"><img src="{$img_dir}category/vivid/gallery-10.jpg" alt="lavivid" class="img-responsive"></a></li>
 		</ul>
 	</div>
 </section>
@@ -370,12 +370,12 @@ i.arrow:hover {
 	<div class="row">
 		<div class="col-md-6 col-sm-6 uk-margin-bottom">
 			<a href="https://www.youtube.com/embed/NGznWrSYK1I" data-uk-lightbox>
-				<img src="{$img_dir}category/vivid/video1.jpg" alt="" width="100%">
+				<img src="{$img_dir}category/vivid/video1.jpg" alt="lavivid video" width="100%">
 			</a>
 		</div>
 		<div class="col-md-6 col-sm-6 uk-margin-bottom">
 			<a href="https://www.youtube.com/embed/iEqe_xeFcRQ" data-uk-lightbox>
-				<img src="{$img_dir}category/vivid/video2.jpg" alt="" width="100%">
+				<img src="{$img_dir}category/vivid/video2.jpg" alt="lavivid video" width="100%">
 			</a>
 		</div>
 	</div>
