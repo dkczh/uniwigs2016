@@ -470,7 +470,6 @@ class AdminOrdersControllerCore extends AdminController
             if (Tools::getIsset('cancel')) {
                 Tools::redirectAdmin(self::$currentIndex.'&token='.$this->token);
             }
-
             $this->tpl_list_vars['updateOrderStatus_mode'] = true;
             $this->tpl_list_vars['order_statuses'] = $this->statuses_array;
             $this->tpl_list_vars['REQUEST_URI'] = $_SERVER['REQUEST_URI'];
@@ -541,62 +540,73 @@ class AdminOrdersControllerCore extends AdminController
 			$employee_name = $this->context->employee->firstname.'.'.$this->context->employee->lastname;
 			
 			if(Tools::getValue('id_remind')){
-		
-			//更新已经存在的 id_remind 
-			Db::getInstance()->execute("UPDATE 
-			px_order_remind SET date = '".Tools::getValue('remind_date')."', 
-			actor ='$employee_name',date_upd =date_sub(now(), interval 1 day),
-			manufacture='".Tools::getValue('remind_manufacture')."',status='".Tools::getValue('remind_status')."'
-			WHERE id_remind=".Tools::getValue('id_remind'));
+				
+				$nowdate=date("y-m-d");
+				$adddate=Tools::getValue('remind_date');
+				if($adddate=='' or strtotime($adddate)<strtotime($nowdate)){	
+				 $this->errors[] = Tools::displayError("请填写正确的备货时间(大于当前时间)");	
+				}else{
+					
+				//更新已经存在的 id_remind 
+				Db::getInstance()->execute("UPDATE 
+				px_order_remind SET date = '".Tools::getValue('remind_date')."', 
+				actor ='$employee_name',date_upd =date_sub(now(), interval 1 day),
+				manufacture='".Tools::getValue('remind_manufacture')."',status='".Tools::getValue('remind_status')."'
+				WHERE id_remind=".Tools::getValue('id_remind'));
+				
+				$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
+				//增加生产编号  和 生产状态  两个字段
+				$action.="生产单号为(".'<span style="color:red">'.Tools::getValue('remind_manufacture')."</span>)";
+				$action.="生产状态为(".'<span style="color:red">'.Tools::getValue('remind_status')."</span>)";
+				
+				Db::getInstance()->execute("insert into px_order_remind_history 
+				(id_remind,action,date_add,actor)VALUES (".Tools::getValue('id_remind').",'$action',date_sub(now(), interval 1 day),'$employee_name')");
+				//执行成功后 跳转回原有order页面
+				Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
+					
+				}
+				
+				
 			
-			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
-			//增加生产编号  和 生产状态  两个字段
-			$action.="生产单号为(".'<span style="color:red">'.Tools::getValue('remind_manufacture')."</span>)";
-			$action.="生产状态为(".'<span style="color:red">'.Tools::getValue('remind_status')."</span>)";
 			
-			Db::getInstance()->execute("insert into px_order_remind_history 
-			(id_remind,action,date_add,actor)VALUES (".Tools::getValue('id_remind').",'$action',date_sub(now(), interval 1 day),'$employee_name')");
-				 Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
+			}else
+			{
+				$nowdate=date("y-m-d");
+				$adddate=Tools::getValue('remind_date');
+				if($adddate=='' or strtotime($adddate)<strtotime($nowdate)){	
+				 $this->errors[] = Tools::displayError("请填写正确的备货时间(大于当前时间)");	
+				}else{
+					$remind_exits= Db::getInstance()->getValue("select id_remind from px_order_remind where id_order ='".Tools::getValue('id_order')."' and product_name ='".Tools::getValue('product_name')."'"."
+					");	
+					if(!$remind_exits){
+						Db::getInstance()->execute("insert into px_order_remind 
+						(id_order,skus,product_name,date,status,manufacture,date_upd,actor)
+						VALUES 
+						(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."','".Tools::getValue('remind_status')."','".Tools::getValue('remind_manufacture')."',date_sub(now(), interval 1 day),'$employee_name')  
+						");
+						
+						//产品名称 存在特殊字符 
+						$product_name=	str_replace('"','\"',Tools::getValue('product_name'));
+						$sqlre="select id_remind from px_order_remind where id_order ='".(int)$order->id."'and product_name ='$product_name'";
+						$id_reming= Db::getInstance()->getValue($sqlre);
+					
+						$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
+						if(Tools::getValue('remind_manufacture')!=''){
+						$action.="生产单号为(".'<span style="color:red">'.Tools::getValue('remind_manufacture')."</span>)";
+						}
+						if(Tools::getValue('remind_status')!=''){
+						$action.="生产状态为(".'<span style="color:red">'.Tools::getValue('remind_status')."</span>)";
+						}
+						Db::getInstance()->execute("insert into px_order_remind_history 
+						(id_remind,action,date_add,actor)VALUES ($id_reming,'$action',date_sub(now(), interval 1 day),'$employee_name')");
+						 //执行成功后 跳转回原有order页面
+						 Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
+					}	
+					
+				}
 			
-			}else{
-			 $nowdate=date("y-m-d");
-			 $adddate=Tools::getValue('remind_date');
-			
-			if($adddate==''){
-			 $this->errors[] = Tools::displayError('请选择备货截止时间');	 
-			
-			}
-			 if(strtotime($adddate)<strtotime($nowdate)){
-			 $this->errors[] = Tools::displayError('备货截止日期必须大于当前日期');	 
-			
-			}
-			
-			$remind_exits= Db::getInstance()->getValue("select id_remind from px_order_remind where id_order ='".Tools::getValue('id_order')."' and product_name ='".Tools::getValue('product_name')."'"."
-			");	
-			if(!$remind_exits){
-			Db::getInstance()->execute("insert into px_order_remind 
-			(id_order,skus,product_name,date,status,manufacture,date_upd,actor)
-			VALUES 
-			(".Tools::getValue('id_order').",'".Tools::getValue('skus')."','".Tools::getValue('product_name')."','".Tools::getValue('remind_date')."','".Tools::getValue('remind_status')."','".Tools::getValue('remind_manufacture')."',date_sub(now(), interval 1 day),'$employee_name')  
-			");
-			
-			//产品名称 存在特殊字符 
-			$product_name=	str_replace('"','\"',Tools::getValue('product_name'));
-			$sqlre="select id_remind from px_order_remind where id_order ='".(int)$order->id."'and product_name ='$product_name'";
-			$id_reming= Db::getInstance()->getValue($sqlre);
-		
-			$action = '<span style="color:red">'.$employee_name."</span>"."更新订单(".Tools::getValue('id_order').")的产品(".'<span style="color:red">'.Tools::getValue('skus')."</span>)备货截止日期为(".'<span style="color:red">'.Tools::getValue('remind_date')."</span>)";
-			if(Tools::getValue('remind_manufacture')!=''){
-			$action.="生产单号为(".'<span style="color:red">'.Tools::getValue('remind_manufacture')."</span>)";
-			}
-			if(Tools::getValue('remind_status')!=''){
-			$action.="生产状态为(".'<span style="color:red">'.Tools::getValue('remind_status')."</span>)";
-			}
-			Db::getInstance()->execute("insert into px_order_remind_history 
-			(id_remind,action,date_add,actor)VALUES ($id_reming,'$action',date_sub(now(), interval 1 day),'$employee_name')");
-			
-			}
-				 Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
+				
+				
 			}
 		
 		
@@ -682,6 +692,8 @@ class AdminOrdersControllerCore extends AdminController
 
                 if (!Validate::isLoadedObject($order_state)) {
                     $this->errors[] = Tools::displayError('The new order status is invalid.');
+					var_dump( $this->errors);
+					exit;
                 } else {
                     $current_order_state = $order->getCurrentOrderState();
                     if ($current_order_state->id != $order_state->id) {
