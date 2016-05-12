@@ -150,13 +150,15 @@ AND DATE_SUB(date, INTERVAL 0 DAY)
 ";}
 if($id=='99'){
 	$sql = "SELECT
-	*,
+	od.*,
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
-	TIMESTAMPDIFF(DAY,date,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'))  as rdate
+	TIMESTAMPDIFF(DAY,od.date,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'))  as rdate
 FROM
-	px_order_remind
+	px_order_remind od
+LEFT JOIN  ps_orders o on o.id_order=od.id_order
 WHERE
-	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d')>date
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d')>od.date
+and  o.current_state not in (4,6) 
 ";}
 	$res = getall($db,$sql);
 	
