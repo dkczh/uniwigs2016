@@ -137,7 +137,7 @@ class AdminCartsControllerCore extends AdminController
     {
          if (empty($this->display)) {
             $this->page_header_toolbar_btn['export_cart'] = array(
-                'href' => self::$currentIndex.'&test=export&token='.$this->token,
+                'href' => self::$currentIndex.'&test=export&exportcart&token='.$this->token,
                 'desc' => $this->l('Export carts', null, null, false),
                 'icon' => 'process-icon-export'
             );

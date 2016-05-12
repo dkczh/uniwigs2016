@@ -77,15 +77,8 @@ class AdminCartsController extends AdminCartsControllerCore
         $helper->kpis = $kpis;
 		
 		
-			if (Tools::getValue('test') == 'export')
-		{
-			
-			$this->exportExcel();
-		
-		}
-		
 		//更改列表生成的 导出链接为正确的 
-		$this->toolbar_btn['export']['href']= self::$currentIndex.'&test=export&token='.$this->token;
+		$this->toolbar_btn['export']['href']= self::$currentIndex.'&test=export&exportcart&token='.$this->token;
 		/* var_dump($this->toolbar_btn);
 		exit; */
         return $helper->generate();

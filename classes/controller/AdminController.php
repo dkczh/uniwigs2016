@@ -959,6 +959,15 @@ class AdminControllerCore extends Controller
 		
 		exit;
 		}
+		//自定义 cart excel表格导出
+		if (Tools::getValue('test') == 'export')
+		{
+		
+			$this->cartexport($this->_list);
+			exit;
+		
+		
+		}
 
         header('Content-type: text/csv');
         header('Content-Type: application/force-download; charset=UTF-8');
@@ -1011,7 +1020,7 @@ class AdminControllerCore extends Controller
     }
 	
 	
-	//自定义 excel 导出
+	//自定义order excel 导出
 	public function orderexport($list)
     {
 	$mypath=$_SERVER['DOCUMENT_ROOT'];
@@ -1094,7 +1103,72 @@ class AdminControllerCore extends Controller
 	}
 	
 	
+	//自定义cart excel 导出
+	public function cartexport($list)
+    {
+	$mypath=$_SERVER['DOCUMENT_ROOT'];
+	require_once($mypath.'/apitools/outexcel/Classes/PHPExcel.php');
+	require_once($mypath.'/apitools/outexcel/Classes/PHPExcel/Writer/Excel5.php');
 
+		
+	$this->cartexcel($list,'export_order_customer_'.time());
+		
+    }
+	
+	
+	//购物车导出格式
+	function   cartexcel($res,$name)
+	{
+		$objPHPExcel = new PHPExcel();
+		//设置当前的sheet
+		$objPHPExcel->setActiveSheetIndex(0);
+		//设置sheet的name
+		$objPHPExcel->getActiveSheet()->setTitle('购物车统计');
+		//设置单元格的值
+
+		$objPHPExcel->getActiveSheet()->setCellValue('A1', 'id_cart');//xx 默认字段 Website
+		$objPHPExcel->getActiveSheet()->setCellValue('B1', 'date_add');
+		$objPHPExcel->getActiveSheet()->setCellValue('C1', 'creditBalance');
+		$objPHPExcel->getActiveSheet()->setCellValue('D1', 'coupon');//xx 默认字段 3
+		$objPHPExcel->getActiveSheet()->setCellValue('E1', 'id_order');//xx 默认字段 3
+		$objPHPExcel->getActiveSheet()->setCellValue('F1', 'email'); //xx 默认字段 空
+		$objPHPExcel->getActiveSheet()->setCellValue('G1', 'firstname');//xx 默认字段 空
+		$objPHPExcel->getActiveSheet()->setCellValue('H1', 'lastname');
+		$objPHPExcel->getActiveSheet()->setCellValue('I1', 'sku');
+		$objPHPExcel->getActiveSheet()->setCellValue('J1', 'product_name');//xx 默认字段 空
+		$objPHPExcel->getActiveSheet()->setCellValue('K1', 'quantity');	
+		$i = 2 ;
+		foreach ($res as $a) {
+			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i, $a['id_cart']);
+			$objPHPExcel->getActiveSheet()->setCellValue('B'.$i, $a['date_add']);
+			$objPHPExcel->getActiveSheet()->setCellValue('C'.$i, $a['creditBalance']);
+			$objPHPExcel->getActiveSheet()->setCellValue('D'.$i, $a['coupon']);
+			$objPHPExcel->getActiveSheet()->setCellValue('E'.$i, $a['id_order']);
+			$objPHPExcel->getActiveSheet()->setCellValue('F'.$i, $a['email']);
+			$objPHPExcel->getActiveSheet()->setCellValue('G'.$i, $a['firstname']);
+			$objPHPExcel->getActiveSheet()->setCellValue('H'.$i, $a['lastname']);
+			$objPHPExcel->getActiveSheet()->setCellValue('I'.$i, $a['reference']);
+			$objPHPExcel->getActiveSheet()->setCellValue('J'.$i, $a['name']);
+			$objPHPExcel->getActiveSheet()->setCellValue('K'.$i, $a['quantity']);
+			
+			$i++;
+		} 
+		
+		
+		$objWriter = new PHPExcel_Writer_Excel5($objPHPExcel);
+		header("Pragma: public");
+		header("Expires: 0");
+		header("Cache-Control:must-revalidate, post-check=0, pre-check=0");
+		header("Content-Type:application/force-download");
+		header("Content-Type:application/vnd.ms-execl");
+		header("Content-Type:application/octet-stream");
+		header("Content-Type:application/download");;
+		header("Content-Disposition:attachment;filename='".$name.".xls");
+		header("Content-Transfer-Encoding:binary");
+		$objWriter->save('php://output');
+	
+	}
+	
     /**
      * Object Delete
      *
