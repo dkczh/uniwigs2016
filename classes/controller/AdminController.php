@@ -1111,7 +1111,7 @@ class AdminControllerCore extends Controller
 	require_once($mypath.'/apitools/outexcel/Classes/PHPExcel/Writer/Excel5.php');
 
 		
-	$this->cartexcel($list,'export_order_customer_'.time());
+	$this->cartexcel($list,'export_cart_items_'.time());
 		
     }
 	
