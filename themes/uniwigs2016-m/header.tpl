@@ -78,6 +78,9 @@
 		{/if}
 		{$HOOK_HEADER}
 		<link rel="stylesheet" href="http{if Tools::usingSecureMode()}s{/if}://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin,latin-ext" type="text/css" media="all" />
+		<link rel="apple-touch-icon-precomposed" href="{$base_dir}themes/uniwigs2016-m/img/ios/Icon57.png" />
+		<link rel="apple-touch-icon" size="72x72" href="{$base_dir}themes/uniwigs2016-m/img/ios/Icon72.png" />
+		<link rel="apple-touch-icon" size="114x114" href="{$base_dir}themes/uniwigs2016-m/img/ios/Icon114.png" />
 		<!--[if IE 8]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
