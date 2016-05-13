@@ -209,7 +209,7 @@ font-size: 11px;}
 {assign var="cat_use_name" value='1'}
 
 <section class="containerIndex">
-	<a href="/content/34-share-your-photos" target="_blank" class="img-responsive share-your-photos"></a>
+	<a href="/content/34-share-your-photos" class="img-responsive share-your-photos"></a>
 {if isset($smarty.get.ca)}
 {else}
 <div class="customer-nav" data-uk-dropdown="{literal}{mode:'click'}{/literal}">
