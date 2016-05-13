@@ -266,10 +266,16 @@
 					})
 				</script>
 				<hr />
+				{* 产品退换货 *}
+				{include file='controllers/orders/_return.tpl'}
+				{* /产品退换货 *}
+				
+				<hr />
 				{* 产品定制 时间 *}
 				{include file='controllers/orders/_remind.tpl'}
 				{* /产品定制 时间 *}
 				<hr />
+				
 				<!-- Tab nav -->
 				<ul class="nav nav-tabs" id="myTab">
 					{$HOOK_TAB_SHIP}
