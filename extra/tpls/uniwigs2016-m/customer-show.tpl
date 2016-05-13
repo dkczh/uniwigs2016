@@ -26,7 +26,7 @@
 	border-top: 1px solid #F5F5F5;
 	padding: 0;
 }
- #pubu .pic p.view_btn a{padding: 10px;}
+ #pubu .pic p.view_btn a{padding:15px 10px;}
 #pubu .pic p.view_btn a:hover{color:#EF3386;}
 .columns-container{background-color:#eee;}
 .breadcrumb,#f-wrapper,.ff-wrapper{display: none}
@@ -45,7 +45,6 @@
 	z-index: 5;
 }
 	@media (max-width: 1024px) {
-		#pubu .pic{box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);}
 		#pubu.container{padding: 0}
 	}
 #pubu .pic a{
@@ -209,7 +208,22 @@ font-size: 11px;}
 {assign var="cat_use_name" value='1'}
 
 <section class="containerIndex">
-	<a href="/content/34-share-your-photos" class="img-responsive share-your-photos"></a>
+	<a href="#shareyouphotos" class="img-responsive share-your-photos" data-uk-modal></a>
+	<div id="shareyouphotos" class="uk-modal">
+	    <div class="uk-modal-dialog">
+	        <a class="uk-modal-close uk-close"></a>
+	        <div class="xize">
+	        	<h4>WRITE YOUR REVIEW AND UPLOAD A SNAPSHOT OF YOUR NEW LOOK.</h4>
+	        	<h4>How to write a winning review:</h4>
+	        	<ul class="uk-list uk-list-space">
+	        		<li><span class="uk-text-bold">1</span>. <span>Sign in your personal Uniwigs account and select “My Orders”.</span></li>
+	        		<li><span class="uk-text-bold">2</span>. <span>Find the product that you purchased and click “Write a Comment”</span></li>
+	        		<li><span class="uk-text-bold">3</span>. <span>Follow the instruction to write a comment and upload a photo of your new look.</span></li>
+	        		<li>Uniwigs will choose ONE lucky candidate every THREE months as the winner! Who will get the prize? We are looking forward to your participation.</li>
+	        	</ul>
+	        </div>
+	    </div>
+	</div>
 {if isset($smarty.get.ca)}
 {else}
 <div class="customer-nav" data-uk-dropdown="{literal}{mode:'click'}{/literal}">
