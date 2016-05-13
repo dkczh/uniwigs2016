@@ -1,0 +1,17 @@
+{
+  "name": "Uniwigs",
+  "icons": [
+    {
+      "src": "img/ios/Icon72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": 1.5
+    },
+    {
+      "src": "img/ios/Icon144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": 3.0
+    },
+  ]
+}
