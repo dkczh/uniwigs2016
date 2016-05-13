@@ -496,7 +496,8 @@ class AdminOrdersControllerCore extends AdminController
 			$employee_name = $this->context->employee->firstname.'.'.$this->context->employee->lastname;
 			
 			$id_return_order = (int)$order->id;
-            $employee = $this->context->employee->id;
+            $employee = (int)$this->context->employee->id;
+	
             $comreturn_reason = intval(Tools::getValue("comreturn_reason"));
             $comreturn_comment = Tools::getValue('comreturn_comment','');
             $comreturn_refund = Tools::getValue('comreturn_refund');
@@ -512,6 +513,7 @@ class AdminOrdersControllerCore extends AdminController
                     		OR $comreturn_sum!=$comreturnresult['comreturn_sum']
                     		OR $comreturn_refund!=$comreturnresult['comreturn_refund']
                     		OR $comreturn_return!=$comreturnresult['comreturn_return']) {
+				
                     	Db::getInstance()->Execute("
                     		update px_order_comreturn set
                     			comreturn_reason='".$comreturn_reason."'
@@ -519,16 +521,46 @@ class AdminOrdersControllerCore extends AdminController
                     			,comreturn_refund='".$comreturn_refund."'
                     			,comreturn_sum='".$comreturn_sum."'
                     			,comreturn_return='".$comreturn_return."'
-                    			,id_employee='".$id_employee."'
+                    			,id_employee='".$employee."'
                     			,operate_time='".date('Y-m-d H:m:s')."'
                     		where id_order='".$id_return_order."'"
                     	);
+						
+					
+						$search  = array("1","2","3","4","5",'6','7','100');
+						$replace = array("在发货前要求退款","发货太慢","物流时间过长","丢单","错发",'漏发','拒付','其他原因');
+						$comreturn_reason = str_replace($search ,$replace,$comreturn_reason);
+
+						$action  = "<span style=\'color:red\'>$employee_name</span> 更新信息-退换原因<span style=\'color:red\'>($comreturn_reason)</span>--退换备注<span style=\'color:red\'>($comreturn_comment)</span>--
+						退换方式<span style=\'color:red\'>($comreturn_refund)</span>--金额<span style=\'color:red\'>($comreturn_sum)</span>货品是否退回<span style=\'color:red\'>($comreturn_return)</span>";
+						$employee_name = $this->context->employee->firstname.'.'.$this->context->employee->lastname;
+						Db::getInstance()->Execute("
+                    		insert into  px_order_comreturn_history 
+							(id_order,action,actor,operate_time) values (".(int)$order->id.",'".$action."',
+							'".$this->context->employee->email."',date_sub(now(), interval 12 hour))"
+                    	);
+						
                     }
                 }else{
                     Db::getInstance()->Execute("insert into px_order_comreturn
                     	(id_order,id_employee,comreturn_reason,comreturn_comment,comreturn_refund,comreturn_sum,comreturn_return,operate_time)
                     	values('".$id_return_order."','".$employee."','".$comreturn_reason."','".$comreturn_comment."','".$comreturn_refund."','".$comreturn_sum."','".$comreturn_return."','".date('Y-m-d H:m:s')."') "
                     );
+					$search  = array("1","2","3","4","5",'6','7','100');
+					$replace = array("在发货前要求退款","发货太慢","物流时间过长","丢单","错发",'漏发','拒付','其他原因');
+					$comreturn_reason = str_replace($search ,$replace,$comreturn_reason);
+
+					
+					$action  = "<span style=\'color:red\'>$employee_name</span> 更新信息-退换原因<span style=\'color:red\'>($comreturn_reason)</span>--退换备注<span style=\'color:red\'>($comreturn_comment)</span>--
+						退换方式<span style=\'color:red\'>($comreturn_refund)</span>--金额<span style=\'color:red\'>($comreturn_sum)</span>货品是否退回<span style=\'color:red\'>($comreturn_return)</span>";
+					$employee_name = $this->context->employee->firstname.'.'.$this->context->employee->lastname;
+					Db::getInstance()->Execute("
+                    		insert into  px_order_comreturn_history 
+							(id_order,action,actor,operate_time) values (".(int)$order->id.",'".$action."',
+							'".$employee_name."',date_sub(now(), interval 12 hour))"
+                    	);
+					
+					
                 }
 			Tools::redirectAdmin(self::$currentIndex.'&id_order='.(int)$order->id.'&vieworder&token='.$this->token);
 			//exit;
@@ -1905,17 +1937,16 @@ class AdminOrdersControllerCore extends AdminController
 		
 		//获取订单退货历史信息
 		$comreturnhistory=Db::getInstance()->getRow("select comreturn_reason,comreturn_comment,comreturn_refund,comreturn_return,comreturn_sum from px_order_comreturn where id_order='".$order->id."' ");
-		
-	/* 	echo '<pre>';
-		var_dump($comreturnhistory);
-		echo '</pre>';
-		exit; */
+		//获取当前订单退货操作信息 
+		$comreturnactor = Db::getInstance()->executeS("select * from px_order_comreturn_history where id_order=".$order->id." order by operate_time desc ");
+	
 		//获取客户历史订单信息
 		$corder = $this->getCustomerOrders($order->id_customer);
 		
 		
 		//获取当前订单 定制信息  
 		$orderremind = $this->getOrderRemind($order->id); 
+	
 
 		
 		$orderremindhistory = $this->getOrderRemindHistroy($order->id); 
@@ -1926,6 +1957,7 @@ class AdminOrdersControllerCore extends AdminController
             'order' => $order,
 			'customer_order'=>$corder,
 			'comreturnhistory'=>$comreturnhistory,
+			'comreturnactor'=>$comreturnactor,
             'cart' => new Cart($order->id_cart),
             'customer' => $customer,
 			'orderremind' => $orderremind,
