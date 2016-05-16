@@ -112,4 +112,3 @@
 {/strip}
 {/if}
 <script type="text/javascript" src="/themes/uniwigs2016/js/sticky.min.js"></script>
-<link rel="stylesheet" href="/themes/uniwigs2016/css/sticky.css" type="text/css" media="all">
