@@ -34,7 +34,7 @@
     <div class="footer-help uk-margin-small-top">
         <h4>Get Live Help</h4>
         <p>A helpful Customer Care Specialist is just a click or call away.</p>
-        <p><span class="footer-call"><span>Monday - Friday PST,9:00AM – 5:30PM</span><br><a href="tel:6268102938">626-810-2938</a></span></p>
+        {*<p><span class="footer-call"><span>Monday - Friday PST,9:00AM – 5:30PM</span><br><a href="tel:6268102938">626-810-2938</a></span></p>*}
         <p><span>Monday - Friday EST,9:00PM – 5:00AM</span><br><a href="tel:9098956421">909-895-6421</a></p>
     </div>
     <div id="social_block">
