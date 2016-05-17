@@ -21,6 +21,8 @@
     margin-bottom: 0; }
     #order-opc .delivery_options label .table {
       margin-bottom: 0; }
+  #order-opc .search-top {
+    display: none; }
   #order-opc .delivery_options_address td:nth-child(2) {
     width: 100px; }
   #order-opc .lost_password {
@@ -140,7 +142,8 @@
     color: #d32676;
     border-color: #d32676; }
 
-#backup_a {
+#backup_a,
+.fix_nav {
   display: none; }
 
 #new_account_form .id_state,
