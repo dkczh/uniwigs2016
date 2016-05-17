@@ -22,7 +22,7 @@
 *  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-{if $page_name = product}
+
 <!-- MODULE Block cart -->
 {if isset($blockcart_top) && $blockcart_top}
 <div class="col-sm-4 clearfix{if $PS_CATALOG_MODE} header_user_catalog{/if} uk-hidden">
@@ -351,4 +351,3 @@
 {addJsDefL name=toBeDetermined}{l s='To be determined' mod='blockcart' js=1}{/addJsDefL}
 {/strip}
 <!-- /MODULE Block cart -->
-{/if}
