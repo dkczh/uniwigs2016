@@ -393,7 +393,7 @@
 	.layer_cart_cart {
 		background: #fff;
 		border-left: 1px solid $base-border-color;
-		padding: 21px 20px 170px 20px;
+		padding: 21px 20px 150px 20px;
 		@include border-radius(0px 4px 4px 0px);
 		position: relative;
 		@media (min-width: $screen-lg) { // min 1200px
@@ -415,7 +415,7 @@
 			color: $base-text-color;
 			padding-bottom: 13px;
 			@media (max-width: $screen-xs-max) { // max 767px
-				font-size: 18px;
+				font-size: 17px;
 			}
 		}
 		.layer_cart_row {
@@ -427,13 +427,15 @@
 			left: 0;
 			width: 100%;
 			padding: 0px 20px 20px 20px;
-			.btn {
+			.uk-button-primary {
 				margin-bottom: 10px;
+				font-size: 14px;
+    			padding: 0;
 			}
 			span.exclusive-medium {
 				margin-right: 5px;
-				margin-top:5px;
 				font-size:14px;
+				padding:0;
 				i {
 					padding-right: 5px;
 					color: #777777;
