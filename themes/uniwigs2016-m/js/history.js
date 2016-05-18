@@ -40,8 +40,10 @@ function showOrder(mode, var_content, file)
 					//return slip : check or uncheck every checkboxes
 					$('#order-detail-content th input[type=checkbox]').click(function()
 					{
+							$(this).parent().toggleClass('checked');
 							$('#order-detail-content td input[type=checkbox]').each(function()
 							{
+								$(this).parent().toggleClass('checked');
 								this.checked = $('#order-detail-content th input[type=checkbox]').is(':checked');
 								updateOrderLineDisplay(this);
 							});
@@ -49,6 +51,7 @@ function showOrder(mode, var_content, file)
 					//return slip : enable or disable 'global' quantity editing
 					$('#order-detail-content td input[type=checkbox]').click(function()
 					{
+						$(this).parent().toggleClass('checked');
 						updateOrderLineDisplay(this);
 					});
 					//return slip : limit quantities
@@ -101,9 +104,9 @@ function showOrder(mode, var_content, file)
 
 function updateOrderLineDisplay(domCheckbox)
 {
-	var lineQuantitySpan = $(domCheckbox).parent().parent().find('.order_qte_span');
-	var lineQuantityInput = $(domCheckbox).parent().parent().find('.order_qte_input');
-	var lineQuantityButtons = $(domCheckbox).parent().parent().find('.return_quantity_up, .return_quantity_down');
+	var lineQuantitySpan = $(domCheckbox).parent().parent().parent().parent().find('.order_qte_span');
+	var lineQuantityInput = $(domCheckbox).parent().parent().parent().parent().find('.order_qte_input');
+	var lineQuantityButtons = $(domCheckbox).parent().parent().parent().parent().find('.return_quantity_up, .return_quantity_down');
 	if($(domCheckbox).is(':checked'))
 	{
 		lineQuantitySpan.hide();

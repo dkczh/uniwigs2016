@@ -1174,7 +1174,24 @@ input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9;
   /* IE8-9 */
-  line-height: normal; }
+  line-height: normal;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+  padding: 0; }
+
+.checked input[type="radio"],
+.checked input[type="checkbox"] {
+  background-image: url("../img/public/radio-dot.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 70%; }
 
 input[type="file"] {
   display: block; }
@@ -1235,6 +1252,13 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 textarea.form-control {
   height: auto; }
 
+select.form-control {
+  background: url("../img/public/icon_down_medium.png") no-repeat 94% center;
+  background-size: 10px;
+  -webkit-background-size: 10px auto;
+  font-size: 1.1em;
+  padding-right: 30px; }
+
 .form-group {
   margin-bottom: 15px; }
 
@@ -1257,8 +1281,7 @@ textarea.form-control {
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-  float: left;
-  margin-left: -20px; }
+  float: left; }
 
 .radio + .radio,
 .checkbox + .checkbox {
@@ -7172,6 +7195,7 @@ div.star a:hover {
 .footer-container {
   text-align: center;
   padding: 14px 0 55px;
+  margin-top: 15px;
   background-color: #fff; }
   .footer-container .container {
     padding-bottom: 60px; }
@@ -7561,7 +7585,8 @@ a.price_discount_delete {
     #cart_summary tbody tr td div {
       padding-bottom: 5px; }
     #cart_summary tbody tr td.cart_product {
-      padding: 10px; }
+      padding: 10px;
+      vertical-align: top; }
       #cart_summary tbody tr td.cart_product img {
         border: 1px solid #d6d4d4; }
     #cart_summary tbody tr td.cart_unit .price span {
@@ -7741,7 +7766,7 @@ table#cart_summary .gift-icon {
 
 #id_address_invoice.form-control,
 #id_address_delivery.form-control {
-  width: 269px; }
+  width: 100%; }
 
 .addresses .waitimage {
   display: none;

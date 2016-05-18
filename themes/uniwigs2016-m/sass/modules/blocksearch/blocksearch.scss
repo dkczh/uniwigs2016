@@ -119,3 +119,18 @@ form#searchbox {
 		}
 	}
 }
+
+#order-opc .search-top,
+#address .search-top,
+#addresses .search-top,
+#my-account .search-top,
+#history .search-top,
+#module-blockwishlist-mywishlist .search-top,
+#order-slip .search-top,
+#discount .search-top,
+#order-follow .search-top,
+#identity .search-top,
+#module-loyalty-default .search-top
+{
+	display: none;
+}

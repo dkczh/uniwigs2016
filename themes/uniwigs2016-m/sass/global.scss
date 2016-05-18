@@ -1691,6 +1691,7 @@ div.star a:hover {
 .footer-container {
 	text-align: center;
 	padding: 14px 0 55px;
+	margin-top:15px;
 	background-color: #fff;
 	.container {
 		padding-bottom: 60px;
@@ -2243,6 +2244,7 @@ a.price_discount_delete {
 				&.cart_product {
 					@extend .text-center;
 					padding: 10px;
+					vertical-align: top;
 					img {
 						border: 1px solid $table-border-color;
 					}
@@ -2516,7 +2518,7 @@ table#cart_summary .gift-icon {
 
 #id_address_invoice.form-control,
 #id_address_delivery.form-control {
-	width: 269px;
+	width: 100%;
 }
 
 .addresses {

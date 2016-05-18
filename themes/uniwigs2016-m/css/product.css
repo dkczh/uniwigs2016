@@ -396,6 +396,9 @@ span.view_scroll_spacer {
     border-bottom: 1px solid #eee; }
   #customizationForm-box .custom_options_box li {
     position: relative; }
+  #customizationForm-box .custom_options_box .customer_select {
+    width: 68%;
+    display: inline-block; }
 #customizationForm-box .custom_options_a {
   font-size: 1.1em;
   display: block;

@@ -39,8 +39,8 @@
 {/if}
 {literal}
 <style>
-	#authorizeaim_form .form-control{max-width:350px;}
-	#authorizeaim_form .col-sm-6{max-width:175px}
+	#authorizeaim_form .form-control,#uniform-cardType{max-width:350px;}
+	#authorizeaim_form .col-sm-6{max-width:175px;padding-left: 0;}
 	.authorizeaim_form_span{padding: 0.5em;text-decoration: none;display: block;}
 	#authorizeaim_form .uk-form-controls img{display: none}	
 </style>
