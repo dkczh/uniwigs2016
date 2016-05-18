@@ -110,7 +110,12 @@
 	{/if}
 </div>
 <script>
+{if isset($order.id_customer) }
 window.customer_id="{$order.id_customer}";
+{else}
+window.customer_id="";
+{/if}
+
 $(function() {
 	$('#block-order-detail').on('click','.rate_product',function(){
 		openRatingWindow($(this).attr('oid'), $(this).attr('iid'), $(this).attr('pid'), $(this).attr('psku'));
