@@ -76,7 +76,32 @@ class CacheMemcacheCore extends Cache
 	{
 		if (!$this->is_connected)
 			return false;
+		
+		
+		
+		if(strstr($_SERVER['QUERY_STRING'],"controller=tag") or $_SERVER['REQUEST_URI']=='/'
+
+	or strstr($_SERVER['REQUEST_URI'],"/content/")
+	or strstr($_SERVER['REQUEST_URI'],"/contact-us")
+	or strstr($_SERVER['REQUEST_URI'],".html")	
+/* 	or strstr($_SERVER['REQUEST_URI'],"my-account")	
+	or strstr($_SERVER['REQUEST_URI'],"/customer-show")	
+ 	or strstr($_SERVER['REQUEST_URI'],"/module/")
+or strstr($_SERVER['REQUEST_URI'],"/discount")
+or strstr($_SERVER['REQUEST_URI'],"/identity") */
+/*or strstr($_SERVER['REQUEST_URI'],"/addresses")	 */	
+	
+	){
+		
+		
 		return $this->memcache->set($key, $value, 0, $ttl);
+	}else{
+	/* 	echo $_SERVER['QUERY_STRING'].'<br>';
+		echo $_SERVER['REQUEST_URI'].'<br>'; #访问此页面所需的 URI。例如，“/index.html”
+			EXIT; */
+			return false;
+	}
+		
 	}
 
 	/**
@@ -86,7 +111,36 @@ class CacheMemcacheCore extends Cache
 	{
 		if (!$this->is_connected)
 			return false;
+		
+		//$this->memcache->flush();
+	/* 	echo  '<pre>';
+		var_dump($this->memcache->get($key));
+		echo '</pre>'; */
+		
+	if(strstr($_SERVER['QUERY_STRING'],"controller=tag") or $_SERVER['REQUEST_URI']=='/'
+
+	or strstr($_SERVER['REQUEST_URI'],"/content/")
+	or strstr($_SERVER['REQUEST_URI'],"/contact-us")
+	or strstr($_SERVER['REQUEST_URI'],".html")	
+/*	or strstr($_SERVER['REQUEST_URI'],"my-account")	
+ 	or strstr($_SERVER['REQUEST_URI'],"/customer-show")	
+ 	or strstr($_SERVER['REQUEST_URI'],"/module/")
+or strstr($_SERVER['REQUEST_URI'],"/discount")
+or strstr($_SERVER['REQUEST_URI'],"/identity") */
+/*or strstr($_SERVER['REQUEST_URI'],"/addresses")	 */	
+	
+	){
+		
+		
 		return $this->memcache->get($key);
+	}else{
+	/* 	echo $_SERVER['QUERY_STRING'].'<br>';
+		echo $_SERVER['REQUEST_URI'].'<br>'; #访问此页面所需的 URI。例如，“/index.html”
+			EXIT; */
+			return false;
+	}
+
+		//return $this->memcache->get($key);
 	}
 
 	/**
