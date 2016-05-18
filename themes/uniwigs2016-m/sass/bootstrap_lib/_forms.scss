@@ -45,6 +45,24 @@ input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9; /* IE8-9 */
   line-height: normal;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+  padding: 0;
+}
+
+.checked input[type="radio"],
+.checked input[type="checkbox"]{
+  background-image: url("../img/public/radio-dot.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 70%;
 }
 
 // Set the height of select and file controls to match text inputs
@@ -149,7 +167,14 @@ textarea.form-control {
   height: auto;
 }
 
+select.form-control{
 
+  background: url("../img/public/icon_down_medium.png") no-repeat 94% center;
+  background-size: 10px;
+  -webkit-background-size: 10px auto;
+  font-size: 1.1em;
+  padding-right: 30px;
+}
 // Form groups
 //
 // Designed to help with the organization and spacing of vertical forms. For
@@ -184,7 +209,6 @@ textarea.form-control {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   float: left;
-  margin-left: -20px;
 }
 .radio + .radio,
 .checkbox + .checkbox {

@@ -102,28 +102,30 @@
 }
 
 
-$sprite: "../../img/jquery/uniform/sprite.png" !default;
+$sprite: "../../img/public/icon_down_medium.png" !default;
+$sprite_radio: "../../img/public/radio-dot.svg" !default;
+$sprite_checkbox: "../../img/public/checkbox-tick.svg" !default;
 $sprite-retina: "../../img/jquery/uniform/sprite-retina.png" !default;
 $sprite-size: 493px !default;
 $button-height: 30px !default;
 $button-margin-left: 13px !default;
 $button-padding: 0 !default;
 $button-span-height: $button-height !default;
-$checkbox-height: 15px !default;
-$checkbox-width: 15px !default;
+$checkbox-height: 16px !default;
+$checkbox-width: 16px !default;
 $input-padding: 3px !default;
 $input-background: "../../../img/jquery/uniform/bg-input.png" !default;
 $input-background-retina: "../../../img/jquery/uniform/bg-input-retina.png" !default;
 $input-background-focus: "../../../img/jquery/uniform/bg-input-focus.png" !default;
 $input-background-focus-retina: "../../../img/jquery/uniform/bg-input-focus-retina.png" !default;
 $input-background-size: 1px !default;
-$radio-height: 13px !default;
-$radio-width: 13px !default;
+$radio-height: 16px !default;
+$radio-width: 16px !default;
 $select-fixed-width: 190px !default;
-$select-height: 27px !default;
+$select-height: 40px !default;
 $select-margin-left: 10px !default;
 $select-margin-right: 30px !default;
-$select-select-height: 27px !default;
+$select-select-height: 40px !default;
 $select-select-top: 0px !default;
 $upload-action-width:94px !default;
 $upload-filename-margin-top: 0px !default;
@@ -169,16 +171,51 @@ $class-wrapper-element: "";
 
 div#{$class-wrapper} {
 	&#{$class-select},
-	&#{$class-select} span,
-	&#{$class-checkbox} span,
-	&#{$class-radio} span,
+	&#{$class-select} span{
+		background-image: url($sprite);
+		background-repeat: no-repeat;
+		-webkit-font-smoothing: antialiased;
+		background-size: 10px;
+		-webkit-background-size: 10px auto;
+		font-size: 1.1em;
+		background-color: #fff;
+	}
+	&#{$class-checkbox} span{
+		cursor: pointer;
+		border: 1px solid #000;
+		background-color: #fff;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 5px 0 0;
+		padding: 0;
+		&.checked{
+			background-image: url($sprite_checkbox);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-size: 80%;
+		}
+	}
+	&#{$class-radio} span{
+	    cursor: pointer;
+	    border: 1px solid #000;
+	    background-color: #fff;
+	    border-radius: 100%;
+	    display: inline-block;
+	    vertical-align: middle;
+	    margin: 0 5px 0 0;
+	    padding: 0;
+		&.checked{
+			background-image: url($sprite_radio);
+			background-repeat: no-repeat;
+			background-position: 50%;
+	    	background-size: 60%;
+    	}
+	}
 	&#{$class-upload},
 	&#{$class-upload} span#{$class-action},
 	&#{$class-button},
 	&#{$class-button} span {
-		background-image: url($sprite);
-		background-repeat: no-repeat;
-		-webkit-font-smoothing: antialiased;
+		
 	}
 
 	&#{$class-select},
@@ -238,21 +275,23 @@ input[type="search"]:active  {
 
 /* Select */
 div#{$class-wrapper}#{$class-select} {
-	background-position: 0 (-2 * $select-height);
+	background: none;
 	line-height: $select-height;
 	height: $select-height;
-	padding: 0 0 0 $select-margin-left;
+	padding: 0;
 	position: relative;
 	overflow: hidden;
 	span {
 		@include ellipsis();
-		background-position: right 0;
+		background-position: 94% 50%;
 		height: $select-height;
 		line-height: $select-height;
 		padding-right: $select-margin-right;
 		cursor: pointer;
 		width: 100%;
 		display: block;
+		border: 1px solid #d4d4d4;
+    	padding-left: 10px;
 	}
 
 	select {
@@ -264,30 +303,6 @@ div#{$class-wrapper}#{$class-select} {
 		width: 100%;
 	}
 
-	@include whenActive {
-		span {
-			background-position: right (-1 * $select-height);
-		}
-	}
-
-	@include whenHover {
-		span {
-			background-position: right (-1 * $select-height);
-		}
-
-		@include whenActive {
-			span {
-				background-position: right (-1 * $select-height);
-			}
-		}
-	}
-
-	@include whenDisabled {
-
-		span {
-			background-position: right 0;
-		}
-	}
 }
 
 /* Select1 */
@@ -412,55 +427,11 @@ div#{$class-wrapper}#{$class-checkbox} {
 	span {
 		@include inline-block();
 		text-align: center;
-		background-position: 0 ($checkbox-voffset+$radio-height);
-	    @include whenChecked {
-	    background-position: (-1 * $checkbox-width) ($checkbox-voffset + $radio-height);
-		}
 	}
 
 	input {
 		@include hideYetClickable();
 		@include inline-block();
-	}
-
-	@include whenActive {
-		span {
-			background-position: (-1 * $checkbox-width) ($checkbox-voffset + $radio-height);
-
-			@include whenChecked {
-				background-position: (-1 * $checkbox-width) ($checkbox-voffset + $radio-height);
-			}
-		}
-	}
-
-	@include whenHover {
-		span {
-			background-position: (-2 * $checkbox-width) ($checkbox-voffset + $radio-height);
-
-			@include whenChecked {
-				background-position: (-1 * $checkbox-width) ($checkbox-voffset + $radio-height);
-			}
-		}
-
-		@include whenActive {
-			span {
-				background-position: (-1 * $checkbox-width) ($checkbox-voffset + $radio-height);
-
-				@include whenChecked {
-					background-position: (-1 * $checkbox-width) ($checkbox-voffset + $radio-height);
-				}
-			}
-		}
-	}
-
-	@include whenDisabled {
-		background-position: 0 ($checkbox-voffset + $radio-height);
-
-		span {
-			@include whenChecked {
-				background-position: 0 ($checkbox-voffset + $radio-height);
-			}
-		}
 	}
 }
 
@@ -477,57 +448,12 @@ div#{$class-wrapper}#{$class-radio} {
 	span {
 		@include inline-block();
 		text-align: center;
-		background-position: 0 ($radio-voffset + 42px);
-
-		@include whenChecked {
-			background-position: (-1 * $radio-width) ($radio-voffset + 42px);
-		}
 	}
 
 	input {
 		@include hideYetClickable();
 		@include inline-block();
 		text-align: center;
-	}
-
-	@include whenActive {
-		span {
-			background-position: (-1 * $radio-width) ($radio-voffset + 42px);
-
-			@include whenChecked {
-				background-position: (-1 * $radio-width) ($radio-voffset + 42px);
-			}
-		}
-	}
-
-	@include whenHover {
-		span {
-			background-position: (-1 * $radio-width) ($radio-voffset + 42px);
-
-			@include whenChecked {
-				background-position: (-1 * $radio-width) ($radio-voffset + 42px);
-			}
-		}
-
-		@include whenActive {
-			span {
-				background-position: (-1 * $radio-width) ($radio-voffset + 42px);
-
-				@include whenChecked {
-					background-position: (-1 * $radio-width) ($radio-voffset + 42px);
-				}
-			}
-		}
-	}
-
-	@include whenDisabled {
-		span {
-			background-position: 0 ($radio-voffset + 42px);
-
-			@include whenChecked {
-				background-position: 0 ($radio-voffset + 42px);
-			}
-		}
 	}
 }
 

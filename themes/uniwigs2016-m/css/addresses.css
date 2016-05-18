@@ -6,6 +6,8 @@
 #addresses #center_column .address {
   background: #fff;
   margin-top: 14px; }
+  #addresses #center_column .address ul {
+    margin-bottom: 0; }
 #addresses #center_column h3 {
   margin-top: 0; }
 #addresses #center_column p {

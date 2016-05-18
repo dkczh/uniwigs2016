@@ -118,7 +118,15 @@
 	<table class="table table-bordered uk-table">
 		<thead>
 			<tr>
-				{if $return_allowed}<th class="first_item"><input type="checkbox" /></th>{/if}
+				{if $return_allowed}
+				<th class="first_item">
+					<div class="checker">
+						<span>
+							<input type="checkbox" />
+						</span>
+					</div>
+				</th>
+				{/if}
 				<th class="{if $return_allowed}item{else}first_item{/if}">{l s='Reference'}</th>
 				<th class="item">{l s='Product'}</th>
 				<th class="item">{l s='Quantity'}</th>
@@ -246,7 +254,15 @@
 					{foreach $product.customizedDatas  as $customizationPerAddress}
 						{foreach $customizationPerAddress as $customizationId => $customization}
 						<tr class="alternate_item">
-							{if $return_allowed}<td class="order_cb"><input type="checkbox" id="cb_{$product.id_order_detail|intval}" name="customization_ids[{$product.id_order_detail|intval}][]" value="{$customizationId|intval}" /></td>{/if}
+							{if $return_allowed}
+							<td class="order_cb">
+								<div class="checker">
+									<span>
+										<input type="checkbox" id="cb_{$product.id_order_detail|intval}" name="customization_ids[{$product.id_order_detail|intval}][]" value="{$customizationId|intval}" />
+									</span>
+								</div>
+							</td>
+							{/if}
 							<td colspan="2">
 							{foreach from=$customization.datas key='type' item='datas'}
 								{if $type == $CUSTOMIZE_FILE}
@@ -281,7 +297,15 @@
 				<!-- Classic products -->
 				{if $product.product_quantity > $product.customizationQuantityTotal}
 					<tr class="item">
-						{if $return_allowed}<td class="order_cb"><input type="checkbox" id="cb_{$product.id_order_detail|intval}" name="ids_order_detail[{$product.id_order_detail|intval}]" value="{$product.id_order_detail|intval}" /></td>{/if}
+						{if $return_allowed}
+						<td class="order_cb">
+							<div class="checker">
+								<span>
+								<input type="checkbox" id="cb_{$product.id_order_detail|intval}" name="ids_order_detail[{$product.id_order_detail|intval}]" value="{$product.id_order_detail|intval}" />
+								</span>
+							</div>
+						</td>
+						{/if}
 						<td><label for="cb_{$product.id_order_detail|intval}">{if $product.product_reference}{$product.product_reference|escape:'html':'UTF-8'}{else}--{/if}</label></td>
 						<td class="bold">
 							<label for="cb_{$product.id_order_detail|intval}">
@@ -306,8 +330,8 @@
 						<td class="return_quantity">
 							<input class="order_qte_input form-control grey" name="order_qte_input[{$product.id_order_detail|intval}]" type="text" size="2" value="{$productQuantity|intval}" />
 							<div class="clearfix return_quantity_buttons">
-								<a href="#" class="return_quantity_down btn btn-default button-minus"><span><i class="icon-minus"></i></span></a>
-								<a href="#" class="return_quantity_up btn btn-default button-plus"><span><i class="icon-plus"></i></span></a>
+								<a href="#" class="return_quantity_down btn btn-default button-minus"><span><i class="icon-jianhao"></i></span></a>
+								<a href="#" class="return_quantity_up btn btn-default button-plus"><span><i class="icon-add"></i></span></a>
 							</div>
 							<label for="cb_{$product.id_order_detail|intval}"><span class="order_qte_span editable">{$productQuantity|intval}</span></label></td>
 						{if $order->hasProductReturned()}
@@ -365,13 +389,13 @@
 	</table>
 </div>
 {if $return_allowed}
-	<div id="returnOrderMessage">
+	<div id="returnOrderMessage" class="box">
 		<h3 class="page-heading bottom-indent">{l s='Merchandise return'}</h3>
 		<p>{l s='If you wish to return one or more products, please mark the corresponding boxes and provide an explanation for the return. When complete, click the button below.'}</p>
 		<p class="form-group">
 			<textarea class="form-control" cols="67" rows="3" name="returnText"></textarea>
 		</p>
-		<p class="form-group">
+		<p class="form-group uk-margin-small-top">
 			<button type="submit" name="submitReturnMerchandise" class="btn btn-default button button-small"><span>{l s='Make an RMA slip'}<i class="icon-chevron-right right"></i></span></button>
 			<input type="hidden" class="hidden" value="{$order->id|intval}" name="id_order" />
 		</p>

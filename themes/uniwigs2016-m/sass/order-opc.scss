@@ -34,9 +34,6 @@
 			}
 		}
 	}
-	.search-top{
-		display: none;
-	}
 	.delivery_options_address td:nth-child(2){width:100px}
 	.lost_password {
 		display: inline-block;
@@ -67,7 +64,7 @@
 		padding-top: 20px;
 	}
 	#message {
-		margin-bottom: 35px;
+		margin-top: 15px;
 	}
 	#opc_payment_methods {
 		margin-bottom: 30px;
@@ -77,7 +74,27 @@
 		}
 	}
 	#opc_account {
-		margin-bottom: 30px;
+		position: relative;
+		#shopping_address_add{
+			position: absolute;
+			right:0;
+			top:0;
+			a{
+				display: block;
+			    font-weight: bold;
+			    padding: 11px 12px;
+			    color: #222;
+			    border: 0;
+			    span{
+			    	padding: 0;
+			    	display: inline;
+			    }
+				i{
+					font-size: 1.4em;
+				    color: #d32676;
+				}
+			}
+		}
 	}
 	.address_delivery.select {
 		margin-bottom: 15px;
@@ -164,7 +181,30 @@
 	    	}
     	}
 	}
-
+	.addresses{
+		.address{
+			position: relative;
+			li{
+				padding: 2px 0;
+			}
+			a.button.button-small{
+				position: absolute;
+			    right: 0;
+			    top: 7px;
+			    padding: 10px 0;
+			    border: 0;
+    			margin: 0;
+			    i{
+			    	font-size: 1.3em;
+			    	color:#d32676;
+			    	&:after{
+			    		font-family: $font-icon;
+			    		content: "\e62b";
+			    	}
+			    }
+			}
+		}
+	}
 }
 
 #new_account_form .box {

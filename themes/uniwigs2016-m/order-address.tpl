@@ -36,11 +36,17 @@
 	<div id="opc_account" class="opc-main-block">
 		<h1 class="page-heading step-num"><span>1</span> {l s='Addresses'}</h1>
 		<div id="opc_account-overlay" class="opc-overlay" style="display: none;"></div>
+		<span id="shopping_address_add" class="address_add submit">
+			<a href="{$link->getPageLink('address', true, NULL, "back={$back_order_page}?step=1{if $back}&mod={$back}{/if}")|escape:'html':'UTF-8'}" title="{l s='Add'}" class="button button-small btn btn-default">
+				<span>{l s='Add'}</span>
+				<i class="icon-add"></i>
+			</a>
+		</span>
 {/if}
 <div class="addresses clearfix">
 	<div class="row">
 		<div class="col-xs-12 col-sm-6">
-			<div class="address_delivery select form-group selector1">
+			<div class="address_delivery select form-group">
 				<label for="id_address_delivery">{if $cart->isVirtualCart()}{l s='Choose a billing address:'}{else}{l s='Choose a delivery address:'}{/if}</label>
 				<select name="id_address_delivery" id="id_address_delivery" class="address_select form-control">
 					{foreach from=$addresses key=k item=address}
@@ -56,7 +62,7 @@
 			</p>
 		</div>
 		<div class="col-xs-12 col-sm-6">
-			<div id="address_invoice_form" class="select form-group selector1"{if $cart->id_address_invoice == $cart->id_address_delivery} style="display: none;"{/if}>
+			<div id="address_invoice_form" class="select form-group"{if $cart->id_address_invoice == $cart->id_address_delivery} style="display: none;"{/if}>
 				{if $addresses|@count > 1}
 					<label for="id_address_invoice" class="strong">{l s='Choose a billing address:'}</label>
 					<select name="id_address_invoice" id="id_address_invoice" class="address_select form-control">
@@ -87,11 +93,7 @@
 			</ul>
 		</div>
 	</div> <!-- end row -->
-	<p id="shopping_address_add" class="address_add box submit">
-		<a href="{$link->getPageLink('address', true, NULL, "back={$back_order_page}?step=1{if $back}&mod={$back}{/if}")|escape:'html':'UTF-8'}" title="{l s='Add'}" class="uk-button">
-			<span>{l s='Add a new address'}<i class="icon-chevron-right right"></i></span>
-		</a>
-	</p>
+	
 	{if !$opc}
 		<div id="ordermsg" class="form-group">
 			<label>{l s='If you would like to add a comment about your order, please write it in the field below.'}</label>
