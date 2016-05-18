@@ -263,7 +263,7 @@ class Ganalytics extends Module
 				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 				})(window,document,\'script\',\'//www.google-analytics.com/analytics_debug.js\',\'ga\');
 				ga(\'create\', \''.Tools::safeOutput(Configuration::get('GA_ACCOUNT_ID')).'\', \'auto\');
-				ga(\'require\', \'displayfeatures\');
+			
 				ga(\'require\', \'ec\');'
 				.(($user_id && !$back_office) ? 'ga(\'set\', \'&uid\', \''.$user_id.'\');': '')
 				.($back_office ? 'ga(\'set\', \'nonInteraction\', true);' : '')
@@ -690,6 +690,7 @@ class Ganalytics extends Module
 			if (($this->js_state) != 1 && ($backoffice == 0))
 				$runjs_code .= '
 				<script type="text/javascript">
+					ga(\'require\', \'displayfeatures\');
 					ga(\'send\', \'pageview\');
 				</script>';
 
