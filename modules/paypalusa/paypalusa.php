@@ -553,6 +553,11 @@ class PayPalUSA extends PaymentModule
 	public function hookAdminOrder($params)
 	{
 		/* Check if the order was paid with this Addon and display the Transaction details */
+		
+		if(!isset($_GET['id_order'])){
+			$_GET['id_order']='';
+			
+		}
 		if (Db::getInstance()->getValue('SELECT module FROM '._DB_PREFIX_.'orders WHERE id_order = '.(int)$_GET['id_order']) == $this->name)
 		{	
 	
