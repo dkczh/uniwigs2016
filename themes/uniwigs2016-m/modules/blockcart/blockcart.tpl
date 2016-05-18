@@ -22,9 +22,10 @@
 *  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
+
 <!-- MODULE Block cart -->
 {if isset($blockcart_top) && $blockcart_top}
-<div class="col-sm-4 clearfix{if $PS_CATALOG_MODE} header_user_catalog{/if}">
+<div class="col-sm-4 clearfix{if $PS_CATALOG_MODE} header_user_catalog{/if} uk-hidden">
 {/if}
 	<div class="shopping_cart">
 		<a href="{$link->getPageLink($order_process, true)|escape:'html':'UTF-8'}" title="{l s='View my shopping cart' mod='blockcart'}" rel="nofollow">
@@ -211,7 +212,7 @@
 			<div class="layer_cart_product col-xs-12 col-md-6">
 				<span class="cross" title="{l s='Close window' mod='blockcart'}"></span>
 				<span class="title">
-					<i class="icon-check"></i>{l s='Product successfully added to your shopping cart' mod='blockcart'}
+					<i class="icon-xuanze"></i>{l s='Product successfully added to your shopping cart' mod='blockcart'}
 				</span>
 				<div class="product-image-container layer_cart_img">
 				</div>
@@ -318,16 +319,16 @@
 					</span>
 				</div>
 				<div class="button-container">
-					<span class="continue btn btn-default button exclusive-medium" title="{l s='Continue shopping' mod='blockcart'}">
+					<a class="uk-button uk-button uk-button-primary" href="{$link->getPageLink("$order_process", true)|escape:"html":"UTF-8"}" title="{l s='Proceed to checkout' mod='blockcart'}" rel="nofollow">
 						<span>
-							<i class="icon-chevron-left left"></i>{l s='Continue shopping' mod='blockcart'}
-						</span>
-					</span>
-					<a class="btn btn-default button button-medium"	href="{$link->getPageLink("$order_process", true)|escape:"html":"UTF-8"}" title="{l s='Proceed to checkout' mod='blockcart'}" rel="nofollow">
-						<span>
-							{l s='Proceed to checkout' mod='blockcart'}<i class="icon-chevron-right right"></i>
+							{l s='Proceed to checkout' mod='blockcart'}<i class="icon-right right"></i>
 						</span>
 					</a>
+					<span class="continue uk-button uk-button-link exclusive-medium" title="{l s='Continue shopping' mod='blockcart'}">
+						<span>
+							<i class="icon-left left"></i>{l s='Continue shopping' mod='blockcart'}
+						</span>
+					</span>
 				</div>
 			</div>
 		</div>

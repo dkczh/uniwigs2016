@@ -136,9 +136,7 @@
 					{/if}
 					{$smarty.capture.displayNav}
 				{/if}
-				{if $page_name != 'index' and $page_name != 'search' and $page_name != 'category'}
-				</header>
-				{/if}
+				{*</header>cart block*}
 			<div class="columns-container">
 				{if isset($left_column_size) && !empty($left_column_size)}
 				<div id="left_column" class="column col-xs-12 col-sm-{$left_column_size|intval}">{$HOOK_LEFT_COLUMN}</div>

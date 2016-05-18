@@ -265,14 +265,14 @@
   position: absolute;
   display: none;
   z-index: 99;
-  width: 84%;
-  margin-right: 8%;
-  margin-left: 8%;
+  width: 88%;
+  margin-right: 6%;
+  margin-left: 6%;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px; }
   #layer_cart .layer_cart_product {
-    padding: 30px 30px 30px 30px;
+    padding: 20px 20px 20px 20px;
     overflow: hidden;
     position: static; }
     #layer_cart .layer_cart_product .title {
@@ -284,7 +284,8 @@
         #layer_cart .layer_cart_product .title {
           font-size: 18px;
           padding-right: 0;
-          line-height: normal; } }
+          line-height: normal;
+          margin-top: 15px; } }
       #layer_cart .layer_cart_product .title i {
         font-size: 30px;
         line-height: 30px;
@@ -295,29 +296,25 @@
             font-size: 22px;
             line-height: 22px; } }
     #layer_cart .layer_cart_product .product-image-container {
-      max-width: 178px;
-      border: 1px solid #d6d4d4;
-      padding: 5px;
-      float: left;
-      margin-right: 30px; }
-      @media (max-width: 480px) {
-        #layer_cart .layer_cart_product .product-image-container {
-          float: none;
-          margin-right: 0;
-          margin-bottom: 10px; } }
-    #layer_cart .layer_cart_product .layer_cart_product_info {
-      padding: 38px 0 0 0; }
-      #layer_cart .layer_cart_product .layer_cart_product_info #layer_cart_product_title {
-        display: block;
-        padding-bottom: 8px; }
-      #layer_cart .layer_cart_product .layer_cart_product_info > div {
-        padding-bottom: 7px; }
-        #layer_cart .layer_cart_product .layer_cart_product_info > div strong {
-          padding-right: 3px; }
+      max-width: 80%;
+      margin-right: 0;
+      margin-bottom: 10px; }
+    #layer_cart .layer_cart_product .layer_cart_product_info #layer_cart_product_title {
+      display: block;
+      padding-bottom: 8px;
+      font-size: 1.3em; }
+    #layer_cart .layer_cart_product .layer_cart_product_info #layer_cart_product_attributes {
+      display: block;
+      padding-bottom: 8px;
+      color: #666; }
+    #layer_cart .layer_cart_product .layer_cart_product_info > div {
+      padding-bottom: 7px; }
+      #layer_cart .layer_cart_product .layer_cart_product_info > div strong {
+        padding-right: 3px; }
   #layer_cart .layer_cart_cart {
-    background: #fafafa;
+    background: #fff;
     border-left: 1px solid #d6d4d4;
-    padding: 21px 30px 170px 30px;
+    padding: 21px 20px 150px 20px;
     -moz-border-radius: 0px 4px 4px 0px;
     -webkit-border-radius: 0px;
     border-radius: 0px 4px 4px 0px;
@@ -339,12 +336,10 @@
       display: block;
       font: 400 23px/29px Arial, Helvetica, sans-serif;
       color: #333;
-      border-bottom: 1px solid #d6d4d4;
-      padding-bottom: 13px;
-      margin-bottom: 17px; }
+      padding-bottom: 13px; }
       @media (max-width: 767px) {
         #layer_cart .layer_cart_cart .title {
-          font-size: 18px; } }
+          font-size: 17px; } }
     #layer_cart .layer_cart_cart .layer_cart_row {
       padding: 0 0 7px 0; }
     #layer_cart .layer_cart_cart .button-container {
@@ -352,29 +347,35 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      padding: 0px 30px 20px 30px; }
-      #layer_cart .layer_cart_cart .button-container .btn {
-        margin-bottom: 10px; }
+      padding: 0px 20px 20px 20px; }
+      #layer_cart .layer_cart_cart .button-container .uk-button-primary {
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding: 0; }
       #layer_cart .layer_cart_cart .button-container span.exclusive-medium {
-        margin-right: 5px; }
+        margin-right: 5px;
+        font-size: 14px;
+        padding: 0; }
         #layer_cart .layer_cart_cart .button-container span.exclusive-medium i {
           padding-right: 5px;
           color: #777777; }
   #layer_cart .cross {
     position: absolute;
-    right: 7px;
-    top: 8px;
-    width: 25px;
-    height: 25px;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     color: #333;
-    z-index: 2; }
+    z-index: 2;
+    display: block; }
     #layer_cart .cross:before {
-      content: "\f057";
+      content: "\e601";
       display: block;
       font-family: "iconfont";
-      font-size: 25px;
-      line-height: 25px; }
+      font-size: 26px;
+      line-height: 37px;
+      text-align: center; }
     #layer_cart .cross:hover {
       color: #515151; }
   #layer_cart .continue {

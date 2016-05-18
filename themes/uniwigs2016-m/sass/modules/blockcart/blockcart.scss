@@ -335,12 +335,12 @@
 	position: absolute;
 	display: none;
 	z-index: 99;
-	width: 84%;
-	margin-right: 8%;
-	margin-left: 8%;
+	width: 88%;
+	margin-right: 6%;
+	margin-left: 6%;
 	@include border-radius(4px);
 	.layer_cart_product {
-		padding: 30px 30px 30px 30px;
+		padding: 20px 20px 20px 20px;
 		overflow: hidden;
 		position: static;
 		.title {
@@ -352,6 +352,7 @@
 				font-size: 18px;
 				padding-right: 0;
 				line-height: normal;
+				margin-top:15px;
 			}
 			i {
 				font-size: 30px;
@@ -365,22 +366,21 @@
 			}
 		}
 		.product-image-container {
-			max-width: 178px;
-			border: 1px solid $base-border-color;
-			padding: 5px;
-			float: left;
-			margin-right: 30px;
-			@media (max-width: $screen-xs) { // max 480px
-				float: none;
-				margin-right: 0;
-				margin-bottom: 10px;
-			}
+			max-width: 80%;
+			margin-right: 0;
+			margin-bottom: 10px;
+
 		}
 		.layer_cart_product_info {
-			padding: 38px 0 0 0;
 			#layer_cart_product_title {
 				display: block;
 				padding-bottom: 8px;
+				font-size:1.3em;
+			}
+			#layer_cart_product_attributes{
+				display: block;
+				padding-bottom: 8px;
+				color:#666;
 			}
 			> div {
 				padding-bottom: 7px;
@@ -391,9 +391,9 @@
 		}
 	}
 	.layer_cart_cart {
-		background: #fafafa;
+		background: #fff;
 		border-left: 1px solid $base-border-color;
-		padding: 21px 30px 170px 30px;
+		padding: 21px 20px 150px 20px;
 		@include border-radius(0px 4px 4px 0px);
 		position: relative;
 		@media (min-width: $screen-lg) { // min 1200px
@@ -413,11 +413,9 @@
 			display: block;
 			font: 400 23px/29px $font-family;
 			color: $base-text-color;
-			border-bottom: 1px solid $base-border-color;
 			padding-bottom: 13px;
-			margin-bottom: 17px;
 			@media (max-width: $screen-xs-max) { // max 767px
-				font-size: 18px;
+				font-size: 17px;
 			}
 		}
 		.layer_cart_row {
@@ -428,12 +426,16 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			padding: 0px 30px 20px 30px;
-			.btn {
+			padding: 0px 20px 20px 20px;
+			.uk-button-primary {
 				margin-bottom: 10px;
+				font-size: 14px;
+    			padding: 0;
 			}
 			span.exclusive-medium {
 				margin-right: 5px;
+				font-size:14px;
+				padding:0;
 				i {
 					padding-right: 5px;
 					color: #777777;
@@ -443,19 +445,21 @@
 	}
 	.cross {
 		position: absolute;
-		right: 7px;
-		top: 8px;
-		width: 25px;
-		height: 25px;
+		right: 0;
+		top: 0;
+		width: 40px;
+		height: 40px;
 		cursor: pointer;
 		color: $base-text-color;
 		z-index: 2;
+		display: block;
 		&:before {
-			content: "\f057";
+			content: "\e601";
 			display: block;
 			font-family: $font-icon;
-			font-size: 25px;
-			line-height: 25px;
+			font-size: 26px;
+			line-height: 37px;
+			text-align: center;
 		}
 		&:hover {
 			color: $link-hover-color;

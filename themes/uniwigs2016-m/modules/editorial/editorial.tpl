@@ -24,6 +24,7 @@
 *}
 {literal}
 <style>
+.promotion-block a,.home-box a{display: block}
 .promotion-block{margin:14px 0;}
 .home-category li{float:left;width:50%;padding:10px;}
 .home-category li a{display: block;padding:15px 0;border:1px solid #222;font-size:14px;text-align: center;color:#000;background: #fff;text-transform: uppercase;}

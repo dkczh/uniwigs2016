@@ -7193,8 +7193,8 @@ div.star a:hover {
         .footer-container #footer .footer-block h4 {
           position: relative;
           margin-bottom: 0;
-          padding-bottom: 10px;
-          padding-top: 10px;
+          padding-bottom: 14px;
+          padding-top: 14px;
           text-align: left; }
           .footer-container #footer .footer-block h4:after {
             display: block;
@@ -7202,7 +7202,7 @@ div.star a:hover {
             font-family: "iconfont";
             position: absolute;
             right: 0;
-            top: 10px;
+            top: 14px;
             font-size: 1.3em; }
           .footer-container #footer .footer-block h4.active:after {
             content: "\e634"; } }
@@ -7213,7 +7213,7 @@ div.star a:hover {
       border-bottom: 1px solid #e4e4e4; }
       .footer-container #footer ul li a {
         display: block;
-        padding: 10px 0;
+        padding: 15px 0;
         position: relative; }
     .footer-container #footer .foot_user, .footer-container #footer .full_site {
       overflow: hidden; }
@@ -7331,7 +7331,7 @@ div.star a:hover {
       content: "\e610";
       font-family: "iconfont";
       font-size: 16px;
-      line-height: 28px;
+      line-height: 38px;
       position: absolute;
       right: 0;
       top: 5px;

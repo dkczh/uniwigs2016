@@ -148,7 +148,7 @@
 			{*<li>
 				<a href="tel:6268102938" class="nav-item"><span class="icon-phone"></span>626-810-2938</a>
 			</li>*}
-			<li>
+			<li style="width:100%">
 				<a href="tel:9098956421" class="nav-item"><span class="icon-phone"></span>909-895-6421</a>
 			</li>
 		</ul>

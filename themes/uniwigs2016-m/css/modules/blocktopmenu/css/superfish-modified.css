@@ -42,7 +42,7 @@
   .sf-menu > li > a {
     font: 400 14px/22px "Open Sans", sans-serif;
     text-transform: uppercase;
-    color: #484848;
+    color: #222;
     display: block;
     padding: 13px 20px;
     text-align: left;
@@ -57,10 +57,10 @@
   .sf-menu li ul li a {
     display: block;
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 20px 12px 30px;
     position: relative;
     font: 400 14px/22px "Open Sans", sans-serif;
-    color: #484848;
+    color: #666;
     display: block; }
     .sf-menu li ul li a:hover {
       color: #515151;

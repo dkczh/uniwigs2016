@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <!-- Block search module TOP -->
-{if $page_name == 'index' or $page_name == 'search' or $page_name == 'category'}
+
 <div class="search-top">
 	<a href="#search_block_top" data-uk-modal></a>
 </div>
@@ -46,5 +46,5 @@
 		</div>
 	</div>
 </div>
-{/if}
+
 <!-- /Block search module TOP -->

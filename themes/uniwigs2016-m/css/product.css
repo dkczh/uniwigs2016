@@ -458,12 +458,13 @@ span.view_scroll_spacer {
       content: "\e61c";
       z-index: 2;
       width: 51px;
-      text-align: center; }
+      text-align: center;
+      font-weight: bold; }
     .box-info-product .exclusive.added:before {
       content: "\e62a"; }
     .box-info-product .exclusive.added.disabled:before, .box-info-product .exclusive.disabled:before {
       height: 51px;
-      content: "\e61c";
+      content: "\e633";
       animation: 2s linear 0s normal none infinite spin;
       -webkit-animation: 2s linear 0s normal none infinite spin;
       -moz-animation: 2s linear 0s normal none infinite spin;
@@ -484,7 +485,7 @@ span.view_scroll_spacer {
       font-weight: 700;
       font-size: 20px;
       line-height: 22px;
-      padding: 12px 20px 12px 50px;
+      padding: 14px 20px 14px 30px;
       display: block !important;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
