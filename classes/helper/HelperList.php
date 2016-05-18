@@ -717,11 +717,13 @@ class HelperListCore extends Helper
 		 //返修单提醒
 		 if($id=='1'){
 		 $result = Db::getInstance()->executeS("SELECT DISTINCT
-													id_order
+													od.id_order
 												FROM
-													px_order_remind
+													px_order_remind  od 
+												LEFT JOIN ps_orders  o  on o.id_order=od.id_order  
 												WHERE
-													`status` = '返修'");
+													od.`status` = '返修'
+													and  o.current_state not in (4,6 )");
 		}
 		//超期单提醒
 		 if($id=='2'){
