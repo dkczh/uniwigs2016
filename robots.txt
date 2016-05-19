@@ -3,7 +3,7 @@ User-agent: *
 # 130905 add
 Disallow: /new-arrivals
 Disallow: /tags-index
-
+Disallow: /download
 
 # Directories
 Disallow: /config/
