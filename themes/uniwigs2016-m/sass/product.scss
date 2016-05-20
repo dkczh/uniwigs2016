@@ -543,6 +543,15 @@ span.view_scroll_spacer {
 	p{
 		margin-bottom: 7px;
 	}
+	.product_free_shipping{
+		font-style: italic;
+		text-decoration: underline;
+		color: #222;
+		font-size: 14px;
+		&:hover{
+			color:$link-hover-color;
+		}
+	}
 	.exclusive{
 		width:100%;
 		padding: 0;
@@ -881,6 +890,7 @@ table.table-product-discounts{
 		font-size: 20px;
 		line-height: 30px;
 		color: $product-price-color;
+		font-weight: bold;
 	}
 }
 #old_price {

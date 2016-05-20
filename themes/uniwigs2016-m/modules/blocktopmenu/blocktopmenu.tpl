@@ -9,6 +9,7 @@
 						<li><a href="{$base_dir}40452-human-hair-lace-wigs">Lace Wigs</a></li>
 						<li><a href="{$base_dir}40453-celebrity-hairstyles">Celebrity Wigs</a></li>
 						<li><a href="{$base_dir}custom-order">Custom Wigs</a></li>
+						<li><a href="{$base_dir}105-care-products">Accessories</a></li>
 						<li><a href="{$base_dir}102-human-hair-wigs">All Products</a></li>
 					</ul>
 				</li>

@@ -244,6 +244,70 @@
 									{/strip}</span>
 								{/if}
 							</div> <!-- end prices -->
+							<p class="uk-margin-small-bottom text-center"><a href="#product_free_shipping_info" data-uk-modal class="product_free_shipping">Free Shipping US *</a></p>
+							<div id="product_free_shipping_info" class="uk-modal">
+							    <div class="uk-modal-dialog img-responsive">
+							        <a href="#" class="uk-modal-close uk-close"></a>
+							        <p class="uk-text-bold text-primary">365 days of the year, we offer Free US Ground Shipping for all orders over $49.</p>
+							        <h4 class="uk-margin-top">US DOMESTIC SHIPPING</h4>
+							        <div class="uk-overflow-container">
+							        	<table class="uk-table uk-table-striped">
+							        	<thead>
+							        		<tr>
+							        			<th>Shipping Method</th>
+							        			<th>Transportation Time</th>
+							        			<th>Total Delivery Time</th>
+							        			<th>Shipping Cost</th>
+							        		</tr>
+							        	</thead>
+							        	<tbody>
+							        		<tr>
+							        			<td>US Ground Shipping</td>
+							        			<td>4-7 business days</td>
+							        			<td>5-9 business days</td>
+							        			<td>$4.95</td>
+							        		</tr>
+							        		<tr>
+							        			<td>US Air Shipping</td>
+							        			<td>2-3 business days</td>
+							        			<td>3-5 business days</td>
+							        			<td>$18.89</td>
+							        		</tr>
+							        		<tr>
+							        			<td>US Express Shipping</td>
+							        			<td>1 business day</td>
+							        			<td>2-3 business days</td>
+							        			<td>$28.89</td>
+							        		</tr>
+							        	</tbody>
+							        	</table>
+							        </div>
+							        <h4 class="uk-margin-top">INTERNATIONAL SHIPPING</h4>
+							        <div class="uk-overflow-container">
+								        <table class="uk-table">
+								        	<thead>
+								        		<tr>
+								        			<th>Shipping Method</th>
+								        			<th>Transportation Time</th>
+								        			<th>Total Delivery Time</th>
+								        			<th>Shipping Cost</th>
+								        		</tr>
+								        	</thead>
+								        	<tbody>
+								        		<tr>
+								        			<td>International Shipping</td>
+								        			<td>6-12 business days</td>
+								        			<td>7-14 business days</td>
+								        			<td>$29.89</td>
+								        		</tr>
+								        		<tr>
+								        			<td colspan="5">As for international shipping, customer is responsible for any duties, taxes, or brokerage fees that may apply. We do not collect any duties or taxes from you and do not know how much they will cost you. Please check with your own country.</td>
+								        		</tr>
+								        	</tbody>
+								        </table>
+								    </div>
+								</div>
+							</div>
 							{if $packItems|@count && $productPrice < $product->getNoPackPrice()}
 								<p class="pack_price">{l s='Instead of'} <span style="text-decoration: line-through;">{convertPrice price=$product->getNoPackPrice()}</span></p>
 							{/if}

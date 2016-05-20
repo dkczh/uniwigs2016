@@ -2634,7 +2634,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-close:after {
   display: block;
   content: "\e601";
-  font-family: "iconfont"; }
+  font-family: "iconfont";
+  font-size: 23px; }
 
 /*
  * Hover
