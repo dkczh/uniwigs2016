@@ -142,7 +142,7 @@
                     <input class="is_required validate form-control" type="password" data-validate="isPasswd" name="confirmation" id="confirmation" />
                 </div>
                 {if isset($newsletter) && $newsletter}
-                    <div class="checkbox">
+                    <div class="checkbox" style="text-indent: -9999px;">
                         <label for="newsletter">
                             <input type="checkbox" id="newsletter" name="newsletter" value="1" {if isset($smarty.post.newsletter) && $smarty.post.newsletter == 1} checked="checked"{/if}/>
                             {l s='Sign up for our newsletter!'}
@@ -153,7 +153,7 @@
                     </div>
                 {/if}
                 {if isset($optin) && $optin}
-                    <div class="checkbox">
+                    <div class="checkbox" style="text-indent: -9999px;">
                         <label for="optin">
                             <input type="checkbox" name="optin" id="optin" value="1" {if isset($smarty.post.optin) && $smarty.post.optin == 1} checked="checked"{/if}/>
                             {l s='Receive special offers from our partners!'}

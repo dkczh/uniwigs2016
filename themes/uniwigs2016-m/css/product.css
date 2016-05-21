@@ -442,6 +442,13 @@ span.view_scroll_spacer {
   background: #fff; }
   .box-info-product p {
     margin-bottom: 7px; }
+  .box-info-product .product_free_shipping {
+    font-style: italic;
+    text-decoration: underline;
+    color: #222;
+    font-size: 14px; }
+    .box-info-product .product_free_shipping:hover {
+      color: #515151; }
   .box-info-product .exclusive {
     width: 100%;
     padding: 0;
@@ -746,7 +753,8 @@ table.table-product-discounts {
   .our_price_display .now_sprice {
     font-size: 20px;
     line-height: 30px;
-    color: #333; }
+    color: #333;
+    font-weight: bold; }
 
 #old_price {
   font-size: 13px;

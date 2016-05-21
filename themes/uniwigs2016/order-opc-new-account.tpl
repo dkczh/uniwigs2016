@@ -155,14 +155,14 @@
 						</div>
 					</div>
 
-						<div class="checkbox">
+						<div class="checkbox" style="text-indent: -9999px;">
 							<label for="newsletter">
 							<input type="checkbox" name="newsletter" id="newsletter" value="1" checked="checked" />
 							{l s='Sign up for our newsletter!'}</label>
 						</div>
 				
 				
-						<div class="checkbox">
+						<div class="checkbox" style="text-indent: -9999px;">
 							<label for="optin">
 							<input type="checkbox" name="optin" id="optin" value="1" checked="checked" />
 							{l s='Receive special offers from our partners!'}</label>

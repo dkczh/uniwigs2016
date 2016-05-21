@@ -19,6 +19,7 @@
 	        	       				<li><a href="{$base_dir}40452-human-hair-lace-wigs">Classic Lace wigs</a></li>
 	        	       				<li><a href="{$base_dir}tag/luxury-human-hair">Luxury Wigs</a></li>
 	        	       				<li><a href="{$base_dir}tag/human-hair-wigs-customization">Custom Wigs</a></li>
+	        	       				<li><a href="{$base_dir}105-care-products">Accessories</a></li>
 		        	       		</ul>
 		        	       </div>
 		        	       <div class="col-sm-3">

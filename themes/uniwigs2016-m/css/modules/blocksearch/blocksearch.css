@@ -106,7 +106,8 @@ form#searchbox {
 #discount .search-top,
 #order-follow .search-top,
 #identity .search-top,
-#module-loyalty-default .search-top {
+#module-loyalty-default .search-top,
+#authentication .search-top {
   display: none; }
 
 /*# sourceMappingURL=blocksearch.css.map */

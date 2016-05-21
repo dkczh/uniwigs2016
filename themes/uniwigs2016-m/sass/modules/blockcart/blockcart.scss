@@ -319,7 +319,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 98;
+	z-index: 600;
 	@include opacity(.20);
 }
 
@@ -334,7 +334,7 @@
 	background-color: $light-background;
 	position: absolute;
 	display: none;
-	z-index: 99;
+	z-index: 999;
 	width: 88%;
 	margin-right: 6%;
 	margin-left: 6%;

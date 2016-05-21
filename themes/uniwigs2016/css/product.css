@@ -578,14 +578,6 @@ span.view_scroll_spacer {
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    @media (max-width: 1199px) {
-      .box-info-product .exclusive span {
-        padding: 12px 22px 14px 55px;
-        font-size: 14px; } }
-    @media (max-width: 991px) {
-      .box-info-product .exclusive span {
-        padding: 8px 12px 10px;
-        text-align: left; } }
   .box-info-product .exclusive:hover {
     background-color: #fff;
     border-color: #e0287d;

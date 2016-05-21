@@ -2634,7 +2634,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-close:after {
   display: block;
   content: "\e601";
-  font-family: "iconfont"; }
+  font-family: "iconfont";
+  font-size: 23px; }
 
 /*
  * Hover
@@ -5805,10 +5806,10 @@ p.info-account {
       list-style-type: decimal;
       font-weight: normal; }
   .alert.alert-success {
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.1); }
+    color: #15AA09; }
     .alert.alert-success:before {
       font-family: "iconfont";
-      content: "\f058";
+      content: "\e62a";
       font-size: 20px;
       vertical-align: -2px;
       padding-right: 7px; }
