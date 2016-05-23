@@ -97,8 +97,9 @@ abstract class HTMLTemplateCore
     protected function getLogo()
     {
         $logo = '';
-
-        $id_shop = (int)$this->shop->id;
+		//  $id_shop = (int)$this->shop->id; 
+		//强制所有店铺 发票的头部图片 调用 uniwigs 店铺的图片
+        $id_shop = 1;
 
         if (Configuration::get('PS_LOGO_INVOICE', null, null, $id_shop) != false && file_exists(_PS_IMG_DIR_.Configuration::get('PS_LOGO_INVOICE', null, null, $id_shop))) {
             $logo = _PS_IMG_DIR_.Configuration::get('PS_LOGO_INVOICE', null, null, $id_shop);
