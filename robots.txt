@@ -1,5 +1,34 @@
 User-agent: *
 
+# 160523 add
+Disallow: /synthetic-wigs/style/shopby
+Disallow: /synthetic-wigs/style/curly/shopby
+Disallow: /synthetic-wigs/style/straight/shopby
+Disallow: /synthetic-wigs/cap-construction/lace-front/shopby
+Disallow: /synthetic-wigs/cap-construction/traditional/shopby
+Disallow: /synthetic-wigs/color/black/shopby
+Disallow: /synthetic-wigs/color/gray/shopby
+Disallow: /hair-pieces/departments/all-hair-pieces/shopby
+Disallow: /hair-pieces/departments/human-hairpieces/shopby
+Disallow: /hair-pieces/departments/half-wigs/shopby
+Disallow: /hair-pieces/departments/ponytails/shopby
+Disallow: /hair-pieces/departments/top-hairpieces/shopby
+Disallow: /hair-pieces/departments/buns/shopby
+Disallow: /hair-pieces/hair-texture/curly-wavy/shopby
+Disallow: /human-hair-wigs/style/shopby
+Disallow: /human-hair-wigs/style/wavy/shopby
+Disallow: /human-hair-wigs/style/curly/shopby
+Disallow: /human-hair-wigs/style/straight/shopby
+Disallow: /human-hair-wigs/length/shopby
+Disallow: /human-hair-wigs/length/short/shopby
+Disallow: /human-hair-wigs/length/long/shopby
+Disallow: /human-hair-wigs/length/mid-length/shopby
+Disallow: /human-hair-wigs/color/shopby
+Disallow: /human-hair-wigs/color/brunette/shopby
+Disallow: /human-hair-wigs/color/black/shopby
+Disallow: /human-hair-wigs/color/blonde/shopby
+Disallow: /human-hair-wigs/color/red/shopby
+
 # 160519 add
 Disallow: /wigs
 Disallow: /synthetic-wigs
@@ -12,28 +41,6 @@ Disallow: /remy
 Disallow: /ponytail
 Disallow: /pview
 Disallow: /blond
-Disallow: /human-hair-lace
-Disallow: /glueless
-Disallow: /black-wig
-Disallow: /top-hairpieces
-Disallow: /clip-in-hair-extensions
-Disallow: /flip-in-hair-extensions
-Disallow: /2013-new-arrical
-Disallow: /content
-Disallow: /silk-top-full-lace-wigs
-Disallow: /synthetic-hair-extensions
-Disallow: /about_us.html
-Disallow: /tap-hair-extensions
-Disallow: /medical-wigs.html
-Disallow: /lily-mono-synthetic-wig.html
-Disallow: /straight-wigs.html
-Disallow: /natural-wigs-1.html
-Disallow: /featured-products.html
-Disallow: /signup_salon
-Disallow: /esperanza-wavy-16-indian-remy
-Disallow: /bangs.html
-Disallow: /salon
-Disallow: /index.php
 
 # 130905 add
 Disallow: /new-arrivals
