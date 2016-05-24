@@ -1,5 +1,24 @@
 User-agent: *
 
+# 160524 add
+Disallow: /wigs/cap-constrution
+Disallow: /wigs/departments/
+Disallow: /wigs/length
+Disallow: /wigs/hair-texture
+Disallow: /wigs/size
+Disallow: /human-hair-wigs+
+Disallow: /human-hair-wigs.html
+Disallow: /human-hair-wigs/cap-construction/full-lace/shopby/
+Disallow: /human-hair-wigs/cap-construction/shopby
+Disallow: /human-hair-wigs/cap-construction.html
+Disallow: /human-hair-wigs/cap-construction/skin-top.html
+Disallow: /human-hair-wigs/cap-construction/lace-front.html
+Disallow: /synthetic-wigs+
+Disallow: /synthetic-wigs.html
+Disallow: /hair-pieces+
+Disallow: /hair-pieces.html
+Disallow: /catalogsearch/result/index/
+
 # 160523 add
 Disallow: /synthetic-wigs/style/shopby
 Disallow: /synthetic-wigs/style/curly/shopby
@@ -30,17 +49,30 @@ Disallow: /human-hair-wigs/color/blonde/shopby
 Disallow: /human-hair-wigs/color/red/shopby
 
 # 160519 add
-Disallow: /wigs
-Disallow: /synthetic-wigs
-Disallow: /hair-pieces
-Disallow: /human-hair-wigs
-Disallow: /hair-extensions
 Disallow: /lace
 Disallow: /bun
 Disallow: /remy
 Disallow: /ponytail
 Disallow: /pview
 Disallow: /blond
+Disallow: /human-hair-lace
+Disallow: /glueless
+Disallow: /black-wig
+Disallow: /2013-new-arrical
+Disallow: /silk-top-full-lace-wigs
+Disallow: /synthetic-hair-extensions
+Disallow: /about_us.html
+Disallow: /tap-hair-extensions
+Disallow: /medical-wigs.html
+Disallow: /lily-mono-synthetic-wig.html
+Disallow: /straight-wigs.html
+Disallow: /natural-wigs-1.html
+Disallow: /featured-products.html
+Disallow: /signup_salon
+Disallow: /esperanza-wavy-16-indian-remy
+Disallow: /bangs.html
+Disallow: /salon
+Disallow: /index.php
 
 # 130905 add
 Disallow: /new-arrivals
