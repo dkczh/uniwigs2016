@@ -73,7 +73,7 @@
 50%  {top: 32vh;}
 }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 	.gallery-box li{
 	    width:33.333333%;
 	    margin-bottom:22px;
