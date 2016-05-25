@@ -40,6 +40,26 @@
   background: rgba(0, 0, 0, 0);
 }
 
+
+@media (max-width: 768px) {
+	 .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:150%;height:300px;}
+	 .nov-banner .lavivid_logo,
+	 .nov-banner .lavivid_text{position: absolute;}
+	 .nov-banner .lavivid_logo{
+	 	top:50px;
+	 	left:26%;
+		width:45%;
+	 }
+	 .nov-banner .lavivid_text{
+	 	top:216px;
+	 	left:26%;
+	 	width:45%;
+	 }
+	 .nov-banner .arrow{
+	 	display: none;
+	 }
+
+}
 @media (max-width: 480px) {
 	#columns.container{padding-left:0;padding-right:0;}
 	.gallery-box li a:after {
@@ -62,25 +82,6 @@
 		background: url("/themes/vivid/img/category/vivid/abl_m.jpg") no-repeat center top; 
 		height:320px;
 	}
-
-}
-@media (max-width: 768px) {
-	 .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:150%;height:300px;}
-	 .nov-banner .lavivid_logo,
-	 .nov-banner .lavivid_text{position: absolute;}
-	 .nov-banner .lavivid_logo{
-	 	top:50px;
-	 	left:26%;
-		width:45%;
-	 }
-	 .nov-banner .lavivid_text{
-	 	top:216px;
-	 	left:26%;
-	 	width:45%;
-	 }
-	 .nov-banner .arrow{
-	 	display: none;
-	 }
 
 }
 @media (min-width: 992px) {
