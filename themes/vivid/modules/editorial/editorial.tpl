@@ -74,26 +74,30 @@
 }
 }
 @media (min-width: 768px) {
-  .gallery-box li{
-    width:33.333333%;
-    margin-bottom:22px;
-  }
-  .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:cover;height:600px;}
-.nov-banner .lavivid_logo,
-.nov-banner .lavivid_text{position: absolute;}
-.nov-banner .lavivid_logo{
-	top:100px;
-	left:32%;
-	animation: wave 3s linear 1;
-}
-.nov-banner .lavivid_text{
-	top:350px;
-	left:32%;
-	animation: wave-two 3s linear 1;
-}
+	.gallery-box li{
+	    width:33.333333%;
+	    margin-bottom:22px;
+	}
+	.nov-banner{
+	  	position: relative;
+	  	background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;
+	  	height:300px;
+	  	background-size: 150%;}
+	.nov-banner .lavivid_logo,
+	.nov-banner .lavivid_text{position: absolute;}
+	.nov-banner .lavivid_logo{
+		top:30px;
+		left:29%;
+		width: 45%;
+	}
+	.nov-banner .lavivid_text{
+		top:215px;
+		left:29%;
+		width: 45%;
+	}
 
-  #home-product p,#home-product .col-xs-12 h3{
-	display: none;
+  	#home-product p,#home-product .col-xs-12 h3{
+		display: none;
 	}
 	#home-product .col-xs-12 a{
 		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat;
@@ -104,26 +108,25 @@
 		height:500px;
 	}
 	.nov-banner .arrow{
-	position: absolute;
-    top: 65vh;
-    left: 50vw;
-    margin-left: -30px;
-    height: 60px;
-    width: 60px;
-    display: block;
-    z-index: 500;
-    animation: myfirst 2s ease-in-out 3s infinite;
-}
-.nov-banner .arrow i {
-    position: absolute;
-    font-size: 40px;
-    color: rgba(115, 49, 17, 0.6);
-    text-align: center;
-    height: 60px;
-    width: 60px;
-    top: 0;
-    left: 0;
-}
+		position: absolute;
+	    top: 65vh;
+	    left: 50vw;
+	    margin-left: -30px;
+	    height: 60px;
+	    width: 60px;
+	    display: none;
+	    z-index: 500;
+	}
+	.nov-banner .arrow i {
+	    position: absolute;
+	    font-size: 40px;
+	    color: rgba(115, 49, 17, 0.6);
+	    text-align: center;
+	    height: 60px;
+	    width: 60px;
+	    top: 0;
+	    left: 0;
+	}
 }
 @media (min-width: 992px) {
   .gallery-box li{
