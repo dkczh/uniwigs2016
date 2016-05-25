@@ -81,7 +81,14 @@
 	 .nov-banner .arrow{
 	 	display: none;
 	 }
-
+	#home-product .col-xs-12 a{
+		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat;
+		height:400px;
+	}
+	#designer .img-video a{
+		background: url("/themes/vivid/img/category/vivid/abl.jpg") no-repeat center top; 
+		height:500px;
+	}
 }
 @media (min-width: 992px) {
   .gallery-box li{
@@ -105,14 +112,7 @@
   #home-product p,#home-product .col-xs-12 h3{
 	display: none;
 	}
-	#home-product .col-xs-12 a{
-		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat;
-		height:400px;
-	}
-	#designer .img-video a{
-		background: url("/themes/vivid/img/category/vivid/abl.jpg") no-repeat center top; 
-		height:500px;
-	}
+
 	.nov-banner .arrow{
 	position: absolute;
     top: 30vh;
