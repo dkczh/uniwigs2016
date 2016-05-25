@@ -82,12 +82,16 @@
 	 	display: none;
 	 }
 	#home-product .col-xs-12 a{
-		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat;
-		height:400px;
+		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat center top;
+		height: 320px;
+    	background-size: 120%;
 	}
 	#designer .img-video a{
 		background: url("/themes/vivid/img/category/vivid/abl.jpg") no-repeat center top; 
 		height:500px;
+	}
+	#home-product p,#home-product .col-xs-12 h3{
+	display: none;
 	}
 }
 @media (min-width: 992px) {
@@ -108,9 +112,13 @@
 	left:26%;
 	animation: wave-two 3s linear 1;
 }
-
-  #home-product p,#home-product .col-xs-12 h3{
-	display: none;
+#home-product .col-xs-12 a{
+		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat center top;
+		height:400px;
+	}
+	#designer .img-video a{
+		background: url("/themes/vivid/img/category/vivid/abl.jpg") no-repeat center top; 
+		height:500px;
 	}
 
 	.nov-banner .arrow{
@@ -350,10 +358,10 @@ i.arrow:hover {
 	</div>
 	<div class="designer-abl container">
 		<div class="row">
-			<div class="designer-abl-img col-md-4">
+			<div class="designer-abl-img col-md-4 col-sm-4">
 				<img src="{$img_dir}category/vivid/Albeir.jpg" alt="lavivid albeir" class="img-responsive">
 			</div>
-			<div class="designer-abl-desc col-md-8">
+			<div class="designer-abl-desc col-md-8 col-sm-8">
 				<h3>Albeir Awad</h3>
 				<ul>
 					<li>Albeir Awad based in Los Angeles, is nationally recognized as a top designer and educator in alternative hair industry. </li>
