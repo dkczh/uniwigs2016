@@ -30,7 +30,7 @@
 <p>Welcome to Uniwigs.com! Uniwigs is a one-stop shop for wigs, hair extensions, hairpieces and other hair accessories. We hold a large inventory of various colors, lengths and textures to fit your individual style and needs &ndash; all at outlet prices! We can also ship items anywhere you would like!</p>
 <p>&nbsp;</p>
 <p><strong>Business Hours:</strong></p>
-{*<p>Pacific Standard Time, Monday-Friday, 8:00AM &ndash; 5:00PM, <span class="h4"><a href="tel:6268102938">TEL: 626-810-2938</a></span></p>*}
+<p>Pacific Standard Time, Monday-Friday, 8:00AM &ndash; 5:00PM, <span class="h4"><a href="tel:6268102938">TEL: 626-810-2938</a></span></p>
 <p>Eastern Standard Time, Monday-Friday, 9:00PM &ndash; 5:00AM, <span class="h4"><a href="tel:9098956421">TEL: 909-895-6421</a></span></p>
 <p>&nbsp;</p>
 <p><strong>Email Us:</strong></p>
@@ -42,7 +42,7 @@
 <p><strong><br /></strong></p>
 <p><strong>Placing a Phone Order</strong></p>
 <p>Call us at<p/>
-{*<p><span class="h4"><a href="tel:6268102938">626-810-2938</a></span> <span class="text-info">(Monday-Friday, 9:00AM &ndash; 5:30PM, PST)</span><p/>*}
+<p><span class="h4"><a href="tel:6268102938">626-810-2938</a></span> <span class="text-info">(Monday-Friday, 9:00AM &ndash; 5:30PM, PST)</span><p/>
 <p><span class="h4"><a href="tel:9098956421">909-895-6421</a></span> <span class="text-info">(Monday-Friday, 9:00PM &ndash; 5:00AM,EST)</span><p/>
 <p>We will be happy to help you regarding your order.<p/>
 
