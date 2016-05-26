@@ -1034,8 +1034,9 @@ class AdminControllerCore extends Controller
 	
 	
 	//订单导出格式
-	function   orderexcel($res,$name)
-	{
+    function   orderexcel($res,$name)
+	{	
+		
 		$objPHPExcel = new PHPExcel();
 		//设置当前的sheet
 		$objPHPExcel->setActiveSheetIndex(0);
@@ -1058,6 +1059,7 @@ class AdminControllerCore extends Controller
 		$objPHPExcel->getActiveSheet()->setCellValue('M1', 'Num');
 		$objPHPExcel->getActiveSheet()->setCellValue('N1', 'Email Address');//xx 默认字段 空
 		$objPHPExcel->getActiveSheet()->setCellValue('O1', 'New Customer');	
+		$objPHPExcel->getActiveSheet()->setCellValue('P1', 'Total Paid');	
 	
 		$i = 2 ;
 		foreach ($res as $a) {
@@ -1075,6 +1077,7 @@ class AdminControllerCore extends Controller
 			$objPHPExcel->getActiveSheet()->setCellValue('L'.$i, $a['pphone']);
 			$objPHPExcel->getActiveSheet()->setCellValue('M'.$i, $a['num']);
 			$objPHPExcel->getActiveSheet()->setCellValue('N'.$i, $a['email']);
+			
 			if($a['new']==1){
 				
 					$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,'yes');
@@ -1082,7 +1085,7 @@ class AdminControllerCore extends Controller
 				
 				$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,'no');
 			}
-		
+			$objPHPExcel->getActiveSheet()->setCellValue('P'.$i, $a['total_paid_tax_incl']);
 			
 			$i++;
 		} 
