@@ -724,6 +724,7 @@ class AdminOrdersControllerCore extends AdminController
 
                 if (!Validate::isLoadedObject($order_state)) {
                     $this->errors[] = Tools::displayError('The new order status is invalid.');
+				
                 } else {
                     $current_order_state = $order->getCurrentOrderState();
                     if ($current_order_state->id != $order_state->id) {
@@ -3049,10 +3050,10 @@ WHERE
 	public function  getOrderRemind($id_order){
 		
 		$result = Db::getInstance()->executeS("SELECT
-	ore.*,od.product_id,od.id_order,od.product_name,od.product_reference as skus	
+    ore.*,od.product_id,od.id_order,od.product_name,od.product_reference as skus	
 	FROM	ps_order_detail od
-	LEFT JOIN px_order_remind  ore  on   od.product_name=ore.product_name
-	WHERE	od.id_order = $id_order");
+	LEFT JOIN px_order_remind  ore  on   od.product_name=ore.product_name and  od.id_order=ore.id_order
+	WHERE	od.id_order = $id_order   ");
 	
 		return $result;
 		
