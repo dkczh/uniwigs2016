@@ -1030,7 +1030,7 @@ ga(function(tracker) {
         // Check if field is required
         $required_fields = (isset(self::$fieldsRequiredDatabase[get_class($this)])) ? self::$fieldsRequiredDatabase[get_class($this)] : array();
         if (!$id_lang || $id_lang == $ps_lang_default) {
-            if (!in_array('required', $skip) && (!empty($data['required']) || in_array($field, $required_fields))) {
+            if (!in_array('required', $skip) && (!empty($data['required']) || in_array($field, $required_fields)) && $field !='optin'&& $field !='newsletter'  ) {
                 if (Tools::isEmpty($value)) {
                     if ($human_errors) {
                         return sprintf(Tools::displayError('The %s field is required.'), $this->displayFieldName($field, get_class($this)));
@@ -1160,9 +1160,9 @@ ga(function(tracker) {
             if (in_array($field, $required_fields_database)) {
                 $data['required'] = true;
             }
-
-            // Checking for required fields
-            if (isset($data['required']) && $data['required'] && empty($value) && $value !== '0') {
+			
+            // Checking for required fields  排除掉 opt   newsletter
+            if (isset($data['required']) && $data['required'] && empty($value) && $value !== '0'&& $field!='optin' &&$field!='newsletter') {
                 if (!$this->id || $field != 'passwd') {
                     $errors[$field] = '<b>'.self::displayFieldName($field, get_class($this), $htmlentities).'</b> '.Tools::displayError('is required.');
                 }
@@ -1370,7 +1370,7 @@ ga(function(tracker) {
 
             $value = Tools::getValue($field);
 
-            if (empty($value)) {
+            if (empty($value) && $field!='optin' &&$field!='newsletter') {
                 $errors[$field] = sprintf(Tools::displayError('The field %s is required.'), self::displayFieldName($field, get_class($this), $htmlentities));
             }
         }

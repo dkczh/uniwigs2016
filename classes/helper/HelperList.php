@@ -665,6 +665,8 @@ class HelperListCore extends Helper
 			'orderremind'=>$this->getMyOrderRemind('1'),
 			'orderremindout'=>$this->getMyOrderRemind('2'),
 			'orderremindnormal'=>$this->getMyOrderRemind('3'),
+			'paypalremind'=>$this->getPaypalRemind(),//paypal 漏单提醒
+			'authorizeremind'=>$this->getAuthorizeRemind(),//authorize  漏单提醒 
             'page' => $page,
             'simple_header' => $this->simple_header,
             'total_pages' => $total_pages,
@@ -778,7 +780,42 @@ and id_order  not in (select id_order  from  px_order_remind)");
 		return $result;
 		 
 	 }
-
+	
+	/*paypal 漏单提醒 
+	 *
+	 *
+	*/
+	public  function  getPaypalRemind(){
+		
+		 $result = Db::getInstance()->executeS("SELECT DISTINCT
+													*
+												FROM
+													px_paypal_remind
+												GROUP BY  id_transaction
+											");
+	/* 	var_dump($result);
+		exit; */
+		 return  $result;
+		
+	}
+	
+	/*authorize 漏单提醒 
+	 *
+	 *
+	*/
+	public  function  getAuthorizeRemind(){
+		
+		 $result = Db::getInstance()->executeS("SELECT DISTINCT
+													*
+												FROM
+													px_authorize_remind
+												GROUP BY  id_transaction
+											");
+	/* 	var_dump($result);
+		exit; */
+		 return  $result;
+		
+	}
     public function hasBulkActions($has_value = false)
     {
         if ($this->force_show_bulk_actions) {

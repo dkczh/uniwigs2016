@@ -13,7 +13,7 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 
 
 
-    set_time_limit (0);
+	set_time_limit (0);
 	
 
 
@@ -62,7 +62,9 @@ require_once('Classes/PHPExcel/Writer/Excel5.php');
 	function out_item_order($db,$o_end,$o_begin)
 	  {
 
-		$sql = "SELECT od.id_order,c.`id_customer`,od.product_name,
+		$sql = "SELECT od.id_order,c.`id_customer`,c.`email`,c.firstname,c.lastname,
+concat(pd.address1,pd.address2) as address,
+pd.`phone`,pd.`phone_mobile`,
 od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 				,od.`product_quantity`,od.`product_price`,((od.product_price-od.reduction_amount)*od.`product_quantity`) AS item_total,
 				o.date_add as date
@@ -77,13 +79,13 @@ od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 				SELECT distinct id_order FROM `ps_order_history` WHERE id_order_state=2 AND `date_add`<
 				'$o_end' AND `date_add`>='$o_begin'
 				)
-				
+				GROUP BY o.id_order
 				order by o.id_order" ;
 		
 		$res = getall($db,$sql);
 		$name = 'item_order';
 		// 执行productexcel 函数 前面 不允许有任何 echo 输出
-		$excefiled = array('id_order','id_customer','product_name','product_reference','danwei','order_currency','product_quantity','product_price','item_total');
+		$excefiled = array('date','id_order','id_customer','email','firstname','address','phone','phone_mobile','lastname','product_reference','danwei','order_currency','product_quantity','product_price','item_total');
 		out_excel($res,$name,$excefiled);
 
 	  }
@@ -91,8 +93,8 @@ od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 	  //导出付款用户 订单
 	 function out_customer_order($db,$o_end,$o_begin){
 		 
-		$sql = "SELECT c.`id_customer`,c.`email`,c.firstname,c.lastname,concat(a.address1,a.address2) as address,concat(a.firstname,'.',a.lastname) as customer_name,concat(a.firstname,'.',a.lastname) as recipient,col.`name` AS country,st.`name` AS state,a.`city`,a.`postcode`,a.`phone`,a.`phone_mobile`
-		,o.id_order
+		$sql = "SELECT c.`id_customer`,c.`email`,c.firstname,c.lastname,concat(a.address1,a.address2) as address,concat(a.firstname,a.lastname) as recipient,col.`name` AS country,st.`name` AS state,a.`city`,a.`postcode`,a.`phone`,a.`phone_mobile`
+		,o.date_add as date
 				FROM ps_orders o
 				LEFT JOIN ps_customer c ON o.id_customer=c.`id_customer`
 				LEFT JOIN ps_address a ON o.`id_address_delivery`=a.`id_address`
@@ -110,7 +112,7 @@ od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 		$res = getall($db,$sql);
 		$name = 'customer_order';
 		// 执行productexcel 函数 前面 不允许有任何 echo 输出
-		$excefiled = array('id_order','id_customer','customer_name','email','address','recipient','country','state','city','postcode','phone','phone_mobile');
+		$excefiled = array('date','id_customer','firstname','lastname','email','address','recipient','country','state','city','postcode','phone','phone_mobile');
 
 	//cutomer_orderexcel($res,$name);
 		out_excel($res,$name,$excefiled);
@@ -131,7 +133,7 @@ od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 				,'' AS order_fhqx
 				,(select oh2.`date_add` from `ps_order_history` oh2 where oh2.id_order_state=4 and oh2.id_order=o.id_order order by oh2.`date_add` desc limit 1 ) AS order_deliver_time
 				,cr.name AS order_carrier, cr.name AS order_carrier_real, o.shipping_number, o.payment, pcr.code AS coupon,cu.iso_code AS order_currency
-				,o.total_products,o.total_shipping,0 AS 'order_sxf',o.total_discounts,o.total_paid_real,IF(o.current_state=4,'YES','NO')  AS shipped  
+				,o.total_products,o.total_shipping,0 AS 'order_sxf',o.total_discounts,o.total_paid,o.total_paid_real,6 AS order_hl,0 AS order_jhje
 				FROM `ps_orders` o
 				LEFT JOIN ps_customer c ON o.id_customer=c.id_customer
 				LEFT JOIN `ps_carrier` cr ON o.id_carrier=cr.id_carrier
@@ -338,8 +340,10 @@ od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 		$objPHPExcel->getActiveSheet()->setCellValue('R1', 'total_shipping'); // 运费
 		$objPHPExcel->getActiveSheet()->setCellValue('S1', 'order_sxf'); // 默认为0
 		$objPHPExcel->getActiveSheet()->setCellValue('T1', 'total_discounts'); // 打折价格
-		$objPHPExcel->getActiveSheet()->setCellValue('U1', 'total_paid_real'); // 支付价格
-		$objPHPExcel->getActiveSheet()->setCellValue('V1', 'shipped'); // 和上面一样的值
+		$objPHPExcel->getActiveSheet()->setCellValue('U1', 'total_paid'); // 支付价格
+		$objPHPExcel->getActiveSheet()->setCellValue('V1', 'total_paid_real'); // 和上面一样的值
+		$objPHPExcel->getActiveSheet()->setCellValue('W1', 'order_hl'); // 默认为6
+		$objPHPExcel->getActiveSheet()->setCellValue('X1', 'order_jhje');  // 默认为0
 
 		
 		$i = 2 ;
@@ -364,9 +368,10 @@ od.`product_reference`,'pc' AS danwei,'USD' AS order_currency
 			$objPHPExcel->getActiveSheet()->setCellValue('R'.$i, $a['total_shipping']);
 			$objPHPExcel->getActiveSheet()->setCellValue('S'.$i, $a['order_sxf']);
 			$objPHPExcel->getActiveSheet()->setCellValue('T'.$i, $a['total_discounts']);
-			$objPHPExcel->getActiveSheet()->setCellValue('U'.$i, $a['total_paid_real']);
-			$objPHPExcel->getActiveSheet()->setCellValue('V'.$i, $a['shipped']);
-	
+			$objPHPExcel->getActiveSheet()->setCellValue('U'.$i, $a['total_paid']);
+			$objPHPExcel->getActiveSheet()->setCellValue('V'.$i, $a['total_paid_real']);
+			$objPHPExcel->getActiveSheet()->setCellValue('W'.$i, $a['order_hl']);
+			$objPHPExcel->getActiveSheet()->setCellValue('X'.$i, $a['order_jhje']);
 			
 			$i++;
 		} 

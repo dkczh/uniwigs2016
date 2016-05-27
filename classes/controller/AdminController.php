@@ -1034,7 +1034,7 @@ class AdminControllerCore extends Controller
 	
 	
 	//订单导出格式
-    function   orderexcel($res,$name)
+	function   orderexcel($res,$name)
 	{	
 		
 		$objPHPExcel = new PHPExcel();

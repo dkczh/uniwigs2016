@@ -699,6 +699,14 @@ span.view_scroll_spacer {
 			padding: 12px 20px 14px 55px;
 			display: block !important;
 			@include transition(all 0.3s ease);
+			@media  (max-width: $screen-md-max) { //max 1199px
+				padding: 12px 22px 14px 55px;
+				font-size: 14px;
+			}
+			@media (max-width: $screen-sm-max) {  //max 991px
+				padding: 8px 12px 10px;
+				text-align: left;
+			}
 		}
 		&:hover{
 			background-color: #fff;
