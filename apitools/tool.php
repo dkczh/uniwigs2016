@@ -6,6 +6,7 @@
 * 这是一个工具类 所有的自定义函数都存放在此类中
 */
 //require_once('config.php');
+header("Content-Type: text/html; charset=UTF-8") ;
 
 
 class  Tool 
