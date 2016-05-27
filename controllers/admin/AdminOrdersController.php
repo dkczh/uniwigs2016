@@ -724,8 +724,6 @@ class AdminOrdersControllerCore extends AdminController
 
                 if (!Validate::isLoadedObject($order_state)) {
                     $this->errors[] = Tools::displayError('The new order status is invalid.');
-					var_dump( $this->errors);
-					exit;
                 } else {
                     $current_order_state = $order->getCurrentOrderState();
                     if ($current_order_state->id != $order_state->id) {
