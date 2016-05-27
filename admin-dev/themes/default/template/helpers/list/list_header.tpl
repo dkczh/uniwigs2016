@@ -25,6 +25,41 @@
 {*begin自定义提醒*}
 {if  $smarty.get.controller=='AdminOrders'}
 
+
+{*authorize 漏单提醒*}
+<div class="panel kpi-container" style=" margin-bottom: 0px;    padding: 10px;">
+
+	<div class="row">
+		<span style="color: #CC2B1B;">authorize漏单提醒:</span>		
+		{foreach from=$authorizeremind item=row key=key}
+		<p>详情：authorize交易id
+		<span style="color: red;">({$row['id_transaction']})</span>购物车
+		<span style="color: red;">({$row['id_shop_cart']})</span> email
+		<span style="color: red;">({$row['customer_name']})</span></p>
+		{/foreach}
+	</div>
+
+</div>
+
+
+
+
+{*paypal 漏单提醒*}
+<div class="panel kpi-container" style=" margin-bottom: 0px;    padding: 10px;">
+
+	<div class="row">
+		<span style="color: #CC2B1B;">paypal漏单提醒:</span>		
+		{foreach from=$paypalremind item=row key=key}
+		<p>详情：paypal交易id
+		<span style="color: red;">({$row['id_transaction']})</span>购物车
+		<span style="color: red;">({$row['id_shop_cart']})</span> email
+		<span style="color: red;">({$row['email']})</span></p>
+		{/foreach}
+	</div>
+
+</div>
+
+
 {*返修单提醒*}
 <div class="panel kpi-container" style=" margin-bottom: 0px;    padding: 10px;">
 
