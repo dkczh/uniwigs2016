@@ -37,7 +37,7 @@
 						{$HOOK_FOOTER}
 						<div class="container">
 							<article class="card foot_card"></article>
-							<address>Copyright Notice © 2015 UniWigs.com Store. All Rights Reserved.</address>
+							<address>Copyright Notice © 2016 UniWigs.com Store. All Rights Reserved.</address>
 						</div>
 						<div id="backup">
 							<a id="backup_a" class="back" href="#header" data-uk-smooth-scroll></a>
