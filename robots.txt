@@ -1,5 +1,17 @@
 User-agent: *
 
+# 160528 add
+Disallow: /ponytail-hairpieces.html*
+Disallow: /ponytail/shopby*
+Disallow: /old-human-hair-wigs+*
+Disallow: /human-hair-wigs/medical-human-hair-wigs.html*
+Disallow: /human-hair-wigs/celebrity-human-hair-wigs*
+Disallow: /human-hair-mono-wigs.html*
+Disallow: /human-hair-lace-front-wigs.html*
+Disallow: /flip-in-hair-extensions+*
+Disallow: /clip-in-hair-extensions+*
+
+
 # 160524 add
 Disallow: /wigs/cap-constrution*
 Disallow: /wigs/departments/*
@@ -53,11 +65,11 @@ Disallow: /lace*
 Disallow: /bun*
 Disallow: /remy*
 Disallow: /ponytail*
-Disallow: /pview*
+Disallow: /pview?*
 Disallow: /blond*
 Disallow: /human-hair-lace*
 Disallow: /glueless*
-Disallow: /black-wig*
+Disallow: /black-wig.html*
 Disallow: /2013-new-arrical*
 Disallow: /silk-top-full-lace-wigs*
 Disallow: /synthetic-hair-extensions*
@@ -193,8 +205,6 @@ Disallow: /review/product/
 Disallow: /synthetic-wigs/cap-construction/capless/shopby/
 Disallow: /synthetic-wigs/length/shopby/
 Disallow: /synthetic-wigs/length/short/shopby/
-
-
 
 
 # 130910 add
