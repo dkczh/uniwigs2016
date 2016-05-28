@@ -25,7 +25,7 @@
 {include file="./errors.tpl"}
 {if isset($orderRet)}
 	<div class="box">
-		<h2 class="page-subheading">{l s='RE#'}{$orderRet->id|string_format:"%06d"} {l s='on'} {dateFormat date=$order->date_add full=0}</h2>
+		<h2 class="page-subheading">{l s='RE#'}{$order->id|string_format:"%06d"} {l s='on'} {dateFormat date=$order->date_add full=0}</h2>
 		<p class="bold">{l s='We have logged your return request.'}</p>
 		<p>{l s='Your package must be returned to us within'} {$nbdaysreturn} {l s='days of receiving your order.'}</p>
 		<p>{l s='Return Address: GEORGE HANN, 18305 E Valley Blvd., Ste C, La Puente, CA 91744'}</p>
