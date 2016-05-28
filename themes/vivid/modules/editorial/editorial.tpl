@@ -62,56 +62,75 @@
 		background: url("/themes/vivid/img/category/vivid/abl_m.jpg") no-repeat center top; 
 		height:320px;
 	}
-	@keyframes myfirst
-{
-0%, 100%   {top: 30vh;}
-50%  {top: 32vh;}
-}
-@keyframes myfirst-two
-{
-0%, 100%   {top: 30vh;}
-50%  {top: 32vh;}
-}
+
 }
 @media (min-width: 768px) {
+	 .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:150%;height:300px;}
+	 .nov-banner .lavivid_logo,
+	 .nov-banner .lavivid_text{position: absolute;}
+	 .nov-banner .lavivid_logo{
+	 	top:50px;
+	 	left:26%;
+		width:45%;
+	 }
+	 .nov-banner .lavivid_text{
+	 	top:216px;
+	 	left:26%;
+	 	width:45%;
+	 }
+	 .nov-banner .arrow{
+	 	display: none;
+	 }
+	#home-product .col-xs-12 a{
+		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat center top;
+		height: 320px;
+    	background-size: 120%;
+	}
+	#designer .img-video a{
+		background: url("/themes/vivid/img/category/vivid/abl.jpg") no-repeat center top; 
+		height:500px;
+	}
+	#home-product p,#home-product .col-xs-12 h3{
+	display: none;
+	}
+}
+@media (min-width: 992px) {
   .gallery-box li{
-    width:33.333333%;
-    margin-bottom:22px;
+    width:25%;
+    margin-bottom:7px;
   }
-  .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:cover;height:600px;}
+  .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:150%;height:470px;}
 .nov-banner .lavivid_logo,
 .nov-banner .lavivid_text{position: absolute;}
 .nov-banner .lavivid_logo{
-	top:100px;
-	left:32%;
+	top:50px;
+	left:26%;
 	animation: wave 3s linear 1;
 }
 .nov-banner .lavivid_text{
-	top:350px;
-	left:32%;
+	top:326px;
+	left:26%;
 	animation: wave-two 3s linear 1;
 }
-
-  #home-product p,#home-product .col-xs-12 h3{
-	display: none;
-	}
-	#home-product .col-xs-12 a{
-		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat;
+#home-product .col-xs-12 a{
+		background: url("/themes/vivid/img/category/vivid/Carrie.jpg") no-repeat center top;
 		height:400px;
 	}
 	#designer .img-video a{
 		background: url("/themes/vivid/img/category/vivid/abl.jpg") no-repeat center top; 
 		height:500px;
 	}
+
 	.nov-banner .arrow{
 	position: absolute;
-    top: 65vh;
+    top: 30vh;
     left: 50vw;
     margin-left: -30px;
     height: 60px;
     width: 60px;
     display: block;
     z-index: 500;
+    opacity: 0;
     animation: myfirst 2s ease-in-out 3s infinite;
 }
 .nov-banner .arrow i {
@@ -125,19 +144,28 @@
     left: 0;
 }
 }
-@media (min-width: 992px) {
-  .gallery-box li{
-    width:25%;
-    margin-bottom:7px;
-  }
-}
+
 @media (min-width: 1200px) {
   .gallery-box li{
     width:20%;
     margin-bottom:0;
   }
+    .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:130%;height:550px;}
+  .nov-banner .lavivid_logo,
+  .nov-banner .lavivid_text{position: absolute;}
+  .nov-banner .lavivid_logo{
+  	top:50px;
+  	left:32%;
+  	animation: wave 3s linear 1;
+  }
+  .nov-banner .lavivid_text{
+  	top:326px;
+  	left:32%;
+  	animation: wave-two 3s linear 1;
+  }
 }
 @media (min-width: 1600px) {
+	.nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:cover;height:600px;}
 	.nov-banner .lavivid_logo,
 	.nov-banner .lavivid_text{
 		left:37%;
@@ -159,13 +187,15 @@
 }
 @keyframes myfirst
 {
-0%, 100%   {top: 65vh;}
-50%  {top: 67vh;}
+0% {opacity: 0;top: 50vh;}
+100% {top: 50vh;opacity: 1;}
+50% {top: 55vh;opacity: 1;}
 }
 @keyframes myfirst-two
 {
-0%, 100%   {top: 55vh;}
-50%  {top: 57vh;}
+0% {opacity: 0;top: 55vh;}
+100% {top: 55vh;opacity: 1;}
+50% {top: 57vh;opacity: 1;}
 }
 
 i.arrow:hover {
@@ -328,10 +358,10 @@ i.arrow:hover {
 	</div>
 	<div class="designer-abl container">
 		<div class="row">
-			<div class="designer-abl-img col-md-4">
+			<div class="designer-abl-img col-md-4 col-sm-4">
 				<img src="{$img_dir}category/vivid/Albeir.jpg" alt="lavivid albeir" class="img-responsive">
 			</div>
-			<div class="designer-abl-desc col-md-8">
+			<div class="designer-abl-desc col-md-8 col-sm-8">
 				<h3>Albeir Awad</h3>
 				<ul>
 					<li>Albeir Awad based in Los Angeles, is nationally recognized as a top designer and educator in alternative hair industry. </li>
