@@ -93,7 +93,7 @@ function  checkpaypal($t_arr,$post){
 			}
 
 			
-			if($cart!='0000:0'&&$email!='uniwigspay@gmail.com'){
+			if($cart!='0000:0'&&$email!='uniwigspay@gmail.com'&&$amount>0){
 				
 			$paysql="INSERT INTO `px_paypal_remind` (`id_shop_cart`,`id_transaction`,`email` ,`amount`, `fee`, `date_add`) 
 			VALUES ('$cart','$value','$email','$amount','$fee','$date_add'); ";
