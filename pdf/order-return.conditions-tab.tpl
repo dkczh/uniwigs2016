@@ -44,5 +44,5 @@
 	</tbody>
 </table>
 <br/>
-<p><img src="http://www.prestashop-run.com/pdf/return.png" alt=""></p>
+<p><img src="http://www.uniwigs.com/pdf/return.png" alt=""></p>
 <p>{l s='Upon receiving your package, we will notify you by e-mail. We will then begin processing the refund, if applicable. Let us know if you have any questions' pdf='true'}</p>
