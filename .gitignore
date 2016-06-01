@@ -2,6 +2,7 @@ img/p/*
 img/co/*
 img/tmp/*
 cache/
+config/
 log/
 *.db
 tools/smarty/compile/*
