@@ -67,8 +67,7 @@
 	</tr>
 
 	<tr>
-		<td colspan="2">&nbsp;</td>
-		<td colspan="10">
+		<td colspan="12">
 			{$conditions_tab}
 		</td>
 	</tr>
@@ -81,8 +80,7 @@
 	</tr>
 
 	<tr>
-		<td colspan="2">&nbsp;</td>
-		<td colspan="10">
+		<td colspan="12">
 			{$HOOK_DISPLAY_PDF}
 		</td>
 	</tr>
