@@ -71,7 +71,7 @@ class AdminOrdersControllerCore extends AdminController
 		state.`name` as pstate,
 		address.`city` as pcity,
 		address.`address1` as pstreet,
-		address.`phone` AS pphone,
+		IF(address.`phone`=\'\',address.`phone_mobile`,address.`phone`) AS pphone,
 		(SELECT count(*) from ps_orders where id_customer =c.id_customer) as num ,
 		c.email,
 		a.shipping_number,
