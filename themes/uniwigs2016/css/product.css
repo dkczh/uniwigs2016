@@ -78,9 +78,6 @@ a.fancybox-nav {
       border: none; }
     .pb-left-column #image-block .zoomPad {
       z-index: auto !important; }
-    .pb-left-column #image-block .new-box,
-    .pb-left-column #image-block .sale-box {
-      z-index: 1002; }
 
 /* miniatures */
 .pb-left-column #views_block {
