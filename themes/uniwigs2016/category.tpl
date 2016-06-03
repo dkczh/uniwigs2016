@@ -760,6 +760,12 @@
         			{else}
                         <!-- Category image -->
                         {if $category->id == '108' or $category->id == '40439' or $category->id == '112' or $category->id == '110' or $category->id == '111' or $category->id == '116' or $category->id == '105' or $category->id == '40442'}
+                        {elseif $category->id == '40452'}
+                        <div class="uk-margin-small-bottom">
+                            <a href="https://youtu.be/iTTA-NOl9qY" data-uk-lightbox>
+                                <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}" class="img-responsive">
+                            </a>
+                        </div>
                         {else}
                         <div class="uk-margin-small-bottom">
                             <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}">

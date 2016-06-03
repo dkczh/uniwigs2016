@@ -182,6 +182,13 @@
                 </li>
             </ul>
         {/if}
+        {if $category->id == '40452'}
+            <div class="uk-margin-small-bottom">
+                <a href="https://youtu.be/iTTA-NOl9qY" data-uk-lightbox>
+                    <img src="{$img_dir}category/human-hair/banner.jpg" alt="human hair" class="img-responsive">
+                </a>
+            </div>
+        {/if}
 		{if $products}
 			<div class="content_sortPagiBar clearfix">
             	<div class="sortPagiBar clearfix">
