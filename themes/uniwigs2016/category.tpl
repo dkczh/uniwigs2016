@@ -766,6 +766,7 @@
                                 <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}" class="img-responsive">
                             </a>
                         </div>
+                        <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
                         {else}
                         <div class="uk-margin-small-bottom">
                             <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}">

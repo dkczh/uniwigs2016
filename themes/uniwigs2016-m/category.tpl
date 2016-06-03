@@ -188,6 +188,7 @@
                     <img src="{$img_dir}category/human-hair/banner.jpg" alt="human hair" class="img-responsive">
                 </a>
             </div>
+            <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
         {/if}
 		{if $products}
 			<div class="content_sortPagiBar clearfix">
