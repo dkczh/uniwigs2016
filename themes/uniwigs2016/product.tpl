@@ -345,6 +345,7 @@
 														 <div class="uk-modal-dialog">
 													        <a class="uk-modal-close uk-close"></a>
 													        <img src="{$base_dir}themes/uniwigs2016/img/products/length.jpg" alt="">
+													        <img src="{$base_dir}themes/uniwigs2016/img/products/biglayer.png" alt="">
 													    </div>
 													</div>
 													{/if}

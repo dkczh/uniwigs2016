@@ -34,11 +34,11 @@
         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
         <section class="containerIndex">
             <section class="category-home">
-                <div class="uk-margin-top">
+                {*<div class="uk-margin-top">
                     <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
                         <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="make obvious part" class="img-responsive">
                     </a>
-                </div>
+                </div>*}
                 <div class="uk-margin-top">
                     <a href="{$base_dir}tag/real-human-hair"><img src="{$img_dir}category/human-hair/real-human-hair.jpg" alt="real human hair" class="img-responsive"></a>
                 </div>

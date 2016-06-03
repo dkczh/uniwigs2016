@@ -16,6 +16,11 @@
         padding-right: 8px; }
   #cms #center_column .block-cms {
     padding-bottom: 20px; }
+  #cms #center_column .doc-con .how-to-videos li {
+    padding: 15px;
+    height: 220px; }
+    #cms #center_column .doc-con .how-to-videos li img {
+      width: 100%; }
   #cms #center_column .doc-con li {
     padding: 10px 0; }
     #cms #center_column .doc-con li img {
@@ -49,14 +54,34 @@
     position: relative;
     display: block; }
     #cms #center_column .how-to-videos .highslide:before {
+      position: absolute;
+      right: 10%;
+      top: 6%;
+      font-size: 1.3em;
+      color: #FFF;
       font-family: "FontAwesome";
       display: inline-block;
-      content: "\f144";
-      font-size: 3em;
-      color: #d32676;
+      content: "\f03d";
+      opacity: 1;
+      filter: alpha(opacity=100);
+      z-index: 2; }
+    #cms #center_column .how-to-videos .highslide:after {
+      content: "";
       position: absolute;
-      left: 44%;
-      top: 40%; }
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ef3386;
+      opacity: 0;
+      filter: alpha(opacity=0); }
+    #cms #center_column .how-to-videos .highslide:hover:after {
+      opacity: .7;
+      filter: alpha(opacity=70);
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
   #cms #center_column .list-1 li {
     padding: 4px 0 6px 0;
     font-weight: bold;
