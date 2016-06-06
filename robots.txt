@@ -1,5 +1,18 @@
 User-agent: *
 
+# 160606 add
+Disallow:/human-hair-wigs/human-hair-synthetic-blend-wigs/shopby/*
+Disallow:/human-hair-wigs/celebrity-human-hair-wigs/shopby*
+Disallow:/human-hair-wigs/jewish-wigs/shopby/*
+Disallow:/all-hair-pieces/shopby/*
+Disallow:/hair-extensions+*
+Disallow:/pre-bonded-hair-extensions+*
+Disallow:/human-hairpieces+*
+Disallow:/top-hairpieces+*
+Disallow:/buns+*
+Disallow:/hair-tools+*
+
+
 # 160528 add
 Disallow: /ponytail-hairpieces.html*
 Disallow: /ponytail/shopby*
