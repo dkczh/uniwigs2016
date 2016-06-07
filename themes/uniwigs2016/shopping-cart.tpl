@@ -202,6 +202,14 @@
 						<td colspan="1" class="price" id="total_tax">{displayPrice price=$total_tax}</td>
 					</tr>
 				{/if}
+				<!-- 增加  积分抵消 -->
+				{if $cart->id_customer ==140121}
+				{* if $cart->id_customer ==139469 *}
+				<tr class="cart_total_tax">
+					<td colspan="2" class="text-left uk-text-bold">Total points</td>
+					<td colspan="1" class="points" id="total_points"style="text-align: right;">-$0</td>
+				</tr>
+				{/if}
 				<tr class="cart_total_price">
 					<td colspan="2" class="total_price_container text-left h4 uk-text-bold">
 						<span>{l s='Total'}</span>
@@ -219,8 +227,131 @@
 						</td>
 					{/if}
 				</tr>
+			
+
 			</tbody>
 		</table>
+				
+				{if $cart->id_customer ==140121}
+				{* if $cart->id_customer ==139469 *}
+				<div id='custom_points'>
+
+					<p>
+						Valid Points: <span id='npoints'>{$points}</span>
+					</p>
+					
+					{if $points==0} 
+					<p style="display: none;">
+					
+					{else}
+					<p>
+					{/if}
+						<input type="text" id="points_name" name="points_name" value="" style="
+    width: 50px;
+">					<button  onclick='addPoints()'>确定 </button>
+					</p>
+
+
+				</div>
+
+				{/if}
+		<script>
+
+
+			$("#points_name").keyup(function(){
+			
+
+			  if($("#points_name").val()*1>$("#npoints").html()*1){
+
+			  	$("#points_name").val($("#npoints").html()*1);
+			  }
+
+			});
+			
+
+			
+			function  addPoints(){
+				
+
+				if ($('#total_points').html()=='-$0') {
+
+					//获取需要转换的积分
+					if( $('#points_name').val()==0){
+					 alert('请输入大于0的积分值');
+					}
+					
+					var points =  $('#points_name').val()*{$nrate};
+					//获取当前的总价格
+					var total_price =$('#total_price').html().replace('$','');
+					//计算积分后的价格
+					var nowprice = total_price*1 - points;
+					$('#total_points').html('-$'+points.toFixed(2)); 
+					$('#total_price').html('$'+nowprice.toFixed(2));
+					
+					
+					
+					carttext =$("input[name='custom']").val();
+					cartarr=carttext.split(";");
+					point = $('#points_name').val();
+				
+				
+					$.post("checkpoints.php",{ cart:cartarr[0], point:point});
+					
+					//修改paypal提交的积分
+					$('#paypal input[name ^="amount"]').val(nowprice.toFixed(2));
+					$('#paypal input[name ^="amount_"]').remove();
+					$('#paypal input[name ^="item_name_"]').remove();
+					$('#paypal input[name ^="quantity_"]').remove();
+					$('#paypal input[name ="amount"]').after('<input type="hidden" name="item_name_1" value="Your order"></input>'
+				+'<input type="hidden" name="amount_1" value="'+nowprice.toFixed(2)+'"></input>'
+				+'<input type="hidden" name="quantity_1" value="1"></input>');
+				
+				
+				
+				}else{
+					//获取需要转换的积分
+					if( $('#points_name').val()==0){
+					 alert('请输入大于0的积分值');
+					}
+						
+					
+					//获取需要转换的积分
+					var points =  $('#points_name').val()*{$nrate};
+					//修整当前 已经计算的积分 
+					var fixpoints = $('#total_points').html().replace('-$',''); 
+
+					//获取当前的总价格
+					var total_price =$('#total_price').html().replace('$','');
+					
+					//计算积分后的价格
+					var nowprice = total_price*1 - points+fixpoints*1;
+
+					$('#total_points').html('-$'+points); 
+					$('#total_price').html('$'+nowprice.toFixed(2));
+					
+					
+					carttext =$("input[name='custom']").val();
+					cartarr=carttext.split(";");
+					point =  $('#points_name').val();
+				
+				
+					$.post("checkpoints.php",{ cart:cartarr[0], point:point});
+					//修改paypal提交的积分
+					$('#paypal input[name ^="amount"]').val(nowprice.toFixed(2));
+					$('#paypal input[name ^="amount_"]').remove();
+					$('#paypal input[name ^="item_name_"]').remove();
+					$('#paypal input[name ^="quantity_"]').remove();
+					
+					$('#paypal input[name ="amount"]').after('<input type="hidden" name="item_name_1" value="Your order"></input>'
+				+'<input type="hidden" name="amount_1" value="'+nowprice.toFixed(2)+'"></input>'
+				+'<input type="hidden" name="quantity_1" value="1"></input>');
+				}
+
+			}
+		</script>
+		
+
+
 		<div class="uk-margin-top order-advisory">
 		<h4>Have Questions?</h4>
 		<p>Talk with Uniwigs:</p>

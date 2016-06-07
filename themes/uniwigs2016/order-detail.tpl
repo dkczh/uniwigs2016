@@ -188,6 +188,19 @@
 					<span class="price-shipping">{displayWtPriceWithCurrency price=$order->total_shipping currency=$currency}</span>
 				</td>
 			</tr>
+			
+			{* 订单存在积分消费 展示对应的消息*}
+			{if $total_points}
+			<tr class="item">
+					
+				<td colspan="{if $return_allowed}2{else}1{/if}">
+					<strong>{l s='Total points'}</strong>
+				</td>
+				<td colspan="{if $order->hasProductReturned()}6{else}5{/if}">
+					<span class="price-shipping">{displayWtPriceWithCurrency price=$total_points currency=$currency}</span>
+				</td>
+			</tr>
+			{/if}
 			<tr class="totalprice item">
 				<td colspan="{if $return_allowed}2{else}1{/if}">
 					<strong>{l s='Total'}</strong>
@@ -196,6 +209,11 @@
 					<span class="price">{displayWtPriceWithCurrency price=$order->total_paid currency=$currency}</span>
 				</td>
 			</tr>
+			
+		
+			
+			
+			
 		</tfoot>
 		<tbody>
 		{foreach from=$products item=product name=products}
@@ -374,6 +392,21 @@
 				{/if}
 			</tr>
 		{/foreach}
+		
+		{*//积分消费 条目展示*}
+		{if $total_points}
+		<tr class="item">
+				<td>Points</td>
+				<td>Points</td>
+				<td><span class="order_qte_span editable">1</span></td>
+				<td>&nbsp;</td>
+				<td>-{convertPriceWithCurrency price=$total_points currency=$currency}</td>
+				{if $return_allowed}
+				<td>&nbsp;</td>
+				{/if}
+		</tr>
+		{/if}
+			
 		</tbody>
 	</table>
 </div>

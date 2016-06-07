@@ -349,11 +349,23 @@ class ParentOrderControllerCore extends FrontController
         $advanced_payment_api = (bool)Configuration::get('PS_ADVANCED_PAYMENT_API');
 
         $this->context->smarty->assign($summary);
+		
+		//推送当前顾客的积分到前台去
+		
+		$points =$this->getCustomerPoint($this->context->customer->id);
+		$nrate = Configuration::get('PS_LOYALTY_POINT_VALUE') ;//获取当前1积分兑换 金额
+		/* 
+		echo $this->context->customer->id.'<br>';
+		echo $points;
+		exit; 
+		*/
         $this->context->smarty->assign(array(
             'token_cart' => Tools::getToken(false),
             'isLogged' => $this->isLogged,
             'isVirtualCart' => $this->context->cart->isVirtualCart(),
             'productNumber' => $this->context->cart->nbProducts(),
+			'points'=>$points,
+			'nrate'=>$nrate,
             'voucherAllowed' => CartRule::isFeatureActive(),
             'shippingCost' => $this->context->cart->getOrderTotal(true, Cart::ONLY_SHIPPING),
             'shippingCostTaxExc' => $this->context->cart->getOrderTotal(false, Cart::ONLY_SHIPPING),
@@ -626,4 +638,24 @@ class ParentOrderControllerCore extends FrontController
         }
         return 0;
     }
+	
+	
+		//获取客户当前积分 
+	
+	
+	public function  getCustomerPoint($id_customer){
+		
+		$result = Db::getInstance()-> getValue("SELECT points from  px_customer_point 
+	WHERE	id_customer = $id_customer   ");
+		
+		if($result){
+			return $result;
+			
+		}else{
+			
+			return 0;
+		}
+		
+		
+	}
 }

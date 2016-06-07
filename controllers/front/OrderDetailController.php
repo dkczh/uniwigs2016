@@ -178,6 +178,7 @@ class OrderDetailControllerCore extends FrontController
                 $this->context->smarty->assign(array(
                     'shop_name' => strval(Configuration::get('PS_SHOP_NAME')),
                     'order' => $order,
+					'total_points'=>(int)$order->getOrderPoints(),
                     'return_allowed' => (int)$order->isReturnable(),
                     'currency' => new Currency($order->id_currency),
                     'order_state' => (int)$id_order_state,
