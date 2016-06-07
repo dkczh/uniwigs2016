@@ -351,8 +351,12 @@ class ParentOrderControllerCore extends FrontController
         $this->context->smarty->assign($summary);
 		
 		//推送当前顾客的积分到前台去
-		
+		if($this->context->customer->id){
 		$points =$this->getCustomerPoint($this->context->customer->id);
+		}else{
+			
+		$points = 0;	
+		}
 		$nrate = Configuration::get('PS_LOYALTY_POINT_VALUE') ;//获取当前1积分兑换 金额
 		/* 
 		echo $this->context->customer->id.'<br>';
