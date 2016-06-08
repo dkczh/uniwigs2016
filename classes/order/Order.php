@@ -2447,4 +2447,19 @@ GROUP BY  p.id_product");
             'WHERE o.id_order = '.(int)$this->id
         );
     }
+	
+	//获取当前订单 积分金额 
+	
+	 public function getOrderPoints()
+    {	
+	
+		$res = 	Db::getInstance()->getValue("select total_points from  ps_orders where id_order = ".(int)$this->id);
+		if($res == '0.000000'){
+			
+			 return  false;
+		}else{
+			return  $res ;
+		}
+       
+    }
 }
