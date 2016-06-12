@@ -110,7 +110,12 @@
 		}
 	}
 }
-
+#custom_points{
+	.form-control{
+		width: 200px;
+		margin-right: 11px;
+	}
+}
 #new_account_form .id_state,
 #new_account_form .dni,
 #new_account_form .postcode {

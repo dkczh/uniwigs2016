@@ -36,7 +36,7 @@
 </h1>
 <div class="row">
 <div class="col-sm-3 col-sm-push-9">
-	<div data-uk-sticky="{literal}{top:-200,animation:'uk-animation-slide-top',boundary:'.footer-container'}{/literal}">
+	<div data-uk-sticky="{literal}{top:-200,animation:'uk-animation-slide-top',boundary:'#center_column'}{/literal}">
 		<table class="uk-table order-price-box">
 			<caption><h4>Order Price</h4></caption>
 			<tbody>
@@ -246,17 +246,11 @@
 					{else}
 					<p>
 					{/if}
-						<input type="text" id="points_name" name="points_name" value="" style="
-    width: 50px;
-">					<button  onclick='addPoints()'>ok </button>
+						<input type="text" id="points_name" class="form-control" name="points_name" value=""><button onclick='addPoints()' class="uk-button uk-button-small">ok</button>
 					</p>
-
-
 				</div>
-
 				{/if}
 		<script>
-
 
 			$("#points_name").keyup(function(){
 			
@@ -267,9 +261,7 @@
 			  }
 
 			});
-			
-
-			
+				
 			function  addPoints(){
 				
 
@@ -352,7 +344,7 @@
 		
 
 
-		<div class="uk-margin-top order-advisory">
+		<div class="uk-margin-large-top order-advisory">
 		<h4>Have Questions?</h4>
 		<p>Talk with Uniwigs:</p>
 		<a href="/livechat/chat.php" rel="nofollow" target="_blank" class="chat-now">Chat Now</a>
