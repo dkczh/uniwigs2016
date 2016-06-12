@@ -248,7 +248,7 @@
 					{/if}
 						<input type="text" id="points_name" name="points_name" value="" style="
     width: 50px;
-">					<button  onclick='addPoints()'>确定 </button>
+">					<button  onclick='addPoints()'>ok </button>
 					</p>
 
 
