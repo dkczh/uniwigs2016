@@ -200,8 +200,12 @@ class paypal_usa_validation extends PayPalUSA
 			/* Not displayed to the customer (IPN is viewed/called only by PayPal */
 			d($errors);
 		}
-		else
+		else{
+			file_put_contents('mytestpalpayl.txt','支付成功了');
 			die('Invalid PayPal order, please contact our Customer service.');
+			
+		}
+			
 	}
 
 	/**
