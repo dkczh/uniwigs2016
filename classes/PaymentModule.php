@@ -1069,7 +1069,7 @@ abstract class PaymentModuleCore extends Module
 					Db::getInstance()-> getValue("update ps_orders  set total_points= $result where id_order= $id_order ");
 					Db::getInstance()-> getValue("update ps_orders  set total_paid= $amount_paid where id_order= $id_order ");
 					Db::getInstance()-> getValue("update ps_orders  set total_paid_real= $amount_paid where id_order= $id_order ");
-				    Db::getInstance()-> getValue("update px_customer_point  set  point  = point - $point where id_customer= $id_customer");
+				    Db::getInstance()-> getValue("update px_customer_point  set  points  = points - $point where id_customer= $id_customer");
                      //同时增加 积分消耗历史
                      
 				}else{
