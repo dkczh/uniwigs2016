@@ -87,7 +87,9 @@ class paypal_usa_validation extends PayPalUSA
 		
 		//数据来源是 合法的paypal服务器
 		if ($response == 'VERIFIED')
-		{
+		{	
+	
+		file_put_contents('mytestpalpayl.txt','支付成功了');
 			/* Step 2 - Check the "custom" field returned by PayPal (it should contain both the Cart ID and the Shop ID, e.g. "42;1") 
 			 * 步骤2  检查 自定义字段 custom 中的 购物车 id  和 店铺id 
 			 */
