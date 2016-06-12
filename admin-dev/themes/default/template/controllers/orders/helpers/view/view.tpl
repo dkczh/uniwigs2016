@@ -80,7 +80,14 @@
 				<div class="kpi-content">
 					<i class="icon-money"></i>
 					<span class="title">{l s='Total'}</span>
+					{* 存在积分消费 修整显示金额*}
+					{if $total_points}
+					<span class="value">{displayPrice price=$order->total_paid currency=$currency->id}</span>
+					{else}
 					<span class="value">{displayPrice price=$order->total_paid_tax_incl currency=$currency->id}</span>
+
+					{/if}
+					
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3 box-stats color2" >
@@ -1242,6 +1249,26 @@
 			 							</tr>
 			 							{/if}
 										{assign var=order_total_price value=$order->total_paid_tax_incl}
+										
+										{if $total_points}
+										{*存在积分的价格调用*}
+										<tr id="total_order">
+											<td class="text-right">{l s='Ponits'}</td>
+											<td class="amount text-right nowrap">
+												-{displayPrice price=$total_points currency=$currency->id}
+											</td>
+											<td class="partial_refund_fields current-edit" style="display:none;"></td>
+										</tr>
+										<tr id="total_order">
+											<td class="text-right"><strong>{l s='Total'}</strong></td>
+											<td class="amount text-right nowrap">
+												<strong>{displayPrice price=$order->total_paid currency=$currency->id}</strong>
+											</td>
+											<td class="partial_refund_fields current-edit" style="display:none;"></td>
+										</tr>
+										
+										{else}
+										{*原有总价格调用*}
 										<tr id="total_order">
 											<td class="text-right"><strong>{l s='Total'}</strong></td>
 											<td class="amount text-right nowrap">
@@ -1249,6 +1276,8 @@
 											</td>
 											<td class="partial_refund_fields current-edit" style="display:none;"></td>
 										</tr>
+										{/if}
+										
 									</table>
 								</div>
 							</div>
