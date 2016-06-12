@@ -195,7 +195,7 @@ abstract class PaymentModuleCore extends Module
             die(Tools::displayError());
         }
 
-        // Does order already exists ?
+        // Does order already exists ?判断订单是否存在
         if (Validate::isLoadedObject($this->context->cart) && $this->context->cart->OrderExists() == false) {
             if ($secure_key !== false && $secure_key != $this->context->cart->secure_key) {
                 PrestaShopLogger::addLog('PaymentModule::validateOrder - Secure key does not match', 3, null, 'Cart', (int)$id_cart, true);
@@ -227,7 +227,19 @@ abstract class PaymentModuleCore extends Module
             $this->currentOrderReference = $reference;
 
             $order_creation_failed = false;
-            $cart_total_paid = (float)Tools::ps_round((float)$this->context->cart->getOrderTotal(true, Cart::BOTH), 2);
+			
+			$cart_total_paid = (float)Tools::ps_round((float)$this->context->cart->getOrderTotal(true, Cart::BOTH), 2);
+			//判断购物车 是否存在积分消耗 如果存在则 修整 正确的支付金额 
+			$amount = (float)$this->getCartAmount($this->context->cart->id);
+			if($amount>0){
+				
+			$cart_total_paid -= 	$amount;
+			
+			/* echo $cart_total_paid ; 
+			exit; */
+			}
+			
+         
 
             foreach ($cart_delivery_option as $id_address => $key_carriers) {
                 foreach ($delivery_option_list[$id_address][$key_carriers]['carrier_list'] as $id_carrier => $data) {
@@ -694,7 +706,10 @@ abstract class PaymentModuleCore extends Module
 
                     // Order is reloaded because the status just changed
                     $order = new Order((int)$order->id);
-
+					
+					//如果此订单存在消费金额  则 更新积分金额  还有实际支付金额
+					$this->updateOrderPoint((int)$order->id,(int)$order->id_cart,$amount_paid,(int)$order->id_customer);
+					
                     // Send an e-mail to customer (one order = one email)
                     if ($id_order_state != Configuration::get('PS_OS_ERROR') && $id_order_state != Configuration::get('PS_OS_CANCELED') && $this->context->customer->id) {
                         $invoice = new Address((int)$order->id_address_invoice);
@@ -1005,4 +1020,66 @@ abstract class PaymentModuleCore extends Module
         }
         return '';
     }
+	
+	
+	
+		//获取当前购物车积分 消费金额
+		function  getCartAmount($id_cart){
+		
+			$result = Db::getInstance()-> getValue("SELECT amount from  px_cart_point 
+				WHERE	id_cart = $id_cart   ");
+			
+			if($result){
+				return $result;
+				
+			}else{
+				
+				return 0;
+			}
+		}
+		
+		//获取当前购物车积分 消费金额
+		function  getCartPoint($id_cart){
+		
+			$result = Db::getInstance()-> getValue("SELECT point from  px_cart_point 
+				WHERE	id_cart = $id_cart   ");
+			
+			if($result)
+				{
+					return $result;
+					
+				}else{
+					
+					return 0;
+				}
+		}
+		
+		
+		//更新订单 消费金额 客户积分
+		function  updateOrderPoint($id_order,$id_cart,$amount_paid,$id_customer){
+		
+			$result = Db::getInstance()-> getValue("SELECT amount from  px_cart_point 
+				WHERE	id_cart = $id_cart   ");
+			
+			if($result)
+				{   
+                    $point = Db::getInstance()-> getValue("SELECT point from  px_cart_point 
+                WHERE   id_cart = $id_cart   ");
+
+					Db::getInstance()-> getValue("update ps_orders  set total_points= $result where id_order= $id_order ");
+					Db::getInstance()-> getValue("update ps_orders  set total_paid= $amount_paid where id_order= $id_order ");
+					Db::getInstance()-> getValue("update ps_orders  set total_paid_real= $amount_paid where id_order= $id_order ");
+				    Db::getInstance()-> getValue("update px_customer_point  set  point  = point - $point where id_customer= $id_customer");
+                     //同时增加 积分消耗历史
+                     
+				}else{
+					
+					
+				}
+		}
+		
+
+		
+		
+		
 }

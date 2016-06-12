@@ -56,17 +56,23 @@ if ($cart->id != $_POST['x_invoice_num'])
 $customer = new Customer((int)$cart->id_customer);
 $invoiceAddress = new Address((int)$cart->id_address_invoice);
 $currency = new Currency((int)$cart->id_currency);
+//获取收货地址
+$deliveryAddress = new Address((int)$cart->id_address_delivery);
 
 if (!Validate::isLoadedObject($customer) || !Validate::isLoadedObject($invoiceAddress) && !Validate::isLoadedObject($currency))
 {
 	Logger::addLog('Issue loading customer, address and/or currency data');
 	die('An unrecoverable error occured while retrieving you data');
 }
+//增加积分消费  如果 购物车 存在 积分 则 进行积分的判断 
+
+$p_amount = getPointAmount((int)$cart->id);
 
 $params = array(
 	'x_test_request' => (bool)Configuration::get('AUTHORIZE_AIM_TEST_MODE'),
+	//'x_test_request' => true,
 	'x_invoice_num' => (int)$_POST['x_invoice_num'],
-	'x_amount' => number_format((float)$cart->getOrderTotal(true, 3), 2, '.', ''),
+	'x_amount' => number_format((float)$cart->getOrderTotal(true, 3), 2, '.', '')-$p_amount,
 	'x_first_name' => Tools::safeOutput($customer->firstname), //Required only when using a European Payment Processor.  Format: Up to 50 characters (no symbols)
 	'x_last_name' => Tools::safeOutput($customer->lastname), //Required only when using a European Payment Processor.  Format: Up to 50 characters (no symbols)
 	//'x_company' => '', //Optional  Format: Up to 50 characters (no symbols)
@@ -107,10 +113,18 @@ $params = array(
 	'x_exp_date' => Tools::safeOutput($_POST['x_exp_date_m'].$_POST['x_exp_date_y']),
 );
 
+/* echo '<pre>';
+var_dump($params);
+echo '</pre>';
+exit; */
+
+ 
+/* 测试卡号 4012888818888 */
 $postString = '';
 foreach ($params as $key => $value)
 	$postString .= $key.'='.urlencode($value).'&';
 $postString = trim($postString, '&');
+//$url = 'https://test.authorize.net/gateway/transact.dll';
 $url = 'https://'.(Configuration::get('AUTHORIZE_AIM_SANDBOX') ? 'test' : 'secure').'.authorize.net/gateway/transact.dll';
 
 /* Do the CURL request ro Authorize.net */
@@ -123,7 +137,12 @@ curl_setopt($request, CURLOPT_SSL_VERIFYHOST, false);
 $postResponse = curl_exec($request);
 curl_close($request);
 
+
+
+
+
 $response = explode('|', $postResponse);
+
 if (!isset($response[7]) || !isset($response[3]) || !isset($response[9]))
 {
 	$msg = 'Authorize.net returned a malformed response for cart';
@@ -162,6 +181,7 @@ if ($response[0]==1 || $response[0]==4) {
 switch ($response[0]) // Response code
 {
 	case 1: // Payment accepted
+	
 		$authorizeaim->setTransactionDetail($response);
 		$authorizeaim->validateOrder((int)$cart->id,
 			Configuration::get('PS_OS_PAYMENT'), (float)$response[9],
@@ -202,3 +222,21 @@ if (_PS_VERSION_ < '1.5')
 	
 $auth_order = new Order($authorizeaim->currentOrder);
 Tools::redirect($url.'id_module='.(int)$authorizeaim->id.'&id_cart='.(int)$cart->id.'&key='.$auth_order->secure_key);
+
+
+	//获取当前购物车积分 消费金额
+ function  getPointAmount($id_cart){
+		
+		$result = Db::getInstance()-> getValue("SELECT amount from  px_cart_point 
+	WHERE	id_cart = $id_cart   ");
+		
+		if($result){
+			return $result;
+			
+		}else{
+			
+			return 0;
+		}
+		
+		
+	}
