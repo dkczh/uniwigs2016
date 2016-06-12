@@ -82,7 +82,9 @@ class paypal_usa_validation extends PayPalUSA
 		curl_setopt($ch, CURLOPT_POSTFIELDS, 'cmd=_notify-validate&'.http_build_query($_POST));
 		$response = curl_exec($ch);
 		curl_close($ch);
-
+		file_put_contents('mypalpayl.txt',http_build_query($_POST));
+		
+		
 		//数据来源是 合法的paypal服务器
 		if ($response == 'VERIFIED')
 		{
