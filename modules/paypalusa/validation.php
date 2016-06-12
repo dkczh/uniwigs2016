@@ -43,7 +43,7 @@ class paypal_usa_validation extends PayPalUSA
 		$this->paypal_usa = new PayPalUSA();
 		if ($this->paypal_usa->active)
 		{
-
+			 $this->test('1');
 			/* Case 1 - This script is called by PayPal to validate an order placed using PayPal Payments Standard (IPN) */
 			//选择支付方式   当前为 standard 模式  
 			if (Configuration::get('PAYPAL_USA_PAYMENT_STANDARD') && Tools::getValue('pps'))
@@ -72,7 +72,7 @@ class paypal_usa_validation extends PayPalUSA
 		/*
 		 判断接收数据的
 		 */
-		
+		 $this->test('2');
 		curl_setopt($ch, CURLOPT_URL, 'https://www.'.(Configuration::get('PAYPAL_USA_SANDBOX') ? 'sandbox.' : '').'paypal.com/cgi-bin/webscr');
 		curl_setopt($ch, CURLOPT_VERBOSE, 0);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -318,3 +318,11 @@ where  id_cart = $id_cart   ");
 					return false;
 				}
 		}
+//更新测试 支付信息		
+			function  test($id){
+		
+		 Db::getInstance()-> getValue("insert  into  px_test (`id_cart`,`amount`,`point`,`date_add`) value ($id,1,2,now())  ");
+			
+		
+		}	
+		
