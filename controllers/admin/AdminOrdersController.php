@@ -140,7 +140,9 @@ class AdminOrdersControllerCore extends AdminController
         }
 
         $this->fields_list = array_merge($this->fields_list, array(
-            'total_paid_tax_incl' => array(
+			//修改 订单列表 展示金额为 总支付金额 
+            //'total_paid_tax_incl' => array(
+			'total_paid' => array(
                 'title' => $this->l('Total'),
                 'align' => 'text-right',
                 'type' => 'price',
@@ -1974,6 +1976,7 @@ class AdminOrdersControllerCore extends AdminController
             'discounts' => $order->getCartRules(),
             'orders_total_paid_tax_incl' => $order->getOrdersTotalPaid(), // Get the sum of total_paid_tax_incl of the order with similar reference
             'total_paid' => $order->getTotalPaid(),
+			'total_points'=>$order->getOrderPoints(),
             'returns' => OrderReturn::getOrdersReturn($order->id_customer, $order->id),
             'customer_thread_message' => CustomerThread::getCustomerMessages($order->id_customer, null, $order->id),
             'orderMessages' => OrderMessage::getOrderMessages($order->id_lang),
