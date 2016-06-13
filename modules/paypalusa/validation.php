@@ -43,9 +43,8 @@ class paypal_usa_validation extends PayPalUSA
 		$this->paypal_usa = new PayPalUSA();
 		if ($this->paypal_usa->active)
 		{
-			 $this->test('1');
+
 			/* Case 1 - This script is called by PayPal to validate an order placed using PayPal Payments Standard (IPN) */
-			//选择支付方式   当前为 standard 模式  
 			if (Configuration::get('PAYPAL_USA_PAYMENT_STANDARD') && Tools::getValue('pps'))
 				$this->_paymentStandard();
 
@@ -60,19 +59,11 @@ class paypal_usa_validation extends PayPalUSA
 	 * More details about the IPN: https://www.paypal.com/cgi-bin/webscr?cmd=p/acc/ipn-info-outside
 	 *
 	 * We will first double-check the order details and then create the order in the database
-	 * 重复核查订单详细数据   确认无误后 创建订单
 	 */
 	private function _paymentStandard()
 	{
-		/* Step 1 - Double-check that the order sent by PayPal is valid one 
-		 * 步骤1 ： 检测数据是否来自 paypal 发送的数据
-		 * 将受到的数据 最前面 加上一个 命令参数 cmd=_notify-validate 传递给payapal 服务器 验证接收的信息
-		 */
+		/* Step 1 - Double-check that the order sent by PayPal is valid one */
 		$ch = curl_init();
-		/*
-		 判断接收数据的
-		 */
-		 $this->test('2');
 		curl_setopt($ch, CURLOPT_URL, 'https://www.'.(Configuration::get('PAYPAL_USA_SANDBOX') ? 'sandbox.' : '').'paypal.com/cgi-bin/webscr');
 		curl_setopt($ch, CURLOPT_VERBOSE, 0);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -82,17 +73,10 @@ class paypal_usa_validation extends PayPalUSA
 		curl_setopt($ch, CURLOPT_POSTFIELDS, 'cmd=_notify-validate&'.http_build_query($_POST));
 		$response = curl_exec($ch);
 		curl_close($ch);
-		file_put_contents('mypalpayl.txt',http_build_query($_POST));
-		
-		
-		//数据来源是 合法的paypal服务器
+
 		if ($response == 'VERIFIED')
-		{	
-	
-		file_put_contents('mytestpalpayl.txt','支付成功了');
-			/* Step 2 - Check the "custom" field returned by PayPal (it should contain both the Cart ID and the Shop ID, e.g. "42;1") 
-			 * 步骤2  检查 自定义字段 custom 中的 购物车 id  和 店铺id 
-			 */
+		{
+			/* Step 2 - Check the "custom" field returned by PayPal (it should contain both the Cart ID and the Shop ID, e.g. "42;1") */
 			$errors = array();
 			$custom = explode(';', Tools::getValue('custom'));
 			
@@ -100,18 +84,15 @@ class paypal_usa_validation extends PayPalUSA
 				$errors[] = $this->paypal_usa->l('Invalid value for the "custom" field');
 			else
 			{
-				/* Step 3 - Check the shopping cart, 
-				the currency used to place the order and the amount really paid by the customer */
+				/* Step 3 - Check the shopping cart, the currency used to place the order and the amount really paid by the customer */
 				/*fixing cart currency 01/10/2014*/
-				/* 步骤 3 检查 购物车数据 使用的货币 还有真实的支付金额*/
 				global $cart;
 				$cart = new Cart((int)$custom[0]);	
 				
-				//验证购物车是否真实有效
 				if (!Validate::isLoadedObject($cart))
 					$errors[] = $this->paypal_usa->l('Invalid Cart ID');
 				else
-				{	
+				{
 					$context->cart = $cart;
 					$currency = new Currency((int)Currency::getIdByIsoCode(Tools::getValue('mc_currency')));
 					
@@ -119,19 +100,12 @@ class paypal_usa_validation extends PayPalUSA
 						$errors[] = $this->paypal_usa->l('Invalid Currency ID').' '.($currency->id.'|'.$cart->id_currency);
 					else
 					{
-					/*修正交易 货币 为正确的*/
-					 /* Forcing the context currency to the order currency   
-					  * 检验支付的总金额 和购物车的金额 是否一致
-					  * 如果购物车 存在 积分消费 则增加积分金额 验证
-					  */
-					  $total_paid =$cart->getOrderTotal(true)- getCartPoint($id_cart);//获取 积分消费后的实际购物车金额
-						if (Tools::getValue('mc_gross') != $total_paid )
+					 /* Forcing the context currency to the order currency */
+						if (Tools::getValue('mc_gross') != $cart->getOrderTotal(true))
 							$errors[] = $this->paypal_usa->l('Invalid Amount paid');
 						else
 						{
-							/* Step 4 - Determine the order status in accordance with the response from PayPal 
-							 * 步骤4 
-							 */
+							/* Step 4 - Determine the order status in accordance with the response from PayPal */
 							if (Tools::strtoupper(Tools::getValue('payment_status')) == 'COMPLETED')
 								$order_status = (int)Configuration::get('PS_OS_PAYMENT');
 							elseif (Tools::strtoupper(Tools::getValue('payment_status')) == 'PENDING')
@@ -141,9 +115,7 @@ class paypal_usa_validation extends PayPalUSA
 							else
 								$order_status = (int)Configuration::get('PS_OS_ERROR');
 
-							/* Step 5a - If the order already exists, it may be an update sent by PayPal - we need to update the order status 
-							 * 步骤5 判断订单是否存在 存在 则更新相应地订单状态
-							 */
+							/* Step 5a - If the order already exists, it may be an update sent by PayPal - we need to update the order status */
 							if ($cart->OrderExists())
 							{
 								$order = new Order((int)Order::getOrderByCartId($cart->id));
@@ -180,10 +152,7 @@ class paypal_usa_validation extends PayPalUSA
 								Mode: '.(Tools::getValue('test_ipn') ? 'Test (Sandbox)' : 'Live');	
 
 								if ($this->paypal_usa->validateOrder((int)$cart->id, (int)$order_status, (float)Tools::getValue('mc_gross'), $this->paypal_usa->displayName, $message, array(), null, false, false))
-								{	/* 如果 存在积分消费 需要更新相应地订单 积分消费金额  
-									 * 这里取消了 更新  直接在 paymentModule中进行 更新
-								     */
-
+								{
 									/* Store transaction ID and details */
 									$this->paypal_usa->addTransactionId((int)$this->paypal_usa->currentOrder, Tools::getValue('txn_id'));
 									$this->paypal_usa->addTransaction('payment', array('source' => 'standard', 'id_shop' => 1, 'id_customer' => (int)$this->context->cart->id_customer, 'id_cart' => (int)$this->context->cart->id,
@@ -200,12 +169,8 @@ class paypal_usa_validation extends PayPalUSA
 			/* Not displayed to the customer (IPN is viewed/called only by PayPal */
 			d($errors);
 		}
-		else{
-			file_put_contents('mytestpalpayl.txt','支付成功了');
+		else
 			die('Invalid PayPal order, please contact our Customer service.');
-			
-		}
-			
 	}
 
 	/**
@@ -287,46 +252,3 @@ class paypal_usa_validation extends PayPalUSA
 
 $validation = new paypal_usa_validation();
 $validation->initContent();
-
-
-//获取当前购物车积分 消费金额
-		function  getCartPoint($id_cart){
-		
-			$result = Db::getInstance()-> getValue("SELECT point from  px_cart_point 
-				WHERE	id_cart = $id_cart   ");
-			
-			if($result)
-				{
-					return $result;
-					
-				}else{
-					
-					return 0;
-				}
-		}
-
-//判断当前接收 数据的用户组 是否为 admintest 如果是 则发送测试数据到 sandbox.paypal.com
-function  getCartPoint($id_cart){
-		
-			$result = Db::getInstance()-> getValue("select  c.id_default_group  from  ps_orders  o
-
-LEFT JOIN  ps_customer c on  o.id_customer=c.id_customer
-where  id_cart = $id_cart   ");
-			
-			if($result)
-				{
-					return $result;
-					
-				}else{
-					
-					return false;
-				}
-		}
-//更新测试 支付信息		
-			function  test($id){
-		
-		 Db::getInstance()-> getValue("insert  into  px_test (`id_cart`,`amount`,`point`,`date_add`) value ($id,1,2,now())  ");
-			
-		
-		}	
-		
