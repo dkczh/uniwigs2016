@@ -98,8 +98,18 @@ class PayPalUSAValidationModuleFrontController extends ModuleFrontController
 						/* Forcing the context currency to the order currency */
 						
 						$context->currency = $currency;
-												
-						if (Tools::getValue('mc_gross') != $cart->getOrderTotal(true))
+						$id_cart = (int)$custom[0];
+						file_put_contents('paypal_A',http_build_query($_POST));
+						file_put_contents('paypal_B',Tools::getValue('mc_gross'));
+						file_put_contents('paypal_C',$cart->getOrderTotal(true));
+					    $amount = Db::getInstance()-> getValue("SELECT amount from  px_cart_point 
+				WHERE	id_cart = $id_cart");
+						file_put_contents('paypal_D',$cart->getOrderTotal(true)-$amount);
+						
+						
+						
+						/* if (Tools::getValue('mc_gross') != $cart->getOrderTotal(true)) */
+						if (true)
 							$errors[] = $this->paypal_usa->l('Invalid Amount paid');
 						else
 						{
