@@ -99,20 +99,22 @@ class PayPalUSAValidationModuleFrontController extends ModuleFrontController
 						
 						$context->currency = $currency;
 						$id_cart = (int)$custom[0];
-						file_put_contents('paypal_A',http_build_query($_POST));
-						file_put_contents('paypal_B',Tools::getValue('mc_gross'));
-						file_put_contents('paypal_C',$cart->getOrderTotal(true));
+						//file_put_contents('paypal_cart',$id_cart.'||'.'实际支付金额'.Tools::getValue('mc_gross').'购物车金额'.$cart->getOrderTotal(true).'---'.date("Y-m-d h:i:s")."\r\n",FILE_APPEND);
+						//file_put_contents('paypal_post',http_build_query($_POST)."\r\n",FILE_APPEND);
+
 					    $amount = Db::getInstance()-> getValue("SELECT amount from  px_cart_point 
 				WHERE	id_cart = $id_cart");
-						file_put_contents('paypal_D',$cart->getOrderTotal(true)-$amount);
-						
-						
+					
+						$paypal_amount= ($cart->getOrderTotal(true)-$amount);
 						
 						/* if (Tools::getValue('mc_gross') != $cart->getOrderTotal(true)) */
-						if (true)
+						if(Tools::getValue('mc_gross') != (string)$paypal_amount){
+							file_put_contents('paypal_faild',Tools::getValue('mc_gross').'xxxxx||'.$id_cart.'||'.$paypal_amount.'---'.date("Y-m-d h:i:s")."\r\n",FILE_APPEND).
 							$errors[] = $this->paypal_usa->l('Invalid Amount paid');
+						}
+							
 						else
-						{
+						{	
 							/* Step 4 - Determine the order status in accordance with the response from PayPal */
 							if (Tools::strtoupper(Tools::getValue('payment_status')) == 'COMPLETED')
 								$order_status = (int)Configuration::get('PS_OS_PAYMENT');
@@ -135,7 +137,7 @@ class PayPalUSAValidationModuleFrontController extends ModuleFrontController
 							
 							/* Step 5b - Else, it is a new order that we need to create in the database */
 							else
-							{
+							{	
 								$customer = new Customer((int)$cart->id_customer);
 								$context->customer = $customer;
 								$paypal_products = array('express' => 'PayPal Express Checkout', 'standard' => 'PayPal Standard', 'advanced' => 'PayPal Payments Advanced',  'payflow_pro' => 'PayPal PayFlow Pro');
@@ -157,7 +159,7 @@ class PayPalUSAValidationModuleFrontController extends ModuleFrontController
 								ipn_track_id: '.Tools::getValue('ipn_track_id').'
 								verify_sign: '.Tools::getValue('verify_sign').'
 								Mode: '.(Tools::getValue('test_ipn') ? 'Test (Sandbox)' : 'Live');								
-
+								file_put_contents('success_D',date("Y-m-d h:i:s")."\r\n");	
 								if ($this->paypal_usa->validateOrder((int)$cart->id, (int)$order_status, (float)Tools::getValue('mc_gross'), $this->paypal_usa->displayName, $message, array(), null, false, $customer->secure_key, $shop))
 								{
 									/* Store transaction ID and details */
@@ -176,8 +178,28 @@ class PayPalUSAValidationModuleFrontController extends ModuleFrontController
 			/* Not displayed to the customer (IPN is viewed/called only by PayPal */
 			d($errors);
 		}
-		else
-			die('Invalid PayPal order, please contact our Customer service.');
+		else{
+				/* $cart = new Cart(10824);
+				$amount = Db::getInstance()-> getValue("SELECT amount from  px_cart_point 
+					WHERE	id_cart = 10824");
+						
+				if('0.69'!= (string)($cart->getOrderTotal(true)-$amount)){
+			
+						echo '<pre>';
+						var_dump((string)($cart->getOrderTotal(true)-$amount));
+						echo '</pre>';
+						echo '<pre>';
+						var_dump('0.69');
+						echo '</pre>';	
+				}else{
+					
+				echo '支付金额验证成功成功';
+					
+				} */
+						
+						
+				die('Invalid PayPal order, please contact our Customer service.');
+		}
 	}
 	
 	/**
