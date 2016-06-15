@@ -7569,11 +7569,13 @@ div.star a:hover {
   vertical-align: middle; }
 
 .cart_delete a.cart_quantity_delete,
-a.price_discount_delete {
+a.price_discount_delete,
+a.total_points_delete {
   font-size: 18px;
   padding-left: 15px; }
   .cart_delete a.cart_quantity_delete:hover,
-  a.price_discount_delete:hover {
+  a.price_discount_delete:hover,
+  a.total_points_delete:hover {
     color: silver; }
 
 #cart_summary thead th {
@@ -7647,43 +7649,6 @@ a.price_discount_delete {
     text-align: left; }
   #order-detail-content #cart_summary tbody td.cart_description {
     width: 300px; } }
-.cart_voucher {
-  vertical-align: top !important; }
-  .cart_voucher h4 {
-    font: 600 18px/22px "Open Sans", sans-serif;
-    color: #555454;
-    text-transform: uppercase;
-    padding: 7px 0 10px 0; }
-  .cart_voucher .title-offers {
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 6px; }
-  .cart_voucher fieldset {
-    margin-bottom: 10px;
-    position: relative; }
-    .cart_voucher fieldset #discount_name {
-      width: 100%; }
-    .cart_voucher fieldset button.button.button-small {
-      position: absolute;
-      top: 0;
-      right: 0;
-      border: none;
-      color: #fff;
-      height: 45px;
-      width: 45px;
-      background: #d32676; }
-      .cart_voucher fieldset button.button.button-small:after {
-        content: "\e610";
-        font-family: "iconfont";
-        font-size: 20px;
-        line-height: 28px; }
-  .cart_voucher #display_cart_vouchers span {
-    font-weight: bold;
-    cursor: pointer;
-    color: #777; }
-    .cart_voucher #display_cart_vouchers span:hover {
-      color: #515151; }
-
 .enable-multishipping {
   margin: -13px 0 17px; }
   .enable-multishipping label {

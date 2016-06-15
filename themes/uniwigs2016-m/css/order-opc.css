@@ -190,4 +190,51 @@
     font-weight: bold;
     margin-top: 10px; }
 
+.cart_voucher {
+  vertical-align: top !important; }
+  .cart_voucher fieldset {
+    margin-bottom: 10px;
+    position: relative; }
+    .cart_voucher fieldset #discount_name {
+      width: 100%; }
+    .cart_voucher fieldset button.button.button-small {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      color: #fff;
+      height: 45px;
+      width: 45px;
+      background: #d32676; }
+      .cart_voucher fieldset button.button.button-small:after {
+        content: "\e610";
+        font-family: "iconfont";
+        font-size: 20px;
+        line-height: 28px; }
+  .cart_voucher #display_cart_vouchers span {
+    font-weight: bold;
+    cursor: pointer;
+    color: #777; }
+    .cart_voucher #display_cart_vouchers span:hover {
+      color: #515151; }
+
+.cart_total_delivery {
+  vertical-align: top !important; }
+  .cart_total_delivery p {
+    position: relative; }
+    .cart_total_delivery p button.button.button-small {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      color: #fff;
+      height: 45px;
+      width: 45px;
+      background: #d32676; }
+      .cart_total_delivery p button.button.button-small:after {
+        content: "\e610";
+        font-family: "iconfont";
+        font-size: 20px;
+        line-height: 28px; }
+
 /*# sourceMappingURL=order-opc.css.map */

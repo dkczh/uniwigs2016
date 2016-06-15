@@ -258,3 +258,63 @@
 	    margin-top: 10px;
 	}
 }
+
+.cart_voucher {
+	vertical-align: top !important;
+	fieldset {
+		margin-bottom: 10px;
+		position: relative;
+		#discount_name {
+			width: 100%;
+		}
+		button.button.button-small{
+			position: absolute;
+			top:0;
+			right:0;
+			border:none;
+			color: #fff;
+			height: 45px;
+			width: 45px;
+			background: #d32676;
+			&:after{
+				content: "\e610";
+				font-family: $font-icon;
+				font-size: 20px;
+				line-height: 28px;
+			}
+		}
+	}
+	#display_cart_vouchers {
+		span {
+			font-weight: bold;
+			cursor: pointer;
+			color: $link-color;
+			&:hover {
+				color: $link-hover-color;
+			}
+		}
+	}
+}
+.cart_total_delivery{
+	vertical-align: top !important;
+	p{
+		position: relative;
+		button.button.button-small{
+			position: absolute;
+			top:0;
+			right:0;
+			border:none;
+			color: #fff;
+			height: 45px;
+			width: 45px;
+			background: #d32676;
+			&:after{
+				content: "\e610";
+				font-family: $font-icon;
+				font-size: 20px;
+				line-height: 28px;
+			}
+		}
+	}
+	
+}

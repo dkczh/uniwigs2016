@@ -25,7 +25,8 @@
 {capture name=path}<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}">{l s='My account'}</a><span class="navigation-pipe">{$navigationPipe}</span><span class="navigation_page">{l s='My vouchers'}</span>{/capture}
 
 {if isset($cart_rules) && count($cart_rules) && $nb_cart_rules}
-	<table class="discount table table-bordered footab">
+<div class="uk-overflow-container" style="background:#fff">
+	<table class="discount table table-bordered footab uk-table-striped">
 		<thead>
 			<tr>
 				<th data-sort-ignore="true" class="discount_code first_item">{l s='Code'}</th>
@@ -75,6 +76,7 @@
 			{/foreach}
 		</tbody>
 	</table>
+</div>
 {else}
 	<p class="uk-alert uk-alert-warning">{l s='You do not have any vouchers.'}</p>
 {/if}

@@ -191,9 +191,8 @@
 					{include file="$tpl_dir./shopping-cart-product-line.tpl" productLast=$product@last productFirst=$product@first}
 				{/foreach}
 			</tbody>
-
-			{if sizeof($discounts)}
-				<tbody>
+			<tbody>
+				{if sizeof($discounts)}
 					{foreach $discounts as $discount}
 					{if ((float)$discount.value_real == 0 && $discount.free_shipping != 1) || ((float)$discount.value_real == 0 && $discount.code == '')}
 						{continue}
@@ -215,8 +214,19 @@
 							</td>
 						</tr>
 					{/foreach}
-				</tbody>
-			{/if}
+				{/if}
+				{if true}
+					<tr class="cart_total_delivery">
+						<td class="text-left">Total points</td>
+						<td class="points" style="text-align:right">
+							<span class="total_points">-$0</span>
+							<a href="javascript:;" class="total_points_delete" title="Delete" onclick='cleanpoints()'>
+								<i class="icon-delete"></i>
+							</a>
+						</td>
+					</tr>
+				{/if}
+			</tbody>
 		</table>
 		<table class="table table-bordered">
 			<tfoot>
@@ -244,7 +254,7 @@
 					{/if}
 				{/if}
 
-				{if $use_taxes}
+				{if $use_taxes}s
 					{if $priceDisplay}
 						<tr class="cart_total_price">
 							<td colspan="2" id="cart_voucher" class="cart_voucher">
@@ -267,6 +277,21 @@
 								{/if}
 							</td>
 						</tr>
+						
+						{if true}
+							<tr><td colspan="2" style="height:15px;background:#f5f5f5"></td></tr>
+							<tr class="cart_total_delivery">
+								<td colspan="2">
+									<p>Valid Points: <span id='npoints'>{$points}</span></p>
+									{if {$points}>0}
+									<p>
+										<input type="text" id="points_name" class="form-control" name="points_name" value="" placeholder="USE VALID POINTS">
+										<button onclick='addPoints()' class="button btn btn-default button-small"></button>
+									</p>
+									{/if}
+								</td>
+							</tr>
+						{/if}
 					{else}
 						<tr class="cart_total_price">
 							<td colspan="2" id="cart_voucher" class="cart_voucher">
@@ -289,6 +314,21 @@
 								{/if}
 							</td>	
 						</tr>
+
+						{if true}
+							<tr><td colspan="2" style="height:15px;background:#f5f5f5"></td></tr>
+							<tr class="cart_total_delivery">
+								<td colspan="2">
+									<p>Valid Points: <span id='npoints'>{$points}</span></p>
+									{if {$points}>0}
+									<p>
+										<input type="text" id="points_name" class="form-control" name="points_name" value="" placeholder="USE VALID POINTS">
+										<button onclick='addPoints()' class="button btn btn-default button-small"></button>
+									</p>
+									{/if}
+								</td>
+							</tr>
+						{/if}
 					{/if}
 				{else}
 					<tr class="cart_total_price">
@@ -313,9 +353,196 @@
 							{/if}
 						</td>	
 					</tr>
+					{if true}
+						<tr><td colspan="2" style="height:15px;background:#f5f5f5"></td></tr>
+						<tr class="cart_total_delivery">
+							<td colspan="2">
+								<p>Valid Points: <span id='npoints'>{$points}</span></p>
+								{if {$points}>0}
+								<p>
+									<input type="text" id="points_name" class="form-control" name="points_name" value="" placeholder="USE VALID POINTS">
+									<button onclick='addPoints()' class="button btn btn-default button-small"></button>
+								</p>
+								{/if}
+							</td>
+						</tr>
+					{/if}
 				{/if}				
 			</tfoot>
 		</table>
+		{*存放购物车id 信息*}
+		<span id='cart_points' style="display: none;">{$cart->id}</span>
+		<script>
+			
+
+			var id_cart =$('#cart_points').html();
+			//增加 积分输入限制
+			$("#points_name").keyup(function(){
+			
+			//当前用户可用最大积分
+			  if($("#points_name").val()*1>$("#npoints").html()*1){
+
+			  	$("#points_name").val($("#npoints").html()*1);
+			  }
+			  
+			  
+			  //当前购物车 最大可用积分
+			 var  input_points= $("#points_name").val()*{$nrate};
+			 var  nprice =$("#total_price").html().replace('$','')*1;
+		
+			 var  npoint = $(".total_points").html().replace('-$','')*1;
+			 if(input_points.toFixed(2)>(nprice+npoint)){
+			
+			  
+			  
+			  $("#points_name").val(((nprice+npoint)*100).toFixed(0));
+			   //$(".total_points").html('-$0');
+			  
+			  }
+
+			});
+			
+			//增加地址选择重新清除积分 
+
+			$('#id_address_delivery').change(function(){
+			
+			$(".total_points").html('-$0');
+			$("#points_name").val('');
+			});
+			
+			function  cleanpoints(){
+
+					//获取当前购物车总价格
+					/*var total_price =parseFloat($('.total_points').html().replace('-$',''))+parseFloat($('#total_price').html().replace('$',''));
+					
+					$('.total_points').html('-$0'); 
+				    $('#total_price').html('$'+total_price.toFixed(2));
+					$.post("checkpoints.php",{ cart:$('#cart_points').html(), point:0});*/
+					location.reload();
+					
+			}
+
+			function  addPoints(){
+				
+			  var nprice =$("#total_price").html().replace('$','')*1;
+
+			  if(nprice==0){
+			  location.reload();
+			  }
+
+			  if ($('.total_points').html()=='-$0') {
+			
+					var points =  $('#points_name').val()*{$nrate};
+					//获取当前的总价格
+					var total_price =$('#total_price').html().replace('$','');
+					//计算积分后的价格
+					var nowprice = total_price*1 -points.toFixed(2);
+
+					if(nowprice>=0){
+					
+						if(nowprice==0){
+				
+						
+						$('.total_points').html('-$'+points.toFixed(2)); 
+						$('#total_price').html('$'+nowprice.toFixed(2));
+						
+						point = $('#points_name').val();
+						$.post("checkpoints.php",{ cart:$('#cart_points').html(), point:point});
+						
+						$('#opc_payment_methods-content').html('<div id="HOOK_PAYMENT">'+
+						'<p class="center"><button class="button btn btn-default button-medium"name="confirmOrder"'
+						+'id="confirmOrder"onclick="confirmFreeOrder();" type="submit"> <span>I confirm my order.</span></button></p></div>');
+				
+						
+						
+						}else{
+						
+							$('.total_points').html('-$'+points.toFixed(2)); 
+							$('#total_price').html('$'+nowprice.toFixed(2));
+						
+							point = $('#points_name').val();
+							$.post("checkpoints.php",{ cart:$('#cart_points').html(), point:point});
+							//修改paypal提交的积分
+							$('#paypal input[name ^="amount"]').val(nowprice.toFixed(2));
+							$('#paypal input[name ^="amount_"]').remove();
+							$('#paypal input[name ^="item_name_"]').remove();
+							$('#paypal input[name ^="quantity_"]').remove();
+							$('#paypal input[name ="amount"]').after('<input type="hidden" name="item_name_1" value="Your order"></input>'
+						+'<input type="hidden" name="amount_1" value="'+nowprice.toFixed(2)+'"></input>'
+						+'<input type="hidden" name="quantity_1" value="1"></input>');
+
+						}
+						
+					
+					}else{
+
+					alert('out of the total of paid');
+
+					return;
+					}
+					
+
+				}else{
+				
+					
+					//获取需要转换的积分
+					var points =  $('#points_name').val()*{$nrate};
+					//修整当前 已经计算的积分 
+					var fixpoints = $('.total_points').html().replace('-$',''); 
+
+					//获取当前的总价格
+					var total_price =$('#total_price').html().replace('$','');
+					
+					//计算积分后的价格
+					var nowprice = total_price*1 - points.toFixed(2)+fixpoints*1;
+						
+					if(nowprice>=0){
+					
+						if(nowprice==0)
+							{
+							
+							$('.total_points').html('-$'+points.toFixed(2)); 
+							$('#total_price').html('$'+nowprice.toFixed(2));
+							
+							point = $('#points_name').val();
+							$.post("checkpoints.php",{ cart:$('#cart_points').html(), point:point});
+							
+							$('#opc_payment_methods-content').html('<div id="HOOK_PAYMENT">'+
+							'<p class="center"><button class="button btn btn-default button-medium"name="confirmOrder"'
+							+'id="confirmOrder"onclick="confirmFreeOrder();" type="submit"> <span>I confirm my order.</span></button></p></div>');
+						
+							}
+							else
+							{
+								//修正显示 积分和支付总金额
+								$('.total_points').html('-$'+points.toFixed(2)); 
+								$('#total_price').html('$'+nowprice.toFixed(2));	
+								point = $('#points_name').val();
+							    $.post("checkpoints.php",{ cart:$('#cart_points').html(), point:point});	
+								//修改paypal提交的积分
+								$('#paypal input[name ^="amount"]').val(nowprice.toFixed(2));
+								$('#paypal input[name ^="amount_"]').remove();
+								$('#paypal input[name ^="item_name_"]').remove();
+								$('#paypal input[name ^="quantity_"]').remove();
+								
+								$('#paypal input[name ="amount"]').after('<input type="hidden" name="item_name_1" value="Your order"></input>'
+							+'<input type="hidden" name="amount_1" value="'+nowprice.toFixed(2)+'"></input>'
+							+'<input type="hidden" name="quantity_1" value="1"></input>');
+							}	
+
+						}else
+						{
+
+							alert('out of the total of paid');
+
+							return;
+
+						}
+
+					}
+			}
+		</script>				
+						
 		<div class="table order-price-box">
 				<div class="order-price-list" style="display:none">
 					{assign var='rowspan_total' value=2+$total_discounts_num+$total_wrapping_taxes_num}
@@ -378,7 +605,12 @@
 							{/if}
 						</dd>
 					</dl>
-
+					{if true}
+						<dl class="cart_total_delivery">
+							<dt colspan="2" class="text-left uk-text-bold">Total points</dt>
+							<dd colspan="1" class="total_points" style="text-align: right;">-$0</dd>
+						</dl>
+					{/if}
 					{if $total_shipping_tax_exc <= 0 && (!isset($isVirtualCart) || !$isVirtualCart) && $free_ship}
 						<dl class="cart_total_delivery{if !$opc && (!isset($cart->id_address_delivery) || !$cart->id_address_delivery)} unvisible{/if}">
 							<dt class="text-left uk-text-bold">{l s='Total shipping'}</dt>
