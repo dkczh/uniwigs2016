@@ -254,7 +254,16 @@ class Ganalytics extends Module
 		){
 			$user_id = (int)$this->context->customer->id;
 		}
-
+			//ga("create", "UA-34159663-1", "auto")
+			//对站点 进行判断 
+	/* 		if (document.location.hostname === 'www.mysite1.com') {
+			ga('create', 'UA-12345-1', 'auto');
+			ga('send', 'pageview');
+			} else if (document.location.hostname === 'www.mysite2.com') {
+			ga('create', 'UA-12345-2', 'auto');
+			ga('send', 'pageview');
+			} else {
+			ga('create', 'UA-12345-3', 'auto'); */
 		return '
 			<script type="text/javascript">
 				(window.gaDevIds=window.gaDevIds||[]).push(\'d6YPbH\');
@@ -262,12 +271,50 @@ class Ganalytics extends Module
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 				})(window,document,\'script\',\'//www.google-analytics.com/analytics_debug.js\',\'ga\');
-				ga(\'create\', \''.Tools::safeOutput(Configuration::get('GA_ACCOUNT_ID')).'\', \'auto\');
-			
+				if (document.location.hostname === \'www.uni.com\'){
+				ga(\'create\', \'UA-34159663-1\', \'auto\', {\'allowLinker\': true});
+				ga(\'require\', \'linker\');
+				ga(\'linker:autoLink\', [\'lavivid.uniwigs.com\',\'m.uniwigs.com\'] ,true);
+				}else if(document.location.hostname === \'lavivid.uni.com\') {
+				ga(\'create\', \'UA-34159663-1\', \'auto\', {\'allowLinker\': true});
+				ga(\'require\', \'linker\');
+				ga(\'linker:autoLink\', [\'uniwigs.com\',\'m.uniwigs.com\'] ,true);
+					
+				}else{
+				ga(\'create\', \'UA-34159663-1\', \'auto\', {\'allowLinker\': true});
+				ga(\'require\', \'linker\');
+				ga(\'linker:autoLink\', [\'uniwigs.com\',\'lavivid.uniwigs.com\'] ,true);	
+				}
 				ga(\'require\', \'ec\');'
 				.(($user_id && !$back_office) ? 'ga(\'set\', \'&uid\', \''.$user_id.'\');': '')
 				.($back_office ? 'ga(\'set\', \'nonInteraction\', true);' : '')
 			.'</script>';
+			//本地测试
+	/* 	return '
+			<script type="text/javascript">
+				(window.gaDevIds=window.gaDevIds||[]).push(\'d6YPbH\');
+				(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,\'script\',\'//www.google-analytics.com/analytics_debug.js\',\'ga\');
+				if (document.location.hostname === \'www.uni.com\'){
+				ga(\'create\', \'UA-34159663-1\', \'auto\', {\'allowLinker\': true});
+				ga(\'require\', \'linker\');
+				ga(\'linker:autoLink\', [\'lavivid.uniwigs.com\',\'m.uniwigs.com\'] ,true);
+				}else if(document.location.hostname === \'lavivid.uni.com\') {
+				ga(\'create\', \'UA-34159663-1\', \'auto\', {\'allowLinker\': true});
+				ga(\'require\', \'linker\');
+				ga(\'linker:autoLink\', [\'uniwigs.com\',\'m.uniwigs.com\'] ,true);
+					
+				}else{
+				ga(\'create\', \'UA-34159663-1\', \'auto\', {\'allowLinker\': true});
+				ga(\'require\', \'linker\');
+				ga(\'linker:autoLink\', [\'uniwigs.com\',\'lavivid.uniwigs.com\'] ,true);	
+				}
+				ga(\'require\', \'ec\');'
+				.(($user_id && !$back_office) ? 'ga(\'set\', \'&uid\', \''.$user_id.'\');': '')
+				.($back_office ? 'ga(\'set\', \'nonInteraction\', true);' : '')
+			.'</script>'; */
 	}
 
 	public function hookHeader()
