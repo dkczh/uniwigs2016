@@ -1070,7 +1070,16 @@ abstract class PaymentModuleCore extends Module
 					Db::getInstance()-> getValue("update ps_orders  set total_paid= $amount_paid where id_order= $id_order ");
 					Db::getInstance()-> getValue("update ps_orders  set total_paid_real= $amount_paid where id_order= $id_order ");
 				    Db::getInstance()-> getValue("update px_customer_point  set  points  = points - $point where id_customer= $id_customer");
-                     //同时增加 积分消耗历史
+                    //同时增加 积分消耗历史
+				 	Db::getInstance()-> execute("INSERT INTO `px_customer_point_history` 
+					(`id_customer`, `points`, `action`, `acomment`, `ccomment`, `date`) 
+					VALUES ('$id_customer', '$point', '-', '', 'cost', now())");
+					 
+					/*  file_put_contents('insert.txt',"INSERT INTO `px_customer_point_history` 
+					(`id_customer`, `points`, `action`, `acomment`, `ccomment`, `date`) 
+					VALUES ('$id_customer', '$point', '-', '', 'cost',now())"); */
+				
+
                      
 				}else{
 					
