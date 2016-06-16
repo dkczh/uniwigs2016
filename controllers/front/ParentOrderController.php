@@ -165,8 +165,14 @@ class ParentOrderControllerCore extends FrontController
      * @return bool
      */
     protected function _checkFreeOrder()
-    {
-        if ($this->context->cart->getOrderTotal() <= 0) {
+    {	
+	
+		$point_amount =$this->getCartAmount($this->context->cart->id);
+	/* 	echo $point_amount =$this->getCartAmount($this->context->cart->id).'-'.$this->context->cart->id;*/
+	/*    echo $this->context->cart->getOrderTotal()-$this->getCartAmount($this->context->cart->id);
+		exit;  */
+        if ($this->context->cart->getOrderTotal()-$point_amount <= 0) {
+
             $order = new FreeOrder();
             $order->free_order_class = true;
             $order->validateOrder($this->context->cart->id, Configuration::get('PS_OS_PAYMENT'), 0, Tools::displayError('Free order', false), null, array(), null, false, $this->context->cart->secure_key);
@@ -651,6 +657,27 @@ class ParentOrderControllerCore extends FrontController
 		
 		$result = Db::getInstance()-> getValue("SELECT points from  px_customer_point 
 	WHERE	id_customer = $id_customer   ");
+		
+		if($result){
+			return $result;
+			
+		}else{
+			
+			return 0;
+		}
+		
+		
+	}
+	
+	
+	
+	//获取当前购物车消费金额
+	
+	
+	public function  getCartAmount($id_cart ){
+		
+		$result = Db::getInstance()-> getValue("SELECT amount from  px_cart_point 
+	WHERE	id_cart = $id_cart   ");
 		
 		if($result){
 			return $result;
