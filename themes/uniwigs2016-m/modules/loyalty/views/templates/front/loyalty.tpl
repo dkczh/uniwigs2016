@@ -190,7 +190,7 @@
 	<p class="alert alert-warning">{l s='Your points: 0' mod='loyalty'}</p>
 	{/if}
 	{else}
-	<p class="alert alert-warning">{l s='Your points: 0' mod='loyalty'}</p>
+	<p class="alert alert-warning">{l s='Your points: 0' mod='loyalty'}</p> 
 	{/if}
 	{else} 
 	{* 设计师数据显示*}

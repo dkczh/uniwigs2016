@@ -151,7 +151,7 @@ id="points" name="discount_name" style="
 {/if*}
 
 {if $nbDiscounts}
-<h1 class="page-heading">{l s='My vouchers from loyalty points' mod='loyalty'}</h1>
+<h1 class="page-heading">{l s='My vouchers from loyalty points' mod='loyalty'}</h1> 
 <div class="block-center" id="block-history">
 	<table id="order-list" class="table uk-table">
 		<thead>
