@@ -634,16 +634,22 @@ function confirmFreeOrder()
 		dataType : "html",
 		data: 'ajax=true&method=makeFreeOrder&token=' + static_token ,
 		success: function(html)
-		{
+		{	
 			$('#confirmOrder').prop('disabled', false);
 			var array_split = html.split(':');
-			if (array_split[0] == 'freeorder')
-			{
-				if (isGuest)
-					document.location.href = guestTrackingUrl+'?id_order='+encodeURIComponent(array_split[1])+'&email='+encodeURIComponent(array_split[2]);
-				else
-					document.location.href = historyUrl;
+			if (array_split[0].replace(' ','') == 'freeorder')
+			{	
+			
+				if (isGuest){
+				document.location.href = guestTrackingUrl+'?id_order='+encodeURIComponent(array_split[1])+'&email='+encodeURIComponent(array_split[2]);
+				}else{
+				
+				document.location.href = historyUrl;
+				}
+				
+				
 			}
+			
 		},
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
 			if (textStatus !== 'abort')

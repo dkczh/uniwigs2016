@@ -642,7 +642,7 @@ function confirmFreeOrder()
 		{
 			$('#confirmOrder').prop('disabled', false);
 			var array_split = html.split(':');
-			if (array_split[0] == 'freeorder')
+			if (array_split[0].replace(' ','') == 'freeorder')
 			{
 				if (isGuest)
 					document.location.href = guestTrackingUrl+'?id_order='+encodeURIComponent(array_split[1])+'&email='+encodeURIComponent(array_split[2]);
