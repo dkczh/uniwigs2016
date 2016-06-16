@@ -278,11 +278,24 @@
 				{if $cart->id_customer==102318}
 				<tr class="cart_total_delivery">
 					<td colspan="2" class="text-left uk-text-bold">Total points</td>
-					<td colspan="1" class="points" id="total_points"style="text-align: right;">-$0</td>
+					<td colspan="1" class="points" id="total_points" style="text-align: right;">-$0</td>
 				</tr>
 				{/if}	
 				<!-- /增加积分消费显示 -->
 				<tr class="cart_total_price">
+					<!-- 增加积分操作显示 -->
+					{if $cart->id_customer==102318}
+					
+						<td colspan="3">
+						<h4>Valid Points: <span id='npoints'>{$points}</span></h4>
+						{if {$points}>0}
+						<input type="text" id="points_name" class="form-control" name="points_name" value="">
+						<button onclick='addPoints()' class="uk-button uk-button-small">ok</button>
+						</td>
+						{/if}
+					
+					{/if}
+					<!-- /增加积分操作显示 -->
 					<td colspan="2" class="total_price_container text-right">
 						<span>{l s='Total'}</span>
                         <div class="hookDisplayProductPriceBlock-price">
@@ -299,18 +312,6 @@
 						</td>
 					{/if}
 				</tr>
-				<!-- 增加积分操作显示 -->
-				{if $cart->id_customer==102318}
-				<tr class="cart_total_delivery">
-					<td colspan="2" >Valid Points: <span id='npoints'>{$points}</span></td>
-					{if {$points}>0}
-					<td colspan="1" ><input type="text" id="points_name"  name="points_name" value="">
-					<button onclick='addPoints()' class="uk-button uk-button-small">ok</button></td>
-					{/if}
-				</tr>
-				{/if}
-					<!-- /增加积分操作显示 -->
-				
 			</tfoot>
 			<script>
 			
@@ -740,6 +741,7 @@
 			{/if}
 		</div>
 	{/if}
+
 	<div id="HOOK_SHOPPING_CART">{$HOOK_SHOPPING_CART}</div>
 	{*<p class="cart_navigation clearfix">
 		{if !$opc}

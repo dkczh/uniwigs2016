@@ -88,4 +88,8 @@
 #new_account_form .postcode {
   display: none; }
 
+#points_name {
+  width: 219px;
+  margin-right: 11px; }
+
 /*# sourceMappingURL=order-opc.css.map */
