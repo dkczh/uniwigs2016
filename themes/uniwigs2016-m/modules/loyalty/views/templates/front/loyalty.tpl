@@ -109,32 +109,31 @@
 		</form>
 	{/if}
 	</div>
-<p style="padding:0 10px">{l s='Vouchers generated here are usable in the following categories : ' mod='loyalty'}
-	{if $categories}{$categories}{else}{l s='All' mod='loyalty'}{/if}</p>
+{*<p style="padding:0 10px">{l s='Vouchers generated here are usable in the following categories : ' mod='loyalty'}
+	{if $categories}{$categories}{else}{l s='All' mod='loyalty'}{/if}</p>*}
 <div class="box">
-	{if $transformation_allowed}
+	{*if $transformation_allowed}
 	<input type="text" class="discount_name form-control uk-margin-small-bottom" id="points" placeholder="input your point to transform voucher" name="discount_name">
 	<span style="display: none;" id="cuid">{$customerid}</span>
 	<span style="display: none;" id="allpoints">{$totalPoints|intval}</span>
 	<button  class="uk-button uk-button-primary" onclick='transform()'><span>transform</span></button>
 	<div id="result" style="width: 150px; "></div>
-	{*<a class="btn btn-default" style="border: 1px solid;"
+	<a class="btn btn-default" style="border: 1px solid;"
 		href="{$link->getModuleLink('loyalty', 'default', ['process' => 'transformpoints'], true)|escape:'html':'UTF-8'}" onclick="return confirm('{l s='Are you sure you want to transform your points into vouchers?' mod='loyalty' js=1}');">
 		点击转换
-	</a>*}
+	</a>
 
 	<script src="/point.js"></script>
-	{*
+
 	<p style="text-align:center; margin-top:20px">
 		<a href="{$link->getModuleLink('loyalty', 'default', ['process' => 'transformpoints'])|escape:'html'}" onclick="return confirm('{l s='Are you sure you want to transform your points into vouchers?' mod='loyalty' js=1}');">{l s='Transform my points into a voucher of' mod='loyalty'} <span class="price">{convertPrice price=$voucher}</span>.</a>
-	</p>*}
+	</p>
 
 
-	{/if}
-
-	<h1 class="page-heading">{l s='My vouchers from loyalty points' mod='loyalty'}</h1>
+	{/if*}
 
 	{if $nbDiscounts}
+	<h1 class="page-heading">{l s='My vouchers from loyalty points' mod='loyalty'}</h1>
 	<div class="block-center uk-overflow-container" id="block-history">
 		<table id="order-list" class="table uk-table">
 			<thead>
