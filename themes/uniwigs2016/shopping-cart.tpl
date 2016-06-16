@@ -204,7 +204,7 @@
 				{/if}
 				<!-- 增加  积分抵消 -->
 			
-				{if $cart->id_customer==102318}
+				{if $cart->id_customer==102318  or true}
 				<tr class="cart_total_tax">
 					<td colspan="2" class="text-left uk-text-bold">Total points</td>
 					<td colspan="1" class="points" id="total_points"style="text-align: right;">-$0</td>
@@ -233,7 +233,7 @@
 		</table>
 				
 			
-				{if $cart->id_customer==102318}
+				{if $cart->id_customer==102318 or true }
 				<div id='custom_points'>
 
 					<p>

@@ -275,7 +275,7 @@
 				{/if}
 				
 				<!-- 增加积分消费显示 -->
-				{if $cart->id_customer==102318}
+				{if $cart->id_customer==102318 or true}
 				<tr class="cart_total_delivery">
 					<td colspan="2" class="text-left uk-text-bold">Total points</td>
 					<td colspan="1" class="points" id="total_points" style="text-align: right;">-$0</td>
@@ -284,11 +284,11 @@
 				<!-- /增加积分消费显示 -->
 				<tr class="cart_total_price">
 					<!-- 增加积分操作显示 -->
-					{if $cart->id_customer==102318}
+					{if $cart->id_customer==102318 or true}
 					
 						<td colspan="3">
 						<h4>Valid Points: <span id='npoints'>{$points}</span></h4>
-						{if {$points}>0}
+						{if $points>0}
 						<input type="text" id="points_name" class="form-control" name="points_name" value="">
 						<button onclick='addPoints()' class="uk-button uk-button-small">ok</button>
 						</td>

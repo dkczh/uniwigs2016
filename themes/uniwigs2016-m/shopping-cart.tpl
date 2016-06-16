@@ -215,7 +215,7 @@
 						</tr>
 					{/foreach}
 				{/if}
-				{if $cart->id_customer==102318}
+				{if $cart->id_customer==102318 or true }
 					<tr class="cart_total_delivery">
 						<td class="text-left">Total points</td>
 						<td class="points" style="text-align:right">
@@ -353,12 +353,12 @@
 							{/if}
 						</td>	
 					</tr>
-					{if $cart->id_customer==102318}
+					{if $cart->id_customer==102318  or true}
 						<tr><td colspan="2" style="height:15px;background:#f5f5f5"></td></tr>
 						<tr class="cart_total_delivery">
 							<td colspan="2">
 								<p>Valid Points: <span id='npoints'>{$points}</span></p>
-								{if {$points}>0}
+								{if $points>0}
 								<p>
 									<input type="text" id="points_name" class="form-control" name="points_name" value="" placeholder="USE VALID POINTS">
 									<button onclick='addPoints()' class="button btn btn-default button-small"></button>
@@ -605,7 +605,7 @@
 							{/if}
 						</dd>
 					</dl>
-					{if $cart->id_customer==102318}
+					{if $cart->id_customer==102318  or true }
 						<dl class="cart_total_delivery">
 							<dt colspan="2" class="text-left uk-text-bold">Total points</dt>
 							<dd colspan="1" class="total_points" style="text-align: right;">-$0</dd>
