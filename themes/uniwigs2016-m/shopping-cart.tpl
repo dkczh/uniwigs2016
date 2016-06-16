@@ -215,7 +215,7 @@
 						</tr>
 					{/foreach}
 				{/if}
-				{if true}
+				{if $cart->id_customer==102318}
 					<tr class="cart_total_delivery">
 						<td class="text-left">Total points</td>
 						<td class="points" style="text-align:right">
@@ -353,7 +353,7 @@
 							{/if}
 						</td>	
 					</tr>
-					{if true}
+					{if $cart->id_customer==102318}
 						<tr><td colspan="2" style="height:15px;background:#f5f5f5"></td></tr>
 						<tr class="cart_total_delivery">
 							<td colspan="2">
@@ -605,7 +605,7 @@
 							{/if}
 						</dd>
 					</dl>
-					{if true}
+					{if $cart->id_customer==102318}
 						<dl class="cart_total_delivery">
 							<dt colspan="2" class="text-left uk-text-bold">Total points</dt>
 							<dd colspan="1" class="total_points" style="text-align: right;">-$0</dd>
