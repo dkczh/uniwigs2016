@@ -205,10 +205,10 @@ id="points" name="discount_name" style="
 {if $minimalLoyalty > 0}<p>{l s='The minimum order amount in order to use these vouchers is:' mod='loyalty'} {convertPrice price=$minimalLoyalty}</p>{/if}
 
 {else}
-<p class="alert alert-warning">{l s='No vouchers yet.' mod='loyalty'}</p>
+<p class="alert alert-warning">{l s='Your points: 0' mod='loyalty'}</p>
 {/if}
 {else}
-<p class="alert alert-warning">{l s='No reward points yet.' mod='loyalty'}</p>
+<p class="alert alert-warning">{l s='Your points: 0' mod='loyalty'}</p>
 {/if}
 {else} 
 {* 设计师数据显示*}
