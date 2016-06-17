@@ -184,8 +184,8 @@
         {/if}
         {if $category->id == '40452'}
             <div class="uk-margin-small-bottom">
-                <a href="https://youtu.be/iTTA-NOl9qY" data-uk-lightbox>
-                    <img src="{$img_dir}category/human-hair/banner.jpg" alt="human hair" class="img-responsive">
+                <a href="https://youtu.be/LTB4ZFOBx-A" data-uk-lightbox>
+                    <img src="{$img_dir}category/human-hair/20160616banner-lace-front-wigs.jpg" alt="human hair" class="img-responsive">
                 </a>
             </div>
             <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
