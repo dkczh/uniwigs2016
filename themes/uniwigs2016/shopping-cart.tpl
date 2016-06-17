@@ -251,7 +251,8 @@
 					
 				</div>
 				{/if}
-		
+			{*存放购物车id 信息*}
+		<span id='cart_points' style="display: none;">{$cart->id}</span>
 		<script>
 			
 			//增加 积分输入限制
@@ -297,6 +298,7 @@
 			  //积分输入为0 重新加载页面
 				if( $('#points_name').val()==0){
 				  location.reload();
+				  return;
 				}
 				if ($('#total_points').html()=='-$0') {
 			
@@ -393,20 +395,16 @@
 						
 						
 						}else{
-							var paypalcookie=getCookie('paypal');
-							if(paypalcookie == null){
+						
+						
 							$('#total_points').html('-$'+points.toFixed(2)); 
-							$('#total_price').html('$'+nowprice.toFixed(2));
-								
-					carttext =$("input[name='custom']").val();
-					cartarr=carttext.split(";");
-					point =  $('#points_name').val();
-				
-				
-					$.post("checkpoints.php",{ cart:cartarr[0], point:point});
-							}else{
-							location.reload();
-							}
+							$('#total_price').html('$'+nowprice.toFixed(2));	
+							carttext =$("input[name='custom']").val();
+							cartarr=carttext.split(";");
+							point =  $('#points_name').val();
+
+							$.post("checkpoints.php",{ cart:cartarr[0], point:point});
+						
 					
 						}
 						
