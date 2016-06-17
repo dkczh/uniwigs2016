@@ -116,10 +116,10 @@
 	{/if}
 	</div>
 
-<p>{l s='Vouchers generated here are usable in the following categories : ' mod='loyalty'}
-{if $categories}{$categories}{else}{l s='All' mod='loyalty'}{/if}</p>
+{*<p>{l s='Vouchers generated here are usable in the following categories : ' mod='loyalty'}
+{if $categories}{$categories}{else}{l s='All' mod='loyalty'}{/if}</p>*}
 
-{if $transformation_allowed}
+{*if $transformation_allowed}
 
 <input type="text" class="discount_name form-control" 
 id="points" name="discount_name" style="
@@ -136,23 +136,22 @@ id="points" name="discount_name" style="
 <div id="result" style="
     width: 150px; 
 "></div>
-{*<a class="btn btn-default" style="border: 1px solid;"
+<a class="btn btn-default" style="border: 1px solid;"
 	href="{$link->getModuleLink('loyalty', 'default', ['process' => 'transformpoints'], true)|escape:'html':'UTF-8'}" onclick="return confirm('{l s='Are you sure you want to transform your points into vouchers?' mod='loyalty' js=1}');">
 	点击转换
-</a>*}
+</a>
 
 <script src="/point.js"></script>
-{*
+
 <p style="text-align:center; margin-top:20px">
 	<a href="{$link->getModuleLink('loyalty', 'default', ['process' => 'transformpoints'])|escape:'html'}" onclick="return confirm('{l s='Are you sure you want to transform your points into vouchers?' mod='loyalty' js=1}');">{l s='Transform my points into a voucher of' mod='loyalty'} <span class="price">{convertPrice price=$voucher}</span>.</a>
-</p>*}
+</p>
 
 
-{/if}
-
-<h1 class="page-heading">{l s='My vouchers from loyalty points' mod='loyalty'}</h1>
+{/if*}
 
 {if $nbDiscounts}
+<h1 class="page-heading">{l s='My vouchers from loyalty points' mod='loyalty'}</h1> 
 <div class="block-center" id="block-history">
 	<table id="order-list" class="table uk-table">
 		<thead>
@@ -206,10 +205,10 @@ id="points" name="discount_name" style="
 {if $minimalLoyalty > 0}<p>{l s='The minimum order amount in order to use these vouchers is:' mod='loyalty'} {convertPrice price=$minimalLoyalty}</p>{/if}
 
 {else}
-<p class="alert alert-warning">{l s='No vouchers yet.' mod='loyalty'}</p>
+<p class="alert alert-warning">{l s='Your points: 0' mod='loyalty'}</p>
 {/if}
 {else}
-<p class="alert alert-warning">{l s='No reward points yet.' mod='loyalty'}</p>
+<p class="alert alert-warning">{l s='Your points: 0' mod='loyalty'}</p>
 {/if}
 {else} 
 {* 设计师数据显示*}
