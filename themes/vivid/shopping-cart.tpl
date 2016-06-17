@@ -359,7 +359,8 @@
 			  //积分为0  页面重新加载
 			  if( $('#points_name').val()==0){
 					location.reload();
-					}
+					return;
+			}
 			 if ($('#total_points').html()=='-$0') {
 			
 					
@@ -455,20 +456,18 @@
 						
 						
 						}else{
-							var paypalcookie=getCookie('paypal');
-							if(paypalcookie == null){
-							$('#total_points').html('-$'+points.toFixed(2)); 
-							$('#total_price').html('$'+nowprice.toFixed(2));
+							
+							
+						$('#total_points').html('-$'+points.toFixed(2)); 
+						$('#total_price').html('$'+nowprice.toFixed(2));
 								
-					carttext =$("input[name='custom']").val();
-					cartarr=carttext.split(";");
-					point =  $('#points_name').val();
+						carttext =$("input[name='custom']").val();
+						cartarr=carttext.split(";");
+						point =  $('#points_name').val();
 				
 				
-					$.post("checkpoints.php",{ cart:cartarr[0], point:point});
-							}else{
-							location.reload();
-							}
+						$.post("checkpoints.php",{ cart:cartarr[0], point:point});
+						
 					
 						}
 						
