@@ -1,3 +1,1 @@
-RewriteRule ^clip-in-hair-extensions/40775-18-dark-brown-7-pieces-french-wave-clip-in-indian-remy-human-hair-extension-e718001fw-g-2.html$ /108-clip-in-hair-extensions [L,R=301]
-RewriteRule ^clip-in-hair-extensions/40773-18-dark-brown-7-pieces-body-wave-clip-in-indian-remy-human-hair-extension-e718001bw-g-2.html$ /108-clip-in-hair-extensions [L,R=301]
-RewriteRule ^hair-extensions/40529-16-7-piece-straight-clip-in-remy-human-hair-extension-e71603.html$ /103-hair-extensions [L,R=301]
+RewriteRule ^hair-pieces/40226-adela-synthetic-clip-in-bang.html$ /104-hair-pieces [L,R=301]
