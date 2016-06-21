@@ -467,7 +467,14 @@ class StockAvailableCore extends ObjectModel
         if (!Validate::isLoadedObject($product)) {
             return false;
         }
-
+		//修复 订单改取消 更新产品库存出错
+		if(strstr($_SERVER['REQUEST_URI'],"controller=AdminOrders"))
+		{
+			
+		 return true;
+			
+		}
+	
         $stockManager = Adapter_ServiceLocator::get('Core_Business_Stock_StockManager');
         $stockManager->updateQuantity($product, $id_product_attribute, $delta_quantity, $id_shop = null);
         return true;
