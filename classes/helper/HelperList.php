@@ -738,7 +738,7 @@ FROM
 left JOIN  ps_orders  o  on  o.id_order=od.id_order 
 WHERE
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d')>od.date
-and  o.current_state  not in (4,6,7,19) ");
+and  o.current_state  in (2,3,9,23,24) ");
 		}
 		//备货时间统计
 		 if($id=='3'){
