@@ -647,7 +647,7 @@ class AdminOrdersControllerCore extends AdminController
 		}
 		
 		
-        /* Update shipping number */
+        /* Update shipping number  更新物流信息 */
         if (Tools::isSubmit('submitShippingNumber') && isset($order)) {
             if ($this->tabAccess['edit'] === '1') {
 			
@@ -702,6 +702,11 @@ class AdminOrdersControllerCore extends AdminController
                             '{shipping_number}' => $order->shipping_number,
                             '{order_name}' => $order->getUniqReference()
                         );
+						/*
+						 * mail 函数自定义参数 
+						 *Mail::Send('language','template_name','mail_subject','template_var','email','customer');
+						 * $customer->email
+						 */
                         if (@Mail::Send((int)$order->id_lang, 'in_transit', Mail::l('Package in transit', (int)$order->id_lang), $templateVars,
                             $customer->email, $customer->firstname.' '.$customer->lastname, null, null, null, null,
                             _PS_MAIL_DIR_, true, (int)$order->id_shop)) {
@@ -718,7 +723,136 @@ class AdminOrdersControllerCore extends AdminController
                 $this->errors[] = Tools::displayError('You do not have permission to edit this.');
             }
         }
+		//统一物流操作
+		elseif(Tools::isSubmit('submitSameShippingNumber') && isset($order)){
+		
+			//删除 可能存在的记录 
+			$res =Db::getInstance()->execute("
+			delete from  px_differ_carrier where id_order = ".$order->id);
+			
+			if(Tools::getValue('rcarrier')=='0'){
+				
+				$rcarrier='USPS';
+			}else{
+				$rcarrier=Tools::getValue('rcarrier');
+				
+			}
+			
+			//插入最新的数据 
+			$product_name  =Db::getInstance()->executeS("
+			select * from  ps_order_detail where id_order = ".$order->id);
+			
+			foreach($product_name as $a ){
+					Db::getInstance()->execute("
+			insert  into  px_differ_carrier (`id_order`,`product_name`,
+			`real_carrier`,`tracking_number`
+			,`date_add`)value 
+			('".$order->id."','".$a['product_name']."',
+			'$rcarrier','".Tools::getValue('tracking_number')."',now())");	
+			}
+		    $customer = new Customer((int)$order->id_customer);
+			$templateVars = array(
+                            '{followup}' => $rcarrier.'--'.Tools::getValue('tracking_number'),
+                            '{firstname}' => $customer->firstname,
+                            '{lastname}' => $customer->lastname,
+                            '{id_order}' => $order->id,
+                            '{shipping_number}' =>$rcarrier.'--'.Tools::getValue('tracking_number'),
+                            '{order_name}' => $order->id
+                        );
+		
+			 if (@Mail::Send((int)$order->id_lang, 'in_transit', Mail::l('Package in transit', (int)$order->id_lang), $templateVars,
+                           $customer->email, $customer->firstname.' '.$customer->lastname, null, null, null, null,
+                            _PS_MAIL_DIR_, true, (int)$order->id_shop)) {
+                            Hook::exec('actionAdminOrdersTrackingNumberUpdate', array('order' => $order, 'customer' => $customer, 'carrier' => $carrier), null, false, true, false, $order->id_shop);
+                            Tools::redirectAdmin(self::$currentIndex.'&id_order='.$order->id.'&vieworder&conf=4&token='.$this->token);
+                        } else {
+                            $this->errors[] = Tools::displayError('An error occurred while sending an email to the customer.');
+            }
+		
+		
+		}
+		
+		
+		//分单物流操作
+		elseif(Tools::isSubmit('submitDifferShippingNumber') && isset($order)){
+	
+			$res =Db::getInstance()->executeS("
+			select  *  from  px_differ_carrier where id_order = ".$order->id." and  product_name= '".addslashes($_POST['carrier_product'])."'");
+			
+			if(Tools::getValue('rcarrier')=='0'){
+				
+				$rcarrier='USPS';
+			}else{
+				$rcarrier=Tools::getValue('rcarrier');
+				
+			}
+			
+			if($res){
+		
+			Db::getInstance()->execute("update  px_differ_carrier  
+			set  real_carrier='$rcarrier'   ,
+			tracking_number='".Tools::getValue('tracking_number')."',date_add=now() 
+			 where id_order = ".$order->id." 
+			and  product_name= '".Tools::getValue('carrier_product')."'");
+			
+		
+			$customer = new Customer((int)$order->id_customer);
+			$templateVars = array(
+                            '{followup}' => $rcarrier.'--'.Tools::getValue('tracking_number'),
+                            '{firstname}' => $customer->firstname,
+                            '{lastname}' => $customer->lastname,
+                            '{id_order}' => $order->id,
+							'{skus}' => Tools::getValue('skus'),
+                            '{shipping_number}' =>$rcarrier.'--'.Tools::getValue('tracking_number'),
+                            '{product_name}' => Tools::getValue('carrier_product')
+                        );
+		
+			 if (@Mail::Send((int)$order->id_lang, 'in_transit_differ', Mail::l('Package in transit', (int)$order->id_lang), $templateVars,
+                           $customer->email, $customer->firstname.' '.$customer->lastname, null, null, null, null,
+                            _PS_MAIL_DIR_, true, (int)$order->id_shop)) {
+                            Hook::exec('actionAdminOrdersTrackingNumberUpdate', array('order' => $order, 'customer' => $customer, 'carrier' => $carrier), null, false, true, false, $order->id_shop);
+                            Tools::redirectAdmin(self::$currentIndex.'&id_order='.$order->id.'&vieworder&conf=4&token='.$this->token);
+                        } else {
+                            $this->errors[] = Tools::displayError('An error occurred while sending an email to the customer.');
+            }	
 
+			//echo  '更新成功';
+				
+			}else{
+				$id_order= $order->id;
+			Db::getInstance()->execute("
+			insert  into  px_differ_carrier (`id_order_carrier`,`id_order`,`product_name`,
+			`real_carrier`,`tracking_number`
+			,`date_add`)value 
+			('".Tools::getValue('id_order_carrier')."','$id_order','".Tools::getValue('carrier_product')."',
+			'$rcarrier','".Tools::getValue('tracking_number')."',now())");
+			$customer = new Customer((int)$order->id_customer);
+			$templateVars = array(
+                            '{followup}' => $rcarrier.'--'.Tools::getValue('tracking_number'),
+                            '{firstname}' => $customer->firstname,
+                            '{lastname}' => $customer->lastname,
+                            '{id_order}' => $order->id,
+							'{skus}' => Tools::getValue('skus'),
+                            '{shipping_number}' =>$rcarrier.'--'.Tools::getValue('tracking_number'),
+                            '{product_name}' => Tools::getValue('carrier_product')
+                        );
+		
+			 if (@Mail::Send((int)$order->id_lang, 'in_transit_differ', Mail::l('Package in transit', (int)$order->id_lang), $templateVars,
+                           $customer->email, $customer->firstname.' '.$customer->lastname, null, null, null, null,
+                            _PS_MAIL_DIR_, true, (int)$order->id_shop)) {
+                            Hook::exec('actionAdminOrdersTrackingNumberUpdate', array('order' => $order, 'customer' => $customer, 'carrier' => $carrier), null, false, true, false, $order->id_shop);
+                            Tools::redirectAdmin(self::$currentIndex.'&id_order='.$order->id.'&vieworder&conf=4&token='.$this->token);
+                        } else {
+                            $this->errors[] = Tools::displayError('An error occurred while sending an email to the customer.');
+				}		
+			//echo  '插入成功';	
+			}
+			
+			
+			
+			
+		}
+			
         /* Change order status, add a new entry in order history and send an e-mail to the customer if needed */
         elseif (Tools::isSubmit('submitState') && isset($order)) {
             if ($this->tabAccess['edit'] === '1') {
@@ -769,6 +903,7 @@ class AdminOrdersControllerCore extends AdminController
                 $this->errors[] = Tools::displayError('You do not have permission to edit this.');
             }
         }
+
 
         /* Add a new message for the current order and send an e-mail to the customer if needed */
         elseif (Tools::isSubmit('submitMessage') && isset($order)) {
