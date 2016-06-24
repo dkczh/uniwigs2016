@@ -88,6 +88,6 @@ class="page-heading {if !isset($instant_search) || (isset($instant_search) && !$
 {/if}
 <script>
 $(document).ready(function(){
-$('.product-name[href*="custom"]').parents("li").hide(); //屏蔽掉 custom定制单结果
+$('.product-name[href*="custom-products"]').parents("li").hide(); //屏蔽掉 custom定制单结果
 });
 </script>

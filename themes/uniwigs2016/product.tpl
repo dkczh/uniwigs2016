@@ -1134,7 +1134,6 @@
 					<ul class="uk-tab" data-uk-tab="{literal}{connect:'#tab-content'}{/literal}" data-uk-switcher="{literal}{connect:'#tab-content', animation: 'fade'}{/literal}">
 						{if $category->id == '40441'}
 						<li><a href="#" id="Description_product">Description</a></li>
-						<li><a href="#" id="Feature_product">Features</a></li>
 						{else}
 						<li><a href="#" id="Feature_product">Features</a></li>
 						<li><a href="#" id="Description_product">Description</a></li>
@@ -1146,28 +1145,6 @@
 								<div class="pr-details text-info" itemprop="description">
 									{$product->description}
 								</div>
-							</li>
-							<li>
-								{if isset($features) && $features}
-									<!-- features -->
-									<table class="table-data-sheet uk-table uk-table-striped text-info">
-										{foreach from=$features item=feature}
-										<tr class="{cycle values="odd,even"}">
-											{if isset($feature.value)}
-											<td>{$feature.name|escape:'html':'UTF-8'}</td>
-											<td>{$feature.value|escape:'html':'UTF-8'}
-												{if  $feature.mtitle }
-												({$feature.mtitle|escape:'html':'UTF-8'})
-												{/if}
-
-											</td>
-											{/if}
-										</tr>
-										{/foreach}
-									</table>
-									
-									<!--end features -->
-								{/if}
 							</li>
 						{else}
 							<li>

@@ -80,7 +80,7 @@
                                 </a>
                                 <div class="text-center">
                                     <p class="name uk-margin-small-top">
-                                        <a href="{$hs_prd.link}">
+                                        <a href="{$category->name|replace:' ':'-'|lower}/{$p['id_product']}-{$p['link_rewrite']}.html">
                                             {$p['name']|truncate:50:'...'|escape:'htmlall':'UTF-8'}
                                         </a>
                                     </p>
@@ -110,7 +110,7 @@
                                     </a>
                                     <div class="text-center">
                                         <p class="name uk-margin-small-top">
-                                            <a href="{$hs_prd.link}">
+                                            <a href="{$category->name|replace:' ':'-'|lower}/{$p['id_product']}-{$p['link_rewrite']}.html">
                                                 {$p['name']|truncate:50:'...'|escape:'htmlall':'UTF-8'}
                                             </a>
                                         </p>
@@ -273,7 +273,7 @@
                                      </a>
                                      <div class="text-center">
                                          <p class="name uk-margin-small-top">
-                                             <a href="{$hs_prd.link}">
+                                             <a href="{$category->name|replace:' ':'-'|lower}/{$p['id_product']}-{$p['link_rewrite']}.html">
                                                  {$p['name']|truncate:50:'...'|escape:'htmlall':'UTF-8'}
                                              </a>
                                          </p>
@@ -303,7 +303,7 @@
                                          </a>
                                          <div class="text-center">
                                              <p class="name uk-margin-small-top">
-                                                 <a href="{$hs_prd.link}">
+                                                 <a href="{$category->name|replace:' ':'-'|lower}/{$p['id_product']}-{$p['link_rewrite']}.html">
                                                      {$p['name']|truncate:50:'...'|escape:'htmlall':'UTF-8'}
                                                  </a>
                                              </p>
@@ -533,7 +533,7 @@
                                     </a>
                                     <div class="text-center">
                                         <p class="name uk-margin-small-top">
-                                            <a href="{$hs_prd.link}">
+                                            <a href="{$category->name|replace:' ':'-'|lower}/{$p['id_product']}-{$p['link_rewrite']}.html">
                                                 {$p['name']|truncate:50:'...'|escape:'htmlall':'UTF-8'}
                                             </a>
                                         </p>
@@ -684,7 +684,7 @@
                                     </a>
                                     <div class="text-center">
                                         <p class="name uk-margin-small-top">
-                                            <a href="{$hs_prd.link}">
+                                            <a href="{$category->name|replace:' ':'-'|lower}/{$p['id_product']}-{$p['link_rewrite']}.html">
                                                 {$p['name']|truncate:50:'...'|escape:'htmlall':'UTF-8'}
                                             </a>
                                         </p>
