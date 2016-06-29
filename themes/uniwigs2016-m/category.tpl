@@ -184,9 +184,14 @@
         {/if}
         {if $category->id == '40452'}
             <div class="uk-margin-small-bottom">
-                <a href="https://youtu.be/LTB4ZFOBx-A" data-uk-lightbox>
+                {*<a href="https://youtu.be/LTB4ZFOBx-A" data-uk-lightbox>
                     <img src="{$img_dir}category/human-hair/20160616banner-lace-front-wigs.jpg" alt="human hair" class="img-responsive">
-                </a>
+                </a>*}
+                <img src="/themes/uniwigs2016-m/img/category/human-hair/40452.jpg" alt="" usemap="#map" />
+                <map name="map">
+                    <area shape="rect" coords="229, 245, 433, 403" href="https://youtu.be/UaeY3RzlkNw" data-uk-lightbox/>
+                    <area shape="rect" coords="6, 125, 217, 287" href="https://youtu.be/alytKsHXgoU" data-uk-lightbox/>
+                </map>
             </div>
             <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
         {/if}
