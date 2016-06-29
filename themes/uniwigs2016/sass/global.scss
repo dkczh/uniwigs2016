@@ -131,6 +131,22 @@ header {
 	}
 }
 
+.banner-sale{
+	height: 46px;
+	text-align: center;
+	.row{
+	    line-height: 46px;
+	    font-size: 1.2em;
+	    span{
+	    	padding-right:10px;
+	    }
+	    a{
+	    	text-decoration: underline;
+	    	padding-left:10px;
+	    }
+	}
+}
+
 .ie8 #header #header_logo {
 	width: 350px;
 }

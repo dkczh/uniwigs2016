@@ -10795,6 +10795,18 @@ header {
     header .col-sm-4 + .col-sm-4 + .col-sm-4 {
       float: right; } }
 
+.banner-sale {
+  height: 46px;
+  text-align: center; }
+  .banner-sale .row {
+    line-height: 46px;
+    font-size: 1.2em; }
+    .banner-sale .row span {
+      padding-right: 10px; }
+    .banner-sale .row a {
+      text-decoration: underline;
+      padding-left: 10px; }
+
 .ie8 #header #header_logo {
   width: 350px; }
 

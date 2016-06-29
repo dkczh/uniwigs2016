@@ -149,6 +149,21 @@
 						</div>
 					</div>
 				</header>
+				<div class="banner-sale">
+					<div class="container">
+						<div class="row">
+							<p><span>Independence Day</span><span>Site Wide BIG SALE</span><span class="uk-text-bold text-primary">Save Up to $75!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+						</div>
+					</div>
+					<div id="sale-details" class="uk-modal">
+					    <div class="uk-modal-dialog">
+					        <a class="uk-modal-close uk-close uk-close-alt"></a>
+					        <div>
+					        	<img src="/themes/uniwigs2016/img/public/0628-ins.png" alt="">
+					        </div>
+					    </div>
+					</div>
+				</div>
 			</div>
 			<div class="columns-container">
 				<div id="slider_row" class="row">
