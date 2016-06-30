@@ -55,8 +55,8 @@
 				</li>
 				
 				<li>
-					<a href="{$base_dir}content/20-how-to-style-a-wig">
-						How To Style A Wig
+					<a href="{$base_dir}content/20-how-to-style-a-human-hair-wig">
+						How to Style A Human Hair Wig
 					</a>
 				</li>
 				<li>
