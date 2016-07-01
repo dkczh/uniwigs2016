@@ -751,8 +751,32 @@ class AdminOrdersControllerCore extends AdminController
 			'$rcarrier','".Tools::getValue('tracking_number')."',now())");	
 			}
 		    $customer = new Customer((int)$order->id_customer);
+			switch ($rcarrier)
+			{
+			case 'USPS':
+			  $curl='https://tools.usps.com/go/TrackConfirmAction?qtc_tLabels1=';
+			  break;  
+			case 'UPS':
+			  $curl='https://www.ups.com/';
+			  break;
+			case 'FEDEX':
+			  $curl='http://www.fedex.com/us/';
+			  break;
+			case 'DHL':
+			  $curl='http://www.dhl.com/en.html';
+			  break;
+			case 'EMS':
+			  $curl='http://www.ems.com/';
+			  break;
+			default:
+			  ;
+			}
+			
+			
+			
 			$templateVars = array(
                             '{followup}' => $rcarrier.'--'.Tools::getValue('tracking_number'),
+							'{curl}'=> $curl,
                             '{firstname}' => $customer->firstname,
                             '{lastname}' => $customer->lastname,
                             '{id_order}' => $order->id,
@@ -797,8 +821,31 @@ class AdminOrdersControllerCore extends AdminController
 			
 		
 			$customer = new Customer((int)$order->id_customer);
+			
+			switch ($rcarrier)
+			{
+			case 'USPS':
+			  $curl='https://tools.usps.com/go/TrackConfirmAction?qtc_tLabels1=';
+			  break;  
+			case 'UPS':
+			  $curl='https://www.ups.com/';
+			  break;
+			case 'FEDEX':
+			  $curl='http://www.fedex.com/us/';
+			  break;
+			case 'DHL':
+			  $curl='http://www.dhl.com/en.html';
+			  break;
+			case 'EMS':
+			  $curl='http://www.ems.com/';
+			  break;
+			default:
+			  ;
+			}
+			
 			$templateVars = array(
                             '{followup}' => $rcarrier.'--'.Tools::getValue('tracking_number'),
+							'{curl}'=> $curl.Tools::getValue('tracking_number'),
                             '{firstname}' => $customer->firstname,
                             '{lastname}' => $customer->lastname,
                             '{id_order}' => $order->id,
@@ -827,9 +874,31 @@ class AdminOrdersControllerCore extends AdminController
 			('".Tools::getValue('id_order_carrier')."','$id_order','".Tools::getValue('carrier_product')."',
 			'$rcarrier','".Tools::getValue('tracking_number')."',now())");
 			$customer = new Customer((int)$order->id_customer);
+			switch ($rcarrier)
+			{
+			case 'USPS':
+			  $curl='https://www.usps.com/';
+			  break;  
+			case 'UPS':
+			  $curl='https://www.ups.com/';
+			  break;
+			case 'FEDEX':
+			  $curl='http://www.fedex.com/us/';
+			  break;
+			case 'DHL':
+			  $curl='http://www.dhl.com/en.html';
+			  break;
+			case 'EMS':
+			  $curl='http://www.ems.com/';
+			  break;
+			default:
+			  ;
+			}
+			
 			$templateVars = array(
                             '{followup}' => $rcarrier.'--'.Tools::getValue('tracking_number'),
                             '{firstname}' => $customer->firstname,
+							'{curl}'=> $curl,
                             '{lastname}' => $customer->lastname,
                             '{id_order}' => $order->id,
 							'{skus}' => Tools::getValue('skus'),
