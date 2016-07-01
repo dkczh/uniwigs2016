@@ -65,7 +65,7 @@
 
 }
 @media (min-width: 768px) {
-	 .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:150%;height:300px;}
+	 .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid0628.png") no-repeat center top;background-size:150%;height:300px;}
 	 .nov-banner .lavivid_logo,
 	 .nov-banner .lavivid_text{position: absolute;}
 	 .nov-banner .lavivid_logo{
@@ -99,7 +99,7 @@
     width:25%;
     margin-bottom:7px;
   }
-  .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:150%;height:470px;}
+  .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid0628.png") no-repeat center top;background-size:150%;height:470px;}
 .nov-banner .lavivid_logo,
 .nov-banner .lavivid_text{position: absolute;}
 .nov-banner .lavivid_logo{
@@ -150,7 +150,7 @@
     width:20%;
     margin-bottom:0;
   }
-    .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:130%;height:550px;}
+    .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid0628.png") no-repeat center top;background-size:130%;height:550px;}
   .nov-banner .lavivid_logo,
   .nov-banner .lavivid_text{position: absolute;}
   .nov-banner .lavivid_logo{
@@ -165,7 +165,7 @@
   }
 }
 @media (min-width: 1600px) {
-	.nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid-banner.jpg") no-repeat center top;background-size:cover;height:600px;}
+	.nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid0628.png") no-repeat center top;background-size:cover;height:600px;}
 	.nov-banner .lavivid_logo,
 	.nov-banner .lavivid_text{
 		left:37%;
@@ -205,13 +205,13 @@ i.arrow:hover {
 {/literal}
 
 <div class="nov-banner uk-margin-large-bottom">
-	<div class="lavivid_logo">
+	{*<div class="lavivid_logo">
 		<img src="{$img_dir}category/vivid/logo.png" alt="lavivid logo" class="img-responsive">
 	</div>
 	<div class="lavivid_text">
 		<img src="{$img_dir}category/vivid/text.png" alt="lavivid text" class="img-responsive">
 	</div>
-	<a class="arrow" href="#home-product" data-uk-smooth-scroll><i class="icon-chevron-down"></i></a>
+	<a class="arrow" href="#home-product" data-uk-smooth-scroll><i class="icon-chevron-down"></i></a>*}
 </div>
 <section class="desc container">
 	<p class="text-center uk-text-normal">Uniwigs proudly announces that La Vivid Collection by Albeir Awad was launched on January 27, 2016.<br>This whole new designer wig collection, which includes 7 different hair styles, each with 10 different hair colors, marks the first time for Uniwigs to collaborate with top level designers.</p>
