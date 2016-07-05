@@ -197,12 +197,12 @@
         {/if}
         {if $category->id == '40453'}
              <div class="uk-margin-small-bottom">
-                <img src="/themes/uniwigs2016-m/img/category/human-hair/summer-sale.png" alt="">
+                <img src="/themes/uniwigs2016-m/img/category/human-hair/summer-sale.png" alt="" class="img-responsive">
              </div>
         {/if}
         {if $category->id == '40459'}
              <div class="uk-margin-small-bottom">
-                <img src="/themes/uniwigs2016-m/img/category/synthetic/summer-sale.png" alt="">
+                <img src="/themes/uniwigs2016-m/img/category/synthetic/summer-sale.png" alt="" class="img-responsive">
              </div>
         {/if}
 		{if $products}
