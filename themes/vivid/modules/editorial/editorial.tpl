@@ -65,7 +65,7 @@
 
 }
 @media (min-width: 768px) {
-	 .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid0628.png") no-repeat center top;background-size:150%;height:300px;}
+
 	 .nov-banner .lavivid_logo,
 	 .nov-banner .lavivid_text{position: absolute;}
 	 .nov-banner .lavivid_logo{
@@ -99,7 +99,7 @@
     width:25%;
     margin-bottom:7px;
   }
-  .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid0628.png") no-repeat center top;background-size:150%;height:470px;}
+
 .nov-banner .lavivid_logo,
 .nov-banner .lavivid_text{position: absolute;}
 .nov-banner .lavivid_logo{
@@ -150,7 +150,7 @@
     width:20%;
     margin-bottom:0;
   }
-    .nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid0628.png") no-repeat center top;background-size:130%;height:550px;}
+
   .nov-banner .lavivid_logo,
   .nov-banner .lavivid_text{position: absolute;}
   .nov-banner .lavivid_logo{
@@ -165,7 +165,7 @@
   }
 }
 @media (min-width: 1600px) {
-	.nov-banner{position: relative;background: url("/themes/vivid/img/category/vivid/lavivid0628.png") no-repeat center top;background-size:cover;height:600px;}
+
 	.nov-banner .lavivid_logo,
 	.nov-banner .lavivid_text{
 		left:37%;
@@ -204,7 +204,8 @@ i.arrow:hover {
 </style>
 {/literal}
 
-<div class="nov-banner uk-margin-large-bottom">
+<div class="uk-margin-large-bottom container">
+	<img src="{$img_dir}index/banner.jpg" alt="">
 	{*<div class="lavivid_logo">
 		<img src="{$img_dir}category/vivid/logo.png" alt="lavivid logo" class="img-responsive">
 	</div>

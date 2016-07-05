@@ -36,3 +36,19 @@ window.after_load_home_customer_shows = function() {
 		hideControlOnEnd: true
 	});
 };
+$(document).ready(function(){
+  	$('#summer-color-img').bxSlider({
+  		mode:'fade',
+		useCSS: true,
+		maxSlides: 1,
+		slideWidth: 567,
+		infiniteLoop: true,
+		hideControlOnEnd: true,
+		pager: false,
+		autoHover: false,
+		auto: true,
+		speed: parseInt(1),
+		pause: 2000,
+		controls: false,
+	});
+})

@@ -22,23 +22,82 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
-
-{*<div id="editorial_block_center" class="editorial_block">
-	{if $editorial->body_home_logo_link}<a href="{$editorial->body_home_logo_link|escape:'html':'UTF-8'}" title="{$editorial->body_title|escape:'html':'UTF-8'|stripslashes}">{/if}
-	{if $homepage_logo}<img class="img-responsive" src="{$link->getMediaLink($image_path)|escape:'html'}" alt="{$editorial->body_title|escape:'html':'UTF-8'|stripslashes}" {if $image_width}width="{$image_width}"{/if} {if $image_height}height="{$image_height}" {/if}/>{/if}
-	{if $editorial->body_home_logo_link}</a>{/if}
-	{if $editorial->body_logo_subheading}<p id="editorial_image_legend">{$editorial->body_logo_subheading|stripslashes}</p>{/if}
-	{if $editorial->body_title}<h1>{$editorial->body_title|stripslashes}</h1>{/if}
-	{if $editorial->body_subheading}<h2>{$editorial->body_subheading|stripslashes}</h2>{/if}
-	{if $editorial->body_paragraph}<div class="rte">{$editorial->body_paragraph|stripslashes}</div>{/if}
-</div>*}
+<div class="summer-sale">
+	<img src="{$base_dir}themes/uniwigs2016/img/index/summer-sale-banner.jpg" alt="" class="img-responsive">
+	<div class="summer-sale-category">
+		<ul>
+			<li><a href="{$base_dir}40453-celebrity-hairstyles" class="uk-button">celebrity wigs</a></li>
+			<li><a href="{$base_dir}tag/diy-dyed-extensions" class="uk-button">diy-dye-extensions</a></li>
+			<li><a href="{$base_dir}40459-trendy-wigs" class="uk-button">trendy wigs</a></li>
+			<li><a href="http://lavivid.uniwigs.com/" class="uk-button">lavivid</a></li>
+		</ul>
+	</div>
+</div>
+<div class="summer-color">
+	<div class="summer-color-box">
+		<ul id="summer-color-img">
+			<li><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-1.jpg" alt="" class="img-responsive"></li>
+			<li><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-2.jpg" alt="" class="img-responsive"></li>
+			<li><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-3.jpg" alt="" class="img-responsive"></li>
+		</ul>
+	</div>
+	<div class="summer-color-title">
+		<img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-title.png" alt="" class="img-responsive">
+	</div>
+	<div class="summer-color-button">
+		<a href="{$base_dir}tag/summer-color" class="uk-button">shop now</a>
+	</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <!-- Module Editorial -->
 <style>
+	.summer-slae{
+		position: relative;
+	}
+	.summer-sale-category{
+		position: absolute;width:50%;margin-top: -26%;margin-left: 5.4%;
+	}
+	.summer-sale-category a{
+		font-size: 1.2em;
+	    width: 40%;
+	    letter-spacing: 0;
+	    font-weight: bold;
+	    margin-bottom: 15px;
+	}
+	.summer-color{
+		position: relative;
+		margin:100px 0 60px;
+		overflow: hidden;
+	}
+	.summer-color-box{
+		float: left;
+		width:567px;
+	}
+	.summer-color-title{
+		position: absolute;
+		right: 2%;
+		margin-top: 6%;
+		z-index: 10;
+	}
+	.summer-color-box .bx-wrapper{
+		z-index: 1;
+	}
+	.summer-color-button{
+		position: absolute;
+		bottom:22%;
+		right: 20%;
+	}
+	.summer-color-button a{
+		font-size: 1.2em;
+	    letter-spacing: 0;
+	    font-weight: bold;
+	    padding: 0 50px;
+	}
+
+		
 	.sale-banner .row {
 	    margin: 0;
 	}

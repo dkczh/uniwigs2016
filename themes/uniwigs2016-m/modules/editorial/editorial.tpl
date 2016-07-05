@@ -22,7 +22,7 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-{literal}
+{*literal}
 <style>
 .promotion-block a,.home-box a{display: block}
 .promotion-block{margin:14px 0;}
@@ -32,18 +32,40 @@
 .home-category li:nth-child(2n+1){padding-right:5px;}
 .home-category li:nth-child(2n){padding-left:5px;}
 </style>
+{/literal*}
+
+{literal}
+<style>
+.promotion-block a,.home-box a{display: block}
+.promotion-block{margin:14px 0;}
+.summer-sale{
+	background: #fff;
+	padding-bottom: 30px;
+}
+.summer-sale a{
+	font-weight: bold;
+
+}
+.summer-sale li{
+	margin:15px;
+}
+</style>
 {/literal}
-{*<div id="editorial_block_center" class="editorial_block">
-	{if $editorial->body_home_logo_link}<a href="{$editorial->body_home_logo_link|escape:'html':'UTF-8'}" title="{$editorial->body_title|escape:'html':'UTF-8'|stripslashes}">{/if}
-	{if $homepage_logo}<img class="img-responsive" src="{$link->getMediaLink($image_path)|escape:'html'}" alt="{$editorial->body_title|escape:'html':'UTF-8'|stripslashes}" {if $image_width}width="{$image_width}"{/if} {if $image_height}height="{$image_height}" {/if}/>{/if}
-	{if $editorial->body_home_logo_link}</a>{/if}
-	{if $editorial->body_logo_subheading}<p id="editorial_image_legend">{$editorial->body_logo_subheading|stripslashes}</p>{/if}
-	{if $editorial->body_title}<h1>{$editorial->body_title|stripslashes}</h1>{/if}
-	{if $editorial->body_subheading}<h2>{$editorial->body_subheading|stripslashes}</h2>{/if}
-	{if $editorial->body_paragraph}<div class="rte">{$editorial->body_paragraph|stripslashes}</div>{/if}
-</div>*}
+
+<div class="summer-sale">
+	<img src="{$img_dir}home/summer-sale.png" alt="" width="100%">
+	<ul>
+		<li><a href="{$base_dir}40453-celebrity-hairstyles" class="uk-button">celebrity wigs</a></li>
+		<li><a href="{$base_dir}tag/diy-dyed-extensions" class="uk-button">diy-dye-extensions</a></li>
+		<li><a href="{$base_dir}40459-trendy-wigs" class="uk-button">trendy wigs</a></li>
+		<li><a href="http://lavivid.uniwigs.com/" class="uk-button">lavivid</a></li>
+	</ul>
+</div>
+<div class="summer-color">
+	<a href="{$base_dir}tag/summer-color"><img src="{$img_dir}home/summer-color.jpg" alt="" width="100%"></a>
+</div>
 <!-- Module Editorial -->
-<div class="promotion-block uk-margin-small-bottom">
+{*<div class="promotion-block uk-margin-small-bottom">
 	<a href="{$base_dir}hair-pieces/40914-54-natural-black-remy-human-hair-lace-closure2-pcs-hair-weft-lw005.html"><img src="/themes/uniwigs2016-m/img/home/banner-closure_01.jpg" alt="remy human hair lace closure" width="100%"></a>
 </div>
 <div class="home-category">
@@ -60,11 +82,11 @@
 		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-2.jpg" alt="trendy wigs"></a></li>
 		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-1.jpg" alt="trendy wigs"></a></li>
 	</ul>
-</div>
+</div>*}
 <div class="promotion-block">
 	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" width="100%"></a>
 </div>
-<div class="promotion-block">
+{*<div class="promotion-block">
 	<a href="http://lavivid.uniwigs.com"><img src="/themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" width="100%"></a>
 </div>
 <div class="home-box">
@@ -72,7 +94,7 @@
 		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="{$img_dir}home/uni-extension-1.jpg" alt="uni extension"></a></li>
 		<li><a href="{$base_dir}tag/invisible-uni-extensions"><img src="{$img_dir}home/uni-extension-2.jpg" alt="uni extension"></a></li>
 	</ul>
-</div>
+</div>*}
 <div class="promotion-block">
 	<a href="{$base_dir}customer-show"><img src="/themes/uniwigs2016-m/img/home/customer-show.jpg" alt="#uniwigs" width="100%"></a>
 </div>
