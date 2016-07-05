@@ -2462,4 +2462,21 @@ GROUP BY  p.id_product");
 		}
        
     }
+	
+	//获取订单 物流分单信息
+		public function getDifferShipping()
+    {	
+	
+		$res = 	Db::getInstance()->executeS("select  od.id_order,od.product_name,od.product_reference,pdc.id_order_carrier,
+pdc.real_carrier,pdc.tracking_number,pdc.date_add
+  from  ps_order_detail od 
+LEFT JOIN  px_differ_carrier pdc on od.product_name= pdc.product_name
+and od.id_order= pdc.id_order
+				where  od.id_order= ".(int)$this->id." 
+GROUP BY  od.product_name");
+		
+		return $res;
+       
+    }
+	
 }

@@ -25,7 +25,10 @@
 */
 
 class OrderCarrierCore extends ObjectModel
-{
+{	
+	/** @快递 方式 */
+    public $real_carrier;
+	
     /** @var int */
     public $id_order_carrier;
 
@@ -67,6 +70,7 @@ class OrderCarrierCore extends ObjectModel
             'shipping_cost_tax_excl' => array('type' => self::TYPE_FLOAT, 'validate' => 'isFloat'),
             'shipping_cost_tax_incl' => array('type' => self::TYPE_FLOAT, 'validate' => 'isFloat'),
             'tracking_number' =>        array('type' => self::TYPE_STRING, 'validate' => 'isTrackingNumber'),
+			'real_carrier'=> array('type' => self::TYPE_STRING),
             'date_add' =>                array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
         ),
     );

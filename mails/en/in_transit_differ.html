@@ -95,17 +95,22 @@
                                                 Order {id_order}&nbsp;-&nbsp;In transit
                                             </p>
                                             <span style="color:#777">
-                                                Your order with the reference
+                                                Your order with the product:
                                                 <span style="color:#ef3386">
                                                     <strong>
-                                                        {id_order}
+                                                        {product_name}
                                                     </strong>
                                                 </span>
                                                 is currently in transit.
                                                 <br />
                                                 <br />
+												
+													skus:<span style="color:#ef3386">
+                                                    <strong>{skus}  </strong>
+                                                </span>
+												<br />
+                                                <br />
                                                 You can track your package using the following link:
-											
                                                 <a href="{curl}" style="color:#337ff1">
                                                     <strong>
                                                         {followup}
