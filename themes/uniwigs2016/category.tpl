@@ -772,6 +772,14 @@
                             </map>
                         </div>
                         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
+                        {elseif $category->id == '40453'}
+                            <div class="uk-margin-small-bottom">
+                                <img src="/themes/uniwigs2016/img/category/human-hair/celebrity-banner.png" alt="" class="img-responsive"/>
+                            </div>
+                        {elseif $category->id == '40459'}
+                            <div class="uk-margin-small-bottom">
+                                <img src="/themes/uniwigs2016/img/category/synthetic-wigs/trendy-banner.png" alt="" class="img-responsive"/>
+                            </div>
                         {else}
                         <div class="uk-margin-small-bottom">
                             <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}">
