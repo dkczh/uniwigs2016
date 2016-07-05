@@ -195,6 +195,16 @@
             </div>
             <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
         {/if}
+        {if $category->id == '40453'}
+             <div class="uk-margin-small-bottom">
+                <img src="/themes/uniwigs2016-m/img/category/human-hair/summer-sale.png" alt="">
+             </div>
+        {/if}
+        {if $category->id == '40459'}
+             <div class="uk-margin-small-bottom">
+                <img src="/themes/uniwigs2016-m/img/category/synthetic/summer-sale.png" alt="">
+             </div>
+        {/if}
 		{if $products}
 			<div class="content_sortPagiBar clearfix">
             	<div class="sortPagiBar clearfix">

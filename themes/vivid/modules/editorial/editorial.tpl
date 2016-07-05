@@ -205,7 +205,7 @@ i.arrow:hover {
 {/literal}
 
 <div class="uk-margin-large-bottom container">
-	<img src="{$img_dir}index/banner.jpg" alt="">
+	<img src="{$img_dir}index/banner.jpg" alt="" class="img-responsive">
 	{*<div class="lavivid_logo">
 		<img src="{$img_dir}category/vivid/logo.png" alt="lavivid logo" class="img-responsive">
 	</div>
