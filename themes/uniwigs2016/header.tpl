@@ -159,7 +159,7 @@
 					    <div class="uk-modal-dialog">
 					        <a class="uk-modal-close uk-close uk-close-alt"></a>
 					        <div>
-					        	<img src="/themes/uniwigs2016/img/index/top-summer-banner.png" alt="">
+					        	<img src="/themes/uniwigs2016/img/index/top-summer-banner.png" alt="" class="img-responsive">
 					        </div>
 					    </div>
 					</div>

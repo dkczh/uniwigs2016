@@ -96,8 +96,17 @@
 	    font-weight: bold;
 	    padding: 0 50px;
 	}
-
-		
+@media (max-width: 768px){
+	.summer-sale-category a{
+		width: auto;
+	}
+	.summer-color-button{
+		position: absolute;
+	    bottom: 22%;
+	    right: 45%;
+	    z-index: 15;
+	}
+}
 	.sale-banner .row {
 	    margin: 0;
 	}
