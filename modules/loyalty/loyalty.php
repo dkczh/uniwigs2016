@@ -395,7 +395,7 @@ class Loyalty extends Module
 	/* Hook called when an order change its status */
 	public function hookUpdateOrderStatus($params)
 	{
-		include_once(dirname(__FILE__).'/LoyaltyStateModule.php');
+		/* include_once(dirname(__FILE__).'/LoyaltyStateModule.php');
 		include_once(dirname(__FILE__).'/LoyaltyModule.php');
 
 		if (!Validate::isLoadedObject($params['newOrderStatus']))
@@ -426,7 +426,7 @@ class Loyalty extends Module
 			}
 			return $loyalty->save();
 		}
-		return true;
+		return true; */
 	}
 
 	/* Hook display in tab AdminCustomers on BO */
