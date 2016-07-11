@@ -65,10 +65,10 @@
 	<a href="{$base_dir}tag/summer-color"><img src="{$img_dir}home/summer-color.jpg" alt="" width="100%"></a>
 </div>
 <!-- Module Editorial -->
-{*<div class="promotion-block uk-margin-small-bottom">
+<div class="promotion-block uk-margin-small-bottom">
 	<a href="{$base_dir}hair-pieces/40914-54-natural-black-remy-human-hair-lace-closure2-pcs-hair-weft-lw005.html"><img src="/themes/uniwigs2016-m/img/home/banner-closure_01.jpg" alt="remy human hair lace closure" width="100%"></a>
 </div>
-<div class="home-category">
+{*<div class="home-category">
 	<ul class="row">
 		<li><a href="{$base_dir}102-human-hair-wigs">human hair ></a></li>
 		<li><a href="{$base_dir}101-synthetic-wigs">synthetic wigs ></a></li>
