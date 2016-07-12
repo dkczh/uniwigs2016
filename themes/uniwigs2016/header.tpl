@@ -152,7 +152,7 @@
 				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
-							<p><span>Summer Sale</span><span class="uk-text-bold text-primary">Up to 15% OFF!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+							<p><span>Summer Sale</span><span class="uk-text-bold text-primary">Up to 20% OFF!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
 						</div>
 					</div>
 					<div id="sale-details" class="uk-modal">

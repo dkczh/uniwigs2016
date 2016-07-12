@@ -762,9 +762,7 @@
                         {if $category->id == '108' or $category->id == '40439' or $category->id == '112' or $category->id == '110' or $category->id == '111' or $category->id == '116' or $category->id == '105' or $category->id == '40442'}
                         {elseif $category->id == '40452'}
                         <div class="uk-margin-small-bottom">
-                            {*<a href="https://youtu.be/LTB4ZFOBx-A" data-uk-lightbox>
-                                <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}" class="img-responsive">
-                            </a>*}
+                            <img src="/themes/uniwigs2016/img/category/human-hair/lace-banner.png" alt="" class="uk-margin-small-bottom">
                             <img src="/themes/uniwigs2016/img/category/human-hair/40452.jpg" alt="" usemap="#map" />
                             <map name="map">
                                 <area shape="rect" coords="480, 76, 814, 326" href="https://youtu.be/UaeY3RzlkNw" data-uk-lightbox/>

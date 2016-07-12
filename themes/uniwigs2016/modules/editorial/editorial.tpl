@@ -33,12 +33,23 @@
 		</ul>
 	</div>
 </div>
+<div class="lace-sale">
+	<div class="lace-sale-img">
+		<a href="{$base_dir}40452-human-hair-lace-wigs"><img src="{$base_dir}themes/uniwigs2016/img/index/lace-sale.jpg" alt=""></a>
+	</div>
+	<div class="lace-sale-title">
+		<img src="{$base_dir}themes/uniwigs2016/img/index/human-lace.png" alt="">
+		<div class="lace-sale-button">
+			<a href="{$base_dir}40452-human-hair-lace-wigs" class="uk-button">shop now</a>
+		</div>
+	</div>
+</div>
 <div class="summer-color">
 	<div class="summer-color-box">
 		<ul id="summer-color-img">
-			<li><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-1.jpg" alt="" class="img-responsive"></li>
-			<li><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-2.jpg" alt="" class="img-responsive"></li>
-			<li><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-3.jpg" alt="" class="img-responsive"></li>
+			<li><a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-1.jpg" alt="" class="img-responsive"></a></li>
+			<li><a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-2.jpg" alt="" class="img-responsive"></a></li>
+			<li><a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-3.jpg" alt="" class="img-responsive"></a></li>
 		</ul>
 	</div>
 	<div class="summer-color-title">
@@ -54,6 +65,22 @@
 </div>
 <!-- Module Editorial -->
 <style>
+	.lace-sale{
+		overflow: hidden;
+		margin-top:100px;
+	}
+	.lace-sale-img{
+		float: left;
+	}
+	.lace-sale-title{
+		float: left;
+		position: relative;
+	}
+	.lace-sale-button{
+		position: absolute;
+		left: 40%;
+		bottom: -80px;
+	}
 	.summer-slae{
 		position: relative;
 	}
@@ -73,12 +100,12 @@
 		overflow: hidden;
 	}
 	.summer-color-box{
-		float: left;
+		float: right;
 		width:567px;
 	}
 	.summer-color-title{
 		position: absolute;
-		right: 2%;
+		left: 2%;
 		margin-top: 6%;
 		z-index: 10;
 	}
@@ -88,9 +115,9 @@
 	.summer-color-button{
 		position: absolute;
 		bottom:22%;
-		right: 20%;
+		left: 20%;
 	}
-	.summer-color-button a{
+	.summer-color-button a,.lace-sale-button a{
 		font-size: 1.2em;
 	    letter-spacing: 0;
 	    font-weight: bold;

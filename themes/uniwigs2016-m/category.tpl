@@ -184,10 +184,8 @@
         {/if}
         {if $category->id == '40452'}
             <div class="uk-margin-small-bottom">
-                {*<a href="https://youtu.be/LTB4ZFOBx-A" data-uk-lightbox>
-                    <img src="{$img_dir}category/human-hair/20160616banner-lace-front-wigs.jpg" alt="human hair" class="img-responsive">
-                </a>*}
-                <img src="/themes/uniwigs2016-m/img/category/human-hair/40452.jpg" alt="" usemap="#map" />
+                <img src="/themes/uniwigs2016-m/img/category/human-hair/lace-sale.png" alt="" class="uk-margin-small-bottom img-responsive">
+                <img src="/themes/uniwigs2016-m/img/category/human-hair/40452.jpg" alt="" usemap="#map" class="img-responsive"/>
                 <map name="map">
                     <area shape="rect" coords="229, 245, 433, 403" href="https://youtu.be/UaeY3RzlkNw" data-uk-lightbox/>
                     <area shape="rect" coords="6, 125, 217, 287" href="https://youtu.be/alytKsHXgoU" data-uk-lightbox/>

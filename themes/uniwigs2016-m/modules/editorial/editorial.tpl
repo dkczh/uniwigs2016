@@ -53,7 +53,7 @@
 {/literal}
 
 <div class="summer-sale">
-	<img src="{$img_dir}home/summer-sale.png" alt="" width="100%">
+	<img src="{$img_dir}home/summer-sale.png" alt="" class="img-responsive">
 	<ul>
 		<li><a href="{$base_dir}40453-celebrity-hairstyles" class="uk-button">celebrity wigs</a></li>
 		<li><a href="{$base_dir}tag/diy-dyed-extensions" class="uk-button">diy-dye-extensions</a></li>
@@ -61,13 +61,20 @@
 		<li><a href="http://lavivid.uniwigs.com/" class="uk-button">lavivid</a></li>
 	</ul>
 </div>
+
+<div class="lace-sale">
+	<a href="{$base_dir}40452-human-hair-lace-wigs"><img src="{$img_dir}home/lace-wigs.jpg" alt="" class="img-responsive"></a>
+</div>
+
+<div class="promotion-block uk-margin-small-bottom">
+	<a href="{$base_dir}hair-pieces/40914-54-natural-black-remy-human-hair-lace-closure2-pcs-hair-weft-lw005.html"><img src="/themes/uniwigs2016-m/img/home/banner-closure_01.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
+</div>
+
 <div class="summer-color">
-	<a href="{$base_dir}tag/summer-color"><img src="{$img_dir}home/summer-color.jpg" alt="" width="100%"></a>
+	<a href="{$base_dir}tag/summer-color"><img src="{$img_dir}home/summer-color.jpg" alt="" class="img-responsive"></a>
 </div>
 <!-- Module Editorial -->
-<div class="promotion-block uk-margin-small-bottom">
-	<a href="{$base_dir}hair-pieces/40914-54-natural-black-remy-human-hair-lace-closure2-pcs-hair-weft-lw005.html"><img src="/themes/uniwigs2016-m/img/home/banner-closure_01.jpg" alt="remy human hair lace closure" width="100%"></a>
-</div>
+
 {*<div class="home-category">
 	<ul class="row">
 		<li><a href="{$base_dir}102-human-hair-wigs">human hair ></a></li>
@@ -84,10 +91,10 @@
 	</ul>
 </div>*}
 <div class="promotion-block">
-	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" width="100%"></a>
+	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" wclass="img-responsive"></a>
 </div>
 {*<div class="promotion-block">
-	<a href="http://lavivid.uniwigs.com"><img src="/themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" width="100%"></a>
+	<a href="http://lavivid.uniwigs.com"><img src="/themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" class="img-responsive"></a>
 </div>
 <div class="home-box">
 	<ul id="home_uniextension">
@@ -96,6 +103,6 @@
 	</ul>
 </div>*}
 <div class="promotion-block">
-	<a href="{$base_dir}customer-show"><img src="/themes/uniwigs2016-m/img/home/customer-show.jpg" alt="#uniwigs" width="100%"></a>
+	<a href="{$base_dir}customer-show"><img src="/themes/uniwigs2016-m/img/home/customer-show.jpg" alt="#uniwigs" class="img-responsive"></a>
 </div>
 <!-- /Module Editorial -->
