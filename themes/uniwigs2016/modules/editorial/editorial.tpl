@@ -78,7 +78,7 @@
 	}
 	.lace-sale-button{
 		position: absolute;
-		left: 40%;
+		left: 36%;
 		bottom: -80px;
 	}
 	.summer-slae{

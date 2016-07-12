@@ -67,7 +67,7 @@
 </div>
 
 <div class="promotion-block uk-margin-small-bottom">
-	<a href="{$base_dir}hair-pieces/40914-54-natural-black-remy-human-hair-lace-closure2-pcs-hair-weft-lw005.html"><img src="/themes/uniwigs2016-m/img/home/banner-closure_01.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
+	<a href="{$base_dir}tag/toppers"><img src="/themes/uniwigs2016-m/img/home/banner-closure_01.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
 </div>
 
 <div class="summer-color">
