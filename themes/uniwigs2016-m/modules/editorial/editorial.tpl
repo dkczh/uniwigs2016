@@ -38,15 +38,15 @@
 <style>
 .promotion-block a,.home-box a{display: block}
 .promotion-block{margin:14px 0;}
-.summer-sale{
+.summer-sale,.classic-sale{
 	background: #fff;
 	padding-bottom: 30px;
 }
-.summer-sale a{
+.summer-sale a,.classic-sale a{
 	font-weight: bold;
 
 }
-.summer-sale li{
+.summer-sale li,.classic-sale li{
 	margin:15px;
 }
 </style>
@@ -67,7 +67,15 @@
 </div>
 
 <div class="promotion-block uk-margin-small-bottom">
-	<a href="{$base_dir}tag/toppers"><img src="/themes/uniwigs2016-m/img/home/banner-closure_01.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
+	<a href="{$base_dir}tag/toppers"><img src="/themes/uniwigs2016-m/img/home/top-hair.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
+</div>
+
+<div class="classic-sale">
+	<a href="{$base_dir}40455-classic-wigs"><img src="{$img_dir}home/classic-wigs.jpg" alt="" class="img-responsive"></a>
+	<ul>
+		<li><a href="{$base_dir}40455-classic-wigs" class="uk-button">Classic Wigs</a></li>
+		<li><a href="{$base_dir}40456-clearance-wigs" class="uk-button">clearance wigs</a></li>
+	</ul>
 </div>
 
 <div class="summer-color">
@@ -93,6 +101,7 @@
 <div class="promotion-block">
 	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" class="img-responsive"></a>
 </div>
+
 {*<div class="promotion-block">
 	<a href="http://lavivid.uniwigs.com"><img src="/themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" class="img-responsive"></a>
 </div>

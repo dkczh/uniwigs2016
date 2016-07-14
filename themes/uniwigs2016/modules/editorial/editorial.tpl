@@ -33,27 +33,32 @@
 		</ul>
 	</div>
 </div>
-<div class="lace-sale">
-	<div class="lace-sale-img">
-		<a href="{$base_dir}40452-human-hair-lace-wigs"><img src="{$base_dir}themes/uniwigs2016/img/index/lace-sale.jpg" alt=""></a>
-	</div>
-	<div class="lace-sale-title">
-		<img src="{$base_dir}themes/uniwigs2016/img/index/human-lace.png" alt="">
-		<div class="lace-sale-button">
+<div class="sale-nav">
+	<div class="lace-sale">
+		<div class="lace-sale-img">
+			<a href="{$base_dir}40452-human-hair-lace-wigs">
+				<img src="{$base_dir}themes/uniwigs2016/img/index/lace-sale-box.jpg" alt="">
+			</a>
+		</div>
+		<div class="lace-sale-button uk-margin-small-top">
 			<a href="{$base_dir}40452-human-hair-lace-wigs" class="uk-button">shop now</a>
+		</div>
+	</div>
+	<div class="classic-sale">
+		<div class="classic-sale-img">
+			<a href="{$base_dir}40455-classic-wigs">
+				<img src="{$base_dir}themes/uniwigs2016/img/index/class-wigs-sale.jpg" alt="">
+			</a>
+		</div>
+		<div class="classic-sale-button uk-margin-small-top">
+			<a href="{$base_dir}40455-classic-wigs" class="uk-button">Classic Wigs</a>
+			<a href="{$base_dir}40456-clearance-wigs" class="uk-button">Clearance Wigs</a>
 		</div>
 	</div>
 </div>
 <div class="summer-color">
 	<div class="summer-color-box">
-		<ul id="summer-color-img">
-			<li><a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-1.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-2.jpg" alt="" class="img-responsive"></a></li>
-			<li><a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-3.jpg" alt="" class="img-responsive"></a></li>
-		</ul>
-	</div>
-	<div class="summer-color-title">
-		<img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-title.png" alt="" class="img-responsive">
+		<a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-box.jpg" alt=""></a>
 	</div>
 	<div class="summer-color-button">
 		<a href="{$base_dir}tag/summer-color" class="uk-button">shop now</a>
@@ -65,21 +70,20 @@
 </div>
 <!-- Module Editorial -->
 <style>
-	.lace-sale{
+	.sale-nav{
 		overflow: hidden;
-		margin-top:100px;
+		margin: 70px 0;
 	}
-	.lace-sale-img{
-		float: left;
+	.sale-nav .lace-sale{
+		float:left;
+		text-align: center;
 	}
-	.lace-sale-title{
-		float: left;
-		position: relative;
+	.sale-nav .classic-sale{
+		float:right;
+		text-align: center;
 	}
-	.lace-sale-button{
-		position: absolute;
-		left: 36%;
-		bottom: -80px;
+	.classic-sale-button a{
+		margin-left: 10px;
 	}
 	.summer-slae{
 		position: relative;
@@ -96,28 +100,16 @@
 	}
 	.summer-color{
 		position: relative;
-		margin:100px 0 60px;
+		margin:70px 0 50px;
 		overflow: hidden;
-	}
-	.summer-color-box{
-		float: right;
-		width:567px;
-	}
-	.summer-color-title{
-		position: absolute;
-		left: 2%;
-		margin-top: 6%;
-		z-index: 10;
-	}
-	.summer-color-box .bx-wrapper{
-		z-index: 1;
 	}
 	.summer-color-button{
 		position: absolute;
-		bottom:22%;
-		left: 20%;
+		bottom: 18%;
+	    left: 42%;
+	    opacity: .8;
 	}
-	.summer-color-button a,.lace-sale-button a{
+	.summer-color-button a,.lace-sale-button a,.classic-sale-button a{
 		font-size: 1.2em;
 	    letter-spacing: 0;
 	    font-weight: bold;

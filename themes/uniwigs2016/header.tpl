@@ -152,14 +152,14 @@
 				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
-							<p><span>Summer Sale</span><span class="uk-text-bold text-primary">Up to 20% OFF!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+							<p><span>Summer Sale</span><span class="uk-text-bold text-primary">Up to 60% OFF!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
 						</div>
 					</div>
 					<div id="sale-details" class="uk-modal">
 					    <div class="uk-modal-dialog">
 					        <a class="uk-modal-close uk-close uk-close-alt"></a>
 					        <div>
-					        	<img src="/themes/uniwigs2016/img/index/top-summer-banner.png" alt="" class="img-responsive">
+					        	<img src="/themes/uniwigs2016/img/index/top-summer-banner1.png" alt="" class="img-responsive">
 					        </div>
 					    </div>
 					</div>

@@ -16,5 +16,12 @@
         font-size: 13px; }
       #block_top_menu .uk-dropdown .col-sm-3 .uk-nav-header {
         font-size: 14px; }
+  #block_top_menu .uk-nav-navbar > li > a span {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #d32676;
+    padding: 0 5px;
+    font-size: 12px; }
 
 /*# sourceMappingURL=superfish-modified.css.map */

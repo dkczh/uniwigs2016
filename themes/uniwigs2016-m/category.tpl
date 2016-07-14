@@ -203,6 +203,11 @@
                 <img src="/themes/uniwigs2016-m/img/category/synthetic/summer-sale.png" alt="" class="img-responsive">
              </div>
         {/if}
+        {if $category->id == '40455'}
+             <div class="uk-margin-small-bottom">
+                <img src="/themes/uniwigs2016-m/img/category/synthetic/classic-sale.png" alt="" class="img-responsive">
+             </div>
+        {/if}
 		{if $products}
 			<div class="content_sortPagiBar clearfix">
             	<div class="sortPagiBar clearfix">

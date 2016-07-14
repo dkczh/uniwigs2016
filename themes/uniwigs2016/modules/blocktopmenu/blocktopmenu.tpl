@@ -74,9 +74,9 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">Category</li>
-	        	       				<li><a href="{$base_dir}40455-classic-wigs">Classic Wigs</a></li>
+	        	       				<li><a href="{$base_dir}40455-classic-wigs">Classic Wigs <span>sale</span></a></li>
 	        	       				<li><a href="{$base_dir}40459-trendy-wigs">Trendy Wigs</a></li>
-	        	       				<li><a href="{$base_dir}40456-clearance-wigs">Clearance Wigs</a></li>
+	        	       				<li><a href="{$base_dir}40456-clearance-wigs">Clearance Wigs <span>sale</span></a></li>
 		        	       		</ul>
 		        	       </div>
 		        	       <div class="col-sm-3">
