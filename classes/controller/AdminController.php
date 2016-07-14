@@ -1063,8 +1063,8 @@ class AdminControllerCore extends Controller
 	
 		$i = 2 ;
 		foreach ($res as $a) {
-			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i, $a['id_order']);
-			$objPHPExcel->getActiveSheet()->setCellValue('B'.$i, $a['date_add']);
+			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i, $a['date_add']);
+			$objPHPExcel->getActiveSheet()->setCellValue('B'.$i, $a['id_order']);
 			$objPHPExcel->getActiveSheet()->setCellValue('C'.$i, $a['osname']);
 			$objPHPExcel->getActiveSheet()->setCellValue('D'.$i, $a['shipping_number']);
 			$objPHPExcel->getActiveSheet()->setCellValue('E'.$i, $a['psku']);
