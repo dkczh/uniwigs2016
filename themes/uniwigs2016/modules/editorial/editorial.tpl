@@ -37,7 +37,7 @@
 	<div class="lace-sale">
 		<div class="lace-sale-img">
 			<a href="{$base_dir}40452-human-hair-lace-wigs">
-				<img src="{$base_dir}themes/uniwigs2016/img/index/lace-sale-box.jpg" alt="">
+				<img src="{$base_dir}themes/uniwigs2016/img/index/lace-sale-box.jpg" alt="" class="img-responsive">
 			</a>
 		</div>
 		<div class="lace-sale-button uk-margin-small-top">
@@ -47,7 +47,7 @@
 	<div class="classic-sale">
 		<div class="classic-sale-img">
 			<a href="{$base_dir}40455-classic-wigs">
-				<img src="{$base_dir}themes/uniwigs2016/img/index/class-wigs-sale.jpg" alt="">
+				<img src="{$base_dir}themes/uniwigs2016/img/index/class-wigs-sale.jpg" alt="" class="img-responsive">
 			</a>
 		</div>
 		<div class="classic-sale-button uk-margin-small-top">
@@ -58,7 +58,7 @@
 </div>
 <div class="summer-color">
 	<div class="summer-color-box">
-		<a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-box.jpg" alt=""></a>
+		<a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-box.jpg" alt="" class="img-responsive"></a>
 	</div>
 	<div class="summer-color-button">
 		<a href="{$base_dir}tag/summer-color" class="uk-button">shop now</a>
@@ -116,14 +116,20 @@
 	    padding: 0 50px;
 	}
 @media (max-width: 768px){
+	.sale-nav .lace-sale{
+		margin-bottom: 50px;
+	}
+	.sale-nav .lace-sale,.sale-nav .classic-sale{
+		float: none
+	}
+	.sale-nav .lace-sale .img-responsive,.sale-nav .classic-sale .img-responsive{
+		display: inline;
+	}
 	.summer-sale-category a{
 		width: auto;
 	}
 	.summer-color-button{
-		position: absolute;
-	    bottom: 22%;
-	    right: 45%;
-	    z-index: 15;
+		left:37%;
 	}
 }
 	.sale-banner .row {
