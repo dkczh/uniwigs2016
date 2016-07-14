@@ -776,7 +776,11 @@
                             </div>
                         {elseif $category->id == '40455'}
                             <div class="uk-margin-small-bottom">
-                                <img src="/themes/uniwigs2016/img/category/human-hair/classic-banner.png" alt="" class="img-responsive"/>
+                                <img src="/themes/uniwigs2016/img/category/synthetic-wigs/classic-banner.png" alt="" class="img-responsive"/>
+                            </div>
+                        {elseif $category->id == '40456'}
+                            <div class="uk-margin-small-bottom">
+                                <img src="/themes/uniwigs2016/img/category/synthetic-wigs/clearance-banner.png" alt="" class="img-responsive"/>
                             </div>
                         {elseif $category->id == '40459'}
                             <div class="uk-margin-small-bottom">
