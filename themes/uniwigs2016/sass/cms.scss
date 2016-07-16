@@ -267,5 +267,119 @@
 				width:20%;
 			}
 		}
+		/*============  Cms coupons   ================*/
+		.coupons-offer{
+		  min-height: 120px;
+		  margin: 4px -18px 0 -8px;
+		  position: relative;
+		  border: 1px solid #D9D9D6;
+		  border-radius: 3px;
+		  background-color: #FFF;
+		  color: #333;
+		}
+		.offer-top {
+		  padding: 18px 18px 18px 8px;
+		}
+		.anchor {
+		  display: block;
+		  float: left;
+		  margin-right: 3.15789%;
+		  width: 11.57895%;
+		  text-align: center;
+		}
+		.anchor-image {
+		  float: right;
+		  height: 72px;
+		  width: 72px;
+		  color: #FFF;
+		  font-size: 14px;
+		  font-weight: 500;
+		  padding-top: 40px;
+		  border: 1px solid;
+		  border-radius: 6px 6px 0 0;
+		  position: relative;
+		  text-transform: uppercase;
+		  color: #EF3386;
+		  border-color: #EF3386;
+		}
+		.anchor-image.no-image {
+		  padding-top: 12px;
+		  line-height: 18px;
+		}
+		.anchor-big-text {
+		  font-size: 24px;
+		  font-weight: 700;
+		  line-height: 1;
+		}
+		.anchor-med-text {
+		  font-size: 20px;
+		  display: block;
+		  line-height: 1;
+		}
+		.additional-anchor {
+		  line-height: 1.3;
+		  width: 72px;
+		  border: 1px solid;
+		  border-top: 0;
+		  color: #FFF;
+		  font-size: 14px;
+		  font-weight: 500;
+		  border-radius: 0 0 4px 4px;
+		  padding: 3px 6px;
+		  background-color: #EF3386;
+		  border-color: #EF3386;
+		  float: right;
+		}
+		.js-info {
+		  display: block;
+		  float: left;
+		  margin-right: 3.15789%;
+		  width: 61%;
+		  word-wrap: break-word;
+		  position: relative;
+		  font-size: 14px;
+		  color: #666;
+		}
+		.h1.title {
+		  font-weight: 400;
+		  font-size: 24px;
+		  margin-bottom: 4px;
+		  margin-top: 4px;
+		  color: #333;
+		  font-weight: 700;
+		}
+		.js-desc{
+		  line-height: 22px;
+		  font-size: 14px;
+		  color: #666;
+		}
+		.actions {
+		  display: block;
+		  float: left;
+		  margin-right: 3.15789%;
+		  width: 17%;
+		  margin-right: 0;
+		  margin-top: 30px;
+		}
+		.code-cover {
+		  width: 122px;
+		  height: 36px;
+		  font-weight: bold;
+		  color: #FFF;
+		  background: #08B4DF;
+		  text-decoration: none;
+		  line-height: 2.8;
+		  white-space: nowrap;
+		  text-align: center;
+		  display: block;
+		  font-size: 13px;
+		  border-radius: 3px;
+		  border: 0;
+		}
+		.code-cover:hover{
+		  color:#fff;
+		  background: #1CC2EC;
+		  text-decoration: none;
+		}
 	}
 }
