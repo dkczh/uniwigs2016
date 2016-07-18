@@ -142,6 +142,25 @@ var google_remarketing_only = false;
 </div>
 </noscript>
 ';
+
+$google_ppc_js .= '<!-- Google Code for conv Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 923345832;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "S8U_CJCfxQ4QqMekuAM";
+var google_conversion_value =  '. $total_paid .';
+var google_conversion_currency = "USD";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript"  
+src="//www.googleadservices.com/pagead/conversion.js">
+</script>';
+
+
 $this->smarty->assign('google_ppc_js', $google_ppc_js);
 
 
