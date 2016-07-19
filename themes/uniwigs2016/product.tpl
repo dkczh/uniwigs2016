@@ -840,7 +840,7 @@
 							{l s='The minimum purchase order quantity for the product is'} <b id="minimal_quantity_label">{$product->minimal_quantity}</b>
 						</p>
 						{if isset($productAddition['custom']) && $productAddition['custom']}
-							<div class="custom-time uk-margin-small-top">Custom Time: <span class="text-primary">{$productAddition['custom']}</span></div>
+							<div class="custom-time uk-margin-small-top">Production Time: <span class="text-primary">{$productAddition['custom']}</span></div>
 						{/if}
 					</div> <!-- end product_attributes -->
 					<div class="box-cart-bottom">
