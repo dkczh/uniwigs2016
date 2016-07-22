@@ -122,28 +122,7 @@ var google_remarketing_only = false;
 </div>
 </noscript>
 
-<!-- Google Code for &#36141;&#20080;&#25104;&#21151; Conversion Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 971076500;
-var google_conversion_language = "en";
-var google_conversion_format = "2";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "kKWmCKSJ3QoQlOeFzwM";
-var google_conversion_value = ' . $total_paid . ';
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/971076500/?value=' . $total_paid . '&amp;label=kKWmCKSJ3QoQlOeFzwM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-';
-
-$google_ppc_js .= '<!-- Google Code for conv Conversion Page -->
+<!-- Google Code for conv Conversion Page -->
 <script type="text/javascript">
 /* <![CDATA[ */
 var google_conversion_id = 923345832;
@@ -156,9 +135,14 @@ var google_conversion_currency = "USD";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
-src="//www.googleadservices.com/pagead/conversion.js">
-</script>';
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/971076500/?value=' . $total_paid . '&amp;label=kKWmCKSJ3QoQlOeFzwM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+';
 
 
 $this->smarty->assign('google_ppc_js', $google_ppc_js);
