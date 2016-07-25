@@ -111,6 +111,30 @@ var google_conversion_format = "3";
 var google_conversion_color = "ffffff";
 var google_conversion_label = "S8U_CJCfxQ4QqMekuAM";
 var google_conversion_value = ' . $total_paid . ';
+var google_conversion_currency = "USD";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/923345832/?value=' . $total_paid . '&amp;currency_code=USD&amp;label=S8U_CJCfxQ4QqMekuAM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+';
+
+if (false) { // old version, TOBEREMOVED
+$google_ppc_js = '
+<!-- Google Code for conv Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 923345832;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "S8U_CJCfxQ4QqMekuAM";
+var google_conversion_value = ' . $total_paid . ';
 var google_remarketing_only = false;
 /* ]]> */
 </script>
@@ -121,7 +145,11 @@ var google_remarketing_only = false;
 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/923345832/?value=' . $total_paid . '&amp;label=S8U_CJCfxQ4QqMekuAM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
+';
+}
 
+if (false) { // repeated, TOBEREMOVED
+'
 <!-- Google Code for conv Conversion Page -->
 <script type="text/javascript">
 /* <![CDATA[ */
@@ -143,6 +171,7 @@ var google_remarketing_only = false;
 </div>
 </noscript>
 ';
+}
 
 
 $this->smarty->assign('google_ppc_js', $google_ppc_js);
@@ -177,6 +206,22 @@ $this->smarty->assign('shareasale_js', $shareasale_js);
 	 */
 	public function hookFooter()
 	{
+		$ecomm_prodid = '';
+		$ecomm_pagetype = '';
+		$ecomm_totalvalue = '';
+
+		$ecomm_pagetype = Dispatcher::getInstance()->getController();
+		if ($ecomm_pagetype == 'product') {
+			// $product = $this->smarty->getTemplateVars('product');
+			// NG
+		}
+
+		$this->smarty->assign(array(
+			'ecomm_prodid' => $ecomm_prodid,
+			'ecomm_pagetype' => $ecomm_pagetype,
+			'ecomm_pagetype' => $ecomm_totalvalue,
+		));
+
 		return $this->display(__FILE__, 'ectracking-footer.tpl');
 	}
 
