@@ -1060,7 +1060,7 @@ class AdminControllerCore extends Controller
 		$objPHPExcel->getActiveSheet()->setCellValue('N1', 'Email Address');//xx 默认字段 空
 		$objPHPExcel->getActiveSheet()->setCellValue('O1', 'New Customer');	
 		$objPHPExcel->getActiveSheet()->setCellValue('P1', 'Total Paid');	
-	
+	    $objPHPExcel->getActiveSheet()->setCellValue('Q1', 'Total Shipping');
 		$i = 2 ;
 		foreach ($res as $a) {
 			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i, $a['date_add']);
@@ -1086,6 +1086,7 @@ class AdminControllerCore extends Controller
 				$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,'no');
 			}
 			$objPHPExcel->getActiveSheet()->setCellValue('P'.$i, $a['total_paid']);
+            $objPHPExcel->getActiveSheet()->setCellValue('Q'.$i,$a['total_shipping']);
 			
 			$i++;
 		} 
