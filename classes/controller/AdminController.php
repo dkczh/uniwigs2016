@@ -1085,7 +1085,7 @@ class AdminControllerCore extends Controller
 				
 				$objPHPExcel->getActiveSheet()->setCellValue('O'.$i,'no');
 			}
-			$objPHPExcel->getActiveSheet()->setCellValue('P'.$i, $a['total_paid_tax_incl']);
+			$objPHPExcel->getActiveSheet()->setCellValue('P'.$i, $a['total_paid']);
 			
 			$i++;
 		} 
