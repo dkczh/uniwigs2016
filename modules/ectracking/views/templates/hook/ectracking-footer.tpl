@@ -28,7 +28,7 @@
 var google_tag_params = {
 ecomm_prodid: window.productReference || '{$ecomm_prodid}',
 ecomm_pagetype: '{$ecomm_pagetype}',
-ecomm_totalvalue: window.productPrice || '{$ecomm_totalvalue}',
+ecomm_totalvalue: window.productPrice || '{$ecomm_totalvalue}'
 };
 </script>
 <script type="text/javascript">

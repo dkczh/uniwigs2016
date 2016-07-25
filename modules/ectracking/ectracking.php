@@ -219,7 +219,7 @@ $this->smarty->assign('shareasale_js', $shareasale_js);
 		$this->smarty->assign(array(
 			'ecomm_prodid' => $ecomm_prodid,
 			'ecomm_pagetype' => $ecomm_pagetype,
-			'ecomm_pagetype' => $ecomm_totalvalue,
+			'ecomm_totalvalue' => $ecomm_totalvalue,
 		));
 
 		return $this->display(__FILE__, 'ectracking-footer.tpl');
