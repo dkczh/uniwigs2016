@@ -52,5 +52,10 @@
 </div>
 {/if}
 {include file="$tpl_dir./global.tpl"}
+{literal}
+<script type="text/javascript">
+!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="//configch2.veinteractive.com/tags/02777F1F/581B/406B/A475/48DAF47A5813/tag.js";var b=document.getElementsByTagName("head")[0];if(b)b.appendChild(a,b);else{var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}}();
+</script>
+{/literal}
 	</body>
 </html>

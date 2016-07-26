@@ -45,7 +45,7 @@
 </p>
 {/if}
 
-
+<img src="//cdsch2.veinteractive.com/DataReceiverService.asmx/Pixel?journeycode=02777F1F-581B-406B-A475-48DAF47A5813" width="1" height="1"/>
 {literal}
 <script>
 	ga(function(tracker) {

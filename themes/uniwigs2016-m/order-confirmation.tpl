@@ -44,6 +44,7 @@
 	<a class="uk-button" href="{$link->getPageLink('history', true)|escape:'html':'UTF-8'}" title="{l s='Go to your order history page'}">{l s='View your order history'}</a>
 </p>
 {/if}
+<img src="//cdsch2.veinteractive.com/DataReceiverService.asmx/Pixel?journeycode=02777F1F-581B-406B-A475-48DAF47A5813" width="1" height="1"/>
 {literal}
 <script>
 	ga(function(tracker) {
