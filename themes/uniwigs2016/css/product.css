@@ -431,17 +431,17 @@ span.view_scroll_spacer {
       padding: 1px;
       border: 2px solid #d4d4d4;
       clear: none;
-      width: 56px;
-      height: 56px; }
+      width: 66px;
+      height: 66px; }
       #attributes .attribute_list #color_to_pick_list li a.color_pick {
         display: block;
-        height: 50px;
-        width: 50px;
+        height: 60px;
+        width: 60px;
         cursor: pointer; }
         #attributes .attribute_list #color_to_pick_list li a.color_pick img {
           display: block;
-          height: 50px;
-          width: 50px; }
+          height: 60px;
+          width: 60px; }
       #attributes .attribute_list #color_to_pick_list li.selected {
         border: 2px solid #d32676; }
 
