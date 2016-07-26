@@ -23,21 +23,20 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <div class="summer-sale">
-	<img src="{$base_dir}themes/uniwigs2016/img/index/summer-sale-banner.jpg" alt="" class="img-responsive">
-	<div class="summer-sale-category">
-		<ul>
-			<li><a href="{$base_dir}40453-celebrity-hairstyles" class="uk-button">celebrity wigs</a></li>
-			<li><a href="{$base_dir}tag/diy-dyed-extensions" class="uk-button">diy-dye-extensions</a></li>
-			<li><a href="{$base_dir}40459-trendy-wigs" class="uk-button">trendy wigs</a></li>
-			<li><a href="http://lavivid.uniwigs.com/" class="uk-button">lavivid</a></li>
-		</ul>
-	</div>
+	<img src="{$base_dir}themes/uniwigs2016/img/index/summer-sale-banner.png" alt="summer slae 15% off" class="img-responsive">
+	<img src="{$base_dir}themes/uniwigs2016/img/index/summer-sale-category.jpg" alt="summer sale" usemap="#map" class="img-responsive"/>
+	<map name="map">
+	    <area shape="rect" coords="864, 2, 1139, 536" href="http://lavivid.uniwigs.com/"/>
+	    <area shape="rect" coords="577, 88, 856, 591" href="{$base_dir}40453-celebrity-hairstyles"/>
+	    <area shape="rect" coords="287, 2, 567, 514" href="{$base_dir}tag/diy-dyed-extensions"/>
+	    <area shape="rect" coords="1, 1, 277, 595" href="{$base_dir}40459-trendy-wigs"/>
+	</map>
 </div>
 <div class="sale-nav">
 	<div class="lace-sale">
 		<div class="lace-sale-img">
 			<a href="{$base_dir}40452-human-hair-lace-wigs">
-				<img src="{$base_dir}themes/uniwigs2016/img/index/lace-sale-box.jpg" alt="" class="img-responsive">
+				<img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/lace-sale-box.jpg" alt="" class="img-responsive">
 			</a>
 		</div>
 		<div class="lace-sale-button uk-margin-small-top">
@@ -47,7 +46,7 @@
 	<div class="classic-sale">
 		<div class="classic-sale-img">
 			<a href="{$base_dir}40455-classic-wigs">
-				<img src="{$base_dir}themes/uniwigs2016/img/index/class-wigs-sale.jpg" alt="" class="img-responsive">
+				<img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/class-wigs-sale.jpg" alt="" class="img-responsive">
 			</a>
 		</div>
 		<div class="classic-sale-button uk-margin-small-top">
@@ -58,10 +57,7 @@
 </div>
 <div class="summer-color">
 	<div class="summer-color-box">
-		<a href="{$base_dir}tag/summer-color"><img src="{$base_dir}themes/uniwigs2016/img/index/summer-color-box.jpg" alt="" class="img-responsive"></a>
-	</div>
-	<div class="summer-color-button">
-		<a href="{$base_dir}tag/summer-color" class="uk-button">shop now</a>
+		<a href="{$base_dir}tag/summer-color"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/summer-color-box.jpg" alt="" class="img-responsive"></a>
 	</div>
 </div>
 </div>
@@ -70,9 +66,12 @@
 </div>
 <!-- Module Editorial -->
 <style>
+	area {
+	    outline: none;
+	}
 	.sale-nav{
 		overflow: hidden;
-		margin: 70px 0;
+		margin: 45px 0;
 	}
 	.sale-nav .lace-sale{
 		float:left;
@@ -103,33 +102,25 @@
 		margin:70px 0 50px;
 		overflow: hidden;
 	}
-	.summer-color-button{
-		position: absolute;
-		bottom: 18%;
-	    left: 42%;
-	    opacity: .8;
-	}
-	.summer-color-button a,.lace-sale-button a,.classic-sale-button a{
+	.lace-sale-button a,.classic-sale-button a{
 		font-size: 1.2em;
 	    letter-spacing: 0;
 	    font-weight: bold;
 	    padding: 0 50px;
+	    margin-bottom: 20px;
 	}
 @media (max-width: 768px){
 	.sale-nav .lace-sale{
 		margin-bottom: 50px;
 	}
 	.sale-nav .lace-sale,.sale-nav .classic-sale{
-		float: none
+		width:50%;
 	}
 	.sale-nav .lace-sale .img-responsive,.sale-nav .classic-sale .img-responsive{
 		display: inline;
 	}
 	.summer-sale-category a{
 		width: auto;
-	}
-	.summer-color-button{
-		left:37%;
 	}
 }
 	.sale-banner .row {
@@ -228,6 +219,7 @@
 
 </section>
 <!-- /Module Editorial -->
+<script type="text/javascript" src="{$base_dir}themes/uniwigs2016/js/respMap.js"></script>
 <script type="text/javascript">
 $(function() {
 	window.load_home_customer_shows = function(){
@@ -238,5 +230,8 @@ $(function() {
 		});
 	}
 	load_home_customer_shows();
+});
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
 });
 </script>

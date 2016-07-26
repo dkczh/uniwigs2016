@@ -191,7 +191,9 @@
         {/if}
         {if $category->id == '40453'}
              <div class="uk-margin-small-bottom">
-                <img src="/themes/uniwigs2016-m/img/category/human-hair/summer-sale.png" alt="" class="img-responsive">
+                <a href="https://youtu.be/4xbxHf3S9mM" data-uk-lightbox>
+                <img src="/themes/uniwigs2016-m/img/category/human-hair/celebrity-wigs-banner.jpg" alt="" class="img-responsive">
+                </a>
              </div>
         {/if}
         {if $category->id == '40459'}

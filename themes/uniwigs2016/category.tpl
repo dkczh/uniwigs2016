@@ -768,7 +768,9 @@
                         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
                         {elseif $category->id == '40453'}
                             <div class="uk-margin-small-bottom">
-                                <img src="/themes/uniwigs2016/img/category/human-hair/celebrity-banner.png" alt="" class="img-responsive"/>
+                                <a href="https://youtu.be/4xbxHf3S9mM" data-uk-lightbox>
+                                <img src="/themes/uniwigs2016/img/category/human-hair/celebrity-wigs-banner.jpg" alt="" class="img-responsive">
+                                </a>
                             </div>
                         {elseif $category->id == '40455'}
                             <div class="uk-margin-small-bottom">
