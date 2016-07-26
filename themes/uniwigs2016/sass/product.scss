@@ -523,17 +523,17 @@ span.view_scroll_spacer {
 				padding: 1px;
 				border: 2px solid $base-border-color;
 				clear: none;
-      			width: 48px;
-      			height: 48px;
+      			width: 56px;
+      			height: 56px;
 				a.color_pick {
 					display: block;
-					height: 42px;
-					width: 42px;
+					height: 50px;
+					width: 50px;
 					cursor: pointer;
 					img {
 						display: block;
-						height: 42px;
-						width: 42px;
+						height: 50px;
+						width: 50px;
 					}
 				}
 				&.selected{
@@ -638,6 +638,7 @@ span.view_scroll_spacer {
 			    background: #F5F5F5;
 			    margin-bottom: 1px;
 			    padding-bottom: 7px;
+			    font-size: 1.2em;
 			}
 			&.uk-active>a{
 				border-color: #DDD;
@@ -723,11 +724,15 @@ span.view_scroll_spacer {
 	    transition: all .3s linear;
 	    -moz-transition: all .3s linear;
 	    -webkit-transition: all .3s linear;
+	    a{
+	    	text-decoration: underline;
+	    }
 	    &:nth-child(1){
 	    	&:before {
 		        font-family: $font-icon;
 		        content: "\f02e";
 		        padding-right: 5px;
+		        color: #e0287d;
 		    }
 		}
 		&:nth-child(2){
@@ -735,6 +740,7 @@ span.view_scroll_spacer {
 		        font-family: $font-icon;
 		        content: "\f182";
 		        padding-right: 5px;
+		        color: #e0287d;
 		    }
 		}
 		&:nth-child(3){
@@ -742,6 +748,7 @@ span.view_scroll_spacer {
 		        font-family: $font-icon;
 		        content: "\f072";
 		        padding-right: 5px;
+		        color: #e0287d;
 		    }
 		}
 		&:nth-child(4){
@@ -751,6 +758,7 @@ span.view_scroll_spacer {
 		        font-family: $font-icon;
 		        content: "\f059";
 		        padding-right: 5px;
+		        color: #e0287d;
 		    }
 		}
 		&:after {
