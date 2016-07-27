@@ -75,7 +75,7 @@ class AdminOrdersControllerCore extends AdminController
 		IF(address.`phone`=\'\',address.`phone_mobile`,address.`phone`) AS pphone,
 		(SELECT count(*) from ps_orders where id_customer =c.id_customer) as num ,
 		c.email,
-		a.shipping_number,
+	    CONCAT(dcr.real_carrier,\'-\',dcr.tracking_number)as shipping_number,
 		osl.`name` AS `osname`,
 		os.`color`,
 		IF((SELECT so.id_order FROM `'._DB_PREFIX_.'orders` so WHERE so.id_customer = a.id_customer AND so.id_order < a.id_order LIMIT 1) > 0, 0, 1) as new,
@@ -85,6 +85,7 @@ class AdminOrdersControllerCore extends AdminController
         $this->_join = '
 		LEFT JOIN `'._DB_PREFIX_.'customer` c ON (c.`id_customer` = a.`id_customer`)
 		left JOIN `'._DB_PREFIX_.'order_detail` po  on po.`id_order` = a.`id_order`
+        LEFT JOIN  px_differ_carrier dcr on  dcr.id_order=a.id_order
 		INNER JOIN `'._DB_PREFIX_.'address` address ON address.id_address = a.id_address_delivery
 		INNER JOIN `'._DB_PREFIX_.'country` country ON address.id_country = country.id_country
 		INNER JOIN `'._DB_PREFIX_.'country_lang` country_lang ON (country.`id_country` = country_lang.`id_country` AND country_lang.`id_lang` = '.(int)$this->context->language->id.')
