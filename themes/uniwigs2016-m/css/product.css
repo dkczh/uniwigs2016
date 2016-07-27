@@ -372,14 +372,14 @@ span.view_scroll_spacer {
       clear: none;
       width: 70px;
       height: 70px; }
-      @media (max-width: 320px) {
-        #attributes .attribute_list #color_to_pick_list li {
-          width: 60px;
-          height: 60px; } }
       @media (max-width: 480px) {
         #attributes .attribute_list #color_to_pick_list li {
           width: 70px;
           height: 70px; } }
+      @media (max-width: 320px) {
+        #attributes .attribute_list #color_to_pick_list li {
+          width: 60px;
+          height: 60px; } }
       #attributes .attribute_list #color_to_pick_list li a.color_pick {
         display: block;
         cursor: pointer; }
