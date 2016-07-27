@@ -25,7 +25,7 @@
  */
 
 if (!defined('_PS_VERSION_'))
-	exit;
+    exit;
 
 class Ectracking extends Module
 {
@@ -173,9 +173,13 @@ var google_remarketing_only = false;
 ';
 }
 
-
+if($total_paid>0){
 $this->smarty->assign('google_ppc_js', $google_ppc_js);
-
+}else{
+	
+$this->smarty->assign('google_ppc_js','');	
+	
+}
 
 $bing_ppc_js = '
 <script type="text/javascript">
@@ -190,13 +194,21 @@ mstag.loadTag("analytics", {dedup:"1",domainId:"1856927",type:"1",nonadvertising
 </iframe>
 </noscript>
 ';
+if($total_paid>0){
 $this->smarty->assign('bing_ppc_js', $bing_ppc_js);
-
+}else{
+$this->smarty->assign('bing_ppc_js','');	
+	
+}
 
 $shareasale_js = '<img height="1" width="1" style="border-style:none;" alt="" src="https://shareasale.com/sale.cfm?amount=' . $total_without_shipping . '&tracking=' . $id_order . '&transtype=sale&merchantID=47218"/>';
+if($total_paid>0){
 $this->smarty->assign('shareasale_js', $shareasale_js);
 
-
+}else{
+	
+$this->smarty->assign('shareasale_js', '');
+}
 			return $this->display(__FILE__, 'ectracking-order-confirm.tpl');
 		}
 	}
