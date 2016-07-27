@@ -366,6 +366,7 @@
 															{/if}
 														{/foreach}
 													</ul>
+													
 													<input type="hidden" class="color_pick_hidden" name="{$groupName|escape:'html':'UTF-8'}" value="{$default_colorpicker|intval}" />
 												{elseif ($group.group_type == 'radio')}
 													<ul>

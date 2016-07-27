@@ -366,21 +366,29 @@ span.view_scroll_spacer {
     list-style-type: none; }
     #attributes .attribute_list #color_to_pick_list li {
       float: left;
-      margin: 0 8px 8px 0;
+      margin: 0 4% 4% 0;
       padding: 1px;
       border: 1px solid #d6d4d4;
       clear: none;
-      width: 40px;
-      height: 40px; }
+      width: 70px;
+      height: 70px; }
+      @media (max-width: 320px) {
+        #attributes .attribute_list #color_to_pick_list li {
+          width: 60px;
+          height: 60px; } }
+      @media (max-width: 480px) {
+        #attributes .attribute_list #color_to_pick_list li {
+          width: 70px;
+          height: 70px; } }
       #attributes .attribute_list #color_to_pick_list li a.color_pick {
         display: block;
-        height: 36px;
-        width: 36px;
         cursor: pointer; }
         #attributes .attribute_list #color_to_pick_list li a.color_pick img {
           display: block;
-          height: 36px;
-          width: 36px; }
+          height: 100%;
+          width: 100%; }
+      #attributes .attribute_list #color_to_pick_list li:nth-child(4n) {
+        margin-right: 0; }
       #attributes .attribute_list #color_to_pick_list li.selected {
         border: 1px solid #e0287d; }
 
