@@ -57,7 +57,7 @@ class AdminOrdersControllerCore extends AdminController
         $this->context = Context::getContext();
 
         $this->_select = '
-		GROUP_CONCAT('."'".'<img src="../img/tmp/product_mini_\',product_id,\'_1.jpg" alt="" class="imgm img-thumbnail" style="
+		GROUP_CONCAT(distinct '."'".'<img src="../img/tmp/product_mini_\',product_id,\'_1.jpg" alt="" class="imgm img-thumbnail" style="
     width: 48px;
     height: 55px;
 ">\' SEPARATOR \' \')  AS `image` ,
