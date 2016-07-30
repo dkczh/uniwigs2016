@@ -11142,31 +11142,6 @@ span.exclusive {
     .button.exclusive-medium span:hover {
       border-color: #9e9e9e #c2c2c2 #c8c8c8 #c2c2c2; }
 
-.button.ajax_add_to_cart_button {
-  font: 700 17px/21px "Open Sans", sans-serif;
-  color: #fff;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
-  padding: 0;
-  border: 1px solid;
-  border-color: #0079b6 #006fa8 #012740 #006fa8; }
-  .button.ajax_add_to_cart_button span {
-    border: 1px solid;
-    border-color: #06b2e6;
-    padding: 10px 14px;
-    display: block;
-    background: #009ad0;
-    background-image: -webkit-gradient(linear, left 0%, left 100%, from(#009ad0), to(#007ab7));
-    background-image: -webkit-linear-gradient(top, #009ad0, 0%, #007ab7, 100%);
-    background-image: -moz-linear-gradient(top, #009ad0 0%, #007ab7 100%);
-    background-image: linear-gradient(to bottom, #009ad0 0%, #007ab7 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF009AD0', endColorstr='#FF007AB7', GradientType=0); }
-  .button.ajax_add_to_cart_button:hover {
-    border-color: #01314e #004b74 #0079b6 #004b74; }
-    .button.ajax_add_to_cart_button:hover span {
-      filter: none;
-      background: #0084bf; }
-
 .button.lnk_view {
   font: 700 17px/21px "Open Sans", sans-serif;
   color: #333;

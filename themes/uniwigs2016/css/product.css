@@ -784,7 +784,9 @@ table.table-product-discounts {
   .accessories-block .exclusive span:focus, .accessories-block .exclusive span:active {
     text-decoration: none; }
 .accessories-block .product-name {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  overflow: hidden;
+  height: 40px; }
   .accessories-block .product-name a {
     font-size: 15px;
     line-height: 18px;

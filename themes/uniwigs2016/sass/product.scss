@@ -946,6 +946,8 @@ table.table-product-discounts{
 	}
 	.product-name{
 		margin-bottom: 5px;
+		overflow: hidden;
+		height: 40px;
 		a{
 			font-size: 15px;
 			line-height: 18px;
