@@ -50,19 +50,19 @@
 }
 .promotion-block a,.home-box a{display: block}
 .promotion-block{margin:14px 0;}
-.summer-sale,.classic-sale{
+.summer-sale{
 	background: #fff;
+	padding-top: 15px;
 }
-.summer-sale a,.classic-sale a{
+.summer-sale a{
 	font-weight: bold;
 
 }
 
 </style>
 {/literal}
-
-<div class="summer-sale">
-	<img src="{$img_dir}home/summer-sale.png" alt="" class="img-responsive">
+<div class="fb-banner"><a href="{$base_dir}tag/fb-200k"><img src="{$img_dir}home/fb-200k.png" alt="facebook 200k likes Celebration" class="img-responsive"></a></div>
+<div class="summer-sale uk-margin-top">
 	<ul class="home-list">
 		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs.jpg" alt="trendy wigs" class="img-responsive"></a></li>
 		<li><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$img_dir}home/celebrity-wigs.jpg" alt="celebrity wigs" class="img-responsive"></a></li>
