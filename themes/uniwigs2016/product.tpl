@@ -844,7 +844,7 @@
 						{/if}
 					</div> <!-- end product_attributes -->
 					<div class="box-cart-bottom">
-						{if $product->id_category_default!=40459 }
+						{if $product->id_category_default!=101 }
 						<p id="add_to_cart" class="buttons_bottom_block no-print {if (!$allow_oosp && $product->quantity <= 0) || !$product->available_for_order || (isset($restricted_country_mode) && $restricted_country_mode) || $PS_CATALOG_MODE}unvisible{/if}">
 							<button type="submit" name="Submit" class="exclusive">
 								<span>{if $content_only && (isset($product->customization_required) && $product->customization_required)}{l s='Customize'}{else}{l s='Add to cart'}{/if}</span>

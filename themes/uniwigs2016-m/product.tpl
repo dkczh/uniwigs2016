@@ -518,7 +518,7 @@
 					</div> <!-- end product_attributes -->
 					<ul class="box-cart-bottom">
 
-						{if $product->id_category_default==40459 }
+						{if $product->id_category_default==101 }
 						{if  $product->quantity <= 0 || !$product->available_for_order || (isset($restricted_country_mode) && $restricted_country_mode) || $PS_CATALOG_MODE} 
 						<li  class="unvisible">
 							<p id="add_to_cart" class="buttons_bottom_block no-print">
