@@ -61,7 +61,7 @@
 
 </style>
 {/literal}
-<div class="fb-banner"><a href="{$base_dir}tag/fb-200k"><img src="{$img_dir}home/fb-200k.png" alt="facebook 200k likes Celebration" class="img-responsive"></a></div>
+{*<div class="fb-banner"><a href="{$base_dir}tag/fb-200k"><img src="{$img_dir}home/fb-200k.png" alt="facebook 200k likes Celebration" class="img-responsive"></a></div>*}
 <div class="summer-sale uk-margin-top">
 	<ul class="home-list">
 		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs.jpg" alt="trendy wigs" class="img-responsive"></a></li>
