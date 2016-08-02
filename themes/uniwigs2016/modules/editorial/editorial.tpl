@@ -22,7 +22,7 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<div class="fb-banner uk-margin-large-bottom"><a href="{$base_dir}tag/fb-200k"><img src="{$base_dir}themes/uniwigs2016/img/index/fb20.png" alt="facebook 200k likes Celebration" class="img-responsive"></a></div>
+{*<div class="fb-banner uk-margin-large-bottom"><a href="{$base_dir}tag/fb-200k"><img src="{$base_dir}themes/uniwigs2016/img/index/fb20.png" alt="facebook 200k likes Celebration" class="img-responsive"></a></div>*}
 <div class="summer-sale">
 	{*<img src="{$base_dir}themes/uniwigs2016/img/index/summer-sale-banner.png" alt="summer slae 15% off" class="img-responsive">*}
 	<img src="{$base_dir}themes/uniwigs2016/img/index/summer-sale-category.jpg" alt="summer sale" usemap="#map" class="img-responsive"/>
