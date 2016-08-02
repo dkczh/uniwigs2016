@@ -517,7 +517,7 @@
 						{/if}
 					</div> <!-- end product_attributes -->
 					<ul class="box-cart-bottom">
-
+						<p  style="display:none">{$product->quantity}</p>	
 						{if $product->id_category_default==101 }
 						{if  $product->quantity <= 0 || !$product->available_for_order || (isset($restricted_country_mode) && $restricted_country_mode) || $PS_CATALOG_MODE} 
 						<li  class="unvisible">
