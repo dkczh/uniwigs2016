@@ -763,7 +763,7 @@
                         {elseif $category->id == '40452'}
                         <div class="uk-margin-small-bottom">
                             {*<img src="/themes/uniwigs2016/img/category/human-hair/lace-banner.png" alt="" class="uk-margin-small-bottom img-responsive">*}
-                            <a href="https://youtu.be/fmk6zE5brkA" data-uk-lightbox><img src="/themes/uniwigs2016/img/category/human-hair/Curly-Wig.jpg" alt="" class="img-responsive"/></a>
+                            <a href="https://youtu.be/OQCOImf3tpg" data-uk-lightbox><img src="/themes/uniwigs2016/img/category/human-hair/Curly-Wig.jpg" alt="" class="img-responsive"/></a>
                         </div>
                         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
                         {elseif $category->id == '40453'}
