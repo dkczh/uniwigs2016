@@ -1061,6 +1061,7 @@ class AdminControllerCore extends Controller
 		$objPHPExcel->getActiveSheet()->setCellValue('O1', 'New Customer');	
 		$objPHPExcel->getActiveSheet()->setCellValue('P1', 'Total Paid');	
 	    $objPHPExcel->getActiveSheet()->setCellValue('Q1', 'Total Shipping');
+        $objPHPExcel->getActiveSheet()->setCellValue('R1', 'PostCode');
 		$i = 2 ;
 		foreach ($res as $a) {
 			$objPHPExcel->getActiveSheet()->setCellValue('A'.$i, $a['date_add']);
@@ -1087,6 +1088,7 @@ class AdminControllerCore extends Controller
 			}
 			$objPHPExcel->getActiveSheet()->setCellValue('P'.$i, $a['total_paid']);
             $objPHPExcel->getActiveSheet()->setCellValue('Q'.$i,$a['total_shipping']);
+            $objPHPExcel->getActiveSheet()->setCellValue('R'.$i,$a['postcode']);
 			
 			$i++;
 		} 
