@@ -188,10 +188,13 @@ class JSMin {
                         if ($this->a === $this->b) { // end quote
                             break;
                         }
-                        if (ord($this->a) <= self::ORD_LF) {
+                       /* if (ord($this->a) <= self::ORD_LF) {
                             throw new JSMin_UnterminatedStringException(
                                 "JSMin: Unterminated String at byte "
                                 . $this->inputIndex . ": {$str}");
+                        }*/  //dkc 取消字符串的ascii 长短判断
+                        if (ord($this->a) <= self::ORD_LF) {
+                            throw new JSMin_UnterminatedStringException();
                         }
                         $str .= $this->a;
                         if ($this->a === '\\') {
