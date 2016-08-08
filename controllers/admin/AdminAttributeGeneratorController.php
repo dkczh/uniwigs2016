@@ -164,7 +164,19 @@ class AdminAttributeGeneratorControllerCore extends AdminController
 
                 SpecificPriceRule::enableAnyApplication();
                 SpecificPriceRule::applyAllRules(array((int)$this->product->id));
-
+				
+							// 生成组合完毕后 更新其 sku 
+				Db::getInstance()->execute("UPDATE ps_product_attribute  bb  INNER JOIN 
+				(SELECT a.id_product,a.id_product_attribute , CONCAT(d.reference,'--',b.id_product_attribute)  as sku   from  ps_product_attribute  a  
+				LEFT JOIN ps_product_attribute_combination  b  on  b.id_product_attribute= a.id_product_attribute
+				LEFT JOIN ps_attribute_lang   c  on  c.id_attribute=b.id_attribute 
+				LEFT JOIN ps_product d  on  a.id_product=d.id_product 
+				where  a.id_product=".($this->product->id)."
+				GROUP BY  a.id_product_attribute) as mytable  ON mytable.id_product=bb.id_product and  mytable.id_product_attribute=bb.id_product_attribute
+				SET bb.reference=mytable.sku
+				");
+				
+				
                 Tools::redirectAdmin($this->context->link->getAdminLink('AdminProducts').'&id_product='.(int)Tools::getValue('id_product').'&updateproduct&key_tab=Combinations&conf=4');
             } else {
                 $this->errors[] = Tools::displayError('Unable to initialize these parameters. A combination is missing or an object cannot be loaded.');
