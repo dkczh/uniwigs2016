@@ -613,12 +613,13 @@ span.view_scroll_spacer {
 .pr-details p,
 #product_faq p {
     line-height: 1.6;
-    color: #444;
 }
 .pr-details ul{
 	list-style: disc;
 	padding: 0 0 0 15px;
+	margin-bottom: 9px;
 }
+.pr-details ul li{padding-bottom:3px}
 #product_faq h4 {
     cursor: pointer;
     text-transform: none;

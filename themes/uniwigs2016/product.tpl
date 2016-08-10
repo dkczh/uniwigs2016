@@ -1153,7 +1153,7 @@
 					<ul id="tab-content" class="uk-switcher uk-margin-small-top">
 						{if $category->id == '40441'}
 							<li>
-								<div class="pr-details text-info" itemprop="description">
+								<div class="pr-details" itemprop="description">
 									{$product->description}
 								</div>
 							</li>
