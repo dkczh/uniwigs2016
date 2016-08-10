@@ -506,6 +506,10 @@ span.view_scroll_spacer {
   list-style: disc;
   padding: 0 0 0 15px;
   margin-bottom: 9px; }
+  .pr-details ul ol {
+    list-style: decimal;
+    padding-left: 15px;
+    margin-bottom: 9px; }
 
 .pr-details ul li {
   padding-bottom: 3px; }
