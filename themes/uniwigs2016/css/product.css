@@ -503,6 +503,10 @@ span.view_scroll_spacer {
   line-height: 1.6;
   color: #444; }
 
+.pr-details ul {
+  list-style: disc;
+  padding: 0 0 0 15px; }
+
 #product_faq h4 {
   cursor: pointer;
   text-transform: none; }
