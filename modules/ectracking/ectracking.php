@@ -193,6 +193,9 @@ mstag.loadTag("analytics", {dedup:"1",domainId:"1856927",type:"1",nonadvertising
 <iframe src="//flex.atdmt.com/mstag/tag/1917a6d4-f18d-4d68-be35-bc304cbfba55/analytics.html?dedup=1&domainId=1856927&type=1&nonadvertisingcost=&revenue='.$total_paid.'&actionid=131934" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none">
 </iframe>
 </noscript>
+<script>
+window.uetq = window.uetq || []; window.uetq.push({ \'gv\': '.$total_paid.' });
+</script>
 ';
 if($total_paid>0){
 $this->smarty->assign('bing_ppc_js', $bing_ppc_js);
@@ -200,6 +203,8 @@ $this->smarty->assign('bing_ppc_js', $bing_ppc_js);
 $this->smarty->assign('bing_ppc_js','');	
 	
 }
+
+
 
 $shareasale_js = '<img height="1" width="1" style="border-style:none;" alt="" src="https://shareasale.com/sale.cfm?amount=' . $total_without_shipping . '&tracking=' . $id_order . '&transtype=sale&merchantID=47218"/>';
 if($total_paid>0){
