@@ -167,9 +167,15 @@
 			</p>*}
 
 			<ul class="product-sku" {if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
-				<li id="product_reference" class="sku" itemprop="sku" {if !empty($product->reference) && $product->reference} content="{$product->reference}"{/if}>
+				
+			<!-- 	<li id="product_reference" class="sku" itemprop="sku" {if !empty($product->reference) && $product->reference} content="{$product->reference}"{/if}>
+				 -->
+				<li id="product_reference_a" class="sku" itemprop="sku" {if !empty($product->reference) && $product->reference} content="{$product->reference}"{/if}>
+					
 					<label>{l s='SKU:'} </label>
-					<span>{if !isset($groups)}{$product->reference|escape:'html':'UTF-8'}{/if}</span>
+				<!-- 	<span>{if !isset($groups)}{$product->reference|escape:'html':'UTF-8'}{/if}</span> -->
+					<span>{$product->reference|escape:'html':'UTF-8'}</span>
+					
 				</li>
 				<li class="price-star fll mr20 hide">
 					<a href="javascript:void(0);"  class="product-rating-link">
