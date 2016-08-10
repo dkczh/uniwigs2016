@@ -1181,7 +1181,7 @@
 								{/if}
 							</li>
 							<li>
-								<div class="pr-details text-info" itemprop="description">
+								<div class="pr-details" itemprop="description">
 									{$product->description}
 								</div>
 							</li>
