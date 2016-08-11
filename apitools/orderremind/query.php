@@ -59,16 +59,34 @@ if(isset($_POST['id'])){
 
 //查询正常订单
 function q_order_normal($db){
-	$id_employee = Context::getContext()->cookie->id_employee;
-	// /admin-dev/index.php?controller=AdminOrders&id_order=100023378&vieworder&token=f525d2442348aea2ac09a547ed7bca6e
+$id_employee = Context::getContext()->cookie->id_employee;
+    // /admin-dev/index.php?controller=AdminOrders&id_order=100023378&vieworder&token=f525d2442348aea2ac09a547ed7bca6e
 	$id = Tab::getIdFromClassName('AdminOrders');
 	$token = Tools::getAdminToken('AdminOrders'.(int)$id.(int)$id_employee);
 	$uri_f = "/admin-dev/index.php?controller=AdminOrders&id_order=";
 	$uri_l ="&vieworder&token=".$token;
-	$sql = "select id_order,id_customer,   date_format(date_add,'%Y-%m-%d') as date_add ,date_format(date_sub(now(), interval 1 day),'%Y-%m-%d') as nowdate from  ps_orders 
-
-where current_state in (3,23,24)  and  date_add <date_sub(now(), interval 3 day)
-and id_order  not in (select id_order  from  px_order_remind)
+	$sql = "SELECT
+	o.id_order,
+	GROUP_CONCAT(od.product_reference) as sku,
+	date_format(o.date_add, '%Y-%m-%d') AS date_add,
+	date_format(
+		date_sub(now(), INTERVAL 1 DAY),
+		'%Y-%m-%d'
+	) AS nowdate
+FROM
+	ps_orders  o
+LEFT JOIN  ps_order_detail od
+ on  o.id_order=od.id_order
+WHERE
+	o.current_state IN (3, 23, 24)
+AND o.date_add < date_sub(now(), INTERVAL 3 DAY)
+AND o.id_order NOT IN (
+	SELECT
+		id_order
+	FROM
+		px_order_remind
+)
+GROUP BY o.id_order 
 ";
 
 
@@ -79,7 +97,7 @@ and id_order  not in (select id_order  from  px_order_remind)
 \">总计".count($res)."</center> <thead>
     <tr>
          <th>订单id</th>
-		<th>客户id</th>	
+		<th>sku</th>	
 		<th>添加日期</th>
         <th>当前日期</th>
 		<th>备用1</th>
@@ -91,7 +109,7 @@ and id_order  not in (select id_order  from  px_order_remind)
 	foreach ($res as $a) {
 		
 		$id_order= $a['id_order'];
-		$id_customer = $a['id_customer'];
+		$id_customer = $a['sku'];
 		$date_add = $a['date_add'];
 		$nowdate = $a['nowdate'];
 		$uri = $uri_f.$id_order.$uri_l;

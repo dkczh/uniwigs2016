@@ -253,6 +253,21 @@
 				{/if}
 			{*存放购物车id 信息*}
 		<span id='cart_points' style="display: none;">{$cart->id}</span>
+		<script type="text/javascript">
+		  clear({$cart->id});
+		</script>
+		
+		{literal}
+		<script type="text/javascript">
+		var point =   $('#cart_points').text();
+		clear(point);
+		function clear(id_cart){
+		  $.post('points.php',{id_cart:id_cart});
+		  }
+		</script>
+		{/literal}
+		
+		
 		<script>
 			
 			//增加 积分输入限制
