@@ -186,6 +186,31 @@
 				<span class="editable" itemprop="sku"{if !empty($product->reference) && $product->reference} content="{$product->reference}"{/if}>{if !isset($groups)}{$product->reference|escape:'html':'UTF-8'}{/if}</span>
 			</p>
 			
+			{if ($display_qties == 1 && !$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && $product->available_for_order)}
+				<!-- number of item in stock -->
+				<p id="pQuantityAvailable"{if $product->quantity <= 0} style="display: none;"{/if}>
+					<span id="quantityAvailable">{$product->quantity|intval}</span>
+					<span {if $product->quantity > 1} style="display: none;"{/if} id="quantityAvailableTxt">{l s='Product'}</span>
+					<span {if $product->quantity == 1} style="display: none;"{/if} id="quantityAvailableTxtMultiple">{l s='Products'}</span>
+				</p>
+			{/if}
+			<!-- availability or doesntExist -->
+			<p id="availability_statut"{if !$PS_STOCK_MANAGEMENT || ($product->quantity <= 0 && !$product->available_later && $allow_oosp) || ($product->quantity > 0 && !$product->available_now) || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none;"{/if}>
+				{*<span id="availability_label">{l s='Availability:'}</span>*}
+				<span id="availability_value" class="label{if $product->quantity <= 0 && !$allow_oosp} label-danger{elseif $product->quantity <= 0} label-warning{else} label-success{/if}">{if $product->quantity <= 0}{if $PS_STOCK_MANAGEMENT && $allow_oosp}{$product->available_later}{else}{l s='This product is no longer in stock'}{/if}{elseif $PS_STOCK_MANAGEMENT}{$product->available_now}{/if}</span>
+			</p>
+			{if $PS_STOCK_MANAGEMENT}
+				{if !$product->is_virtual}{hook h="displayProductDeliveryTime" product=$product}{/if}
+				<p class="warning_inline" id="last_quantities"{if ($product->quantity > $last_qties || $product->quantity <= 0) || $allow_oosp || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none"{/if} >{l s='Warning: Last items in stock!'}</p>
+			{/if}
+			<p id="availability_date"{if ($product->quantity > 0) || !$product->available_for_order || $PS_CATALOG_MODE || !isset($product->available_date) || $product->available_date < $smarty.now|date_format:'%Y-%m-%d'} style="display: none;"{/if}>
+				<span id="availability_date_label">{l s='Availability date:'}</span>
+				<span id="availability_date_value">{if Validate::isDate($product->available_date)}{dateFormat date=$product->available_date full=false}{/if}</span>
+			</p>
+			<!-- Out of stock hook -->
+			<div id="oosHook"{if $product->quantity > 0} style="display: none;"{/if}>
+				{$HOOK_PRODUCT_OOS}
+			</div>
 			
 			{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
 			

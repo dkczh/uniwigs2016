@@ -549,6 +549,8 @@ span.view_scroll_spacer {
 .box-info-product p {
   margin-bottom: 7px;
   display: inline-block; }
+  .box-info-product p.unvisible {
+    display: none; }
 .box-info-product .exclusive {
   padding: 0;
   position: relative;
@@ -846,8 +848,7 @@ table.table-product-discounts {
   font-weight: 700;
   line-height: 18px;
   display: inline-block;
-  padding: 3px 8px 4px;
-  margin-left: 5px; }
+  padding: 3px 8px 4px; }
 
 #last_quantities {
   background: #fe9126;
