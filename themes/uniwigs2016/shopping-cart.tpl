@@ -259,6 +259,8 @@
 		
 		{literal}
 		<script type="text/javascript">
+		var point =   $('#cart_points').text();
+		clear(point);
 		function clear(id_cart){
 		  $.post('points.php',{id_cart:id_cart});
 		  }
