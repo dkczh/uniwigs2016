@@ -889,9 +889,14 @@ class AdminControllerCore extends Controller
                 if ($this->filter && $this->action != 'reset_filters') {
                     $this->processFilter();
                 }
-
+    
+                /*  old code 
                 if (isset($_POST) && count($_POST) && (int)Tools::getValue('submitFilter'.$this->list_id) || Tools::isSubmit('submitReset'.$this->list_id)) {
                     $this->setRedirectAfter(self::$currentIndex.'&token='.$this->token.(Tools::isSubmit('submitFilter'.$this->list_id) ? '&submitFilter'.$this->list_id.'='.(int)Tools::getValue('submitFilter'.$this->list_id) : ''));
+                }*/
+                //修复 后台 搜索 未返回当前搜索页面 bug
+                if (isset($_POST) && count($_POST) && (int)Tools::getValue('submitFilter'.$this->list_id) || Tools::isSubmit('submitReset'.$this->list_id)) {
+                   $this->setRedirectAfter("index.php?".$_SERVER["QUERY_STRING"]);
                 }
 
                 // If the method named after the action exists, call "before" hooks, then call action method, then call "after" hooks
