@@ -43,7 +43,7 @@
 	{if $cms->meta_title == 'How to Videos'}
 		<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
 	{/if}
-	{if $cms->meta_title == 'UniWigs Wigs' or $cms->meta_title == 'UniWigs Hair Extensions' or $cms->meta_title == 'Others' or $cms->meta_title == 'video'}
+	{if $cms->meta_title == 'UniWigs Wigs' or $cms->meta_title == 'UniWigs Hair Extensions' or $cms->meta_title == 'Others' or $cms->meta_title == 'synthetic wigs'}
 		<script type="text/javascript" src="/themes/uniwigs2016/js/accordion.min.js"></script>
 	{/if}
 	
