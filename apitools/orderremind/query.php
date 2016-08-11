@@ -67,7 +67,7 @@ function q_order_normal($db){
 	$uri_l ="&vieworder&token=".$token;
 	$sql = "select id_order,id_customer,   date_format(date_add,'%Y-%m-%d') as date_add ,date_format(date_sub(now(), interval 1 day),'%Y-%m-%d') as nowdate from  ps_orders 
 
-where current_state = 3 and  date_add <date_sub(now(), interval 3 day)
+where current_state in (3,23,24)  and  date_add <date_sub(now(), interval 3 day)
 and id_order  not in (select id_order  from  px_order_remind)
 ";
 
@@ -117,36 +117,42 @@ and id_order  not in (select id_order  from  px_order_remind)
 function q_order_remind($db,$id){
 	if($id=='10'){
 	$sql = "SELECT
-	*,
+    od.*,
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
-	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
+	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),od.date)  as rdate
 FROM
-	px_order_remind
+	px_order_remind od
+	LEFT JOIN  ps_orders o on o.id_order=od.id_order
 WHERE
-	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(date, INTERVAL 10 DAY)
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(od.date, INTERVAL 10 DAY)
 AND DATE_SUB(date, INTERVAL 8 DAY)
+and  o.current_state in (3,23,24) 
 ";}
 if($id=='7'){
 	$sql = "SELECT
-	*,
+    od.*,
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
-	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
+	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),od.date)  as rdate
 FROM
-	px_order_remind
+	px_order_remind od
+	LEFT JOIN  ps_orders o on o.id_order=od.id_order
 WHERE
-	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(date, INTERVAL 7 DAY)
-AND DATE_SUB(date, INTERVAL 4 DAY)
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(od.date, INTERVAL 7 DAY)
+AND DATE_SUB(od.date, INTERVAL 4 DAY)
+and  o.current_state in (3,23,24) 
 ";}
 if($id=='3'){
 	$sql = "SELECT
-	*,
+    od.*,
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') AS nowdate,
-	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),date)  as rdate
+	TIMESTAMPDIFF(DAY,date_format(date_sub(now(), interval 1 day), '%Y-%m-%d'),od.date)  as rdate
 FROM
-	px_order_remind
+	px_order_remind od
+	LEFT JOIN  ps_orders o on o.id_order=od.id_order
 WHERE
-	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(date, INTERVAL 3 DAY)
-AND DATE_SUB(date, INTERVAL 0 DAY)
+	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d') BETWEEN DATE_SUB(od.date, INTERVAL 3 DAY)
+AND DATE_SUB(od.date, INTERVAL 0 DAY)
+and  o.current_state in (3,23,24) 
 ";}
 if($id=='99'){
 	$sql = "SELECT
@@ -158,7 +164,7 @@ FROM
 LEFT JOIN  ps_orders o on o.id_order=od.id_order
 WHERE
 	date_format(date_sub(now(), interval 1 day), '%Y-%m-%d')>od.date
-and  o.current_state not in (4,6) 
+and  o.current_state in (3,23,24) 
 ";}
 	$res = getall($db,$sql);
 	

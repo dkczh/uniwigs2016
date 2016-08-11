@@ -73,8 +73,9 @@
 							{if isset($order.order_state)}
 
 
-								{if $order.order_state=='Payment accepted'||$order.order_state=='Preparation in progress'||$order.order_state=='Shipped'||$order.order_state=='Canceled'||$order.order_state=='Refund'}
-								<span class="label{if isset($order.order_state_color) && Tools::getBrightness($order.order_state_color) > 128} dark{/if}"
+								{if $order.order_state=='Payment accepted'||$order.order_state=='Preparation in progress'||$order.order_state=='Shipped'||$order.order_state=='Canceled'||$order.order_state=='Refund'||$order.order_state=='Awaiting PayPal payment'||$order.order_state=='Awaiting bank wire payment'}
+								
+                                <span class="label{if isset($order.order_state_color) && Tools::getBrightness($order.order_state_color) > 128} dark{/if}"
 								{if isset($order.order_state_color) && $order.order_state_color} 
 								style="background-color:{$order.order_state_color|escape:'html':'UTF-8'};
 								border-color:{$order.order_state_color|escape:'html':'UTF-8'};"{/if}
