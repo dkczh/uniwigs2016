@@ -184,8 +184,8 @@
         {/if}
         {if $category->id == '40452'}
             <div class="uk-margin-small-bottom">
-               {*<img src="/themes/uniwigs2016-m/img/category/human-hair/lace-sale.png" alt="" class="uk-margin-small-bottom img-responsive">*}
-                <a href="https://youtu.be/fmk6zE5brkA" data-uk-lightbox><img src="/themes/uniwigs2016-m/img/category/human-hair/Curly-Wig.jpg" alt="" class="img-responsive"/></a>
+               <img src="/themes/uniwigs2016-m/img/category/human-hair/lace-sale.png" alt="" class="uk-margin-small-bottom img-responsive">
+                {*<a href="https://youtu.be/fmk6zE5brkA" data-uk-lightbox><img src="/themes/uniwigs2016-m/img/category/human-hair/Curly-Wig.jpg" alt="" class="img-responsive"/></a>*}
             </div>
             <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
         {/if}
