@@ -118,7 +118,7 @@
 							{if isset($productAddition['video']) && $productAddition['video']}
 							
 							<li class="video">
-								<a href="{$productAddition['video']}" class="items_video highslide popupvideoa" target="_blank" data-uk-lightbox data-lightbox-type="image"></a>
+								<a href="{$productAddition['video']}" class="items_video highslide popupvideoa" target="_blank" data-uk-lightbox></a>
 							</li>
 							
 							{/if}
