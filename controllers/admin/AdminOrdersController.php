@@ -65,6 +65,7 @@ class AdminOrdersControllerCore extends AdminController
 		GROUP_CONCAT(po.product_name SEPARATOR\'</br>\' ) as pname,
 		a.id_currency,
 		a.id_order AS id_pdf,
+		a.valid,
         a.total_shipping,
 		CONCAT(LEFT(c.`firstname`, 1), \'. \', c.`lastname`) AS `customer`,
 		CONCAT( c.`firstname`,\'.\',c.`lastname`) as customername, 
