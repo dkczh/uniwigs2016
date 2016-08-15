@@ -39,7 +39,6 @@
 .home-list{
 	overflow: hidden}
 .home-list li{
-	float: left;
 	width:50%;
 	padding-right:5px;
 	margin-bottom:10px;
@@ -63,7 +62,7 @@
 {/literal}
 <div><a href="{$base_dir}tag/2016-back-to-school"><img src="{$base_dir}themes/uniwigs2016-m/img/home/2016-back-to-school.jpg" alt="Ready for School? 20% off" class="img-responsive"></a></div>
 <div class="sale-category">
-	<ul class="home-list">
+	<ul class="home-list uk-flex uk-flex-wrap">
 		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs-new.jpg" alt="trendy wigs" class="img-responsive"></a></li>
 		<li><a href="{$base_dir}40452-human-hair-lace-wigs"><img src="{$img_dir}home/classic-lace-wigs.jpg" alt="classic lace wigs" class="img-responsive"></a></li>
 		<li><a href="{$base_dir}103-hair-extensions"><img src="{$img_dir}home/hair-extensions.jpg" alt="hair extensions" class="img-responsive"></a></li>

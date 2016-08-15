@@ -86,12 +86,12 @@ Product list(Grid) Styles
 ul.product_list.grid > li {
   padding: 5px;
   text-align: center;
-  width: 50%;
-  float: left; }
+  width: 50%; }
   ul.product_list.grid > li .product-container {
     background: #fff;
     padding: 0;
-    position: relative; }
+    position: relative;
+    height: 100%; }
     ul.product_list.grid > li .product-container .product-image-container {
       margin-bottom: 13px;
       position: relative; }
