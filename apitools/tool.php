@@ -17,7 +17,7 @@ class  Tool
 	{
 		
 		try {  
-	        $db = new PDO($dsn, $user, $pwd);  
+	        $db = new PDO($dsn, $user, $pwd,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES'utf8';"));  
 	       
 	    } catch (Exception $e) {  
 	        echo 'Fail to connect to database!\n';  
