@@ -190,11 +190,11 @@
             <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
         {/if}
         {if $category->id == '40453'}
-             <div class="uk-margin-small-bottom">
+             {*<div class="uk-margin-small-bottom">
                 <a href="https://youtu.be/4xbxHf3S9mM" data-uk-lightbox>
                 <img src="/themes/uniwigs2016-m/img/category/human-hair/celebrity-wigs-banner.jpg" alt="" class="img-responsive">
                 </a>
-             </div>
+             </div>*}
         {/if}
         {if $category->id == '40459'}
              <div class="uk-margin-small-bottom">
