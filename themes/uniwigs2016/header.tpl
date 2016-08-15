@@ -156,21 +156,21 @@
 						</div>
 					</div>
 				</header>
-				{*<div class="banner-sale">
+				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
-							<p><span>Summer Sale</span><span class="uk-text-bold text-primary">Up to 60% OFF!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+							<p><span>Ready for School?</span><span class="uk-text-bold text-primary">20% OFF!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
 						</div>
 					</div>
 					<div id="sale-details" class="uk-modal">
 					    <div class="uk-modal-dialog">
 					        <a class="uk-modal-close uk-close uk-close-alt"></a>
 					        <div>
-					        	<img src="/themes/uniwigs2016/img/index/top-summer-banner1.png" alt="" class="img-responsive">
+					        	<img src="/themes/uniwigs2016/img/index/top-back-to-school.png" alt="back to school 20% off" class="img-responsive">
 					        </div>
 					    </div>
 					</div>
-				</div>*}
+				</div>
 			</div>
 			<div class="columns-container">
 				<div id="slider_row" class="row">
