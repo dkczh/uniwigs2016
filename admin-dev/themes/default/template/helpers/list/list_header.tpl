@@ -85,6 +85,22 @@
 		{/foreach}
 	</div>
 </div>
+{*已发货-超24小时无运单号 订单提醒*}
+<div class="panel kpi-container" style=" margin-bottom: 0px;    padding: 10px;">
+
+	<div class="row">
+		<span  style="color: #CC2B1B;">已发货-超24小时无运单号提醒:</span>		
+		{foreach from=$noshippingremind item=row key=key}
+			<a  target="_blank"  style="color: red;" href="index.php?controller=AdminOrders&amp;id_order={$row['id_order']}&amp;vieworder&amp;token={$smarty.get.token}" class="btn btn-default" title="View">
+				<i class="icon-search-plus"></i> {$row['id_order']}
+			</a>
+		{/foreach}
+	</div>
+
+</div>
+
+
+
 {*备货时间统计*}
 <div class="panel kpi-container" style="padding: 10px;">
 	<div class="row" style="font-size: 12px;">
@@ -98,6 +114,10 @@
 			</a>
 	</div>
 </div>
+
+
+
+
 
 {/if}
 {*end自定义提醒*}
