@@ -166,7 +166,7 @@
 					    <div class="uk-modal-dialog">
 					        <a class="uk-modal-close uk-close uk-close-alt"></a>
 					        <div>
-					        	<img src="/themes/uniwigs2016/img/index/top-back-to-school.png" alt="back to school 20% off" class="img-responsive">
+					        	<a href="{$base_dir}tag/2016-back-to-school"><img src="/themes/uniwigs2016/img/index/top-back-to-school.png" alt="back to school 20% off" class="img-responsive"></a>
 					        </div>
 					    </div>
 					</div>
