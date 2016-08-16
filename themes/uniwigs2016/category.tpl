@@ -781,9 +781,9 @@
                                 <img src="/themes/uniwigs2016/img/category/synthetic-wigs/clearance-banner.png" alt="" class="img-responsive"/>
                             </div>
                         {elseif $category->id == '40459'}
-                            <div class="uk-margin-small-bottom">
+                            {*<div class="uk-margin-small-bottom">
                                 <img src="/themes/uniwigs2016/img/category/synthetic-wigs/trendy-banner.png" alt="" class="img-responsive"/>
-                            </div>
+                            </div>*}
                         {else}
                         <div class="uk-margin-small-bottom">
                             <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}">
