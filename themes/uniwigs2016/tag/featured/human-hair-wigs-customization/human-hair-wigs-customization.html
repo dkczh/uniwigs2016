@@ -44,15 +44,10 @@
 	}
 	.celebrity-wig-box{position: relative;}
 	.face.back {
-	  display: block;
-	  position: absolute;
-	  z-index: 11;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  opacity: 0;
+	  z-index: 1;
+	  margin-top: -192px;
 	}
-	.face.front{background-color: #000} 
+	.face.front{background-color: #000;z-index: 2;} 
 	.face {
 	  position: relative;
 	  width: 100%;
@@ -503,6 +498,15 @@
 {literal}
 <script>
 $(document).ready(function(){
+
+	$(".celebrity-wig-box-img li a").hover(function(){
+	   $(this).find(".front").animate({opacity: 0});
+	   $(this).find(".back").animate({opacity: 1});
+	},
+	 function(){
+	   $(this).find(".front").animate({opacity: 1});
+	   $(this).find(".back").animate({opacity: 0});
+	});
 
 	$(".semi-finished-hover li").hover(function(){
 	   $(this).find(".hover-bg").animate({opacity: 0});
