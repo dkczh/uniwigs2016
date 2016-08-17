@@ -31,7 +31,9 @@
     #cms #center_column .doc-con .uk-accordion h4.uk-active {
       color: #d32676; }
   #cms #center_column .doc-con .uk-tab > li {
-    padding: 0; }
+    padding: 0;
+    font-size: 1.1em;
+    font-weight: bold; }
   #cms #center_column .doc-con .color_con dd {
     overflow: hidden; }
     #cms #center_column .doc-con .color_con dd a {
