@@ -29,6 +29,7 @@ require_once(dirname(__FILE__).'/../../init.php');
 include_once(dirname(__FILE__).'/sendtoafriend.php');
 
 $module = new SendToAFriend();
+die(0);
 
 if (Tools::getValue('action') == 'sendToMyFriend' && Tools::getValue('secure_key') == $module->secure_key)
 {

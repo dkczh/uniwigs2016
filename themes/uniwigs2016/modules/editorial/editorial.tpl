@@ -22,44 +22,29 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-{*<div class="fb-banner uk-margin-large-bottom"><a href="{$base_dir}tag/fb-200k"><img src="{$base_dir}themes/uniwigs2016/img/index/fb20.png" alt="facebook 200k likes Celebration" class="img-responsive"></a></div>*}
-<div class="summer-sale">
-	<img src="{$base_dir}themes/uniwigs2016/img/index/summer-sale-banner.png" alt="summer slae 15% off" class="img-responsive">
-	<img src="{$base_dir}themes/uniwigs2016/img/index/summer-sale-category.jpg" alt="summer sale" usemap="#map" class="img-responsive"/>
+<div class="uk-margin-large-bottom"><a href="{$base_dir}tag/2016-back-to-school"><img src="{$base_dir}themes/uniwigs2016/img/index/2016-back-school-banner.jpg" alt="Ready for School? 20% off" class="img-responsive"></a></div>
+<div class="back-school-sale">
+	<img src="{$base_dir}themes/uniwigs2016/img/index/back-to-school.jpg" alt="back to school" usemap="#map" class="img-responsive"/>
 	<map name="map">
-	    <area shape="rect" coords="864, 2, 1139, 536" href="http://lavivid.uniwigs.com/"/>
-	    <area shape="rect" coords="577, 88, 856, 591" href="{$base_dir}40453-celebrity-hairstyles"/>
-	    <area shape="rect" coords="287, 2, 567, 514" href="{$base_dir}tag/diy-dyed-extensions"/>
+	    <area shape="rect" coords="864, 2, 1139, 536" href="{$base_dir}tag/lace-closure"/>
+	    <area shape="rect" coords="577, 88, 856, 591" href="{$base_dir}103-hair-extensions"/>
+	    <area shape="rect" coords="287, 2, 567, 514" href="{$base_dir}40452-human-hair-lace-wigs"/>
 	    <area shape="rect" coords="1, 1, 277, 595" href="{$base_dir}40459-trendy-wigs"/>
 	</map>
 </div>
-<div class="sale-nav">
-	<div class="lace-sale">
-		<div class="lace-sale-img">
-			<a href="{$base_dir}40452-human-hair-lace-wigs">
-				<img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/lace-sale-box.jpg" alt="" class="img-responsive">
+<div class="celebirty-wigs uk-margin-large-top">
+	<ul class="row">
+		<li>
+			<a href="https://youtu.be/4xbxHf3S9mM" data-uk-lightbox>
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/clelebirty-video.jpg" alt="celebirty wigs video" class="img-responsive">
 			</a>
-		</div>
-		<div class="lace-sale-button uk-margin-small-top">
-			<a href="{$base_dir}40452-human-hair-lace-wigs" class="uk-button">shop now</a>
-		</div>
-	</div>
-	<div class="classic-sale">
-		<div class="classic-sale-img">
-			<a href="{$base_dir}40455-classic-wigs">
-				<img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/class-wigs-sale.jpg" alt="" class="img-responsive">
+		</li>
+		<li>
+			<a href="{$base_dir}40453-celebrity-hairstyles">
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/celebirty-text.png" alt="celebirty wigs 15% off">
 			</a>
-		</div>
-		<div class="classic-sale-button uk-margin-small-top">
-			<a href="{$base_dir}40455-classic-wigs" class="uk-button">Classic Wigs</a>
-			<a href="{$base_dir}40456-clearance-wigs" class="uk-button">Clearance Wigs</a>
-		</div>
-	</div>
-</div>
-<div class="summer-color">
-	<div class="summer-color-box">
-		<a href="{$base_dir}tag/summer-color"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/summer-color-box.jpg" alt="" class="img-responsive"></a>
-	</div>
+		</li>
+	</ul>
 </div>
 </div>
 </div>
@@ -70,60 +55,11 @@
 	area {
 	    outline: none;
 	}
-	.sale-nav{
-		overflow: hidden;
-		margin: 45px 0;
-	}
-	.sale-nav .lace-sale{
+	.celebirty-wigs li{
 		float:left;
-		text-align: center;
+		padding:0 15px;
 	}
-	.sale-nav .classic-sale{
-		float:right;
-		text-align: center;
-	}
-	.classic-sale-button a{
-		margin-left: 10px;
-	}
-	.summer-slae{
-		position: relative;
-	}
-	.summer-sale-category{
-		position: absolute;width:50%;margin-top: -26%;margin-left: 5.4%;
-	}
-	.summer-sale-category a{
-		font-size: 1.2em;
-	    width: 40%;
-	    letter-spacing: 0;
-	    font-weight: bold;
-	    margin-bottom: 15px;
-	}
-	.summer-color{
-		position: relative;
-		margin:70px 0 50px;
-		overflow: hidden;
-	}
-	.lace-sale-button a,.classic-sale-button a{
-		font-size: 1.2em;
-	    letter-spacing: 0;
-	    font-weight: bold;
-	    padding: 0 50px;
-	    margin-bottom: 20px;
-	}
-@media (max-width: 768px){
-	.sale-nav .lace-sale{
-		margin-bottom: 50px;
-	}
-	.sale-nav .lace-sale,.sale-nav .classic-sale{
-		width:50%;
-	}
-	.sale-nav .lace-sale .img-responsive,.sale-nav .classic-sale .img-responsive{
-		display: inline;
-	}
-	.summer-sale-category a{
-		width: auto;
-	}
-}
+	
 	.sale-banner .row {
 	    margin: 0;
 	}
@@ -220,6 +156,7 @@
 
 </section>
 <!-- /Module Editorial -->
+<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
 <script type="text/javascript" src="{$base_dir}themes/uniwigs2016/js/respMap.js"></script>
 <script type="text/javascript">
 $(function() {

@@ -46,7 +46,7 @@
 
 	{foreach from=$products key="ind" item="row"}
 	<!-- Products list -->
-	<ul{if isset($id) && $id} id="{$id}"{/if} class="product_list grid row{if isset($class) && $class} {$class}{/if}" data-uk-grid-match>
+	<ul{if isset($id) && $id} id="{$id}"{/if} class="product_list grid uk-flex uk-flex-wrap{if isset($class) && $class} {$class}{/if}">
 	{foreach from=$row item=product name=products}
 		{math equation="(total%perLine)" total=$smarty.foreach.products.total perLine=$nbItemsPerLine assign=totModulo}
 		{math equation="(total%perLineT)" total=$smarty.foreach.products.total perLineT=$nbItemsPerLineTablet assign=totModuloTablet}

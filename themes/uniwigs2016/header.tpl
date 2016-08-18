@@ -83,7 +83,7 @@
 			{/foreach}
 		{/if}
 		{$HOOK_HEADER}
-		<link rel="stylesheet" href="http{if Tools::usingSecureMode()}s{/if}://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin,latin-ext" type="text/css" media="all" />
+		<link rel="stylesheet" href="http{if Tools::usingSecureMode()}s{/if}://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,latin-ext" type="text/css" media="all" />
 		<!--[if IE 8]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -156,21 +156,21 @@
 						</div>
 					</div>
 				</header>
-				{*<div class="banner-sale">
+				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
-							<p><span>Summer Sale</span><span class="uk-text-bold text-primary">Up to 60% OFF!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+							<p><span>Ready for School?</span><span class="uk-text-bold text-primary">20% OFF!</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
 						</div>
 					</div>
 					<div id="sale-details" class="uk-modal">
 					    <div class="uk-modal-dialog">
 					        <a class="uk-modal-close uk-close uk-close-alt"></a>
 					        <div>
-					        	<img src="/themes/uniwigs2016/img/index/top-summer-banner1.png" alt="" class="img-responsive">
+					        	<a href="{$base_dir}tag/2016-back-to-school"><img src="/themes/uniwigs2016/img/index/top-back-to-school.png" alt="back to school 20% off" class="img-responsive"></a>
 					        </div>
 					    </div>
 					</div>
-				</div>*}
+				</div>
 			</div>
 			<div class="columns-container">
 				<div id="slider_row" class="row">

@@ -77,7 +77,7 @@
 			{/foreach}
 		{/if}
 		{$HOOK_HEADER}
-		<link rel="stylesheet" href="http{if Tools::usingSecureMode()}s{/if}://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin,latin-ext" type="text/css" media="all" />
+		<link rel="stylesheet" href="http{if Tools::usingSecureMode()}s{/if}://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,latin-ext" type="text/css" media="all" />
 		<link rel="manifest" href="manifest.json">
     	<!-- See https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android -->
 		<link rel="apple-touch-icon-precomposed" href="{$base_dir}themes/uniwigs2016-m/img/ios/Icon57.png" />

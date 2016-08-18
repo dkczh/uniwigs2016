@@ -667,6 +667,7 @@ class HelperListCore extends Helper
 			'orderremindnormal'=>$this->getMyOrderRemind('3'),
 			'paypalremind'=>$this->getPaypalRemind(),//paypal 漏单提醒
 			'authorizeremind'=>$this->getAuthorizeRemind(),//authorize  漏单提醒 
+			'noshippingremind'=>$this->getNoShippingRemind(),//发货 24小时 未填写物流信息  提醒 
             'page' => $page,
             'simple_header' => $this->simple_header,
             'total_pages' => $total_pages,
@@ -816,6 +817,34 @@ and id_order  not in (select id_order  from  px_order_remind)");
 		 return  $result;
 		
 	}
+	/*24小时发货 未指定物流信息 订单提醒 
+	 *
+	 *
+	*/
+	public  function  getNoShippingRemind(){
+		
+		 $result = Db::getInstance()->executeS("SELECT * from (
+SELECT
+	a.id_order,
+	a.date_upd,
+	b.id_order_carrier,
+	datediff(now(),a.date_upd) odate,
+TIMESTAMPDIFF(HOUR,a.date_upd,DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%s')) as ohour
+FROM
+	ps_orders a
+LEFT JOIN px_differ_carrier b ON a.id_order = b.id_order
+WHERE
+	a.current_state = 4
+AND a.date_add > '2016-07-01 00:00:00'
+AND b.id_order_carrier IS NULL
+)mya where  ohour>24
+											");
+	/* 	var_dump($result);
+		exit; */
+		 return  $result;
+		
+	}
+	
     public function hasBulkActions($has_value = false)
     {
         if ($this->force_show_bulk_actions) {

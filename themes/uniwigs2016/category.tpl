@@ -760,11 +760,6 @@
         			{else}
                         <!-- Category image -->
                         {if $category->id == '108' or $category->id == '40439' or $category->id == '112' or $category->id == '110' or $category->id == '111' or $category->id == '116' or $category->id == '105' or $category->id == '40442'}
-                        {elseif $category->id == '40452'}
-                        <div class="uk-margin-small-bottom">
-                            <img src="/themes/uniwigs2016/img/category/human-hair/lace-banner.png" alt="" class="uk-margin-small-bottom img-responsive">
-                            {*<a href="https://youtu.be/OQCOImf3tpg" data-uk-lightbox><img src="/themes/uniwigs2016/img/category/human-hair/Curly-Wig.jpg" alt="" class="img-responsive"/></a>*}
-                        </div>
                         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
                         {elseif $category->id == '40453'}
                             <div class="uk-margin-small-bottom">
@@ -781,9 +776,9 @@
                                 <img src="/themes/uniwigs2016/img/category/synthetic-wigs/clearance-banner.png" alt="" class="img-responsive"/>
                             </div>
                         {elseif $category->id == '40459'}
-                            <div class="uk-margin-small-bottom">
+                            {*<div class="uk-margin-small-bottom">
                                 <img src="/themes/uniwigs2016/img/category/synthetic-wigs/trendy-banner.png" alt="" class="img-responsive"/>
-                            </div>
+                            </div>*}
                         {else}
                         <div class="uk-margin-small-bottom">
                             <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}">

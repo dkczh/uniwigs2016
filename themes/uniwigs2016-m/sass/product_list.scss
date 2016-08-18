@@ -130,11 +130,11 @@ ul.product_list.grid {
 		padding:5px;
 		text-align: center;
 		width: 50%;
-		float: left;
 		.product-container {
 			background: $light-background;
 			padding: 0;
 			position: relative;
+			height:100%;
 			.product-image-container {
 				margin-bottom: 13px;
 				position: relative;

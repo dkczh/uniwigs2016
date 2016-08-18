@@ -39,7 +39,6 @@
 .home-list{
 	overflow: hidden}
 .home-list li{
-	float: left;
 	width:50%;
 	padding-right:5px;
 	margin-bottom:10px;
@@ -50,42 +49,33 @@
 }
 .promotion-block a,.home-box a{display: block}
 .promotion-block{margin:14px 0;}
-.summer-sale{
+.sale-category{
 	background: #fff;
 	padding-top: 15px;
 }
-.summer-sale a{
+.sale-category a{
 	font-weight: bold;
 
 }
 
 </style>
 {/literal}
-{*<div class="fb-banner"><a href="{$base_dir}tag/fb-200k"><img src="{$img_dir}home/fb-200k.png" alt="facebook 200k likes Celebration" class="img-responsive"></a></div>*}
-<div class="summer-sale">
-	<ul class="home-list">
-		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs.jpg" alt="trendy wigs" class="img-responsive"></a></li>
-		<li><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$img_dir}home/celebrity-wigs.jpg" alt="celebrity wigs" class="img-responsive"></a></li>
-		<li><a href="{$base_dir}tag/diy-dyed-extensions"><img src="{$img_dir}home/diy-dye.jpg" alt="DIY-DYE extensions" class="img-responsive"></a></li>
-		<li><a href="http://lavivid.uniwigs.com/"><img src="{$img_dir}home/lavivd.jpg" alt="lavivid" class="img-responsive"></a></li>
+<div><a href="{$base_dir}tag/2016-back-to-school"><img src="{$base_dir}themes/uniwigs2016-m/img/home/2016-back-to-school.jpg" alt="Ready for School? 20% off" class="img-responsive"></a></div>
+<div class="sale-category">
+	<ul class="home-list uk-flex uk-flex-wrap">
+		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs-new.jpg" alt="trendy wigs" class="img-responsive"></a></li>
+		<li><a href="{$base_dir}40452-human-hair-lace-wigs"><img src="{$img_dir}home/classic-lace-wigs.jpg" alt="classic lace wigs" class="img-responsive"></a></li>
+		<li><a href="{$base_dir}103-hair-extensions"><img src="{$img_dir}home/hair-extensions.jpg" alt="hair extensions" class="img-responsive"></a></li>
+		<li><a href="{$base_dir}tag/lace-closure"><img src="{$img_dir}home/lace-closure.jpg" alt="lace closure" class="img-responsive"></a></li>
 	</ul>
 </div>
 <div class="promotion-block">
 	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" class="img-responsive"></a>
 </div>
-<div class="lace-sale">
-	<ul class="home-list">
-		<li><a href="{$base_dir}40452-human-hair-lace-wigs"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$img_dir}home/human-hair-lace-wigs.jpg" alt="" class="img-responsive"></a></li>
-		<li><a href="{$base_dir}40455-classic-wigs"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$img_dir}home/frozen-prices.jpg" alt="" class="img-responsive"></a></li>
-	</ul>
-</div>
 <div class="promotion-block">
-	<a href="{$base_dir}tag/toppers"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="/themes/uniwigs2016-m/img/home/top-hair.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
+	<a href="{$base_dir}tag/toppers"><img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016-m/img/home/top-hair.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
 </div>
 
-<div class="summer-color">
-	<a href="{$base_dir}tag/summer-color"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$img_dir}home/summer-color.jpg" alt="" class="img-responsive"></a>
-</div>
 <!-- Module Editorial -->
 
 {*<div class="home-category">
@@ -106,7 +96,7 @@
 
 
 {*<div class="promotion-block">
-	<a href="http://lavivid.uniwigs.com"><img src="/themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" class="img-responsive"></a>
+	<a href="http://lavivid.uniwigs.com"><img src="{$base_dir}themes/uniwigs2016-m/img/home/lavivid.jpg" alt="lavivid" class="img-responsive"></a>
 </div>
 <div class="home-box">
 	<ul id="home_uniextension">
@@ -115,6 +105,6 @@
 	</ul>
 </div>*}
 <div class="promotion-block">
-	<a href="{$base_dir}customer-show"><img src="/themes/uniwigs2016-m/img/milanoo_blank.gif" original="/themes/uniwigs2016-m/img/home/customer-show.jpg" alt="#uniwigs" class="img-responsive"></a>
+	<a href="{$base_dir}customer-show"><img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016-m/img/home/customer-show.jpg" alt="#uniwigs" class="img-responsive"></a>
 </div>
 <!-- /Module Editorial -->
