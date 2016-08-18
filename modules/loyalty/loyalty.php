@@ -75,7 +75,11 @@ class Loyalty extends Module
 			|| !$this->registerHook('orderReturn') || !$this->registerHook('cancelProduct')	|| !$this->registerHook('customerAccount')
 			|| !Configuration::updateValue('PS_LOYALTY_POINT_VALUE', '0.20') || !Configuration::updateValue('PS_LOYALTY_MINIMAL', 0)
 			|| !Configuration::updateValue('PS_LOYALTY_POINT_RATE', '10') || !Configuration::updateValue('PS_LOYALTY_NONE_AWARD', '1')
-			|| !Configuration::updateValue('PS_LOYALTY_TAX', '0') || !Configuration::updateValue('PS_LOYALTY_VALIDITY_PERIOD', '0'))
+			|| !Configuration::updateValue('PS_LOYALTY_TAX', '0') || !Configuration::updateValue('PS_LOYALTY_VALIDITY_PERIOD', '0')
+			|| !$this->registerHook('addReview')
+			|| !$this->registerHook('addShare')
+			|| !$this->registerHook('snsShare')
+			)
 			return false;
 
 		$defaultTranslations = array('en' => 'Loyalty reward', 'fr' => 'Récompense fidélité');
@@ -508,6 +512,61 @@ class Loyalty extends Module
 		$loyalty_new->add();
 
 		return;
+	}
+
+	public function hookAddReview($params)
+	{
+		include_once(dirname(__FILE__).'/LoyaltyStateModule.php');
+		include_once(dirname(__FILE__).'/LoyaltyModule.php');
+
+		$loyalty = new LoyaltyModule();
+		$loyalty->id_customer = (int)$params['customer']->id;
+		$loyalty->id_order = (int)$params['oid'];
+		$loyalty->id_item = (int)$params['iid'];
+		$loyalty->mark = 'add review';
+
+		$reward_availale = true;
+		$has_imgs = false;
+		$has_txt = false;
+
+		$content_length = (int)$params['content_length'];
+		$photo_count = (int)$params['photo_count'];
+		$video_count = (int)$params['video_count'];
+		if ($content_length >= 50) {
+			$has_txt = true;
+		}
+		if ($photo_count >= 1) {
+			$has_imgs = true;
+		}
+
+		$reward_points = 0;
+		if ($reward_availale) {
+			if ($has_imgs && $has_txt) {
+				$reward_points = 1000;
+			} elseif ($has_imgs) {
+				$reward_points = 500;
+			} elseif ($has_txt) {
+				$reward_points = 200;
+			}
+		}
+		$loyalty->points = $reward_points;
+
+		if (!Configuration::get('PS_LOYALTY_NONE_AWARD') && (int)$loyalty->points == 0)
+			$loyalty->id_loyalty_state = LoyaltyStateModule::getNoneAwardId();
+		else
+			$loyalty->id_loyalty_state = LoyaltyStateModule::getDefaultId();
+
+		return $loyalty->save();
+	}
+
+	public function hookAddShare($params)
+	{
+		// TODO
+	}
+
+	public function hookSnsShare($params)
+	{
+		// TODO
 	}
 
 	public function getL($key)
