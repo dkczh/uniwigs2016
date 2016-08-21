@@ -62,7 +62,7 @@ class ProductController extends ProductControllerCore
                 $prd = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
                 select id_product,reference
                 from '._DB_PREFIX_.'product
-                where id_product in (select id_product from '._DB_PREFIX_.'product_attribute reference = "'.$sku.'")
+                where id_product in (select id_product from '._DB_PREFIX_.'product_attribute where reference = "'.$sku.'")
                 limit 1
                 ');
             }
