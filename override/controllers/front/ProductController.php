@@ -122,7 +122,7 @@ class ProductController extends ProductControllerCore
             // $this->context->smarty->assign('HOOK_PRODUCT_FEATURES',
             //     Hook::exec('displayProductFeatures', array('product' => $this->product)));
 
-			$rvm_db_name = '`dev_uniwigs_reviewmgr_online_2016.08.17`';
+			$rvm_db_name = '`uniwigs_rvm`';
 			$latest_reviews = Db::getInstance()->query("
 			select * from $rvm_db_name.reviews
 			where id_review in (
