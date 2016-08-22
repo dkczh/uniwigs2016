@@ -108,8 +108,11 @@ class Tag extends TagCore
 	{
 		return $this->getSkus($context, false);
 	}
-
-	public function getProductsArray(Context $context = null)
+	
+	/*
+	 * $like  如果为true 表示 you may also like 调用 tag产品
+	*/
+	public function getProductsArray(Context $context = null,$like = null)
 	{
 		if (!$context)
 			$context = Context::getContext();
@@ -172,6 +175,13 @@ class Tag extends TagCore
 					ORDER BY instr(",'.str_ireplace("\n", ',', $this->skus).',", concat(",",p.reference,","))'.
 					($limit > 0 ? ' LIMIT '.(int)$start.','.(int)$limit : '');
 			$rq = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql);
+			if($like){
+				
+				return  $rq;
+				
+			}
+	
+			
 			$rq = Product::getProductsProperties($id_lang, $rq);
 			foreach ($skus_array as $ind=>$skus) {
 				$products_tmp = array();
@@ -207,14 +217,16 @@ class Tag extends TagCore
 				($limit > 0 ? ' LIMIT '.(int)$start.','.(int)$limit : '');
 		$rq2 = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql2);
 		$rq2 = Product::getProductsProperties($id_lang, $rq2);
-
+		
+		
+		
 		if (empty($products_array)) {
 			$products_array[] = $rq2;
 		} else {
 			$arr_len = count($products_array);
 			$products_array[$arr_len-1] = array_merge($products_array[$arr_len-1], $rq2);
 		}
-
+		
 		return $products_array;
 	}
 

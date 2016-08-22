@@ -190,7 +190,16 @@ class ProductsCategory extends Module
 					$middle_position = 5;
 				}
 			}
+			//调用指定 tag 下面的产品 设定为 you  may also  like
+			$id_category_n = isset($params['category']->id_category) ? (int)$params['category']->id_category : $product->id_category_default	;
+			$id_category_d = (int)$product->id_category_default;
+		
+			if($id_category_n == '40459' or $id_category_d== '40459' ){
+				$tag = new Tag(null,'Lace Wigs', $this->context->language->id);
+				$category_products=$tag->getProductsArray(null,true);
+			}
 
+			
 			// Display tpl
 			$this->smarty->assign(
 				array(
