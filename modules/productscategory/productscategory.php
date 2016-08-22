@@ -195,7 +195,7 @@ class ProductsCategory extends Module
 			$id_category_d = (int)$product->id_category_default;
 		
 			if($id_category_n == '40459' or $id_category_d== '40459' ){
-				$tag = new Tag(null,'Lace Wigs', $this->context->language->id);
+				$tag = new Tag(null,'trendy youmayalsolike', $this->context->language->id);
 				$category_products=$tag->getProductsArray(null,true);
 			}
 
