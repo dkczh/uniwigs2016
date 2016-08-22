@@ -33,11 +33,24 @@ $iid = intval($_GET['iid']);
 $review_id = intval($_GET['review_id']);
 $review_at = intval($_GET['review_at']);
 $type = $_GET['type'];
+$content_length = (int)$_GET['content_length'];
+$photo_count = (int)$_GET['photo_count'];
+$video_count = (int)$_GET['video_count'];
 
 if ($type=='review') {
 	Db::getInstance(_PS_USE_SQL_SLAVE_)->execute("
 	insert into px_order_item_review(id_order_detail,id_review,review_at,date_add)
 	value($iid,$review_id,$review_at,'".date('Y-m-d H:i:s')."')");
+
+	// Hook validate order
+	Hook::exec('addReview', array(
+	    'customer' => Context::getContext()->customer,
+	    'oid' => $oid,
+	    'iid' => $iid,
+	    'content_length' => $content_length,
+	    'photo_count' => $photo_count,
+	    'video_count' => $video_count,
+	));
 } elseif ($type=='share') {
 	Db::getInstance(_PS_USE_SQL_SLAVE_)->execute("
 	insert into px_order_item_share(id_order_detail,id_share,share_at,date_add)

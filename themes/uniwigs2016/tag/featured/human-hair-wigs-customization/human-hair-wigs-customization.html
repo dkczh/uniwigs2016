@@ -44,16 +44,10 @@
 	}
 	.celebrity-wig-box{position: relative;}
 	.face.back {
-	  display: block;
-	  box-sizing: border-box;
-	  position: absolute;
-	  z-index: 11;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  opacity: 0;
+	  z-index: 1;
+	  margin-top: -192px;
 	}
-	.face.front{background-color: #000} 
+	.face.front{background-color: #000;z-index: 2;} 
 	.face {
 	  position: relative;
 	  width: 100%;
@@ -228,10 +222,6 @@
 	  top: 36%;
 	  border-radius: 50%;
 	}
-	.highslide {
-	  outline: none;
-	  text-decoration: none;
-	}
 	.play-video:after {
 	  content: '';
 	  position: absolute;
@@ -275,7 +265,7 @@
 	<div class="custom-video">
 		<div class="custom-video-bg"></div>
 		<div class="custom-video-img">
-			<a href="https://www.youtube.com/embed/UcHbReG17U0" class="highslide popupvideoa">
+			<a href="https://www.youtube.com/embed/UcHbReG17U0" data-uk-lightbox>
 				<span class="play-video"></span>
 				<img src="/themes/uniwigs2016/tag/featured/human-hair-wigs-customization/image/video.jpg" alt="">
 			</a>
@@ -503,26 +493,8 @@
 			</a>
 		</div>
 	</div>
-
-	
 </div>
-<link rel="stylesheet" type="text/css" href="/themes/uniwigs2014/cus-show/highslide/highslide.css">
-<script type="text/javascript" src="/themes/uniwigs2014/cus-show/highslide.js"></script>
-{literal}
-<script type="text/javascript">
-	hs.graphicsDir = '/themes/uniwigs2014/cus-show/highslide/graphics/';
-	hs.align = 'center';
-	hs.transitions = ['expand', 'crossfade'];
-	hs.wrapperClassName = 'dark borderless floating-caption';
-	hs.fadeInOut = true;
-	hs.dimmingOpacity = .75;
-	jQuery(function($){
-	$('.popupvideoa').click(function(){
-		return hs.htmlExpand(this, { outlineType: "rounded-white", wrapperClassName: "draggable-header", objectType: "iframe",width:650,height:500});
-	});
-});
-</script>
-{/literal}
+<script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
 {literal}
 <script>
 $(document).ready(function(){

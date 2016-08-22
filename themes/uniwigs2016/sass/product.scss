@@ -648,7 +648,7 @@ span.view_scroll_spacer {
 			    background: #F5F5F5;
 			    margin-bottom: 1px;
 			    padding-bottom: 7px;
-			    font-size: 1.2em;
+			    font-size: 1.4em;
 			}
 			&.uk-active>a{
 				border-color: #DDD;
@@ -688,7 +688,7 @@ span.view_scroll_spacer {
 			font-family: $font-icon;
 			position: absolute;
 			top: 0;
-			left: 0;
+			left: 50px;
 			bottom: 0;
 			font-size: 25px;
 			line-height: 47px;
@@ -717,7 +717,7 @@ span.view_scroll_spacer {
 			font-weight: 700;
 			font-size: 20px;
 			line-height: 22px;
-			padding: 12px 20px 14px 55px;
+			padding: 12px 60px 14px 100px;
 			display: block !important;
 			@include transition(all 0.3s ease);
 		}

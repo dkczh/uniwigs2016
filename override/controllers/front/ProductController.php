@@ -56,6 +56,14 @@ class ProductController extends ProductControllerCore
             where reference = "'.$sku.'"
             limit 1
             ');
+            if (empty($prd)) {
+                $prd = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS('
+                select id_product,reference
+                from '._DB_PREFIX_.'product
+                where id_product in (select id_product from '._DB_PREFIX_.'product_attribute where reference = "'.$sku.'")
+                limit 1
+                ');
+            }
             if ($prd) {
                 $_GET['id_product'] = $prd[0]['id_product'];
             }

@@ -265,7 +265,11 @@
                 {hook h="displayProductPriceBlock" product=$product type="after_price"}
 				<div class="clear"></div>
 			</div> <!-- end content_prices -->
-	
+			{if $category->id=='102'}
+			<p class="pro_promotions text-primary" style="color:#920783">
+				Free Color Ring for First Order with Human Hair Wigs
+			</p>
+			{/if}
 			<div class="jump_options clearfix">
 				{if isset($HOOK_PRODUCT_ASSOCIATIONS) && $HOOK_PRODUCT_ASSOCIATIONS}{$HOOK_PRODUCT_ASSOCIATIONS}{/if}
 			</div>
@@ -881,14 +885,7 @@
 					</div> <!-- end box-cart-bottom -->
 				</div> <!-- end box-info-product -->
 				
-				{if $category->id=='102'}
-				<p class="pro_promotions uk-margin-top uk-margin-bottom text-primary" style="color:#920783">
-					Free Color Ring for First Order with Human Hair Wigs
-				</p>
-				{/if}
-
 				<div class="prod-help">
-					<h4>More Information</h4>
 					<ul class="arrow-bullet-links clearfix">
 						<li><a href="#specification_infos" data-uk-modal id="Product_Specifications_product">Product Specifications</a></li>
 						<li><a href="#wear_care" data-uk-modal id="Wear_Care_product">Wear & Care</a></li>
