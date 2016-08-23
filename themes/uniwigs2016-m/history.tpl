@@ -109,6 +109,7 @@
 		<p class="alert alert-warning">{l s='You have not placed any orders.'}</p>
 	{/if}
 </div>
+
 <script>
 {if isset($order.id_customer) }
 window.customer_id="{$order.id_customer}";
@@ -117,30 +118,30 @@ window.customer_id="";
 {/if}
 
 $(function() {
-	$('#block-order-detail').on('click','.rate_product',function(){
-		openRatingWindow($(this).attr('oid'), $(this).attr('iid'), $(this).attr('pid'), $(this).attr('psku'));
+	$('#block-order-detail').on('click','.write_review',function(){
+		openReviewWindow($(this).attr('oid'), $(this).attr('iid'), $(this).attr('isku'), $(this).attr('pid'), $(this).attr('psku'));
 	});
 	$('#block-order-detail').on('click','.upload_pho_vid',function(){
-		openUploadWindow($(this).attr('oid'), $(this).attr('iid'), $(this).attr('pid'), $(this).attr('psku'));
+		openUploadWindow($(this).attr('oid'), $(this).attr('iid'), $(this).attr('isku'), $(this).attr('pid'), $(this).attr('psku'));
 	});
 
-	window.openRatingWindow = function(oid,iid,pid,psku) {
+	window.openReviewWindow = function(oid,iid,isku,pid,psku) {
 		// $('#wrap_container').addClass('modal_content_loading');
-		$('#submitFrame').attr('src', 'http://rvm.uniwigs.com/api_review3/addrating?q='+customer_id+','+oid+','+iid+','+pid+','+psku);
+		$('#submitFrame').attr('src', 'http://rvm.uniwigs.com/api_review4/addreview?q='+customer_id+','+oid+','+iid+','+isku+','+pid+','+psku);
 	}
-	window.openUploadWindow = function(oid,iid,pid,psku) {
+	window.openUploadWindow = function(oid,iid,isku,pid,psku) {
 		// $('#frame_container').addClass('modal_content_loading');
-		$('#submitFrame').attr('src', 'http://rvm.uniwigs.com/api_review3/addupload?q='+customer_id+','+oid+','+iid+','+pid+','+psku);
+		$('#submitFrame').attr('src', 'http://rvm.uniwigs.com/api_review4/addshare?q='+customer_id+','+oid+','+iid+','+isku+','+pid+','+psku);
 	}
 
-	window.reciveMsg_addrating = function(return_data){
+	window.reciveMsg_addreview = function(return_data){
 		eval('return_data = '+decodeURIComponent(return_data));
 		if (return_data['status']==0) {
 			alert(return_data['msg']);
 		} else {
 			$.get('/extra/order-review-feedback.php',return_data['content'],function(data){
 				if (data.length==2 && data=='ok') {
-					alert('Comment added successfully!');
+					alert('Review added successfully!');
 					document.location.reload();
 				} else {
 					alert('Fail to update status!');
@@ -149,21 +150,21 @@ $(function() {
 		}
 		// $('#wrap_container').removeClass('modal_content_loading');
 	}
-	window.reciveMsg_addupload = function(return_data){
+	window.reciveMsg_addshare = function(return_data){
 		eval('return_data = '+decodeURIComponent(return_data));
 		if (return_data['status']==0) {
 			alert(return_data['msg']);
 		} else {
 			$.get('/extra/order-review-feedback.php',return_data['content'],function(data){
 				if (data.length==2 && data=='ok') {
-					alert('Photo/Video added successfully!');
+					alert('Photos/Videos added successfully!');
 					document.location.reload();
 				} else {
 					alert('Fail to update status!');
 				}
 			});
 		}
-		// $('#wrap_container').removeClass('modal_content_loading');
+		// $('#frame_container').removeClass('modal_content_loading');
 	}
 });
 </script>
@@ -173,3 +174,10 @@ $(function() {
 		<iframe id="submitFrame" border="0"><div class="uk-modal-spinner"></div></iframe>
 	</div>
 </div>
+{*<div id="frame_container" class="uk-modal">
+	<div class="uk-modal-dialog">
+		<a class="uk-modal-close uk-close"></a>
+		<iframe id="submitFrame" border="0"></iframe>
+		<div class="uk-modal-spinner"> </div>
+	</div>
+</div>*}

@@ -359,13 +359,13 @@
 						</td>
 						<td>
 							{if $order->getCurrentState()==4||$order->getCurrentState()==5}
-							<div class="write_comment">
+							<div class="add_reviews">
 								{if $product.item_review.id_review}{else}
-								<a href="#wrap_container" class="rate_product uk-button uk-button-small" data-uk-modal oid="{$product.id_order}" iid="{$product.id_order_detail}" pid="{$product.product_id}" psku="{$product.product_reference}">Write a comment</a>
+								<a href="#wrap_container" class="write_review uk-button uk-button-small" data-uk-modal oid="{$product.id_order}" iid="{$product.id_order_detail}" isku="{$product.product_reference}" pid="{$product.id_product}" psku="{$product.reference}">Write a review</a>
 								{/if}
-								{if $product.item_review.id_review}
-								<a href="#wrap_container" class="upload_pho_vid uk-button uk-button-small" data-uk-modal oid="{$product.id_order}" iid="{$product.id_order_detail}" pid="{$product.product_id}" psku="{$product.product_reference}">Post photos or videos</a>
-								{/if}
+								{*if $product.item_review.id_review}
+								<a href="#wrap_container" class="upload_pho_vid uk-button uk-button-small" data-uk-modal oid="{$product.id_order}" iid="{$product.id_order_detail}" isku="{$product.product_reference}" pid="{$product.id_product}" psku="{$product.reference}">Post photos or videos</a>
+								{/if*}
 							</div>
 							{/if}
 						</td>
