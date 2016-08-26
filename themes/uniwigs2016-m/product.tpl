@@ -392,8 +392,7 @@
 														{/foreach}
 													</ul>
 													{if $product->id == '40677' or $product->id == '40682' or $product->id == '41128' or $product->id == '41054' or $product->id == '40475' or $product->id == '40685' or $product->id == '40792' or $product->id == '40678' or $product->id == '40698' or $product->id == '40469' or $product->id == '40683' or $product->id == '40793' or $product->id == '40977' or $product->id == '40686' or $product->id == '40699' or $product->id == '40681' or $product->id == '40680' or $product->id == '40473' or $product->id == '40466' or $product->id == '41167' or $product->id == '40474'}
-													<p class="text-primary"><small>Celebrity color can only be received by choosing "Celebrity-Style+ 14 days"; you will receive the single color if you select the others.</small></p>
-													<p class="text-primary"><small>e.g.: If you choose the 2#, you will get a wig all in 2# dark brown.</small></p>
+													<p class="text-primary"><small>Unless "Celebrity-Style+ 14 days" is selected, you will receive the wig with solid color.</small></p>
 													{/if}
 													<input type="hidden" class="color_pick_hidden" name="{$groupName|escape:'html':'UTF-8'}" value="{$default_colorpicker|intval}" />
 												{elseif ($group.group_type == 'radio')}
