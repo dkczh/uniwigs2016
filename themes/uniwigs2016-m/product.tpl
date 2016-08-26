@@ -672,6 +672,21 @@
 		<li>
 			{$PRODUCT_REVIEWS}
 			<div class="shows">
+				<div class="get-points"><a href="#shareyouphotos" class="share-your-photos" data-uk-modal><img src="/themes/uniwigs2016/img/public/get-point.png" alt="" class="img-responsive"></a></div>
+				<div id="shareyouphotos" class="uk-modal">
+				    <div class="uk-modal-dialog">
+				        <a class="uk-modal-close uk-close"></a>
+				        <div class="pr-details">
+				        	<p>Uniwigs encourages all our dear customers to leave your valuable reviews or photos on our website. In return, we will offer you corresponding loyalty points.</p>
+				        	<ul>
+				        		<li>For text reviews, you can get <b>200 loyalty points</b>.</li>
+				        		<li>For photo reviews, you can get <b>500 loyalty points</b>.</li>
+				        		<li>If you leave both text reviews and photos, we will offer you <b>1000 loyalty points</b>.</li>
+				        	</ul>
+				        	<p style="background: #da6667;color: #fff;text-align: center;padding: 10px 0;font-size: 1.1em;"><b>100</b> loyalty points = <b>$1.00</b></p>
+				        </div>
+				    </div>
+				</div>
 				<article class="border-bottom">
 					<h2>Customer Shows</h2>
 				</article>

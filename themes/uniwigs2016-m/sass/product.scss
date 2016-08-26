@@ -33,6 +33,20 @@ a.fancybox-nav {
     background-color: #f4f4f4;
     padding-top: 15px;
 }
+.pr-details p {
+    line-height: 1.6;
+}
+.pr-details ul{
+	list-style: disc;
+	padding: 0 0 0 15px;
+	margin-bottom: 9px;
+	ol{
+		list-style: decimal;
+		padding-left: 15px;
+		margin-bottom: 9px;
+	}
+}
+.pr-details ul li{padding-bottom:10px}
 .latest_reviews{display: none;}
 .uk-tab{background-color: $light-background}
 /* .pb-left-column ***************************************************************************** */

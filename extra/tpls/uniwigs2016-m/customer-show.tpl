@@ -2,25 +2,8 @@
 <style>
 #columns{max-width: 100%;padding:0;}
 .containerIndex{position: relative;margin:0 auto;}
+.containerIndex{width:100%;}
 
-@media (min-width: 320px) {
-	.containerIndex{width:100%;}
-	.containerIndex a.share-your-photos{background: url("/themes/uniwigs2016-m/img/public/m-customer-show-banner.png") no-repeat center top;height:190px;background-size:contain;}
-}
-@media (min-width: 767px) {
-	.containerIndex{width:1000px;}
-	.containerIndex a.share-your-photos{background: url("/themes/uniwigs2016/img/public/customer-show-banner.jpg") no-repeat center top;height:350px;background-size:contain;}
-}
-@media (min-width: 1280px) {
-	.containerIndex{width:1280px;}
-	.containerIndex a.share-your-photos{background: url("/themes/uniwigs2016/img/public/customer-show-banner.jpg") no-repeat center top;height:450px;}
-}
-@media (min-width: 1440px) {
-	.containerIndex{width:1380px;}
-}
-@media (min-width: 1680px) {
-	.containerIndex{width:1600px;}
-}
 #pubu .box p.view_btn{
 	background: #FAFAFA;
 	border-top: 1px solid #F5F5F5;
@@ -44,9 +27,6 @@
 	position: relative;
 	z-index: 5;
 }
-	@media (max-width: 1024px) {
-		#pubu.container{padding: 0}
-	}
 #pubu .pic a{
 	display: block;
 	width: 100%}
@@ -202,25 +182,32 @@ font-weight: bold;
 border: 1px solid #C04;
 border-radius: 50% 50%;
 font-size: 11px;}
+.pr-details ul {
+    list-style: disc;
+    padding: 0 0 0 15px;
+    margin-bottom: 9px;
+}
+.pr-details ul li {
+    padding-bottom: 10px;
+}
 </style>
 {/literal}
 
 {assign var="cat_use_name" value='1'}
 
 <section class="containerIndex">
-	<a href="#shareyouphotos" class="img-responsive share-your-photos" data-uk-modal></a>
+	<a href="#shareyouphotos" class="img-responsive share-your-photos" data-uk-modal><img src="/themes/uniwigs2016-m/img/public/m-customer-show-banner.png" alt="" class="img-responsive"></a>
 	<div id="shareyouphotos" class="uk-modal">
 	    <div class="uk-modal-dialog">
 	        <a class="uk-modal-close uk-close"></a>
-	        <div class="xize">
-	        	<h4>WRITE YOUR REVIEW AND UPLOAD A SNAPSHOT OF YOUR NEW LOOK.</h4>
-	        	<h4>How to write a winning review:</h4>
-	        	<ul class="uk-list uk-list-space">
-	        		<li><span class="uk-text-bold">1</span>. <span>Sign in your personal Uniwigs account and select “My Orders”.</span></li>
-	        		<li><span class="uk-text-bold">2</span>. <span>Find the product that you purchased and click “Write a Comment”</span></li>
-	        		<li><span class="uk-text-bold">3</span>. <span>Follow the instruction to write a comment and upload a photo of your new look.</span></li>
-	        		<li>Uniwigs will choose ONE lucky candidate every THREE months as the winner! Who will get the prize? We are looking forward to your participation.</li>
+	        <div class="pr-details">
+	        	<p>Uniwigs encourages all our dear customers to leave your valuable reviews or photos on our website. In return, we will offer you corresponding loyalty points.</p>
+	        	<ul>
+	        		<li>For text reviews, you can get <b>200 loyalty points</b>.</li>
+	        		<li>For photo reviews, you can get <b>500 loyalty points</b>.</li>
+	        		<li>If you leave both text reviews and photos, we will offer you <b>1000 loyalty points</b>.</li>
 	        	</ul>
+	        	<p style="background: #da6667;color: #fff;text-align: center;padding: 10px 0;font-size: 1.1em;"><b>100</b> loyalty points = <b>$1.00</b></p>
 	        </div>
 	    </div>
 	</div>

@@ -1420,9 +1420,28 @@
 		<div id="product_reviews" class="product_customer_reviews title-hr">
 			<h3>SHOW & COMMENTS</h3>
 			<p class="hr"></p>
+			<div class="get-points"><a href="#shareyouphotos" class="share-your-photos" data-uk-modal><img src="/themes/uniwigs2016/img/public/get-point.png" alt="" class="img-responsive"></a></div>
+			<div id="shareyouphotos" class="uk-modal">
+			    <div class="uk-modal-dialog">
+			        <a class="uk-modal-close uk-close"></a>
+			        <div class="pr-details">
+			        	<p>Uniwigs encourages all our dear customers to leave your valuable reviews or photos on our website. In return, we will offer you corresponding loyalty points.</p>
+			        	<ul>
+			        		<li>For text reviews, you can get <b>200 loyalty points</b>.</li>
+			        		<li>For photo reviews, you can get <b>500 loyalty points</b>.</li>
+			        		<li>If you leave both text reviews and photos, we will offer you <b>1000 loyalty points</b>.</li>
+			        	</ul>
+			        	<p style="background: #da6667;color: #fff;text-align: center;padding: 10px 0;font-size: 1.1em;"><b>100</b> loyalty points = <b>$1.00</b></p>
+			        </div>
+			    </div>
+			</div>
 			<div class="row">
 				<div class="comments_photo col-sm-8 uk-margin-top">
-					<div class="comments-title"><h4>Customer Comments</h4><span class="text-muted">! Products can comment only after purchase</span></div>
+					<div class="comments-title">
+						<h4>Customer Comments</h4>
+						<span class="text-muted">! Products can comment only after purchase</span>
+
+					</div>
 					
 					<div class="comments_container"></div>
 				</div>

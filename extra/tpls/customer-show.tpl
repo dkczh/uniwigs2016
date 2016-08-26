@@ -198,7 +198,7 @@ font-size: 11px;}
 {assign var="cat_use_name" value='1'}
 
 <section class="containerIndex">
-	<a href="/content/34-share-your-photos" target="_blank" class="img-responsive share-your-photos"></a>
+	<a target="_blank" class="img-responsive share-your-photos"></a>
 <div class="customer-nav">
 	<div class="container">
 		<ul class="row">

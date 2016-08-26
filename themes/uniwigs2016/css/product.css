@@ -1024,6 +1024,10 @@ ul#text_fields {
 #customizedDatas {
   float: right; }
 
+.get-points {
+  width: 700px;
+  margin: 40px auto 0; }
+
 .items_video:after {
   font-family: "FontAwesome";
   color: #FFF;
