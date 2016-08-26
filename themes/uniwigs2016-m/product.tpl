@@ -672,7 +672,7 @@
 		<li>
 			{$PRODUCT_REVIEWS}
 			<div class="shows">
-				<div class="get-points"><a href="#shareyouphotos" class="share-your-photos" data-uk-modal><img src="/themes/uniwigs2016/img/public/get-point.png" alt="" class="img-responsive"></a></div>
+				<div class="get-points"><a href="#shareyouphotos" class="share-your-photos" data-uk-modal><img src="/themes/uniwigs2016-m/img/public/get-points.png" alt="" class="img-responsive"></a></div>
 				<div id="shareyouphotos" class="uk-modal">
 				    <div class="uk-modal-dialog">
 				        <a class="uk-modal-close uk-close"></a>
