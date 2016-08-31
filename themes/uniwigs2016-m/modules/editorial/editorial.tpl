@@ -60,7 +60,7 @@
 
 </style>
 {/literal}
-<div><a href="{$base_dir}tag/2016-back-to-school"><img src="{$base_dir}themes/uniwigs2016-m/img/home/2016-back-to-school.jpg" alt="Ready for School? 20% off" class="img-responsive"></a></div>
+{*<div><a href="{$base_dir}tag/2016-back-to-school"><img src="{$base_dir}themes/uniwigs2016-m/img/home/2016-back-to-school.jpg" alt="Ready for School? 20% off" class="img-responsive"></a></div>*}
 <div class="sale-category">
 	<ul class="home-list uk-flex uk-flex-wrap">
 		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs-new.jpg" alt="trendy wigs" class="img-responsive"></a></li>

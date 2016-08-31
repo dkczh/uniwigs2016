@@ -22,8 +22,8 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<div class="uk-margin-large-bottom"><a href="{$base_dir}tag/2016-back-to-school"><img src="{$base_dir}themes/uniwigs2016/img/index/2016-back-school-banner.jpg" alt="Ready for School? 20% off" class="img-responsive"></a></div>
-<div class="back-school-sale">
+{*<div class="uk-margin-large-bottom"><a href="{$base_dir}tag/2016-back-to-school"><img src="{$base_dir}themes/uniwigs2016/img/index/2016-back-school-banner.jpg" alt="Ready for School? 20% off" class="img-responsive"></a></div>
+<div class="back-school-sale">*}
 	<img src="{$base_dir}themes/uniwigs2016/img/index/back-to-school.jpg" alt="back to school" usemap="#map" class="img-responsive"/>
 	<map name="map">
 	    <area shape="rect" coords="864, 2, 1139, 536" href="{$base_dir}tag/lace-closure"/>
