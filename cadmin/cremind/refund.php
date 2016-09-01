@@ -15,7 +15,7 @@ if(isset($_GET['id_customer'])&&isset($_GET['email'])&&isset($_GET['content'])){
 	exit;  */
 	
 	$_GET['email']=null;
-	header("Location: http://www.uni.com/cadmin/cremind/refund.php"); 
+	header("Location: http://".$_SERVER['HTTP_HOST']."/cadmin/cremind/refund.php"); 
 exit;
 }
 
