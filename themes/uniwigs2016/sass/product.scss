@@ -144,6 +144,22 @@ a.fancybox-nav {
 			}
 		}
 	}
+	span.video{
+		float: left;
+		cursor: pointer;
+		margin: 5px 5px 5px 0;
+		a{
+			display: block;
+			border: 3px solid #fff;
+			background: #fbfbfb;
+			height: 101px;
+			width: 88px;
+			text-align: center;
+		}
+		&:after{
+			line-height: 1.8em;
+		}
+	}
 }
 
 .show-right-column.hide-left-column, .hide-right-column.show-left-column
