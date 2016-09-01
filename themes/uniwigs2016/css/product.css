@@ -141,8 +141,8 @@ a.fancybox-nav {
       height: 101px;
       width: 88px;
       text-align: center; }
-    #thumbs_list span.video:after {
-      line-height: 1.8em; }
+      #thumbs_list span.video a:after {
+        line-height: 1.8em; }
 
 .show-right-column.hide-left-column #thumbs_list, .hide-right-column.show-left-column #thumbs_list {
   width: 294px; }
