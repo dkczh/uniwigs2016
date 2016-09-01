@@ -206,7 +206,7 @@ class Tag extends TagCore
 				($only_active ? ' AND product_shop.`active` = 1' : '').'
 				and p.id_product in (SELECT pt.id_product FROM `'._DB_PREFIX_.'product_tag` pt WHERE pt.id_tag = '.(int)$this->id.')'
 		);*/
-		$sql2 = $sql_part1.' WHERE
+		/* $sql2 = $sql_part1.' WHERE
 					p.id_product in (SELECT pt.id_product FROM `'._DB_PREFIX_.'product_tag` pt WHERE pt.id_tag = '.(int)$this->id.')
 					and p.reference not in ("'.str_ireplace(",", '","', str_ireplace("\n", ',', $this->skus)).'")
 					and product_shop.`id_shop` = '.(int)$context->shop->id
@@ -225,7 +225,7 @@ class Tag extends TagCore
 		} else {
 			$arr_len = count($products_array);
 			$products_array[$arr_len-1] = array_merge($products_array[$arr_len-1], $rq2);
-		}
+		} */
 		
 		return $products_array;
 	}
