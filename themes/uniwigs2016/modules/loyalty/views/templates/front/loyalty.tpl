@@ -37,7 +37,7 @@
 		<tbody>
 		{foreach from=$displayorders item='order'}
 			<tr class="alternate_item">
-				{if $order.id=='100000000' }
+				{if $order.id=='100000000' or $order.remark=='add review'}
 				<td class="history_link bold">{l s='#' mod='loyalty'}GIFT</td>
 				{else}
 				<td class="history_link bold">{l s='#' mod='loyalty'}{$order.id|string_format:"%06d"}</td>

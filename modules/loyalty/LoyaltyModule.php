@@ -38,7 +38,7 @@ class LoyaltyModule extends ObjectModel
 	public $date_upd;
 
 	public $id_item = 0;
-	public $mark = 'purchase';
+	public $remark;
 
 	/**
 	 * @see ObjectModel::$definition
@@ -54,6 +54,7 @@ class LoyaltyModule extends ObjectModel
 			'points' =>				array('type' => self::TYPE_INT, 'validate' => 'isInt', 'required' => true),
 			'date_add' =>			array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
 			'date_upd' =>			array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
+			'remark' =>				array('type' => self::TYPE_DATE)
 		)
 	);
 
@@ -207,7 +208,13 @@ class LoyaltyModule extends ObjectModel
 			$query .= ' AND f.id_loyalty_state = '.(int)LoyaltyStateModule::getValidationId();
 		$query .= ' GROUP BY f.id_loyalty '.
 			($pagination ? 'LIMIT '.(((int)($page) - 1) * (int)($nb)).', '.(int)($nb) : '');
-
+	/* 	echo '<pre>';
+		var_dump($query);
+		
+		echo '</pre>';
+		exit; */
+		
+		
 		return Db::getInstance()->executeS($query);
 	}
 
