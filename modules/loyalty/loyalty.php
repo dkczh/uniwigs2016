@@ -523,7 +523,7 @@ class Loyalty extends Module
 		$loyalty->id_customer = (int)$params['customer']->id;
 		$loyalty->id_order = (int)$params['oid'];
 		$loyalty->id_item = (int)$params['iid'];
-		$loyalty->mark = 'add review';
+		$loyalty->remark = 'add review';
 
 		$reward_availale = true;
 		$has_imgs = false;
