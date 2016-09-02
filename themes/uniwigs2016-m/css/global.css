@@ -1803,7 +1803,7 @@ ul.uk-nav-sub {
 
 /* Modifier: `uk-nav-parent-icon`
  ========================================================================== */
-.uk-nav-parent-icon > .uk-parent > a:after {
+.uk-nav-parent-icon .uk-parent > a:after {
   content: "";
   width: 20px;
   margin-right: -10px;
@@ -1811,7 +1811,7 @@ ul.uk-nav-sub {
   font-family: "iconfont";
   text-align: center; }
 
-.uk-nav-parent-icon > .uk-parent.uk-open > a:after {
+.uk-nav-parent-icon .uk-parent.uk-open > a:after {
   content: ""; }
 
 /* Modifier `uk-nav-side`

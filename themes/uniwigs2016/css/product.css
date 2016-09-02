@@ -130,6 +130,19 @@ a.fancybox-nav {
         #thumbs_list li img {
           width: 68px;
           height: 68px; } }
+  #thumbs_list span.video {
+    float: left;
+    cursor: pointer;
+    margin: 5px 5px 5px 0; }
+    #thumbs_list span.video a {
+      display: block;
+      border: 3px solid #fff;
+      background: #fbfbfb;
+      height: 101px;
+      width: 88px;
+      text-align: center; }
+      #thumbs_list span.video a:after {
+        line-height: 1.8em; }
 
 .show-right-column.hide-left-column #thumbs_list, .hide-right-column.show-left-column #thumbs_list {
   width: 294px; }
