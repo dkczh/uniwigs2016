@@ -237,9 +237,9 @@ $(document).on('click', '#view_full_size, #image-block', function(e){
 	$('#views_block .shown').click();
 });
 //catch the click on the "more infos" button at the top of the page
-$(document).on('click', '#short_description_block .button', function(e){
-	$('#more_info_tab_more_info').click();
-	$.scrollTo( '#more_info_tabs', 1200 );
+$(document).on('click', '#short_description_block .uk-button', function(e){
+	$('.short_description,#short_description_block a').addClass('uk-hidden');
+	$('#description_content').removeClass('uk-hidden');
 });
 // Hide the customization submit button and display some message
 $(document).on('click', '#customizedDatas input', function(e){

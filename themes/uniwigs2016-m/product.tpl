@@ -574,67 +574,6 @@
 				</div>
 			{/if}
 
-			{if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
-				<!-- quantity discount -->
-				<section class="page-product-box">
-					<h3 class="page-product-heading">{l s='Volume discounts'}</h3>
-					<div id="quantityDiscount">
-						<table class="std table-product-discounts">
-							<thead>
-								<tr>
-									<th>{l s='Quantity'}</th>
-									<th>{if $display_discount_price}{l s='Price'}{else}{l s='Discount'}{/if}</th>
-									<th>{l s='You Save'}</th>
-								</tr>
-							</thead>
-							<tbody>
-								{foreach from=$quantity_discounts item='quantity_discount' name='quantity_discounts'}
-								<tr id="quantityDiscount_{$quantity_discount.id_product_attribute}" class="quantityDiscount_{$quantity_discount.id_product_attribute}" data-discount-type="{$quantity_discount.reduction_type}" data-discount="{$quantity_discount.real_value|floatval}" data-discount-quantity="{$quantity_discount.quantity|intval}">
-									<td>
-										{$quantity_discount.quantity|intval}
-									</td>
-									<td>
-										{if $quantity_discount.price >= 0 || $quantity_discount.reduction_type == 'amount'}
-											{if $display_discount_price}
-												{if $quantity_discount.reduction_tax == 0 && !$quantity_discount.price}
-													{convertPrice price = $productPriceWithoutReduction|floatval-($productPriceWithoutReduction*$quantity_discount.reduction_with_tax)|floatval}
-												{else}
-													{convertPrice price=$productPriceWithoutReduction|floatval-$quantity_discount.real_value|floatval}
-												{/if}
-											{else}
-												{convertPrice price=$quantity_discount.real_value|floatval}
-											{/if}
-										{else}
-											{if $display_discount_price}
-												{if $quantity_discount.reduction_tax == 0}
-													{convertPrice price = $productPriceWithoutReduction|floatval-($productPriceWithoutReduction*$quantity_discount.reduction_with_tax)|floatval}
-												{else}
-													{convertPrice price = $productPriceWithoutReduction|floatval-($productPriceWithoutReduction*$quantity_discount.reduction)|floatval}
-												{/if}
-											{else}
-												{$quantity_discount.real_value|floatval}%
-											{/if}
-										{/if}
-									</td>
-									<td>
-										<span>{l s='Up to'}</span>
-										{if $quantity_discount.price >= 0 || $quantity_discount.reduction_type == 'amount'}
-											{$discountPrice=$productPriceWithoutReduction|floatval-$quantity_discount.real_value|floatval}
-										{else}
-											{$discountPrice=$productPriceWithoutReduction|floatval-($productPriceWithoutReduction*$quantity_discount.reduction)|floatval}
-										{/if}
-										{$discountPrice=$discountPrice * $quantity_discount.quantity}
-										{$qtyProductPrice=$productPriceWithoutReduction|floatval * $quantity_discount.quantity}
-										{convertPrice price=$qtyProductPrice - $discountPrice}
-									</td>
-								</tr>
-								{/foreach}
-							</tbody>
-						</table>
-					</div>
-				</section>
-			{/if}
-
 			{if isset($features) && $features}
 				<!-- features -->
 				<table class="uk-table table-data-sheet">
@@ -651,21 +590,35 @@
 			{/if}
 
 			<!-- full description -->
-			<div class="rte">
-				{$product->description}
+			{if $product->description_short || $packItems|@count > 0}
+			<div id="short_description_block" class="rte">
+				{if $product->description_short}
+					<div class="short_description" itemprop="description">{$product->description|truncate:245:'...'}</div>
+				{/if}
+
+				{if $product->description}
+					<div id="description_content" class="uk-hidden">{$product->description}</div>
+					<p class="buttons_bottom_block">
+						<a href="javascript:{ldelim}{rdelim}" class="uk-button">
+							{l s='More details'}
+						</a>
+					</p>
+					
+				{/if}
 			</div>
+			{/if}
 		</li>
 		<!-- details END -->
 
 		<!-- Package Items END -->
-		{if isset($packItems) && $packItems|@count > 0}
+		{*if isset($packItems) && $packItems|@count > 0}
 		<li>
 			<section id="blockpack">
 				<h3 class="page-product-heading">{l s='Pack content'}</h3>
 				{include file="$tpl_dir./product-list.tpl" products=$packItems}
 			</section>
 		</li>
-		{/if}
+		{/if*}
 		<!-- Package Items END -->
 
 		<!-- shows and reviews -->

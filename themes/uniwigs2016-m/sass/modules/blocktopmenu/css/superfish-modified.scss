@@ -75,16 +75,19 @@
 				background: rgba(0, 0, 0, 0.07)
 			}
 			&:after{
-				display: block;
 				font-family: $font-icon;
 				content: "\e610";
-				position: absolute;
-				right: 13px;
-				top: 13px;
-				font-size: 16px;
+				margin-right: -10px;
+				float: right;
+				text-align: center;
+				width: 20px;
 			}
 		}
+		ul li a{
+			padding:12px 20px 12px 50px;
+		}
 	}
+	
 }
 .sf-menu li ul li {
 	width: 100%;
@@ -150,13 +153,15 @@
 			border: 1px solid $input-border;
 		}
 	}
+	li.uk-parent > a{
+		background: #fafafa;
+	}
 	li.other-li{
-		background: #222;
 		a{
 			color:#fff;
+			background: #222;
 		}
 	}
-
 }
 .uk-nav-parent-icon > .uk-parent.other-li > a:after{
 	content: "\e610";
