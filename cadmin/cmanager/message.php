@@ -54,7 +54,7 @@ if(isset($_POST['remind']))
 if(isset($_POST['cmessage']))
 {	//($id_customer,$level,$race,$job,$account,$note) 
 	//插入客户信息
-	Cmanage::insertCustomerMessage($_GET['cid'],$_POST['level'],$_POST['race'],$_POST['job'],$_POST['account'],$_POST['note'],$user_info['user_name']) ;
+	Cmanage::insertCustomerMessage($_GET['cid'],$_POST['level'],$_POST['race'],$_POST['job'],$_POST['account'],$_POST['note'],$user_info['user_name'],$_POST['facebook'],$_POST['twitter'],$_POST['pinterest'],$_POST['google']) ;
 	echo "插入成功";
 	exit;
 	

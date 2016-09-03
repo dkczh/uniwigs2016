@@ -132,7 +132,7 @@ class Cmanage extends CmanageBase
 				  IF(b.phone='' or b.phone_mobile='' , IF(b.phone='',b.phone_mobile,b.phone), 
 						CONCAT(b.phone,'||',b.phone_mobile)) as phone ,
 				  a.birthday,
-				  c.level,c.race,c.job,c.account,c.note
+				  c.level,c.race,c.job,c.account,c.note,c.facebook,c.twitter,c.pinterest,c.google
 
 				FROM
 					ps_customer a 
@@ -247,7 +247,8 @@ class Cmanage extends CmanageBase
 	
 	
 	
-	public static function insertCustomerMessage($id_customer,$level,$race,$job,$account,$note,$actor) 
+	public static function insertCustomerMessage($id_customer,$level,$race,$job,$account,$note,$actor,
+	$facebook,$twitter,$pinterest,$google) 
 	{
 		//更新客户的额外信息
 		// c.level,c.race,c.job,c.account,c.note
@@ -258,24 +259,24 @@ class Cmanage extends CmanageBase
 		$num = $db->query($sqlquery)->fetchAll();
 	    if($num){
 			$sql = "update  osa_customer_extra 
-					set `level` = '$level',race='$race' ,job= '$job', account='$account',  note='$note',  date_upd=now()
+					set `level` = '$level',race='$race' ,job= '$job', account='$account',  note='$note', facebook='$facebook',  twitter='$twitter',  pinterest='$pinterest',  google='$google', date_upd=now()
 					where  id_customer= $id_customer
 					";
 			$sqlhistory = "INSERT INTO `osa_history` (`id_customer`,`action_type`,`content`,`actor`,`date`)
 				VALUES
-					('$id_customer','message','更新level: ($level),race：($race),account：($account),note: ($note)','$actor',now());";
+					('$id_customer','message','插入level: ($level),race：($race),facebook($facebook),twitter($twitter),pinterest($pinterest),google($google),note: ($note)','$actor',now());";
 			$list = $db->query($sql)or die('插入记录出错<br>'.$sql);
 			$list = $db->query($sqlhistory) or die('插入日志出错<br>'.$sqlhistory);			
 			
 		}else{
 			
 			$sql = "insert  into  osa_customer_extra 
-			(`id_customer`,`level`,`race`,`job`,	`account`,`note`,`date_add`,`date_upd`)
-			value ('$id_customer','$level','$race','$job','$account','$note',now(),now())";
+			(`id_customer`,`level`,`race`,`job`,`account`,`note`,`facebook`,`twitter`,`pinterest`,`google`,`date_add`,`date_upd`)
+			value ('$id_customer','$level','$race','$job','$account','$note','$facebook','$twitter','$pinterest','$google',now(),now())";
 				
 			$sqlhistory = "INSERT INTO `osa_history` (`id_customer`,`action_type`,`content`,`actor`,`date`)
 				VALUES
-					('$id_customer','message','插入level: ($level),race：($race),account：($account),note: ($note)','$actor',now());";
+					('$id_customer','message','插入level: ($level),race：($race),facebook($facebook),twitter($twitter),pinterest($pinterest),google($google),note: ($note)','$actor',now());";
 			$list = $db->query($sql)or die('插入记录出错<br>'.$sql);
 			$list = $db->query($sqlhistory) or die('插入日志出错<br>'.$sqlhistory);
 			

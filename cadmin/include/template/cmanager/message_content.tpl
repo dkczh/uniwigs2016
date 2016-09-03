@@ -41,10 +41,19 @@
 				<input type="text" name="job" value="<{$c.job}>" class="input-xlarge" ></p>
 				<p><label>人种</label>
 				<input type="text" name="race" value="<{$c.race}>" class="input-xlarge" ></p>
-				<p><label>社交账号</label>
-				<input type="text" name="account" value="<{$c.account}>" class="input-xlarge" ></p>
+				<p><label>社交账号:facebook</label>
+				<input type="text" name="facebook" value="<{$c.facebook}>" class="input-xlarge" ></p>
+				<p><label>社交账号:twitter</label>
+				<input type="text" name="twitter" value="<{$c.twitter}>" class="input-xlarge" ></p>
+				<p><label>社交账号:pinterest</label>
+				<input type="text" name="pinterest" value="<{$c.pinterest}>" class="input-xlarge" ></p>
+				<p><label>社交账号:google</label>
+				<input type="text" name="google" value="<{$c.google}>" class="input-xlarge" ></p>
 				<p><label>客户等级</label>
-				<input type="text" name="level" value="<{$c.level}>" class="input-xlarge" ></p>
+				<input type="text" name="level" value="<{$c.level}>" class="input-xlarge" >
+				<span style="
+    color: red;
+">&nbsp;&nbsp; 客户等级:1-4级 区分客户重要性</span></p>
 				
 				<p><label>备注</label>
 				<textarea name="note" rows="3" class="input-xlarge"><{$c.note}></textarea></p>
@@ -114,13 +123,17 @@
 		  var job = $("input[name='job']").val();
 		  var account = $("input[name='account']").val();
 		  var note = $("textarea[name='note']").val();
-		
+		  var google = $("input[name='google']").val();
+		  var pinterest = $("input[name='pinterest']").val();
+		  var twitter = $("input[name='twitter']").val();
+		  var facebook = $("input[name='facebook']").val();
 		  
 		  if(level==''&& race ==''&&job =='' && account ==''&& note ==''){
 		   alert('请添加内容');
 		   
 		  }else{
-			 $.post('',{cmessage:'xx',level:level,race:race,job:job,account:account,note:note},function(data)
+			 $.post('',{cmessage:'xx',level:level,race:race,job:job,account:account,note:note,
+			 google:google,pinterest:pinterest,twitter:twitter,facebook:facebook},function(data)
 			 {
 		  
 			
@@ -298,7 +311,7 @@
 			<tr>
 				<th>id</th>
 				<!-- <th>维护类型</th> -->
-				<th>内容</th>
+				<th style=" width: 700px;">内容</th>
 				<th>添加日期</th>
 				<th>维护员</th>
 				
@@ -312,7 +325,7 @@
 				<tr>
 				
 				<td><{$sample.id}></td>
-				<td><{$sample.content}></td>
+				<td><span style="color:red"><{$sample.content}></span></td>
 				<td><{$sample.date}></td>
 				<td><{$sample.actor}></td>
 
