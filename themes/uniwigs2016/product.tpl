@@ -1265,7 +1265,7 @@
 			</section>
 			<!--end Accessories -->
 		{/if}
-		{if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
+		{*if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
 			<!-- quantity discount -->
 			<section class="page-product-box">
 				<h3 class="page-product-heading">{l s='Volume discounts'}</h3>
@@ -1324,7 +1324,7 @@
 					</table>
 				</div>
 			</section>
-		{/if}
+		{/if*}
 
 		{$PRODUCT_REVIEWS}
 

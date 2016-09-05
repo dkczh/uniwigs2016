@@ -28,7 +28,6 @@
         {literal}
         <style>
             .breadcrumb{display: none}
-            .category-home h5 a{background:#DC0031;padding:6px 15px;font-weight:bold;color:#fff;letter-spacing: 2px;}
         </style>
         {/literal}
         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
@@ -40,32 +39,22 @@
                     </a>
                 </div>*}
                 <div class="uk-margin-top">
-                    <a href="{$base_dir}tag/real-human-hair"><img src="{$img_dir}category/human-hair/real-human-hair.jpg" alt="real human hair" class="img-responsive"></a>
+                    <a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$img_dir}category/human-hair/celebrity-wigs.jpg" alt="celebrity wigs" class="img-responsive"></a>
                 </div>
                 <ul class="row uk-margin-top">
                     <li class="col-md-6 col-sm-6">
                         <a href="{$base_dir}tag/luxury-human-hair">
-                            <img src="{$img_dir}category/human-hair/Luxury.jpg" alt="luxury human hair" class="img-responsive">
+                            <img src="{$img_dir}category/human-hair/Classic-Lace-Wigs.jpg" alt="Classic Lace Wigs" class="img-responsive">
+                            <img src="{$img_dir}category/human-hair/Classic-Lace-Wigs-text.png" alt="Classic Lace Wigs" class="img-responsive">
                         </a>
-                        <h3 class="text-center">Luxury Collection Wig</h3>
-                        <h5 class="text-center">The supreme quality human hair wig</h5>
-                        <h5 class="text-center uk-margin-small-top"><a href="{$base_dir}tag/luxury-human-hair">shop now ></a></h5>
                     </li>
                     <li class="col-md-6 col-sm-6">
-                        <a href="{$base_dir}tag/human-hair-wigs-customization">
-                            <img src="{$img_dir}category/human-hair/custom.jpg" alt="human hair wigs customization" class="img-responsive">
+                        <a href="{$base_dir}tag/luxury-human-hair">
+                            <img src="{$img_dir}category/human-hair/custom-wigs.jpg" alt="custom wigs" class="img-responsive">
+                            <img src="{$img_dir}category/human-hair/custom-wigs-text.png" alt="custom wigs" class="img-responsive">
                         </a>
-                        <h3 class="text-center">custom wigs</h3>
-                        <h5 class="text-center">Create your personal wig</h5>
-                        <h5 class="text-center uk-margin-small-top"><a href="{$base_dir}tag/human-hair-wigs-customization">shop now ></a></h5>
                     </li>
                 </ul>
-                <div class="uk-margin-top">
-                    <a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$img_dir}category/human-hair/star.jpg" alt="real human hair" class="img-responsive"></a>
-                </div>
-                <div class="uk-margin-top">
-                    <a href="https://www.youtube.com/watch?v=zei6OVyX43w" class="category-video" data-uk-lightbox><img src="{$img_dir}category/human-hair/video-human.jpg" alt="Uniwigs Human Hair Lace Wig Collection" class="img-responsive"></a>
-                </div>
                 
                 {if isset($HumanHairWigsNewArrival)}
                 <div class="cagegory_topsale title-hr">
@@ -152,41 +141,21 @@
                     </script>
                 </div>
 
-                <div class="category_help uk-margin-large-top">
-                    <ul class="row" data-uk-grid-match>
+                <div class="category_help uk-margin-large-top title-hr">
+                    <h3>how to videos</h3>
+                    <p class="hr"></p>
+                    <ul class="row uk-margin-top" data-uk-grid-match>
                         <li class="col-md-4">
-                            <div class="category_faq">
-                                <div class="ask">
-                                    <span>What are Full Lace wigs and Glueless Full Lace wigs?</span>
-                                </div>
-                                <div class="answer text-info uk-margin-small-top">
-                                    <p>These two kinds of wigs include lace all around the perimeter and are available for you to wear your hair in updo's and high ponytails. The wigs all have a natural hairline around the perimeter when wearing.
-                                    Since there were no combs or clips and no straps inside Full Lace wigs, you have to apply the wigs with either glue or other adhesives. These are suitable for women without hair or with scarce hair. While glueless full lace wigs have adjustable straps on the back and combs on the side and the front to secure the wig from sliding or rolling back, you can adjust the cap to suit your head size for a better fit.</p>
-                                </div>
-                            </div>
+                            <a href="https://www.youtube.com/embed/ax1hwdtnJIg" data-uk-lightbox><img src="{$img_dir}category/human-hair/how-to-video-1.jpg" alt="how to video"></a>
                         </li>
                         <li class="col-md-4">
-                            <div class="category_faq">
-                                <div class="ask">
-                                    <span>How can I choose the color and the size?</span>
-                                </div>
-                                <div class="answer text-info uk-margin-small-top">
-                                    <p>To help you shop for the right color online it's just as easy as in a store, please refer to our hair color chart after you have found the style you like.</p>
-                                    <p>As for the cap size, we all know that measuring your head size is an important task to endeavor prior to ordering a wig. Please carefully measure your head size and choose the proper cap size following our cap size guide.</p>
-                                </div>
-                            </div>
+                            <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox><img src="{$img_dir}category/human-hair/how-to-video-2.jpg" alt="how to video"></a>
                         </li>
                         <li class="col-md-4">
-                            <div class="category_faq">
-                                <div class="ask">
-                                    <span>Are the knots of the your wig bleached ?</span>
-                                </div>
-                                <div class="answer text-info uk-margin-small-top">
-                                    <p>All of our wigs are knots bleached except color jet-black . For this color ,bleaching knots will damage the hair .so we do not recommend our customer do it their own.</p>
-                                </div>
-                            </div>
+                             <a href="https://www.youtube.com/embed/bhkFakj7VW4" data-uk-lightbox><img src="{$img_dir}category/human-hair/how-to-video-3.jpg" alt="how to video"></a>
                         </li>
                     </ul>
+                    <div class="uk-margin-top text-center"><a href="http://www.uniwigs.com/content/9-how-to-videos" class="uk-button">view more ></a></div>
                 </div>
             </section>
         </section>
