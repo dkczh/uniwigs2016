@@ -59,15 +59,15 @@ $button-mini-padding-horizontal:                 6px !default;
 $button-small-padding-horizontal:                10px !default;
 $button-large-padding-horizontal:                25px !default;
 
-$button-font-size:                               1rem !default;
+$button-font-size:                               1.5rem !default;
 $button-background:                              #fff !default;
 $button-color:                                   #222 !default;
-$button-hover-background:                        #fff !default;
-$button-hover-color:                             #d32676 !default;
-$button-active-background:                       #fff !default;
-$button-active-color:                            #d32676 !default;
+$button-hover-background:                        #222 !default;
+$button-hover-color:                             #fff !default;
+$button-active-background:                       #222 !default;
+$button-active-color:                            #fff !default;
 
-$button-letter-spacing:                          2px !default;
+$button-letter-spacing:                          1px !default;
 
 $button-primary-background:                      #d32676 !default;
 $button-primary-color:                           #fff !default;
@@ -173,7 +173,7 @@ $button-link-disabled-color:                     #999 !default;
 .uk-button:focus { // 1
     background-color: $button-hover-background;
     color: $button-hover-color;
-    border-color:$button-hover-color;
+    border-color:$button-hover-background;
     /* 2 */
     outline: none;
     /* 3 */
@@ -210,6 +210,7 @@ $button-link-disabled-color:                     #999 !default;
     background-color: $button-primary-hover-background;
     color: $button-primary-hover-color;
     border-width: 2px;
+    border-color:$button-primary-hover-color;
     @include hook-button-primary-hover();
 }
 
@@ -218,6 +219,7 @@ $button-link-disabled-color:                     #999 !default;
 .uk-button-primary.uk-active {
     background-color: $button-primary-active-background;
     color: $button-primary-active-color;
+    border-color:$button-primary-hover-color;
     @include hook-button-primary-active();
 }
 

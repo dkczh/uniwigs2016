@@ -3856,7 +3856,7 @@ select.uk-form-width-mini {
   /* 6 */
   text-transform: none;
   /* 7 */
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   display: inline-block;
   box-sizing: border-box;
   padding: 0 25px;
@@ -3867,7 +3867,7 @@ select.uk-form-width-mini {
   /* 9 */
   min-height: 40px;
   /* 10 */
-  font-size: 1rem;
+  font-size: 1.5rem;
   /* 11 */
   text-transform: uppercase;
   text-decoration: none;
@@ -3884,9 +3884,9 @@ select.uk-form-width-mini {
  */
 .uk-button:hover,
 .uk-button:focus {
-  background-color: #fff;
-  color: #d32676;
-  border-color: #d32676;
+  background-color: #222;
+  color: #fff;
+  border-color: #222;
   /* 2 */
   outline: none;
   /* 3 */
@@ -3895,8 +3895,8 @@ select.uk-form-width-mini {
 /* Active */
 .uk-button:active,
 .uk-button.uk-active {
-  background-color: #fff;
-  color: #d32676; }
+  background-color: #222;
+  color: #fff; }
 
 /* Color modifiers
  ========================================================================== */
@@ -3913,13 +3913,15 @@ select.uk-form-width-mini {
 .uk-button-primary:focus {
   background-color: #fff;
   color: #d32676;
-  border-width: 2px; }
+  border-width: 2px;
+  border-color: #d32676; }
 
 /* Active */
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
   background-color: #fff;
-  color: #d32676; }
+  color: #d32676;
+  border-color: #d32676; }
 
 /*
  * Modifier: `uk-button-success`
@@ -12185,8 +12187,6 @@ div.star a:hover {
   position: relative; }
 .footer-container #footer ul.row {
   position: static; }
-.footer-container #footer a:hover {
-  color: #d32676; }
 .footer-container #footer h4 a {
   color: #fff; }
 .footer-container #footer ul li {

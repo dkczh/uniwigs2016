@@ -5,10 +5,8 @@
 			{l s='My Account' mod='blockuserinfo'}
 		</a>
 		<div class="logindown uk-dropdown">
+			<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" rel="nofollow" class="uk-button" style="width:100%">Sign In</a>
 			<ul class="ilogin">
-				<li>
-					<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" rel="nofollow" class="uk-button" style="width:100%">Sign In</a>
-				</li>
 				<li class="sub-nav top_sign">
 					<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" rel="nofollow">Create an Account</a>
 				</li>

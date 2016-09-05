@@ -22,7 +22,17 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<div class="uk-margin-large-bottom"><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$base_dir}themes/uniwigs2016/img/index/celebrity-wig-collection.jpg" alt="celebrity wig collection" class="img-responsive"></a></div>
+{*<div class="uk-margin-large-bottom"><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$base_dir}themes/uniwigs2016/img/index/celebrity-wig-collection.jpg" alt="celebrity wig collection" class="img-responsive"></a></div>*}
+
+<div class="uk-margin-large-bottom">
+	<img src="{$base_dir}themes/uniwigs2016/img/index/laboy-day.png" alt="laboy day sale" class="img-responsive">
+	<ul class="row">
+		<li class="col-sm-3"><a href="" class="uk-button col-xs-12 ">shop human hair</a></li>
+		<li class="col-sm-3"><a href="" class="uk-button col-xs-12 ">shop synthetic wigs</a></li>
+		<li class="col-sm-3"><a href="" class="uk-button col-xs-12 ">shop hair pieces</a></li>
+		<li class="col-sm-3"><a href="" class="uk-button col-xs-12 ">shop hair extensions</a></li>
+	</ul>
+</div>
 <div class="back-school-sale">
 	<img src="{$base_dir}themes/uniwigs2016/img/index/back-to-school.jpg" alt="back to school" usemap="#map" class="img-responsive"/>
 	<map name="map">

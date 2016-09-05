@@ -60,7 +60,10 @@
 
 </style>
 {/literal}
-<div><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$base_dir}themes/uniwigs2016-m/img/home/celebrity-wig-collection.jpg" alt="celebrity wig collection" class="img-responsive"></a></div>
+{*<div><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$base_dir}themes/uniwigs2016-m/img/home/celebrity-wig-collection.jpg" alt="celebrity wig collection" class="img-responsive"></a></div>*}
+<div>
+	<img src="{$base_dir}themes/uniwigs2016-m/img/home/labor-day.png" alt="laboy day sale" class="img-responsive">
+</div>
 <div class="sale-category">
 	<ul class="home-list uk-flex uk-flex-wrap">
 		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs-new.jpg" alt="trendy wigs" class="img-responsive"></a></li>
