@@ -27,10 +27,10 @@
 <div class="uk-margin-large-bottom">
 	<img src="{$base_dir}themes/uniwigs2016/img/index/laboy-day.png" alt="laboy day sale" class="img-responsive">
 	<ul class="row">
-		<li class="col-sm-3"><a href="" class="uk-button col-xs-12 ">shop human hair</a></li>
-		<li class="col-sm-3"><a href="" class="uk-button col-xs-12 ">shop synthetic wigs</a></li>
-		<li class="col-sm-3"><a href="" class="uk-button col-xs-12 ">shop hair pieces</a></li>
-		<li class="col-sm-3"><a href="" class="uk-button col-xs-12 ">shop hair extensions</a></li>
+		<li class="col-sm-3"><a href="{$base_dir}102-human-hair-wigs" class="uk-button col-xs-12 ">shop human hair</a></li>
+		<li class="col-sm-3"><a href="{$base_dir}101-synthetic-wigs" class="uk-button col-xs-12 ">shop synthetic wigs</a></li>
+		<li class="col-sm-3"><a href="{$base_dir}104-hair-pieces" class="uk-button col-xs-12 ">shop hair pieces</a></li>
+		<li class="col-sm-3"><a href="{$base_dir}103-hair-extensions" class="uk-button col-xs-12 ">shop hair extensions</a></li>
 	</ul>
 </div>
 <div class="back-school-sale">
