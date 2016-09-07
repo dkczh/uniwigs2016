@@ -2163,6 +2163,16 @@ class AdminOrdersControllerCore extends AdminController
 		
 		$orderremindhistory = $this->getOrderRemindHistroy($order->id); 
 		
+		//增加订单金额不相符 提醒
+		$payment_warning = '';
+		$cart_total_paid = (float)Tools::ps_round((float)$this->context->cart->getOrderTotal(true, Cart::BOTH), 2);
+		$cart_total_paid =  number_format($cart_total_paid, _PS_PRICE_COMPUTE_PRECISION_)-number_format($order->getOrderPoints(), _PS_PRICE_COMPUTE_PRECISION_);
+		$total_real = number_format($order->total_paid_real, _PS_PRICE_COMPUTE_PRECISION_);
+		if($cart_total_paid !=$total_real){
+			
+			$payment_warning = "<span style='color:red'>".$total_real."</span> instead of <span style='color:red'>".$cart_total_paid."</span>" ;
+		}
+		
 		
         // Smarty assign
         $this->tpl_view_vars = array(
@@ -2170,6 +2180,7 @@ class AdminOrdersControllerCore extends AdminController
 			'customer_order'=>$corder,
 			'comreturnhistory'=>$comreturnhistory,
 			'comreturnactor'=>$comreturnactor,
+			'payment_warning'=>$payment_warning,
             'cart' => new Cart($order->id_cart),
             'customer' => $customer,
 			'orderremind' => $orderremind,

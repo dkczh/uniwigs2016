@@ -66,7 +66,15 @@
 	{if ($hook_invoice)}
 	<div>{$hook_invoice}</div>
 	{/if}
-
+	
+	{if $payment_warning!='' and $order->id >100023420}
+	<div class="panel kpi-container" style="
+    background: #f5cccc;
+    color: #272626;
+">
+	<h2><span style='color:red'>Warning</span>: 订单支付金额不匹配--{$payment_warning}<h2/>
+	</div>
+	{/if}
 	<div class="panel kpi-container">
 		<div class="row">
 			<div class="col-xs-6 col-sm-3 box-stats color3" >

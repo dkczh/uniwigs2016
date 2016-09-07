@@ -668,6 +668,7 @@ class HelperListCore extends Helper
 			'paypalremind'=>$this->getPaypalRemind(),//paypal 漏单提醒
 			'authorizeremind'=>$this->getAuthorizeRemind(),//authorize  漏单提醒 
 			'noshippingremind'=>$this->getNoShippingRemind(),//发货 24小时 未填写物流信息  提醒 
+			'ExorderRemind'=>$this->getExorderRemind(),//异常金额订单提醒
             'page' => $page,
             'simple_header' => $this->simple_header,
             'total_pages' => $total_pages,
@@ -781,6 +782,25 @@ and id_order  not in (select id_order  from  px_order_remind)");
 		return $result;
 		 
 	 }
+	
+	/* 异常金额订单提醒
+	 *
+	 *
+	*/
+	public  function  getExorderRemind(){
+		
+		 $result = Db::getInstance()->executeS("SELECT * from (
+SELECT id_order,total_discounts,total_points,total_paid,total_paid_real,(total_paid-total_paid_real) 
+as warning ,payment,valid  ,current_state,date_add
+
+from  ps_orders  )mya  where mya.warning !=0.000000 and mya.valid=1 and mya.payment != 'Free order'
+and mya.date_add>'2016-08-11 00:00:00'
+and mya.current_state not in (4,6) ");
+	/* 	var_dump($result);
+		exit; */
+		 return  $result;
+		
+	}
 	
 	/*paypal 漏单提醒 
 	 *
