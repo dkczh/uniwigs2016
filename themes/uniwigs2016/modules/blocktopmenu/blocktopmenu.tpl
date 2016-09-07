@@ -17,7 +17,6 @@
 		        	       			<li class="uk-nav-header">Category</li>
 	        	       				<li><a href="{$base_dir}40453-celebrity-hairstyles">Celebrity Wigs</a></li>
 	        	       				<li><a href="{$base_dir}40452-human-hair-lace-wigs">Classic Lace wigs</a></li>
-	        	       				<li><a href="{$base_dir}tag/luxury-human-hair">Luxury Wigs</a></li>
 	        	       				<li><a href="{$base_dir}tag/human-hair-wigs-customization">Custom Wigs</a></li>
 	        	       				<li><a href="{$base_dir}105-care-products">Accessories</a></li>
 		        	       		</ul>
@@ -25,18 +24,18 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">shop by cap</li>
+		        	       			<li><a href="{$base_dir}40447-lace-front-wigs">Lace Front</a></li>
+		        	       			<li><a href="{$base_dir}40448-glueless-full-lace-wigs">Glueless</a></li>
 	        	       				<li><a href="{$base_dir}40446-full-lace-wigs">Full Lace</a></li>
-	        	       				<li><a href="{$base_dir}40447-lace-front-wigs">Lace Front</a></li>
-	        	       				<li><a href="{$base_dir}40448-glueless-full-lace-wigs">Glueless</a></li>
-	        	       				<li><a href="{$base_dir}40449-monofilament-wigs">Monofilament</a></li>
 	        	       				<li><a href="{$base_dir}40450-silk-top-lace-wigs">Silk Top</a></li>
+	        	       				<li><a href="{$base_dir}40449-monofilament-wigs">Monofilament</a></li>
 	        	       				<li><a href="{$base_dir}40451-jewish-wigs">Jewish</a></li>
 		        	       		</ul>
 		        	       </div>
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">feature</li>
-	        	       				<li><a href="{$base_dir}tag/real-human-hair">Remy Human Hair</a></li>
+	        	       				<li><a href="{$base_dir}tag/african-american-human-hair-wigs">African American Human Hair Wigs</a></li>
 	        	       				<li><a href="{$base_dir}tag/medical-wigs">Medical Wigs for Hair Loss</a></li>
 	        	       				<li><a href="{$base_dir}tag/hand-tied-wigs">Hand-tied Human Hair Wigs</a></li>
 	        	       				{*<li><a href="{$base_dir}tag/african-american-human-hair-wigs">African American Wigs</a></li>*}
