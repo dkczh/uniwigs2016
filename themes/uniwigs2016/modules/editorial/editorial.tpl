@@ -45,13 +45,13 @@
 <div class="celebirty-wigs uk-margin-large-top">
 	<ul class="row">
 		<li>
-			<a href="https://youtu.be/4xbxHf3S9mM" data-uk-lightbox>
-				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/clelebirty-video.jpg" alt="celebirty wigs video" class="img-responsive">
+			<a href="{$base_dir}tag/african-american-human-hair-wigs">
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/african.jpg" alt="african american human-hair wigs" class="img-responsive">
 			</a>
 		</li>
 		<li>
-			<a href="{$base_dir}40453-celebrity-hairstyles">
-				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/celebirty-text.png" alt="celebirty wigs 15% off">
+			<a href="{$base_dir}tag/african-american-human-hair-wigs">
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/african-text.png" alt="african american human-hair wigs">
 			</a>
 		</li>
 	</ul>
