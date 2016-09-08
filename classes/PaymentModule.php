@@ -360,9 +360,9 @@ abstract class PaymentModuleCore extends Module
                     // Amount paid by customer is not the right one -> Status = payment error
                     // We don't use the following condition to avoid the float precision issues : http://www.php.net/manual/en/language.types.float.php
                     // if ($order->total_paid != $order->total_paid_real)
-                    // We use number_format in order to compare two string
+                    // We use number_format in order to compare two string  比较实际支付金额和购物车金额
                     if ($order_status->logable && number_format($cart_total_paid, _PS_PRICE_COMPUTE_PRECISION_) != number_format($amount_paid, _PS_PRICE_COMPUTE_PRECISION_)) {
-                        $id_order_state = Configuration::get('PS_OS_ERROR');
+                       // $id_order_state = Configuration::get('PS_OS_ERROR');
                     }
 
                     $order_list[] = $order;

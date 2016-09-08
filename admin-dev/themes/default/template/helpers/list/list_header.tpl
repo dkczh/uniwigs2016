@@ -26,6 +26,24 @@
 {if  $smarty.get.controller=='AdminOrders'}
 
 
+
+{*异常金额  订单提醒*}
+<div class="panel kpi-container" style=" margin-bottom: 0px;    padding: 10px;">
+
+	<div class="row">
+		<span style="color: #CC2B1B;">异常金额订单提醒:</span>		
+		{foreach from=$ExorderRemind item=row key=key}
+			<a  style="color: red;" href="index.php?controller=AdminOrders&amp;id_order={$row['id_order']}&amp;vieworder&amp;token={$smarty.get.token}" class="btn btn-default" title="View">
+				<i class="icon-search-plus"></i> {$row['id_order']}
+			</a>
+		{/foreach}
+	</div>
+
+</div>
+
+
+
+
 {*authorize 漏单提醒*}
 <div class="panel kpi-container" style=" margin-bottom: 0px;    padding: 10px;">
 

@@ -66,7 +66,15 @@
 	{if ($hook_invoice)}
 	<div>{$hook_invoice}</div>
 	{/if}
-
+	
+	{if $payment_warning!='' and $order->id >100023420}
+	<div class="panel kpi-container" style="
+    background: #f5cccc;
+    color: #272626;
+">
+	<h2><span style='color:red'>Warning</span>: 订单支付金额不匹配--{$payment_warning}<h2/>
+	</div>
+	{/if}
 	<div class="panel kpi-container">
 		<div class="row">
 			<div class="col-xs-6 col-sm-3 box-stats color3" >
@@ -619,6 +627,9 @@
 								<dl class="well list-detail">
 									<dt>{l s='Email'}</dt>
 										<dd><a href="mailto:{$customer->email}"><i class="icon-envelope-o"></i> {$customer->email}</a></dd>
+									<dt>{l s='客户信息维护(extra)'}</dt>
+										<dd><a target="_blank" href="/cadmin/cmanager/message.php?cid={$customer->id}"><i class="icon-envelope-o"></i> {$customer->id}</a></dd>	
+										
 									<dt>{l s='Account registered'}</dt>
 										<dd class="text-muted"><i class="icon-calendar-o"></i> {dateFormat date=$customer->date_add full=true}</dd>
 									<dt>{l s='Valid orders placed'}</dt>
