@@ -186,7 +186,30 @@
 					<div class="row">
 						
 							{if isset($left_column_size) && !empty($left_column_size)}
-							<div id="left_column" class="column col-xs-12 col-sm-{$left_column_size|intval}">{$HOOK_LEFT_COLUMN}</div>
+							<div id="left_column" class="column col-xs-12 col-sm-{$left_column_size|intval}">
+								{if $category->id == '40452' or $category->id == '40453' or $category->id == '105' or $category->id == '40447' or $category->id == '40448' or $category->id == '40446' or $category->id == '40450' or $category->id == '40449' or $category->id == '40451'}
+								<div class="block">
+									<p class="title_block">how to  (Quick&Easy Tips)</p>
+									<div class="block_content text-center">
+										<a href="{$base_dir}content/9-how-to-videos" class="img-responsive uk-margin-small-bottom">
+											<img src="{$img_dir}category/human-hair/left-video-1.jpg" alt="">
+										</a>
+										<a href="{$base_dir}content/9-how-to-videos" class="img-responsive">
+											<img src="{$img_dir}category/human-hair/left-video-2.jpg" alt="">
+										</a>
+										<a href="{$base_dir}content/9-how-to-videos" class="uk-button uk-button-link uk-margin-small-bottom">view more ></a>	
+									</div>
+									<div class="block_content">
+										<a href="{$base_dir}content/28-uniwigs-wigs" class="img-responsive uk-margin-small-bottom"><img src="{$img_dir}category/human-hair/left-faq.png" alt=""></a>
+										<a href="{$base_dir}customer-show?ca=Human+Hair+Wigs" class="img-responsive uk-margin-small-bottom"><img src="{$img_dir}category/human-hair/left-youtube.png" alt=""></a>
+										<a href="{$base_dir}tag/color-ring" class="img-responsive uk-margin-small-bottom"><img src="{$img_dir}category/human-hair/left-color-tips.jpg" alt=""></a>
+									</div>
+								</div>
+								{$HOOK_LEFT_COLUMN}
+								{else}
+								{$HOOK_LEFT_COLUMN}
+								{/if}
+							</div>
 							{/if}
 						
 						

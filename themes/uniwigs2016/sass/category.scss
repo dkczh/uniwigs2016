@@ -2,6 +2,42 @@
 @import "theme_variables";
 
 /* ************************************************************************************************
+								Categories Tab
+************************************************************************************************ */
+.category-tab li {
+	a{
+		display:block;
+		text-align:center;
+		border:1px solid #000;
+		padding:10px 0;
+		position:relative;
+		text-decoration: none;
+		&:hover{
+			background:#000;
+			color:#fff;
+		}
+	}
+	&.uk-active{
+		a{
+			background:#000;
+			color:#fff;
+			&:after{
+				position:absolute;
+				content:"";
+				bottom:-.4em;
+				left:47%;
+				padding:.35em;
+				background:inherit;
+				border:inherit;
+				border-left:0;
+				border-top:0;
+				transform:rotate(45deg);
+			}
+		}
+	}
+}
+
+/* ************************************************************************************************
 								Categories Page Styles
 ************************************************************************************************ */
 .content_scene_cat {
