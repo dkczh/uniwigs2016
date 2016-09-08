@@ -156,7 +156,7 @@
 						</div>
 					</div>
 				</header>
-				<div class="banner-sale">
+				{*<div class="banner-sale">
 					<div class="container">
 						<div class="row">
 							<p><span>Labor Day Sale</span><span class="uk-text-bold text-primary">UP TO $80 OFF</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
@@ -170,7 +170,7 @@
 					        </div>
 					    </div>
 					</div>
-				</div>
+				</div>*}
 			</div>
 			<div class="columns-container">
 				<div id="slider_row" class="row">
