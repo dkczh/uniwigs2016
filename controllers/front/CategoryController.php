@@ -146,10 +146,27 @@ class CategoryControllerCore extends FrontController
         $this->assignSubcategories();
         $this->assignProductList();
 
+        $category1 = new Category('40447', '1');
+        $products1 = $category1->getProducts('1', 1, 18, null,null);
+
+        $category2 = new Category('40448', '1');
+        $products2 = $category2->getProducts('1', 1, 18, null,null);
+
+        $category3 = new Category('40446', '1');
+        $products3 = $category3->getProducts('1', 1, 18, null,null);
+
+        $category4 = new Category('40450', '1');
+        $products4 = $category4->getProducts('1', 1, 18, null,null);
+
+
         $this->context->smarty->assign(array(
             'category'             => $this->category,
             'description_short'    => Tools::truncateString($this->category->description, 350),
             'products'             => (isset($this->cat_products) && $this->cat_products) ? $this->cat_products : null,
+            'products1'            => $products1,
+            'products2'            => $products2,
+            'products3'            => $products3,
+            'products4'            => $products4,
             'id_category'          => (int)$this->category->id,
             'id_category_parent'   => (int)$this->category->id_parent,
             'return_category_name' => Tools::safeOutput($this->category->name),

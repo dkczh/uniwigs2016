@@ -808,6 +808,33 @@
             {/if}
         	{/if}
         *}
+        {if $category->id == '40452'}
+            {if $products}
+            <div>
+                <img src="{$img_dir}category/human-hair/lace-wigs.jpg" alt="classic lace wigs">
+            </div>
+            <ul class="category-tab uk-margin-large-top uk-margin-bottom row" data-uk-tab="{literal}{connect:'#classic-lace-wigs'}{/literal}">
+                <li class="col-sm-3"><a href="javascript:;">Lace Front Cap</a></li>
+                <li class="col-sm-3"><a href="javascript:;">Glueless Full Lace Cap</a></li>
+                <li class="col-sm-3"><a href="javascript:;">Full Lace Cap</a></li>
+                <li class="col-sm-3"><a href="javascript:;">Silk Top Lace Cap</a></li>
+            </ul>
+            <ul id="classic-lace-wigs" class="uk-switcher">
+                <li>
+                    {include file="./product-list.tpl" products=$products1}
+                </li>
+                 <li>
+                    {include file="./product-list.tpl" products=$products2}
+                </li>
+                 <li>
+                    {include file="./product-list.tpl" products=$products3}
+                </li>
+                 <li>
+                    {include file="./product-list.tpl" products=$products4}
+                </li>
+            </ul>
+            {/if}
+        {else}
         	{if $products}
         		<div class="content_sortPagiBar clearfix">
                 	<div class="sortPagiBar clearfix">
@@ -825,6 +852,7 @@
         			</div>
         		</div>
         	{/if}
+        {/if}
         {elseif $category->id}
         	<p class="alert alert-warning">{l s='This category is currently unavailable.'}</p>
         {/if}
