@@ -732,22 +732,12 @@
                         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
                         {elseif $category->id == '40453'}
                             <div class="uk-margin-small-bottom">
-                                <a href="https://youtu.be/4xbxHf3S9mM" data-uk-lightbox>
                                 <img src="/themes/uniwigs2016/img/category/human-hair/celebrity-wigs-banner.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-                        {elseif $category->id == '40455'}
-                            <div class="uk-margin-small-bottom">
-                                <img src="/themes/uniwigs2016/img/category/synthetic-wigs/classic-banner.png" alt="" class="img-responsive"/>
                             </div>
                         {elseif $category->id == '40456'}
                             <div class="uk-margin-small-bottom">
                                 <img src="/themes/uniwigs2016/img/category/synthetic-wigs/clearance-banner.png" alt="" class="img-responsive"/>
                             </div>
-                        {elseif $category->id == '40459'}
-                            {*<div class="uk-margin-small-bottom">
-                                <img src="/themes/uniwigs2016/img/category/synthetic-wigs/trendy-banner.png" alt="" class="img-responsive"/>
-                            </div>*}
                         {else}
                         <div class="uk-margin-small-bottom">
                             <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')|escape:'html':'UTF-8'}" alt="{$category->name}">
