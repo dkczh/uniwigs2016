@@ -627,6 +627,9 @@
 								<dl class="well list-detail">
 									<dt>{l s='Email'}</dt>
 										<dd><a href="mailto:{$customer->email}"><i class="icon-envelope-o"></i> {$customer->email}</a></dd>
+									<dt>{l s='客户信息维护(extra)'}</dt>
+										<dd><a target="_blank" href="/cadmin/cmanager/message.php?cid={$customer->id}"><i class="icon-envelope-o"></i> {$customer->id}</a></dd>	
+										
 									<dt>{l s='Account registered'}</dt>
 										<dd class="text-muted"><i class="icon-calendar-o"></i> {dateFormat date=$customer->date_add full=true}</dd>
 									<dt>{l s='Valid orders placed'}</dt>
