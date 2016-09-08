@@ -135,6 +135,9 @@ class User extends Base{
 	public static function checkLogin() {
 		$user_info = UserSession::getSessionInfo ();
 		if (empty ( $user_info )) {
+			//setcookie('fail_page',$url); 子页面 设置cookie 必须要 指定作用域 否则 只对当前目录文件生效 	
+			setcookie("fail_page",$_SERVER['REQUEST_URI'], time()+3600, "/");
+			//$_COOKIE['fail_page'];
 			Common::jumpUrl("panel/login.php");
 			return true;
 		}

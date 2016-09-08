@@ -21,7 +21,18 @@ if (Common::isPost ()) {
 				}
 				$ip = Common::getIp();
 				SysLog::addLog ( $user_name, 'LOGIN', 'User' ,UserSession::getUserId(),json_encode(array("IP" => $ip)));
-				Common::jumpUrl ( 'panel/index.php' );
+			
+				if(isset($_COOKIE['fail_page'])){
+					$url =  $_COOKIE['fail_page'];
+					setcookie("fail_page","OKadmin",time()-1,"/");
+					header("Location: $url"); 
+					
+					
+				}else{
+					
+					Common::jumpUrl ( 'panel/index.php' );
+				}
+				
 			}else{
 				OSAdmin::alert("error",ErrorMessage::BE_PAUSED);
 			}
