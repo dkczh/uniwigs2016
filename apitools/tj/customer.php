@@ -101,7 +101,7 @@ exit; */
 		<td >".$skus."</td>
 		<td style='width: 100px;color: red;'>".$num."</td>
 		<td>".$email."</td>
-		<td>".$total."</td>
+		<td>".abs($total)."</td>
 		<td>".$cdate."</td>
 	
 	 </tr> ";

@@ -451,7 +451,7 @@ limit 200
 		<td >".$name."</td>
 		<td >".$email."</td>
 			
-			<th>".(int)$total."</th>	
+			<th>".abs((int)$total)."</th>	
 		<td>".$begin."</td>
 		<td>".$end."</td>
 	  <td style='width: 100px;'>
