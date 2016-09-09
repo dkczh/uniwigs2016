@@ -123,6 +123,8 @@
 									<option value="FEDEX">FEDEX</option>
 									<option value="DHL">DHL</option>
 									<option value="EMS">EMS</option>
+									<option value="TNT">TNT</option>
+									
 								</select>
 							    
 								<input type="text" name="tracking_number" value="{$line.tracking_number|htmlentities}" />

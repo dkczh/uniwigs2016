@@ -846,6 +846,9 @@ class AdminOrdersControllerCore extends AdminController
 			case 'EMS':
 			  $curl='http://www.ems.com/';
 			  break;
+			case 'TNT':
+			  $curl='http://www.tnt.com/express/en_us/site/home.html';
+			  break;
 			default:
 			  ;
 			}
@@ -897,6 +900,9 @@ class AdminOrdersControllerCore extends AdminController
 			  break;
 			case 'EMS':
 			  $curl='http://www.ems.com/';
+			  break;
+			case 'TNT':
+			  $curl='http://www.tnt.com/express/en_us/site/home.html';
 			  break;
 			default:
 			  ;
