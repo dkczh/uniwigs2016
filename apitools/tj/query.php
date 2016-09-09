@@ -335,7 +335,7 @@ function q_customer($db,$begin,$end,$cate,$childcategory){
 	c.email,
 	CONCAT(c.firstname,' ',c.lastname) as name ,
 	sum(od.product_quantity) AS num,
-	sum((od.product_price-od.reduction_amount-o.total_discounts+o.total_shipping)*od.product_quantity) AS total
+	sum((od.product_price-od.reduction_amount)*od.product_quantity) AS total
 FROM
 	ps_customer c
 LEFT JOIN ps_orders o ON o.id_customer = c.id_customer

@@ -38,7 +38,7 @@ echo "<center><h1>".$_GET['email']."</h1></center>";
 function q_product($db,$id,$begin,$end){
 	$sql = "SELECT
 sum(od.product_quantity) as num ,
-	sum((od.product_price-od.reduction_amount-o.total_discounts+o.total_shipping)*od.product_quantity) AS total,
+	sum((od.product_price-od.reduction_amount)*od.product_quantity) AS total,
 od.product_id,
 od.product_name,
 od.product_reference as skus,
