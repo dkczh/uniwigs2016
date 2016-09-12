@@ -2173,6 +2173,7 @@ class AdminOrdersControllerCore extends AdminController
 		$payment_warning = '';
 		$cart_total_paid = (float)Tools::ps_round((float)$this->context->cart->getOrderTotal(true, Cart::BOTH), 2);
 		$cart_total_paid =  number_format($cart_total_paid, _PS_PRICE_COMPUTE_PRECISION_)-number_format($order->getOrderPoints(), _PS_PRICE_COMPUTE_PRECISION_);
+		$cart_total_paid = number_format($order->total_paid, _PS_PRICE_COMPUTE_PRECISION_);
 		$total_real = number_format($order->total_paid_real, _PS_PRICE_COMPUTE_PRECISION_);
 		if($cart_total_paid !=$total_real){
 			
