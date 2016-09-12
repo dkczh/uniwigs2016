@@ -902,7 +902,7 @@ table.table-product-discounts {
   line-height: 32px;
   font-family: "Open Sans", sans-serif;
   color: #333;
-  margin-bottom: 0  !important; }
+  margin-bottom: 0 !important; }
   @media (max-width: 991px) {
     .our_price_display {
       font-size: 26px;
@@ -929,6 +929,7 @@ table.table-product-discounts {
 #reduction_percent,
 #reduction_amount {
   margin-left: 5px;
+  margin-right: 10px;
   padding: 1px 8px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;

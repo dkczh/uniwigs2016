@@ -224,15 +224,15 @@
 									{if $product->specificPrice && $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}
 								</span>
 							{/strip}</span>
-							
+							<span id="old_price"{if (!$product->specificPrice || !$product->specificPrice.reduction)} class="hidden"{/if}>{strip}
+								{if $priceDisplay >= 0 && $priceDisplay <= 2}
+									{hook h="displayProductPriceBlock" product=$product type="old_price"}
+									<span id="old_price_display">Retail Price: <span class="price">{if $productPriceWithoutReduction > $productPrice}{convertPrice price=$productPriceWithoutReduction|floatval}{/if}</span></span>
+								{/if}
+							{/strip}</span>
 						{/strip}
 						</p>
-						<p id="old_price"{if (!$product->specificPrice || !$product->specificPrice.reduction)} class="hidden"{/if}>{strip}
-							{if $priceDisplay >= 0 && $priceDisplay <= 2}
-								{hook h="displayProductPriceBlock" product=$product type="old_price"}
-								<span id="old_price_display">Retail Price: <span class="price">{if $productPriceWithoutReduction > $productPrice}{convertPrice price=$productPriceWithoutReduction|floatval}{/if}</span></span>
-							{/if}
-						{/strip}</p>
+						
 
 						{*<p id="reduction_amount" {if $productPriceWithoutReduction <= 0 || !$product->specificPrice || $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|floatval ==0} style="display:none"{/if}>{strip}
 							<span id="reduction_amount_display">
@@ -269,6 +269,12 @@
                 {hook h="displayProductPriceBlock" product=$product type="after_price"}
 				<div class="clear"></div>
 			</div> <!-- end content_prices -->
+			{if $product->id =='40816'}
+				<p class="text-primary" style="color:#920783">
+					Weekle Deal!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: WD30
+				</p>
+			{/if}
+
 			{if $category->id=='102' or $category->id=='40452' or $category->id=='40453' or $category->id=='40447' or $category->id=='40448' or $category->id=='40446' or $category->id=='40450' or $category->id=='40449' or $category->id=='40451'}
 			<p class="pro_promotions text-primary" style="color:#920783">
 				Free Color Ring for First Order with Human Hair Wigs
