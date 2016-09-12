@@ -45,12 +45,12 @@
 <div class="celebirty-wigs uk-margin-large-top">
 	<ul class="row">
 		<li>
-			<a href="{$base_dir}tag/african-american-human-hair-wigs">
+			<a href="{$base_dir}tag/african-american-wigs">
 				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/african.jpg" alt="african american human-hair wigs" class="img-responsive">
 			</a>
 		</li>
 		<li>
-			<a href="{$base_dir}tag/african-american-human-hair-wigs">
+			<a href="{$base_dir}tag/african-american-wigs">
 				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/african-text.png" alt="african american human-hair wigs">
 			</a>
 		</li>
@@ -155,9 +155,9 @@
 			</a>
 		</li>
 		<li>
-			<a href="{$base_dir}content/34-share-your-photos">
+			<a>
 				<p class="h2">share your joy</p>
-				<p class="h4">FOR A CHANCE TO WIN $100</p>
+				<p class="h4">get $10</p>
 			</a>
 		</li>
 	</ul>

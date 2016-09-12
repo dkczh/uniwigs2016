@@ -265,7 +265,7 @@
                 {hook h="displayProductPriceBlock" product=$product type="after_price"}
 				<div class="clear"></div>
 			</div> <!-- end content_prices -->
-			{if $category->id=='102'}
+			{if $category->id=='102' or $category->id=='40452' or $category->id=='40453' or $category->id=='40447' or $category->id=='40448' or $category->id=='40446' or $category->id=='40450' or $category->id=='40449' or $category->id=='40451'}
 			<p class="pro_promotions text-primary" style="color:#920783">
 				Free Color Ring for First Order with Human Hair Wigs
 			</p>
