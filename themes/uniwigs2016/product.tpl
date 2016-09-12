@@ -207,7 +207,8 @@
 				{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 					<!-- prices -->
 					<div>
-						<p class="our_price_display" itemprop="offers" itemscope itemtype="https://schema.org/Offer">{strip}
+						<p class="our_price_display" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+						{strip}
 							{if $product->quantity > 0}<link itemprop="availability" href="https://schema.org/InStock"/>{/if}
 							<label>{l s='Our Price:'} </label>
 							{if $priceDisplay >= 0 && $priceDisplay <= 2}
@@ -218,18 +219,21 @@
 								<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 								{hook h="displayProductPriceBlock" product=$product type="price"}
 							{/if}
-							<span id="old_price"{if (!$product->specificPrice || !$product->specificPrice.reduction)} class="hidden"{/if}>{strip}
-								{if $priceDisplay >= 0 && $priceDisplay <= 2}
-									{hook h="displayProductPriceBlock" product=$product type="old_price"}
-									<span id="old_price_display">Retail Price: <span class="price">{if $productPriceWithoutReduction > $productPrice}{convertPrice price=$productPriceWithoutReduction|floatval}{/if}</span></span>
-								{/if}
+							<span id="reduction_percent" {if $productPriceWithoutReduction <= 0 || !$product->specificPrice || $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}>{strip}
+								<span id="reduction_percent_display">
+									{if $product->specificPrice && $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}
+								</span>
 							{/strip}</span>
+							
+						{/strip}
+						</p>
+						<p id="old_price"{if (!$product->specificPrice || !$product->specificPrice.reduction)} class="hidden"{/if}>{strip}
+							{if $priceDisplay >= 0 && $priceDisplay <= 2}
+								{hook h="displayProductPriceBlock" product=$product type="old_price"}
+								<span id="old_price_display">Retail Price: <span class="price">{if $productPriceWithoutReduction > $productPrice}{convertPrice price=$productPriceWithoutReduction|floatval}{/if}</span></span>
+							{/if}
 						{/strip}</p>
-						<p id="reduction_percent" {if $productPriceWithoutReduction <= 0 || !$product->specificPrice || $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}>{strip}
-							<span id="reduction_percent_display">
-								{if $product->specificPrice && $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}
-							</span>
-						{/strip}</p>
+
 						{*<p id="reduction_amount" {if $productPriceWithoutReduction <= 0 || !$product->specificPrice || $product->specificPrice.reduction_type != 'amount' || $product->specificPrice.reduction|floatval ==0} style="display:none"{/if}>{strip}
 							<span id="reduction_amount_display">
 							{if $product->specificPrice && $product->specificPrice.reduction_type == 'amount' && $product->specificPrice.reduction|floatval !=0}
