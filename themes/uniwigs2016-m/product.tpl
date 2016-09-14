@@ -271,7 +271,7 @@
 							</div> <!-- end prices -->
 							{if $product->id =='40816'}
 								<p class="text-primary text-center" style="color:#920783">
-									Weekle Deal!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: WD30
+									Weekly Deal!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: WD30
 								</p>
 							{/if}
 							<p class="uk-margin-small-bottom text-center"><a href="#product_free_shipping_info" data-uk-modal class="product_free_shipping">Free Shipping US *</a></p>
