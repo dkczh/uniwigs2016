@@ -163,71 +163,24 @@
     {elseif $category->id == '101'}
         {literal}
         <style>
-            #columns{max-width: 100%}
             .breadcrumb{display: none}
-            .text-detail{width: 172px;padding-right: 10px;text-align: center;}
-            .synthetic_clearnce{display:block;border:3px solid #ccc;padding:78px 65px;}
-            .synthetic_clearnce h2{letter-spacing: 6px}
-            .synthetic_clearnce p{letter-spacing: 2px;font-size:1.3em;}
-            @media (min-width:768px) {
-                .text-detail-bottom{position: absolute;bottom:25px;left:-80px;}
-                .text-detail-top{position: absolute;top:25px;left:-80px;}
-            }
-            @media (min-width:1600px) {
-                .col-md-offset-1{margin-left:18%;}
-                .col-md-offset-2{margin-left:10%;}
-                .col-md-5{ width: 33.33333%;}
-                .col-md-7 img{ margin:0 auto;}
-                .category-banner .col-md-4{width:25%;}
-            }
 
         </style>
         {/literal}
 
         {*<script type="text/javascript" src="{$js_dir}like.js"></script>*}
             <section class="category-home">
-                {*<div class="cargory_banner" style="background-color:#fbfbfb">
-                    <div class="img-responsive"><img src="{$img_dir}category/synthetic-wigs/Synthetic_banner.jpg" alt="Cool Summer New Wigs" style="margin:0 auto"></div>
-                </div>*}
-                <div class="clearfix">
-                    <div class="col-md-5 col-sm-11 col-sm-offset-2 col-md-offset-1 uk-margin-large-top">
-                        <div class="text-detail text-detail-bottom">
-                            <h3><a href="{$base_dir}40455-classic-wigs">classic</a></h3>
-                            <h5>The classic will last forever!</h5>
-                        </div>
-                        <a class="pull-left img-responsive" href="{$base_dir}40455-classic-wigs"><img src="{$img_dir}category/synthetic-wigs/classic_wigs.jpg" alt="synthetic classic wigs"></a>
-                    </div>
-                    <div class="uk-margin-large-top col-md-4 col-sm-8 col-sm-offset-4 col-md-offset-2">
-                        <div class="text-detail text-detail-top pull-left">
-                            <h3><a href="{$base_dir}40459-trendy-wigs">trendy</a></h3>
-                            <h5>Wanna become trendy? Let's start with the hair!</h5>
-                        </div>
-                        <a class="pull-left img-responsive" href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}category/synthetic-wigs/trendy_wigs.jpg" alt="synthetic trendy wigs"></a>
-                    </div>
+                <div class="uk-margin-large-bottom">
+                    <a class="img-responsive" href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}category/synthetic-wigs/trendy_wigs_new.jpg" alt="synthetic trendy wigs"></a>
                 </div>
-                <div class="category-banner clearfix">
-                    <div class="col-md-7 uk-margin-large-top">
-                        <a href="{$base_dir}tag/silver-galaxy-trend-wig" class="img-responsive"><img src="{$img_dir}category/synthetic-wigs/silver_galaxy.jpg" alt="silver galaxy"></a>
-                    </div>
-                    <div class="col-md-4 uk-margin-large-top">
-                        <a href="{$base_dir}40456-clearance-wigs" class="synthetic_clearnce text-center">
-                            <h2>clearnce</h2>
-                            <p>Save Big on the wig!</p>
-                            <h5 class="uk-margin-large-top">shop now ></h5>
-                        </a>
-                    </div>
+                <div class="uk-margin-large-bottom">
+                    <a class="img-responsive" href="{$base_dir}40455-classic-wigs"><img src="{$img_dir}category/synthetic-wigs/classic_wigs_new.jpg" alt="synthetic classic wigs"></a>
                 </div>
-
-                <div class="synthetic-video container">
-                    <div class="row">
-                        <div class="col-sm-6 uk-margin-large-top">
-                            <a href="https://www.youtube.com/watch?v=C7dazw19buc" class="category-video" data-uk-lightbox><img src="{$img_dir}category/synthetic-wigs/video-synthetic01.jpg" alt="Uniwigs Human Hair Lace Wig Collection" class="img-responsive"></a>
-                        </div>
-                        <div class="col-sm-6 uk-margin-large-top">
-                            <a href="https://www.youtube.com/watch?v=FpGH3KQJ5Z4" class="category-video" data-uk-lightbox><img src="{$img_dir}category/synthetic-wigs/video-synthetic02.jpg" alt="Uniwigs Human Hair Lace Wig Collection" class="img-responsive"></a>
-                        </div>
-                    </div>
+                <div class="uk-margin-large-bottom">
+                    <a href="{$base_dir}tag/silver-galaxy-trend-wig" class="img-responsive"><img src="{$img_dir}category/synthetic-wigs/silver_galaxy_new.jpg" alt="silver galaxy"></a>
                 </div>
+                   
+                
                 <div class="container">
                      {if isset($SyntheticWigsNewArrival)}
                      <div class="cagegory_topsale title-hr">
@@ -289,85 +242,74 @@
                          </div>
                      {/if}
                     
-                    <div class="sns_ins uk-margin-large-top text-center">
-                    <div class="sns_ins_title">
-                        <h3><a href="http://instagram.com/uniwigs" target="_blank">@uniwigs Trendy</a></h3>
+                    <div class="synthetic-video title-hr">
+                        <h3>Trendy Look</h3>
+                        <p class="hr"></p>
+                        <div class="row uk-margin-top">
+                            <div class="col-sm-4 text-center">
+                                <a href="https://www.youtube.com/watch?v=Kh2LUFdImjo" class="category-video" data-uk-lightbox>
+                                    <p><img src="{$img_dir}category/synthetic-wigs/video-1.jpg" alt="CABELO PLATINADO LAVANDER HAIR | SILVER HAIR | FRONT LACE UNIWIGS" class="img-responsive"></p>
+                                    <p class="h5">CABELO PLATINADO LAVANDER HAIR | SILVER HAIR</p>
+                                    <p class="text-info"><i>Video by WappaModa</i></p>
+                                </a>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <a href="https://www.youtube.com/watch?v=8ZNsEo0p-VY" class="category-video" data-uk-lightbox>
+                                    <p><img src="{$img_dir}category/synthetic-wigs/video-2.jpg" alt="IM BAAAAAAAACK (with UniWigs Tonya Wig)" class="img-responsive"></p>
+                                    <p class="h5">IM BAAAAAAAACK (with UniWigs Tonya Wig)</p>
+                                    <p class="text-info"><i>Video by Eleanor Barnes</i></p>
+                                </a>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <a href="https://www.youtube.com/watch?v=t1s5xbcBvGc" class="category-video" data-uk-lightbox>
+                                    <p><img src="{$img_dir}category/synthetic-wigs/video-3.jpg" alt="Lace Front Wig Haul" class="img-responsive"></p>
+                                    <p class="h5">Lace Front Wig Haul</p>
+                                    <p class="text-info"><i>Video by ChoNunMigookSaram</i></p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div id="custome-show" class="uk-margin-small-top">
-                        {*<ul class="row">
-                            <li class="col-md-3 col-sm-3">
-                                <a href=""><img src="/40475-2127-vnormal/katerina-graham-curly-remy-human-hair-lace-wig.jpg" alt="" class="img-responsive"></a>
-                            </li>
-                            <li class="col-md-3 col-sm-3">
-                                <a href=""><img src="/40475-2127-vnormal/katerina-graham-curly-remy-human-hair-lace-wig.jpg" alt="" class="img-responsive"></a>
-                            </li>
-                            <li class="col-md-3 col-sm-3">
-                                <a href=""><img src="/40475-2127-vnormal/katerina-graham-curly-remy-human-hair-lace-wig.jpg" alt="" class="img-responsive"></a>
-                            </li>
-                            <li class="col-md-3 col-sm-3">
-                                <a href=""><img src="/40475-2127-vnormal/katerina-graham-curly-remy-human-hair-lace-wig.jpg" alt="" class="img-responsive"></a>
-                            </li>
-                        </ul>*}
-                    </div>
-                    <div class="uk-margin-small-top">
-                        <a href="http://www.uniwigs.com/customer-show?caid=101" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
-                    </div>
-                    <script type="text/javascript">
-                    {literal}
-                    $(function(){
-                        window.load_home_customer_shows = function(){
-                            $.get("http://rvm.uniwigs.com/api_review3/home_customer_shows",{
-                                pagesize:4,
-                                catids:101
-                            },function(data){
-                                $("#custome-show").html(data);
-                            });
-                        }
-                        load_home_customer_shows();
-                    });
-                    {/literal}
-                    </script>
-                </div>
 
-                    <div class="category_help uk-margin-large-top">
-                        <ul class="row" data-uk-grid-match>
-                            <li class="col-md-4">
-                                <div class="category_faq">
-                                    <div class="ask">
-                                        <span>Can the synthetic wig be styled or dyed?</span>
-                                    </div>
-                                    <div class="answer text-info uk-margin-small-top">
-                                        <p>The synthetic wig on our website can be curled and straighten, but the temperature must be controlled under 85 degree centigrade. but, the synthetic wig could not be dyed, it will damage the wig, please do it on human hair product if you need to.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <div class="category_faq">
-                                    <div class="ask">
-                                        <span>What is your default capsize for synthetic wig?</span>
-                                    </div>
-                                    <div class="answer text-info uk-margin-small-top">
-                                        <p>The default capsize for synthetic wig on Uniwigs is 21.5” inches. If you have special need, please contact support@unwigs. com to custom your unique cap size.
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <div class="category_faq">
-                                    <div class="ask">
-                                        <span>How to care the synthetic wig?</span>
-                                    </div>
-                                    <div class="answer text-info uk-margin-small-top">
-                                        <p><b>1.</b> It is recommended that you wash your wig one or twice every month according to wearing frequency. </p>
-                                        <p><b>2.</b> Choose a slightly acidic shampoo, use hair conditioner and wash in mild water.</p>
-                                        <p><b>3.</b> Make sure the water flows in the same direction during washing and avoid rubbing the wig heavily.</p>
-                                        <p><b>4.</b> Do not comb or brush the wet wig. Style the wig when it is dry.</p>
-                                        <p><b>5.</b> Using a wig brush on a wig is okay but, I suggest using a METAL WIDE TOOTH COMB and avoid using a plastic brush.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="sns_ins uk-margin-large-top text-center">
+                        <div class="sns_ins_title">
+                            <h3><a href="http://instagram.com/uniwigs" target="_blank">@uniwigs Trendy</a></h3>
+                        </div>
+                        <div id="custome-show" class="uk-margin-small-top">
+                            {*<ul class="row">
+                                <li class="col-md-3 col-sm-3">
+                                    <a href=""><img src="/40475-2127-vnormal/katerina-graham-curly-remy-human-hair-lace-wig.jpg" alt="" class="img-responsive"></a>
+                                </li>
+                                <li class="col-md-3 col-sm-3">
+                                    <a href=""><img src="/40475-2127-vnormal/katerina-graham-curly-remy-human-hair-lace-wig.jpg" alt="" class="img-responsive"></a>
+                                </li>
+                                <li class="col-md-3 col-sm-3">
+                                    <a href=""><img src="/40475-2127-vnormal/katerina-graham-curly-remy-human-hair-lace-wig.jpg" alt="" class="img-responsive"></a>
+                                </li>
+                                <li class="col-md-3 col-sm-3">
+                                    <a href=""><img src="/40475-2127-vnormal/katerina-graham-curly-remy-human-hair-lace-wig.jpg" alt="" class="img-responsive"></a>
+                                </li>
+                            </ul>*}
+                        </div>
+                        <div class="uk-margin-small-top">
+                            <a href="http://www.uniwigs.com/customer-show?caid=101" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
+                        </div>
+                        <script type="text/javascript">
+                        {literal}
+                        $(function(){
+                            window.load_home_customer_shows = function(){
+                                $.get("http://rvm.uniwigs.com/api_review3/home_customer_shows",{
+                                    pagesize:4,
+                                    catids:101
+                                },function(data){
+                                    $("#custome-show").html(data);
+                                });
+                            }
+                            load_home_customer_shows();
+                        });
+                        {/literal}
+                        </script>
                     </div>
+
                 </div>
             </section>
         </section>
