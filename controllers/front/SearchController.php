@@ -91,7 +91,8 @@ class SearchControllerCore extends FrontController
                 'instant_search' => $this->instant_search,
                 'homeSize' => Image::getSize(ImageType::getFormatedName('home'))));
         } elseif (($query = Tools::getValue('search_query', Tools::getValue('ref'))) && !is_array($query)) {
-            $this->productSort();
+            //ref 搜索 
+			$this->productSort();
             $this->n = abs((int)(Tools::getValue('n', $product_per_page)));
             $this->p = abs((int)(Tools::getValue('p', 1)));
             $original_query = $query;
