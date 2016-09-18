@@ -181,7 +181,7 @@
 				<p class="online_only">{l s='Online only'}</p>
 			{/if}
 			<h1 itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
-			<p id="product_reference" class="text-center"{if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
+			<p id="product_reference_a" class="text-center"{if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
 				<label>{l s='SKU:'} </label>
 				<span class="editable" itemprop="sku"{if !empty($product->reference) && $product->reference} content="{$product->reference}"{/if}>
 					{$product->reference|escape:'html':'UTF-8'}
