@@ -181,9 +181,11 @@
 				<p class="online_only">{l s='Online only'}</p>
 			{/if}
 			<h1 itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
-			<p id="product_reference" class="text-center"{if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
+			<p id="product_reference_a" class="text-center"{if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
 				<label>{l s='SKU:'} </label>
-				<span class="editable" itemprop="sku"{if !empty($product->reference) && $product->reference} content="{$product->reference}"{/if}>{if !isset($groups)}{$product->reference|escape:'html':'UTF-8'}{/if}</span>
+				<span class="editable" itemprop="sku"{if !empty($product->reference) && $product->reference} content="{$product->reference}"{/if}>
+					{$product->reference|escape:'html':'UTF-8'}
+				</span>
 			</p>
 			
 			{if ($display_qties == 1 && !$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && $product->available_for_order)}
@@ -269,6 +271,11 @@
 									{/strip}</span>
 								{/if}
 							</div> <!-- end prices -->
+							{if $product->id =='40816'}
+								<p class="text-primary text-center" style="color:#920783">
+									Weekly Deal!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: WD30
+								</p>
+							{/if}
 							<p class="uk-margin-small-bottom text-center"><a href="#product_free_shipping_info" data-uk-modal class="product_free_shipping">Free Shipping US *</a></p>
 							<div id="product_free_shipping_info" class="uk-modal">
 							    <div class="uk-modal-dialog img-responsive">

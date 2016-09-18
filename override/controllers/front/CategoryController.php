@@ -64,7 +64,7 @@ class CategoryController extends CategoryControllerCore
         if ($this->getTagSkus($products)) {
             $sql = "SELECT a.id_product,a.reference,a.price,b.name,b.link_rewrite,c.id_image from ps_product a  
 		RIGHT JOIN  ps_product_lang b on a.id_product=b.id_product  
-		RIGHT JOIN ps_image c on a.id_product=c.id_product 
+		RIGHT JOIN ps_image c on a.id_product=c.id_product  and c.cover=1
 		where a.reference in (" . $this->getTagSkus($products) . ") 
 		and b.id_shop=1
 		GROUP BY id_product";
