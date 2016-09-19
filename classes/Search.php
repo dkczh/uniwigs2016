@@ -192,7 +192,9 @@ class SearchCore
         $intersect_array = array();
         $score_array = array();
         $words = explode(' ', Search::sanitize($expr, $id_lang, false, $context->language->iso_code));
-
+		
+		
+		
         foreach ($words as $key => $word) {
             if (!empty($word) && strlen($word) >= (int)Configuration::get('PS_SEARCH_MINWORDLEN')) {
                 $word = str_replace(array('%', '_'), array('\\%', '\\_'), $word);
@@ -221,7 +223,7 @@ class SearchCore
         if (!count($words)) {
             return ($ajax ? array() : array('total' => 0, 'result' => array()));
         }
-
+		
         $score = '';
         if (is_array($score_array) && !empty($score_array)) {
             $score = ',(
@@ -253,8 +255,16 @@ class SearchCore
 		AND product_shop.`visibility` IN ("both", "search")
 		AND product_shop.indexed = 1
 		'.$sql_groups, true, false);
-
+		
         $eligible_products = array();
+		//判断产品 在自定义搜索中 是否制定产品
+		$keywordresult = Db::getInstance()->executeS("SELECT pid  from  px_keyword WHERE
+													keyword = '$words[0]' ");
+				
+		if($keywordresult){
+			
+		}
+	
         foreach ($results as $row) {
             $eligible_products[] = $row['id_product'];
         }
@@ -266,23 +276,50 @@ class SearchCore
 
             $eligible_products = array_intersect($eligible_products, $eligible_products2);
             if (!count($eligible_products)) {
-                return ($ajax ? array() : array('total' => 0, 'result' => array()));
+				if(!$keywordresult){
+			
+				 return ($ajax ? array() : array('total' => 0, 'result' => array()));
+				}
+               
             }
         }
 
         $eligible_products = array_unique($eligible_products);
-
+		
         $product_pool = '';
+		
+		
         foreach ($eligible_products as $id_product) {
             if ($id_product) {
                 $product_pool .= (int)$id_product.',';
             }
         }
+		
+		
         if (empty($product_pool)) {
-            return ($ajax ? array() : array('total' => 0, 'result' => array()));
+				if(!$keywordresult){
+		
+				 return ($ajax ? array() : array('total' => 0, 'result' => array()));
+				}
         }
         $product_pool = ((strpos($product_pool, ',') === false) ? (' = '.(int)$product_pool.' ') : (' IN ('.rtrim($product_pool, ',').') '));
-
+		
+	//获取的产品集合$product_pool
+		/* echo $product_pool; */
+	
+		
+		//获取自定义的 关键词 关联产品
+		$result = Db::getInstance()->getValue("SELECT pid from  px_keyword WHERE
+													keyword = '$words[0]' ");
+													
+		if($result){
+			
+		$product_pool = 'IN ('.$result.')';
+		/* echo $product_pool; */
+		}
+		
+	
+		
         if ($ajax) {
             $sql = 'SELECT DISTINCT p.id_product, pl.name pname, cl.name cname,
 						cl.link_rewrite crewrite, pl.link_rewrite prewrite '.$score.'
