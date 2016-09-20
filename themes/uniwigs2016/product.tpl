@@ -275,6 +275,12 @@
 				</p>
 			{/if}
 
+			{if $product->id =='41374'}
+				<p class="text-primary" style="color:#920783">
+					If you want to get a deeper discount of this wig,please check our email titled 'Harley Quinn Style For All Your Halloween Day Looks' to get a special discount for More Savings of this wig.
+				</p>
+			{/if}
+
 			{if $category->id=='102' or $category->id=='40452' or $category->id=='40453' or $category->id=='40447' or $category->id=='40448' or $category->id=='40446' or $category->id=='40450' or $category->id=='40449' or $category->id=='40451'}
 			<p class="pro_promotions text-primary" style="color:#920783">
 				Free Color Ring for First Order with Human Hair Wigs

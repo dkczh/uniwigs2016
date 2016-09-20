@@ -276,6 +276,11 @@
 									Weekly Deal!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: WD30
 								</p>
 							{/if}
+							{if $product->id =='41374'}
+								<p class="text-primary" style="color:#920783">
+									If you want to get a deeper discount of this wig,please check our email titled 'Harley Quinn Style For All Your Halloween Day Looks' to get a special discount for More Savings of this wig.
+								</p>
+							{/if}
 							<p class="uk-margin-small-bottom text-center"><a href="#product_free_shipping_info" data-uk-modal class="product_free_shipping">Free Shipping US *</a></p>
 							<div id="product_free_shipping_info" class="uk-modal">
 							    <div class="uk-modal-dialog img-responsive">
