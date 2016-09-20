@@ -60,7 +60,6 @@
 
 </style>
 {/literal}
-<div><a href="{$base_dir}human-hair-wigs/40816-straight-100-top-quality-remy-human-hair-lace-front-wig.html"><img src="{$base_dir}themes/uniwigs2016-m/img/home/weekle-deal.png" alt="weekle deal" class="img-responsive"></a></div>
 
 {*<div><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$base_dir}themes/uniwigs2016-m/img/home/celebrity-wig-collection.jpg" alt="celebrity wig collection" class="img-responsive"></a></div>*}
 {*<div>
