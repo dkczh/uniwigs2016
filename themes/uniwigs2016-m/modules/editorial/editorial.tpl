@@ -77,6 +77,9 @@
 	<a href="{$base_dir}login?back=my-account"><img src="/themes/uniwigs2016-m/img/home/m10.png" alt="Enjoy 10% off your first order" class="img-responsive"></a>
 </div>
 <div class="promotion-block">
+	<a href="{$base_dir}tag/hair-loss"><img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016-m/img/home/hari-loss.jpg" alt="Hair Loss" class="img-responsive"></a>
+</div>
+<div class="promotion-block">
 	<a href="{$base_dir}tag/toppers"><img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016-m/img/home/top-hair.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
 </div>
 
