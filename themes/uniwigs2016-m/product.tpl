@@ -271,7 +271,7 @@
 									{/strip}</span>
 								{/if}
 							</div> <!-- end prices -->
-							{if $product->id =='40816'}
+							{if $product->id =='40817'}
 								<p class="text-primary text-center" style="color:#920783">
 									Weekly Deal!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: WD30
 								</p>
