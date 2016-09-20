@@ -59,6 +59,9 @@
 		</li>
 	</ul>
 </div>
+<div class="uk-margin-large-top">
+	<a href="{$base_dir}tag/hair-loss"><img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/hair-loss.jpg" alt="Hair Loss"></a>
+</div>
 </div>
 </div>
 </div>
