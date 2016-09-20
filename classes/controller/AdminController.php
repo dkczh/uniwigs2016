@@ -857,12 +857,14 @@ class AdminControllerCore extends Controller
 
     /**
      * @TODO uses redirectAdmin only if !$this->ajax
+	 * 所有的 非ajax的post请求 都在这里处理
      * @return bool
      */
     public function postProcess()
     {
         try {
             if ($this->ajax) {
+				//ajax 请求
                 // from ajax-tab.php
                 $action = Tools::getValue('action');
                 // no need to use displayConf() here
@@ -885,19 +887,38 @@ class AdminControllerCore extends Controller
                     return $this->ajaxProcess();
                 }
             } else {
+				//页面 列表页post提交处理 
                 // Process list filtering
+				/* 	echo $this->action;
+					exit; */
+				//提交的请求动作
                 if ($this->filter && $this->action != 'reset_filters') {
                     $this->processFilter();
                 }
-    
-                /*  old code 
+			  /*  old code 
                 if (isset($_POST) && count($_POST) && (int)Tools::getValue('submitFilter'.$this->list_id) || Tools::isSubmit('submitReset'.$this->list_id)) {
                     $this->setRedirectAfter(self::$currentIndex.'&token='.$this->token.(Tools::isSubmit('submitFilter'.$this->list_id) ? '&submitFilter'.$this->list_id.'='.(int)Tools::getValue('submitFilter'.$this->list_id) : ''));
                 }*/
+				
+				//修复订单页面 搜索返回地址不正确
+		
                 //修复 后台 搜索 未返回当前搜索页面 bug
-                if (isset($_POST) && count($_POST) && (int)Tools::getValue('submitFilter'.$this->list_id) || Tools::isSubmit('submitReset'.$this->list_id)) {
-                   $this->setRedirectAfter("index.php?".$_SERVER["QUERY_STRING"]);
+				//$this->list_id 确定列表页请求标志 比如 order  customer address ...
+				/* 	echo $this->list_id ;
+					exit; */
+				
+              
+                if (isset($_POST) && count($_POST) && (int)Tools::getValue('submitFilter'.$this->list_id) ) {
+				/* 	echo '竟然跳转了'.'<br>';
+					echo self::$currentIndex.'<br>';
+					echo $_SERVER['QUERY_STRING'].'<br>';
+					echo self::$currentIndex.'&token='.$this->token.(Tools::isSubmit('submitFilter'.$this->list_id) ? '&submitFilter'.$this->list_id.'='.(int)Tools::getValue('submitFilter'.$this->list_id) : '');
+					exit; */
+                    $this->setRedirectAfter("index.php?".$_SERVER['QUERY_STRING'].(Tools::isSubmit('submitFilter'.$this->list_id) ? '&submitFilter'.$this->list_id.'='.(int)Tools::getValue('submitFilter'.$this->list_id) : ''));
                 }
+			
+					
+               
 
                 // If the method named after the action exists, call "before" hooks, then call action method, then call "after" hooks
                 if (!empty($this->action) && method_exists($this, 'process'.ucfirst(Tools::toCamelCase($this->action)))) {
@@ -3185,7 +3206,8 @@ class AdminControllerCore extends Controller
             'order_way' => &$this->_orderWay,
             'fields' => &$this->fields_list,
         ));
-
+/* echo 'xxxx' ;
+exit; */
         if (!isset($this->list_id)) {
             $this->list_id = $this->table;
         }
@@ -3250,6 +3272,7 @@ class AdminControllerCore extends Controller
 
         /* Determine offset from current page */
         $start = 0;
+	
         if ((int)Tools::getValue('submitFilter'.$this->list_id)) {
             $start = ((int)Tools::getValue('submitFilter'.$this->list_id) - 1) * $limit;
         } elseif (empty($start) && isset($this->context->cookie->{$this->list_id.'_start'}) && Tools::isSubmit('export'.$this->table)) {
