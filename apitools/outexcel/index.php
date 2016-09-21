@@ -56,6 +56,9 @@ margin-top: 10px;
 				<option value="103">Hair Extensions</option>
 				<option value="104">Hair Pieces</option>
 				<option value="105">Care Products</option>
+				<option value="40456">Clearance wigs</option>
+				<option value="40455">Classic wigs</option>
+				<option value="40459">Trendy wigs</option>
 
 			</select>
 		 <label for="meeting">开始日期：</label><input id="d_begin"  class="laydate-icon" value="2015-11-01"/>
