@@ -23,8 +23,6 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div class="uk-margin-large-bottom"><a href="{$base_dir}human-hair-wigs/40816-straight-100-top-quality-remy-human-hair-lace-front-wig.html"><img src="{$base_dir}themes/uniwigs2016/img/index/weekle-deal.jpg" alt="weekle deal" class="img-responsive"></a></div>
-
 {*<div class="uk-margin-large-bottom"><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$base_dir}themes/uniwigs2016/img/index/celebrity-wig-collection.jpg" alt="celebrity wig collection" class="img-responsive"></a></div>*}
 
 {*<div class="uk-margin-large-bottom">
