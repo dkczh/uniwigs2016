@@ -63,6 +63,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="p:domain_verify" content="d68fca74a52eb1928a678cebb9a8f099"/>
+		<meta name="author" content="Uniwigs">
+
 		<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
 		<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
 		{if isset($css_files)}
@@ -112,27 +114,27 @@
 					{/if}
 
 					{if $page_name == 'index'}
-						<div id="header_logo">
+						<h1 id="header_logo">
 							<a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">
 								<img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}" width="90"/>
 							</a>
-						</div>
+						</h1>
 					{elseif $page_name == 'category'}
-						<div id="header_logo">
+						<h1 id="header_logo">
 							<span>{$category->name}</span>
-						</div>
+						</h1>
 					{elseif $page_name == 'tag'}
-						<div id="header_logo">
+						<h1 id="header_logo">
 							<span>{$tag->name}</span>
-						</div>
+						</h1>
 					{elseif $page_name == 'module-blockwishlist-mywishlist'}
-						<div id="header_logo">
+						<h1 id="header_logo">
 							<span>My Wishlist</span>
-						</div>
+						</h1>
 					{else}
-						<div id="header_logo">
+						<h1 id="header_logo">
 							<span>{$page_name}</span>
-						</div>
+						</h1>
 					{/if}
 					{$smarty.capture.displayNav}
 				{/if}

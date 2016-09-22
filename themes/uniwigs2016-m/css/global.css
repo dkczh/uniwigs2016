@@ -6053,7 +6053,9 @@ header {
     padding-top: 4px;
     padding-bottom: 3px;
     display: inline-block;
-    position: relative; }
+    position: relative;
+    margin: 0;
+    font-size: 2em; }
     header #header_logo span {
       display: inline-block;
       font-size: 1.8rem;

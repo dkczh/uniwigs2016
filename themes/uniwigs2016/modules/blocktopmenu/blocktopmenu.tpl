@@ -1,8 +1,8 @@
-<div id="header_logo">
+<h1 id="header_logo">
 	<a href="/" title="UniWigs">
 		<img class="logo" src="{$logo_url}" alt="UniWigs" width="169">
 	</a>
-</div>
+</h1>
 <!-- Menu -->
 {if $MENU != ''}
 	<div id="block_top_menu" class="uk-navbar sf-contener">
