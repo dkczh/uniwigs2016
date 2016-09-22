@@ -35,7 +35,7 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">feature</li>
-	        	       				<li><a href="{$base_dir}tag/african-american-human-hair-wigs">African American Human Hair Wigs</a></li>
+	        	       				<li><a href="{$base_dir}tag/african-american-wigs">African American Human Hair Wigs</a></li>
 	        	       				<li><a href="{$base_dir}tag/medical-wigs">Medical Wigs for Hair Loss</a></li>
 	        	       				<li><a href="{$base_dir}tag/hand-tied-wigs">Hand-tied Human Hair Wigs</a></li>
 	        	       				{*<li><a href="{$base_dir}tag/african-american-human-hair-wigs">African American Wigs</a></li>*}
