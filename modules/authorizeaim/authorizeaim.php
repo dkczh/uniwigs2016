@@ -219,7 +219,15 @@ class AuthorizeAIM extends PaymentModule
 	}
 
 	public function hookPayment($params)
-	{
+	{	
+		//增加 400美金以上authorize支付方式隐藏
+		$cart = new cart( (int)$params['cart']->id);
+		if($cart->getOrderTotal()>=400){
+			
+			return '';
+		}
+	
+		
 		$currency = Currency::getCurrencyInstance($this->context->cookie->id_currency);
 
 		if (!Validate::isLoadedObject($currency))
@@ -239,6 +247,7 @@ class AuthorizeAIM extends PaymentModule
 				$url = 'https://'.Tools::getShopDomainSsl().__PS_BASE_URI__.'/modules/'.$this->name.'/';
 			else
 				$url = 'https://'.$_SERVER['HTTP_HOST'].__PS_BASE_URI__.'modules/'.$this->name.'/';
+			
 
 			$this->context->smarty->assign('x_invoice_num', (int)$params['cart']->id);
 			$this->context->smarty->assign('cards', $cards);
