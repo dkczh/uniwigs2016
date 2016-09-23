@@ -43,13 +43,13 @@
                 </div>
                 <ul class="row uk-margin-top">
                     <li class="col-md-6 col-sm-6">
-                        <a href="{$base_dir}tag/luxury-human-hair">
+                        <a href="{$base_dir}40452-human-hair-lace-wigs">
                             <img src="{$img_dir}category/human-hair/Classic-Lace-Wigs.jpg" alt="Classic Lace Wigs" class="img-responsive">
                             <img src="{$img_dir}category/human-hair/Classic-Lace-Wigs-text.png" alt="Classic Lace Wigs" class="img-responsive">
                         </a>
                     </li>
                     <li class="col-md-6 col-sm-6">
-                        <a href="{$base_dir}tag/luxury-human-hair">
+                        <a href="{$base_dir}tag/human-hair-wigs-customization">
                             <img src="{$img_dir}category/human-hair/custom-wigs.jpg" alt="custom wigs" class="img-responsive">
                             <img src="{$img_dir}category/human-hair/custom-wigs-text.png" alt="custom wigs" class="img-responsive">
                         </a>
