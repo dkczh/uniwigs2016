@@ -172,6 +172,28 @@ var google_remarketing_only = false;
 </noscript>
 ';
 }
+$google_ppc_js .= '
+<!-- Google Code for conversion Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 872601989;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "Q-JGCNvIu2oQhbOLoAM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/872601989/?label=Q-JGCNvIu2oQhbOLoAM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+';
+
+
 
 if($total_paid>0){
 $this->smarty->assign('google_ppc_js', $google_ppc_js);
