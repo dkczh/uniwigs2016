@@ -82,7 +82,9 @@
 <div class="promotion-block">
 	<a href="{$base_dir}tag/toppers"><img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016-m/img/home/top-hair.jpg" alt="remy human hair lace closure" class="img-responsive"></a>
 </div>
-
+<div class="promotion-block">
+	<a href="{$base_dir}tag/african-american-wigs"><img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016-m/img/home/african-american.jpg" alt="african american wigs" class="img-responsive"></a>
+</div>
 <!-- Module Editorial -->
 
 {*<div class="home-category">
