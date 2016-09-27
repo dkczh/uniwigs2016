@@ -157,6 +157,8 @@
 						</div>
 					</div>
 				</header>
+				{if isset($category)}
+				{if $category->id == '102' or $category->id == '40452' or $category->id == '40453' or $category->id == '105' or $category->id == '40447' or $category->id == '40448' or $category->id == '40446' or $category->id == '40450' or $category->id == '40449' or $category->id == '40451'}
 				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
@@ -173,6 +175,8 @@
 					    </div>
 					</div>
 				</div>
+				{/if}
+				{/if}
 			</div>
 			<div class="columns-container">
 				<div id="slider_row" class="row">
