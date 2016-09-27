@@ -157,21 +157,22 @@
 						</div>
 					</div>
 				</header>
-				{*<div class="banner-sale">
+				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
-							<p><span>Labor Day Sale</span><span class="uk-text-bold text-primary">UP TO $80 OFF</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+							<p><span>Human Hair Wigs Halloween Sale </span><span>20% OFF</span><span>code: <b>HHW20</b></span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
 						</div>
 					</div>
 					<div id="sale-details" class="uk-modal">
 					    <div class="uk-modal-dialog">
 					        <a class="uk-modal-close uk-close uk-close-alt"></a>
 					        <div>
-					        	<img src="/themes/uniwigs2016/img/index/labor-day.png" alt="labor day sale" class="img-responsive">
+					        	<a href="{$base_dir}102-human-hair-wigs">
+					        	<img src="/themes/uniwigs2016/img/index/human-hair-sale.png" alt="Human hair wigs Halloween sale" class="img-responsive"></a>
 					        </div>
 					    </div>
 					</div>
-				</div>*}
+				</div>
 			</div>
 			<div class="columns-container">
 				<div id="slider_row" class="row">

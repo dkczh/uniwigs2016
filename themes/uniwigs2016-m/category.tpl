@@ -101,29 +101,18 @@
 		{/if}
     *}
         {if $category->id == '102'}
-            <script type="text/javascript" src="/themes/uniwigs2016-m/js/lightbox.js"></script>
             <div>
-                <a href="https://www.youtube.com/watch?v=mQCrHg-fkwA" data-uk-lightbox>
-                    <img src="{$img_dir}category/human-hair/new-banner.jpg" alt="make obvious part" class="img-responsive">
-                </a>
-            </div>
-            <ul class="category_banner row">
-                <li>
-                    <a href="{$base_dir}40452-human-hair-lace-wigs">
-                        <img src="{$img_dir}category/human-hair/lace-wigs.jpg" alt="human hair lace wigs" class="img-responsive">
-                    </a>
-                </li>
-                <li>
-                    <a href="{$base_dir}custom-order">
-                        <img src="{$img_dir}category/human-hair/custom-wigs.jpg" alt="human hair wigs customization" class="img-responsive">
-                    </a>
-                </li>
-            </ul>
-            <div>
+               <img src="{$img_dir}category/human-hair/Halloween-Sale.png" alt="Human Hair Halloween Sale" class="img-responsive">
                 <a href="{$base_dir}40453-celebrity-hairstyles">
-                    <img src="{$img_dir}category/human-hair/celebrity.jpg" alt="human hair celebrity hairstyles" class="img-responsive">
+                    <img src="{$img_dir}category/human-hair/celebrity2016.jpg" alt="human hair celebrity hairstyles" class="img-responsive">
                 </a>
-            </div>
+                <a href="{$base_dir}40452-human-hair-lace-wigs">
+                    <img src="{$img_dir}category/human-hair/lacewigs2016.jpg" alt="human hair lace wigs" class="img-responsive">
+                </a>
+                <a href="{$base_dir}custom-order">
+                    <img src="{$img_dir}category/human-hair/customwigs2016.jpg" alt="human hair wigs customization" class="img-responsive">
+                </a>
+            </div>         
         {/if}
         {if $category->id == '101'}
             <ul class="category_banner row">
@@ -182,11 +171,9 @@
                 </li>
             </ul>
         {/if}
-        {if $category->id == '40453'}
+        {if $category->id == '40453' or $category->id == '40447' or $category->id == '40446' or $category->id == '40448' or $category->id == '40450'}
              <div class="uk-margin-small-bottom">
-                <a href="https://youtu.be/4xbxHf3S9mM" data-uk-lightbox>
-                <img src="/themes/uniwigs2016-m/img/category/human-hair/celebrity-wigs-banner.jpg" alt="" class="img-responsive">
-                </a>
+                <img src="{$img_dir}category/human-hair/Halloween-Sale.png" alt="Human Hair Halloween Sale" class="img-responsive">
              </div>
         {/if}
         {if $category->id == '40459'}
@@ -195,9 +182,9 @@
              </div>*}
         {/if}
         {if $category->id == '40455'}
-             <div class="uk-margin-small-bottom">
+             {*<div class="uk-margin-small-bottom">
                 <img src="/themes/uniwigs2016-m/img/category/synthetic/classic-sale.png" alt="" class="img-responsive">
-             </div>
+             </div>*}
         {/if}
 		{if $products}
 			<div class="content_sortPagiBar clearfix">
