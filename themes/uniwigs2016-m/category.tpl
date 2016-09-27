@@ -171,7 +171,7 @@
                 </li>
             </ul>
         {/if}
-        {if $category->id == '40453' or $category->id == '40447' or $category->id == '40446' or $category->id == '40448' or $category->id == '40450'}
+        {if $category->id == '40453' or $category->id == '40447' or $category->id == '40446' or $category->id == '40448' or $category->id == '40450' or $category->id == '40452'}
              <div class="uk-margin-small-bottom">
                 <img src="{$img_dir}category/human-hair/Halloween-Sale.png" alt="Human Hair Halloween Sale" class="img-responsive">
              </div>
