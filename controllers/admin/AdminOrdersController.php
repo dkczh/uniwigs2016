@@ -2022,9 +2022,59 @@ class AdminOrdersControllerCore extends AdminController
         $helper->kpis = $kpis;
         return $helper->generate();
     }
+	
+	
+	
+	//异常 comming soon
+	function cleanstatus()
+	{
+		//先筛选 符合条件的 comming soon 订单
+		$sql = "SELECT mb.id_order from 
+					(
+					SELECT ma.*,COUNT(ma.id_order) as num  from 
+					(SELECT mya.* from 
 
+					(select a.id_order  from  ps_orders  a 
+					LEFT JOIN  ps_order_history  b on  a.id_order=b.id_order 
+
+					where  b.id_employee = 0  and b.id_order_state=13 ) mya 
+
+					LEFT JOIN  ps_order_history c on mya.id_order = c.id_order 
+
+					where c.id_employee=0 and c.id_order_state=1 ) ma 
+
+					LEFT JOIN ps_order_history d on  ma.id_order =d.id_order 
+
+					GROUP BY ma.id_order 
+					) mb 
+					LEFT JOIN ps_orders dd on mb.id_order = dd.id_order
+					where mb.num=2 and dd.current_state =13 ";
+		
+		$res = Db::getInstance()->executeS($sql);
+
+		if($res){
+		
+			foreach ($res as $a ){
+			//修复正确的订单状态
+			//1. 修正当前状态 
+			$repair1 = "update ps_orders set current_state = 1 ,date_upd=date_add where id_order = ".$a['id_order'];
+			//2. 删除coomming soon 
+			$repair2 = "delete from  ps_order_history  where id_order =".$a['id_order']." and id_employee=0 and id_order_state=13 ";
+			
+			Db::getInstance()->Execute($repair1);
+			Db::getInstance()->Execute($repair2);
+			file_put_contents('Fixstatus.txt',$a['id_order']."\n\r",FILE_APPEND);	
+			}
+		}
+
+
+	}
+	
     public function renderView()
-    {
+    {		
+		//打开订单详情页面之前 做一次异常comming soon 状态订单修复
+		$this->cleanstatus();
+		
         $order = new Order(Tools::getValue('id_order'));
         if (!Validate::isLoadedObject($order)) {
             $this->errors[] = Tools::displayError('The order cannot be found within your database.');
