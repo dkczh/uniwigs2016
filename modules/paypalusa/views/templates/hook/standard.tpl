@@ -58,6 +58,7 @@
 		<input type="hidden" name="address1" value="{$paypal_usa_billing_address->address1|escape:'htmlall':'UTF-8'}" />
 		{if $paypal_usa_billing_address->address2}<input type="hidden" name="address2" value="{$paypal_usa_billing_address->address2|escape:'htmlall':'UTF-8'}" />{/if}
 		<input type="hidden" name="city" value="{$paypal_usa_billing_address->city|escape:'htmlall':'UTF-8'}" />
+		<input type="hidden" name="Country" value="{$mcountry}" />
 		{if ($paypal_usa_billing_address->id_state != 0)}
 			<input type="hidden" name="state" value="{$paypal_usa_billing_address->state->iso_code|escape:'htmlall':'UTF-8'}" />
 		{/if}
@@ -66,7 +67,7 @@
 		{if (isset($paypal_usa_billing_address->phone_mobile) && !empty($paypal_usa_billing_address->phone_mobile)) || (isset($paypal_usa_billing_address->phone) && !empty($paypal_usa_billing_address->phone))}
 		<input type="hidden" name="night_phone_b" value="{if isset($paypal_usa_billing_address->phone_mobile) && !empty($paypal_usa_billing_address->phone_mobile)}{$paypal_usa_billing_address->phone_mobile|escape:'htmlall':'UTF-8'}{else}{if isset($paypal_usa_billing_address->phone) && !empty($paypal_usa_billing_address->phone)}{$paypal_usa_billing_address->phone|escape:'htmlall':'UTF-8'}{/if}{/if}" />
 		{/if}
-		<input type="hidden" name="address_override" value="1" />
+		<input type="hidden" name="address_override" value="0" />
 		
 		{assign var="paypal_usa_total_discounts" value=$cart->getOrderTotal(true, Cart::ONLY_DISCOUNTS)}
 		{if $paypal_usa_total_discounts == 0}
