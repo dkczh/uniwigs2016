@@ -366,8 +366,10 @@
                         };
 
                         img.onload = function(){
-                            cache[id] = {width:img.width, height:img.height};
-                            resolve(id, img.width, img.height);
+                           // cache[id] = {width:img.width, height:img.height};
+                           // resolve(id, img.width, img.height);
+                           cache[id] = {width:640, height:480};
+                           resolve(id, cache[id].width, cache[id].height);
                         };
 
                         img.src = '//img.youtube.com/vi/'+id+'/0.jpg';
