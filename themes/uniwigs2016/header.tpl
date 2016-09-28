@@ -176,6 +176,26 @@
 					</div>
 				</div>
 				{/if}
+				
+				{if $category->id == '101' or $category->id == '40455' or $category->id == '40459' or $category->id == '40456'}
+				<div class="banner-sale">
+					<div class="container">
+						<div class="row">
+							<p><span>Trick or UniWigs </span><span>25% OFF</span><span>code: <b>Halloween25</b></span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+						</div>
+					</div>
+					<div id="sale-details" class="uk-modal">
+					    <div class="uk-modal-dialog">
+					        <a class="uk-modal-close uk-close uk-close-alt"></a>
+					        <div>
+					        	<a href="{$base_dir}tag/halloween-wigs">
+					        	<img src="/themes/uniwigs2016/img/index/halloween-sale.png" alt="Halloween Sale" class="img-responsive"></a>
+					        </div>
+					    </div>
+					</div>
+				</div>
+				{/if}
+
 				{/if}
 			</div>
 			<div class="columns-container">
