@@ -45,14 +45,14 @@
 </div>
 <div class="celebirty-wigs uk-margin-large-top">
 	<ul class="row">
-		<li>
-			<a href="{$base_dir}tag/african-american-wigs">
-				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/african.jpg" alt="african american human-hair wigs" class="img-responsive">
+		<li class="col-sm-6">
+			<a href="https://youtu.be/6xp3eAgnV2o" data-uk-lightbox>
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/human-hair-halloween.jpg" alt="human hair halloween" class="img-responsive">
 			</a>
 		</li>
-		<li>
+		<li class="col-sm-6">
 			<a href="{$base_dir}tag/african-american-wigs">
-				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/african-text.png" alt="african american human-hair wigs">
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/human-hair-halloween-txt.png" alt="human hair halloween" class="img-responsive">
 			</a>
 		</li>
 	</ul>
