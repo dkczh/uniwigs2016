@@ -367,10 +367,17 @@ class PayPalUSA extends PaymentModule
 			$billing_address = new Address((int)$this->context->cart->id_address_invoice);
 			$billing_address->country = new Country((int)$billing_address->id_country);
 			$billing_address->state = new State((int)$billing_address->id_state);
-
+		/* 	echo '<pre>';
+			var_dump($billing_address->country);
+			echo '</pre>';
+			exit; */
+			$mcountry=  $billing_address->country->iso_code;
+		/* 	echo $mcountry;
+			exit; */
 			$this->context->smarty->assign(array(
 				'paypal_usa_action' => 'https://www'.(Configuration::get('PAYPAL_USA_SANDBOX') ? '.sandbox' : '').'.paypal.com/cgi-bin/webscr',
 				'paypal_usa_customer' => $this->context->customer,
+				'mcountry'=>$mcountry,
 				'paypal_usa_business_account' => Configuration::get('PAYPAL_USA_ACCOUNT'),
 				'paypal_usa_billing_address' => $billing_address,
 				'paypal_usa_total_tax' => (float)$this->context->cart->getOrderTotal(true) - (float)$this->context->cart->getOrderTotal(false),
@@ -383,7 +390,11 @@ class PayPalUSA extends PaymentModule
 					$this->context->link->getPageLink('order-confirmation.php', null, null, array('id_cart' => (int)$this->context->cart->id, 'key' => $this->context->customer->secure_key, 'id_module' => $this->id)),
 
 				));
-
+		/* 	echo '<pre>';
+			var_dump($billing_address);
+			echo '</pre>';
+			exit;
+			 */
 			$html .= $this->display(__FILE__, 'views/templates/hook/standard.tpl');
 		}
 
