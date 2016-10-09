@@ -81,7 +81,7 @@
 		        	       <div class="col-sm-3">
 		        	       		<ul class="uk-nav uk-nav-navbar">
 		        	       			<li class="uk-nav-header">shop by cap</li>
-	        	       				<li><a href="{$base_dir}tag/Synthetic-Lace-Front-Wigs">Lace Front</a></li>
+	        	       				<li><a href="{$base_dir}tag/Synthetic-Lace-Front-Cap-Wigs">Lace Front</a></li>
 	        	       				<li><a href="{$base_dir}tag/synthetic-basic-cap-wigs">Basic Cap</a></li>
 	        	       				<li><a href="{$base_dir}tag/synthetic-monofilament-wigs">Monofilament</a></li>
 		        	       		</ul>
