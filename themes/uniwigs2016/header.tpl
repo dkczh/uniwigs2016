@@ -33,6 +33,8 @@
 		<title>
 		{*tag 关键词*}
 		{if $page_name == 'tag'}{$res.title}
+		{elseif $page_name == 'extra/custom-order'}
+				Shop Custom Wigs at Uniwigs.com
 		{else}
 			{*customer show  关键词*}
 			{if isset($cshow)}
@@ -46,6 +48,9 @@
 		{if $page_name == 'tag'}
 			<meta name="description" content="{$res.description}" />
 			<meta name="keywords" content="{$res.keyword}" />
+		{elseif $page_name == 'extra/custom-order'}
+			<meta name="description" content="Find the most suitable custom wigs with Uniwigs.com, shop for most natural and light weight custom made wigs here." />
+			<meta name="keywords" content="custom wigs,custom made wigs" />
 		{else}
 			
 			{if isset($cshow)}
