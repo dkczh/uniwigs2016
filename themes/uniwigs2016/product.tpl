@@ -271,7 +271,7 @@
 			</div> <!-- end content_prices -->
 			{if $product->id =='40817'}
 				<p class="text-primary" style="color:#920783">
-					Weekly Deal!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: WD30
+					Youtube Guru Highly Recommend!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: LS0011
 				</p>
 			{/if}
 
