@@ -517,7 +517,7 @@
                         <a href="http://www.uniwigs.com/customer-show?caid=103" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
                     </div>
                 </div>
-                {*<section id="customer_shows_container" class="title-hr"></section>*}
+                <section id="customer_shows_container" class="title-hr"></section>
                 <div class="category_help uk-margin-large-top">
                     <ul class="row" data-uk-grid-match>
                         <li class="col-md-4">
