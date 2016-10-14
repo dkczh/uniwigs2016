@@ -297,8 +297,7 @@ span.view_scroll_spacer {
 .pb-right-column {
   /* form */ }
   .pb-right-column #buy_block label {
-    display: inline-block;
-    width: 30%;
+    width: 50%;
     font-weight: 700;
     font-size: 12px;
     vertical-align: top; }
@@ -352,11 +351,16 @@ span.view_scroll_spacer {
     min-height: 1px; }
 
 #attributes fieldset {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  position: relative; }
   #attributes fieldset label {
     display: inline-block; }
+  #attributes fieldset .highslide {
+    text-decoration: underline;
+    position: absolute;
+    right: 0; }
 #attributes .attribute_list {
-  width: 68%;
+  width: 100%;
   display: inline-block; }
   #attributes .attribute_list.attribute_list_color {
     width: 100%;

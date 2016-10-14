@@ -1487,6 +1487,27 @@ ul.step {
 		}
 	}
 }
+// module categorycomments
+#customer_shows_container{
+	h3{
+		width:340px;
+	}
+	.hd_box{
+		dl{
+			padding-bottom: 20px;
+			.rating{
+				margin:1em 0;
+				span{
+					margin-right: 5px;
+				}
+			}
+			p.review_content{
+				font-style: italic;
+			}
+		}
+	}
+}
+
 
 // module productcomments
 .rating {

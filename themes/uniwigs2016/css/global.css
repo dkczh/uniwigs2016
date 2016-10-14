@@ -12041,6 +12041,17 @@ ul.step {
         ul.step li em {
           display: none; } }
 
+#customer_shows_container h3 {
+  width: 340px; }
+#customer_shows_container .hd_box dl {
+  padding-bottom: 20px; }
+  #customer_shows_container .hd_box dl .rating {
+    margin: 1em 0; }
+    #customer_shows_container .hd_box dl .rating span {
+      margin-right: 5px; }
+  #customer_shows_container .hd_box dl p.review_content {
+    font-style: italic; }
+
 .rating {
   clear: both;
   display: block;

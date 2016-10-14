@@ -34,6 +34,26 @@
 		{assign var='productPrice' value=$product->getPrice(false, $smarty.const.NULL, 6)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(true, $smarty.const.NULL)}
 	{/if}
+{if $product->id =='41377'}
+<div id="new-product" class="uk-modal uk-open" style="display:block">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <img src="{$img_dir}/products/new.png" alt="New Arrival For Presale">
+    </div>
+</div>
+<style>
+	#new-product .uk-close:after{
+		font-size: 2em;
+	}
+</style>
+<script>
+	$(function() {
+		$("#new-product .uk-modal-close").click(function(){
+			$("#new-product").css('display', 'none').removeClass('uk-open');
+		})
+	})
+</script>
+{/if}
 <div itemscope itemtype="https://schema.org/Product">
 	<meta itemprop="url" content="{$link->getProductLink($product)}">
 	<div class="primary_block row">

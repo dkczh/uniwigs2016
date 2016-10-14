@@ -276,7 +276,17 @@
 									Youtube Guru Highly Recommend!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: LS0011
 								</p>
 							{/if}
-
+							{if $product->id =='41377'}
+								<p class="text-primary text-center" style="color:#920783">
+									New Arrival for Presale!&nbsp;&nbsp;30% OFF!
+								</p>
+								<p class="text-primary text-center" style="color:#920783">
+									Only 30 Lucky Girls Can Have It
+								</p>
+								<p class="text-primary text-center" style="color:#920783">
+									Coupon: BLUE30
+								</p>
+							{/if}
 							<p class="uk-margin-small-bottom text-center"><a href="#product_free_shipping_info" data-uk-modal class="product_free_shipping">Free Shipping US *</a></p>
 							<div id="product_free_shipping_info" class="uk-modal">
 							    <div class="uk-modal-dialog img-responsive">
@@ -374,6 +384,286 @@
 									{if $group.attributes|@count}
 										<fieldset class="attribute_fieldset">
 											<label class="attribute_label {if $group.group_type == 'color'}color_label{/if}" {if $group.group_type != 'color' && $group.group_type != 'radio'}for="group_{$id_attribute_group|intval}"{/if}>{$group.name|escape:'html':'UTF-8'}&nbsp;&nbsp;<span class="option_result"></span></label>
+											{if $group.name|lower == 'front lace size'}
+											<a href="#attributes_frontlacesize" data-uk-modal class="highslide">Front Lace Size</a>
+											<div id="attributes_frontlacesize" class="uk-modal">
+												 <div class="uk-modal-dialog">
+											        <a class="uk-modal-close uk-close"></a>
+											        <img src="{$base_dir}themes/uniwigs2016/img/products/Front-Lace-Size.jpg" alt="Front Lace Size" class="img-responsive">
+											    </div>
+											</div>
+											{/if}
+											{if $group.name|lower == 'hairline'}
+											<a href="#attributes_hairline" data-uk-modal class="highslide">Hairline</a>
+											<div id="attributes_hairline" class="uk-modal">
+												 <div class="uk-modal-dialog">
+											        <a class="uk-modal-close uk-close"></a>
+											        <img src="{$base_dir}themes/uniwigs2016/img/products/free-part.jpg" alt="Hairline" class="img-responsive">
+											    </div>
+											</div>
+											{/if}
+											{if $group.name|lower == 'clip in'}
+											<a href="#attributes_clipin" data-uk-modal class="highslide">Clip In</a>
+											<div id="attributes_clipin" class="uk-modal">
+												 <div class="uk-modal-dialog">
+											        <a class="uk-modal-close uk-close"></a>
+											        <img src="{$base_dir}themes/uniwigs2016/img/products/clip-in.jpg" alt="Clip In" class="img-responsive">
+											    </div>
+											</div>
+											{/if}
+											{if $group.name|lower == 'length'}
+											<a href="#attributes_length" data-uk-modal class="highslide">Length & Fit</a>
+											<div id="attributes_length" class="uk-modal">
+												 <div class="uk-modal-dialog">
+											        <a class="uk-modal-close uk-close"></a>
+											        <img src="{$base_dir}themes/uniwigs2016/img/products/length.jpg" alt="Length & Fit" class="img-responsive">
+											        <img src="{$base_dir}themes/uniwigs2016/img/products/biglayer.png" alt="Length & Fit" class="img-responsive">
+											    </div>
+											</div>
+											{/if}
+											{if $group.name|lower == 'cap size'}
+											<a href="#attributes_cap_size" data-uk-modal class="highslide">Cap Size</a>
+											<div id="attributes_cap_size" class="uk-modal">
+												 <div class="uk-modal-dialog">
+											        <a class="uk-modal-close uk-close"></a>
+											        <img src="{$base_dir}themes/uniwigs2016/img/size-banner.png" alt="Cap Size" class="img-responsive">
+											    </div>
+											</div>
+											{/if}
+											{if $group.name|lower == 'density'}
+											<a href="#attributes_density" data-uk-modal class="highslide">Density</a>
+											<div id="attributes_density" class="uk-modal">
+												 <div class="uk-modal-dialog">
+											        <a class="uk-modal-close uk-close"></a>
+											        <div>
+											        	<h3>The standard of Uniwigs Lace Wigs Density (Weight(g))</h3>
+												        <div class="row">
+												        	<div class="col-sm-6 col-md-6">
+												        		<table class="uk-table uk-table-striped">
+												        			<caption>Full Handtied Lace Wigs</caption>
+												        			<thead>
+												        				<tr>
+												        					<th></th>
+												        					<th>130%</th>
+												        					<th>150%</th>
+												        					<th>180%</th>
+												        				</tr>
+												        			</thead>
+												        			<tbody>
+												        				<tr>
+												        					<td>8"</td>
+												        					<td>95g</td>
+												        					<td>115g</td>
+												        					<td>130g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>10"</td>
+												        					<td>105g</td>
+												        					<td>125g</td>
+												        					<td>135g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>12"</td>
+												        					<td>115g</td>
+												        					<td>140g</td>
+												        					<td>155g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>14"</td>
+												        					<td>135g</td>
+												        					<td>160g</td>
+												        					<td>175g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>16"</td>
+												        					<td>155g</td>
+												        					<td>170g</td>
+												        					<td>185g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>18"</td>
+												        					<td>170g</td>
+												        					<td>185g</td>
+												        					<td>200g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>20"</td>
+												        					<td>180g</td>
+												        					<td>205g</td>
+												        					<td>225g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>22"</td>
+												        					<td>190g</td>
+												        					<td>220g</td>
+												        					<td>240g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>24"</td>
+												        					<td>210g</td>
+												        					<td>235g</td>
+												        					<td>255g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>26"</td>
+												        					<td>220g</td>
+												        					<td>245g</td>
+												        					<td>265g</td>
+												        				</tr>
+												        			</tbody>
+												        		</table>
+												        	</div>
+												        	<div class="col-sm-6 col-md-6">
+												        		<table class="uk-table uk-table-striped">
+												        			<caption>Lace Front Wigs</caption>
+												        			<thead>
+												        				<tr>
+												        					<th></th>
+												        					<th>130%</th>
+												        					<th>150%</th>
+												        					<th>180%</th>
+												        				</tr>
+												        			</thead>
+												        			<tbody>
+												        				<tr>
+												        					<td>8"</td>
+												        					<td>90g</td>
+												        					<td>100g</td>
+												        					<td>115g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>10"</td>
+												        					<td>95g</td>
+												        					<td>115g</td>
+												        					<td>130g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>12"</td>
+												        					<td>112g</td>
+												        					<td>132g</td>
+												        					<td>147g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>14"</td>
+												        					<td>132g</td>
+												        					<td>157g</td>
+												        					<td>172g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>16"</td>
+												        					<td>145g</td>
+												        					<td>170g</td>
+												        					<td>185g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>18"</td>
+												        					<td>155g</td>
+												        					<td>180g</td>
+												        					<td>195g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>20"</td>
+												        					<td>170g</td>
+												        					<td>200g</td>
+												        					<td>220g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>22"</td>
+												        					<td>180g</td>
+												        					<td>210g</td>
+												        					<td>245g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>24"</td>
+												        					<td>195g</td>
+												        					<td>225g</td>
+												        					<td>245g</td>
+												        				</tr>
+												        				<tr>
+												        					<td>26"</td>
+												        					<td>210g</td>
+												        					<td>240g</td>
+												        					<td>260g</td>
+												        				</tr>
+												        			</tbody>
+												        		</table>
+												        	</div>
+												        </div>
+											        </div>
+											        <img src="{$base_dir}themes/uniwigs2016/img/products/dencity.jpg" alt="Density" class="img-responsive">
+											    </div>
+											</div>
+											{/if}
+											{if $group.name|lower == 'lace color'}
+											<a href="#attributes_lace_color" data-uk-modal class="highslide">lace color</a>
+											<div id="attributes_lace_color" class="uk-modal">
+												 <div class="uk-modal-dialog">
+											        <a class="uk-modal-close uk-close"></a>
+											        <img src="{$base_dir}themes/uniwigs2016/img/products/lace-color.jpg" alt="lace color" class="img-responsive">
+											    </div>
+											</div>
+											{/if}
+											{if $group.name|lower == 'cap construction'}
+											<a href="#attributes_cap_construction" data-uk-modal class="highslide">Cap Construction</a>
+											<div id="attributes_cap_construction" class="uk-modal">
+												 <div class="uk-modal-dialog">
+											        <a class="uk-modal-close uk-close"></a>
+											        <div class="specification_desitem">
+														<ul class="row img-responsive">
+															<li class="col-sm-4">
+																<h4>LACE FRONT</h4>
+																<img src="/themes/uniwigs2016/img/products/lace-front-cap.jpg" class="img-responsive" alt="lace front cap">
+																<p></p>
+																<p><em>1.</em> 13” × 3“ Lace front with wefted back.</p>
+																<p><em>2.</em> Weft stitched to elastic netting. </p>
+																<p><em>3.</em> Adjustable strap allows you to loosen or tighten the cap up to a half inch.</p>
+																<p><em>4.</em> Smooth velvet tabs at the nape of the neck.</p>
+																<p><span class="round"></span> Invisible finer, durable and softer French lace.</p>
+															</li>
+															<li class="col-sm-4">
+																<h4>FULL LACE (100% HAND-TIED)</h4>
+																<img src="/themes/uniwigs2016/img/products/full-lace-cap.jpg" class="img-responsive" alt="full lace cap">
+																<p></p>
+																<p><em>1.</em> Full lace cap with stretch panel in the crown. The stretch panel gives you an extra half inch for a better fit.</p>
+																<p><em>2.</em> Increased hair density along the hairline and at the crown creates a more natural look.</p>
+																<p><span class="round"></span> Invisible finer, durable and softer French lace all around.</p>
+																<p><span class="round"></span> Uniform mold, standardized size. </p>
+															</li>
+															<li class="col-sm-4">
+																<h4>GLUELESS FULL LACE</h4>
+																<img src="/themes/uniwigs2016/img/products/glueless-full-lace-cap.jpg" class="img-responsive" alt="GLUELESS FULL LACE">
+																<p></p>
+																<p><em>1.</em> Clips and combs attached to the sides near the temple.</p>
+																<p><em>2.</em> Increased hair density along the hairline and at the crown creates a more natural look.</p>
+																<p><em>3.</em> Full lace cap with stretch at crown and adjustable straps at back.</p>
+																<p><span class="round"></span> Invisible finer, durable and softer French lace all around.</p>
+																<p><span class="round"></span> Uniform mold, standardized size.  </p>
+															</li>
+															<li class="col-sm-4">
+																<h4>Silk Top FULL LACE (100% HAND-TIED)</h4>
+																<img src="/themes/uniwigs2016/img/products/Silk-Top-Full-Lace-Cap.jpg" class="img-responsive" alt="Silk Top FULL LACE (100% HAND-TIED)">
+																<p></p>
+																<p><em>1.</em> Full lace cap with 4"x4" Silk top in front. 4”*4” Silk Top provide the most realistic scalp, like the hair is growing out of your scalp.</p>
+																<p><em>2.</em> Adjustable straps at back.</p>
+																<p>&amp;diams Invisible finer, durable and softer French lace all around.</p>
+																<p>&amp;diams Uniform mold, standardized size.</p>
+															</li>
+															<li class="col-sm-4">
+																<h4>Silk Top GLUELESS FULL LACE</h4>
+																<img src="/themes/uniwigs2016/img/products/Silk-Top-Glueless-Full-Lace-Cap.jpg" class="img-responsive" alt="Silk Top GLUELESS FULL LACE">
+																<p></p>
+																<p><em>1.</em> Full lace cap with 4"x4" Silk top in front. 4”*4” Silk Top provide the most realistic scalp, like the hair is growing out of your scalp.</p>
+																<p><em>2.</em> Adjustable straps at back.</p>
+																<p><em>3.</em> Clips and combs attached to the sides near the temple.</p>
+																<p><em>4.</em> The stretch panel gives you an extra half inch for a better fit.</p>
+																<p><span class="round"></span> Invisible finer, durable and softer French lace all around.</p>
+																<p><span class="round"></span> Uniform mold, standardized size.</p>
+															</li>
+														</ul>
+													</div>
+											    </div>
+											</div>
+											{/if}
 											{assign var="groupName" value="group_$id_attribute_group"}
 											<div class="attribute_list {if $group.group_type == 'color'}attribute_list_color{/if}">
 												{if ($group.group_type == 'select')}

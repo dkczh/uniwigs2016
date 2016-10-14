@@ -349,8 +349,7 @@ span.view_scroll_spacer {
 	/* form */
 	#buy_block {
 		label {
-			display: inline-block;
-			width: 30%;
+			width: 50%;
 			font-weight: 700;
 			font-size: 12px;
 			vertical-align: top;
@@ -423,12 +422,18 @@ span.view_scroll_spacer {
 #attributes{
 	fieldset {
 		padding-bottom: 10px;
+		position: relative;
 		label {
 			display: inline-block;
 		}
+		.highslide{
+			text-decoration: underline;
+			position: absolute;
+			right: 0;
+		}
 	}
 	.attribute_list {
-		width: 68%;
+		width: 100%;
 		display: inline-block;
 		&.attribute_list_color{
 			width:100%;
