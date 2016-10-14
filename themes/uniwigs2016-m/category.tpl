@@ -194,6 +194,63 @@
 			</div>
 			{include file="./product-list.tpl" products=$products}
 		{/if}
+        {if $category->id == '102' or $category->id == '40446' or $category->id == '40447'}
+            <section id="customer_shows_container" class="title-hr"></section>
+            <script type="text/javascript">
+                {literal}
+                $(function(){
+                    window.load_customer_shows_container = function(){
+                       $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                        pagesize:1,
+                        catids:102
+                       },function(data){
+                        $("#customer_shows_container").html(data);
+                        after_load_home_customer_shows();
+                       });
+                    }
+                    load_customer_shows_container();
+                });
+                {/literal}
+            </script>
+        {/if}
+        {if $category->id == '101' or $category->id == '40459'}
+            <section id="customer_shows_container" class="title-hr"></section>
+            <script type="text/javascript">
+                {literal}
+                $(function(){
+                    window.load_customer_shows_container = function(){
+                       $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                        pagesize:1,
+                        catids:101
+                       },function(data){
+                        $("#customer_shows_container").html(data);
+                        after_load_home_customer_shows();
+                       });
+                    }
+                    load_customer_shows_container();
+                });
+                {/literal}
+            </script>
+        {/if}
+        {if $category->id == '103'}
+            <section id="customer_shows_container" class="title-hr"></section>
+            <script type="text/javascript">
+                {literal}
+                $(function(){
+                    window.load_customer_shows_container = function(){
+                       $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                        pagesize:1,
+                        catids:103
+                       },function(data){
+                        $("#customer_shows_container").html(data);
+                        after_load_home_customer_shows();
+                       });
+                    }
+                    load_customer_shows_container();
+                });
+                {/literal}
+            </script>
+        {/if}
 	{elseif $category->id}
 		<p class="alert alert-warning">{l s='This category is currently unavailable.'}</p>
 	{/if}

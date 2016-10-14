@@ -7348,6 +7348,25 @@ ul.step {
         ul.step li em {
           display: none; } }
 
+#customer_shows_container h3 {
+  text-align: center; }
+#customer_shows_container .hd_box dl {
+  padding-bottom: 20px; }
+  #customer_shows_container .hd_box dl .rating {
+    margin: 1em 0; }
+    #customer_shows_container .hd_box dl .rating span {
+      margin-right: 5px; }
+  #customer_shows_container .hd_box dl p.review_content {
+    font-style: italic; }
+  #customer_shows_container .hd_box dl .star {
+    vertical-align: middle;
+    position: relative;
+    background: url(/themes/uniwigs2016/img/stars-yellow.svg) no-repeat 0 0;
+    background-size: 73px 13px;
+    display: block;
+    width: 73px;
+    height: 13px; }
+
 .rating {
   clear: both;
   display: block;

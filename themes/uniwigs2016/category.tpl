@@ -144,7 +144,7 @@
                     </ul>
                     <div class="uk-margin-top text-center"><a href="http://www.uniwigs.com/content/9-how-to-videos" class="uk-button">view more ></a></div>
                 </div>
-                {*<section id="customer_shows_container" class="title-hr"></section>*}
+                <section id="customer_shows_container" class="title-hr"></section>
             </section>
         </section>
         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js" defer></script>
@@ -314,7 +314,7 @@
                             <a href="http://www.uniwigs.com/customer-show?caid=101" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
                         </div>
                     </div>
-                    {*<section id="customer_shows_container" class="title-hr"></section>*}
+                    <section id="customer_shows_container" class="title-hr"></section>
                 </div>
             </section>
         </section>
@@ -656,7 +656,7 @@
                         </ul>
                     </div>
                 {/if}
-                {*<section id="customer_shows_container" class="title-hr"></section>*}
+                <section id="customer_shows_container" class="title-hr"></section>
                 <div class="category_help uk-margin-large-top">
                     <ul class="row" data-uk-grid-match>
                         <li class="col-md-4">
@@ -845,7 +845,7 @@
         			</div>
         		</div>
         	{/if}
-            {*if $category->id == '40446' or $category->id == '40447'}
+            {if $category->id == '40446' or $category->id == '40447'}
                 <section id="customer_shows_container" class="title-hr"></section>
                 <script type="text/javascript">
                     {literal}
@@ -863,7 +863,45 @@
                     });
                     {/literal}
                 </script>
-            {/if*}
+            {/if}
+            {if $category->id == '116'}
+                <section id="customer_shows_container" class="title-hr"></section>
+                <script type="text/javascript">
+                    {literal}
+                    $(function(){
+                        window.load_customer_shows_container = function(){
+                           $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                            pagesize:1,
+                            catids:104
+                           },function(data){
+                            $("#customer_shows_container").html(data);
+                            after_load_home_customer_shows();
+                           });
+                        }
+                        load_customer_shows_container();
+                    });
+                    {/literal}
+                </script>
+            {/if}
+            {if $category->id == '40459'}
+                <section id="customer_shows_container" class="title-hr"></section>
+                <script type="text/javascript">
+                    {literal}
+                    $(function(){
+                        window.load_customer_shows_container = function(){
+                           $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                            pagesize:1,
+                            catids:101
+                           },function(data){
+                            $("#customer_shows_container").html(data);
+                            after_load_home_customer_shows();
+                           });
+                        }
+                        load_customer_shows_container();
+                    });
+                    {/literal}
+                </script>
+            {/if}
         {/if}
         {elseif $category->id}
         	<p class="alert alert-warning">{l s='This category is currently unavailable.'}</p>

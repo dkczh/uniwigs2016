@@ -1500,6 +1500,35 @@ ul.step {
 	}
 }
 
+#customer_shows_container{
+	h3{
+		text-align: center
+	}
+	.hd_box{
+		dl{
+			padding-bottom: 20px;
+			.rating{
+				margin:1em 0;
+				span{
+					margin-right: 5px;
+				}
+			}
+			p.review_content{
+				font-style: italic;
+			}
+			.star{
+				vertical-align: middle;
+				position: relative;
+				background: url(/themes/uniwigs2016/img/stars-yellow.svg) no-repeat 0 0;
+				background-size: 73px 13px;
+				display: block;
+				width: 73px;
+				height: 13px;
+			}
+		}
+	}
+}
+
 // module productcomments
 .rating {
 	clear: both;
