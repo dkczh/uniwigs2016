@@ -188,14 +188,17 @@
                     <a class="img-responsive" href="{$base_dir}trendy-wigs/41377-fantasy-synthetic-lace-front-wig.html"><img src="{$img_dir}category/synthetic-wigs/new.jpg" alt="synthetic trendy wigs"></a>
                 </div>
                 <div class="uk-margin-large-bottom">
+                    <a class="img-responsive" href="{$base_dir}tag/halloween-wigs"><img src="{$img_dir}category/synthetic-wigs/trick-uniwigs.jpg" alt="synthetic trendy wigs"></a>
+                </div>
+                <div class="uk-margin-large-bottom">
                     <a class="img-responsive" href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}category/synthetic-wigs/trendy_wigs_new.jpg" alt="synthetic trendy wigs"></a>
                 </div>
                 <div class="uk-margin-large-bottom">
                     <a class="img-responsive" href="{$base_dir}40455-classic-wigs"><img src="{$img_dir}category/synthetic-wigs/classic_wigs_new.jpg" alt="synthetic classic wigs"></a>
                 </div>
-                <div class="uk-margin-large-bottom">
+                {*<div class="uk-margin-large-bottom">
                     <a href="{$base_dir}tag/silver-galaxy-trend-wig" class="img-responsive"><img src="{$img_dir}category/synthetic-wigs/silver_galaxy_new.jpg" alt="silver galaxy"></a>
-                </div>
+                </div>*}
                    
                 
                 <div class="container">
