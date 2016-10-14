@@ -185,6 +185,9 @@
         {*<script type="text/javascript" src="{$js_dir}like.js"></script>*}
             <section class="category-home">
                 <div class="uk-margin-large-bottom">
+                    <a class="img-responsive" href="{$base_dir}trendy-wigs/41377-fantasy-synthetic-lace-front-wig.html"><img src="{$img_dir}category/synthetic-wigs/new.jpg" alt="synthetic trendy wigs"></a>
+                </div>
+                <div class="uk-margin-large-bottom">
                     <a class="img-responsive" href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}category/synthetic-wigs/trendy_wigs_new.jpg" alt="synthetic trendy wigs"></a>
                 </div>
                 <div class="uk-margin-large-bottom">
