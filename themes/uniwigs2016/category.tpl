@@ -144,7 +144,7 @@
                     </ul>
                     <div class="uk-margin-top text-center"><a href="http://www.uniwigs.com/content/9-how-to-videos" class="uk-button">view more ></a></div>
                 </div>
-                 <section id="customer_shows_container" class="title-hr"></section>
+                {*<section id="customer_shows_container" class="title-hr"></section>*}
             </section>
         </section>
         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js" defer></script>
@@ -311,7 +311,7 @@
                             <a href="http://www.uniwigs.com/customer-show?caid=101" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
                         </div>
                     </div>
-                    <section id="customer_shows_container" class="title-hr"></section>
+                    {*<section id="customer_shows_container" class="title-hr"></section>*}
                 </div>
             </section>
         </section>
@@ -514,7 +514,7 @@
                         <a href="http://www.uniwigs.com/customer-show?caid=103" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
                     </div>
                 </div>
-                <section id="customer_shows_container" class="title-hr"></section>
+                {*<section id="customer_shows_container" class="title-hr"></section>*}
                 <div class="category_help uk-margin-large-top">
                     <ul class="row" data-uk-grid-match>
                         <li class="col-md-4">
@@ -653,7 +653,7 @@
                         </ul>
                     </div>
                 {/if}
-                <section id="customer_shows_container" class="title-hr"></section>
+                {*<section id="customer_shows_container" class="title-hr"></section>*}
                 <div class="category_help uk-margin-large-top">
                     <ul class="row" data-uk-grid-match>
                         <li class="col-md-4">
@@ -842,7 +842,7 @@
         			</div>
         		</div>
         	{/if}
-            {if $category->id == '40446' or $category->id == '40447'}
+            {*if $category->id == '40446' or $category->id == '40447'}
                 <section id="customer_shows_container" class="title-hr"></section>
                 <script type="text/javascript">
                     {literal}
@@ -860,7 +860,7 @@
                     });
                     {/literal}
                 </script>
-            {/if}
+            {/if*}
         {/if}
         {elseif $category->id}
         	<p class="alert alert-warning">{l s='This category is currently unavailable.'}</p>
