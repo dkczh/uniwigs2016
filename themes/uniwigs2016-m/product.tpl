@@ -292,6 +292,7 @@
 								    </div>
 								</div>
 							{/if}
+							{if $product->id !='41377'}
 							<p class="uk-margin-small-bottom text-center"><a href="#product_free_shipping_info" data-uk-modal class="product_free_shipping">Free Shipping US *</a></p>
 							<div id="product_free_shipping_info" class="uk-modal">
 							    <div class="uk-modal-dialog img-responsive">
@@ -356,6 +357,7 @@
 								    </div>
 								</div>
 							</div>
+							{/if}
 							{if $packItems|@count && $productPrice < $product->getNoPackPrice()}
 								<p class="pack_price">{l s='Instead of'} <span style="text-decoration: line-through;">{convertPrice price=$product->getNoPackPrice()}</span></p>
 							{/if}
