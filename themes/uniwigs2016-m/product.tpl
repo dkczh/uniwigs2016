@@ -278,14 +278,18 @@
 							{/if}
 							{if $product->id =='41377'}
 								<p class="text-primary text-center" style="color:#920783">
-									New Arrival for Presale!&nbsp;&nbsp;30% OFF!
+									<a href="#new-arrival-synthetic" data-uk-modal>
+									<span>New Arrival for Presale!&nbsp;&nbsp;30% OFF!</span><br>
+									<span>Only 30 Lucky Girls Can Have It</span><br>
+									<span>Coupon: BLUE30</span>
+									</a>
 								</p>
-								<p class="text-primary text-center" style="color:#920783">
-									Only 30 Lucky Girls Can Have It
-								</p>
-								<p class="text-primary text-center" style="color:#920783">
-									Coupon: BLUE30
-								</p>
+								<div id="new-arrival-synthetic" class="uk-modal">
+									 <div class="uk-modal-dialog">
+								        <a class="uk-modal-close uk-close"></a>
+								        <img src="{$base_dir}themes/uniwigs2016/img/category/synthetic/new-m.png" alt="New Arrival For Presale" class="img-responsive">
+								    </div>
+								</div>
 							{/if}
 							<p class="uk-margin-small-bottom text-center"><a href="#product_free_shipping_info" data-uk-modal class="product_free_shipping">Free Shipping US *</a></p>
 							<div id="product_free_shipping_info" class="uk-modal">
