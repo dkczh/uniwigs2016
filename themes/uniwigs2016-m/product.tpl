@@ -209,6 +209,7 @@
 				<span id="availability_date_label">{l s='Availability date:'}</span>
 				<span id="availability_date_value">{if Validate::isDate($product->available_date)}{dateFormat date=$product->available_date full=false}{/if}</span>
 			</p>
+
 			<!-- Out of stock hook -->
 			<div id="oosHook"{if $product->quantity > 0} style="display: none;"{/if}>
 				{$HOOK_PRODUCT_OOS}
@@ -277,8 +278,8 @@
 								</p>
 							{/if}
 							{if $product->id =='41377'}
-								<p class="text-primary text-center" style="color:#920783">
-									<a href="#new-arrival-synthetic" data-uk-modal>
+								<p class="text-primary text-center">
+									<a href="#new-arrival-synthetic" style="text-decoration: underline;color:#920783" data-uk-modal>
 									<span>New Arrival for Presale!&nbsp;&nbsp;30% OFF!</span><br>
 									<span>Only 30 Lucky Girls Can Have It</span><br>
 									<span>Coupon: BLUE30</span>
@@ -287,7 +288,7 @@
 								<div id="new-arrival-synthetic" class="uk-modal">
 									 <div class="uk-modal-dialog">
 								        <a class="uk-modal-close uk-close"></a>
-								        <img src="{$base_dir}themes/uniwigs2016/img/category/synthetic/new-m.png" alt="New Arrival For Presale" class="img-responsive">
+								        <img src="{$base_dir}themes/uniwigs2016-m/img/category/synthetic/new-m.png" alt="New Arrival For Presale" class="img-responsive">
 								    </div>
 								</div>
 							{/if}

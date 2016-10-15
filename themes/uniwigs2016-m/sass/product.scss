@@ -291,6 +291,7 @@ span.view_scroll_spacer {
 	background-color: $light-background;
 	margin-bottom: 14px;
 	padding:10px 0;
+	text-align: center;
 	h1 {
 		padding: 10px;
 		margin:0;
@@ -301,6 +302,9 @@ span.view_scroll_spacer {
 	}
 	p {
 		margin-bottom: 10px;
+	}
+	#pQuantityAvailable{
+		display: inline-block;
 	}
 	.sale{
 		em {
@@ -345,7 +349,9 @@ span.view_scroll_spacer {
 
 /* pb-right-column ****************************************************************************** */
 .pb-right-column{
-	@extend .pb-center-column;
+	background-color: #fff;
+	margin-bottom: 14px;
+	padding: 10px 0;
 	/* form */
 	#buy_block {
 		label {
