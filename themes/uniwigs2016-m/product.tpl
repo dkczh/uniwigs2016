@@ -280,7 +280,8 @@
 							{if $product->id =='41377'}
 								<p class="text-primary text-center">
 									<a href="#new-arrival-synthetic" style="text-decoration: underline;color:#920783" data-uk-modal>
-									<span>New Arrival for Presale!&nbsp;&nbsp;30% OFF!</span><br>
+									<span>New Arrival for Presale!</span><br>
+									<span>30% OFF Plus Free Shipping For All Over The World!</span><br>
 									<span>Only 30 Lucky Girls Can Have It</span><br>
 									<span>Coupon: BLUE30</span>
 									</a>
