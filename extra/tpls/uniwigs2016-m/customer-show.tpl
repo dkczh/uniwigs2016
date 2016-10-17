@@ -196,21 +196,7 @@ font-size: 11px;}
 {assign var="cat_use_name" value='1'}
 
 <section class="containerIndex">
-	<a href="#shareyouphotos" class="img-responsive share-your-photos" data-uk-modal><img src="/themes/uniwigs2016-m/img/public/m-customer-show-banner.png" alt="" class="img-responsive"></a>
-	<div id="shareyouphotos" class="uk-modal">
-	    <div class="uk-modal-dialog">
-	        <a class="uk-modal-close uk-close"></a>
-	        <div class="pr-details">
-	        	<p>Uniwigs encourages all our dear customers to leave your valuable reviews or photos on our website. In return, we will offer you corresponding loyalty points.</p>
-	        	<ul>
-	        		<li>For text reviews, you can get <b>200 loyalty points</b>.</li>
-	        		<li>For photo reviews, you can get <b>500 loyalty points</b>.</li>
-	        		<li>If you leave both text reviews and photos, we will offer you <b>1000 loyalty points</b>.</li>
-	        	</ul>
-	        	<p style="background: #da6667;color: #fff;text-align: center;padding: 10px 0;font-size: 1.1em;"><b>100</b> loyalty points = <b>$1.00</b></p>
-	        </div>
-	    </div>
-	</div>
+	<a href="{$base_dir}tag/share-your-joy" class="img-responsive share-your-photos"><img src="/themes/uniwigs2016-m/img/public/m-customer-show-banner.png" alt="" class="img-responsive"></a>
 {if isset($smarty.get.ca)}
 {else}
 <div class="customer-nav" data-uk-dropdown="{literal}{mode:'click'}{/literal}">
