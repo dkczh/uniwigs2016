@@ -159,7 +159,7 @@
 			</a>
 		</li>
 		<li>
-			<a>
+			<a href="{$base_dir}tag/share-your-joy">
 				<p class="h2">share your joy</p>
 				<p class="h4">get $10</p>
 			</a>
