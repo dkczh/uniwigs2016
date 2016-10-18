@@ -182,7 +182,7 @@ class CustomOrderController extends FrontController
 			$headers .= 'From: '.Tools::getValue('email_co','')."\r\n";
 
 			// $tos = "uniwigscustomorder@gmail.com, customorder@uniwigs.com, 263609376@qq.com";
-			$tos = "263609376@qq.com, 269931612@qq.com, 757668783@qq.com, 1058922069@qq.com";
+			$tos = "263609376@qq.com, 269931612@qq.com, 757668783@qq.com, 1058922069@qq.com,634543741@qq.com";
 			if(mail( $tos, "CREATE A CUSTOM WIG", $message, $headers )){
 				echo "<script language='javascript'> alert('Thank you for using our mail form'); window.location.href='http://www.uniwigs.com/'; </script>";
 				exit;
