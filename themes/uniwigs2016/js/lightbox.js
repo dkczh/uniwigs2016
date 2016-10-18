@@ -368,7 +368,8 @@
                         img.onload = function(){
                            // cache[id] = {width:img.width, height:img.height};
                            // resolve(id, img.width, img.height);
-                           cache[id] = {width:640, height:480};
+                           // cache[id] = {width:640, height:480};
+                           cache[id] = {width:window.screen.availWidth/2, height:window.screen.availHeight/2};
                            resolve(id, cache[id].width, cache[id].height);
                         };
 

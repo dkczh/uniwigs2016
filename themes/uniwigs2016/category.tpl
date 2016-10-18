@@ -126,19 +126,6 @@
                     <div class="uk-margin-small-top">
                         <a href="http://www.uniwigs.com/customer-show?caid=102" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
                     </div>
-                    <script type="text/javascript">
-                        $(function(){
-                            window.load_home_customer_shows = function(){
-                                $.get("http://rvm.uniwigs.com/api_review3/home_customer_shows",{
-                                    pagesize:4,
-                                    catids:102
-                                },function(data){
-                                    $("#custome-show").html(data);
-                                });
-                            }
-                            load_home_customer_shows();
-                        });
-                    </script>
                 </div>
 
                 <div class="category_help uk-margin-large-top title-hr">
@@ -157,9 +144,36 @@
                     </ul>
                     <div class="uk-margin-top text-center"><a href="http://www.uniwigs.com/content/9-how-to-videos" class="uk-button">view more ></a></div>
                 </div>
+                <section id="customer_shows_container" class="title-hr"></section>
             </section>
         </section>
         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js" defer></script>
+        <script type="text/javascript">
+            $(function(){
+                window.load_customer_shows_container = function(){
+                   $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                    pagesize:1,
+                    catids:102
+                   },function(data){
+                    $("#customer_shows_container").html(data);
+                    after_load_home_customer_shows();
+                   });
+                }
+                load_customer_shows_container();
+            });
+
+            $(function(){
+                window.load_home_customer_shows = function(){
+                    $.get("http://rvm.uniwigs.com/api_review3/home_customer_shows",{
+                        pagesize:4,
+                        catids:102
+                    },function(data){
+                        $("#custome-show").html(data);
+                    });
+                }
+                load_home_customer_shows();
+            });
+        </script>
     {elseif $category->id == '101'}
         {literal}
         <style>
@@ -171,14 +185,20 @@
         {*<script type="text/javascript" src="{$js_dir}like.js"></script>*}
             <section class="category-home">
                 <div class="uk-margin-large-bottom">
+                    <a class="img-responsive" href="{$base_dir}trendy-wigs/41377-fantasy-synthetic-lace-front-wig.html"><img src="{$img_dir}category/synthetic-wigs/new.jpg" alt="synthetic trendy wigs"></a>
+                </div>
+                <div class="uk-margin-large-bottom">
+                    <a class="img-responsive" href="{$base_dir}tag/halloween-wigs"><img src="{$img_dir}category/synthetic-wigs/trick-uniwigs.jpg" alt="synthetic trendy wigs"></a>
+                </div>
+                <div class="uk-margin-large-bottom">
                     <a class="img-responsive" href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}category/synthetic-wigs/trendy_wigs_new.jpg" alt="synthetic trendy wigs"></a>
                 </div>
                 <div class="uk-margin-large-bottom">
                     <a class="img-responsive" href="{$base_dir}40455-classic-wigs"><img src="{$img_dir}category/synthetic-wigs/classic_wigs_new.jpg" alt="synthetic classic wigs"></a>
                 </div>
-                <div class="uk-margin-large-bottom">
+                {*<div class="uk-margin-large-bottom">
                     <a href="{$base_dir}tag/silver-galaxy-trend-wig" class="img-responsive"><img src="{$img_dir}category/synthetic-wigs/silver_galaxy_new.jpg" alt="silver galaxy"></a>
-                </div>
+                </div>*}
                    
                 
                 <div class="container">
@@ -293,27 +313,39 @@
                         <div class="uk-margin-small-top">
                             <a href="http://www.uniwigs.com/customer-show?caid=101" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
                         </div>
-                        <script type="text/javascript">
-                        {literal}
-                        $(function(){
-                            window.load_home_customer_shows = function(){
-                                $.get("http://rvm.uniwigs.com/api_review3/home_customer_shows",{
-                                    pagesize:4,
-                                    catids:101
-                                },function(data){
-                                    $("#custome-show").html(data);
-                                });
-                            }
-                            load_home_customer_shows();
-                        });
-                        {/literal}
-                        </script>
                     </div>
-
+                    <section id="customer_shows_container" class="title-hr"></section>
                 </div>
             </section>
         </section>
         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js" defer></script>
+        <script type="text/javascript">
+            {literal}
+            $(function(){
+                window.load_customer_shows_container = function(){
+                   $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                    pagesize:1,
+                    catids:101
+                   },function(data){
+                    $("#customer_shows_container").html(data);
+                    after_load_home_customer_shows();
+                   });
+                }
+                load_customer_shows_container();
+            });
+            $(function(){
+                window.load_home_customer_shows = function(){
+                    $.get("http://rvm.uniwigs.com/api_review3/home_customer_shows",{
+                        pagesize:4,
+                        catids:101
+                    },function(data){
+                        $("#custome-show").html(data);
+                    });
+                }
+                load_home_customer_shows();
+            });
+            {/literal}
+        </script>
         {*
             <div class="modal-scrollable">
                 <div id="productmodal" style="display:none">
@@ -484,23 +516,8 @@
                     <div class="uk-margin-small-top">
                         <a href="http://www.uniwigs.com/customer-show?caid=103" class="uk-button uk-button-link">CUSTOMER SHOW ></a>
                     </div>
-                    <script type="text/javascript">
-                    {literal}
-                    $(function(){
-                        window.load_home_customer_shows = function(){
-                            $.get("http://rvm.uniwigs.com/api_review3/home_customer_shows",{
-                                pagesize:4,
-                                catids:103
-                            },function(data){
-                                $("#custome-show").html(data);
-                            });
-                        }
-                        load_home_customer_shows();
-                    });
-                    {/literal}
-                    </script>
                 </div>
-
+                <section id="customer_shows_container" class="title-hr"></section>
                 <div class="category_help uk-margin-large-top">
                     <ul class="row" data-uk-grid-match>
                         <li class="col-md-4">
@@ -539,9 +556,37 @@
                         </li>
                     </ul>
                 </div>
+                
             </section>
         </section>
         <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
+        <script type="text/javascript">
+            {literal}
+            $(function(){
+                window.load_customer_shows_container = function(){
+                   $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                    pagesize:1,
+                    catids:103
+                   },function(data){
+                    $("#customer_shows_container").html(data);
+                    after_load_home_customer_shows();
+                   });
+                }
+                load_customer_shows_container();
+            });
+            $(function(){
+                window.load_home_customer_shows = function(){
+                    $.get("http://rvm.uniwigs.com/api_review3/home_customer_shows",{
+                        pagesize:4,
+                        catids:103
+                    },function(data){
+                        $("#custome-show").html(data);
+                    });
+                }
+                load_home_customer_shows();
+            });
+            {/literal}
+        </script>
     {elseif $category->id == '104'}
         {literal}
         <style>
@@ -611,7 +656,7 @@
                         </ul>
                     </div>
                 {/if}
-
+                <section id="customer_shows_container" class="title-hr"></section>
                 <div class="category_help uk-margin-large-top">
                     <ul class="row" data-uk-grid-match>
                         <li class="col-md-4">
@@ -648,6 +693,22 @@
                 </div>
             </section>
         </section>
+        <script type="text/javascript">
+            {literal}
+            $(function(){
+                window.load_customer_shows_container = function(){
+                   $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                    pagesize:1,
+                    catids:104
+                   },function(data){
+                    $("#customer_shows_container").html(data);
+                    after_load_home_customer_shows();
+                   });
+                }
+                load_customer_shows_container();
+            });
+            {/literal}
+        </script>
     {else}
         {if $category->id AND $category->active}
         	{if $scenes || $category->description || $category->id_image}
@@ -784,6 +845,63 @@
         			</div>
         		</div>
         	{/if}
+            {if $category->id == '40446' or $category->id == '40447'}
+                <section id="customer_shows_container" class="title-hr"></section>
+                <script type="text/javascript">
+                    {literal}
+                    $(function(){
+                        window.load_customer_shows_container = function(){
+                           $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                            pagesize:1,
+                            catids:102
+                           },function(data){
+                            $("#customer_shows_container").html(data);
+                            after_load_home_customer_shows();
+                           });
+                        }
+                        load_customer_shows_container();
+                    });
+                    {/literal}
+                </script>
+            {/if}
+            {if $category->id == '116'}
+                <section id="customer_shows_container" class="title-hr"></section>
+                <script type="text/javascript">
+                    {literal}
+                    $(function(){
+                        window.load_customer_shows_container = function(){
+                           $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                            pagesize:1,
+                            catids:104
+                           },function(data){
+                            $("#customer_shows_container").html(data);
+                            after_load_home_customer_shows();
+                           });
+                        }
+                        load_customer_shows_container();
+                    });
+                    {/literal}
+                </script>
+            {/if}
+            {if $category->id == '40459'}
+                <section id="customer_shows_container" class="title-hr"></section>
+                <script type="text/javascript">
+                    {literal}
+                    $(function(){
+                        window.load_customer_shows_container = function(){
+                           $.get("http://rvm.uniwigs.com/api_review3/home_comments",{
+                            pagesize:1,
+                            catids:101
+                           },function(data){
+                            $("#customer_shows_container").html(data);
+                            after_load_home_customer_shows();
+                           });
+                        }
+                        load_customer_shows_container();
+                    });
+                    {/literal}
+                </script>
+            {/if}
         {/if}
         {elseif $category->id}
         	<p class="alert alert-warning">{l s='This category is currently unavailable.'}</p>

@@ -33,6 +33,8 @@
 		<title>
 		{*tag 关键词*}
 		{if $page_name == 'tag'}{$res.title}
+		{elseif $page_name == 'extra/custom-order'}
+				Shop Custom Wigs at Uniwigs.com
 		{else}
 			{*customer show  关键词*}
 			{if isset($cshow)}
@@ -46,6 +48,9 @@
 		{if $page_name == 'tag'}
 			<meta name="description" content="{$res.description}" />
 			<meta name="keywords" content="{$res.keyword}" />
+		{elseif $page_name == 'extra/custom-order'}
+			<meta name="description" content="Find the most suitable custom wigs with Uniwigs.com, shop for most natural and light weight custom made wigs here." />
+			<meta name="keywords" content="custom wigs,custom made wigs" />
 		{else}
 			
 			{if isset($cshow)}
@@ -89,18 +94,18 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
-		{*<script>
+		{literal}
+		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  })(window,document,'script','//www.google-analytics.com/analytics_debug.js','ga');
 		 
 		  ga('create', 'UA-34159663-1', 'auto');
 		  ga('send', 'pageview');
 		 
-		</script>*}
+		</script>
         
-        {literal}
         <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5225031"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
         <noscript>
         <img src="//bat.bing.com/action/0?ti=5225031&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" />

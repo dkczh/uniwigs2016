@@ -34,6 +34,26 @@
 		{assign var='productPrice' value=$product->getPrice(false, $smarty.const.NULL, 6)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(true, $smarty.const.NULL)}
 	{/if}
+{if $product->id =='41377'}
+<div id="new-product" class="uk-modal uk-open" style="display:block">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <img src="{$img_dir}/products/new.png" alt="New Arrival For Presale">
+    </div>
+</div>
+<style>
+	#new-product .uk-close:after{
+		font-size: 2em;
+	}
+</style>
+<script>
+	$(function() {
+		$("#new-product .uk-modal-close").click(function(){
+			$("#new-product").css('display', 'none').removeClass('uk-open');
+		})
+	})
+</script>
+{/if}
 <div itemscope itemtype="https://schema.org/Product">
 	<meta itemprop="url" content="{$link->getProductLink($product)}">
 	<div class="primary_block row">
@@ -271,7 +291,7 @@
 			</div> <!-- end content_prices -->
 			{if $product->id =='40817'}
 				<p class="text-primary" style="color:#920783">
-					Weekly Deal!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: WD30
+					Youtube Guru Highly Recommend!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: LS0011
 				</p>
 			{/if}
 
@@ -286,11 +306,13 @@
 			
 			{if ($display_qties == 1 && !$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && $product->available_for_order)}
 				<!-- number of item in stock -->
+				{if $product->quantity <= 50}
 				<p id="pQuantityAvailable"{if $product->quantity <= 0} style="display: none;"{/if}>
 					<span id="quantityAvailable">{$product->quantity|intval}</span>
 					<span {if $product->quantity > 1} style="display: none;"{/if} id="quantityAvailableTxt">{l s='Product'}</span>
 					<span {if $product->quantity == 1} style="display: none;"{/if} id="quantityAvailableTxtMultiple">{l s='Products'}</span>
 				</p>
+				{/if}
 			{/if}
 			<!-- availability or doesntExist -->
 			<p id="availability_statut"{if !$PS_STOCK_MANAGEMENT || ($product->quantity <= 0 && !$product->available_later && $allow_oosp) || ($product->quantity > 0 && !$product->available_now) || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none;"{/if}>
@@ -1430,21 +1452,8 @@
 		<div id="product_reviews" class="product_customer_reviews title-hr">
 			<h3>SHOW & COMMENTS</h3>
 			<p class="hr"></p>
-			<div class="get-points"><a href="#shareyouphotos" class="share-your-photos" data-uk-modal><img src="/themes/uniwigs2016/img/public/get-point.png" alt="" class="img-responsive"></a></div>
-			<div id="shareyouphotos" class="uk-modal">
-			    <div class="uk-modal-dialog">
-			        <a class="uk-modal-close uk-close"></a>
-			        <div class="pr-details">
-			        	<p>Uniwigs encourages all our dear customers to leave your valuable reviews or photos on our website. In return, we will offer you corresponding loyalty points.</p>
-			        	<ul>
-			        		<li>For text reviews, you can get <b>200 loyalty points</b>.</li>
-			        		<li>For photo reviews, you can get <b>500 loyalty points</b>.</li>
-			        		<li>If you leave both text reviews and photos, we will offer you <b>1000 loyalty points</b>.</li>
-			        	</ul>
-			        	<p style="background: #da6667;color: #fff;text-align: center;padding: 10px 0;font-size: 1.1em;"><b>100</b> loyalty points = <b>$1.00</b></p>
-			        </div>
-			    </div>
-			</div>
+			<div class="get-points"><a href="{$base_dir}tag/share-your-joy" class="share-your-photos"><img src="/themes/uniwigs2016/img/public/get-point.png" alt="share your joy" class="img-responsive"></a></div>
+			
 			<div class="row">
 				<div class="comments_photo col-sm-8 uk-margin-top">
 					<div class="comments-title">

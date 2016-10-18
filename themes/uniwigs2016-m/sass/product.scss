@@ -291,6 +291,7 @@ span.view_scroll_spacer {
 	background-color: $light-background;
 	margin-bottom: 14px;
 	padding:10px 0;
+	text-align: center;
 	h1 {
 		padding: 10px;
 		margin:0;
@@ -301,6 +302,9 @@ span.view_scroll_spacer {
 	}
 	p {
 		margin-bottom: 10px;
+	}
+	#pQuantityAvailable{
+		display: inline-block;
 	}
 	.sale{
 		em {
@@ -345,12 +349,13 @@ span.view_scroll_spacer {
 
 /* pb-right-column ****************************************************************************** */
 .pb-right-column{
-	@extend .pb-center-column;
+	background-color: #fff;
+	margin-bottom: 14px;
+	padding: 10px 0;
 	/* form */
 	#buy_block {
 		label {
-			display: inline-block;
-			width: 30%;
+			width: 50%;
 			font-weight: 700;
 			font-size: 12px;
 			vertical-align: top;
@@ -423,12 +428,18 @@ span.view_scroll_spacer {
 #attributes{
 	fieldset {
 		padding-bottom: 10px;
+		position: relative;
 		label {
 			display: inline-block;
 		}
+		.highslide{
+			text-decoration: underline;
+			position: absolute;
+			right: 0;
+		}
 	}
 	.attribute_list {
-		width: 68%;
+		width: 100%;
 		display: inline-block;
 		&.attribute_list_color{
 			width:100%;

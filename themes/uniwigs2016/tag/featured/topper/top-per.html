@@ -227,6 +227,7 @@ transition: all .3s ease-out;
 		{addJsDef comparedProductsIds=$compared_products}
 		{/if}
 	</div>
+	<div class="text-center uk-margin-large-bottom"><a href="/tag/toppers" class="uk-button">Shop More</a></div>
 	<ul id="layer1-video" class="layer-video-list">
 		<li>
 			<a href="https://www.youtube.com/watch?v=HCAKEwNWaJo" data-uk-lightbox="{literal}{group:'layer1-video'}{/literal}">
@@ -407,6 +408,7 @@ transition: all .3s ease-out;
 		{addJsDef comparedProductsIds=$compared_products}
 		{/if}
 	</div>
+	<div class="text-center uk-margin-large-bottom"><a href="/40458-mono-hair-pieces" class="uk-button">Shop More</a></div>
 	<ul id="layer2-video" class="layer-video-list">
 		<li>
 			<a href="https://www.youtube.com/watch?v=yjxG9o37qqg" data-uk-lightbox="{literal}{group:'layer2-video'}{/literal}">
@@ -444,7 +446,24 @@ transition: all .3s ease-out;
 		<div class="img-right"><img src="/themes/uniwigs2016/tag/featured/topper/image/layer2-bg-2.jpg" alt=""></div>
 	</div>
 </div>
+{*<div id="customer_shows_container" class="title-hr">
+</div>*}
 <script type="text/javascript" src="/themes/uniwigs2016/js/lightbox.js"></script>
+ {*literal}
+<script type="text/javascript">
+$(function() {
+	window.load_home_comments = function(){
+		$.get("http://rvm.uniwigs.com/api_review3/tag_comments",{
+			tags:['toppers']
+		},function(data){
+			$("#customer_shows_container").html(data);
+			after_load_home_comments();
+		});
+	}
+	load_home_comments();
+});
+</script>
+{/literal*}
 <script>
  $('#layer1-video').bxSlider({
 	minSlides: 1,
