@@ -545,18 +545,7 @@ abstract class ObjectModelCore implements Core_Foundation_Database_EntityInterfa
 				//创建新订单
 				 $arrmy = $this->getFields();
 				//echo '<script async="" src="//www.google-analytics.com/analytics_debug.js"></script>';
-			 	echo "<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics_debug.js','ga');
-
-ga('create', 'UA-34159663-1', 'auto');
-ga(function(tracker) {
-	
-	  tracker.send('event', 'product_detail', 'add_myorderxxx',".$arrmy['id_order'].", {
-	   
-	  });
-	});</script>";
+			 	
 				/* echo '<pre>';
 				// ["total_paid"]=>
 				 // ["total_shipping"]=>
