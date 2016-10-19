@@ -46,8 +46,11 @@
 {/if}
 
 <img src="//cdsch2.veinteractive.com/DataReceiverService.asmx/Pixel?journeycode=02777F1F-581B-406B-A475-48DAF47A5813" width="1" height="1"/>
-{literal}
+
 <script>
+	ga('require', 'ec');
+	ga('ec:setAction', 'purchase',{$id_order_formatted});
+
 	ga(function(tracker) {
 	
 	  tracker.send('event', 'page_payment_return', 'view','success', {
@@ -55,7 +58,7 @@
 	  });
 	});
 </script>
-
+{literal}
 {/literal}
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=939483269478039&amp;ev=PageView&noscript=1"

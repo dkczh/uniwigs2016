@@ -102,6 +102,7 @@
 		  })(window,document,'script','//www.google-analytics.com/analytics_debug.js','ga');
 		 
 		  ga('create', 'UA-34159663-1', 'auto');
+		  ga('require', 'ec');
 		  ga('send', 'pageview');
 		 
 		</script>
