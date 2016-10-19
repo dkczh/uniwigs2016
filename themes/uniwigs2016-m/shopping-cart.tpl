@@ -653,12 +653,12 @@
 						<dt class="text-left uk-text-bold">
 							{if $display_tax_label}
 								{if $use_taxes && $priceDisplay == 0}
-									{l s='Total vouchers (tax incl.)'}
+									{l s='Total Coupon (tax incl.)'}
 								{else}
-									{l s='Total vouchers (tax excl.)'}
+									{l s='Total Coupon (tax excl.)'}
 								{/if}
 							{else}
-								{l s='Total vouchers'}
+								{l s='Total Coupon'}
 							{/if}
 						</dt>
 						<dd class="price-discount price" id="total_discount">
