@@ -71,7 +71,7 @@
 								{if $voucherAllowed}
 									<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
 										<fieldset>
-											<h4>{l s='Vouchers'}</h4>
+											<h4>{l s='Coupon'}</h4>
 											<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
 											<input type="hidden" name="submitDiscount" />
 											<button type="submit" name="submitAddDiscount" class="uk-button uk-button-small"><span>{l s='APPLY'}</span></button>
@@ -96,7 +96,7 @@
 								{if $voucherAllowed}
 									<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
 										<fieldset>
-											<h4>{l s='Vouchers'}</h4>
+											<h4>{l s='Coupon'}</h4>
 											<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
 											<input type="hidden" name="submitDiscount" />
 											<button type="submit" name="submitAddDiscount" class="uk-button uk-button-small"><span>{l s='OK'}</span></button>
@@ -173,12 +173,12 @@
 					<td colspan="2" class="text-left uk-text-bold">
 						{if $display_tax_label}
 							{if $use_taxes && $priceDisplay == 0}
-								{l s='Total vouchers (tax incl.)'}
+								{l s='Total Coupon (tax incl.)'}
 							{else}
-								{l s='Total vouchers (tax excl.)'}
+								{l s='Total Coupon (tax excl.)'}
 							{/if}
 						{else}
-							{l s='Total vouchers'}
+							{l s='Total Coupon'}
 						{/if}
 					</td>
 					<td colspan="1" class="price-discount price" id="total_discount">
@@ -520,7 +520,7 @@
 						{if $voucherAllowed}
 							<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
 								<fieldset>
-									<label>{l s='Vouchers'}</label>
+									<label>{l s='Coupon'}</label>
 									<input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
 									<input type="hidden" name="submitDiscount" />
 									<button type="submit" name="submitAddDiscount" class="uk-button uk-button-small">
