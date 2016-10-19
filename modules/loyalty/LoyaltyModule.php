@@ -359,7 +359,7 @@ class LoyaltyModule extends ObjectModel
 		
 		Db::getInstance()->execute("INSERT INTO px_customer_point_history 
 				(id_customer, points,action,ccomment,date,id_item) 
-				VALUES ($id_customer,".(int)($this->points).",'+','{$this->mark}',now(),{$this->id_item})");
+				VALUES ($id_customer,".(int)($this->points).",'+','".$this->mark."',now(),".$this->id_item.")");
 		
 		
 	}
