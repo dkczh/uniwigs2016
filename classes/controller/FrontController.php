@@ -837,11 +837,11 @@ class FrontControllerCore extends Controller
             // Don't send any cookie
             Context::getContext()->cookie->disallowWriting();
 			$ssl = array("http://www.uniwigs.com/login",
-						"Steve", 
-						"Mark", 
-						"David");
+						"http://www.uniwigs.com/quick-order", 
+						"http://m.uniwigs.com/quick-order", 
+						"http://lavivid.uniwigs.com/quick-order");
 			
-			if(!in_array($final_url, $people)){
+			if(!in_array($final_url, $ssl)){
 				if (defined('_PS_MODE_DEV_') && _PS_MODE_DEV_ && $_SERVER['REQUEST_URI'] != __PS_BASE_URI__) {
 					die('[Debug] This page has moved<br />Please use the following URL instead: <a href="'.$final_url.'">'.$final_url.'</a>');
 				}
