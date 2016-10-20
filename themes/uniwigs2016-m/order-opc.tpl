@@ -22,7 +22,19 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
+{literal}
+<script>
+	var url = window.location.href;//获取所有的url 
+	    
+      if (url.indexOf("https") < 0) {
 
+          url = url.replace("http:", "https:");
+
+          window.location.replace(url);
+
+      }
+</script>
+{/literal}
 {if $opc}
 	{assign var="back_order_page" value="order-opc.php"}
 	{else}
