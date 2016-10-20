@@ -44,7 +44,8 @@
 		</ul>
 	</div>
 </div>-->
-{if $currentCategory->id == '40452' or $currentCategory->id == '40453' or $currentCategory->id == '105' or $currentCategory->id == '40447' or $currentCategory->id == '40448' or $currentCategory->id == '40446' or $currentCategory->id == '40450' or $currentCategory->id == '40449' or $currentCategory->id == '40451'}
+{if isset($currentCategory)}
+{if $currentCategory->id == '40452' or $currentCategory->id == '40453' or $currentCategory->id == '105' or $currentCategory->id == '40447' or $currentCategory->id == '40448' or $currentCategory->id == '40446' or $currentCategory->id == '40450' or $currentCategory->id == '40449' or $currentCategory->id == '40451' or $currentCategory->id == '40458'}
 <div class="block">
 	<p class="title_block">how to  (Quick&Easy Tips)</p>
 	<div class="block_content text-center">
@@ -62,6 +63,7 @@
 		<a href="{$base_dir}tag/color-ring" class="img-responsive uk-margin-small-bottom"><img src="{$img_dir}category/human-hair/left-color-tips.jpg" alt=""></a>
 	</div>
 </div>
+{/if}
 {/if}
 <!-- /Block categories module -->
 
