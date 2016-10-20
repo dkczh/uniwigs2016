@@ -294,7 +294,11 @@
 					Youtube Guru Highly Recommend!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: LS0011
 				</p>
 			{/if}
-
+			{if $product->id =='40838'}
+				<p class="text-primary" style="color:#920783">
+					Flash Sale!!!&nbsp;&nbsp;30% Off!!!&nbsp;&nbsp;Coupon Code: LS0008
+				</p>
+			{/if}
 			{if $category->id=='102' or $category->id=='40452' or $category->id=='40453' or $category->id=='40447' or $category->id=='40448' or $category->id=='40446' or $category->id=='40450' or $category->id=='40449' or $category->id=='40451'}
 			<p class="pro_promotions text-primary" style="color:#920783">
 				Free Color Ring for First Order with Human Hair Wigs

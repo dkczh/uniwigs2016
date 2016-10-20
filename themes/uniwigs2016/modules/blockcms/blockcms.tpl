@@ -156,7 +156,7 @@
 						<a href="{$base_dir}content/category/2-help-center">Help Center</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/9-how-to-videos" rel="nofollow">Unwigs TV</a>
+						<a href="{$base_dir}content/9-how-to-videos">Unwigs TV</a>
 					</li>
 					<li class="item">
 						<a href="{$base_dir}sitemap.xml">Sitemap</a>

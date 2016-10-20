@@ -277,6 +277,11 @@
 									Youtube Guru Highly Recommend!&nbsp;&nbsp;30% OFF!&nbsp;&nbsp;Coupon: LS0011
 								</p>
 							{/if}
+							{if $product->id =='40838'}
+								<p class="text-primary" style="color:#920783">
+									Flash Sale!!!&nbsp;&nbsp;30% Off!!!&nbsp;&nbsp;Coupon Code: LS0008
+								</p>
+							{/if}
 							{if $product->id =='41377'}
 								<p class="text-primary text-center">
 									<a href="#new-arrival-synthetic" style="text-decoration: underline;color:#920783" data-uk-modal>
