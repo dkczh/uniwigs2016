@@ -44,6 +44,9 @@
 			<h1 class="page-heading step-num"><span>3</span> {l s='Please choose your payment method'}</h1>
 		{/if}
 		<div id="opc_payment_methods-overlay" class="opc-overlay" style="display: none;"></div>
+		<p>
+			<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=0l1h2XpK18V1TOKEcS4Yi6MR5BDr2zLcBSLVQzLBPMpY5X88egOTrWMxKn"></script></span>
+		</p>
 {/if}
 
 {if $advanced_payment_api}
