@@ -22,8 +22,8 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-{if $blockCategTree && $blockCategTree.children|@count}
-<!-- Block categories module -->
+
+<!-- Block categories module 
 <div id="categories_block_left" class="block">
 	<h2 class="title_block">
 		{if isset($currentCategory)}
@@ -43,6 +43,25 @@
 			{/foreach}
 		</ul>
 	</div>
+</div>-->
+{if $currentCategory->id == '40452' or $currentCategory->id == '40453' or $currentCategory->id == '105' or $currentCategory->id == '40447' or $currentCategory->id == '40448' or $currentCategory->id == '40446' or $currentCategory->id == '40450' or $currentCategory->id == '40449' or $currentCategory->id == '40451'}
+<div class="block">
+	<p class="title_block">how to  (Quick&Easy Tips)</p>
+	<div class="block_content text-center">
+		<a href="{$base_dir}content/9-how-to-videos" class="img-responsive uk-margin-small-bottom">
+			<img src="{$img_dir}category/human-hair/left-video-1.jpg" alt="">
+		</a>
+		<a href="{$base_dir}content/9-how-to-videos" class="img-responsive">
+			<img src="{$img_dir}category/human-hair/left-video-2.jpg" alt="">
+		</a>
+		<a href="{$base_dir}content/9-how-to-videos" class="uk-button uk-button-link uk-margin-small-bottom">view more ></a>	
+	</div>
+	<div class="block_content">
+		<a href="{$base_dir}content/28-uniwigs-wigs" class="img-responsive uk-margin-small-bottom"><img src="{$img_dir}category/human-hair/left-faq.png" alt=""></a>
+		<a href="{$base_dir}customer-show?ca=Human+Hair+Wigs" class="img-responsive uk-margin-small-bottom"><img src="{$img_dir}category/human-hair/left-youtube.png" alt=""></a>
+		<a href="{$base_dir}tag/color-ring" class="img-responsive uk-margin-small-bottom"><img src="{$img_dir}category/human-hair/left-color-tips.jpg" alt=""></a>
+	</div>
 </div>
-<!-- /Block categories module -->
 {/if}
+<!-- /Block categories module -->
+
