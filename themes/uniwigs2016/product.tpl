@@ -34,7 +34,7 @@
 		{assign var='productPrice' value=$product->getPrice(false, $smarty.const.NULL, 6)}
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(true, $smarty.const.NULL)}
 	{/if}
-{if $product->id =='41377'}
+{*if $product->id =='41377'}
 <div id="new-product" class="uk-modal uk-open" style="display:block">
     <div class="uk-modal-dialog">
         <a class="uk-modal-close uk-close"></a>
@@ -53,7 +53,7 @@
 		})
 	})
 </script>
-{/if}
+{/if*}
 <div itemscope itemtype="https://schema.org/Product">
 	<meta itemprop="url" content="{$link->getProductLink($product)}">
 	<div class="primary_block row">

@@ -282,7 +282,7 @@
 									Flash Sale!!!&nbsp;&nbsp;30% Off!!!&nbsp;&nbsp;Coupon Code: LS0008
 								</p>
 							{/if}
-							{if $product->id =='41377'}
+							{*if $product->id =='41377'}
 								<p class="text-primary text-center">
 									<a href="#new-arrival-synthetic" style="text-decoration: underline;color:#920783" data-uk-modal>
 									<span>New Arrival for Presale!</span><br>
@@ -297,8 +297,8 @@
 								        <img src="{$base_dir}themes/uniwigs2016-m/img/category/synthetic/new-m.png" alt="New Arrival For Presale" class="img-responsive">
 								    </div>
 								</div>
-							{/if}
-							{if $product->id !='41377'}
+							{/if*}
+							
 							<p class="uk-margin-small-bottom text-center"><a href="#product_free_shipping_info" data-uk-modal class="product_free_shipping">Free Shipping US *</a></p>
 							<div id="product_free_shipping_info" class="uk-modal">
 							    <div class="uk-modal-dialog img-responsive">
@@ -363,7 +363,7 @@
 								    </div>
 								</div>
 							</div>
-							{/if}
+							
 							{if $packItems|@count && $productPrice < $product->getNoPackPrice()}
 								<p class="pack_price">{l s='Instead of'} <span style="text-decoration: line-through;">{convertPrice price=$product->getNoPackPrice()}</span></p>
 							{/if}
