@@ -54,7 +54,7 @@ class LoyaltyModule extends ObjectModel
 			'points' =>				array('type' => self::TYPE_INT, 'validate' => 'isInt', 'required' => true),
 			'date_add' =>			array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
 			'date_upd' =>			array('type' => self::TYPE_DATE, 'validate' => 'isDate'),
-			'remark' =>				array('type' => self::TYPE_DATE)
+			'remark' =>				array('type' => self::TYPE_STRING)
 		)
 	);
 
@@ -355,11 +355,11 @@ class LoyaltyModule extends ObjectModel
 		Db::getInstance()->execute('
 		INSERT INTO `'._DB_PREFIX_.'loyalty_history` (`id_loyalty`, `id_loyalty_state`, `points`, `date_add`)
 		VALUES ('.(int)($this->id).', '.(int)($this->id_loyalty_state).', '.(int)($this->points).', NOW())');
-		Db::getInstance()->execute("INSERT INTO px_customer_point (id_customer, points, mark) VALUES (".$id_customer.",".$now_points.",'".$this->mark."') ON DUPLICATE KEY UPDATE id_customer=VALUES(id_customer), points=VALUES(points),mark=VALUES(mark);");
+		Db::getInstance()->execute("INSERT INTO px_customer_point (id_customer, points, mark) VALUES (".$id_customer.",".$now_points.",'".$this->remark."') ON DUPLICATE KEY UPDATE id_customer=VALUES(id_customer), points=VALUES(points),mark=VALUES(mark);");
 		
 		Db::getInstance()->execute("INSERT INTO px_customer_point_history 
 				(id_customer, points,action,ccomment,date,id_item) 
-				VALUES ($id_customer,".(int)($this->points).",'+','{$this->mark}',now(),{$this->id_item})");
+				VALUES ($id_customer,".(int)($this->points).",'+','".$this->remark."',now(),".$this->id_item.")");
 		
 		
 	}
