@@ -133,10 +133,10 @@
 						<a href="http://blog.uniwigs.com/">Wigs Blog</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/32-uniwigs-charity">Uniwigs Charity</a>
+						<a href="{$base_dir}content/32-uniwigs-charity" rel="nofollow">Uniwigs Charity</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/24-uniwigs-affiliate-program">Uniwigs Affiliate</a>
+						<a href="{$base_dir}content/24-uniwigs-affiliate-program" rel="nofollow">Uniwigs Affiliate</a>
 					</li>
 				</ul>
 			</dd>
@@ -147,16 +147,16 @@
 						<a href="{$base_dir}">Coupons</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/17-determine-your-wig-size">Wigs Size</a>
+						<a href="{$base_dir}content/17-determine-your-wig-size" rel="nofollow">Wigs Size</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/18-choosing-a-color-for-wigs">Choosing a Color</a>
+						<a href="{$base_dir}content/18-choosing-a-color-for-wigs" rel="nofollow">Choosing a Color</a>
 					</li>
 					<li class="item">
 						<a href="{$base_dir}content/category/2-help-center">Help Center</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/9-how-to-videos">Unwigs TV</a>
+						<a href="{$base_dir}content/9-how-to-videos" rel="nofollow">Unwigs TV</a>
 					</li>
 					<li class="item">
 						<a href="{$base_dir}sitemap.xml">Sitemap</a>
@@ -167,16 +167,16 @@
 				<h4>{l s='POLICIES' mod='blockcms'}</h4>
 				<ul class="toggle-footer">
 					<li class="item">
-						<a href="{$base_dir}content/2-return-policy">Return Policy</a>
+						<a href="{$base_dir}content/2-return-policy" rel="nofollow">Return Policy</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/26-privacy-policy">Privacy Policy</a>
+						<a href="{$base_dir}content/26-privacy-policy" rel="nofollow">Privacy Policy</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/27-shipping-information">Shipping & Tracking</a>
+						<a href="{$base_dir}content/27-shipping-information" rel="nofollow">Shipping & Tracking</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/33-terms-conditions">Terms and Conditions</a>
+						<a href="{$base_dir}content/33-terms-conditions" rel="nofollow">Terms and Conditions</a>
 					</li>
 				</ul>
 			</dd>
