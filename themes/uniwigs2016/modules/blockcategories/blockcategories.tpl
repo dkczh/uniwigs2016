@@ -22,29 +22,8 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
-<!-- Block categories module 
-<div id="categories_block_left" class="block">
-	<h2 class="title_block">
-		{if isset($currentCategory)}
-			{$currentCategory->name|escape}
-		{else}
-			{l s='Categories' mod='blockcategories'}
-		{/if}
-	</h2>
-	<div class="block_content">
-		<ul class="tree {if $isDhtml}dhtml{/if}">
-			{foreach from=$blockCategTree.children item=child name=blockCategTree}
-				{if $smarty.foreach.blockCategTree.last}
-					{include file="$branche_tpl_path" node=$child last='true'}
-				{else}
-					{include file="$branche_tpl_path" node=$child}
-				{/if}
-			{/foreach}
-		</ul>
-	</div>
-</div>-->
 {if isset($currentCategory)}
+
 {if $currentCategory->id == '40452' or $currentCategory->id == '40453' or $currentCategory->id == '105' or $currentCategory->id == '40447' or $currentCategory->id == '40448' or $currentCategory->id == '40446' or $currentCategory->id == '40450' or $currentCategory->id == '40449' or $currentCategory->id == '40451' or $currentCategory->id == '40458'}
 <div class="block">
 	<p class="title_block">how to  (Quick&Easy Tips)</p>
@@ -65,5 +44,3 @@
 </div>
 {/if}
 {/if}
-<!-- /Block categories module -->
-
