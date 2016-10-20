@@ -45,7 +45,7 @@
 		{/if}
 		<div id="opc_payment_methods-overlay" class="opc-overlay" style="display: none;"></div>
 		<p>
-			<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script></span>
+			<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=0l1h2XpK18V1TOKEcS4Yi6MR5BDr2zLcBSLVQzLBPMpY5X88egOTrWMxKn"></script></span>
 		</p>
 {/if}
 
