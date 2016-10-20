@@ -843,11 +843,13 @@ class FrontControllerCore extends Controller
 				}
 				
             }
-
+			if($final_url!="http://www.uniwigs.com/login"){
             $redirect_type = Configuration::get('PS_CANONICAL_REDIRECT') == 2 ? '301' : '302';
             header('HTTP/1.0 '.$redirect_type.' Moved');
             header('Cache-Control: no-cache');
+			
             Tools::redirectLink($final_url);
+			}
         }
     }
 
