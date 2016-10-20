@@ -116,11 +116,11 @@
         {/if}
         {if $category->id == '101'}
             <ul class="category_banner row">
-                <li class="maxwidth uk-margin-small-bottom">
+                {*<li class="maxwidth uk-margin-small-bottom">
                     <a href="{$base_dir}trendy-wigs/41377-fantasy-synthetic-lace-front-wig.html">
                         <img src="{$img_dir}category/synthetic/new-arrival.png" alt="New Arrival For Presale" class="img-responsive">
                     </a>
-                </li>
+                </li>*}
                 <li class="maxwidth uk-margin-small-bottom">
                     <a href="{$base_dir}tag/halloween-wigs">
                         <img src="{$img_dir}category/synthetic/trick-uniwigs.jpg" alt="Trick or UniWigs" class="img-responsive">
