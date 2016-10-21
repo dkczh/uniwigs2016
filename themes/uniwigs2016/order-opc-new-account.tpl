@@ -3,7 +3,7 @@
 	<h1 class="page-heading step-num"><span>Step 1:</span> {l s='Account'}</h1>
 	<div class="row sign-hide">
 		<div class="col-sm-6">
-			<form action="http://www.uniwigs.com/login?back=order-opc" method="post" id="login_form" class="box uk-form uk-form-stacked">
+			<form action="https://www.uniwigs.com/login?back=order-opc" method="post" id="login_form" class="box uk-form uk-form-stacked">
 				<fieldset>
 					<h3 class="page-subheading">{l s='Already registered?'}</h3>
 					{*<p><a href="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" id="openLoginFormBlock" class="uk-button uk-button-small">&raquo; {l s='Click here'}</a></p>*}
@@ -40,7 +40,7 @@
 			</div>
 		</div>
 	</div>
-	<form action="http://www.uniwigs.com/login" method="post" id="new_account_form" class="std uk-form uk-form-horizontal" autocomplete="on" autofill="on" style="display:none">
+	<form action="https://www.uniwigs.com/login" method="post" id="new_account_form" class="std uk-form uk-form-horizontal" autocomplete="on" autofill="on" style="display:none">
 		<fieldset>
 			<div class="box">
 				<h3 id="new_account_title" class="page-subheading">{l s='New Customer'}</h3>
