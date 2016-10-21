@@ -38,7 +38,7 @@
 		{else}
 			{*customer show  关键词*}
 			{if isset($cshow)}
-				Uniwigs Reviews | Customer Show
+				Uniwigs Reviews | Customer Show - UniWigs ® Official Site
 			{else}
 				{$meta_title|escape:'html':'UTF-8'}
 			{/if}

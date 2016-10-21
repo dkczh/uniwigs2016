@@ -34,11 +34,11 @@
 					}
 				}
 			}
+			ul.disc{
+		    	list-style-type: disc;
+		    }
 			li {
 			    padding: 6px 0;
-			    &.disc{
-			    	list-style-type: disc;
-			    }
 			    img{
 			    	margin:0;
 			    }
