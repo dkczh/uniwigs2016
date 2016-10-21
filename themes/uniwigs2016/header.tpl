@@ -38,7 +38,7 @@
 		{else}
 			{*customer show  关键词*}
 			{if isset($cshow)}
-				Customer Show | UniWigs.com -UniWigs ® Official Site
+				Uniwigs Reviews | Customer Show
 			{else}
 				{$meta_title|escape:'html':'UTF-8'}
 			{/if}
@@ -54,9 +54,8 @@
 		{else}
 			
 			{if isset($cshow)}
-			<meta name="description" content="Here your can find all the customer show of Uniwigs.com. You can see how others looks like with the hair extension before and after. Also you can find the real evaluation of UNIWIGS by the customers. 
-" />
-			<meta name="keywords" content="hair extensions before and after,customer show,uniwigs customer show" />
+			<meta name="description" content="Here your can find all the Uniwigs reviews,complaints and customer show. You can see how others looks like with the wigs and hairpieces from Uniwigs.com." />
+			<meta name="keywords" content="uniwigs review,uniwigs reviews,uniwig review,uniwig reviews,uniwigs complaints,uniwigs customer show,uniwigs.com reviews,uniwigs complaint,uniwigs extensions review,uniwigs ombre review" />
 			{else}
 				{if isset($meta_description) AND $meta_description}
 					<meta name="description" content="{$meta_description|escape:'html':'UTF-8'}" />
