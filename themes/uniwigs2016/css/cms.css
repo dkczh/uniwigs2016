@@ -23,7 +23,8 @@
     #cms #center_column .doc-con .how-to-videos li img {
       width: 100%; }
   #cms #center_column .doc-con li {
-    padding: 10px 0; }
+    padding: 6px 0;
+    list-style-type: disc; }
     #cms #center_column .doc-con li img {
       margin: 0; }
   #cms #center_column .doc-con .uk-accordion h4 {
