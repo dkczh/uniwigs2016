@@ -455,10 +455,10 @@
 		<a href="/livechat/chat.php" rel="nofollow" target="_blank" class="chat-now">Chat Now</a>
 		<h5>General inquiries:</h5>
 		<p>Email: <a href="mailto:support@uniwigs.com">Support@uniwigs.com</a></p>
-		<p>
+		{*<p>
 			<span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=0l1h2XpK18V1TOKEcS4Yi6MR5BDr2zLcBSLVQzLBPMpY5X88egOTrWMxKn"></script></span>
-			
-		</p>
+
+		</p>*}
 		</div>
 	</div>
 </div>
