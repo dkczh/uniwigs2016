@@ -955,8 +955,8 @@ Enjoy!
             radioClass: "radio",
             resetDefaultHtml: "Reset",
             resetSelector: false,  // We'll use our own function when you don't specify one
-            selectAutoWidth: true,
-            selectClass: "selector",
+            selectAutoWidth: false,
+            selectClass: false, //"selector",
             selectMultiClass: "uniform-multiselect",
             submitDefaultHtml: "Submit",  // Only text allowed
             textareaClass: "uniform",

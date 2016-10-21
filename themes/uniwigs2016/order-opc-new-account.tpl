@@ -259,7 +259,7 @@
 					<div class="required id_state form-group uk-form-row" style="display:none;">
 						<label for="id_state" class="uk-form-label">{l s='State'} <sup>*</sup></label>
 						<div class="uk-form-controls">
-							<select name="id_state" id="id_state" class="form-control not_uniform">
+							<select name="id_state" id="id_state" class="not_uniform form-control">
 								<option value="">-</option>
 							</select>
 						</div>
