@@ -839,7 +839,9 @@ class FrontControllerCore extends Controller
 			$ssl = array("http://www.uniwigs.com/login",
 						"http://www.uniwigs.com/quick-order", 
 						"http://m.uniwigs.com/quick-order", 
-						"http://lavivid.uniwigs.com/quick-order");
+						"http://lavivid.uniwigs.com/quick-order",
+						"http://www.uniwigs.com/login?back=order-opc",
+						"http://www.uniwigs.com/login");
 			
 			if(!in_array($final_url, $ssl)){
 				if (defined('_PS_MODE_DEV_') && _PS_MODE_DEV_ && $_SERVER['REQUEST_URI'] != __PS_BASE_URI__) {
