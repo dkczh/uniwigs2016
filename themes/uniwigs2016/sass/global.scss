@@ -566,6 +566,22 @@ span.exclusive {
 		background: $base-box-bg;
 	}
 }
+.form-group{
+	.fixedWidth{
+		span{display: none}
+	}
+}
+
+select.form-control{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: #fff url(../img/colourSelectArrow.png) no-repeat right 12px center;
+	border-radius: 0;
+	&::-ms-expand {
+		display: none;
+	}
+}
+
 
 //table
 table.std,

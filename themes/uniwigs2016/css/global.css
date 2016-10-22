@@ -11238,6 +11238,17 @@ span.exclusive {
   .form-control.grey {
     background: #fbfbfb; }
 
+.form-group .fixedWidth span {
+  display: none; }
+
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff url(../img/colourSelectArrow.png) no-repeat right 12px center;
+  border-radius: 0; }
+  select.form-control::-ms-expand {
+    display: none; }
+
 table.std,
 table.table_block {
   margin-bottom: 20px;
