@@ -575,11 +575,15 @@ span.exclusive {
 select.form-control{
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background: #fff url(../img/colourSelectArrow.png) no-repeat right 12px center;
+	background: #fafafa url(../img/colourSelectArrow.png) no-repeat right 12px center;
 	border-radius: 0;
 	&::-ms-expand {
 		display: none;
 	}
+}
+.uk-form select{
+	&:focus{
+		background: #fff url(http://www.uniwigs.com/themes/uniwigs2016/css/../img/colourSelectArrow.png) no-repeat right 12px center	}
 }
 
 
