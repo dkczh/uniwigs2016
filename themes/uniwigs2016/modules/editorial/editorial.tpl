@@ -155,7 +155,6 @@
 			<a href="{$base_dir}login?back=my-account">
 				<p class="h4">REGISTER TO GET</p>
 				<p class="h2">10% OFF</p>
-				<p class="h4">COUPON REG10</p>
 			</a>
 		</li>
 		<li>
