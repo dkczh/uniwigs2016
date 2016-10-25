@@ -35,7 +35,7 @@
 	</ul>
 </div>*}
 <div class="back-school-sale">
-	<img src="{$base_dir}themes/uniwigs2016/img/index/back-to-school.jpg" alt="back to school" usemap="#map" class="img-responsive"/>
+	<img src="{$base_dir}themes/uniwigs2016/img/index/hallowwen.jpg" alt="hallowwen category" usemap="#map" class="img-responsive"/>
 	<map name="map">
 	    <area shape="rect" coords="864, 2, 1139, 536" href="{$base_dir}tag/lace-closure"/>
 	    <area shape="rect" coords="577, 88, 856, 591" href="{$base_dir}103-hair-extensions"/>
