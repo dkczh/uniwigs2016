@@ -1,6 +1,6 @@
 <h1 id="header_logo">
 	<a href="/" title="UniWigs">
-		<img class="logo" src="{$logo_url}" alt="UniWigs" width="169">
+		<img class="logo" src="{$logo_url}" alt="UniWigs" class="img-responsive">
 	</a>
 </h1>
 <!-- Menu -->
