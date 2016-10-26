@@ -196,7 +196,7 @@ var google_remarketing_only = false;
 
 
 if($total_paid>0){
-$this->smarty->assign('google_ppc_js', $google_ppc_js);
+$this->smarty->assign('google_ppc_js', '');
 }else{
 	
 $this->smarty->assign('google_ppc_js','');	
