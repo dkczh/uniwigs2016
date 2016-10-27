@@ -216,6 +216,17 @@
 			</div>
 			
 			{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
+
+			<p style="color:#920783"><span>Fall in Love with our Autumn 5-day Sales Event!</span><br><span>25% OFF</span>&nbsp;&nbsp;<span>code: AUTUMN25</span>&nbsp;&nbsp;<a href="#sale-details" data-uk-modal style="text-decoration: underline;">DETAILS</a></p>
+			<div id="sale-details" class="uk-modal">
+			    <div class="uk-modal-dialog">
+			        <a class="uk-modal-close uk-close"></a>
+			        <div>
+			        	<a href="{$base_dir}102-human-hair-wigs">
+			        	<img src="/themes/uniwigs2016/img/index/details.png" alt="Fall in Love with our Autumn 5-day Sales Event!" class="img-responsive"></a>
+			        </div>
+			    </div>
+			</div>
 			
 		</div>
 		<!-- end center infos-->
