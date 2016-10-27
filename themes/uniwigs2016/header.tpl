@@ -166,7 +166,7 @@
 				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
-							<p><span>Fall in Love with our Autumn 5-day Sales Event! </span><span>25% OFF</span><span>code: <b>AUTUMN25</b></span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+							<p><span>Fall in Love with our Autumn 5-day Sales Event! </span><span>25% OFF</span><span>code: <b>FALL25</b></span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
 						</div>
 					</div>
 					<div id="sale-details" class="uk-modal">
