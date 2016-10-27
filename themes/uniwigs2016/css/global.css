@@ -6126,6 +6126,9 @@ select.uk-form-width-mini {
   font-family: FontAwesome;
   font-size: 1.8em; }
 
+.uk-close.uk-close-alt:after {
+  font-size: 1em; }
+
 /*
  * Hover
  * 1. Apply hover style also to focus state
