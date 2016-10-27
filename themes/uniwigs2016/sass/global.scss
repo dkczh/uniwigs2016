@@ -12,6 +12,9 @@
 a:hover {
 	text-decoration: none;
 }
+a.underline{
+    text-decoration: underline; 
+  }
 
 body {
 	&.content_only {

@@ -6123,7 +6123,8 @@ select.uk-form-width-mini {
 .uk-close:after {
   display: block;
   content: "\f00d";
-  font-family: FontAwesome; }
+  font-family: FontAwesome;
+  font-size: 1.8em; }
 
 /*
  * Hover
@@ -10763,6 +10764,9 @@ a.uk-thumbnail:focus {
 
 a:hover {
   text-decoration: none; }
+
+a.underline {
+  text-decoration: underline; }
 
 body.content_only {
   background: none;
