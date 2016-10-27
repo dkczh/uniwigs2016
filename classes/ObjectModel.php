@@ -555,7 +555,7 @@ abstract class ObjectModelCore implements Core_Foundation_Database_EntityInterfa
 				var_dump($arrmy['total_paid']);
 				echo '</pre>'; */
 		
-			file_put_contents($_SERVER['DOCUMENT_ROOT'].'/myorders.txt',$arrmy['id_order'].'--'.date("Y-m-d H:i:s")."\r\n",FILE_APPEND);
+			//file_put_contents($_SERVER['DOCUMENT_ROOT'].'/myorders.txt',$arrmy['id_order'].'--'.date("Y-m-d H:i:s")."\r\n",FILE_APPEND);
 			
 			}
 		
