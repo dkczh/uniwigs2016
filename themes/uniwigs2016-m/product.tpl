@@ -223,7 +223,7 @@
 			        <a class="uk-modal-close uk-close"></a>
 			        <div>
 			        	<a href="{$base_dir}102-human-hair-wigs">
-			        	<img src="/themes/uniwigs2016/img/index/details.png" alt="Fall in Love with our Autumn 5-day Sales Event!" class="img-responsive"></a>
+			        	<img src="/themes/uniwigs2016-m/img/home/details-m.png" alt="Fall in Love with our Autumn 5-day Sales Event!" class="img-responsive"></a>
 			        </div>
 			    </div>
 			</div>
