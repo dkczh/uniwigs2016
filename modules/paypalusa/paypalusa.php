@@ -704,7 +704,16 @@ class PayPalUSA extends PaymentModule
 			}
 		}
 	}
+	/* PayPal USA Order Transaction ID  检测paypal 是否发送的重复性的交易成功信息
+	 * 
+	 *
+	 * @param $id_transaction string PayPal Transaction ID
+	 */
 
+	public function checkTransactionId($id_transaction)
+	{
+		return Db::getInstance()->ExecuteS("select * from  ps_paypal_usa_transaction where id_transaction = '$id_transaction'");
+	}
 	/* PayPal USA Transaction details update
 	 * Attach transactions details to an existing order (it will be displayed in the Order details section of the Back-office)
 	 *
