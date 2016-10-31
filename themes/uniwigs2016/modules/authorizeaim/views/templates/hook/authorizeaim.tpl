@@ -126,7 +126,7 @@
 						<div class="text-info">{l s='the 3 last digits on the back of your credit card' mod='authorizeaim'}</div>
 						<img src="{$module_dir}cvv.png" id="cvv_help_img" alt="" style="display: none;margin-left: 211px;" />
 						<div id="cart">
-							<input type="button" id="asubmit" value="{l s='Validate order' mod='authorizeaim'}" class="uk-button uk-button-primary uk-margin-top" />
+							<input type="button" id="asubmit" value="{l s='Validate order' mod='authorizeaim'}" class="uk-button uk-button-primary uk-margin-top"/>
 						</div>
 					</div>
 				</div>		

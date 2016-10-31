@@ -94,6 +94,6 @@
 		<input type="hidden" name="cancel_return" value="{$paypal_usa_cancel_url|escape:'htmlall':'UTF-8'}" />
 		<input type="hidden" name="no_shipping" value="1" />
 		<input type="hidden" name="bn" value="PrestashopUS_Cart" />
-		<input id="paypal-standard-btn" type="image" name="submit" src="/img/horizontal.jpg" alt="" style="vertical-align: middle;"/> {l s='Pay with PayPal.' mod='paypalusa'}
+		<input id="paypal-standard-btn" type="image" name="submit" src="/img/horizontal.jpg" alt="" style="vertical-align: middle;" onClick="_gas.push(['_trackEvent','onclick','click','SubmitOrder']);"/> {l s='Pay with PayPal.' mod='paypalusa'}
 	</p>
 </form>
