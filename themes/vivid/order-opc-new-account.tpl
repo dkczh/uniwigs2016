@@ -464,7 +464,7 @@
 						<p class="required opc-required pull-right">
 							<sup>*</sup>{l s='Required field'}
 						</p>
-						<button type="submit" name="submitAccount" id="submitAccount" class="uk-button uk-button-primary"><span>{l s='Save'}<i class="icon-chevron-right right"></i></span></button>
+						<button type="submit" name="submitAccount" id="submitAccount" class="uk-button uk-button-primary" onClick="_gas.push(['_trackEvent','onclick','click','buynow_submit']);"><span>{l s='Save'}<i class="icon-chevron-right right"></i></span></button>
 
 					</div>
 					<div style="display: none;" id="opc_account_saved" class="alert alert-success">
