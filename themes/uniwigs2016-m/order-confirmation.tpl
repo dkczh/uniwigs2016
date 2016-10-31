@@ -73,33 +73,3 @@ fbq('track', 'Purchase', {value: '1.00', currency: 'USD'});
 src="https://www.facebook.com/tr?id=939483269478039&amp;ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
-<!-- Google Code for conv Conversion Page -->
-{literal}
-<script type="text/javascript">
-/*
- <![CDATA[ */
-var google_conversion_id = 923345832;
-
-var google_conversion_language = "en";
-
-var google_conversion_format = "3";
-
-var google_conversion_color = "ffffff";
-
-var google_conversion_label = "S8U_CJCfxQ4QqMekuAM";
-
-var google_conversion_value = 1.00;
-
-var google_conversion_currency = "USD";
-
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-{/literal}
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/923345832/?value=1.00&amp;currency_code=USD&amp;label=S8U_CJCfxQ4QqMekuAM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
