@@ -17,6 +17,8 @@
     #order-opc .form-group span {
       display: inline-block;
       color: #999; }
+    #order-opc .form-group .fixedWidth span {
+      display: none; }
   #order-opc .lost_password {
     display: inline-block;
     text-decoration: underline;
