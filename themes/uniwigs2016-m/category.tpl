@@ -102,7 +102,6 @@
     *}
         {if $category->id == '102'}
             <div>
-               <img src="{$img_dir}category/human-hair/Halloween-Sale.png" alt="Human Hair Halloween Sale" class="img-responsive">
                 <a href="{$base_dir}40453-celebrity-hairstyles">
                     <img src="{$img_dir}category/human-hair/celebrity2016.jpg" alt="human hair celebrity hairstyles" class="img-responsive">
                 </a>
@@ -116,16 +115,6 @@
         {/if}
         {if $category->id == '101'}
             <ul class="category_banner row">
-                {*<li class="maxwidth uk-margin-small-bottom">
-                    <a href="{$base_dir}trendy-wigs/41377-fantasy-synthetic-lace-front-wig.html">
-                        <img src="{$img_dir}category/synthetic/new-arrival.png" alt="New Arrival For Presale" class="img-responsive">
-                    </a>
-                </li>*}
-                <li class="maxwidth uk-margin-small-bottom">
-                    <a href="{$base_dir}tag/halloween-wigs">
-                        <img src="{$img_dir}category/synthetic/trick-uniwigs.jpg" alt="Trick or UniWigs" class="img-responsive">
-                    </a>
-                </li>
                 <li class="maxwidth uk-margin-small-bottom">
                     <a href="{$base_dir}40459-trendy-wigs">
                         <img src="{$img_dir}category/synthetic/trendy.jpg" alt="trendy wigs" class="img-responsive">

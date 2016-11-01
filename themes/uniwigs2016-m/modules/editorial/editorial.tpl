@@ -61,16 +61,15 @@
 </style>
 {/literal}
 
-{*<div><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$base_dir}themes/uniwigs2016-m/img/home/celebrity-wig-collection.jpg" alt="celebrity wig collection" class="img-responsive"></a></div>*}
-{*<div>
-	<img src="{$base_dir}themes/uniwigs2016-m/img/home/labor-day.png" alt="laboy day sale" class="img-responsive">
-</div>*}
+<div>
+	<a href="{$base_dir}tag/Thanksgiving-shopping-season"><img src="{$base_dir}themes/uniwigs2016-m/img/home/giv-thank.gif" alt="give thanks" class="img-responsive"></a>
+</div>
 <div class="sale-category">
 	<ul class="home-list uk-flex uk-flex-wrap">
-		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs-new.jpg" alt="trendy wigs" class="img-responsive"></a></li>
-		<li><a href="{$base_dir}40452-human-hair-lace-wigs"><img src="{$img_dir}home/classic-lace-wigs.jpg" alt="classic lace wigs" class="img-responsive"></a></li>
-		<li><a href="{$base_dir}103-hair-extensions"><img src="{$img_dir}home/hair-extensions.jpg" alt="hair extensions" class="img-responsive"></a></li>
-		<li><a href="{$base_dir}tag/lace-closure"><img src="{$img_dir}home/lace-closure.jpg" alt="lace closure" class="img-responsive"></a></li>
+		<li><a href="{$base_dir}40459-trendy-wigs"><img src="{$img_dir}home/trendy-wigs-thanks.jpg" alt="trendy wigs" class="img-responsive"></a></li>
+		<li><a href="{$base_dir}102-human-hair-wigs"><img src="{$img_dir}home/human-wigs-thanks.jpg" alt="Human hair wigs" class="img-responsive"></a></li>
+		<li><a href="{$base_dir}103-hair-extensions"><img src="{$img_dir}home/extensions-wigs-thanks.jpg" alt="hair extensions" class="img-responsive"></a></li>
+		<li><a href="{$base_dir}tag/toppers"><img src="{$img_dir}home/lace-closure-thanks.jpg" alt="lace closure" class="img-responsive"></a></li>
 	</ul>
 </div>
 <div class="promotion-block">
