@@ -49,12 +49,12 @@
 		<div class="pagination">
 		<ul>
 		<{if $npage!=1}>
-		<li><a href="http://www.uni.com/cadmin/cmanager/message.php?page=1">首页</a><li>
+		<li><a href="/cadmin/cmanager/message.php?page=1">首页</a><li>
 		<{/if}>
-		<li><a href="http://www.uni.com/cadmin/cmanager/message.php?page=<{$prepage}>">上一页</a></li>
+		<li><a href="/cadmin/cmanager/message.php?page=<{$prepage}>">上一页</a></li>
 		<li><a><{$npage}>/<{$totalpage}></a></li>
-		<li><a href="http://www.uni.com/cadmin/cmanager/message.php?page=<{$nextpage}>"><span>下一页</span></a></li>
-		<li><a href="http://www.uni.com/cadmin/cmanager/message.php?page=<{$totalpage}>"><span>末页</span></a></li>
+		<li><a href="/cadmin/cmanager/message.php?page=<{$nextpage}>"><span>下一页</span></a></li>
+		<li><a href="/cadmin/cmanager/message.php?page=<{$totalpage}>"><span>末页</span></a></li>
 		
 		<li><a>共<{$total}>条</a></li>
 		</ul></div>
