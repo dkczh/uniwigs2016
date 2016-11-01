@@ -166,15 +166,20 @@
 				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
-							<p><span>Fall in Love with our Autumn 5-day Sales Event! </span><span>25% OFF</span><span>code: <b>FALL25</b></span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
+							<p><span>It’s Time to Give Thanks </span><span>up to 25% OFF</span><a href="#sale-details" data-uk-modal>DETAILS</a></p>
 						</div>
 					</div>
 					<div id="sale-details" class="uk-modal">
 					    <div class="uk-modal-dialog">
 					        <a class="uk-modal-close uk-close"></a>
 					        <div>
-					        	<a href="{$base_dir}102-human-hair-wigs">
-					        	<img src="/themes/uniwigs2016/img/index/details.png" alt="Fall in Love with our Autumn 5-day Sales Event!" class="img-responsive"></a>
+					        	<img src="/themes/uniwigs2016/img/index/details1101.png" alt="Fall in Love with our Autumn 5-day Sales Event!" class="img-responsive" usemap="#mapdetails">
+					        	<map name="mapdetails">
+					        	    <area shape="rect" coords="578, 445, 757, 635" href="{$base_dir}103-hair-extensions"/>
+					        	    <area shape="rect" coords="391, 446, 573, 637" href="{$base_dir}tag/toppers"/>
+					        	    <area shape="rect" coords="198, 447, 386, 638" href="{$base_dir}40459-trendy-wigs"/>
+					        	    <area shape="rect" coords="1, 448, 194, 636" href="{$base_dir}102-human-hair-wigs"/>
+					        	</map>
 					        </div>
 					    </div>
 					</div>

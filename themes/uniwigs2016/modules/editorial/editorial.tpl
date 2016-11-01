@@ -23,36 +23,28 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-{*<div class="uk-margin-large-bottom"><a href="{$base_dir}40453-celebrity-hairstyles"><img src="{$base_dir}themes/uniwigs2016/img/index/celebrity-wig-collection.jpg" alt="celebrity wig collection" class="img-responsive"></a></div>*}
-
-{*<div class="uk-margin-large-bottom">
-	<img src="{$base_dir}themes/uniwigs2016/img/index/laboy-day.png" alt="laboy day sale" class="img-responsive">
-	<ul class="row">
-		<li class="col-sm-3"><a href="{$base_dir}102-human-hair-wigs" class="uk-button col-xs-12 ">shop human hair</a></li>
-		<li class="col-sm-3"><a href="{$base_dir}101-synthetic-wigs" class="uk-button col-xs-12 ">shop synthetic wigs</a></li>
-		<li class="col-sm-3"><a href="{$base_dir}104-hair-pieces" class="uk-button col-xs-12 ">shop hair pieces</a></li>
-		<li class="col-sm-3"><a href="{$base_dir}103-hair-extensions" class="uk-button col-xs-12 ">shop hair extensions</a></li>
-	</ul>
-</div>*}
+<div>
+	<img src="{$base_dir}themes/uniwigs2016/img/index/giv-thanks.gif" alt="give thanks" class="img-responsive">
+</div>
 <div class="back-school-sale">
-	<img src="{$base_dir}themes/uniwigs2016/img/index/hallowwen.jpg" alt="hallowwen category" usemap="#map" class="img-responsive"/>
+	<img src="{$base_dir}themes/uniwigs2016/img/index/giv-thanks.jpg" alt="give thanks category" usemap="#map" class="img-responsive"/>
 	<map name="map">
-	    <area shape="rect" coords="864, 2, 1139, 536" href="{$base_dir}tag/lace-closure"/>
-	    <area shape="rect" coords="577, 88, 856, 591" href="{$base_dir}103-hair-extensions"/>
-	    <area shape="rect" coords="287, 2, 567, 514" href="{$base_dir}40452-human-hair-lace-wigs"/>
-	    <area shape="rect" coords="1, 1, 277, 595" href="{$base_dir}40459-trendy-wigs"/>
+	    <area shape="rect" coords="864, 2, 1139, 536" href="{$base_dir}103-hair-extensions"/>
+	    <area shape="rect" coords="577, 88, 856, 591" href="{$base_dir}tag/toppers"/>
+	    <area shape="rect" coords="287, 2, 567, 514" href="{$base_dir}40459-trendy-wigs"/>
+	    <area shape="rect" coords="1, 1, 277, 595" href="{$base_dir}102-human-hair-wigs"/>
 	</map>
 </div>
 <div class="celebirty-wigs uk-margin-large-top">
 	<ul class="row">
 		<li class="col-sm-6">
 			<a href="https://youtu.be/6xp3eAgnV2o" data-uk-lightbox>
-				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/human-hair-halloween.jpg" alt="human hair halloween" class="img-responsive">
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/human-hair-thanks.jpg" alt="human hair halloween" class="img-responsive">
 			</a>
 		</li>
 		<li class="col-sm-6">
 			<a href="{$base_dir}tag/african-american-wigs">
-				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/human-hair-halloween-txt.png" alt="human hair halloween" class="img-responsive">
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/african-american.png" alt="human hair halloween" class="img-responsive">
 			</a>
 		</li>
 	</ul>
