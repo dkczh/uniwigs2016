@@ -162,7 +162,7 @@
 						</div>
 					</div>
 				</header>
-					
+				{if $page_name !='index' && $page_name !='pagenotfound'}
 				<div class="banner-sale">
 					<div class="container">
 						<div class="row">
@@ -184,7 +184,7 @@
 					    </div>
 					</div>
 				</div>
-
+				{/if}
 			</div>
 			<div class="columns-container">
 				<div id="slider_row" class="row">
