@@ -24,7 +24,7 @@
 *}
 
 <div>
-	<a href="{$base_dir}tag/Thanksgiving-shopping-season"><img src="{$base_dir}themes/uniwigs2016/img/index/giv-thanks.gif" alt="give thanks" class="img-responsive"></a>
+	<img src="{$base_dir}themes/uniwigs2016/img/index/giv-thanks.gif" alt="give thanks" class="img-responsive">
 </div>
 <div class="back-school-sale">
 	<img src="{$base_dir}themes/uniwigs2016/img/index/giv-thanks.jpg" alt="give thanks category" usemap="#map" class="img-responsive"/>

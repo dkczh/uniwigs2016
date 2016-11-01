@@ -62,7 +62,7 @@
 {/literal}
 
 <div>
-	<a href="{$base_dir}tag/Thanksgiving-shopping-season"><img src="{$base_dir}themes/uniwigs2016-m/img/home/giv-thank.gif" alt="give thanks" class="img-responsive"></a>
+	<img src="{$base_dir}themes/uniwigs2016-m/img/home/giv-thank.gif" alt="give thanks" class="img-responsive">
 </div>
 <div class="sale-category">
 	<ul class="home-list uk-flex uk-flex-wrap">
