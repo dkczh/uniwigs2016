@@ -504,16 +504,16 @@ class CartRuleCore extends ObjectModel
         }
 
         if (!$this->active) {
-            return (!$display_error) ? false : Tools::displayError('This voucher is disabled');
+            return (!$display_error) ? false : Tools::displayError('This coupon is disabled');
         }
         if (!$this->quantity) {
-            return (!$display_error) ? false : Tools::displayError('This voucher has already been used');
+            return (!$display_error) ? false : Tools::displayError('This coupon has already been used');
         }
         if (strtotime($this->date_from) > time()) {
-            return (!$display_error) ? false : Tools::displayError('This voucher is not valid yet');
+            return (!$display_error) ? false : Tools::displayError('This coupon is not valid yet');
         }
         if (strtotime($this->date_to) < time()) {
-            return (!$display_error) ? false : Tools::displayError('This voucher has expired');
+            return (!$display_error) ? false : Tools::displayError('This coupon has expired');
         }
 
         if ($context->cart->id_customer) {
