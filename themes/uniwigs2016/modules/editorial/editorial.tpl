@@ -39,7 +39,7 @@
 	<ul class="row">
 		<li class="col-sm-6">
 			<a href="https://youtu.be/6xp3eAgnV2o" data-uk-lightbox>
-				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/human-hair-halloween.jpg" alt="human hair halloween" class="img-responsive">
+				<img src="{$base_dir}themes/uniwigs2016-m/img/milanoo_blank.gif" original="{$base_dir}themes/uniwigs2016/img/index/human-hair-thanks.jpg" alt="human hair halloween" class="img-responsive">
 			</a>
 		</li>
 		<li class="col-sm-6">
