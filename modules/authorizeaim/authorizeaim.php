@@ -222,10 +222,10 @@ class AuthorizeAIM extends PaymentModule
 	{	
 		//增加 400美金以上authorize支付方式隐藏
 		$cart = new cart( (int)$params['cart']->id);
-		if($cart->getOrderTotal()>=400){
+		/* if($cart->getOrderTotal()>=400){
 			
 			return '';
-		}
+		} */
 	
 		
 		$currency = Currency::getCurrencyInstance($this->context->cookie->id_currency);
@@ -254,7 +254,7 @@ class AuthorizeAIM extends PaymentModule
 			$this->context->smarty->assign('isFailed', $isFailed);
 			$this->context->smarty->assign('new_base_dir', $url);
 			$this->context->smarty->assign('currency', $currency);
-
+			$this->context->smarty->assign('total', $cart->getOrderTotal());
 			return $this->display(__FILE__, 'views/templates/hook/authorizeaim.tpl');
 		}
 	}
