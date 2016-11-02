@@ -1,6 +1,6 @@
 <h1 id="header_logo">
 	<a href="/" title="UniWigs">
-		<img class="logo" src="{$img_dir}index/20161025093940.gif" alt="UniWigs">
+		<img class="logo" src="{$img_dir}index/thanks-logo.png" alt="UniWigs">
 	</a>
 </h1>
 <!-- Menu -->
