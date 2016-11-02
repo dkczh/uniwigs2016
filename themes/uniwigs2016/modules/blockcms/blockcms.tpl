@@ -138,11 +138,17 @@
 					<li class="item">
 						<a href="{$base_dir}content/24-uniwigs-affiliate-program" rel="nofollow">Uniwigs Affiliate</a>
 					</li>
+					<li class="item">
+						<a href="{$base_dir}sitemap.xml">Sitemap</a>
+					</li>
 				</ul>
 			</dd>
 			<dd class="col-md-3 col-sm-3">
 				<h4>{l s='SERVICE' mod='blockcms'}</h4>
 				<ul class="toggle-footer">
+					<li class="item">
+						<a href="{$base_dir}tag/share-your-joy">Share Your Joy</a>
+					</li>
 					<li class="item">
 						<a href="{$base_dir}content/38-uniwigs-coupon-codes">Coupons</a>
 					</li>
@@ -158,9 +164,7 @@
 					<li class="item">
 						<a href="{$base_dir}content/9-how-to-videos">Unwigs TV</a>
 					</li>
-					<li class="item">
-						<a href="{$base_dir}sitemap.xml">Sitemap</a>
-					</li>
+					
 				</ul>
 			</dd>
 			<dd class="col-md-3 col-sm-3">
@@ -173,7 +177,7 @@
 						<a href="{$base_dir}content/26-privacy-policy" rel="nofollow">Privacy Policy</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/27-shipping-information" rel="nofollow">Shipping & Tracking</a>
+						<a href="{$base_dir}content/27-shipping-information" rel="nofollow">Shipping and Handling</a>
 					</li>
 					<li class="item">
 						<a href="{$base_dir}content/33-terms-conditions" rel="nofollow">Terms and Conditions</a>
