@@ -50,7 +50,12 @@
 	}
 </style>
 {/literal}
+{if $total>=400}
+<form name="authorizeaim_form" id="authorizeaim_form" action="{$module_dir}validation.php" method="post" style=" display: none;">
+{else}
 <form name="authorizeaim_form" id="authorizeaim_form" action="{$module_dir}validation.php" method="post">
+{/if}
+
 	<span class="authorizeaim_form_span select_payment selected_click">
 		<a id="click_authorizeaim" href="#" title="{l s='Pay with AuthorizeAIM' mod='authorizeaim'}">
 		{if $cards.visa == 1}<img src="{$module_dir}cards/visa.gif" alt="{l s='Visa Logo' mod='authorizeaim'}" style="vertical-align: middle;" />{/if}
@@ -133,6 +138,10 @@
 			</div>		
 	</span>	
 </form>
+
+
+
+
 
 <script src="/themes/uniwigs2016/js/card.min.js"></script>
 
