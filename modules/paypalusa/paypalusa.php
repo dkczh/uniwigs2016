@@ -712,7 +712,7 @@ class PayPalUSA extends PaymentModule
 
 	public function checkTransactionId($id_transaction)
 	{
-		return Db::getInstance()->ExecuteS("select * from  ps_paypal_usa_transaction where id_transaction = '$id_transaction'");
+		return Db::getInstance()->ExecuteS("select id_transaction from  ps_paypal_usa_transaction where id_transaction = '$id_transaction'");
 	}
 	/* PayPal USA Transaction details update
 	 * Attach transactions details to an existing order (it will be displayed in the Order details section of the Back-office)
@@ -724,7 +724,10 @@ class PayPalUSA extends PaymentModule
 	 */
 
 	public function addTransaction($type = 'payment', $details)
-	{
+	{	
+		@date_default_timezone_set(Configuration::get('PS_TIMEZONE'));
+		//修复时区为 正确的时区
+		$ntime = date('Y-m-d H:i:s',time());
 		$sandbox_value = $details['source'] == 'advanced' ? Configuration::get('PAYPAL_USA_SANDBOX_ADVANCED') : Configuration::get('PAYPAL_USA_SANDBOX');
 
 		return Db::getInstance()->Execute('
@@ -733,7 +736,7 @@ class PayPalUSA extends PaymentModule
 		VALUES (\''.pSQL($type).'\', \''.pSQL($details['source']).'\', '.(int)$details['id_shop'].', '.(int)$details['id_customer'].', '.(int)$details['id_cart'].', '.(int)$details['id_order'].',
 		\''.pSQL($details['id_transaction']).'\', \''.(float)$details['amount'].'\', \''.pSQL($details['currency']).'\',
 		\''.pSQL($details['cc_type']).'\', \''.pSQL($details['cc_exp']).'\', \''.pSQL($details['cc_last_digits']).'\',
-		\''.pSQL($details['cvc_check']).'\', \''.pSQL($details['fee']).'\', \''.($sandbox_value ? 'test' : 'live').'\', NOW())');
+		\''.pSQL($details['cvc_check']).'\', \''.pSQL($details['fee']).'\', \''.($sandbox_value ? 'test' : 'live').'\',\''.$ntime.'\')');
 	}
 
 	/* PayPal USA PayFlow Link and PayFlow Pro API communication method
