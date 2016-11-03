@@ -712,7 +712,7 @@ class PayPalUSA extends PaymentModule
 
 	public function checkTransactionId($id_transaction)
 	{
-		return Db::getInstance()->ExecuteS("select id_transaction from  ps_paypal_usa_transaction where id_transaction = '$id_transaction'");
+		return Db::getInstance()->ExecuteS("select * from  ps_paypal_usa_transaction where id_transaction = '$id_transaction'");
 	}
 	/* PayPal USA Transaction details update
 	 * Attach transactions details to an existing order (it will be displayed in the Order details section of the Back-office)
