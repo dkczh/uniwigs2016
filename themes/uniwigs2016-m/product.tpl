@@ -217,7 +217,7 @@
 			
 			{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
 
-			<p style="color:#920783"><span>Fall in Love with our Autumn 5-day Sales Event!</span><br><span>25% OFF</span>&nbsp;&nbsp;<span>code: FALL25</span>&nbsp;&nbsp;<a href="#sale-details" data-uk-modal style="text-decoration: underline;">DETAILS</a></p>
+			{*<p style="color:#920783"><span>Fall in Love with our Autumn 5-day Sales Event!</span><br><span>25% OFF</span>&nbsp;&nbsp;<span>code: FALL25</span>&nbsp;&nbsp;<a href="#sale-details" data-uk-modal style="text-decoration: underline;">DETAILS</a></p>
 			<div id="sale-details" class="uk-modal">
 			    <div class="uk-modal-dialog">
 			        <a class="uk-modal-close uk-close"></a>
@@ -226,7 +226,7 @@
 			        	<img src="/themes/uniwigs2016-m/img/home/details-m.png" alt="Fall in Love with our Autumn 5-day Sales Event!" class="img-responsive"></a>
 			        </div>
 			    </div>
-			</div>
+			</div>*}
 			
 		</div>
 		<!-- end center infos-->
