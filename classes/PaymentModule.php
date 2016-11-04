@@ -184,10 +184,10 @@ abstract class PaymentModuleCore extends Module
             $context_country = $this->context->country;
         }
 		//增加发票地址 和 收货地址不一致 统一订单状态为 1  Pending
-		if($this->context->cart->id_address_invoice != $this->context->cart->id_address_delivery){
+/* 		if($this->context->cart->id_address_invoice != $this->context->cart->id_address_delivery){
 			
 			$id_order_state = '1' ;
-		}
+		} */
         $order_status = new OrderState((int)$id_order_state, (int)$this->context->language->id);
 		
         if (!Validate::isLoadedObject($order_status)) {
