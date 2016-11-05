@@ -23,4 +23,4 @@ $workerlist = Cpworker::getCporderWorker();
 
 Template::assign('orderlist', $orderlist);
 Template::assign('workerlist', $workerlist);
-Template::display('Cpworker/cpworker_list.tpl');
+Template::display('cpworker/cpworker_list.tpl');
