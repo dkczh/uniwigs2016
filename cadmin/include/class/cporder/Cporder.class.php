@@ -120,6 +120,18 @@ class Cporder extends CporderBase
 					now());";
 		$db->query($sql);
 		
+		$psql = "INSERT INTO `osapa_order_purchase` (`id_porder`,`stock_begin`,
+	`stock_end`,`cap_begin`,`cap_end`,`dye_begin`,`dye_end`,`hand_begin`,`hand_end`,
+	`pin_begin`,`pin_end`,`clean_begin`,`clean_end`,`extra_time`,`note`,`date_add`,
+	`date_upd`
+)VALUES(
+		'$id_order','0000-00-00','0000-00-00','0000-00-00','0000-00-00','0000-00-00','0000-00-00',
+		'0000-00-00','0000-00-00','0000-00-00','0000-00-00','0000-00-00',
+		'0000-00-00','','',now(),now()
+	);
+
+";
+		$db->query($psql);
 		
 		$lastid = "select id_porder  from osapa_orders where id_order = $id_order";
 		$res =$db->query($lastid)->fetchAll();
