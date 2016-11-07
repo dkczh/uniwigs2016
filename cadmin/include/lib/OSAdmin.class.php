@@ -4,7 +4,7 @@ if(!defined('ACCESS')) {exit('Access denied.');}
 class OSAdmin extends Base {
 	public static function showQuickNote(){
 		$note = QuickNote::getRandomNote();
-		$note_content=$note['note_content'];
+		@$note_content=$note['note_content'];
 		$note_html="<div class=\"alert alert-info\">
 			<button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>$note_content</div>";
 		Template::assign("osadmin_quick_note",$note_html);
