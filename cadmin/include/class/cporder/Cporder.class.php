@@ -161,7 +161,7 @@ class Cporder extends CporderBase
 		$sql = "select id_porder  from osapa_orders where id_order = $id_order";
 		$res= $db->query($sql)->fetchAll();
 		
-	    return $res[0]['id_porder'];
+	    return '';
 	}
 	
 	
