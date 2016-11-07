@@ -160,7 +160,7 @@ class Cporder extends CporderBase
 		$db = self::__instance();
 		// $db = self::__instance(SAMPLE_DB_ID);
 
-		$sql = "select id_porder  from osapa_orders where id_order = $id_order";
+		$sql = "select id_porder  from osapa_orders where id_order = '$id_order' ";
 		$res= $db->query($sql)->fetchAll();
 		
 	    return '';
