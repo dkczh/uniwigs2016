@@ -87,5 +87,5 @@ if( OSAdmin::checkNoNeedLogin($action_url,$no_need_login_page) ){
 
 Template::assign ( 'osa_templates', $OSA_TEMPLATES);
 
-$sidebarStatus=$_COOKIE['sidebarStatus']==null?"yes":$_COOKIE['sidebarStatus'];
+@$sidebarStatus=$_COOKIE['sidebarStatus']==null?"yes":$_COOKIE['sidebarStatus'];
 Template::assign ( 'sidebarStatus', $sidebarStatus);
