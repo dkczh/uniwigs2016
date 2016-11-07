@@ -124,6 +124,11 @@ class Cporder extends CporderBase
 		
 		$lastid = "select id_porder  from osapa_orders where id_order = $id_order";
 		$res =$db->query($lastid)->fetchAll();
+		echo '<pre>';
+		var_dump($res);
+		echo '</pre>';
+		exit;
+		
 		$id_porder= $res[0]['id_porder'];
 		
 		
