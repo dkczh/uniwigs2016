@@ -299,7 +299,7 @@
 						{/foreach}
 					{/if}
 				</div> <!-- end delivery_options_address -->
-				<p class="uk-margin-bottom uk-text-warning">*Due to the impact of Hurricane Matthew, delivery delays can be anticipated for packages shipping to Florida, Georgia, South Carolina and North Carolina. Our carriers will do their best to deliver packages as local conditions allow.</p>
+				{*<p class="uk-margin-bottom uk-text-warning">*Due to the impact of Hurricane Matthew, delivery delays can be anticipated for packages shipping to Florida, Georgia, South Carolina and North Carolina. Our carriers will do their best to deliver packages as local conditions allow.</p>*}
 				<div id="extra_carrier" style="display: none;"></div>
 				{if $opc}
 					<p class="carrier_title">{l s='Leave a message'}</p>
