@@ -162,7 +162,7 @@
 						<a href="{$base_dir}content/category/2-help-center">Help Center</a>
 					</li>
 					<li class="item">
-						<a href="{$base_dir}content/9-how-to-videos">Unwigs TV</a>
+						<a href="{$base_dir}content/9-how-to-videos">UniWigs TV</a>
 					</li>
 					
 				</ul>
