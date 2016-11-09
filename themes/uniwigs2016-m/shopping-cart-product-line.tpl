@@ -31,7 +31,20 @@
 		{capture name=sep} : {/capture}
 		{capture}{l s=' : '}{/capture}
 		<p class="product-name"><a href="{$link->getProductLink($product.id_product, $product.link_rewrite, $product.category, null, null, $product.id_shop, $product.id_product_attribute, false, false, true)|escape:'html':'UTF-8'}">{$product.name|escape:'html':'UTF-8'}</a></p>
-			{if $product.reference}<small class="cart_ref">{l s='SKU'}{$smarty.capture.default}{$product.reference|escape:'html':'UTF-8'}</small>{/if}
+			{if $product.reference}
+			<small class="cart_ref_a">{l s='SKU'}{$smarty.capture.default}{$product.reference|escape:'html':'UTF-8'}</small>
+			<small class="cart_ref" style="display:none">{l s='SKU'}{$smarty.capture.default}{$product.reference|escape:'html':'UTF-8'}</small>
+				{literal}
+				<script type="text/javascript">
+				//对sku 进行显示处理
+							$(".cart_ref_a").each(function(i){
+							 arr =  $(this).text().split("--"); 
+							$(this).text(arr[0]);
+							});
+				</script>
+				{/literal}
+			{/if}
+			
 		{if isset($product.attributes) && $product.attributes}<small><a href="{$link->getProductLink($product.id_product, $product.link_rewrite, $product.category, null, null, $product.id_shop, $product.id_product_attribute, false, false, true)|escape:'html':'UTF-8'}">{$product.attributes|@replace: $smarty.capture.sep:$smarty.capture.default|escape:'html':'UTF-8'}</a></small>{/if}
 		</div>
 		<div class="cart_unit" data-title="{l s='Unit price'}">
