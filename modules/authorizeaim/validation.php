@@ -183,9 +183,17 @@ switch ($response[0]) // Response code
 	case 1: // Payment accepted
 	
 		$authorizeaim->setTransactionDetail($response);
-		$authorizeaim->validateOrder((int)$cart->id,
+		//增加发票地址 和 收货地址不一致 统一订单状态为 1  Pending
+		if($cart->id_address_invoice != $cart->id_address_delivery){
+			$authorizeaim->validateOrder((int)$cart->id,'1', (float)$response[9],
+			$payment_method, $message, $extra_vars, NULL, false, $customer->secure_key);
+			
+		}else{
+			$authorizeaim->validateOrder((int)$cart->id,
 			Configuration::get('PS_OS_PAYMENT'), (float)$response[9],
 			$payment_method, $message, $extra_vars, NULL, false, $customer->secure_key);
+			
+		}
 		break ;
 
 	case 4: // Hold for review
