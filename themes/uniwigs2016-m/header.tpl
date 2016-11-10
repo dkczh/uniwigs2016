@@ -119,7 +119,7 @@
 			<header id="header" class="row">
 				{capture name='displayNav'}{hook h='displayNav'}{/capture}
 				{if $smarty.capture.displayNav}
-					{if $page_name == 'index' or $page_name == 'category' or $page_name == 'tag'}
+					{if $page_name == 'index' or $page_name == 'category'}
 						<a href="#block_top_menu" class="cat-title" data-uk-offcanvas></a>
 					{elseif $page_name == 'history' or $page_name == 'module-blockwishlist-mywishlist' or $page_name == 'order-slip' or $page_name == 'discount' or $page_name == 'order-follow' or $page_name == 'identity' or $page_name == 'addresses'}
 						<a href='{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}' class="header-left"></a>
