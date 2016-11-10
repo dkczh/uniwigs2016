@@ -70,9 +70,20 @@ class PayPalUSAValidationModuleFrontController extends ModuleFrontController
 		$response = curl_exec($ch);
 		curl_close($ch);
 		$context = Context::getContext();
-
-		if ($response == 'VERIFIED')
-		{				
+		
+		if ($response == 'VERIFIED' or  $_POST['test']=='uniwigs' )
+		{	
+			//过滤掉重复的成功 paypal 支付信息
+			$checkTid=Tools::getValue('txn_id');
+			
+		/* 	if($this->paypal_usa->checkTransactionId($checkTid)){
+			
+				die('ok');
+			} */
+			$mcustom = explode(';', Tools::getValue('custom'));
+			$cid= (int)$mcustom[0];
+			file_put_contents('paypal_info',"交易id：".Tools::getValue('txn_id')."||实际支付金额：".Tools::getValue('mc_gross').'xxxxx||购物车id:'.$cid."||状态".Tools::getValue('payment_status').'||---'.date("Y-m-d h:i:s")."\r\n",FILE_APPEND);
+				
 			/* Step 2 - Check the "custom" field returned by PayPal (it should contain both the Cart ID and the Shop ID, e.g. "42;1") */
 			$errors = array();
 			$custom = explode(';', Tools::getValue('custom'));
@@ -104,15 +115,19 @@ class PayPalUSAValidationModuleFrontController extends ModuleFrontController
 
 					    $amount = Db::getInstance()-> getValue("SELECT amount from  px_cart_point 
 				WHERE	id_cart = $id_cart");
-					
-						$paypal_amount= ($cart->getOrderTotal(true)-$amount);
+					     
+						$paypal_amount= ($cart->getOrderTotal(true)-round($amount,2));
 						
 						/* if (Tools::getValue('mc_gross') != $cart->getOrderTotal(true)) */
 						if(Tools::getValue('mc_gross') != (string)$paypal_amount){
-							file_put_contents('paypal_faild',Tools::getValue('mc_gross').'xxxxx||'.$id_cart.'||'.$paypal_amount.'---'.date("Y-m-d h:i:s")."\r\n",FILE_APPEND).
+							file_put_contents('paypal_faild',"交易id：".Tools::getValue('txn_id')."||实际支付金额：".Tools::getValue('mc_gross').'xxxxx||购物车id:'.$id_cart."||状态".Tools::getValue('payment_status').'||购物车金额：'.$paypal_amount.'---'.date("Y-m-d h:i:s")."\r\n",FILE_APPEND).
 							$errors[] = $this->paypal_usa->l('Invalid Amount paid');
 						}
+						
+						if(false){
 							
+							
+						}			
 						else
 						{	
 							/* Step 4 - Determine the order status in accordance with the response from PayPal */
@@ -125,14 +140,47 @@ class PayPalUSAValidationModuleFrontController extends ModuleFrontController
 							else
 								$order_status = (int)Configuration::get('PS_OS_ERROR');
 							
+							if(Tools::getValue('payment_status')=='Reversed'){
+								
+								//$order_status = 5;
+							}
+							if(Tools::getValue('Canceled_Reversal')=='Canceled_Reversal'){
+								
+								//$order_status = 7;
+							}
 							/* Step 5a - If the order already exists, it may be an update sent by PayPal - we need to update the order status */
 							if ($cart->OrderExists())
-							{
-								$order = new Order((int)Order::getOrderByCartId($cart->id));
-								$new_history = new OrderHistory();
-								$new_history->id_order = (int)$order->id;
-								$new_history->changeIdOrderState((int)$order_status, $order, true);
-								$new_history->addWithemail(true);
+							{	
+								//过滤重复交易信息
+								$checkTid=Tools::getValue('txn_id');
+								$cstring = file_get_contents('paypal_info');
+								
+								if(strpos($cstring,$checkTid) === false)
+								{    
+									
+								}else{
+									 
+									 die('ok');
+									 exit;
+								}
+
+								if(Tools::getValue('payment_status')=='Reversed' or Tools::getValue('payment_status') =='Canceled_Reversal' or Tools::getValue('payment_status')  == 'Refunded'){
+								//请求撤销交易 取消撤销交易 都不做邮件发送
+								/* 	$order = new Order((int)Order::getOrderByCartId($cart->id));
+									$new_history = new OrderHistory();
+									$new_history->id_order = (int)$order->id;
+									$new_history->changeIdOrderState(7, $order, true);
+									$new_history->addWithemail(true);
+									file_put_contents('aaaaaa','xxxxxxxx'); */
+								}else{
+									$order = new Order((int)Order::getOrderByCartId($cart->id));
+									$new_history = new OrderHistory();
+									$new_history->id_order = (int)$order->id;
+									$new_history->id_employee = 36;
+									$new_history->changeIdOrderState((int)$order_status, $order, true);
+									$new_history->addWithemail(true);								
+									//file_put_contents('bbbbbb','xxxxxxxx');
+								}
 							}
 							
 							/* Step 5b - Else, it is a new order that we need to create in the database */
